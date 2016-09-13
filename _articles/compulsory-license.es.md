@@ -4,7 +4,9 @@ subtitle:         Un acto soberano –y aislado– contra las patentes
 description:      Ocho años después de tumbar la patente sobre el efavirenz, un antirretroviral, vuelven las dudas sobre la sostenibilidad del programa AIDS del gobierno de Brasil
 home_description: Ocho años después de tumbar la patente sobre el efavirenz, un antirretroviral, vuelven las dudas sobre la sostenibilidad del programa AIDS del gobierno de Brasil
 author:           Eva Belmonte / Rio de Janeiro
-path:             licencia-obligatoria
+slug:             licencia-obligatoria
+ref:              compulsory-license
+lang:             es
 ---
 
 Con cada crisis sanitaria, el modelo de patentes sube a la palestra y vuelve a ponerse en tela de juicio. Uno de los momentos cumbre del debate sobre acceso a los medicamentos y propiedad intelectual fue la aprobación en 2007, en Brasil, de **un decreto que tumbaba el monopolio de la farmacéutica Merck** sobre el efavirenz, un antirretroviral en el que el gobierno gastaba 40 millones de dólares anuales (unos 36 millones de euros). Ahora que han pasado los años y podemos enfocar con perspectiva, repasamos la historia de esa decisión y, sobre todo, cuáles fueron sus consecuencias y qué poso dejó en el sistema de salud brasileño.
