@@ -5,7 +5,6 @@ description:      El alto precio de las medicinas, especialmente en países en v
 home_description: El alto precio de las medicinas, especialmente en países en vías de desarrollo, abre la puerta a un mercado ilegal de peligrosas imitaciones
 author:           Antonio Villarreal / Acra
 path:             falsificaciones
-layout:           article
 ---
 
 ## Acequias

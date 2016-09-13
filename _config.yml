@@ -18,6 +18,20 @@ collections:
     output: true
     permalink: /article/:path/
 
+# Defaults
+defaults:
+- scope:
+    path: ""
+    type: "articles"
+  values:
+    layout: "article"
 
 # Build settings
 markdown: kramdown
+
+# Exclude files
+exclude:
+- Gemfile
+- Gemfile.lock
+- README*
+- ".gitignore"

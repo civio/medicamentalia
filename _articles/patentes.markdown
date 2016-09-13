@@ -5,7 +5,6 @@ description:      Aunque existen modelos alternativos, la aplicación de los der
 home_description: Aunque existen modelos alternativos, la aplicación de los derechos de propiedad intelectual a los medicamentos sigue siendo el camino marcado por la industria
 author:           Eva Belmonte
 path:             patentes
-layout:           article
 ---
 
 En Estados Unidos la llaman la pastilla de los 1.000 dólares. Y no es una metáfora. Cada píldora de sofosbuvir, el nuevo fármaco para el tratamiento de la Hepatitis C, cuesta exactamente esa cantidad. El medicamento, comercializado por Gilead bajo la marca Sovaldi, ha vuelto a azuzar la discusión sobre el sistema de patentes y cómo afecta al acceso a los medicamentos y **a la sostenibilidad de los presupuestos de salud** en países de todos los niveles de ingresos, especialmente de aquellos en desarrollo. La compañía ha decidido bordear el modelo tradicional en India, concediendo en septiembre de 2014 a siete empresas farmacéuticas del país una licencia voluntaria: tienen permiso para desarrollar y producir sofosbuvir **a cambio de un 7% de los beneficios finales**. El [acuerdo](http://gilead.com/~/media/Files/pdfs/other/HCVGenericAgreementFactSheet.pdf) viene con letra pequeña: los laboratorios firmantes pueden exportar su versión _low cost_ a 91 países listados en las condiciones (15 de ellos son pequeños estados insulares), lo que significa que, **según las estimaciones de Gilead, el tratamiento producido en India, más barato, llegará a 100 millones de personas. Eso sí, el resto queda fuera**.
