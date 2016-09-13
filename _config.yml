@@ -12,5 +12,12 @@ description: A journalistic investigation into access to medicines around the wo
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 
+# Collections
+collections:
+  articles:
+    output: true
+    permalink: /article/:path/
+
+
 # Build settings
 markdown: kramdown
