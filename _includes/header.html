@@ -11,12 +11,12 @@
       <ul>
       {% for article in articles %}
         <li>
-          <a href="{{ article.url }}" class="{{ article.lang }}">{{ article.lang }}</a>
+          <a href="{{ article.permalink }}" class="{{ article.lang }}">{{ article.lang }}</a>
         </li>
       {% endfor %}
       {% for page in pages %}
         <li>
-          <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
+          <a href="{{ page.permalink }}" class="{{ page.lang }}">{{ page.lang }}</a>
         </li>
       {% endfor %}
       </ul>
