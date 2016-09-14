@@ -4,20 +4,4 @@ ref:    index
 lang:   en
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Articles</h1>
-
-  {% assign articles=site.articles | where:"lang", page.lang %}
-
-  <ul class="post-list">
-    {% for article in articles %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-</div>
+{% include home.html %}
