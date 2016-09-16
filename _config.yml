@@ -20,7 +20,7 @@ index:
 collections:
   articles:
     output: true
-    permalink: /:slug/
+    permalink: /articles/:slug/
 
 # Defaults
 defaults:
@@ -36,6 +36,10 @@ defaults:
 
 # Build settings
 markdown: kramdown
+
+# Include files
+include: 
+- _pages
 
 # Exclude files
 exclude:
