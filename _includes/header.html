@@ -4,21 +4,23 @@
 
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
-    {% assign articles=site.articles | where:"ref", page.ref | sort: 'lang' %}
-    {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-
     <nav class="site-nav">
       <ul>
-      {% for article in articles %}
-        <li>
-          <a href="{{ article.permalink }}" class="{{ article.lang }}">{{ article.lang }}</a>
-        </li>
-      {% endfor %}
-      {% for page in pages %}
-        <li>
-          <a href="{{ page.permalink }}" class="{{ page.lang }}">{{ page.lang }}</a>
-        </li>
-      {% endfor %}
+      {% if page.collection %}
+        {% assign articles=site.articles | where:"ref", page.ref | sort: 'lang' %}
+        {% for article in articles %}
+          <li>
+            <a href="/articles/{{ article.slug }}" class="{{ article.lang }}">{{ article.lang }}</a>
+          </li>
+        {% endfor %}
+      {% else %}
+        {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+        {% for page in pages %}
+          <li>
+            <a href="{{ page.permalink }}" class="{{ page.lang }}">{{ page.lang }}</a>
+          </li>
+        {% endfor %}
+      {% endif %}
       </ul>
     </nav>
 
