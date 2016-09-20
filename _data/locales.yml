@@ -1,6 +1,14 @@
 en:
   articles: Articles
   by: By
+  footer:
+    project_by: Medicamentalia is a project by
+    funded_by: Funded by
+    media_partners: Has media partners such as
 es: 
   articles: Artículos
   by: Por
+  footer:
+    project_by: Medicamentalia es un proyecto de
+    funded_by: Financiado por
+    media_partners: Cuenta con media partners como

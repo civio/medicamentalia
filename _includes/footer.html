@@ -1,38 +1,75 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
+<div class="partners">
+  <div class="container">
+    <div class="row main-partners">
+      <div class="col-sm-6">
+        <p>{{ site.data.locales[page.lang].footer.project_by }}</p>
+        <a class="partner-logo" href="http://www.civio.es" target="_blank" title="Fundación Ciudadana Civio">
+          <img src="{{ site.baseurl }}/assets/images/logo-civio.png" alt="Fundación Ciudadana Civio">
+        </a>
       </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
+      <div class="col-sm-6">
+        <p>{{ site.data.locales[page.lang].footer.funded_by }}</p>
+        <a class="partner-logo" href="http://journalismgrants.org/projects/medicamentalia" target="_blank" title="Journalism Grants">
+          <img src="{{ site.baseurl }}/assets/images/journalismgrants.png" alt="Journalism Grants">
+        </a>
       </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+      <div class="col-sm-12">
+        <hr>
       </div>
     </div>
 
-  </div>
+    <div class="row">
+      <p>{{ site.data.locales[page.lang].footer.media_partners }}</p>
+      <div class="col-sm-3 media-partner">
+        <a href="http://www.20minutos.es/" class="logo" target="_blank" title="20Minutos">
+          <img class="img-responsive" src="{{ site.baseurl }}/assets/images/20minutos.png" alt="20Minutos">
+        </a>
+      </div>
+      <div class="col-sm-3 media-partner">
+        <a href="http://cadenaser.com/" class="logo" target="_blank" title="Cadena SER">
+          <img class="img-responsive" src="{{ site.baseurl }}/assets/images/cadenaser.png" alt="Cadena SER">
+        </a>
+      </div>
+      <!--
+      <div class="col-sm-3 media-partner">
+        <a href="http://www.corriere.it/" class="logo" target="_blank" title="Corriere della Sera">
+          <img class="img-responsive" src="{{ site.baseurl }}/assets/images/corrieredellasera.png" alt="Corriere della Sera">
+        </a>
+      </div>
+      -->
+      <div class="col-sm-3 media-partner">
+        <a href="https://correctiv.org/" class="logo" target="_blank" title="Correctiv">
+          <img class="img-responsive" src="{{ site.baseurl }}/assets/images/correctiv.png" alt="Correctiv">
+        </a>
+      </div>
+      <div class="col-sm-3 media-partner">
+        <a href="http://www.lanacion.com.ar/" class="logo" target="_blank" title="La Nación">
+          <img class="img-responsive" src="{{ site.baseurl }}/assets/images/lanacion.png" alt="La Nación">
+        </a>
+      </div>
+      <div class="col-sm-12">
+        <hr>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <!--
+        <a href="<?php echo get_permalink( icl_object_id(65, 'page') ); ?>" class="nosotros" title="<?= __('Metodología y equipo', 'sage'); ?>"><?= __('Metodología y equipo', 'sage'); ?></a>
+        <p><?= __('Si quieres más información, suscríbete a nuestro boletín o escríbenos a', 'sage'); ?> <a href="mailto:contacto@civio.es">contacto@civio.es</a></p>
+        <form target="_blank" class="validate" name="mc-embedded-subscribe-form" id="mc-embedded-subscribe-form" method="post" action="http://civio.us4.list-manage1.com/subscribe/post?u=9416fe6b76f2c3f985c1f8e0f&amp;id=9d5b4c8cda">         
+          <input id="mce-EMAIL" class="email" type="email" required="" placeholder="correo" name="EMAIL" value="<?= __('SUSCRÍBETE AL BOLETÍN', 'sage'); ?>">           
+          <button type="submit" id="btn-newsletter-header" class="btn btn-submit"><i class="glyphicon glyphicon-chevron-right"></i><span><?= __('Enviar', 'sage'); ?></span></button>   
+        </form>
+        -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>© <time datetime="2015-05-22T10:41:19+02:00">2015</time> · <a href="http://civio.es" target="_blank" title="Fundación Ciudadana Civio">Fundación Ciudadana Civio</a>  <small><a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" title="Creative Commons - Attribution 3.0 Unported - CC BY 3.0">(CC-BY 3.0)</a></small></p>
+  </div>
 </footer>
+
