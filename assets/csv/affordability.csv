@@ -1,0 +1,675 @@
+Drug,Country,Year,Public sector - number of days,Private sector - number of days
+Amitriptyline,Afghanistan,2011,0.4,0.5
+Amoxicillin,Afghanistan,2011,0.3,0.4
+Atenolol,Afghanistan,2011,0.1,0.2
+Captopril,Afghanistan,2011,0.3,0.4
+Ceftriaxone,Afghanistan,2011,0.3,0.4
+Ciprofloxacin,Afghanistan,2011,0.3,0.5
+Co-trimoxazole,Afghanistan,2011,0.2,0.2
+Diazepam,Afghanistan,2011,0.03465,0.0462
+Diclofenac,Afghanistan,2011,0.3,0.4
+Glibenclamide,Afghanistan,2011,0.2,0.3
+Omeprazole,Afghanistan,2011,0.1,0.6
+Paracetamol,Afghanistan,2011,0.1,0.1
+Salbutamol,Afghanistan,2011,0.5,0.6
+Simvastatin,Afghanistan,2011,0.8,1.1
+Amitriptyline,Armenia,2001,,1.6
+Atenolol,Armenia,2001,,1.4
+Captopril,Armenia,2001,,3.36313119111
+Ceftriaxone,Armenia,2001,,3.27905291133
+Ciprofloxacin,Armenia,2001,,3.38245953129
+Co-trimoxazole,Armenia,2001,,2
+Diclofenac,Armenia,2001,,3.1
+Omeprazole,Armenia,2001,,4.66779415318
+Salbutamol,Armenia,2001,,1.8
+Amitriptyline,Bolivia,2008,1.4,1.9
+Amoxicillin,Bolivia,2008,0.7,0.8
+Atenolol,Bolivia,2008,0.6,1.1
+Ceftriaxone,Bolivia,2008,0.5,0.6
+Ciprofloxacin,Bolivia,2008,0.5,0.7
+Co-trimoxazole,Bolivia,2008,0.5,0.4
+Diazepam,Bolivia,2008,0.1,0.4
+Diclofenac,Bolivia,2008,0.6,0.8
+Glibenclamide,Bolivia,2008,0.6,1.1
+Omeprazole,Bolivia,2008,0.9,1.6
+Paracetamol,Bolivia,2008,0.2,0.4
+Salbutamol,Bolivia,2008,1.1,1.6
+Amitriptyline,"Brazil, Rio Grande do Sul State",2008,0,2.82117831893
+Amoxicillin,"Brazil, Rio Grande do Sul State",2008,0,1.2
+Atenolol,"Brazil, Rio Grande do Sul State",2008,,0.956794972506
+Captopril,"Brazil, Rio Grande do Sul State",2008,0,1.9
+Ceftriaxone,"Brazil, Rio Grande do Sul State",2008,,1.4
+Ciprofloxacin,"Brazil, Rio Grande do Sul State",2008,,1.94675883739
+Co-trimoxazole,"Brazil, Rio Grande do Sul State",2008,0,0.4
+Diazepam,"Brazil, Rio Grande do Sul State",2008,,0.1
+Diclofenac,"Brazil, Rio Grande do Sul State",2008,,2.4
+Glibenclamide,"Brazil, Rio Grande do Sul State",2008,,0.929457973291
+Omeprazole,"Brazil, Rio Grande do Sul State",2008,,3.6
+Simvastatin,"Brazil, Rio Grande do Sul State",2008,,3.8
+Amoxicillin,Burkina Faso,2009,0.9,1
+Atenolol,Burkina Faso,2009,,2.5
+Captopril,Burkina Faso,2009,0.9,4.5
+Ceftriaxone,Burkina Faso,2009,0.6,1.1
+Ciprofloxacin,Burkina Faso,2009,0.4,0.7
+Co-trimoxazole,Burkina Faso,2009,0.4,0.6
+Diazepam,Burkina Faso,2009,0.0193225459523,0.0354246675792
+Diclofenac,Burkina Faso,2009,0.4,0.7
+Glibenclamide,Burkina Faso,2009,,0.6
+Omeprazole,Burkina Faso,2009,,1.4
+Paracetamol,Burkina Faso,2009,0.2,0.2
+Salbutamol,Burkina Faso,2009,1.2,1.2
+Simvastatin,Burkina Faso,2009,,9.7
+Amoxicillin,Burundi,2013,0.6,0.8
+Ciprofloxacin,Burundi,2013,0.3,0.5
+Diazepam,Burundi,2013,,0.1
+Glibenclamide,Burundi,2013,,1.1
+Omeprazole,Burundi,2013,0.5,0.8
+Salbutamol,Burundi,2013,,1.4
+Amoxicillin,Cameroon,2005,1.1,2.2
+Ceftriaxone,Cameroon,2005,2.2514010056,6.58603434414
+Ciprofloxacin,Cameroon,2005,1.40300721203,5.88109872439
+Co-trimoxazole,Cameroon,2005,0.3,1.2
+Diazepam,Cameroon,2005,0.0240240960964,
+Diclofenac,Cameroon,2005,,3.6
+Glibenclamide,Cameroon,2005,0.4,5.9
+Salbutamol,Cameroon,2005,,3.3
+Amitriptyline,Chad,2004,,6.7
+Co-trimoxazole,Chad,2004,0.3,
+Diazepam,Chad,2004,0.0805397221568,
+Glibenclamide,Chad,2004,0.7,
+Amitriptyline,"China, Shaanxi Province",2014,0.4,0.4
+Amoxicillin,"China, Shaanxi Province",2014,0.5,0.3
+Captopril,"China, Shaanxi Province",2014,0.0495217406444,0.0495217406444
+Ceftriaxone,"China, Shaanxi Province",2014,0.0406078273284,0.1
+Diclofenac,"China, Shaanxi Province",2014,0.9,1
+Glibenclamide,"China, Shaanxi Province",2014,,0.0297130443866
+Omeprazole,"China, Shaanxi Province",2014,0.3,0.3
+Salbutamol,"China, Shaanxi Province",2014,0.5,0.4
+Simvastatin,"China, Shaanxi Province",2014,0.9,1.3
+Amitriptyline,Colombia,2008,0,0.6
+Amoxicillin,Colombia,2008,0,0.4
+Atenolol,Colombia,2008,0,0.8
+Captopril,Colombia,2008,0,0.3
+Ceftriaxone,Colombia,2008,0,0.4
+Ciprofloxacin,Colombia,2008,0,0.3
+Co-trimoxazole,Colombia,2008,0,0.2
+Diclofenac,Colombia,2008,0,0.3
+Glibenclamide,Colombia,2008,0,0.3
+Omeprazole,Colombia,2008,0,0.4
+Salbutamol,Colombia,2008,0,0.4
+Simvastatin,Colombia,2008,0,3.6
+Amoxicillin,Congo,2007,0.6,1.5
+Captopril,Congo,2007,,3.77604537191
+Ceftriaxone,Congo,2007,0.899100631199,1.92820595439
+Ciprofloxacin,Congo,2007,0.8,1.9
+Co-trimoxazole,Congo,2007,0.4,0.6
+Diclofenac,Congo,2007,0.9,1.9
+Glibenclamide,Congo,2007,,1.8
+Omeprazole,Congo,2007,,12.9
+Salbutamol,Congo,2007,,1.9
+Amoxicillin,Democratic Republic of Congo,2007,1.1264969515,1.1264969515
+Atenolol,Democratic Republic of Congo,2007,,9.8
+Captopril,Democratic Republic of Congo,2007,,10.1
+Ceftriaxone,Democratic Republic of Congo,2007,3.25289405423,2.70573839207
+Ciprofloxacin,Democratic Republic of Congo,2007,0.916217520551,0.916217520551
+Co-trimoxazole,Democratic Republic of Congo,2007,0.5,0.5
+Diclofenac,Democratic Republic of Congo,2007,0.7,0.5
+Glibenclamide,Democratic Republic of Congo,2007,2,2
+Omeprazole,Democratic Republic of Congo,2007,,3.2
+Salbutamol,Democratic Republic of Congo,2007,,3.9
+Amitriptyline,Ecuador,2008,0,
+Amoxicillin,Ecuador,2008,0,0.5
+Atenolol,Ecuador,2008,0,0.6
+Captopril,Ecuador,2008,0,0.8
+Ceftriaxone,Ecuador,2008,0,0.9
+Ciprofloxacin,Ecuador,2008,0,1.2
+Co-trimoxazole,Ecuador,2008,0,0.1
+Diazepam,Ecuador,2008,0,0.1
+Diclofenac,Ecuador,2008,0,0.7
+Glibenclamide,Ecuador,2008,0,0.5
+Omeprazole,Ecuador,2008,0,1.3
+Paracetamol,Ecuador,2008,0,0.1
+Salbutamol,Ecuador,2008,0,0.9
+Simvastatin,Ecuador,2008,0,3.1
+Amitriptyline,Egypt,2013,,0.3
+Atenolol,Egypt,2013,,0.1
+Captopril,Egypt,2013,,0.5
+Diazepam,Egypt,2013,,0.1
+Glibenclamide,Egypt,2013,,0.2
+Omeprazole,Egypt,2013,,0.7
+Salbutamol,Egypt,2013,,0.3
+Simvastatin,Egypt,2013,,2.1
+Amitriptyline,El Salvador,2006,0,5.5
+Atenolol,El Salvador,2006,,2.4
+Captopril,El Salvador,2006,0,5.43201376936
+Ceftriaxone,El Salvador,2006,0,3.1669535284
+Ciprofloxacin,El Salvador,2006,0,3.64819277108
+Co-trimoxazole,El Salvador,2006,0,0.6
+Diazepam,El Salvador,2006,,0.240963855422
+Glibenclamide,El Salvador,2006,0,2.2
+Omeprazole,El Salvador,2006,0,5.48881239243
+Paracetamol,El Salvador,2006,0,0.286574870912
+Salbutamol,El Salvador,2006,0,1.2
+Amitriptyline,Ethiopia,2013,2.6,3.9
+Amoxicillin,Ethiopia,2013,1.3,1.5
+Ciprofloxacin,Ethiopia,2013,0.9,1
+Diclofenac,Ethiopia,2013,0.6,0.9
+Glibenclamide,Ethiopia,2013,0.4,0.6
+Paracetamol,Ethiopia,2013,0.4,0.5
+Amitriptyline,Fiji,2004,,0.2
+Atenolol,Fiji,2004,,0.1
+Captopril,Fiji,2004,,0.3015195
+Ciprofloxacin,Fiji,2004,,0.15382605
+Co-trimoxazole,Fiji,2004,,0.1
+Diazepam,Fiji,2004,,0.01073205
+Glibenclamide,Fiji,2004,,0.1
+Omeprazole,Fiji,2004,,0.2708565
+Salbutamol,Fiji,2004,,0.2
+Amitriptyline,Ghana,2004,0.7,2.7
+Atenolol,Ghana,2004,1.4,1.6
+Captopril,Ghana,2004,,8.35443663554
+Ceftriaxone,Ghana,2004,5.36553202186,5.34073574875
+Ciprofloxacin,Ghana,2004,2.9908120193,2.9908120193
+Co-trimoxazole,Ghana,2004,0.4,0.4
+Diazepam,Ghana,2004,0.0200277590578,0.0400555181156
+Diclofenac,Ghana,2004,2.40333108694,2.91833060556
+Glibenclamide,Ghana,2004,1.3,1.3
+Omeprazole,Ghana,2004,5.77943904239,5.77943904239
+Salbutamol,Ghana,2004,,4.6
+Amitriptyline,Haiti,2011,,1.8
+Amoxicillin,Haiti,2011,0.3,0.5
+Atenolol,Haiti,2011,0.4,0.9
+Captopril,Haiti,2011,1.2,1.5
+Ceftriaxone,Haiti,2011,0.4,0.8
+Ciprofloxacin,Haiti,2011,0.4,0.4
+Co-trimoxazole,Haiti,2011,0.2,0.3
+Diazepam,Haiti,2011,0.2,0.2
+Diclofenac,Haiti,2011,0.6,1.3
+Glibenclamide,Haiti,2011,0.8,0.8
+Omeprazole,Haiti,2011,0.8,0.8
+Paracetamol,Haiti,2011,0.1,0.2
+Salbutamol,Haiti,2011,0.7,0.8
+Simvastatin,Haiti,2011,,2.1
+Amitriptyline,"India, NCT, Delhi",2011,0,0.7
+Amoxicillin,"India, NCT, Delhi",2011,0,0.8
+Atenolol,"India, NCT, Delhi",2011,0,0.4
+Captopril,"India, NCT, Delhi",2011,,1.1
+Ceftriaxone,"India, NCT, Delhi",2011,0,0.3
+Ciprofloxacin,"India, NCT, Delhi",2011,0,0.3
+Co-trimoxazole,"India, NCT, Delhi",2011,0,0.1
+Diazepam,"India, NCT, Delhi",2011,0,0.1
+Diclofenac,"India, NCT, Delhi",2011,0,0.4
+Glibenclamide,"India, NCT, Delhi",2011,0,
+Omeprazole,"India, NCT, Delhi",2011,0,0.5
+Paracetamol,"India, NCT, Delhi",2011,0,0.1
+Salbutamol,"India, NCT, Delhi",2011,0,0.4
+Simvastatin,"India, NCT, Delhi",2011,0,0.6
+Amitriptyline,Indonesia,2010,0.3,0.3
+Amoxicillin,Indonesia,2010,0.3,0.3
+Captopril,Indonesia,2010,0.3,0.3
+Ceftriaxone,Indonesia,2010,0.4,0.3
+Ciprofloxacin,Indonesia,2010,0.1,0.2
+Co-trimoxazole,Indonesia,2010,0.1,0.1
+Diazepam,Indonesia,2010,0.00879506849315,0.00879506849315
+Diclofenac,Indonesia,2010,0.5,0.5
+Glibenclamide,Indonesia,2010,0.1,0.2
+Omeprazole,Indonesia,2010,0.4,0.5
+Paracetamol,Indonesia,2010,0.0452317808219,0.1
+Simvastatin,Indonesia,2010,0.6,0.6
+Amitriptyline,Iran,2007,0.1,0.1
+Amoxicillin,Iran,2007,0.1,0.1
+Atenolol,Iran,2007,0.0229151291513,0.0229151291513
+Captopril,Iran,2007,0.1,0.1
+Ceftriaxone,Iran,2007,0.1,0.1
+Ciprofloxacin,Iran,2007,0.1,0.1
+Co-trimoxazole,Iran,2007,0.029704797048,0.029704797048
+Diazepam,Iran,2007,0.00356457564576,0.00356457564576
+Diclofenac,Iran,2007,0.0458302583026,0.0458302583026
+Glibenclamide,Iran,2007,0.0407380073801,0.0407380073801
+Omeprazole,Iran,2007,0.241881918819,0.241881918819
+Paracetamol,Iran,2007,0.0190959409594,0.0190959409594
+Salbutamol,Iran,2007,0.2,0.2
+Simvastatin,Iran,2007,0.3,0.3
+Amitriptyline,Jordan,2004,,1.4
+Atenolol,Jordan,2004,,1.2
+Captopril,Jordan,2004,0.1136,3.0956
+Ceftriaxone,Jordan,2004,,4.12273333333
+Ciprofloxacin,Jordan,2004,0.112653333333,2.32596
+Co-trimoxazole,Jordan,2004,0.1,0.3
+Diazepam,Jordan,2004,0.0132533333333,0.0463866666667
+Glibenclamide,Jordan,2004,0.0426,1.1
+Omeprazole,Jordan,2004,0.3337,7.739
+Salbutamol,Jordan,2004,,0.5
+Simvastatin,Jordan,2004,,6.1912
+Amitriptyline,Kazakhstan,2004,,1.3
+Atenolol,Kazakhstan,2004,,0.5
+Captopril,Kazakhstan,2004,,1.3886
+Ceftriaxone,Kazakhstan,2004,,1.45148
+Ciprofloxacin,Kazakhstan,2004,,2.09687333333
+Glibenclamide,Kazakhstan,2004,0.5,0.4
+Omeprazole,Kazakhstan,2004,3.1,0.9
+Salbutamol,Kazakhstan,2004,,1.1
+Amitriptyline,Kenya,2004,0.5,0.5
+Atenolol,Kenya,2004,,1.1
+Captopril,Kenya,2004,,4.34320374081
+Ceftriaxone,Kenya,2004,2.80156205263,2.40147864498
+Ciprofloxacin,Kenya,2004,0.629960182226,0.842229374063
+Co-trimoxazole,Kenya,2004,0.2,0.2
+Diazepam,Kenya,2004,0.0616265395656,0.0410843597104
+Glibenclamide,Kenya,2004,0.4,1.4
+Omeprazole,Kenya,2004,1.49664453231,3.59488147466
+Salbutamol,Kenya,2004,,1.7
+Atenolol,Kuwait,2004,0,2.6
+Captopril,Kuwait,2004,0,5.59965191298
+Ceftriaxone,Kuwait,2004,0,6.19013653413
+Ciprofloxacin,Kuwait,2004,0,11.0595336834
+Co-trimoxazole,Kuwait,2004,0,1
+Glibenclamide,Kuwait,2004,0,3.3
+Omeprazole,Kuwait,2004,0,19.3
+Amitriptyline,Kyrgyzstan,2010,,3.4
+Amoxicillin,Kyrgyzstan,2010,,3.5
+Atenolol,Kyrgyzstan,2010,,0.7
+Ceftriaxone,Kyrgyzstan,2010,,1.7
+Ciprofloxacin,Kyrgyzstan,2010,,3.7
+Co-trimoxazole,Kyrgyzstan,2010,,3
+Diclofenac,Kyrgyzstan,2010,,2.3
+Glibenclamide,Kyrgyzstan,2010,,2.7
+Omeprazole,Kyrgyzstan,2010,,2
+Paracetamol,Kyrgyzstan,2010,,1.1
+Salbutamol,Kyrgyzstan,2010,,11.3
+Simvastatin,Kyrgyzstan,2010,,25.8
+Amitriptyline,Lao PDR,2013,1.8,
+Amoxicillin,Lao PDR,2013,0.5,0.5
+Atenolol,Lao PDR,2013,,0.5
+Ceftriaxone,Lao PDR,2013,0.6,0.5
+Ciprofloxacin,Lao PDR,2013,0.5,0.3
+Co-trimoxazole,Lao PDR,2013,0.3,0.4
+Diazepam,Lao PDR,2013,0.2,0.2
+Diclofenac,Lao PDR,2013,0.4,0.6
+Glibenclamide,Lao PDR,2013,0.4,0.9
+Omeprazole,Lao PDR,2013,1,0.9
+Paracetamol,Lao PDR,2013,0.2,0.2
+Simvastatin,Lao PDR,2013,1.9,1.2
+Amitriptyline,Lebanon,2013,0,
+Atenolol,Lebanon,2013,0,0.2
+Captopril,Lebanon,2013,0,0.7
+Diclofenac,Lebanon,2013,0,0.6
+Glibenclamide,Lebanon,2013,0,0.2
+Omeprazole,Lebanon,2013,0,0.9
+Salbutamol,Lebanon,2013,0,0.3
+Simvastatin,Lebanon,2013,0,0.3
+Amitriptyline,Malaysia,2004,0,1.11525888958
+Atenolol,Malaysia,2004,0,0.6
+Captopril,Malaysia,2004,,2.80244541485
+Ciprofloxacin,Malaysia,2004,,1.7448558952
+Co-trimoxazole,Malaysia,2004,0,
+Diazepam,Malaysia,2004,0,
+Glibenclamide,Malaysia,2004,0,0.4
+Omeprazole,Malaysia,2004,0,3.6
+Salbutamol,Malaysia,2004,0,0.7
+Simvastatin,Malaysia,2004,,2.24481597006
+Amoxicillin,Mali,2004,0.9,1.9
+Captopril,Mali,2004,,5.9
+Ceftriaxone,Mali,2004,2.06337454545,7.43665454545
+Ciprofloxacin,Mali,2004,3.71269818182,4.32564363636
+Co-trimoxazole,Mali,2004,0.3,0.6
+Diclofenac,Mali,2004,0.5,2.2
+Glibenclamide,Mali,2004,,3.2
+Salbutamol,Mali,2004,,2.7
+Amitriptyline,Mauritius,2008,0,1
+Amoxicillin,Mauritius,2008,0,0.8
+Atenolol,Mauritius,2008,0,0.3
+Captopril,Mauritius,2008,,0.5
+Ceftriaxone,Mauritius,2008,0,1.4
+Ciprofloxacin,Mauritius,2008,0,0.6
+Co-trimoxazole,Mauritius,2008,0,0.3
+Diazepam,Mauritius,2008,0,
+Diclofenac,Mauritius,2008,0,0.3
+Glibenclamide,Mauritius,2008,0,0.5
+Omeprazole,Mauritius,2008,0,0.9
+Paracetamol,Mauritius,2008,0,0.1
+Salbutamol,Mauritius,2008,0,0.4
+Simvastatin,Mauritius,2008,,1
+Amitriptyline,"Mexico, Mexico City",2009,0,
+Amoxicillin,"Mexico, Mexico City",2009,0,0.9
+Captopril,"Mexico, Mexico City",2009,0,1.03178129771
+Ceftriaxone,"Mexico, Mexico City",2009,0,1.1
+Ciprofloxacin,"Mexico, Mexico City",2009,0,1.5
+Co-trimoxazole,"Mexico, Mexico City",2009,0,0.3
+Diclofenac,"Mexico, Mexico City",2009,0,
+Glibenclamide,"Mexico, Mexico City",2009,0,0.3
+Omeprazole,"Mexico, Mexico City",2009,0,2
+Salbutamol,"Mexico, Mexico City",2009,0,0.8
+Amitriptyline,Moldova,2011,2.5,2.6
+Atenolol,Moldova,2011,0.9,0.9
+Captopril,Moldova,2011,1.2,1.3
+Ciprofloxacin,Moldova,2011,1.5,1.6
+Diazepam,Moldova,2011,0.1,0.1
+Diclofenac,Moldova,2011,1.4,1.5
+Glibenclamide,Moldova,2011,0.9,0.8
+Omeprazole,Moldova,2011,1.7,1.8
+Salbutamol,Moldova,2011,2.2,2.3
+Simvastatin,Moldova,2011,8.4,6.5
+Amoxicillin,Mongolia,2012,0.3,0.5
+Atenolol,Mongolia,2012,0.4,0.4
+Captopril,Mongolia,2012,0.3,0.5
+Ceftriaxone,Mongolia,2012,0.1,0.7
+Ciprofloxacin,Mongolia,2012,0.2,0.5
+Co-trimoxazole,Mongolia,2012,,0.5
+Diclofenac,Mongolia,2012,0.4,0.7
+Glibenclamide,Mongolia,2012,,0.4
+Omeprazole,Mongolia,2012,0.4,0.8
+Salbutamol,Mongolia,2012,0.8,1.7
+Simvastatin,Mongolia,2012,,2.7
+Amitriptyline,Morocco,2004,0,0.9
+Amoxicillin,Morocco,2004,0,0.969058753994
+Captopril,Morocco,2004,,2.92961405751
+Ceftriaxone,Morocco,2004,0,2.57258498403
+Ciprofloxacin,Morocco,2004,0,5.19992383387
+Co-trimoxazole,Morocco,2004,0,0.2
+Glibenclamide,Morocco,2004,0,0.6
+Omeprazole,Morocco,2004,0,2.34115111821
+Salbutamol,Morocco,2004,0,0.8
+Amitriptyline,Nicaragua,2008,0,2.2
+Amoxicillin,Nicaragua,2008,0,0.7
+Atenolol,Nicaragua,2008,0,0.6
+Captopril,Nicaragua,2008,0,1.5
+Ceftriaxone,Nicaragua,2008,0,1.1
+Ciprofloxacin,Nicaragua,2008,0,1.2
+Co-trimoxazole,Nicaragua,2008,0,0.4
+Diazepam,Nicaragua,2008,0,0.1
+Diclofenac,Nicaragua,2008,0,1
+Glibenclamide,Nicaragua,2008,0,0.8
+Omeprazole,Nicaragua,2008,0,2.6
+Paracetamol,Nicaragua,2008,0,0.2
+Salbutamol,Nicaragua,2008,0,1.8
+Simvastatin,Nicaragua,2008,,5.9
+Amitriptyline,Nigeria,2004,1.5,2.2
+Amoxicillin,Nigeria,2004,1.14259298653,1.14259298653
+Atenolol,Nigeria,2004,1.6,1.4
+Captopril,Nigeria,2004,2.306949649,3.5257155013
+Ceftriaxone,Nigeria,2004,6.49355544283,7.08697833996
+Ciprofloxacin,Nigeria,2004,3.66645393901,3.05707101286
+Co-trimoxazole,Nigeria,2004,0.5,0.6
+Diazepam,Nigeria,2004,0.0558601015638,0.0964856299739
+Glibenclamide,Nigeria,2004,3.3,3.3
+Omeprazole,Nigeria,2004,8.2,12.9
+Amoxicillin,Oman,2007,,0.4
+Atenolol,Oman,2007,0,0.4
+Captopril,Oman,2007,0,
+Ceftriaxone,Oman,2007,0,1.3
+Ciprofloxacin,Oman,2007,,0.6
+Co-trimoxazole,Oman,2007,0,0.4
+Diazepam,Oman,2007,0,
+Diclofenac,Oman,2007,0,0.7
+Glibenclamide,Oman,2007,0,0.9
+Omeprazole,Oman,2007,0,3.1
+Paracetamol,Oman,2007,0,0.1
+Salbutamol,Oman,2007,0,0.3
+Simvastatin,Oman,2007,0,3.3
+Amitriptyline,Pakistan,2004,0,
+Atenolol,Pakistan,2004,0,1.1
+Captopril,Pakistan,2004,0,4.25345104334
+Ceftriaxone,Pakistan,2004,0,2.40931781701
+Ciprofloxacin,Pakistan,2004,0,3.03179775281
+Co-trimoxazole,Pakistan,2004,0,0.3
+Diazepam,Pakistan,2004,0,0.0679775280899
+Glibenclamide,Pakistan,2004,0,0.9
+Omeprazole,Pakistan,2004,0,4.8069823435
+Salbutamol,Pakistan,2004,0,1.4
+Amitriptyline,Peru,2005,1.2,3
+Amoxicillin,Peru,2005,0.231735616438,0.454383561644
+Atenolol,Peru,2005,0.4,0.6
+Captopril,Peru,2005,0.0778943248532,0.778943248532
+Ceftriaxone,Peru,2005,0.228706392694,0.39293359426
+Ciprofloxacin,Peru,2005,0.0908767123288,0.457412785388
+Co-trimoxazole,Peru,2005,0.1,0.3
+Diazepam,Peru,2005,0.0136315068493,0.0908767123288
+Glibenclamide,Peru,2005,0.1,0.8
+Omeprazole,Peru,2005,0.2921037182,0.980170254403
+Salbutamol,Peru,2005,0.4,0.8
+Atenolol,Philippines,2005,0.6,0.9
+Captopril,Philippines,2005,2.5,2.4
+Ceftriaxone,Philippines,2005,0.936461157025,2.06594490358
+Ciprofloxacin,Philippines,2005,1.86990633609,1.48687713499
+Co-trimoxazole,Philippines,2005,0.3,0.2
+Glibenclamide,Philippines,2005,0.7,1.2
+Omeprazole,Philippines,2005,,4.90527272727
+Salbutamol,Philippines,2005,,1.1
+Amitriptyline,"Russia, Tatarstan",2011,0.3,0.2
+Amoxicillin,"Russia, Tatarstan",2011,0.2,0.6
+Atenolol,"Russia, Tatarstan",2011,0.1,0.3
+Captopril,"Russia, Tatarstan",2011,0.1,0.2
+Ceftriaxone,"Russia, Tatarstan",2011,0.1,0.1
+Ciprofloxacin,"Russia, Tatarstan",2011,0.2,0.3
+Co-trimoxazole,"Russia, Tatarstan",2011,0.2,0.7
+Diclofenac,"Russia, Tatarstan",2011,0.3,0.5
+Glibenclamide,"Russia, Tatarstan",2011,0.4,0.5
+Omeprazole,"Russia, Tatarstan",2011,0.2,0.3
+Paracetamol,"Russia, Tatarstan",2011,0.1,0.1
+Salbutamol,"Russia, Tatarstan",2011,0.8,0.9
+Simvastatin,"Russia, Tatarstan",2011,1,2.5
+Amoxicillin,São Tomé and Príncipe,2008,1,2.3
+Atenolol,São Tomé and Príncipe,2008,0.8,4.1
+Captopril,São Tomé and Príncipe,2008,1.1,9.9
+Ceftriaxone,São Tomé and Príncipe,2008,0.5,0.2
+Ciprofloxacin,São Tomé and Príncipe,2008,1,38.6
+Co-trimoxazole,São Tomé and Príncipe,2008,0.4,1.9
+Diazepam,São Tomé and Príncipe,2008,0.2,0.8
+Diclofenac,São Tomé and Príncipe,2008,,19.8
+Glibenclamide,São Tomé and Príncipe,2008,0.5,6.6
+Omeprazole,São Tomé and Príncipe,2008,0.7,41.3
+Paracetamol,São Tomé and Príncipe,2008,0.6,2
+Salbutamol,São Tomé and Príncipe,2008,2,
+Simvastatin,São Tomé and Príncipe,2008,,45.4486545455
+Amitriptyline,"South Africa, Gauteng Province",2004,,0.8
+Atenolol,"South Africa, Gauteng Province",2004,,0.3
+Captopril,"South Africa, Gauteng Province",2004,,0.302215985869
+Ciprofloxacin,"South Africa, Gauteng Province",2004,,0.472825950541
+Co-trimoxazole,"South Africa, Gauteng Province",2004,,0.1
+Diazepam,"South Africa, Gauteng Province",2004,,0.0108487789799
+Glibenclamide,"South Africa, Gauteng Province",2004,,0.2
+Omeprazole,"South Africa, Gauteng Province",2004,,1.70674540737
+Salbutamol,"South Africa, Gauteng Province",2004,,0.2
+Amitriptyline,Sudan,2013,2.2,2.2
+Amoxicillin,Sudan,2013,1.1,1.1
+Atenolol,Sudan,2013,0.7,0.5
+Captopril,Sudan,2013,3.2,3.2
+Ceftriaxone,Sudan,2013,13.9,3.8
+Ciprofloxacin,Sudan,2013,1.2,1.2
+Co-trimoxazole,Sudan,2013,0.4,0.5
+Diazepam,Sudan,2013,0.1,0.1
+Diclofenac,Sudan,2013,5.3,4.9
+Glibenclamide,Sudan,2013,0.5,0.8
+Omeprazole,Sudan,2013,2.7,2.5
+Paracetamol,Sudan,2013,0.2,0.3
+Salbutamol,Sudan,2013,1.6,1.4
+Simvastatin,Sudan,2013,2.1,2
+Amitriptyline,Syria,2003,,1.3
+Atenolol,Syria,2003,,0.6
+Captopril,Syria,2003,,2.1
+Ceftriaxone,Syria,2003,,1.688685
+Ciprofloxacin,Syria,2003,,0.5047
+Co-trimoxazole,Syria,2003,,0.2
+Diazepam,Syria,2003,,0.06489
+Glibenclamide,Syria,2003,,0.4
+Omeprazole,Syria,2003,,4.24875
+Salbutamol,Syria,2003,,1
+Amitriptyline,Tajikistan,2013,2.2,1.6
+Amoxicillin,Tajikistan,2013,1.3,1.3
+Atenolol,Tajikistan,2013,0.3,0.3
+Captopril,Tajikistan,2013,1.1,0.9
+Ceftriaxone,Tajikistan,2013,0.5,0.5
+Ciprofloxacin,Tajikistan,2013,1,0.9
+Co-trimoxazole,Tajikistan,2013,0.9,0.8
+Diazepam,Tajikistan,2013,,0.7
+Diclofenac,Tajikistan,2013,0.9,1.3
+Glibenclamide,Tajikistan,2013,0.9,0.9
+Omeprazole,Tajikistan,2013,0.7,0.7
+Paracetamol,Tajikistan,2013,0.3,0.3
+Salbutamol,Tajikistan,2013,3,3.1
+Simvastatin,Tajikistan,2013,10.8,6.4
+Amitriptyline,Tanzania,2012,0.3,1
+Atenolol,Tanzania,2012,0.4,0.5
+Captopril,Tanzania,2012,1.1,1.3
+Ceftriaxone,Tanzania,2012,0.1,0.0361566331392
+Ciprofloxacin,Tanzania,2012,0.5,0.5
+Co-trimoxazole,Tanzania,2012,0.2,0.2
+Diazepam,Tanzania,2012,0.0249261637551,0.1
+Diclofenac,Tanzania,2012,0.5,0.5
+Glibenclamide,Tanzania,2012,1.1,1.1
+Omeprazole,Tanzania,2012,0.5,0.5
+Salbutamol,Tanzania,2012,0.7,0.9
+Simvastatin,Tanzania,2012,,4
+Amitriptyline,Thailand,2006,0.3,0.4
+Atenolol,Thailand,2006,0.1,0.3
+Captopril,Thailand,2006,0.9,
+Ceftriaxone,Thailand,2006,0.144867990544,0.283483971631
+Ciprofloxacin,Thailand,2006,0.232574751773,0.347611725768
+Co-trimoxazole,Thailand,2006,0.1,0.1
+Diazepam,Thailand,2006,0.0162552245863,
+Glibenclamide,Thailand,2006,0.3,0.3
+Omeprazole,Thailand,2006,0.230431205674,0.712729078014
+Amitriptyline,Tunisia,2004,0,
+Amoxicillin,Tunisia,2004,0,0.6
+Atenolol,Tunisia,2004,0,0.7
+Captopril,Tunisia,2004,0,1.9
+Ceftriaxone,Tunisia,2004,0,0.511947053557
+Ciprofloxacin,Tunisia,2004,0,1.71565799383
+Co-trimoxazole,Tunisia,2004,0,0.3
+Diazepam,Tunisia,2004,0,0.0304626774473
+Glibenclamide,Tunisia,2004,0,0.3
+Omeprazole,Tunisia,2004,0,7
+Salbutamol,Tunisia,2004,0,
+Amitriptyline,Uganda,2013,0,1.7
+Ceftriaxone,Uganda,2013,0,0.5
+Ciprofloxacin,Uganda,2013,0,0.5
+Co-trimoxazole,Uganda,2013,0,0.4
+Diazepam,Uganda,2013,0,0.1
+Diclofenac,Uganda,2013,0,0.6
+Glibenclamide,Uganda,2013,0,1.2
+Omeprazole,Uganda,2013,0,1.2
+Salbutamol,Uganda,2013,0,1.4
+Amitriptyline,Ukraine,2012,0.8,
+Amoxicillin,Ukraine,2012,0.5,0.5
+Atenolol,Ukraine,2012,0.1,0.2
+Captopril,Ukraine,2012,0.5,0.5
+Ceftriaxone,Ukraine,2012,0.156310154719,0.151125419857
+Ciprofloxacin,Ukraine,2012,0.2,0.2
+Co-trimoxazole,Ukraine,2012,0.5,0.5
+Diazepam,Ukraine,2012,0.1,
+Diclofenac,Ukraine,2012,0.2,0.2
+Glibenclamide,Ukraine,2012,0.2,0.2
+Omeprazole,Ukraine,2012,0.4,0.3
+Paracetamol,Ukraine,2012,0.1,0.1
+Salbutamol,Ukraine,2012,0.5,0.5
+Simvastatin,Ukraine,2012,1.4,1.4
+Amitriptyline,United Arab Emirates,2006,0,
+Atenolol,United Arab Emirates,2006,0,0.7
+Captopril,United Arab Emirates,2006,0,1.59278
+Ceftriaxone,United Arab Emirates,2006,0,1.63315
+Ciprofloxacin,United Arab Emirates,2006,0,2.35662933333
+Co-trimoxazole,United Arab Emirates,2006,0,0.2
+Diazepam,United Arab Emirates,2006,0,0.0496673333333
+Glibenclamide,United Arab Emirates,2006,0,0.8
+Omeprazole,United Arab Emirates,2006,0,4.53612
+Salbutamol,United Arab Emirates,2006,0,0.6
+Simvastatin,United Arab Emirates,2006,0,3.61495
+Amitriptyline,Uzbekistan,2004,,3.3
+Atenolol,Uzbekistan,2004,,1
+Captopril,Uzbekistan,2004,,4.1
+Ceftriaxone,Uzbekistan,2004,,3.05095017145
+Ciprofloxacin,Uzbekistan,2004,,2.12432165487
+Co-trimoxazole,Uzbekistan,2004,,1.6
+Diclofenac,Uzbekistan,2004,,1.7
+Glibenclamide,Uzbekistan,2004,,1.6
+Omeprazole,Uzbekistan,2004,,5.56861016325
+Salbutamol,Uzbekistan,2004,,2.8
+Amitriptyline,Yemen,2006,,1.8
+Atenolol,Yemen,2006,,0.5
+Captopril,Yemen,2006,0.3,1.4
+Ceftriaxone,Yemen,2006,0.98957981982,1.17218933333
+Ciprofloxacin,Yemen,2006,,0.70765636036
+Co-trimoxazole,Yemen,2006,0.1,0.2
+Diazepam,Yemen,2006,,0.0847194234234
+Glibenclamide,Yemen,2006,,0.7
+Omeprazole,Yemen,2006,,1.07857081081
+Salbutamol,Yemen,2006,,0.6
+Amitriptyline,Spain,2015,0.0115623919806,0.115623919806
+Amoxicillin,Spain,2015,0.0362945039751,0.0907362599378
+Atenolol,Spain,2015,0.00432077428275,0.0432077428275
+Captopril,Spain,2015,0.0122018665745,0.122018665745
+Ceftriaxone,Spain,2015,0.0839267196682,0.20981679917
+Ciprofloxacin,Spain,2015,0.0306947805047,0.0767369512617
+Co-trimoxazole,Spain,2015,0.0187763567231,0.0469408918078
+Diazepam,Spain,2015,0.00241963359834,0.00604908399585
+Diclofenac,Spain,2015,0.0342205323194,0.0855513307985
+Glibenclamide,Spain,2015,0.0127203594884,0.127203594884
+Omeprazole,Spain,2015,0.0358500814775,0.0896252036936
+Paracetamol,Spain,2015,0.0089180781196,0.022295195299
+Salbutamol,Spain,2015,0.0101278949188,0.101278949188
+Simvastatin,Spain,2015,0.0234062515431,0.0585156288578
+Amitriptyline,Germany,2015,0.0782150740726,0.26061262681
+Amoxicillin,Germany,2015,0.0912509197513,0.26061262681
+Atenolol,Germany,2015,0.052143382715,0.140682846565
+Captopril,Germany,2015,0.10428676543,0.247993928193
+Ceftriaxone,Germany,2015,0.0869056378584,0.528038655628
+Ciprofloxacin,Germany,2015,0.121667893002,0.305873083006
+Co-trimoxazole,Germany,2015,0.0608339465009,0.158654932474
+Diazepam,Germany,2015,0.0121667893002,0.0292489614776
+Diclofenac,Germany,2015,0.052143382715,0.143602875997
+Glibenclamide,Germany,2015,0.0434528189292,0.171030295305
+Omeprazole,Germany,2015,0.0869056378584,0.212571190202
+Paracetamol,Germany,2015,0.0600952485791,0.0600952485791
+Salbutamol,Germany,2015,0.0869056378584,0.246464388966
+Simvastatin,Germany,2015,0.0869056378584,0.207183040654
+Amitriptyline,Argentina,2015,0.430326751048,0.717267552182
+Amoxicillin,Argentina,2015,0.135233646809,0.225389411348
+Atenolol,Argentina,2015,0.0263986487895,0.0880163479784
+Ceftriaxone,Argentina,2015,0.215180265655,0.358633776091
+Ciprofloxacin,Argentina,2015,0.301988030944,0.503313384907
+Co-trimoxazole,Argentina,2015,0.0809487666034,0.134914611006
+Diazepam,Argentina,2015,0.0230524011093,0.0384206685155
+Diclofenac,Argentina,2015,0.156875534333,0.261459223888
+Glibenclamide,Argentina,2015,0.0570511082845,0.190232916988
+Omeprazole,Argentina,2015,0.152761849157,0.254603081928
+Salbutamol,Argentina,2015,0.0786954980503,0.225702191547
+Simvastatin,Argentina,2015,0.0905185895698,0.30652459495
+Amitriptyline,Italy,2015,,0.0931074615285
+Amoxicillin,Italy,2015,0.0689041537431,0.0993030451004
+Atenolol,Italy,2015,0.0289513251021,0.0627664728215
+Captopril,Italy,2015,0.0231610600817,0.0979712841457
+Ceftriaxone,Italy,2015,0.0193008834014,0.0957323816711
+Ciprofloxacin,Italy,2015,0.0900707892067,0.305790329357
+Co-trimoxazole,Italy,2015,,0.0579605528545
+Diclofenac,Italy,2015,0.0521123851839,0.149002819859
+Glibenclamide,Italy,2015,,0.1134891944
+Omeprazole,Italy,2015,0.0827180717204,0.251049347672
+Salbutamol,Italy,2015,0.0193008834014,0.0484452173376
+Simvastatin,Italy,2015,0.0413590358602,0.116632481126
+Amitriptyline,Belgium,2015,0.0172950499274,0.115847015462
+Amoxicillin,Belgium,2015,0.0163072938432,0.145243630497
+Atenolol,Belgium,2015,0.015264514509,0.0833335995578
+Captopril,Belgium,2015,0.0157378327883,0.119276206396
+Ceftriaxone,Belgium,2015,0.0324696339633,0.167152350352
+Ciprofloxacin,Belgium,2015,0.0453415245702,0.182757654022
+Co-trimoxazole,Belgium,2015,0.0128718906069,0.0756078619431
+Diazepam,Belgium,2015,0.0150365328711,0.0150365328711
+Diclofenac,Belgium,2015,0.0134185732195,0.0827975666064
+Glibenclamide,Belgium,2015,0,0.166986688954
+Omeprazole,Belgium,2015,0.100639299146,0.224352864411
+Salbutamol,Belgium,2015,0.00463851913762,0.0911137687746
+Simvastatin,Belgium,2015,0,0.152739808746
+Amitriptyline,Guatemala,2016,,3.53180150271
+Amoxicillin,Guatemala,2016,,0.268325179102
+Atenolol,Guatemala,2016,,0.492093307706
+Captopril,Guatemala,2016,,1.67547614887
+Ceftriaxone,Guatemala,2016,,0.273021142757
+Ciprofloxacin,Guatemala,2016,,0.152891839944
+Diazepam,Guatemala,2016,,0.434977284641
+Diclofenac,Guatemala,2016,,0.111392626245
+Glibenclamide,Guatemala,2016,,0.130231085095
+Omeprazole,Guatemala,2016,,0.565153765508
+Paracetamol,Guatemala,2016,,0.0409531714136
+Salbutamol,Guatemala,2016,,0.436833828412
+Simvastatin,Guatemala,2016,,2.20655687576
