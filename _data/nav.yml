@@ -1,0 +1,10 @@
+- ref: prices
+  type: article
+- ref: counterfeits
+  type: article
+- ref: compulsory-license
+  type: article
+- ref: patents
+  type: article
+- ref: team
+  type: page
