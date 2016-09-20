@@ -1,0 +1,566 @@
+// Home Header
+.home header{
+  margin-top: 0;
+  min-height: 100%;
+  background: none;
+
+  #home-bkg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(/wp-content/uploads/2015/06/home-bkg.jpg) no-repeat center center;
+    @include background-size( cover );
+  }
+
+  .header-content{
+    width: 100%; 
+    padding: 0;
+    //background: url(../images/noise.png) repeat 0 0 transparent;
+
+    .header-content-inner{
+      max-width: 640px;
+    }
+
+    h1{
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 100px;
+      padding-top: 140px;
+      margin: 0;
+      background: url(../images/medicamentalia.png) no-repeat center 0 transparent;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    p{
+      font-size: 20px;
+      font-family: $font-family-serif;
+      letter-spacing: .03em;
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-top: -10px;
+      text-align: center;
+      margin-bottom: 80px;
+    }
+  }
+
+  .btn-scroll-down{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+  }
+}
+
+.home #lang_sel_click{
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  z-index: 90;
+  background-color: transparent;
+
+  li{
+    width: auto;
+    list-style: none;
+    text-align: center;
+
+    a{
+      color: $brand-secondary;
+      font-family: $font-family-sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      text-transform: uppercase;
+      background-color: transparent;
+      border: none;
+      padding: 0 6px;
+
+      &:hover,
+      &:focus{
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  > ul > li > a:after{
+    content: "\e252";
+    position: relative;
+    top: -1px;
+    padding-left: 4px;
+    display: inline-block;
+    font-size: 0.6em;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } 
+
+  ul ul{
+    visibility: hidden;
+    border: none;
+    margin: 0;
+    padding: 4px 0 0;
+
+    li{
+      border: none;
+      margin-bottom: 1px;
+      background: $brand-secondary;
+
+      &:hover{
+        background: white;
+      }
+    }
+
+    a{
+      color: $brand-primary;
+      line-height: 22px;
+      background: none;
+      padding: 0 6px;
+      font-weight: 400;
+
+      &:hover{
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+
+@media (min-width: $screen-sm) {
+
+  .home header .header-content{
+
+    h1{
+      font-size: 48px;
+      padding-top: 0;
+      padding-left: 100px;
+      line-height: 139px;
+      background-position: 0 0;
+      text-align: left;
+    }
+
+    p{
+      font-size: 22px;
+      padding-left: 174px;
+      text-align: left;
+    }
+  }
+}
+
+
+$btn-scroll-down-width: 120px;
+$btn-scroll-down-icon-top: 32px;
+$btn-scroll-down-icon-size: 44px;
+
+@mixin btn-scroll-down-animation-keyframes() {
+  0% { 
+    top: $btn-scroll-down-icon-top;
+    left: ($btn-scroll-down-width - $btn-scroll-down-icon-size) / 2;
+    width: $btn-scroll-down-icon-size;
+    height: $btn-scroll-down-icon-size;
+    border-radius: $btn-scroll-down-icon-size / 2;
+    opacity: 0.7;
+  }
+  100% {
+    top: -6px;
+    left: -6px;
+    top: $btn-scroll-down-icon-top - 6;
+    left: - 6 + (($btn-scroll-down-width - $btn-scroll-down-icon-size) / 2);
+    width: $btn-scroll-down-icon-size + 12;
+    height: $btn-scroll-down-icon-size + 12;
+    border-radius: $btn-scroll-down-icon-size + 12 / 2;
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes btn-scroll-down-animation {
+  @include btn-scroll-down-animation-keyframes();
+}
+@-moz-keyframes btn-scroll-down-animation {
+  @include btn-scroll-down-animation-keyframes();
+}
+@-o-keyframes btn-scroll-down-animation {
+  @include btn-scroll-down-animation-keyframes();
+}
+@keyframes btn-scroll-down-animation {
+  @include btn-scroll-down-animation-keyframes();
+}
+
+.btn-scroll-down{
+  color: transparent;
+  background: none;
+  border: none;
+  width: $btn-scroll-down-width;
+  padding: 0;
+  padding-bottom: $btn-scroll-down-icon-top + $btn-scroll-down-icon-size;
+  margin-left: - $btn-scroll-down-width / 2;
+  @include transition(.3s ease-in-out color);
+
+  .glyphicon,
+  .animation{
+    display: block;
+    position: absolute;
+    top: $btn-scroll-down-icon-top;
+    left: ($btn-scroll-down-width - $btn-scroll-down-icon-size) / 2;
+    width: $btn-scroll-down-icon-size;
+    height: $btn-scroll-down-icon-size;
+    border-radius: $btn-scroll-down-icon-size / 2;
+  }
+
+  .glyphicon{
+    line-height: $btn-scroll-down-icon-size + 4;
+    color: $brand-primary;
+    font-size: 1.5em;
+    background: $brand-secondary;
+    z-index: 5;
+    opacity: 0.7;
+    @include transition(.3s ease-in-out opacity);   
+
+    &:before{
+      display: block;
+      width: $btn-scroll-down-icon-size + 2;
+      text-align: center;
+    }
+  }
+
+  .animation{
+    background: white;
+    z-index: 1;
+    opacity: 0.3;
+    -webkit-animation: btn-scroll-down-animation 1s ease-in-out alternate infinite;
+    -moz-animation:    btn-scroll-down-animation 1s ease-in-out alternate infinite;
+    -o-animation:      btn-scroll-down-animation 1s ease-in-out alternate infinite;
+    animation:         btn-scroll-down-animation 1s ease-in-out alternate infinite;
+  }
+
+  &:hover{
+    color: $brand-secondary;
+    background: none;
+
+    .glyphicon{
+      background: $brand-secondary;
+      opacity: 1;
+    }
+
+    .animation{
+      opacity: 0;
+    }
+  }
+
+  &:focus{
+    background: none;
+  }
+}
+
+
+#home {
+  //height: 200%;
+
+  .container-fluid,
+  .row {
+    height: 100%;
+  }
+
+  [class*=col-] {
+    height: 300px;
+  }
+
+  &.page-footer{
+    height: auto;
+
+    .container-fluid,
+    .row {
+      height: auto;
+    }
+
+    [class*=col-] {
+      height: 300px;
+    }
+  }
+
+  
+}
+
+@media (min-width: $screen-sm) {
+
+  #home {
+    height: 100%;
+
+    [class*=col-] {
+      height: 50%;
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+
+  #home.page-footer{
+    height: 50%;
+
+    .container-fluid,
+    .row,
+    [class*=col-] {
+      height: 100%;
+    }
+  }
+}
+
+
+// Portfolio Styles
+
+.portfolio-box {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+
+  .portfolio-box-background {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    //background-image: url('http://lorempixel.com/g/1280/720/nature/');
+    @include background-size( cover );
+  }
+
+  .portfolio-box-caption,
+  .portfolio-box-overlay {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+  }
+
+  .portfolio-box-overlay {
+    background: $brand-primary;
+    opacity: 0.3;
+    @include transition(.5s ease-out opacity);
+  }
+
+  .portfolio-box-caption {
+    color: white;
+    //background: fade(@theme-primary, 90%);
+    text-align: center;
+
+    .portfolio-box-caption-content {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      h3 {
+        color: $brand-secondary;
+        font-size: 2em;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: .075em;
+        margin: 0 0 20px;
+      }
+
+      .portfolio-box-caption-description{
+        //font-family: $font-family-serif;
+        font-size: 1.125em;
+        width: 334px;
+        margin: 0 auto 32px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &:hover {
+    .portfolio-box-overlay {
+      opacity: 0.5;
+    }
+    .portfolio-box-caption-content {
+      .read-more-btn{
+        border-color:  $brand-secondary;
+        background: $brand-secondary;
+      }
+    }
+  }
+  
+  &.portfolio-id-2 .portfolio-box-overlay{
+    background: $overlay-green;
+  }
+  &.portfolio-id-2:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+    color: darken($overlay-green,10%);
+  }
+  &.portfolio-id-2 .portfolio-box-background{
+    //background-image: url('../images/viz-screenshoot.jpg');  // url('../images/medicine-pattern.png');
+    //background-repeat: repeat;
+    //@include background-size( auto );
+  }
+
+  &.portfolio-id-10 .portfolio-box-overlay{
+    background: $overlay-blue;
+  }
+  &.portfolio-id-10:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+    color: darken($overlay-blue,10%);
+  }
+
+  &.portfolio-id-8 .portfolio-box-overlay{
+    background: $overlay-orange;
+  }
+  &.portfolio-id-8:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+    color: darken($overlay-orange,10%);
+  }
+
+  &.portfolio-id-12 .portfolio-box-overlay{
+    background: $overlay-yellow;
+  }
+  &.portfolio-id-12:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+    color: darken($overlay-yellow,20%);
+  }
+
+  @media (min-width: $screen-sm) {
+    .portfolio-box-caption {
+      .portfolio-box-caption-content {
+        .project-category {
+          font-size: 16px;
+        }
+        .project-name {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+.read-more-btn{
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  font-size: .875em;
+  width: 190px;
+  padding: 10px 0;
+  @include transition(.4s ease-out background-color);
+}
+
+
+// Key Findings
+
+#key-findings {
+  position: relative;
+  padding: 50px 0 30px;
+  color: white;
+  background: $color-green;
+  //text-align: center;
+
+  .key-findings-overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: url('../images/medicine-pattern.jpg') repeat 0 0;
+    opacity: 0.5;
+  }
+
+  h3{
+    color: $brand-secondary;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: .075em;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+    text-align: center;
+  }
+
+  .read-more-btn{
+    display: none;
+    color: $brand-secondary;
+    margin: 25px auto 0;
+    font-size: 0.7em;
+    border-width: 1px;
+    border-color: $brand-secondary;
+
+    &:focus,
+    &:hover{
+      color: $brand-primary;
+      background: $brand-secondary;
+    }
+  }
+
+  ul{
+    //float: left;
+    //width: 46%;
+    font-size: 1.25em;
+    line-height: 1.375em;
+    font-weight: 300;
+    //padding: 0;
+    //margin: 0 2%;
+    padding: 0 20%;
+    margin: 0;
+
+    li{
+      position: relative;
+      text-align: center;
+      list-style: none;
+      //padding-left: 32px;
+      margin-bottom: 36px;
+      //background: url('../images/pills-separator.png') no-repeat 0 8px transparent;
+
+      &:before{
+        display: block;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 27px;
+        bottom: -14px;
+        background: url('../images/pills-separator.png') no-repeat center center transparent;
+      }
+
+      &:after{
+        display: block;
+        content: '';
+        width: 192px;
+        margin: 36px auto 0;
+        border-top: 1px solid $brand-secondary;
+      }
+
+      &:nth-child(even){
+        &:before{
+          background-image: url('../images/pills-separator2.png');
+        }
+      }
+
+      &:last-child{
+        &:before,
+        &:after{
+          display: none;
+        }
+      }
+
+      a{
+        color: white;
+
+        &:hover{
+          color: $brand-secondary;
+          text-decoration: none;
+        }
+      }
+
+      strong{
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  #key-findings ul{
+    padding: 0;
+  }
+}

@@ -1,0 +1,131 @@
+.partners{
+  color: $brand-secondary;
+  font-weight: 300;
+  padding: 40px 0;
+  background: $color-green-dark;
+  text-align: center;
+
+  .main-partners{
+
+    > div{
+      padding-top: 40px;
+    
+      &:first-child{
+        padding-top: 0;
+      }
+    }
+
+    @media (min-width: $screen-sm) {
+      
+      > div{
+        padding-top: 0;
+      }
+    }
+  }
+
+  hr{
+    margin: 40px 0;
+    border-color: $color-green-light;
+  }
+
+  .partner-logo,
+  .logo{
+    display: block;
+    opacity: 0.6;
+    @include transition(.3s ease-out opacity);
+
+    &:hover{
+      opacity: 0.9;
+    }
+
+    img{
+      margin: 0 auto;
+    }
+  }
+
+  a{
+    color: $color-orange;
+    font-weight: 600;
+
+    &:hover{
+      color: $brand-secondary;
+      text-decoration: none;
+    }
+  }
+
+  .nosotros{
+    display: block;
+    font-size: 1.25em;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  form{
+    margin-bottom: 30px;
+
+    .email{
+      border: 2px solid $color-green-light;
+      background: $color-green-dark;
+      line-height: 36px;
+      padding: 0px 10px;
+      min-width: 190px;
+    }
+
+    .btn-submit{
+      color: $color-orange;
+      background: $color-green-dark;
+      font-size: 1.25em;
+      line-height: 36px;
+      width: 38px;
+      padding: 0;
+      margin-left: -6px;
+      border: 2px solid $color-green-light;
+      vertical-align: top;
+      @include transition(.3s ease-out all);
+
+      &:hover{
+        color: $color-green-dark;
+        background: $color-green-light;
+      }
+
+      span{
+        display: none;
+      }
+    }
+  }
+}
+
+.footer{
+  color: $color-brown;
+  font-weight: 400;
+  background: $color-orange;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
+
+  p{
+    margin: 0;
+    font-size: 0.875em;
+    letter-spacing: 0.02em;
+  }
+
+  a{
+    color: $brand-secondary;
+    font-weight: 300;
+    @include transition(.3s ease-out color);
+
+    &:hover{
+      color: $color-brown;
+      text-decoration: none;
+    }
+  }
+}
+
+/*
+@media (min-width: $screen-sm) {
+
+  .partners .media-partner{
+    width: 20% !important;
+  }
+}
+*/
