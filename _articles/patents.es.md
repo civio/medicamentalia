@@ -3,6 +3,8 @@ title:            Patentes
 subtitle:         Peaje a la salud
 description:      Aunque existen modelos alternativos, la aplicación de los derechos de propiedad intelectual a los medicamentos sigue siendo el camino marcado por la industria
 home_description: Aunque existen modelos alternativos, la aplicación de los derechos de propiedad intelectual a los medicamentos sigue siendo el camino marcado por la industria
+home_img:         home/home-patentes-1040x694.jpg
+order:            2
 author:           Eva Belmonte
 slug:             patentes
 ref:              patents

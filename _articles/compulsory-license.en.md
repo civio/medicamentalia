@@ -3,6 +3,8 @@ title:            Compulsory license
 subtitle:         A sovereign act to bypass a patent
 description:      Eight years after overthrowing an antiretroviral patent, new doubts arise about the sustainability of the Brazilian government’s AIDS programme
 home_description: Eight years after overthrowing an antiretroviral patent, new doubts arise about the sustainability of the Brazilian government’s AIDS programme
+home_img:         home/home-brasil-1040x694.jpg
+order:            4
 author:           Eva Belmonte / Rio de Janeiro
 slug:             compulsory-license
 ref:              compulsory-license

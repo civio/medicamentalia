@@ -3,6 +3,8 @@ title:            Counterfeits
 subtitle:         False friends in the fight against malaria
 description:      The high prices of medicines, especially on developing coutries, open the door to an illegal market of dangerous counterfeits
 home_description: The high prices of medicines, especially on developing coutries, open the door to an illegal market of dangerous counterfeits
+home_img:         home/home-falsificaciones-1040x694.jpg
+order:            3
 author:           Antonio Villarreal / Accra
 slug:             counterfeits
 ref:              counterfeits
