@@ -43,7 +43,7 @@ layout: default
     <div class="col-sm-12">
       <div class="page-content-container">
         <p class="author">{{ site.data.locales[page.lang].by }} <span>{{ page.author }}</span></p>
-        {{ content }}
+        {{ content | add_anchor_links }}
       </div>
     </div>
   </div>
