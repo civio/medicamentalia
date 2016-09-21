@@ -3,9 +3,9 @@ title:            Licencia obligatoria
 subtitle:         Un acto soberano –y aislado– contra las patentes
 description:      Ocho años después de tumbar la patente sobre el efavirenz, un antirretroviral, vuelven las dudas sobre la sostenibilidad del programa AIDS del gobierno de Brasil
 home_description: Ocho años después de tumbar la patente sobre el efavirenz, un antirretroviral, vuelven las dudas sobre la sostenibilidad del programa AIDS del gobierno de Brasil
-home_img:         home/home-brasil-1040x694.jpg
+img:              articles/home-brasil-1040x694.jpg
 order:            4
-author:           Eva Belmonte / Rio de Janeiro
+author:           Eva Belmonte <i>/ Rio de Janeiro</i>
 slug:             licencia-obligatoria
 ref:              compulsory-license
 lang:             es

@@ -3,7 +3,7 @@ title:            Precios
 subtitle:         11 días de trabajo por un inhalador para el asma
 description:      14 medicinas. 61 países. Compara y analiza las diferencias entre ellos
 home_description: Analizamos y comparamos los precios de 14 medicinas esenciales en 61 países. ¿Cuántas horas de trabajo necesitan un haitiano o un etíope para pagar uno de los antibióticos más comunes o un simple omeprazol? ¿Y un español, un alemán o un italiano?
-home_img:         home/viz-screenshoot-1040x456.jpg
+img:              articles/viz-screenshoot-1040x456.jpg
 order:            1
 highlighted:      true
 author:           Eva Belmonte y Miguel Á. Gavilanes

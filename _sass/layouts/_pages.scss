@@ -20,23 +20,16 @@ header {
     opacity: 0.5;
   }
 
-  /*
-  &.page-2{
-    background-image: url('../images/medicine-pattern.png');
-    background-repeat: repeat;
-    @include background-size( auto );
-  }
-  */
-  &.page-2 .header-overlay{
+  &.article-prices .header-overlay{
     background: $overlay-green;
   }
-  &.page-10 .header-overlay{
+  &.article-counterfeits .header-overlay{
     background: $overlay-blue;
   }
-  &.page-8 .header-overlay{
+  &.article-compulsory-license .header-overlay{
     background: $overlay-orange;
   }
-  &.page-12 .header-overlay{
+  &.article-patents .header-overlay{
     background: $overlay-yellow;
   }
 

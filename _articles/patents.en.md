@@ -3,7 +3,7 @@ title:            Patents
 subtitle:         A toll on health
 description:      Although there are alternative models, the use of intellectual property rights, as applied to medicine, remains mandatory for the industry
 home_description: Although there are alternative models, the use of intellectual property rights, as applied to medicine, remains mandatory for the industry
-home_img:         home/home-patentes-1040x694.jpg
+img:              articles/home-patentes-1040x694.jpg
 order:            2
 author:           Eva Belmonte
 slug:             patents

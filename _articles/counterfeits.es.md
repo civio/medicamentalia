@@ -3,9 +3,9 @@ title:            Falsificaciones
 subtitle:         Falsos amigos en la lucha contra la malaria
 description:      El alto precio de las medicinas, especialmente en países en vías de desarrollo, abre la puerta a un mercado ilegal de peligrosas imitaciones
 home_description: El alto precio de las medicinas, especialmente en países en vías de desarrollo, abre la puerta a un mercado ilegal de peligrosas imitaciones
-home_img:         home/home-falsificaciones-1040x694.jpg
+img:              articles/home-falsificaciones-1040x694.jpg
 order:            3
-author:           Antonio Villarreal / Acra
+author:           Antonio Villarreal <i>/ Acra</i>
 slug:             falsificaciones
 ref:              counterfeits
 lang:             es
