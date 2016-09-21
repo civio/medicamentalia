@@ -1,0 +1,12 @@
+
+* [Las diferencias de precio de los 14 medicamentos analizados entre los 61 países son muy acusadas **aunque se trate de genéricos**. Y no se compensan con los salarios. Así, un ciudadano de un país en desarrollo tiene que trabajar mucho más para poder costearse el mismo tratamiento.](http://medicamentalia.org/precios/ "Precios - Medicamentalia")
+
+* [En Nigeria o Congo, adquirir una caja de 30 pastillas de omeprazol **cuesta 13 días de trabajo**, frente a entre una y dos horas de sueldo en España, Alemania e Italia. El fármaco más caro en todos los países analizados es la simvastatina (casi cinco días de trabajo de media) frente a menos de una hora de sueldo del diazepam.](http://medicamentalia.org/precios/#viz "Precios - Medicamentalia")
+
+* [En Ghana comprobamos que existe una relación entre el alto precio de **medicamentos esenciales** muy demandados y la existencia de **falsificaciones** de estos mismos, importadas ilegalmente desde Asia.](http://medicamentalia.org/falsificaciones/ "Falsificaciones - Medicamentalia")
+
+* [Los costes de crear un nuevo fármaco no son transparentes. Estudios apoyados por la industria farmacéutica hablan de 2.277 millones de euros, mientras que las organizaciones aseguran que son suficientes 44 millones. Así, **es imposible tener un debate objetivo** basado en datos.](http://medicamentalia.org/patentes/#coste "Patentes - Medicamentalia")
+
+* [Alternativas como las PDP o iniciativas impulsadas desde organizaciones públicas y privadas buscan **caminos alternativos a la propiedad intelectual**. La industria, aunque acepta algunos de estos sistemas en ocasiones puntuales, defiende que el sistema de patentes es innegociable.](http://medicamentalia.org/patentes/#alternativas "Patentes - Medicamentalia")
+
+* [La aprobación de una Licencia Obligatoria en Brasil en 2007 no trajo consigo el abandono del país por parte de las farmacéuticas, como auguraron las empresas del sector e incluso algunos gobiernos como el de Estados Unidos. De hecho, desde entonces, tanto la inversión como **el número de patentes no ha dejado de crecer**.](http://medicamentalia.org/licencia-obligatoria/ "Licencia obligatoria - Medicamentalia")
