@@ -52,10 +52,12 @@
   <div class="key-findings-overlay"></div>
   <div class="container">
     <div class="row">
-      {% capture keyFindings %}
-      {% include key_findings.{{ page.lang }}.md %}
-      {% endcapture %}
-      {{ keyFindings | markdownify }}
+      <div class="col-sm-12">
+        {% capture keyFindings %}
+        {% include key_findings.{{ page.lang }}.md %}
+        {% endcapture %}
+        {{ keyFindings | markdownify }}
+      </div>
     </div>
   </div>
 </section>

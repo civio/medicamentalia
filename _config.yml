@@ -37,6 +37,8 @@ fb_id: 620090684758872
 
 # Build settings
 markdown: kramdown
+kramdown:
+  auto_ids: false
 
 # Include files
 include: 

@@ -391,36 +391,31 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
   
-  &.portfolio-id-2 .portfolio-box-overlay{
+  &.portfolio-prices .portfolio-box-overlay{
     background: $overlay-green;
   }
-  &.portfolio-id-2:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+  &.portfolio-prices:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
     color: darken($overlay-green,10%);
   }
-  &.portfolio-id-2 .portfolio-box-background{
-    //background-image: url('../images/viz-screenshoot.jpg');  // url('../images/medicine-pattern.png');
-    //background-repeat: repeat;
-    //@include background-size( auto );
-  }
 
-  &.portfolio-id-10 .portfolio-box-overlay{
+  &.portfolio-counterfeits .portfolio-box-overlay{
     background: $overlay-blue;
   }
-  &.portfolio-id-10:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+  &.portfolio-counterfeits:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
     color: darken($overlay-blue,10%);
   }
 
-  &.portfolio-id-8 .portfolio-box-overlay{
+  &.portfolio-compulsory-license .portfolio-box-overlay{
     background: $overlay-orange;
   }
-  &.portfolio-id-8:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+  &.portfolio-compulsory-license:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
     color: darken($overlay-orange,10%);
   }
 
-  &.portfolio-id-12 .portfolio-box-overlay{
+  &.portfolio-patents .portfolio-box-overlay{
     background: $overlay-yellow;
   }
-  &.portfolio-id-12:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+  &.portfolio-patents:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
     color: darken($overlay-yellow,20%);
   }
 
