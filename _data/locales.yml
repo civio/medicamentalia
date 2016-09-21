@@ -1,17 +1,21 @@
 en:
-  lang: English
-  description: A journalistic investigation into access to medicines around the world
   articles: Articles
   by: By
+  description: A journalistic investigation into access to medicines around the world
+  lang: English
+  readmore: Read more
+  scroll: Scroll down
   footer:
     project_by: Medicamentalia is a project by
     funded_by: Funded by
     media_partners: Has media partners such as
 es:
-  lang: Español
-  description: Investigación periodística sobre el acceso a los medicamentos en el mundo
   articles: Artículos
   by: Por
+  description: Investigación periodística sobre el acceso a los medicamentos en el mundo
+  lang: Español
+  readmore: Leer más
+  scroll: Scroll down
   footer:
     project_by: Medicamentalia es un proyecto de
     funded_by: Financiado por

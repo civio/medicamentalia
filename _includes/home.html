@@ -1,17 +1,61 @@
-<div class="home">
-
-  <h1 class="page-heading">{{ site.data.locales[page.lang].articles }}</h1>
-
-  {% assign articles=site.articles | where:"lang", page.lang %}
-
-  <ul class="post-list">
-    {% for article in articles %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
+<!-- Lang Selector -->
+<div id="lang_sel_click" onclick="wpml_language_selector_click.toggle();" class="lang_sel_click">
+  <ul>
+    <li>
+      <a href="javascript:;" class="lang_sel_sel icl-es">Español</a>
+      <ul>
+        <li class="icl-en">
+          <a rel="alternate" href="{% if page.lang == 'es' %}/en/{% else %}/{% endif %}">
+            <span class="icl_lang_sel_native">English</span>
+          </a>
+        </li>
+      </ul>
+    </li>
   </ul>
-
 </div>
+
+
+<!-- Home Intro -->
+<header>
+  <video autoplay loop poster="{{ site.baseurl }}/assets/images/home-bkg.jpg" id="home-bkg">
+    <source src="{{ site.baseurl }}/assets/videos/home-bkg.m4v" type="video/mp4">
+    <source src="{{ site.baseurl }}/assets/videos/home-bkg.webm" type="video/webm">
+    <source src="{{ site.baseurl }}/assets/videos/home-bkg.ogv" type="video/ogg">
+  </video>
+  <div class="header-content">
+    <div class="header-content-inner">
+        <h1>{{ site.title }}</h1>
+        <p>{{ site.data.locales[page.lang].description }}</p>
+    </div>
+  </div>
+  <a href="#home" class="btn btn-primary btn-xl btn-scroll-down " title="{{ site.data.locales[page.lang].scroll }}">
+    {{ site.data.locales[page.lang].scroll }}
+    <span class="glyphicon glyphicon-chevron-down"></span>
+    <span class="animation"></span>
+  </a>
+</header>
+
+<!-- Home Main Menu -->
+<section class="no-padding" id="home">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      {% assign articles=site.articles | where:"lang", page.lang | sort:"order" %}
+      {% for article in articles %}
+        {% include home_item.html article=article %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Home Key Findings -->
+<section class="no-padding" id="key-findings">
+  <div class="key-findings-overlay"></div>
+  <div class="container">
+    <div class="row">
+      {% capture keyFindings %}
+      {% include key_findings.{{ page.lang }}.md %}
+      {% endcapture %}
+      {{ keyFindings | markdownify }}
+    </div>
+  </div>
+</section>

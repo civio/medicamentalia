@@ -1,0 +1,17 @@
+<div class="{% if article.highlighted %}col-lg-12 col-sm-6{% else %}col-lg-4 col-sm-6{% endif %}">
+  <a class="portfolio-box portfolio-id-{{ article.ref }}" href="{{ article.url | prepend: site.baseurl }}" title="{{ article.title }}">
+    {% if article.home_img %}
+      <div class="portfolio-box-background" style="background-image: url('{{ site.baseurl }}/assets/images/{{ article.home_img }}')"></div>
+    {% else %}
+      <div class="portfolio-box-background"></div>
+    {% endif %}
+    <div class="portfolio-box-overlay"></div>
+    <div class="portfolio-box-caption">
+      <div class="portfolio-box-caption-content">
+        <h3>{{ article.title }}</h3>
+        <div class="portfolio-box-caption-description">{{ article.home_description }}</div>
+        <button class="read-more-btn btn">{{ site.data.locales[page.lang].readmore  }}</button>
+      </div>
+    </div>
+  </a>
+</div>
