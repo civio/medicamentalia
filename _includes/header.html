@@ -21,7 +21,7 @@
             {% assign articles_items=site.articles | where:"ref", nav.ref %}
             {% for item in articles_items %}
               {% if item.lang == page.lang %}
-              <li class="{% if item.ref == page.ref %}current-menu-item{% endif %}">
+              <li class="menu-item {% if item.ref == page.ref %}current-menu-item{% endif %}">
                 <a href="/articles/{{ item.slug }}">{{ item.title }}</a>
               </li>
               {% endif %}
@@ -31,7 +31,7 @@
             {% assign page_item=site.pages | where:"ref", nav.ref %}
             {% for item in page_item %}
               {% if item.lang == page.lang %}
-              <li class="{% if item.ref == page.ref %}current-menu-item{% endif %}">
+              <li class="menu-item {% if item.ref == page.ref %}current-menu-item{% endif %}">
                 <a href="{{ item.permalink }}">{{ item.title }}</a>
               </li>
               {% endif %}
@@ -39,21 +39,21 @@
           {% endif %}
         {% endfor %}
 
-        <li>
-          <a href="#" onclick="return false">{{ page.lang }}</a>
+        <li class="menu-item menu-item-language">
+          <a href="#" onclick="return false">{{ site.data.locales[page.lang].lang }}</a>
           <ul class="sub-menu submenu-languages">
             {% if page.collection %}
               {% assign articles=site.articles | where:"ref", page.ref | sort: 'lang' %}
               {% for article in articles %}
                 <li class="menu-item menu-item-language menu-item-language-current">
-                  <a href="/articles/{{ article.slug }}" class="{{ article.lang }}">{{ article.lang }}</a>
+                  <a href="/articles/{{ article.slug }}" class="{{ article.lang }}">{{ site.data.locales[article.lang].lang }}</a>
                 </li>
               {% endfor %}
             {% else %}
               {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
               {% for page in pages %}
-                <li class="menu-item menu-item-language menu-item-language-current">
-                  <a href="{{ page.permalink }}" class="{{ page.lang }}">{{ page.lang }}</a>
+                <li>
+                  <a href="{{ page.permalink }}" class="{{ page.lang }}">{{ site.data.locales[page.lang].lang }}</a>
                 </li>
               {% endfor %}
             {% endif %}
