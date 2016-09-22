@@ -12,12 +12,11 @@ layout: default
   </div>
 </header>
 
-<!-- 
-<nav class="nav-page page-10">
+<nav class="nav-page page-<?= $origin_post_ID ?>">
   <div class="nav-page-container">
     <div class="container">
       <div class="row">
-        <!-- Brand and toggle get grouped for better mobile display --
+        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-menu">
                 <span class="sr-only">Toggle navigation</span>
@@ -28,15 +27,15 @@ layout: default
         </div>
         <div id="page-menu" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-left">
-            <li class=""><a href="#acequias" title="Acequias">Acequias</a></li><li class=""><a href="#low-tech-high-tech" title="Low tech / High tech">Low tech / High tech</a></li><li><a href="#fronteras-porosas" title="Fronteras porosas">Fronteras porosas</a></li>          </ul>
+            {% article_menu page %}
+          </ul>
         </div>
         <a href="#top" class="top-btn" title="Top"><i class="glyphicon glyphicon-chevron-up"></i></a>
-        <a class="home-btn" href="http://medicamentalia.org/" title="Medicamentalia">Medicamentalia</a>
+        <a class="home-btn" href="{{ site.baseurl }}" title="{{ site.title }}">{{ site.title }}</a>
       </div>
     </div>
   </div>
 </nav>
--->
 
 <div class="container page-content">
   <div class="row">
