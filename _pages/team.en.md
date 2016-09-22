@@ -1,6 +1,7 @@
 ---
 layout:     page
 title:      Team and methodology
+img:        pages/nosotros-1040x552.jpg
 permalink:  /team/
 ref:        team
 lang:       en

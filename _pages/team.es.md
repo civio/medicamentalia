@@ -1,6 +1,7 @@
 ---
 layout:     page
 title:      Equipo y metodología
+img:        pages/nosotros-1040x552.jpg
 permalink:  /nosotros/
 ref:        team
 lang:       es
