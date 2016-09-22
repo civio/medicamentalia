@@ -1,0 +1,12 @@
+<header class="page-{{ page.ref }}" style="background-image: url('{{ site.baseurl }}/assets/images/{{ page.img }}')">
+  <div class="header-overlay"></div>
+  <div class="header-content">
+    <div class="header-content-inner">
+        <h2>{{ page.title }}</h2>
+        {% if page.subtitle %}
+        <h1>{{ page.subtitle }}</h1>
+        {% endif %}
+        <p>{{ page.description }}</p>
+    </div>
+  </div>
+</header>
