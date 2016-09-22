@@ -1,6 +1,6 @@
 module Jekyll
 
-  module ArticleUtils
+  module MedicamentaliaUtils
     def slugify(str)
       return str.downcase.strip.gsub(' ', '-').gsub(/[^a-z0-9-]/, '').gsub(/[-]+/, '-')
     end
@@ -8,34 +8,37 @@ module Jekyll
   
   module AnchorLinksGenerator
     
-    include ArticleUtils
+    include MedicamentaliaUtils
 
     def add_anchor_links(text)
       text.gsub(/\<h2\>(.+?)\<\/h2\>/){ s = $1; '<a id="'+slugify(s)+'" class="page-anchor"></a><h2>'+s+'</h2>' }
     end
   end
 
-  class ArticleMenuTag < Liquid::Tag
+  class PageMenuTag < Liquid::Tag
 
-    include ArticleUtils
+    include MedicamentaliaUtils
 
     def initialize(tag_name, text, tokens)
       super
     end
 
     def render(context)
-      # context.environments.first['page'] return page object
-      get_menu(context.environments.first['page']['content']);
+      get_menu(context)
     end
 
     private
 
-    def get_menu(content)
+    def get_menu(context)
+      # Setup markdown parser with site.config
+      parser = Jekyll::Converters::Markdown.new(context.registers[:site].config)
+      # context.environments.first['page'] return page object
+      content = parser.convert( context.environments.first['page']['content'] )
       menu = '';
       # Matches h2 tags in content
       content.gsub(/\<h2\>(.+?)\<\/h2\>/){ 
-        s = $1;
-        menu = menu + '<li><a href="#'+slugify(s)+'" title="'+s+'">'+s+'</a></li>';
+        s = $1
+        menu = menu + '<li><a href="#'+slugify(s)+'" title="'+s+'">'+s+'</a></li>'
       }
       return menu
     end
@@ -46,4 +49,4 @@ end
 Liquid::Template.register_filter(Jekyll::AnchorLinksGenerator)
 
 # Use article_menu tag as {% article_menu page %}
-Liquid::Template.register_tag('article_menu', Jekyll::ArticleMenuTag)
+Liquid::Template.register_tag('page_menu', Jekyll::PageMenuTag)
