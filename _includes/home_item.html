@@ -1,6 +1,6 @@
 <div class="{% if article.highlighted %}col-lg-12 col-sm-6{% else %}col-lg-4 col-sm-6{% endif %}">
   <a class="portfolio-box portfolio-{{ article.ref }}" href="{{ article.url | prepend: site.baseurl }}" title="{{ article.title }}">
-    {% if article.home_img %}
+    {% if article.img %}
       <div class="portfolio-box-background" style="background-image: url('{{ site.baseurl }}/assets/images/{{ article.img }}')"></div>
     {% else %}
       <div class="portfolio-box-background"></div>
