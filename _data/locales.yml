@@ -6,6 +6,11 @@ en:
   lang: English
   readmore: Read more
   scroll: Scroll down
+  twitter_msg: A project by @civio
+  share:
+    twitter: Share in Twitter
+    facebook: Share in Facebook
+    gplus: Share in Google Plus
   footer:
     project_by: Medicamentalia is a project by
     funded_by: Funded by
@@ -18,6 +23,11 @@ es:
   lang: Español
   readmore: Leer más
   scroll: Scroll down
+  twitter_msg: Un proyecto de @civio
+  share:
+    twitter: Compartir en Twitter
+    facebook: Compartir en Facebook
+    gplus: Compartir en Google Plus
   footer:
     project_by: Medicamentalia es un proyecto de
     funded_by: Financiado por

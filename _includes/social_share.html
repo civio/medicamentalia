@@ -1,0 +1,20 @@
+<ul class="social-share">
+  <li>
+    <a class="btn btn-social-icon btn-twitter" onclick="window.open('https://twitter.com/intent/tweet?text={{ site.title | url_encode }}. {{ page.title | url_encode }}. {{ site.data.locales[page.lang].twitter_msg | url_encode }}&amp;url={{ site.url | url_encode }}{{ page.url | url_encode }}','sharer','toolbar=0,status=0,width=548,height=500');" href="javascript: void(0)" title="{{ site.data.locales[page.lang].share.twitter }}">
+      <i class="fa fa-twitter"></i>
+      {{ site.data.locales[page.lang].share.twitter }}
+    </a>
+  </li>
+  <li>
+    <a class="btn btn-social-icon btn-facebook" onclick="window.open('https://www.facebook.com/dialog/share?app_id={{ site.fb_id }}&amp;display=popup&amp;href={{ site.url | url_encode }}{{ page.url | url_encode }}&amp;redirect_uri={{ site.url | url_encode }}{{ page.url | url_encode }}','sharer','toolbar=0,status=0,width=548,height=500');" href="javascript: void(0)" title="{{ site.data.locales[page.lang].share.facebook }}">
+      <i class="fa fa-facebook"></i>
+      {{ site.data.locales[page.lang].share.facebook }}
+    </a>
+  </li>
+  <li>
+    <a class="btn btn-social-icon btn-google" onclick="window.open('https://plus.google.com/share?url={{ site.url | url_encode }}{{ page.url | url_encode }}','sharer','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=548,height=500');" href="javascript: void(0)" title="{{ site.data.locales[page.lang].share.gplus }}">
+      <i class="fa fa-google-plus"></i>
+      {{ site.data.locales[page.lang].share.gplus }}
+    </a>
+  </li>
+</ul>

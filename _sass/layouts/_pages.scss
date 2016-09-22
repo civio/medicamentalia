@@ -504,9 +504,14 @@ blockquote{
     > a{
       border: none;
       font-size: 0.875em;
+      text-indent: -9999px;
 
       &:hover{
         color: white;
+      }
+
+      .fa{
+        text-indent: 0;
       }
     }
   }
