@@ -9,7 +9,7 @@
 title: Medicamentalia
 email: raul@civio.es
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://medicamentalia.org/" #http://localhost:4000/" # the base hostname & protocol for your site
+url: "http://medicamentalia.org/" # the base hostname & protocol for your site
 
 index:
   en: index.html
@@ -46,7 +46,11 @@ include:
 
 # Exclude files
 exclude:
+- _app
 - Gemfile
 - Gemfile.lock
+- gulpfile.js
+- node_modules
+- package.json
 - README*
 - ".gitignore"
