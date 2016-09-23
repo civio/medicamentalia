@@ -73,17 +73,9 @@
   </div>
 </footer>
 
-<!-- Scripts
-<script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/dist/modernizr.js'></script>
-<script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/dist/jquery.js'></script>
-<script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/dist/selection-sharer.js'></script>
-
-<!-- Only in articles and iframe layouts
-<script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/dist/d3.min.js'></script>
-<script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/visualizations.js'></script>
-
 <script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/main.js'></script>
- -->
 
-<script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/main.js'></script>
+{% if page.collection == 'articles' %}
+  <script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/infographics.js'></script>
+{% endif %}
 

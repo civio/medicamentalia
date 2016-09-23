@@ -2,23 +2,40 @@
 
 // ## Globals
 //var autoprefixer = require('gulp-autoprefixer');
-var browserSync  = require('browser-sync').create();
-var concat       = require('gulp-concat');
-var del          = require('del');
-var gulp         = require('gulp');
-var gutil        = require('gulp-util');
-var jshint       = require('gulp-jshint');
-//var minifycss    = require('gulp-clean-css');
-//var notify       = require('gulp-notify');
-//var rename       = require('gulp-rename');
-//var responsive   = require('gulp-responsive'); // requires sharp and vips (brew)
-var run          = require('gulp-run');
-var runSequence  = require('run-sequence');
-//var sass         = require('gulp-ruby-sass');
-//var size         = require('gulp-size');
+var browserSync   = require('browser-sync').create();
+var concat        = require('gulp-concat');
+var del           = require('del');
+var env           = require('gulp-environments');
+var gulp          = require('gulp');
+var gutil         = require('gulp-util');
+var jshint        = require('gulp-jshint');
+//var minifycss     = require('gulp-clean-css');
+//var notify        = require('gulp-notify');
+var rename        = require('gulp-rename');
+//var responsive    = require('gulp-responsive'); // requires sharp and vips (brew)
+var run           = require('gulp-run');
+var runSequence   = require('run-sequence');
+//var sass          = require('gulp-ruby-sass');
+//var size          = require('gulp-size');
 var uglify       = require('gulp-uglify');
+var uglifyOptions = {
+  mangle: true,
+  compress: {
+    sequences: true,
+    dead_code: true,
+    conditionals: true,
+    booleans: true,
+    unused: true,
+    if_return: true,
+    join_vars: true,
+    drop_console: true
+  }
+};
 
 var paths        = require('./_app/paths');
+
+var dev          = env.development;
+var prod         = env.production;
 
 
 // Uses Sass compiler to process styles, adds vendor prefixes, minifies,
@@ -45,17 +62,31 @@ var paths        = require('./_app/paths');
 
 // Concatenates and uglifies JS files and outputs result to
 // the appropriate location(s).
-gulp.task('build:scripts', function() {
-  return gulp.src(paths.appJsFilesGlob)
+
+gulp.task('build:scripts:main', function() {
+  return gulp.src(paths.jsMainSrcFiles)
     .pipe(concat('main.js'))
-    .pipe(uglify())
+    .pipe(prod(uglify(uglifyOptions)))
+    .pipe(gulp.dest(paths.siteJsFiles))
+    .on('error', gutil.log);
+});
+
+gulp.task('build:scripts:infographics', function() {
+  return gulp.src(paths.jsInfographicsSrcFiles)
+    .pipe(concat('infographics.js'))
+    .pipe(prod(uglify(uglifyOptions)))
     .pipe(gulp.dest(paths.siteJsFiles))
     .on('error', gutil.log);
 });
 
 gulp.task('clean:scripts', function(cb) {
-  del(paths.siteJsFiles + 'main.js', cb);
+  del([ paths.siteJsFiles + '/main.js',
+        paths.siteJsFiles + '/main.min.js',
+        paths.siteJsFiles + '/infographics.js',
+        paths.siteJsFiles + '/infographics.min.js'], cb);
 });
+
+gulp.task('build:scripts', ['build:scripts:main', 'build:scripts:infographics']);
 
 // Creates optimized versions of files with different qualities, sizes, and
 // formats, then outputs to appropriate location(s)

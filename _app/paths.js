@@ -30,9 +30,25 @@ paths.jekyllImageFiles = paths.jekyllDir + paths.imageFolderName;
 paths.jekyllFontFiles  = paths.jekyllDir + paths.fontFolderName;
 
 // Site files locations
-paths.siteJsFiles      = paths.siteDir   + paths.assetsDir + paths.scriptFolderName + '/';
+paths.siteJsFiles      = paths.siteDir   + paths.assetsDir + paths.scriptFolderName;
 paths.siteImageFiles   = paths.siteDir   + paths.imageFolderName;
 paths.siteFontFiles    = paths.siteDir   + paths.fontFolderName;
+
+// Js src files
+// main.js sources
+paths.jsMainSrcFiles = [
+  paths.appJsFiles + '/dist/modernizr.js',
+  paths.appJsFiles + '/dist/jquery.js',
+  paths.appJsFiles + '/dist/selection-sharer.js',
+  paths.appJsFiles + '/main.js'
+];
+paths.jsInfographicsSrcFiles = [
+  paths.appJsFiles + '/dist/d3.min.js',
+  paths.appJsFiles + '/queue.js',
+  paths.appJsFiles + '/patents-graph.js',
+  paths.appJsFiles + '/patents-infographic.js',
+  paths.appJsFiles + '/main-infographic.js'
+];
 
 // Glob patterns by file type
 paths.sassPattern        = '/**/*.scss';
