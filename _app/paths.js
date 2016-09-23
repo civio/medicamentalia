@@ -26,20 +26,20 @@ paths.siteStylesFiles  = paths.siteDir + paths.assetsDir + paths.stylesFolderNam
 paths.scriptSrc = {
   // main.js sources
   main: [
-    paths.appScriptFiles + '/dist/modernizr.js',
-    paths.appScriptFiles + '/dist/jquery.js',
-    paths.appScriptFiles + '/dist/selection-sharer.js',
+    paths.appScriptFiles + '/vendor/modernizr.js',
+    paths.npmDir + '/jquery/dist/jquery.js',
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/popovers.js',
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
+    paths.appScriptFiles + '/vendor/selection-sharer.js',
     paths.appScriptFiles + '/main.js'
   ],
   // infograpic.js sources
   infographics: [
-    paths.appScriptFiles + '/dist/d3.min.js',
+    paths.npmDir + '/d3/d3.js',
     paths.appScriptFiles + '/queue.js',
     paths.appScriptFiles + '/patents-graph.js',
     paths.appScriptFiles + '/patents-infographic.js',

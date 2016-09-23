@@ -4,6 +4,7 @@
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.16.0",
+    "d3": "^3.5.17",
     "del": "^2.2.0",
     "jshint": "^2.9.3",
     "gulp": "^3.9.1",
@@ -23,6 +24,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-uncss": "^1.0.6",
     "gulp-util": "^3.0.7",
+    "jquery": "^3.1.1",
     "run-sequence": "^1.2.2"
   }
 }

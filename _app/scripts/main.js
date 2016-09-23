@@ -25,6 +25,20 @@
       $('.page-content-container p').selectionSharer();
     }
 
+    // Smooth page scroll to an anchor on the same page.
+    $('a[href*=\\#]').not('[href=\\#]').not('.carousel-control').click(function() {
+      if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+
     // Set Suscribe Input Text
     var suscribe = null;
     $('#mc-embedded-subscribe-form .email').focus(function(){
@@ -36,28 +50,12 @@
       }
     });
 
-    // Smooth page scroll to an anchor on the same page.
-    $(function() {
-      $('a[href*=#]:not([href=#]):not(.carousel-control)').click(function() {
-        if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
-
     var lastId,
       $navPage = $('.nav-page');
 
     var menuItems = $navPage.find('.navbar-nav li a');
 
-    if( menuItems.size() > 0 ){
+    if( menuItems.length > 0 ){
 
       menuItems.click(function(e){
         menuItems.parent().removeClass('active');
@@ -98,7 +96,7 @@
           // Set/remove active class
           menuItems
             .parent().removeClass("active")
-            .end().filter("[href=#"+id+"]").parent().addClass("active");
+            .end().filter("[href=\\#"+id+"]").parent().addClass("active");
         }
       });
     }
@@ -112,21 +110,21 @@
     $('.dropdown-toggle').dropdown();       // Init Dropdown
     $('#region-dropdown-menu, #drug-dropdown-menu').click(function(e){ e.stopPropagation(); });
 
-    if ($('#main-infographic').size() > 0) {
+    if ($('#main-infographic').length > 0) {
       var main_infographic = new Infographic('#main-infographic', 'main');
       $(window).scroll( main_infographic.onScroll );
       $(window).resize( main_infographic.onResize );
     }
-    else if ($('#fakes-infographic').size() > 0) {
+    else if ($('#fakes-infographic').length > 0) {
       var fakes_infographic = new Infographic('#fakes-infographic', 'fakes');
       $(window).scroll( fakes_infographic.onScroll );
       $(window).resize( fakes_infographic.onResize );
     }
-    else if ($('#patents-graph').size() > 0) {
+    else if ($('#patents-graph').length > 0) {
       var graph = patents_graph('#patents-graph').init();
       $(window).resize( graph.onResize );
     }
-    else if ($('#patentes-infographic').size() > 0) {
+    else if ($('#patentes-infographic').length > 0) {
       var patentes_infographic = new Infographic('#patentes-infographic', 'patentes');
       var antimalaricos_infographic = new Infographic('#antimalaricos-infographic', 'antimalaricos');
       $(window).scroll( function(e){
