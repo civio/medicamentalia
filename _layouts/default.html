@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="{{ page.name | remove: ".html" }}">
+  <body class="{{ page.url | replace:'/',' ' | strip }}">
 
     {% include header.html %}
 
