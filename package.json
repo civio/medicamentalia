@@ -2,6 +2,7 @@
   "name": "medicamentalia",
   "version": "0.0.1",
   "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.16.0",
     "del": "^2.2.0",
     "jshint": "^2.9.3",

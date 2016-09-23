@@ -4,6 +4,7 @@ var paths = {};
 paths.appDir             = '_app/';  // The files Gulp will work on
 paths.siteDir            = '_site/';
 paths.assetsDir          = 'assets/';
+paths.npmDir             = 'node_modules/';
 
 // Folder naming conventions
 paths.scriptFolderName = 'scripts';
@@ -28,6 +29,12 @@ paths.scriptSrc = {
     paths.appScriptFiles + '/dist/modernizr.js',
     paths.appScriptFiles + '/dist/jquery.js',
     paths.appScriptFiles + '/dist/selection-sharer.js',
+    paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
+    paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
+    paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
+    paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/popovers.js',
+    paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
+    paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
     paths.appScriptFiles + '/main.js'
   ],
   // infograpic.js sources
