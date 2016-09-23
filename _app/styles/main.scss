@@ -1,6 +1,3 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
 @charset "utf-8";
 
 // Main variables
@@ -69,17 +66,12 @@
 // Components
 @import "components/font-awesome";
 @import "components/bootstrap-social";
-@import "components/buttons";
-@import "components/comments";
-@import "components/forms";
 @import "components/grid";
 @import "components/wp-classes";
 
 // Layouts
 @import "layouts/header";
 @import "layouts/home";
-@import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
-@import "layouts/posts";
 @import "layouts/vis";
