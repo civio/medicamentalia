@@ -1,21 +1,22 @@
 // Based on https://github.com/robwise/robwise.github.io/blob/master/gulpfile.js
 
 // ## Globals
-//var autoprefixer = require('gulp-autoprefixer');
+var autoprefixer = require('gulp-autoprefixer');
 var browserSync   = require('browser-sync').create();
 var concat        = require('gulp-concat');
+var cp            = require('child_process');
 var del           = require('del');
 var env           = require('gulp-environments');
 var gulp          = require('gulp');
 var gutil         = require('gulp-util');
 var jshint        = require('gulp-jshint');
-//var minifycss     = require('gulp-clean-css');
+var minifycss     = require('gulp-clean-css');
 //var notify        = require('gulp-notify');
 var rename        = require('gulp-rename');
 //var responsive    = require('gulp-responsive'); // requires sharp and vips (brew)
 var run           = require('gulp-run');
 var runSequence   = require('run-sequence');
-//var sass          = require('gulp-ruby-sass');
+var sass          = require('gulp-sass');
 //var size          = require('gulp-size');
 var uglify       = require('gulp-uglify');
 var uglifyOptions = {
@@ -40,53 +41,45 @@ var prod         = env.production;
 
 // Uses Sass compiler to process styles, adds vendor prefixes, minifies,
 // and then outputs file to appropriate location(s)
-// gulp.task('build:styles', function() {
-//   return sass(paths.appSassFiles + '/main.scss', {
-//     style: 'compressed',
-//     trace: true,
-//     loadPath: [paths.appSassFiles,
-//                paths.bowerComponentsDir + 'bourbon/app/assets/stylesheets',
-//                paths.bowerComponentsDir + 'neat/app/assets/stylesheets',
-//                paths.bowerComponentsDir + 'font-awesome/scss']
-//   }).pipe(autoprefixer({browsers: ['last 2 versions', 'ie >= 10']}))
-//     .pipe(minifycss())
-//     .pipe(gulp.dest(paths.jekyllDir))
-//     .pipe(gulp.dest(paths.siteDir))
-//     .pipe(browserSync.stream())
-//     .on('error', gutil.log);
-// });
 
-// gulp.task('clean:styles', function(cb) {
-//   del([paths.jekyllDir + 'main.css', paths.siteDir + 'main.css'], cb);
-// });
+gulp.task('build:styles', function () {
+  return gulp.src(paths.appSassFiles + '/main.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(paths.assetsStylesFiles))
+    .pipe(prod(autoprefixer({browsers: ['last 2 versions', 'ie >= 10']})))
+    .pipe(prod(minifycss()))
+    .pipe(gulp.dest(paths.siteStylesFiles))
+    .pipe(browserSync.reload({stream:true, once: true}))
+    .on('error', gutil.log);
+});
+
 
 // Concatenates and uglifies JS files and outputs result to
 // the appropriate location(s).
 
 gulp.task('build:scripts:main', function() {
-  return gulp.src(paths.jsMainSrcFiles)
+  return gulp.src(paths.scriptSrc.main)
     .pipe(concat('main.js'))
+    .pipe(gulp.dest(paths.assetsScriptFiles))
     .pipe(prod(uglify(uglifyOptions)))
-    .pipe(gulp.dest(paths.siteJsFiles))
+    .pipe(gulp.dest(paths.siteScriptFiles))
     .on('error', gutil.log);
 });
 
 gulp.task('build:scripts:infographics', function() {
-  return gulp.src(paths.jsInfographicsSrcFiles)
+  return gulp.src(paths.scriptSrc.infographics)
     .pipe(concat('infographics.js'))
+    .pipe(gulp.dest(paths.assetsScriptFiles))
     .pipe(prod(uglify(uglifyOptions)))
-    .pipe(gulp.dest(paths.siteJsFiles))
+    .pipe(gulp.dest(paths.siteScriptFiles))
     .on('error', gutil.log);
 });
 
-gulp.task('clean:scripts', function(cb) {
-  del([ paths.siteJsFiles + '/main.js',
-        paths.siteJsFiles + '/main.min.js',
-        paths.siteJsFiles + '/infographics.js',
-        paths.siteJsFiles + '/infographics.min.js'], cb);
+gulp.task('build:scripts', ['build:scripts:main', 'build:scripts:infographics'], function(cb) {
+  browserSync.reload();
+  cb();
 });
 
-gulp.task('build:scripts', ['build:scripts:main', 'build:scripts:infographics']);
 
 // Creates optimized versions of files with different qualities, sizes, and
 // formats, then outputs to appropriate location(s)
@@ -119,55 +112,31 @@ gulp.task('build:scripts', ['build:scripts:main', 'build:scripts:infographics'])
 //   return gulp.src(paths.appImageFilesGlob)
 //     .pipe(responsive(imageConfigs, {errorOnUnusedImage: false, progressive: true}))
 //     .pipe(gulp.dest(paths.jekyllImageFiles))
-//     .pipe(gulp.dest(paths.siteImageFiles))
+//     .pipe(gulp.dest(paths.assetsImageFiles))
 //     .pipe(browserSync.stream())
 //     .pipe(size({showFiles: true}));
 // });
 
 // gulp.task('clean:images', function(cb) {
-//   del([paths.jekyllImageFiles, paths.siteImageFiles], cb);
+//   del([paths.jekyllImageFiles, paths.assetsImageFiles], cb);
 // });
 
 // // Places all fonts in appropriate location(s)
 // gulp.task('build:fonts', ['fontello:fonts']);
 
 // gulp.task('clean:fonts', function(cb) {
-//   del([paths.jekyllFontFiles, paths.siteFontFiles], cb);
+//   del([paths.jekyllFontFiles, paths.assetsFontFiles], cb);
 // });
 
+
 // Runs Jekyll build
-gulp.task('build:jekyll', function() {
-  //var shellCommand = 'bundle exec jekyll build --config _config.yml,_app/localhost_config.yml';
-  var shellCommand = 'bundle exec jekyll build';
-
-  return gulp.src(paths.jekyllDir)
-    .pipe(run(shellCommand))
-    .on('error', gutil.log);
+gulp.task('build:jekyll', function(done) {
+  return cp.spawn('jekyll', ['build', '--incremental'], {stdio: 'inherit'})
+    .on('error', function(error){
+      gutil.log(gutil.colors.red(error.message));
+    })
+    .on('close', done);
 });
-
-// Only deletes what's in the site folder
-gulp.task('clean:jekyll', function(cb) {
-  del([paths.siteDir], cb);
-});
-
-gulp.task('clean', ['clean:jekyll',
-                    //'clean:fonts',
-                    //'clean:images',
-                    //'clean:styles',
-                    'clean:scripts']);
-
-// Builds site
-// Optionally pass the --drafts flag to enable including drafts
-gulp.task('build', function(cb) {
-  runSequence(//'clean:jekyll',
-              //['build:scripts'/*, 'build:images', 'build:styles', 'build:fonts'*/],
-              'build:jekyll',
-              'build:scripts',
-              cb);
-});
-
-// Default Task: builds site
-gulp.task('default', ['build']);
 
 // Special tasks for building and then reloading BrowserSync
 gulp.task('build:jekyll:watch', ['build:jekyll'], function(cb) {
@@ -175,15 +144,9 @@ gulp.task('build:jekyll:watch', ['build:jekyll'], function(cb) {
   cb();
 });
 
-gulp.task('build:scripts:watch', ['build:scripts'], function(cb) {
-  browserSync.reload();
-  cb();
-});
 
-// Static Server + watching files
-// WARNING: passing anything besides hard-coded literal paths with globs doesn't
-//          seem to work with the gulp.watch()
-gulp.task('serve', ['build'], function() {
+// Serve task
+gulp.task('serve', function() {
 
   browserSync.init({
     server: paths.siteDir,
@@ -192,17 +155,18 @@ gulp.task('serve', ['build'], function() {
     logLevel: 'debug',
     open: false       // do not open the browser
   });
+});
 
-  // Watch site settings
-  gulp.watch(['_config.yml'/*, '_app/localhost_config.yml'*/], ['build:jekyll:watch']);
-
+// Watch task
+gulp.task('watch', function() {
+  
   // Watch app .scss files, changes are piped to browserSync
-  //gulp.watch('_app/styles/**/*.scss', ['build:styles']);
+  gulp.watch(paths.appSassFiles+'/**/*.scss', ['build:styles']);
 
   // Watch app .js files
-  gulp.watch('_app/scripts/**/*.js', ['build:scripts:watch']);
+  gulp.watch(paths.appScriptFiles+'/**/*.js', ['build:scripts']);
 
-  // Watch Jekyll posts
+  // Watch Jekyll articles
   gulp.watch('_articles/**/*.+(md|markdown|MD)', ['build:jekyll:watch']);
 
   // Watch Jekyll html files
@@ -213,10 +177,53 @@ gulp.task('serve', ['build'], function() {
 
   // Watch Jekyll data files
   gulp.watch('_data/**.*+(yml|yaml|csv|json)', ['build:jekyll:watch']);
-
-  // Watch Jekyll favicon.ico
-  //gulp.watch('favicon.ico', ['build:jekyll:watch']);
 });
+
+
+// Build task
+gulp.task('build', [ 'build:styles', 'build:scripts', 'build:jekyll' ]);
+
+// Start Everything with the default task
+gulp.task('default', [ 'build', 'serve', 'watch' ]);
+
+
+// Static Server + watching files
+// WARNING: passing anything besides hard-coded literal paths with globs doesn't
+//          seem to work with the gulp.watch()
+// gulp.task('serve', ['build'], function() {
+
+//   browserSync.init({
+//     server: paths.siteDir,
+//     ghostMode: false, // do not mirror clicks, reloads, etc. (performance)
+//     logFileChanges: true,
+//     logLevel: 'debug',
+//     open: false       // do not open the browser
+//   });
+
+//   // Watch site settings
+//   gulp.watch(['_config.yml'/*, '_app/localhost_config.yml'*/], ['build:jekyll:watch']);
+
+//   // Watch app .scss files, changes are piped to browserSync
+//   gulp.watch(paths.appSassFiles+'/**/*.scss', ['build:styles']);
+
+//   // Watch app .js files
+//   gulp.watch(paths.appScriptFiles+'/**/*.js', ['build:scripts:watch']);
+
+//   // Watch Jekyll articles
+//   gulp.watch('_articles/**/*.+(md|markdown|MD)', ['build:jekyll:watch']);
+
+//   // Watch Jekyll html files
+//   gulp.watch(['**/*.html', '!_site/**/*.*'], ['build:jekyll:watch']);
+
+//   // Watch Jekyll RSS feed XML file
+//   //gulp.watch('feed.xml', ['build:jekyll:watch']);
+
+//   // Watch Jekyll data files
+//   gulp.watch('_data/**.*+(yml|yaml|csv|json)', ['build:jekyll:watch']);
+
+//   // Watch Jekyll favicon.ico
+//   //gulp.watch('favicon.ico', ['build:jekyll:watch']);
+// });
 
 // // Updates Bower packages
 // gulp.task('update:bower', function() {
@@ -259,7 +266,7 @@ gulp.task('serve', ['build'], function() {
 //   return gulp.src(paths.appVendorFiles + '/fontello*/font/**.*')
 //     .pipe(rename(function(path) {path.dirname = '';}))
 //     .pipe(gulp.dest(paths.jekyllFontFiles))
-//     .pipe(gulp.dest(paths.siteFontFiles))
+//     .pipe(gulp.dest(paths.assetsFontFiles))
 //     .pipe(browserSync.stream())
 //     .on('error', gutil.log);
 // });
