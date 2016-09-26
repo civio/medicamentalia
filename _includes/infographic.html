@@ -1,0 +1,16 @@
+<div class="full-height bkg-green">
+  <div id="{{ page.ref }}-infographic" class="infographic">
+    <div class="infographic-content">
+      <h4>{{ page.infographic.title }}</h4>
+      <ul>
+        {% for step in page.infographic.steps %}
+        <li>
+          {{ step.title }}
+          <img src="{{ site.baseurl }}/assets/images/{{ step.img }}" alt="{{ step.title }}" class="alignnone size-full" />
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="infographic-graph"></div>
+  </div>
+</div>
