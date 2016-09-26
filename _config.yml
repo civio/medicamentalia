@@ -31,7 +31,7 @@ defaults:
     path: ""
     type: "articles"
   values:
-    layout: "page"
+    layout: "article"
 
 fb_id: 620090684758872
 
