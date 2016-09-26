@@ -11599,8 +11599,8 @@ return jQuery;
       $(window).scroll( main_infographic.onScroll );
       $(window).resize( main_infographic.onResize );
     }
-    else if ($('#fakes-infographic').length > 0) {
-      var fakes_infographic = new Infographic('#fakes-infographic', 'fakes');
+    else if ($('#counterfeits-infographic').length > 0) {
+      var fakes_infographic = new Infographic('#counterfeits-infographic', 'fakes');
       $(window).scroll( fakes_infographic.onScroll );
       $(window).resize( fakes_infographic.onResize );
     }
