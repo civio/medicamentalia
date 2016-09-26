@@ -132,9 +132,9 @@ function Main_Infographic( _id ) {
 
     // Load CSVs
     queue()
-      .defer(d3.csv, $('body').data('url')+'/dist/csv/prices.csv')
-      .defer(d3.csv, $('body').data('url')+'/dist/csv/affordability.csv')
-      .defer(d3.csv, $('body').data('url')+'/dist/csv/countries.csv')
+      .defer(d3.csv, $('body').data('baseurl')+'assets/csv/prices.csv')
+      .defer(d3.csv, $('body').data('baseurl')+'assets/csv/affordability.csv')
+      .defer(d3.csv, $('body').data('baseurl')+'assets/csv/countries.csv')
       .await( onDataReady );
 
     return that;
