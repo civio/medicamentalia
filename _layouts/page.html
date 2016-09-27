@@ -14,7 +14,24 @@ layout: default
           {{ site.data.locales[page.lang].by }} <span>{{ page.author }}</span>
           {% endif %}
         </p>
-        {{ content }}
+        {% assign contentArray = content | markdownify | split: '<!---->' %}
+        {% for contentItem in contentArray %}
+          {% if contentItem == "gallery" %}
+            {% if page.img_gallery %}
+      </div>
+    </div>
+  </div>
+</div>        
+{% include gallery.html%}
+<div class="container page-content">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="page-content-container">
+            {% endif %}
+          {% elsif contentItem != "" %}
+          {{ contentItem | add_anchor_links }}
+          {% endif %}
+        {% endfor %}
         {% include social_share.html %}
       </div>
     </div>
