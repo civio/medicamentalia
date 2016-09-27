@@ -9396,13 +9396,13 @@ header {
     bottom: 0;
     background: #00797d;
     opacity: 0.5; }
-  header.article-prices .header-overlay {
+  header.page-prices .header-overlay {
     background: #5abda7; }
-  header.article-counterfeits .header-overlay {
+  header.page-counterfeits .header-overlay {
     background: #00c2b6; }
-  header.article-compulsory-license .header-overlay {
+  header.page-compulsory-license .header-overlay {
     background: #e99267; }
-  header.article-patents .header-overlay {
+  header.page-patents .header-overlay {
     background: #cadf70; }
   header .header-content {
     position: relative;

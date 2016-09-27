@@ -20,16 +20,16 @@ header {
     opacity: 0.5;
   }
 
-  &.article-prices .header-overlay{
+  &.page-prices .header-overlay{
     background: $overlay-green;
   }
-  &.article-counterfeits .header-overlay{
+  &.page-counterfeits .header-overlay{
     background: $overlay-blue;
   }
-  &.article-compulsory-license .header-overlay{
+  &.page-compulsory-license .header-overlay{
     background: $overlay-orange;
   }
-  &.article-patents .header-overlay{
+  &.page-patents .header-overlay{
     background: $overlay-yellow;
   }
 
