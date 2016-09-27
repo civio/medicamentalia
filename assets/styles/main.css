@@ -9905,21 +9905,21 @@ Infographic
       width: auto;
       height: 100%; }
 
-#patentes-infographic .infographic-content {
+#patents-infographic .infographic-content {
   /*
   h4{
     color: $color-brown;
   }
   */ }
-  #patentes-infographic .infographic-content h5 {
+  #patents-infographic .infographic-content h5 {
     color: white;
     font-size: 22px;
     font-weight: 400;
     margin: 0 0 12px; }
-  #patentes-infographic .infographic-content li > strong {
+  #patents-infographic .infographic-content li > strong {
     color: white;
     font-weight: 600; }
-  #patentes-infographic .infographic-content li > em {
+  #patents-infographic .infographic-content li > em {
     color: white;
     font-style: normal;
     font-weight: 400; }
