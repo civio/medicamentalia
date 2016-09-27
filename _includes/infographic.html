@@ -1,9 +1,11 @@
+  </div>
+</div>
 <div class="full-height bkg-green">
-  <div id="{{ page.ref }}-infographic" class="infographic">
+  <div id="{{ id }}-infographic" class="infographic">
     <div class="infographic-content">
-      <h4>{{ page.infographic.title }}</h4>
+      <h4>{{ title }}</h4>
       <ul>
-        {% for step in page.infographic.steps %}
+        {% for step in steps %}
         <li>
           {{ step.title }}
           <img src="{{ site.baseurl }}/assets/images/{{ step.img }}" alt="{{ step.title }}" class="alignnone size-full" />
@@ -14,3 +16,5 @@
     <div class="infographic-graph"></div>
   </div>
 </div>
+<div class="container page-content" markdown="1">
+  <div class="page-content-container" markdown="1">
