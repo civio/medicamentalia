@@ -1,0 +1,53 @@
+counterfeits:
+  en:
+    id: counterfeits
+    title: The routes of <strong>counterfeit medicines</strong>
+    steps:
+      - title: Boatloads of counterfeit drugs are shipped from Mumbai, India.
+        img: svg/fakes-1.svg
+      - title: The drugs get to West Africa through the Gulf of Guinea, and are smuggled through less-guarded countries such as Togo.
+        img: svg/fakes-2.svg
+      - title: Once on land, the cargo is transported by road to more developed countries such as Ghana or Nigeria.
+        img: svg/fakes-3.svg
+  es:
+    id: counterfeits
+    title: La ruta de los <strong>medicamentos falsos</strong>
+    steps:
+      - title: Barcos cargados de medicamentos falsos salen de Mumbai, India.
+        img: svg/fakes-1.svg
+      - title: Llegan a África occidental por el Golfo de Guinea, entrando por países menos vigilados como Togo.
+        img: svg/fakes-2.svg
+      - title: Una vez dentro, se desplazan por carretera hasta países más desarrollados como  Ghana o Nigeria.
+        img: svg/fakes-3.svg
+
+patents:
+  en:
+    title: How do <strong>patents</strong> work?
+    steps:
+      - title: In April 1994 the signing of the Marrakesh Agreement established the World Trade Organization (WTO).
+        img: svg/patentes-1.svg
+      - title: Among the approved documents was the <strong>Agreement on Trade-Related Aspects of Intellectual Property Rights</strong> (TRIPS), whose section 5 regulates patents.
+        img: svg/patentes-2.svg
+      - title: <em>Patents apply not just to products but also to processes.</em><p></p><h5>Article 27.1</h5><blockquote>Patents shall be available for any inventions, whether products or processes, in all fields of technology, provided that they are new, involve an inventive step and are capable of industrial application</blockquote>
+        img: svg/patentes-3.svg
+      - title: <em>The agreement sets the framework for the compulsory licence in cases of national emergency or extreme urgency.</em><p></p><blockquote>Other use without authorization of the right holder shall also be permitteds.</blockquote>
+        img: svg/patentes-4.svg
+      - title: <em>The patent term is 20 years starting from the filing date, not from the day the patent is finally granted.</em><p></p><h5>Article 33</h5><blockquote>The term of protection available for a patent shall not end before the expiration of a period of twenty years counted from the filing date</blockquote>
+        img: svg/patentes-5.svg
+      - title: <h5>Signatory countries</h5>The 161 country members of the WTO signed this agreement and adopted it in their national legislations.
+        img: svg/patentes-6.svg
+  es:
+    title: ¿Cómo funcionan <strong>las patentes</strong>?
+    steps:
+      - title: En abril de 1994 se firmaron los acuerdos de Marrakech, que dieron lugar a la Organización Mundial del Comercio (OMC).
+        img: svg/patentes-1.svg
+      - title: Entre los documentos aprobados se encontraba el <strong>TRIPS</strong>, en español <strong>ADPIC</strong> (Acuerdo Sobre los Aspectos de los Derechos de Propiedad Intelectual Relacionados con el Comercio), que en su sección 5 regula las patentes.
+        img: svg/patentes-2.svg
+      - title: <em>Las patentes no solo aplican a productos, sino también a procedimientos.</em><p></p><h5>Artículo 27.1</h5><blockquote>Las patentes podrán obtenerse por todas las invenciones, sean de productos o de procedimientos, en todos los campos de la tecnología, siempre que sean nuevas, entrañen una actividad inventiva y sean susceptibles de aplicación industrial</blockquote>
+        img: svg/patentes-3.svg
+      - title: <em>El acuerdo incluye la posibilidad de aplicar una licencia obligatoria en casos de emergencia nacional.</em><p></p><blockquote>Se permitirán otros usos sin autorización del titular de los derechos.</blockquote>
+        img: svg/patentes-4.svg
+      - title: <em>Los 20 años que dura una patente empiezan a contar desde que se presenta la solicitud, no desde que se concede.</em><p></p><h5>Artículo 33</h5><blockquote>La protección conferida por una patente no expirará antes de que haya transcurrido un período de 20 años contados desde la fecha de presentación de la solicitud</blockquote>
+        img: svg/patentes-5.svg
+      - title: <h5>Países firmantes</h5>Los 161 países miembros de la OMC firman este acuerdo y lo trasladan a su normativa nacional. Cada uno de ellos puede establecer, por ejemplo, extensiones a los periodos de monopolio o barreras más o menos altas para conseguir la concesión del derecho
+        img: svg/patentes-6.svg
