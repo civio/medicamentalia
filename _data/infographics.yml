@@ -19,9 +19,9 @@ counterfeits:
         img: svg/fakes-2.svg
       - title: Una vez dentro, se desplazan por carretera hasta países más desarrollados como  Ghana o Nigeria.
         img: svg/fakes-3.svg
-
 patents:
   en:
+    id: patents
     title: How do <strong>patents</strong> work?
     steps:
       - title: In April 1994 the signing of the Marrakesh Agreement established the World Trade Organization (WTO).
@@ -37,6 +37,7 @@ patents:
       - title: <h5>Signatory countries</h5>The 161 country members of the WTO signed this agreement and adopted it in their national legislations.
         img: svg/patentes-6.svg
   es:
+    id: patents
     title: ¿Cómo funcionan <strong>las patentes</strong>?
     steps:
       - title: En abril de 1994 se firmaron los acuerdos de Marrakech, que dieron lugar a la Organización Mundial del Comercio (OMC).
@@ -51,3 +52,32 @@ patents:
         img: svg/patentes-5.svg
       - title: <h5>Países firmantes</h5>Los 161 países miembros de la OMC firman este acuerdo y lo trasladan a su normativa nacional. Cada uno de ellos puede establecer, por ejemplo, extensiones a los periodos de monopolio o barreras más o menos altas para conseguir la concesión del derecho
         img: svg/patentes-6.svg
+antimalaricos:
+  en:
+    id: antimalaricos
+    title: A <strong>South-South</strong> antimalarial drug
+    steps:
+      - title: <h5>An alliance beyond the market</h5>The public laboratory Farmanginhos and DNDi (an organization dedicated to investigating treatments for neglected diseases) signs an agreement to develop an antimalarial drug. The Brazilian pharmaceutical industry, universities and research institutions sign too.
+        img: svg/antimalaricos-1.svg
+      - title: <h5>ASMQ is born</h5>Farmanginhos (located in Rio de Janeiro) produces ASMQ, an artesunate-mefloquine fixed-dose combination used to treat more than half of the malaria cases in Brazil. It was registered in 2008.
+        img: svg/antimalaricos-2.svg
+      - title: <h5>Across Latin America</h5>The new drug, developed in the public system and outside market dynamics, reaches other Latin American countries such as Bolivia and Venezuela through donations and agreements.
+        img: svg/antimalaricos-3.svg
+      - title: <h5>To Southeast Asia</h5>The technology to produce the drug is transferred from a public laboratory in Brazil to a private laboratory in India (Cipla), a South-South public-private partnership so that it can be produced there in order to reach other countries in Southeast Asia.
+        img: svg/antimalaricos-4.svg
+      - title: <h5>And soon to Africa</h5>Permission to enable production lines has been requested to the WHO so the drug can also be distributed in African countries.
+        img: svg/antimalaricos-5.svg
+  es:
+    id: antimalaricos
+    title: Un antimalárico <strong>sur-sur</strong>
+    steps:
+      - title: <h5>Alianza más allá del mercado</h5>El laboratorio público Farmanginhos y la organización DNDi (que se dedica a investigar tratamientos para enfermedades olvidadas) firman un acuerdo para desarrollar un antimalárico. Colaboran también la industria farmacéutica y la academia brasileñas.
+        img: svg/antimalaricos-1.svg
+      - title: <h5>Nace el ASMAQ</h5>Farmanginhos (situado en Rio de Janeiro) produce el ASMQ, una asociación de dos moléculas (artesunato y mefloquina) en una dosis fija que se usa para tratar más de la mitad de los casos de malaria en Brasil. Se registró en 2008
+        img: svg/antimalaricos-2.svg
+      - title: <h5>Para Latinoamérica</h5>El nuevo fármaco, desarrollado desde lo público y sin tener en cuenta dinámicas de mercado, llega a otros países latinoamericanos, como Bolivia o Venezuela, gracias a donaciones y acuerdos.
+        img: svg/antimalaricos-3.svg
+      - title: <h5>Para el Sudeste Asiático</h5>La tecnología para producir el medicamento se transfiere de un laboratorio público en Brasil a un laboratorio privado en India (Cipla), una colaboración público-privada sur-sur para que desde allí pueda producirse y llegar a otros países del Sudeste Asiático.
+        img: svg/antimalaricos-4.svg
+      - title: <h5>Y pronto, para África</h5>Han pedido autorización a la OMS para que habilite su línea de producción y así poder distribuir el fármaco también en países africanos.
+        img: svg/antimalaricos-5.svg
