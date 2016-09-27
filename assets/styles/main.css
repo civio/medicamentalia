@@ -5980,7 +5980,8 @@ h3, h4, h5 {
 
 .full-height {
   position: relative;
-  min-height: 100%; }
+  min-height: 100%;
+  margin-bottom: 30px; }
   .full-height .container {
     position: relative; }
 
@@ -9596,8 +9597,6 @@ header {
     display: block;
     padding-top: 40px;
     border-bottom: 1px solid #7fbca7; }
-    .page-content a.page-anchor:first-child {
-      border: none; }
   .page-content a {
     font-weight: 600;
     -webkit-transition: 0.3s ease-out color;
