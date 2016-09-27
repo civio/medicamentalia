@@ -6,46 +6,13 @@ layout: default
 {% include page_menu.html %}
 
 <div class="container page-content">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="page-content-container">
-        <p class="author">
-          {% if page.author %}
-          {{ site.data.locales[page.lang].by }} <span>{{ page.author }}</span>
-          {% endif %}
-        </p>
-        {% assign contentArray = content | markdownify | split: '<!---->' %}
-        {% for contentItem in contentArray %}
-          {% if contentItem == "gallery" %}
-            {% if page.img_gallery %}
-      </div>
-    </div>
-  </div>
-</div>        
-{% include gallery.html%}
+  <p class="author">
+    {% if page.author %}
+    {{ site.data.locales[page.lang].by }} <span>{{ page.author }}</span>
+    {% endif %}
+  </p>
+</div>
+{{ page.content | add_anchor_links }}
 <div class="container page-content">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="page-content-container">
-            {% endif %}
-          {% elsif contentItem == "infographic" %}
-            {% if page.infographic %}
-      </div>
-    </div>
-  </div>
-</div>        
-{% include infographic.html%}
-<div class="container page-content">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="page-content-container">
-            {% endif %}
-          {% elsif contentItem != "" %}
-          {{ contentItem | add_anchor_links }}
-          {% endif %}
-        {% endfor %}
-        {% include social_share.html %}
-      </div>
-    </div>
-  </div>
-</div>        
+  {% include social_share.html %}
+</div>

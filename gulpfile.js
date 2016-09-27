@@ -166,11 +166,8 @@ gulp.task('watch', function() {
   // Watch app .js files
   gulp.watch(paths.appScriptFiles+'/**/*.js', ['build:scripts']);
 
-  // Watch Jekyll articles
-  gulp.watch('_articles/**/*.+(md|markdown|MD)', ['build:jekyll:watch']);
-
   // Watch Jekyll html files
-  gulp.watch(['**/*.html', '!_site/**/*.*'], ['build:jekyll:watch']);
+  gulp.watch(['**/*.html', '_articles/**/**', '_pages/**/*.*'], ['build:jekyll:watch']);
 
   // Watch Jekyll RSS feed XML file
   //gulp.watch('feed.xml', ['build:jekyll:watch']);
