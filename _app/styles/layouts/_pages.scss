@@ -334,9 +334,9 @@ header {
     padding-top: 40px;
     border-bottom: 1px solid mix($brand-primary, $brand-secondary, 50%);
 
-    &:first-child{
-      border: none;
-    }
+    // &:first-child{
+    //   border: none;
+    // }
   }
 
   a{
