@@ -2,6 +2,23 @@
 layout:     page
 title:      Equipo y metodología
 img:        pages/nosotros-1040x552.jpg
+
+img_gallery:
+  - image: pages/IMG_5230-1040x635.jpg
+    title: Raúl, Miguel (escondido), David y Eva, puliendo la visualización. | Javier de Vega
+  - image: pages/Medicine-report-61-1040x602.jpg
+    title: Antonio, en una de las entrevistas que realizó en Acra. | Joseph Akwasi
+  - image: pages/IMG_2391-1040x624.jpg
+    title: Eva, en plena entrevista en Rio de Janeiro. | Anne Vigna
+  - image: pages/Antonio11-1040x694.jpg
+    title: Antonio, atento, en el laboratoria CePAT. | Henry Nelson Souza
+  - image: pages/IMG_5223-1040x694.jpg
+    title: Cabezas echando humo. | Javier de Vega
+  - image: pages/IMG_20150619_191737-1040x780.jpg
+    title: Miguel, desquiciado con la base de datos.
+  - image: pages/Redecilla.jpg
+    title: Eva, en el laboratorio público Farmanginhos, vestida para la ocasión.| Anne Vigna
+    
 permalink:  /nosotros/
 ref:        team
 lang:       es
@@ -34,7 +51,8 @@ Medicamentalia es un proyecto de [Civio](http://www.civio.es/) en el que, ademá
 
 ### Agradecimientos
 
-Empezamos agradeciendo su apoyo a los _media partners_ del proyecto ([20 Minutos](http://www.20minutos.es/), [Cadena Ser](http://cadenaser.com/), [Corriere della Sera](http://www.corriere.it/), [Correctiv!](https://correctiv.org/) y [La Nación](http://www.lanacion.com.ar/)), porque nos dieron el "sí, quiero" antes incluso de ver ni una sola columna de la base de datos o una frase del texto, demostrando una confianza ciega que esperamos haber recompensado. Y a [Journalism Grants](http://journalismgrants.org/), que nos premió con la beca que ha permitido desarrollar Medicamentalia. La tarea de comprender algo tan complejo como las regulaciones y normas internacionales que afectan a los precios de las medicinas es colosal. Por ello, queremos agradecer a quienes nos ayudaron, a través de conversaciones sin grabadora, tanto presenciales como por teléfono, correo electrónico o videoconferencia, a saber qué y cómo investigar. Gracias a Elisa López Varela, médico del Centro de Investigación en Enfermedades Infecciosas en Mozambique; Elisa Sicuri, economista de la salud de ISGlobal en Londres; Carlos Miranda, de Farmamundi en Madrid; Judit Rius, directora para EEUU de la campaña de acceso a medicamentos de Médicos Sin Fronteras en Nueva York; Fran Franco, del departamento de Internacional de Farmaindustria en Madrid; Margaret Ewen, encargada de la base de datos de HAI en Holanda; y Bernard Appiah y Barbara Gastel, profesores de la Texas A&M University, por ayudarnos a mejorar la precisión y la profundidad de nuestro periodismo. Gracias también por su tiempo a Javier Pardo, de Médicos del Mundo; y a Paola Ariza, periodista que nos echó una mano con los datos de Colombia. También nos gustaría agradecer de forma muy especial la paciencia de todos los entrevistados en Brasil y Ghana, que accedieron a dejarse grabar, preguntar y compartir sus conocimientos. Y acabamos agradeciendo a Fernando Toledo y Jen Bramley, porque nos ayudaron a contrarreloj a pulir los últimos detalles para que Medicamentalia saliera a la luz lo mejor posible. [gallery columns="4" link="none" size="large" ids="397,398,395,394,391,399,400"]
+Empezamos agradeciendo su apoyo a los _media partners_ del proyecto ([20 Minutos](http://www.20minutos.es/), [Cadena Ser](http://cadenaser.com/), [Corriere della Sera](http://www.corriere.it/), [Correctiv!](https://correctiv.org/) y [La Nación](http://www.lanacion.com.ar/)), porque nos dieron el "sí, quiero" antes incluso de ver ni una sola columna de la base de datos o una frase del texto, demostrando una confianza ciega que esperamos haber recompensado. Y a [Journalism Grants](http://journalismgrants.org/), que nos premió con la beca que ha permitido desarrollar Medicamentalia. La tarea de comprender algo tan complejo como las regulaciones y normas internacionales que afectan a los precios de las medicinas es colosal. Por ello, queremos agradecer a quienes nos ayudaron, a través de conversaciones sin grabadora, tanto presenciales como por teléfono, correo electrónico o videoconferencia, a saber qué y cómo investigar. Gracias a Elisa López Varela, médico del Centro de Investigación en Enfermedades Infecciosas en Mozambique; Elisa Sicuri, economista de la salud de ISGlobal en Londres; Carlos Miranda, de Farmamundi en Madrid; Judit Rius, directora para EEUU de la campaña de acceso a medicamentos de Médicos Sin Fronteras en Nueva York; Fran Franco, del departamento de Internacional de Farmaindustria en Madrid; Margaret Ewen, encargada de la base de datos de HAI en Holanda; y Bernard Appiah y Barbara Gastel, profesores de la Texas A&M University, por ayudarnos a mejorar la precisión y la profundidad de nuestro periodismo. Gracias también por su tiempo a Javier Pardo, de Médicos del Mundo; y a Paola Ariza, periodista que nos echó una mano con los datos de Colombia. También nos gustaría agradecer de forma muy especial la paciencia de todos los entrevistados en Brasil y Ghana, que accedieron a dejarse grabar, preguntar y compartir sus conocimientos. Y acabamos agradeciendo a Fernando Toledo y Jen Bramley, porque nos ayudaron a contrarreloj a pulir los últimos detalles para que Medicamentalia saliera a la luz lo mejor posible.
+<!---->gallery<!---->
 
 ## Metodología
 
