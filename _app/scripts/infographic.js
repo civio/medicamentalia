@@ -81,21 +81,21 @@ var Infographic = function( _id, _type ) {
 
     // Setup Infographic by Type
     if( type === 'main'){
-      vis = new Main_Infographic( id+' .infographic-graph' ); 
+      vis = new Main_Infographic( id+' .infographic-graph' );
     }
     else if( type === 'antimalaricos'){
-      vis = new Antimalaricos_Infographic( id+' .infographic-graph' ).init(); 
+      vis = new Antimalaricos_Infographic( id+' .infographic-graph' ).init();
     }
     else if( type === 'patentes'){
-      vis = new Patents_Infographic( id+' .infographic-graph' ).init(); 
+      vis = new Patents_Infographic( id+' .infographic-graph' ).init();
     }
     else if( type === 'fakes'){
-      vis = new Fakes_Infographic( id+' .infographic-graph' ).init(); 
+      vis = new Fakes_Infographic( id+' .infographic-graph' ).init();
     }
 
     that.onResize();
 
-    if( type === 'main'){ 
+    if( type === 'main'){
       vis.init( urlParam('skip') === 'true' );  // Setup skip value to Main Infographic
       if( $el.find('.infographic-content').hasClass('iframe') ){
         if( vis.skip ){

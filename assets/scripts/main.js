@@ -11608,8 +11608,8 @@ return jQuery;
       var graph = patents_graph('#patents-graph').init();
       $(window).resize( graph.onResize );
     }
-    else if ($('#patentes-infographic').length > 0) {
-      var patentes_infographic = new Infographic('#patentes-infographic', 'patentes');
+    else if ($('#patents-infographic').length > 0) {
+      var patentes_infographic = new Infographic('#patents-infographic', 'patentes');
       var antimalaricos_infographic = new Infographic('#antimalaricos-infographic', 'antimalaricos');
       $(window).scroll( function(e){
         patentes_infographic.onScroll();
