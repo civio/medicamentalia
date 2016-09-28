@@ -11,36 +11,11 @@ var Infographic = function( _id, _type ) {
       scrollTop,
       endPosition,
       currentItem = -1,
-      $el, $frame, $nav, $fixedEl, $contentList;
+      $navItems,
+      $el, $fixedEl, $contentList;
 
 
   // Private Methods
-
-  var setItems = function(){
-
-    $frame = $('<ul class="infographic-frame"></ul>');
-    $nav = $('<ul class="infographic-nav"></ul>');
-
-    var i = 1;
-
-    $contentList.each(function(){
-      $frame.append('<li class="frame-'+i+'"><div class="scroller"></div></li>');
-      $nav.append('<li><a href="#'+i+'"></a></li>');
-      i++;
-    });
-
-    $frame.append('<li class="frame-'+i+'"><div class="scroller"></div></li>');   // Add last frame item
-
-    if( type === 'main'){
-      $frame.append('<li class="frame-'+(i+1)+'"><div class="scroller"></div></li>');   // Add extra frame item for Main Infographic
-      if( $el.find('.infographic-content').hasClass('iframe') ){
-        $nav.append('<li><a href="#'+i+'"></a></li>');   // Add extra nav item for Main Infographic in iframe mode
-      }
-    }
-
-    $el.append( $frame );
-    $el.append( $nav );
-  };
 
   var setIframeBtns = function(){
     $contentList.each(function(i){
@@ -74,33 +49,44 @@ var Infographic = function( _id, _type ) {
 
     $el = $( id );
     $contentList = $el.find('.infographic-content li');
+    $navItems = $el.find('.infographic-nav li');
 
-    setItems();   // Setup Frame & Navigation Items
+    // Setup for prices infographic
+    if( type === 'prices'){
+      // Add extra frame items for Prices Infographic
+      $el.find('.infographic-frame')
+        .append('<li class="frame-'+($navItems.length+1)+'"><div class="scroller"></div></li>')
+        .append('<li class="frame-'+($navItems.length+2)+'"><div class="scroller"></div></li>');
+      // Add extra nav item for Prices Infographic in iframe mode
+      if( $el.find('.infographic-content').hasClass('iframe') ){
+        $nav.append('<li><a href="#'+i+'"></a></li>');
+      }
+    }
 
     $fixedEl = $el.find('.infographic-content, .infographic-nav, .infographic-graph');
 
     // Setup Infographic by Type
-    if( type === 'main'){
-      vis = new Main_Infographic( id+' .infographic-graph' );
-    }
-    else if( type === 'antimalaricos'){
+    if( type === 'antimalaricos'){
       vis = new Antimalaricos_Infographic( id+' .infographic-graph' ).init();
-    }
-    else if( type === 'patentes'){
-      vis = new Patents_Infographic( id+' .infographic-graph' ).init();
     }
     else if( type === 'fakes'){
       vis = new Fakes_Infographic( id+' .infographic-graph' ).init();
     }
+    else if( type === 'patentes'){
+      vis = new Patents_Infographic( id+' .infographic-graph' ).init();
+    }
+    else if( type === 'prices'){
+      vis = new Prices_Infographic( id+' .infographic-graph' );
+    }
 
     that.onResize();
 
-    if( type === 'main'){
-      vis.init( urlParam('skip') === 'true' );  // Setup skip value to Main Infographic
+    if( type === 'prices'){
+      vis.init( urlParam('skip') === 'true' );  // Setup skip value to prices Infographic
       if( $el.find('.infographic-content').hasClass('iframe') ){
         if( vis.skip ){
-          $('#main-infographic .infographic-frame').hide();
-          $('#main-infographic-menu').addClass('active');
+          $('#prices-infographic .infographic-frame').hide();
+          $('#prices-infographic-menu').addClass('active');
           $el.find('.infographic-nav, .infographic-content').addClass('invisible');
           $contentList.not('.active').css('top', '-40px');
           $contentList.filter('.active').css('top', '40px').removeClass('active');
@@ -114,10 +100,10 @@ var Infographic = function( _id, _type ) {
     $contentList.first().addClass('active');    // Setup firs content item as active
 
     // Nav Buttons Click Interaction
-    $nav.find('li a').click(function(e){
+    $navItems.find('a').click(function(e){
       e.preventDefault();
       $('html, body').animate({
-        scrollTop: $('.infographic-frame li.frame-'+$(this).attr('href').substring(1)).offset().top + 2
+        scrollTop: $el.find('.infographic-frame li.frame-'+$(this).attr('href').substring(1)).offset().top + 2
       }, '200');
     });
   };
@@ -129,10 +115,10 @@ var Infographic = function( _id, _type ) {
 
     if ( scrollTop >= $el.offset().top && scrollTop < endPosition ) {
       $fixedEl.addClass('fixed');
-      if( type === 'main'){ $('#main-infographic-tooltip').addClass('fixed'); }
+      if( type === 'prices'){ $('#prices-infographic-tooltip').addClass('fixed'); }
     } else {
       $fixedEl.removeClass('fixed');
-      if( type === 'main'){ $('#main-infographic-tooltip').removeClass('fixed'); }
+      if( type === 'prices'){ $('#prices-infographic-tooltip').removeClass('fixed'); }
     }
 
     if ( scrollTop >= endPosition ) {
@@ -153,14 +139,14 @@ var Infographic = function( _id, _type ) {
 
         //console.log('state', type, currentItem, $contentList.length );
 
-        // Show/hide Main Infographic Menu
-        if (type === 'main') {
+        // Show/hide prices Infographic Menu
+        if (type === 'prices') {
           if (currentItem !== $contentList.length) {
-            $('#main-infographic-menu').removeClass('active');
+            $('#prices-infographic-menu').removeClass('active');
             $el.find('.infographic-nav, .infographic-content').removeClass('invisible');
           }
           else {
-            $('#main-infographic-menu').addClass('active');
+            $('#prices-infographic-menu').addClass('active');
             $el.find('.infographic-nav, .infographic-content').addClass('invisible');
           }
         }
@@ -178,8 +164,8 @@ var Infographic = function( _id, _type ) {
 
         $contentList.eq(currentItem).css('top', '0px').addClass('active');
 
-        $nav.find('li').removeClass('active');
-        $nav.find('li').eq(currentItem).addClass('active');
+        $navItems.removeClass('active');
+        $navItems.eq(currentItem).addClass('active');
       }
     }
   };
@@ -196,7 +182,7 @@ var Infographic = function( _id, _type ) {
       $el.find('.infographic-content').css('height','auto');
     }
 
-    if (type === 'main' && vis.isInitialized()) {
+    if (type === 'prices' && vis.isInitialized()) {
       vis.resize();
     }
   };

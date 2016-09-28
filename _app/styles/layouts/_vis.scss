@@ -251,18 +251,18 @@ Infographic
   top: 240px;
 }
 
-/* Main Infographic */
+/* Prices Infographic */
 
-#main-infographic{
+#prices-infographic{
 
-  $main-infographic-bkg: mix( $brand-primary, white, 5% );
+  $prices-infographic-bkg: mix( $brand-primary, white, 5% );
 
   width: 100%;
   height: 100%;
   min-height: 100%;
   margin: 0 0 20px;
   font-family: $font-family-sans-serif;
-  background: $main-infographic-bkg;
+  background: $prices-infographic-bkg;
 
   .infographic-graph{
     top: 0;
@@ -348,7 +348,7 @@ Infographic
         letter-spacing: 0.02em;
         font-weight: 300;
         line-height: 18px;
-        border-right: 1px solid $main-infographic-bkg;
+        border-right: 1px solid $prices-infographic-bkg;
       }
     }
 
@@ -372,8 +372,8 @@ Infographic
 
       color: $text-color;
       padding: 1em 0 1em 1em;
-      background: $main-infographic-bkg;
-      background: rgba( red($main-infographic-bkg), green($main-infographic-bkg), blue($main-infographic-bkg), 0.8 );
+      background: $prices-infographic-bkg;
+      background: rgba( red($prices-infographic-bkg), green($prices-infographic-bkg), blue($prices-infographic-bkg), 0.8 );
       text-align: right;
       left: 40%;
       width: 60%;
@@ -409,7 +409,7 @@ Infographic
   }
 }
 
-#main-infographic-tooltip{
+#prices-infographic-tooltip{
   top: 80px;
   color: $color-brown;
   background: white;  // $color-orange;
@@ -559,7 +559,7 @@ Infographic
   }
 }  
 
-#main-infographic-menu{
+#prices-infographic-menu{
   position: absolute;
   top: -100px;
   left: 0;
@@ -825,7 +825,7 @@ Infographic
     }
   }
 
-  #main-infographic{
+  #prices-infographic{
     font-size: 0.875em;
 
     .infographic-content li{
@@ -837,7 +837,7 @@ Infographic
     }
   }
 
-  #main-infographic-tooltip{
+  #prices-infographic-tooltip{
     display: none;
   }
 }
@@ -845,7 +845,7 @@ Infographic
 // Iframe
 .page-template-template-iframe{
 
-  #main-infographic .infographic-content li .btn-next{
+  #prices-infographic .infographic-content li .btn-next{
     visibility: hidden;
     text-align: right;
     top: 4px;
@@ -866,14 +866,14 @@ Infographic
       }
     }
   }
-  #main-infographic .infographic-content li.active .btn-next{
+  #prices-infographic .infographic-content li.active .btn-next{
     visibility: visible;
     position: relative;
     z-index: 90;
   }
 
   @media (max-width: $screen-md) and (min-width: 859px) {
-    #main-infographic{
+    #prices-infographic{
       font-size: 0.875em;
     }
   }
@@ -903,7 +903,7 @@ Infographic
 
 @media (min-width: $screen-lg) {
   
-  #main-infographic-menu{
+  #prices-infographic-menu{
     padding-right: 40px;
     padding-left: 40px;
 

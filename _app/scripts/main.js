@@ -110,10 +110,10 @@
     $('.dropdown-toggle').dropdown();       // Init Dropdown
     $('#region-dropdown-menu, #drug-dropdown-menu').click(function(e){ e.stopPropagation(); });
 
-    if ($('#main-infographic').length > 0) {
-      var main_infographic = new Infographic('#main-infographic', 'main');
-      $(window).scroll( main_infographic.onScroll );
-      $(window).resize( main_infographic.onResize );
+    if ($('#prices-infographic').length > 0) {
+      var prices_infographic = new Infographic('#prices-infographic', 'prices');
+      $(window).scroll( prices_infographic.onScroll );
+      $(window).resize( prices_infographic.onResize );
     }
     else if ($('#counterfeits-infographic').length > 0) {
       var fakes_infographic = new Infographic('#counterfeits-infographic', 'fakes');

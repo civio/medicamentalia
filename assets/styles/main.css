@@ -9927,55 +9927,55 @@ Infographic
 #fakes-infographic .infographic-graph {
   top: 240px; }
 
-/* Main Infographic */
-#main-infographic {
+/* Prices Infographic */
+#prices-infographic {
   width: 100%;
   height: 100%;
   min-height: 100%;
   margin: 0 0 20px;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   background: #f2f8f9; }
-  #main-infographic .infographic-graph {
+  #prices-infographic .infographic-graph {
     top: 0;
     z-index: 60; }
-    #main-infographic .infographic-graph .axis path,
-    #main-infographic .infographic-graph .axis line {
+    #prices-infographic .infographic-graph .axis path,
+    #prices-infographic .infographic-graph .axis line {
       fill: none;
       stroke: #777777;
       shape-rendering: crispEdges; }
-    #main-infographic .infographic-graph .axis text {
+    #prices-infographic .infographic-graph .axis text {
       fill: #777777;
       font-weight: 400; }
-    #main-infographic .infographic-graph .x.axis text {
+    #prices-infographic .infographic-graph .x.axis text {
       font-size: 0.75em; }
-    #main-infographic .infographic-graph .y.axis text {
+    #prices-infographic .infographic-graph .y.axis text {
       font-size: 0.75em;
       font-weight: 300; }
-    #main-infographic .infographic-graph .y.axis .tick line {
+    #prices-infographic .infographic-graph .y.axis .tick line {
       stroke: #d7d7d7; }
-    #main-infographic .infographic-graph .x.axis .tick line {
+    #prices-infographic .infographic-graph .x.axis .tick line {
       stroke: #cbcbcb;
       stroke-dasharray: 1, 3; }
-    #main-infographic .infographic-graph .axis .domain {
+    #prices-infographic .infographic-graph .axis .domain {
       display: none; }
-    #main-infographic .infographic-graph .mpr-line text {
+    #prices-infographic .infographic-graph .mpr-line text {
       fill: #00797d;
       font-size: 0.75em;
       text-anchor: end; }
-    #main-infographic .infographic-graph .mpr-line line {
+    #prices-infographic .infographic-graph .mpr-line line {
       stroke: #00797d;
       shape-rendering: crispEdges; }
-    #main-infographic .infographic-graph .country-marker {
+    #prices-infographic .infographic-graph .country-marker {
       stroke: #d7d7d7;
       shape-rendering: crispEdges; }
-    #main-infographic .infographic-graph .country-label,
-    #main-infographic .infographic-graph .country-label-code {
+    #prices-infographic .infographic-graph .country-label,
+    #prices-infographic .infographic-graph .country-label-code {
       fill: #e2723b;
       font-size: 0.75em;
       text-transform: uppercase;
       font-weight: 600;
       text-anchor: middle; }
-    #main-infographic .infographic-graph .x-area {
+    #prices-infographic .infographic-graph .x-area {
       position: absolute;
       left: 50px;
       right: 50px;
@@ -9984,7 +9984,7 @@ Infographic
       padding: 0;
       margin: 0;
       height: 18px; }
-      #main-infographic .infographic-graph .x-area li {
+      #prices-infographic .infographic-graph .x-area li {
         float: left;
         list-style: none;
         text-transform: uppercase;
@@ -9994,17 +9994,17 @@ Infographic
         font-weight: 300;
         line-height: 18px;
         border-right: 1px solid #f2f8f9; }
-    #main-infographic .infographic-graph .dot {
+    #prices-infographic .infographic-graph .dot {
       cursor: pointer; }
-  #main-infographic .infographic-content {
+  #prices-infographic .infographic-content {
     top: 0;
     left: 0;
     right: 50px;
     z-index: 66; }
-    #main-infographic .infographic-content ul {
+    #prices-infographic .infographic-content ul {
       margin: 0;
       max-width: none; }
-    #main-infographic .infographic-content li {
+    #prices-infographic .infographic-content li {
       color: #333333;
       padding: 1em 0 1em 1em;
       background: #f2f8f9;
@@ -10012,25 +10012,25 @@ Infographic
       text-align: right;
       left: 40%;
       width: 60%; }
-      #main-infographic .infographic-content li h4, #main-infographic .infographic-content li h5 {
+      #prices-infographic .infographic-content li h4, #prices-infographic .infographic-content li h5 {
         font-size: 22px;
         color: #00797d;
         margin-bottom: 12px; }
-  #main-infographic .infographic-nav {
+  #prices-infographic .infographic-nav {
     top: 26px; }
-    #main-infographic .infographic-nav li {
+    #prices-infographic .infographic-nav li {
       opacity: 1; }
-      #main-infographic .infographic-nav li a {
+      #prices-infographic .infographic-nav li a {
         border: 1px solid #e2723b;
         -webkit-transition: 0.4s ease-in-out background;
         -o-transition: 0.4s ease-in-out background;
         transition: 0.4s ease-in-out background; }
-      #main-infographic .infographic-nav li.active a {
+      #prices-infographic .infographic-nav li.active a {
         background: #e2723b; }
-  #main-infographic .infographic-frame li .scroller {
+  #prices-infographic .infographic-frame li .scroller {
     background: linear-gradient(to top, transparent, #e2723b); }
 
-#main-infographic-tooltip {
+#prices-infographic-tooltip {
   top: 80px;
   color: #653015;
   background: white;
@@ -10043,33 +10043,33 @@ Infographic
   -webkit-transition: 0.3s ease-out opacity;
   -o-transition: 0.3s ease-out opacity;
   transition: 0.3s ease-out opacity; }
-  #main-infographic-tooltip p {
+  #prices-infographic-tooltip p {
     font-size: 14px;
     margin-bottom: 10px;
     line-height: 1em; }
-    #main-infographic-tooltip p .glyphicon {
+    #prices-infographic-tooltip p .glyphicon {
       color: #e2723b;
       width: 18px;
       font-size: 0.875em; }
-    #main-infographic-tooltip p.green {
+    #prices-infographic-tooltip p.green {
       color: #00797d; }
-    #main-infographic-tooltip p.green .glyphicon {
+    #prices-infographic-tooltip p.green .glyphicon {
       display: none;
       color: #00797d; }
-    #main-infographic-tooltip p .price {
+    #prices-infographic-tooltip p .price {
       font-weight: 600;
       font-size: 1.125em;
       padding-left: 3px; }
-    #main-infographic-tooltip p .year {
+    #prices-infographic-tooltip p .year {
       font-weight: 300; }
-    #main-infographic-tooltip p .country {
+    #prices-infographic-tooltip p .country {
       color: #e2723b;
       text-transform: uppercase; }
-  #main-infographic-tooltip .drug {
+  #prices-infographic-tooltip .drug {
     display: none; }
-    #main-infographic-tooltip .drug strong {
+    #prices-infographic-tooltip .drug strong {
       font-weight: 600; }
-    #main-infographic-tooltip .drug:before {
+    #prices-infographic-tooltip .drug:before {
       content: "";
       float: left;
       display: block;
@@ -10078,40 +10078,40 @@ Infographic
       margin-top: 2px;
       overflow: hidden;
       background: url(../images/pills.png) no-repeat 0 0 transparent; }
-    #main-infographic-tooltip .drug .description {
+    #prices-infographic-tooltip .drug .description {
       display: block;
       font-weight: 300;
       line-height: 1.25em;
       padding-left: 18px; }
-  #main-infographic-tooltip .drug-amitriptyline:before {
+  #prices-infographic-tooltip .drug-amitriptyline:before {
     background-position: 0 0; }
-  #main-infographic-tooltip .drug-simvastatin:before {
+  #prices-infographic-tooltip .drug-simvastatin:before {
     background-position: 0 -13px; }
-  #main-infographic-tooltip .drug-amoxicillin:before {
+  #prices-infographic-tooltip .drug-amoxicillin:before {
     background-position: 0 -26px; }
-  #main-infographic-tooltip .drug-atenolol:before {
+  #prices-infographic-tooltip .drug-atenolol:before {
     background-position: 0 -39px; }
-  #main-infographic-tooltip .drug-captopril:before {
+  #prices-infographic-tooltip .drug-captopril:before {
     background-position: 0 -52px; }
-  #main-infographic-tooltip .drug-ceftriaxone:before {
+  #prices-infographic-tooltip .drug-ceftriaxone:before {
     background-position: 0 -65px; }
-  #main-infographic-tooltip .drug-ciprofloxacin:before {
+  #prices-infographic-tooltip .drug-ciprofloxacin:before {
     background-position: 0 -78px; }
-  #main-infographic-tooltip .drug-co-trimoxazole:before {
+  #prices-infographic-tooltip .drug-co-trimoxazole:before {
     background-position: 0 -91px; }
-  #main-infographic-tooltip .drug-diazepam:before {
+  #prices-infographic-tooltip .drug-diazepam:before {
     background-position: 0 -104px; }
-  #main-infographic-tooltip .drug-diclofenac:before {
+  #prices-infographic-tooltip .drug-diclofenac:before {
     background-position: 0 -117px; }
-  #main-infographic-tooltip .drug-glibenclamide:before {
+  #prices-infographic-tooltip .drug-glibenclamide:before {
     background-position: 0 -130px; }
-  #main-infographic-tooltip .drug-omeprazole:before {
+  #prices-infographic-tooltip .drug-omeprazole:before {
     background-position: 0 -143px; }
-  #main-infographic-tooltip .drug-paracetamol:before {
+  #prices-infographic-tooltip .drug-paracetamol:before {
     background-position: 0 -156px; }
-  #main-infographic-tooltip .drug-salbutamol:before {
+  #prices-infographic-tooltip .drug-salbutamol:before {
     background-position: 0 -169px; }
-  #main-infographic-tooltip .tooltip-arrow {
+  #prices-infographic-tooltip .tooltip-arrow {
     position: absolute;
     width: 0;
     height: 0;
@@ -10124,16 +10124,16 @@ Infographic
     margin-top: -6px;
     border-width: 6px 6px 6px 0;
     border-right-color: #e2723b; }
-  #main-infographic-tooltip.left .tooltip-arrow {
+  #prices-infographic-tooltip.left .tooltip-arrow {
     left: auto;
     right: 0;
     margin-right: -6px;
     border-width: 6px 0 6px 6px;
     border-left-color: #e2723b; }
-  #main-infographic-tooltip.top .tooltip-arrow {
+  #prices-infographic-tooltip.top .tooltip-arrow {
     top: 18px; }
 
-#main-infographic-menu {
+#prices-infographic-menu {
   position: absolute;
   top: -100px;
   left: 0;
@@ -10145,25 +10145,25 @@ Infographic
   -webkit-transition: 0.4s ease-in-out all;
   -o-transition: 0.4s ease-in-out all;
   transition: 0.4s ease-in-out all; }
-  #main-infographic-menu.active {
+  #prices-infographic-menu.active {
     top: 0;
     opacity: 1; }
-  #main-infographic-menu h4 {
+  #prices-infographic-menu h4 {
     display: none;
     color: #00797d;
     font-size: 22px;
     margin-top: 85px;
     font-weight: 400; }
-  #main-infographic-menu ul {
+  #prices-infographic-menu ul {
     width: 100%;
     margin: 0;
     padding: 0; }
-    #main-infographic-menu ul li {
+    #prices-infographic-menu ul li {
       float: left;
       width: 25%;
       list-style: none;
       text-align: center; }
-      #main-infographic-menu ul li h5 {
+      #prices-infographic-menu ul li h5 {
         position: relative;
         text-transform: uppercase;
         font-size: 16px;
@@ -10171,7 +10171,7 @@ Infographic
         font-weight: 400;
         padding: 0 8px 8px;
         margin: 0 10px 0; }
-        #main-infographic-menu ul li h5 .icon-question {
+        #prices-infographic-menu ul li h5 .icon-question {
           display: block;
           position: absolute;
           top: 0;
@@ -10179,15 +10179,15 @@ Infographic
           width: 100%;
           height: 36px;
           background: url(../images/question-icon.png) no-repeat 0 center transparent; }
-      #main-infographic-menu ul li .dropdown {
+      #prices-infographic-menu ul li .dropdown {
         float: left; }
-      #main-infographic-menu ul li .dropdown-region {
+      #prices-infographic-menu ul li .dropdown-region {
         width: 45%; }
-      #main-infographic-menu ul li .dropdown-drug {
+      #prices-infographic-menu ul li .dropdown-drug {
         width: 55%; }
-      #main-infographic-menu ul li .dropdown.open .glyphicon-chevron-down:before {
+      #prices-infographic-menu ul li .dropdown.open .glyphicon-chevron-down:before {
         content: "\e113"; }
-      #main-infographic-menu ul li .dropdown-toggle {
+      #prices-infographic-menu ul li .dropdown-toggle {
         width: 100%;
         border-color: #e2723b;
         color: #777777;
@@ -10196,20 +10196,20 @@ Infographic
         padding: 5px 0;
         text-indent: -12px;
         border-right: none; }
-        #main-infographic-menu ul li .dropdown-toggle.hover, #main-infographic-menu ul li .dropdown-toggle:hover, #main-infographic-menu ul li .dropdown-toggle.active, #main-infographic-menu ul li .dropdown-toggle.active:hover, #main-infographic-menu ul li .dropdown-toggle.focus, #main-infographic-menu ul li .dropdown-toggle:active, #main-infographic-menu ul li .dropdown-toggle:focus {
+        #prices-infographic-menu ul li .dropdown-toggle.hover, #prices-infographic-menu ul li .dropdown-toggle:hover, #prices-infographic-menu ul li .dropdown-toggle.active, #prices-infographic-menu ul li .dropdown-toggle.active:hover, #prices-infographic-menu ul li .dropdown-toggle.focus, #prices-infographic-menu ul li .dropdown-toggle:active, #prices-infographic-menu ul li .dropdown-toggle:focus {
           background: #fcf1eb; }
-        #main-infographic-menu ul li .dropdown-toggle .glyphicon {
+        #prices-infographic-menu ul li .dropdown-toggle .glyphicon {
           position: absolute;
           top: 11px;
           right: 4px;
           color: #e2723b;
           font-size: 0.875em; }
-        #main-infographic-menu ul li .dropdown-toggle#drug-dropdown {
+        #prices-infographic-menu ul li .dropdown-toggle#drug-dropdown {
           border-right: 1px solid #e2723b; }
-      #main-infographic-menu ul li .dropdown-menu {
+      #prices-infographic-menu ul li .dropdown-menu {
         border-radius: 0;
         background: #e2723b; }
-        #main-infographic-menu ul li .dropdown-menu li {
+        #prices-infographic-menu ul li .dropdown-menu li {
           float: none;
           color: white;
           font-weight: 300;
@@ -10218,10 +10218,10 @@ Infographic
           padding-left: 8px;
           margin: 5px 0;
           line-height: 1.375em; }
-          #main-infographic-menu ul li .dropdown-menu li.checkbox label {
+          #prices-infographic-menu ul li .dropdown-menu li.checkbox label {
             position: relative;
             font-weight: 300; }
-            #main-infographic-menu ul li .dropdown-menu li.checkbox label i {
+            #prices-infographic-menu ul li .dropdown-menu li.checkbox label i {
               position: absolute;
               display: block;
               width: 18px;
@@ -10229,44 +10229,44 @@ Infographic
               margin-top: 2px;
               overflow: hidden;
               background: url(../images/pills.png) no-repeat 0 0 transparent; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-amitriptyline {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-amitriptyline {
                 background-position: 0 0; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-simvastatin {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-simvastatin {
                 background-position: 0 -13px; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-amoxicillin {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-amoxicillin {
                 background-position: 0 -26px; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-atenolol {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-atenolol {
                 background-position: 0 -39px; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-captopril {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-captopril {
                 background-position: 0 -52px; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-ceftriaxone {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-ceftriaxone {
                 background-position: 0 -65px; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-ciprofloxacin {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-ciprofloxacin {
                 background-position: 0 -78px; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-co-trimoxazole {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-co-trimoxazole {
                 background-position: 0 -91px; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-diazepam {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-diazepam {
                 background-position: 0 -104px; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-diclofenac {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-diclofenac {
                 background-position: 0 -117px; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-glibenclamide {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-glibenclamide {
                 background-position: 0 -130px; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-omeprazole {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-omeprazole {
                 background-position: 0 -143px; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-paracetamol {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-paracetamol {
                 background-position: 0 -156px; }
-              #main-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-salbutamol {
+              #prices-infographic-menu ul li .dropdown-menu li.checkbox label i.drug-salbutamol {
                 background-position: 0 -169px; }
-            #main-infographic-menu ul li .dropdown-menu li.checkbox label span {
+            #prices-infographic-menu ul li .dropdown-menu li.checkbox label span {
               padding-left: 18px; }
-          #main-infographic-menu ul li .dropdown-menu li.checkbox.all label {
+          #prices-infographic-menu ul li .dropdown-menu li.checkbox.all label {
             font-weight: 400; }
-      #main-infographic-menu ul li .dropdown:first-child {
+      #prices-infographic-menu ul li .dropdown:first-child {
         border-right: none; }
-  #main-infographic-menu .btn-group {
+  #prices-infographic-menu .btn-group {
     display: block;
     padding: 0 10px 0 0; }
-    #main-infographic-menu .btn-group .btn {
+    #prices-infographic-menu .btn-group .btn {
       width: 50%;
       padding-left: 0;
       padding-right: 0;
@@ -10277,35 +10277,35 @@ Infographic
       -webkit-transition: 0.3s ease-out background-color;
       -o-transition: 0.3s ease-out background-color;
       transition: 0.3s ease-out background-color; }
-      #main-infographic-menu .btn-group .btn.hover, #main-infographic-menu .btn-group .btn:hover {
+      #prices-infographic-menu .btn-group .btn.hover, #prices-infographic-menu .btn-group .btn:hover {
         background: #fcf1eb; }
-      #main-infographic-menu .btn-group .btn.active, #main-infographic-menu .btn-group .btn.active:hover, #main-infographic-menu .btn-group .btn.focus, #main-infographic-menu .btn-group .btn:active, #main-infographic-menu .btn-group .btn:focus {
+      #prices-infographic-menu .btn-group .btn.active, #prices-infographic-menu .btn-group .btn.active:hover, #prices-infographic-menu .btn-group .btn.focus, #prices-infographic-menu .btn-group .btn:active, #prices-infographic-menu .btn-group .btn:focus {
         color: white;
         background: #e2723b;
         font-weight: 300; }
 
-.page-template-template-iframe #main-infographic .infographic-content li .btn-next {
+.page-template-template-iframe #prices-infographic .infographic-content li .btn-next {
   visibility: hidden;
   text-align: right;
   top: 4px; }
-  .page-template-template-iframe #main-infographic .infographic-content li .btn-next .btn {
+  .page-template-template-iframe #prices-infographic .infographic-content li .btn-next .btn {
     background: #e2723b;
     border-color: #e2723b;
     color: white;
     font-weight: 300; }
-    .page-template-template-iframe #main-infographic .infographic-content li .btn-next .btn .glyphicon {
+    .page-template-template-iframe #prices-infographic .infographic-content li .btn-next .btn .glyphicon {
       font-size: 0.875em; }
-    .page-template-template-iframe #main-infographic .infographic-content li .btn-next .btn:hover {
+    .page-template-template-iframe #prices-infographic .infographic-content li .btn-next .btn:hover {
       color: #e2723b;
       background: white; }
 
-.page-template-template-iframe #main-infographic .infographic-content li.active .btn-next {
+.page-template-template-iframe #prices-infographic .infographic-content li.active .btn-next {
   visibility: visible;
   position: relative;
   z-index: 90; }
 
 @media (max-width: 992px) and (min-width: 859px) {
-  .page-template-template-iframe #main-infographic {
+  .page-template-template-iframe #prices-infographic {
     font-size: 0.875em; } }
 
 @media (max-width: 859px) {
@@ -10333,14 +10333,14 @@ Infographic
     display: none; }
   .page-template-template-iframe .infographic .infographic-frame li {
     outline: 1px solid white; }
-  .page-template-template-iframe #main-infographic {
+  .page-template-template-iframe #prices-infographic {
     font-size: 0.875em; }
-    .page-template-template-iframe #main-infographic .infographic-content li {
+    .page-template-template-iframe #prices-infographic .infographic-content li {
       width: 100%;
       padding: 0 4% 30px;
       text-align: center;
       margin-top: 30px; }
-  .page-template-template-iframe #main-infographic-tooltip {
+  .page-template-template-iframe #prices-infographic-tooltip {
     display: none; } }
 
 @media (max-width: 768px) {
@@ -10356,13 +10356,13 @@ Infographic
     font-size: 0.6em; } }
 
 @media (min-width: 1200px) {
-  #main-infographic-menu {
+  #prices-infographic-menu {
     padding-right: 40px;
     padding-left: 40px; }
-    #main-infographic-menu ul li .dropdown-region,
-    #main-infographic-menu ul li .dropdown-drug {
+    #prices-infographic-menu ul li .dropdown-region,
+    #prices-infographic-menu ul li .dropdown-drug {
       width: 50%; }
-    #main-infographic-menu ul li .dropdown-toggle .glyphicon {
+    #prices-infographic-menu ul li .dropdown-toggle .glyphicon {
       top: 10px;
       right: 5px;
       font-size: 1em; } }
@@ -10392,12 +10392,12 @@ Infographic
     display: none; }
   .page-template-template-article .infographic .infographic-frame li {
     outline: 1px solid white; }
-  .page-template-template-article #main-infographic {
+  .page-template-template-article #prices-infographic {
     font-size: 0.875em; }
-    .page-template-template-article #main-infographic .infographic-content li {
+    .page-template-template-article #prices-infographic .infographic-content li {
       width: 100%;
       padding: 0 4% 30px;
       text-align: center;
       margin-top: 30px; }
-  .page-template-template-article #main-infographic-tooltip {
+  .page-template-template-article #prices-infographic-tooltip {
     display: none; } }

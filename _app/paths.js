@@ -43,10 +43,10 @@ paths.scriptSrc = {
     paths.appScriptFiles + '/queue.js',
     paths.appScriptFiles + '/patents-graph.js',
     paths.appScriptFiles + '/infographic.js',
-    paths.appScriptFiles + '/main-infographic.js',
+    paths.appScriptFiles + '/antimalaricos-infographic.js',
     paths.appScriptFiles + '/fakes-infographic.js',
     paths.appScriptFiles + '/patents-infographic.js',
-    paths.appScriptFiles + '/antimalaricos-infographic.js'
+    paths.appScriptFiles + '/prices-infographic.js'
   ]
 };
 

@@ -1,4 +1,4 @@
-function Main_Infographic( _id ) {
+function Prices_Infographic( _id ) {
 
   var $ = jQuery.noConflict();
 
@@ -54,8 +54,8 @@ function Main_Infographic( _id ) {
 
   var id = _id,
       $el = $(id),
-      $menu = $('#main-infographic-menu'),
-      $tooltip = $('#main-infographic-tooltip'),
+      $menu = $('#prices-infographic-menu'),
+      $tooltip = $('#prices-infographic-tooltip'),
       $regionDropdownInputs = $('#region-dropdown-menu .checkbox input'),
       $drugDropdownInputs = $('#drug-dropdown-menu .checkbox input');
 
@@ -117,7 +117,7 @@ function Main_Infographic( _id ) {
       .orient('left');
 
     svg = d3.select(id).append('svg')
-        .attr('id', 'main-infographic-svg')
+        .attr('id', 'prices-infographic-svg')
         .attr('width', widthCont)
         .attr('height', heightCont)
       .append('g')
@@ -406,7 +406,7 @@ function Main_Infographic( _id ) {
 
     var currentData = getCurrentData();
 
-    $svg = d3.select('#main-infographic-svg');
+    $svg = d3.select('#prices-infographic-svg');
 
     // Set title
     $menu.find('.'+current.data+'-'+current.type).show();
