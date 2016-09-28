@@ -44,17 +44,21 @@
           <ul class="sub-menu submenu-languages">
             {% if page.collection %}
               {% assign articles=site.articles | where:"ref", page.ref | sort: 'lang' %}
-              {% for article in articles %}
+              {% for item in articles %}
+                {% if item.lang != page.lang %}
                 <li class="menu-item menu-item-language menu-item-language-current">
-                  <a href="/articles/{{ article.slug }}" class="{{ article.lang }}">{{ site.data.locales[article.lang].lang }}</a>
+                  <a href="/articles/{{ item.slug }}" class="{{ item.lang }}">{{ site.data.locales[item.lang].lang }}</a>
                 </li>
+                {% endif %}
               {% endfor %}
             {% else %}
               {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-              {% for page in pages %}
+              {% for item in pages %}
+                {% if item.lang != page.lang %}
                 <li>
-                  <a href="{{ page.permalink }}" class="{{ page.lang }}">{{ site.data.locales[page.lang].lang }}</a>
+                  <a href="{{ item.permalink }}" class="{{ item.lang }}">{{ site.data.locales[item.lang].lang }}</a>
                 </li>
+                {% endif %}
               {% endfor %}
             {% endif %}
           </ul>
