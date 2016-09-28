@@ -9958,11 +9958,11 @@ var Infographic = function( _id, _type ) {
 
       if (currentItem >= 0) {
 
-        //console.log('state', type, currentItem, $contentList.size() );
+        //console.log('state', type, currentItem, $contentList.length );
 
         // Show/hide Main Infographic Menu
         if (type === 'main') {
-          if (currentItem !== $contentList.size()) {
+          if (currentItem !== $contentList.length) {
             $('#main-infographic-menu').removeClass('active');
             $el.find('.infographic-nav, .infographic-content').removeClass('invisible');
           }
@@ -10000,11 +10000,11 @@ var Infographic = function( _id, _type ) {
 
     //if ($(window).width() <= 992) {
     if ($(window).width() < 860) {
-      $el.find('.infographic-content').css('height','auto'); 
+      $el.find('.infographic-content').css('height','auto');
     }
 
-    if (type === 'main' && vis.isInitialized()) { 
-      vis.resize(); 
+    if (type === 'main' && vis.isInitialized()) {
+      vis.resize();
     }
   };
 
