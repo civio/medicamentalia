@@ -22,7 +22,7 @@
             {% for item in articles_items %}
               {% if item.lang == page.lang %}
               <li class="menu-item {% if item.ref == page.ref %}current-menu-item{% endif %}">
-                <a href="/articles/{{ item.slug }}">{{ item.title }}</a>
+                <a href="/articles/{{ item.slug }}" title="{{ item.title }}">{{ item.title }}</a>
               </li>
               {% endif %}
             {% endfor %}
@@ -32,7 +32,7 @@
             {% for item in page_item %}
               {% if item.lang == page.lang %}
               <li class="menu-item {% if item.ref == page.ref %}current-menu-item{% endif %}">
-                <a href="{{ item.permalink }}">{{ item.title }}</a>
+                <a href="{{ item.permalink }}" title="{{ item.title }}">{{ item.title }}</a>
               </li>
               {% endif %}
             {% endfor %}
@@ -47,7 +47,7 @@
               {% for item in articles %}
                 {% if item.lang != page.lang %}
                 <li class="menu-item menu-item-language menu-item-language-current">
-                  <a href="/articles/{{ item.slug }}" class="{{ item.lang }}">{{ site.data.locales[item.lang].lang }}</a>
+                  <a href="/articles/{{ item.slug }}" class="{{ item.lang }}" title="{{ site.data.locales[item.lang].lang }}">{{ site.data.locales[item.lang].lang }}</a>
                 </li>
                 {% endif %}
               {% endfor %}
@@ -56,7 +56,7 @@
               {% for item in pages %}
                 {% if item.lang != page.lang %}
                 <li>
-                  <a href="{{ item.permalink }}" class="{{ item.lang }}">{{ site.data.locales[item.lang].lang }}</a>
+                  <a href="{{ item.permalink }}" class="{{ item.lang }}" title="{{ site.data.locales[item.lang].lang }}">{{ site.data.locales[item.lang].lang }}</a>
                 </li>
                 {% endif %}
               {% endfor %}
