@@ -34,6 +34,7 @@ paths.scriptSrc = {
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/popovers.js',
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
+    paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
     paths.appScriptFiles + '/vendor/selection-sharer.js',
     paths.appScriptFiles + '/main.js'
   ],
