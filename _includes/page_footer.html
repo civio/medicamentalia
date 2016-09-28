@@ -1,0 +1,14 @@
+<section class="no-padding page-footer">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      {% assign articles=site.articles | where:"lang", page.lang | sort:"order" %}
+      {% for article in articles %}
+        {% if page.ref != article.ref %}
+        <div class="col-md-4">
+          {% include home_item.html article=article %}
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

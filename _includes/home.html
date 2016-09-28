@@ -41,7 +41,9 @@
     <div class="row no-gutter">
       {% assign articles=site.articles | where:"lang", page.lang | sort:"order" %}
       {% for article in articles %}
-        {% include home_item.html article=article %}
+        <div class="{% if article.highlighted %}col-lg-12 col-sm-6{% else %}col-lg-4 col-sm-6{% endif %}">
+          {% include home_item.html article=article %}
+        </div>
       {% endfor %}
     </div>
   </div>

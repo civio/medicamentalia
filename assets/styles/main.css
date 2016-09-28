@@ -9097,11 +9097,11 @@ h3, h4, h5 {
       height: 50%; } }
 
 @media (min-width: 992px) {
-  #home.page-footer {
+  .page-footer {
     height: 50%; }
-    #home.page-footer .container-fluid,
-    #home.page-footer .row,
-    #home.page-footer [class*=col-] {
+    .page-footer .container-fluid,
+    .page-footer .row,
+    .page-footer [class*=col-] {
       height: 100%; } }
 
 .portfolio-box {
