@@ -145,7 +145,7 @@ El [CD-3+](http://www.usp.org/news/field-testing-rapid-counterfeit-drug-screenin
 
 El siguiente paso para los reguladores africanos será más difícil, pero Boateng cree que es ineludible. Para frenar el problema de las medicinas falsas o de mala calidad, los importadores deberán dejar de esperar la llegada de toneladas de fármacos a sus puertos y **pasar al contraataque**, ir a los lugares de origen con estas herramientas y allí, en las propias fábricas del sudeste asiático, poner los medicamentos a prueba antes de cerrar un trato.
 
-{% gallery %}
+{% include gallery.html id="counterfeits" %}
 
 ## Fronteras porosas
 

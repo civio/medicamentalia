@@ -62,7 +62,7 @@ También nos gustaría agradecer de forma muy especial la paciencia de todos los
 
 Y acabamos agradeciendo a Fernando Toledo y Jen Bramley, porque nos ayudaron a contrarreloj a pulir los últimos detalles para que Medicamentalia saliera a la luz lo mejor posible.
 
-{% gallery %}
+{% include gallery.html id="team" %}
 
 ## Metodología
 

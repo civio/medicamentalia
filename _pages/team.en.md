@@ -62,7 +62,7 @@ We would also like to thank in a special way the patience of all the interviewee
 
 And we end up thanking Fernando Toledo and Jen Bramley, because they helped us complete and polish Medicamentalia when the final deadline was approaching. 
 
-{% gallery %}
+{% include gallery.html id="team" %}
 
 ## Methodology
 

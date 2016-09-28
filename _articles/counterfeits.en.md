@@ -145,7 +145,7 @@ The [CD-3 +](http://www.usp.org/news/field-testing-rapid-counterfeit-drug-screen
 
 The next step for African regulators will be more difficult, but Boateng believes it is inevitable. To curb the problem of fake or substandard medicines, importers must stop waiting for the arrival of tons of drugs to their ports and **counterattack** by going to their places of origin with these tools and there, in their own Southeast Asia factories, test the drugs before closing a deal.
 
-{% gallery %}
+{% include gallery.html id="counterfeits" %}
 
 ## Porous borders
 
