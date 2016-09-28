@@ -10284,63 +10284,67 @@ Infographic
         background: #e2723b;
         font-weight: 300; }
 
-.page-template-template-iframe #prices-infographic .infographic-content li .btn-next {
+.iframe .full-height,
+.iframe .infographic.iframe {
+  margin: 0 !important; }
+
+.iframe .infographic .infographic-content li .btn-next {
   visibility: hidden;
   text-align: right;
   top: 4px; }
-  .page-template-template-iframe #prices-infographic .infographic-content li .btn-next .btn {
+  .iframe .infographic .infographic-content li .btn-next .btn {
     background: #e2723b;
     border-color: #e2723b;
     color: white;
     font-weight: 300; }
-    .page-template-template-iframe #prices-infographic .infographic-content li .btn-next .btn .glyphicon {
+    .iframe .infographic .infographic-content li .btn-next .btn .glyphicon {
       font-size: 0.875em; }
-    .page-template-template-iframe #prices-infographic .infographic-content li .btn-next .btn:hover {
+    .iframe .infographic .infographic-content li .btn-next .btn:hover {
       color: #e2723b;
       background: white; }
 
-.page-template-template-iframe #prices-infographic .infographic-content li.active .btn-next {
+.iframe .infographic .infographic-content li.active .btn-next {
   visibility: visible;
   position: relative;
   z-index: 90; }
 
 @media (max-width: 992px) and (min-width: 859px) {
-  .page-template-template-iframe #prices-infographic {
+  .iframe #prices-infographic {
     font-size: 0.875em; } }
 
 @media (max-width: 859px) {
-  .page-template-template-iframe .infographic .fixed {
+  .iframe .infographic .fixed {
     position: static !important; }
-  .page-template-template-iframe .infographic .infographic-content {
+  .iframe .infographic .infographic-content {
     position: static;
     padding-top: 1px; }
-    .page-template-template-iframe .infographic .infographic-content li {
+    .iframe .infographic .infographic-content li {
       position: static;
       opacity: 1;
       margin-bottom: 30px;
       border-bottom: 1px solid #148487; }
-      .page-template-template-iframe .infographic .infographic-content li:last-child {
+      .iframe .infographic .infographic-content li:last-child {
         border-bottom: none; }
-      .page-template-template-iframe .infographic .infographic-content li img,
-      .page-template-template-iframe .infographic .infographic-content li svg {
+      .iframe .infographic .infographic-content li img,
+      .iframe .infographic .infographic-content li svg {
         display: block;
         width: 100%;
         height: auto;
         margin: 20px 0; }
-  .page-template-template-iframe .infographic .infographic-graph,
-  .page-template-template-iframe .infographic .infographic-nav,
-  .page-template-template-iframe .infographic .infographic-frame {
+  .iframe .infographic .infographic-graph,
+  .iframe .infographic .infographic-nav,
+  .iframe .infographic .infographic-frame {
     display: none; }
-  .page-template-template-iframe .infographic .infographic-frame li {
+  .iframe .infographic .infographic-frame li {
     outline: 1px solid white; }
-  .page-template-template-iframe #prices-infographic {
+  .iframe #prices-infographic {
     font-size: 0.875em; }
-    .page-template-template-iframe #prices-infographic .infographic-content li {
+    .iframe #prices-infographic .infographic-content li {
       width: 100%;
       padding: 0 4% 30px;
       text-align: center;
       margin-top: 30px; }
-  .page-template-template-iframe #prices-infographic-tooltip {
+  .iframe #prices-infographic-tooltip {
     display: none; } }
 
 @media (max-width: 768px) {

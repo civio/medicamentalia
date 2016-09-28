@@ -71,18 +71,18 @@ function Prices_Infographic( _id ) {
 
   var $svg, $dots, $lines, $countryMarker, $countryLabel, $countryLabelCode, $overlay, $mprLine, $yAxis, $xAxis, $yLabel, $xArea;
 
-  var tickFormatPrices = function(d){ 
-        if (d === 0) {
-          return txt[lang].gratis; 
-        }
-        return d+'x'; 
-      };
-
-  var tickFormatAffordability = function(d){ 
+  var tickFormatPrices = function(d){
         if (d === 0) {
           return txt[lang].gratis;
         }
-        return d; 
+        return d+'x';
+      };
+
+  var tickFormatAffordability = function(d){
+        if (d === 0) {
+          return txt[lang].gratis;
+        }
+        return d;
       };
 
   // Setup Visualization
@@ -155,7 +155,7 @@ function Prices_Infographic( _id ) {
         .style('opacity', function(d){ return (d.Drug !== 'Salbutamol') ? DOT_OPACITY : 1; });
 
       // Set selected dots on top
-      $dots.sort(function (a, b) {  
+      $dots.sort(function (a, b) {
         return (a.Drug === 'Salbutamol') ? 1 : -1;
       });
 
@@ -184,7 +184,7 @@ function Prices_Infographic( _id ) {
         .style('opacity', function(d){ return (drugsFiltered.indexOf(d.Drug) === -1) ? DOT_OPACITY : 1; });
 
       // Set selected dots on top
-      $dots.sort(function (a, b) {  
+      $dots.sort(function (a, b) {
         return (drugsFiltered.indexOf(a.Drug) > -1) ? 1 : -1;
       });
 

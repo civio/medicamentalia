@@ -58,8 +58,8 @@ var Infographic = function( _id, _type ) {
         .append('<li class="frame-'+($navItems.length+1)+'"><div class="scroller"></div></li>')
         .append('<li class="frame-'+($navItems.length+2)+'"><div class="scroller"></div></li>');
       // Add extra nav item for Prices Infographic in iframe mode
-      if( $el.find('.infographic-content').hasClass('iframe') ){
-        $nav.append('<li><a href="#'+i+'"></a></li>');
+      if( $el.hasClass('iframe') ){
+        $el.find('.infographic-nav').append('<li><a href="#'+($navItems.length+1)+'"></a></li>');
       }
     }
 
@@ -83,7 +83,7 @@ var Infographic = function( _id, _type ) {
 
     if( type === 'prices'){
       vis.init( urlParam('skip') === 'true' );  // Setup skip value to prices Infographic
-      if( $el.find('.infographic-content').hasClass('iframe') ){
+      if( $el.hasClass('iframe') ){
         if( vis.skip ){
           $('#prices-infographic .infographic-frame').hide();
           $('#prices-infographic-menu').addClass('active');

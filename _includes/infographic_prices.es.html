@@ -1,7 +1,9 @@
+{% if include.iframe != "1" %}
   </div>
 </div>
+{% endif %}
 <div class="full-height">
-  <div id="prices-infographic" class="infographic" data-lang="{{ page.lang }}">
+  <div id="prices-infographic" class="infographic{% if include.iframe == '1' %} iframe{% endif %}" data-lang="{{ page.lang }}">
     <div id="prices-infographic-tooltip" class="tooltip top">
       <div class="tooltip-arrow"></div>
       <p><i class="glyphicon glyphicon-map-marker"></i><span class="country"></span>  <span class="year"></span></p>
@@ -160,5 +162,7 @@
     </ul>
   </div>
 </div>
+{% if include.iframe != "1" %}
 <div class="container page-content" markdown="1">
   <div class="page-content-container" markdown="1">
+{% endif %}

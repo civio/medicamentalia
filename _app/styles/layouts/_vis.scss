@@ -843,33 +843,43 @@ Infographic
 }
 
 // Iframe
-.page-template-template-iframe{
 
-  #prices-infographic .infographic-content li .btn-next{
-    visibility: hidden;
-    text-align: right;
-    top: 4px;
+.iframe{
 
-    .btn{
-      background: $color-orange;
-      border-color: $color-orange;
-      color: white;
-      font-weight: 300;
+  .full-height,
+  .infographic.iframe{
+    margin: 0 !important;
+  }
 
-      .glyphicon{
-        font-size: 0.875em;
-      }
+  .infographic .infographic-content{
 
-      &:hover{
-        color: $color-orange;
-        background: white;
+    li .btn-next{
+      visibility: hidden;
+      text-align: right;
+      top: 4px;
+
+      .btn{
+        background: $color-orange;
+        border-color: $color-orange;
+        color: white;
+        font-weight: 300;
+
+        .glyphicon{
+          font-size: 0.875em;
+        }
+
+        &:hover{
+          color: $color-orange;
+          background: white;
+        }
       }
     }
-  }
-  #prices-infographic .infographic-content li.active .btn-next{
-    visibility: visible;
-    position: relative;
-    z-index: 90;
+
+    li.active .btn-next{
+      visibility: visible;
+      position: relative;
+      z-index: 90;
+    }
   }
 
   @media (max-width: $screen-md) and (min-width: 859px) {
