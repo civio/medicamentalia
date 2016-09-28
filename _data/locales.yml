@@ -15,6 +15,9 @@ en:
     project_by: Medicamentalia is a project by
     funded_by: Funded by
     media_partners: Has media partners such as
+    more_info: 'If you want more information, subscribe to our newsletter or contact us at'
+    subscribe: SUBSCRIBE TO OUR NEWSLETTER
+    send: Send
 es:
   articles: Artículos
   by: Por
@@ -32,3 +35,6 @@ es:
     project_by: Medicamentalia es un proyecto de
     funded_by: Financiado por
     media_partners: Cuenta con media partners como
+    more_info: 'Si quieres más información, suscríbete a nuestro boletín o escríbenos a'
+    subscribe: SUSCRÍBETE AL BOLETÍN
+    send: Enviar
