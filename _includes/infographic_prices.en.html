@@ -1,9 +1,8 @@
   </div>
 </div>
-<a name="viz"></a>
 <div class="full-height">
-  <div id="main-infographic" class="infographic" data-lang="en">
-    <div id="main-infographic-tooltip" class="tooltip top">
+  <div id="prices-infographic" class="infographic" data-lang="{{ page.lang }}">
+    <div id="prices-infographic-tooltip" class="tooltip top">
       <div class="tooltip-arrow"></div>
       <p><i class="glyphicon glyphicon-map-marker"></i><span class="country"></span>  <span class="year"></span></p>
       <div class="drug drug-amitriptyline">
@@ -65,7 +64,7 @@
       <p class="green"><i class="glyphicon glyphicon-arrow-up"></i><i class="glyphicon glyphicon-arrow-down"></i><i class="glyphicon glyphicon-time"></i> <span class="price"></span> <span class="prices-txt txt">times the reference price</span><span class="affordability-txt txt">days of work</span><span class="affordability-txt-hour txt"></span></p>
     </div>
     <div class="infographic-graph">
-      <div id="main-infographic-menu">
+      <div id="prices-infographic-menu">
         <ul>
           <li>
             <h5>Value</h5>
@@ -136,53 +135,29 @@
     </div>
     <div class="infographic-content">
       <ul>
+        {% for step in site.data.infographics.prices.steps %}
         <li>
-          <h5>11 days' wages to buy an asthma inhaler</h5>
-          A citizen from <strong>Kyrgyzstan</strong> needs to work 11 days to buy an asthma inhaler (<strong>salbutamol</strong>) at a pharmacy, versus 48 minutes needed in Spain or 120 in Germany.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-1.jpg" alt="Precios-1" width="960" height="495" class="alignnone size-full" />
+          {{ step.title[page.lang] }}
+          <img src="{{ site.baseurl }}/assets/images/{{ step.img }}" alt="{{ id }} {{ forloop.index }}" class="alignnone size-full" />
         </li>
-        <li>
-          <h5>The daily salary of the lowest paid public servant</h5>
-          In order to calculate the number of working days needed to pay for treatment, we use an official figure: <strong>the daily salary of the lowest public servant in each country</strong>.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-2.jpg" alt="Precios-2" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>The most expensive, a cholesterol-lowering medication</h5>
-          <strong>Simvastatin</strong>, used to lower the level of cholesterol in the blood, is the least affordable drug: a patient needs almost five days of salary (4.67) on average, across 60 countries, to buy the complete treatment. On the other extreme, less than one hour of work is needed for <strong>diazepam</strong>, an anti-anxiety drug.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-3.jpg" alt="Precios-3" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>Where are medicines least affordable?</h5>
-          If you lived in <strong>São Tomé and Príncipe</strong> you'd need to work 14 days on average to pay for the treatment of one of the 14 drugs analysed. It's the country where medicines are least affordable. <strong>Kuwait</strong> follows (7 days). On the other hand, in <strong>Italy or Spain</strong> (less than one hour of work in both of them) or <strong>Germany</strong> (an hour and a half) these essential drugs are much more accessible.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-4.jpg" alt="Precios-4" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>Everything is relative: let's talk about prices</h5>
-          Another variable we can look at is prices. But not on absolute terms: what we analyse is <strong>the ratio between the cost of the medicine in each country and an international reference price (the green line)</strong>. That allows us to compare data from studies at different points in time and visualise the outliers. If a data point goes up too much, we have a problem.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-5.jpg" alt="Precios-5" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>The prices in Kuwait, out of control</h5>
-          This Persian Gulf country showed the biggest deviation from the international reference price in a study in 2004. <strong>Ciprofloxacin</strong>, one of the most common antibiotics, was up to 100 times the reference price in <strong>Kuwait</strong> pharmacies.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-6.jpg" alt="Precios-6" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>These were retail prices, what about prescriptions?</h5>
-          We can also analyse these variables looking at what a patient in a <strong>public health system</strong> will end up paying, instead of retail prices in pharmacies.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-8.jpg" alt="Precios-7" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>The state pays, zero cost</h5>
-          In many of the analysed countries, the cost of some or all of the 14 medicines is borne by the public health system, so the <strong>price paid by the patient is zero</strong>. Although the problem is sometimes not just the price, but availability: drugs out of stock, far away pharmacies...
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-8.jpg" alt="Precios-7" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>Comparisons are odious</h5>
-          Specially if we look at <strong>ciprofloxacin</strong>, an antibiotic, whose retail price at pharmacies is <strong>the most variable across the 60 analysed countries</strong>. On the public side diclofenac, an anti-inflammatory drug, is the one with the widest range of prices.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-10.jpg" alt="Precios-8" width="960" height="495" class="alignnone size-full" />
-        </li>
-      </ul> 
+        {% endfor %}
+      </ul>
     </div>
+    <div class="infographic-graph"></div>
+    <ul class="infographic-frame">
+      {% for step in site.data.infographics.prices.steps %}
+      <li class="frame-{{ forloop.index }}">
+        <div class="scroller"></div>
+      </li>
+      {% endfor %}
+    </ul>
+    <ul class="infographic-nav">
+      {% for step in site.data.infographics.prices.steps %}
+      <li>
+        <a href="#{{ forloop.index }}"></a>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 <div class="container page-content" markdown="1">

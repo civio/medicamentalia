@@ -27,7 +27,7 @@ In this case, more than ever, information is power. Therefore, various regional 
 
 Because price is one of the main barriers to access to medicines -**although not the only one**,- as it drains governments' budgets and excludes the poorest people from treatment. According to the WHO, **one third of the world's population** has trouble accessing the medicines they need while, at the same time, 15% of the population consumes 90% of the global spending on pharmaceutical products.
 
-{% include visualization-prices.en.html %}
+{% include infographic_prices.en.html %}
 
 This interactive chart shows the data that we have collected from HAI and from several official sources in Argentina, Italy, Spain and Germany. The final dataset can be downloaded [here](https://docs.google.com/spreadsheets/d/1ksuDMT-B0Y0VwpmRlW4b94GUna9NWkFCph96LNVfgTA/edit?usp=sharing). If you want to include information about your country to the project, learn more about our methodology and the reasons why we have used these particular datasets, you can stop by [here](/en/nosotros).
   </div>

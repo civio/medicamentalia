@@ -38,7 +38,7 @@ Toda la legislación nacional bebe de un acuerdo internacional, el [TRIPS](https
 
 La norma marca que las patentes duran **20 años desde que se registra la petición**, pero muchos países conceden extensiones de varios años –un mínimo de cinco, en la Unión Europea, por ejemplo–, si existen retrasos en su tramitación. En el caso de Brasil, la ley establece que las patentes duran 20 años desde su solicitud, como marca el TRIPS, o –y aquí está la clave– **diez años desde su concesión**. Así, cada año de retraso que supere la decena alarga la vida del monopolio sobre el fármaco. En España, la norma está siendo [debatida](http://www.congreso.es/docu/docum/ddocum/dosieres/sleg/legislatura_10/spl_71/pdfs/1.pdf), camino a su reforma, en el Congreso. Una regla internacional con 161 maneras de aplicarla, las mismas que países miembros de la OMC.
 
-{% infographic id:patents, lang:es %}
+{% include infographic.html id="patents" %}
 
 Vive en una casa a las afueras de Rio con dos tortugas y un perro y rodeada de libros y música. Eloan Pinheiro, química de formación, trabajó en una gran empresa farmacéutica liderando equipos de investigación, pasó a dirigir el laboratorio público brasileño Farmanginhos, donde realizó estudios de costes de producción, y de allí a la OMS. Ahora, convertida en un referente en la lucha por el acceso a los medicamentos, ejerce como consultora de organizaciones civiles y critica con vehemencia, gesticulando y apuntalando cada argumento con dibujos de las manos en el aire, el sistema de patentes, aunque las preguntas aún no hubieran pisado ese terreno: “**Es un mecanismo cruel**. Las medicinas no son una mercancía, son diferentes a un coche o un negocio. Salvan vidas”. De la opinión general a los detalles particulares, continúa: “Cuando se aplicó la patente al producto se restringió el conocimiento. Cuando afectaba solo a procesos, alguien podía llegar a la misma molécula por un camino distinto. Eso es creativo, es inventivo”.
 
@@ -98,7 +98,7 @@ Para todas esas enfermedades, “la ley de la oferta y la demanda no funciona”
 
 El embrión de la DNDi se gestó tras el Nobel de la Paz a Médicos sin Fronteras de 1999 y tomó forma de grupo de trabajo para dar paso a la actual entidad, que empezó a trabajar en 2003. Como _outsiders_ del mercado tradicional basado en las patentes, han logrado desarrollar y poner a disposición de los afectados seis nuevos tratamientos. Para la enfermedad del sueño, para el Kala-Azar, para la enfermedad del Chagas y para la malaria. Seis caminos alternativos.
 
-{% infographic id:antimalaricos, lang:es %}
+{% include infographic.html id="antimalaricos" %}
 
 El socio de la DNDi en el desarrollo del antimalárico ASMQ es el laboratorio público brasileño Farmanginhos. “Los modelos de desarrollo conjunto y pactos de precios para un conjunto son el objetivo porque, **en una estructura capitalista**, ninguna empresa entrará en el juego sin obtener lucro”, argumenta su director, Hayne Felipe Da Silva. Y añade: “Tenemos que debatir hasta qué punto ese lucro somete y perjudica los intereses de una población, principalmente en temas de salud. Necesitamos usar la creatividad y descubrir un modelo que resuelva esa ecuación”.
 

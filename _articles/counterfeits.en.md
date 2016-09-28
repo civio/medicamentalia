@@ -113,7 +113,7 @@ A more thorough analysis brought to light other differences, mainly in its compo
 
 Finally, an analysis of the pollen contained in fake Coartem certified that its origin was Southeast Asia. "To get into Africa, **they choose an entry point where they find it easier, for example, to bribe a customs officer**," explains the mPedigree economist. "They go to neighboring countries like Togo and Benin, even Nigeria, but it is more common in francophone countries, where borders are more porous because they lack solid regulatory systems. The most complex part is that customs authorities, basically, seek profits, and the more they import, the more they earn. Therefore, they do not usually pay much attention to what is entering the country. And once they enter, it's a matter of time until it reaches other countries by road, by poorly controlled border areas. When it is inside, it is inside."
 
-{% infographic id:counterfeits, lang:en %}
+{% include infographic.html id="counterfeits" %}
 
 In Ghana, the drugs go first to **Okaishie**, a market which receives wholesalers from across the country and where business is done very fast. If someone needs 20 boxes of omeprazole or ibuprofen, someone will offer them, and after some negotiations the deal is done. "If you go there and say you sell a product for 80 cents instead of 1 dollar because you want to end your stock ..." Branttie leaves the end of the sentence in the air and raises his eyebrows. "Once we talked to a wholesaler of Okaishie, we asked him who had he bought the drugs from and said he did not know his name. That means that when you go to the north, east or west of the country, there is **no way of tracking the distribution chain**".
 

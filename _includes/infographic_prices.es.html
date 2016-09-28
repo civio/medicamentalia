@@ -1,9 +1,8 @@
   </div>
 </div>
-<a name="viz"></a>
 <div class="full-height">
-  <div id="main-infographic" class="infographic" data-lang="es">
-    <div id="main-infographic-tooltip" class="tooltip top">
+  <div id="prices-infographic" class="infographic" data-lang="{{ page.lang }}">
+    <div id="prices-infographic-tooltip" class="tooltip top">
       <div class="tooltip-arrow"></div>
       <p><i class="glyphicon glyphicon-map-marker"></i><span class="country"></span>  <span class="year"></span></p>
       <div class="drug drug-amitriptyline">
@@ -65,7 +64,7 @@
       <p class="green"><i class="glyphicon glyphicon-arrow-up"></i><i class="glyphicon glyphicon-arrow-down"></i><i class="glyphicon glyphicon-time"></i> <span class="price"></span> <span class="prices-txt txt">veces el precio de referencia</span><span class="affordability-txt txt">días de trabajo</span><span class="affordability-txt-hour txt"></span></p>
     </div>
     <div class="infographic-graph">
-      <div id="main-infographic-menu">
+      <div id="prices-infographic-menu">
         <ul>
           <li>
             <h5>Variable</h5>
@@ -136,53 +135,29 @@
     </div>
     <div class="infographic-content">
       <ul>
+        {% for step in site.data.infographics.prices.steps %}
         <li>
-          <h5>11 días de trabajo para comprar un inhalador</h5>
-          Un trabajador de <strong>Kirguistán</strong> necesita 11 días de sueldo para comprar en la farmacia un inhalador para el asma (<strong>salbutamol</strong>), frente a los 48 minutos de un español o los 120 de un alemán.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-1.jpg" alt="Precios-1" width="960" height="495" class="alignnone size-full" />
+          {{ step.title[page.lang] }}
+          <img src="{{ site.baseurl }}/assets/images/{{ step.img }}" alt="{{ id }} {{ forloop.index }}" class="alignnone size-full" />
         </li>
-        <li>
-          <h5>El sueldo diario del funcionario peor pagado</h5>
-          Para calcular los días de trabajo necesarios para pagar un tratamiento, tenemos en cuenta una cifra oficial: <strong>el sueldo diario del funcionario con salario más bajo de cada país</strong>.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-2.jpg" alt="Precios-2" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>El más costoso, un medicamento contra el colesterol</h5>
-          La <strong>simvastatina</strong>, destinada a reducir los niveles de colesterol en sangre, es el fármaco más difícil de adquirir: son necesarios casi cinco días de media (4,67) en los 60 países para pagar el tratamiento. Al otro lado está el del ansiolítico <strong>diazepam</strong>, que se paga con menos de una hora de trabajo.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-3.jpg" alt="Precios-3" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>¿Dónde son menos asequibles los fármacos?</h5>
-          Si vives en <strong>Santo Tomé</strong> tienes que trabajar 14 días de media para comprar el tratamiento completo de alguna de las 14 medicinas analizadas. Es el país en el que los medicamentos son menos asequibles. Le sigue <strong>Kuwait</strong> (7 días). En cambio, en <strong>Italia</strong>, <strong>España</strong> (menos de una hora en ambos) y <strong>Alemania</strong> (una hora y media de trabajo) estos fármacos esenciales son muchísimo más accesibles.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-4.jpg" alt="Precios-4" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>Todo es relativo: hablemos de precio</h5>
-          Otra de las variables que puedes analizar es el precio. Pero no en términos absolutos. Lo que comparamos es la relación del coste del fármaco en cada país con el <strong>precio de referencia internacional (la línea verde)</strong>. Eso nos permite cruzar datos de estudios de diferentes años y visualizar el desvío. Si la bola está muy arriba, tenemos un problema.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-5.jpg" alt="Precios-5" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>Los precios de Kuwait, desbocados</h5>
-          El país del Golfo Pérsico es el que registró (en su estudio de 2004) unas cifras más alejadas del precio de referencia internacional. El <strong>ciprofloxacino</strong>, uno de los antibióticos más habituales, llegó a costar más de 100 veces ese indicador en las farmacias de <strong>Kuwait</strong>.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-6.jpg" alt="Precios-6" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>Hasta aquí lo privado, ¿y con receta?</h5>
-          También puedes analizar todas estas variables pero, en lugar de fijarte en el coste directo en farmacia, poniendo la mirada en lo que acaba pagando el paciente <strong>en los sistemas públicos de salud</strong>.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-8.jpg" alt="Precios-7" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>El Estado paga, coste cero</h5>
-          En muchos de los países analizados, el coste de algunos de los 14 fármacos, o de todos, lo asume el sistema público y <strong>es gratuito para el paciente</strong>. El problema, en ocasiones, no es solo el precio, también la accesibilidad: roturas de stock, distancia a la farmacia...
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-8.jpg" alt="Precios-7" width="960" height="495" class="alignnone size-full" />
-        </li>
-        <li>
-          <h5>Las comparaciones son odiosas</h5>
-          Sobre todo si hablamos del antibiótico <strong>ciprofloxacino</strong>, cuyo precio en farmacia es el más variable en los 60 países analizados. En lo público, el premio al fármaco que registra mayores diferencias dependiendo de dónde vivas es el antiinflamatorio diclofenaco.
-          <img src="{{ site.baseurl }}/assets/images/articles/screen-10.jpg" alt="Precios-8" width="960" height="495" class="alignnone size-full" />
-        </li>
+        {% endfor %}
       </ul>
     </div>
+    <div class="infographic-graph"></div>
+    <ul class="infographic-frame">
+      {% for step in site.data.infographics.prices.steps %}
+      <li class="frame-{{ forloop.index }}">
+        <div class="scroller"></div>
+      </li>
+      {% endfor %}
+    </ul>
+    <ul class="infographic-nav">
+      {% for step in site.data.infographics.prices.steps %}
+      <li>
+        <a href="#{{ forloop.index }}"></a>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 <div class="container page-content" markdown="1">

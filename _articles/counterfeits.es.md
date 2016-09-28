@@ -113,7 +113,7 @@ Un análisis más concienzudo sacó a la luz otras diferencias, principalmente e
 
 Por último, un análisis del polen de aquel falso Coartem certificó que su procedencia era el sudeste asiático. "Para entrar en África, **eligen un punto de entrada donde les resulte más fácil, por ejemplo, sobornar a un oficial de aduanas**", explica el economista de mPedigree. "Van a países vecinos como Togo o Benín, incluso Nigeria, pero es más común en los países francófonos, donde las fronteras son más porosas ya que carecen de sistemas legislativos sólidos. La parte más compleja es que las aduanas, básicamente, buscan ingresos, y cuantas más cosas importas, más ingresos obtienes. Por tanto, no suelen prestar mucha atención a lo que estás introduciendo en el país. Y, una vez entran, es cuestión de tiempo hasta que llega a otros países por carretera, por zonas fronterizas poco controladas. Cuando está dentro, está dentro".
 
-{% infographic id:counterfeits, lang:es %}
+{% include infographic.html id="counterfeits" %}
 
 Dentro de Ghana, donde primero van los medicamentos es a **Okaishie**, un mercado donde acuden mayoristas desde todo el país y donde los negocios se hacen muy rápido. Si alguien necesita 20 cajas de omeprazol o de ibuprofeno, alguien se las ofrece, negocian un precio y el trato está hecho. "Si vas allí y dices que tienes una mercancía y que en lugar de un dólar pides 80 céntimos porque quieres acabar con tu stock...". Branttie deja el final de la frase en el aire y levanta las cejas. "Una vez hablamos con un mayorista en Okaishie, le preguntamos a quién le había comprado las medicinas y nos dijo que no sabía su nombre. Eso significa que cuando vas al norte, al este o al oeste del país, **no hay forma de conocer la cadena de distribución**".
 

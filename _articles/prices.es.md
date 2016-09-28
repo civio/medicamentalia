@@ -27,7 +27,7 @@ En este caso, más que nunca, la información es poder. Por eso, diversas organi
 
 Y es que el precio es una de las principales barreras de acceso a los medicamentos –**aunque no la única**–, porque exprime presupuestos públicos o veta el tratamiento a los más pobres. Según la OMS, **un tercio de la población del planeta tiene problemas para acceder a las medicinas necesarias** y, al mismo tiempo, el 15% de la población consume el 90% del gasto mundial en productos farmacéuticos.
 
-{% include visualization-prices.es.html %}
+{% include infographic_prices.es.html %}
 
 En esta infografía se muestran los datos que hemos recopilado y tratado de HAI y de las distintas fuentes oficiales de Argentina, Italia, España y Alemania. Los puedes descargar [aquí](https://docs.google.com/spreadsheets/d/1ksuDMT-B0Y0VwpmRlW4b94GUna9NWkFCph96LNVfgTA/edit?usp=sharing). Si quieres aportar información de tu país al proyecto, saber más sobre nuestra metodología y por qué hemos utilizado estos datos y no otros, puedes pasarte por [aquí](/nosotros/).
   </div>
