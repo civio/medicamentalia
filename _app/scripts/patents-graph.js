@@ -61,7 +61,7 @@ function patents_graph( _id ) {
       .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
     // Load CSV
-    d3.csv( $('body').data('baseurl')+'assets/csv/patents.csv', function(error, data) {
+    d3.csv( $('body').data('baseurl')+'/assets/csv/patents.csv', function(error, data) {
 
       data.forEach(function(d) {
         d.patents = +d.patents;

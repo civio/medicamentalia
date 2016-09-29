@@ -9699,7 +9699,7 @@ function patents_graph( _id ) {
       .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
     // Load CSV
-    d3.csv( $('body').data('baseurl')+'assets/csv/patents.csv', function(error, data) {
+    d3.csv( $('body').data('baseurl')+'/assets/csv/patents.csv', function(error, data) {
 
       data.forEach(function(d) {
         d.patents = +d.patents;
@@ -10011,7 +10011,7 @@ var Antimalaricos_Infographic = function( _id ) {
   that.init = function() {
 
     // Load external SVG
-    d3.xml( $('body').data('baseurl')+'assets/images/svg/antimalaricos.svg', 'image/svg+xml', function(xml) {
+    d3.xml( $('body').data('baseurl')+'/assets/images/svg/antimalaricos.svg', 'image/svg+xml', function(xml) {
     
       $(id).append( xml.documentElement );  // Append external SVG to Container
 
@@ -10171,7 +10171,7 @@ var Fakes_Infographic = function( _id ) {
   that.init = function() {
 
     // Load external SVG
-    d3.xml( $('body').data('baseurl')+'assets/images/svg/fakes.svg', 'image/svg+xml', function(xml) {
+    d3.xml( $('body').data('baseurl')+'/assets/images/svg/fakes.svg', 'image/svg+xml', function(xml) {
     
       $(id).append( xml.documentElement );  // Append external SVG to Container
 
@@ -10293,7 +10293,7 @@ var Patents_Infographic = function( _id ) {
   that.init = function() {
 
     // Load external SVG
-    d3.xml( $('body').data('baseurl')+'assets/images/svg/patentes.svg', 'image/svg+xml', function(xml) {
+    d3.xml( $('body').data('baseurl')+'/assets/images/svg/patentes.svg', 'image/svg+xml', function(xml) {
     
       $(id).append( xml.documentElement );  // Append external SVG to Container
 
@@ -10632,9 +10632,9 @@ function Prices_Infographic( _id ) {
 
     // Load CSVs
     queue()
-      .defer(d3.csv, $('body').data('baseurl')+'assets/csv/prices.csv')
-      .defer(d3.csv, $('body').data('baseurl')+'assets/csv/affordability.csv')
-      .defer(d3.csv, $('body').data('baseurl')+'assets/csv/countries.csv')
+      .defer(d3.csv, $('body').data('baseurl')+'/assets/csv/prices.csv')
+      .defer(d3.csv, $('body').data('baseurl')+'/assets/csv/affordability.csv')
+      .defer(d3.csv, $('body').data('baseurl')+'/assets/csv/countries.csv')
       .await( onDataReady );
 
     return that;

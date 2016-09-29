@@ -12,7 +12,7 @@ var Antimalaricos_Infographic = function( _id ) {
   that.init = function() {
 
     // Load external SVG
-    d3.xml( $('body').data('baseurl')+'assets/images/svg/antimalaricos.svg', 'image/svg+xml', function(xml) {
+    d3.xml( $('body').data('baseurl')+'/assets/images/svg/antimalaricos.svg', 'image/svg+xml', function(xml) {
     
       $(id).append( xml.documentElement );  // Append external SVG to Container
 
