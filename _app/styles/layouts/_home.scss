@@ -1,8 +1,8 @@
 // Home Header
-.home header{
+#home-header{
   margin-top: 0;
   min-height: 100%;
-  background: none;
+  //background: $color-green-dark;
 
   #home-bkg {
     position: fixed;
@@ -22,9 +22,11 @@
   .header-content{
     width: 100%; 
     padding: 0;
+    //top: 62%;
     //background: url(../images/noise.png) repeat 0 0 transparent;
 
     .header-content-inner{
+      padding: 0;
       max-width: 640px;
     }
 
@@ -134,7 +136,7 @@
 
 @media (min-width: $screen-sm) {
 
-  .home header .header-content{
+  #home-header .header-content{
 
     h1{
       font-size: 48px;
@@ -347,11 +349,24 @@ $btn-scroll-down-icon-size: 44px;
     //background: fade(@theme-primary, 90%);
     text-align: center;
 
+    .portfolio-box-investigation{
+      display: inline;
+      color: $brand-secondary;
+      //background: $brand-secondary;
+      //padding: 3px 10px 4px;
+      font-size: 0.813em;
+      letter-spacing: .075em;
+      text-transform: uppercase;
+    }
+
     .portfolio-box-caption-content {
-      width: 100%;
-      text-align: center;
+      //width: 100%;
+      text-align: left;
       position: absolute;
       top: 50%;
+      //padding: 0 30px;
+      left: 30px;
+      right: 30px;
       transform: translateY(-50%);
 
       h3 {
@@ -360,14 +375,15 @@ $btn-scroll-down-icon-size: 44px;
         text-transform: uppercase;
         font-weight: 600;
         letter-spacing: .075em;
-        margin: 0 0 20px;
+        margin: 20px 0;
       }
 
       .portfolio-box-caption-description{
         //font-family: $font-family-serif;
         font-size: 1.125em;
-        width: 334px;
-        margin: 0 auto 32px;
+        //width: 334px;
+        max-width: 500px;
+        margin: 0 0 30px;
         font-weight: 300;
       }
     }
@@ -384,7 +400,8 @@ $btn-scroll-down-icon-size: 44px;
       }
     }
   }
-  
+
+  /*
   &.portfolio-prices .portfolio-box-overlay{
     background: $overlay-green;
   }
@@ -412,6 +429,7 @@ $btn-scroll-down-icon-size: 44px;
   &.portfolio-patents:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
     color: darken($overlay-yellow,20%);
   }
+  */
 
   @media (min-width: $screen-sm) {
     .portfolio-box-caption {
@@ -425,7 +443,30 @@ $btn-scroll-down-icon-size: 44px;
       }
     }
   }
+
+  &.investigation-access{
+
+    .portfolio-box-overlay{
+      background: $overlay-green;
+    }
+
+    &:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+      color: darken($overlay-green,10%);
+    }
+  }
+
+  &.investigation-vaccines{
+  
+    .portfolio-box-overlay{
+      background: $overlay-orange;
+    }
+
+    &:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+      color: darken($overlay-orange,10%);
+    }
+  }
 }
+
 
 .read-more-btn{
   color: white;

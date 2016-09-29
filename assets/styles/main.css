@@ -8832,11 +8832,10 @@ h3, h4, h5 {
       #main-menu .navbar-nav > li.menu-item-language > a {
         padding-left: 10px; } }
 
-.home header {
+#home-header {
   margin-top: 0;
-  min-height: 100%;
-  background: none; }
-  .home header #home-bkg {
+  min-height: 100%; }
+  #home-header #home-bkg {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -8852,12 +8851,13 @@ h3, h4, h5 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
-  .home header .header-content {
+  #home-header .header-content {
     width: 100%;
     padding: 0; }
-    .home header .header-content .header-content-inner {
+    #home-header .header-content .header-content-inner {
+      padding: 0;
       max-width: 640px; }
-    .home header .header-content h1 {
+    #home-header .header-content h1 {
       font-size: 38px;
       font-weight: 400;
       line-height: 100px;
@@ -8867,7 +8867,7 @@ h3, h4, h5 {
       text-align: center;
       text-transform: uppercase;
       letter-spacing: .1em; }
-    .home header .header-content p {
+    #home-header .header-content p {
       font-size: 20px;
       font-family: "Source Serif Pro", Georgia, serif;
       letter-spacing: .03em;
@@ -8876,7 +8876,7 @@ h3, h4, h5 {
       margin-top: -10px;
       text-align: center;
       margin-bottom: 80px; }
-  .home header .btn-scroll-down {
+  #home-header .btn-scroll-down {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -8936,14 +8936,14 @@ h3, h4, h5 {
         color: #00797d; }
 
 @media (min-width: 768px) {
-  .home header .header-content h1 {
+  #home-header .header-content h1 {
     font-size: 48px;
     padding-top: 0;
     padding-left: 100px;
     line-height: 139px;
     background-position: 0 0;
     text-align: left; }
-  .home header .header-content p {
+  #home-header .header-content p {
     font-size: 22px;
     padding-left: 174px;
     text-align: left; } }
@@ -9107,7 +9107,36 @@ h3, h4, h5 {
   display: block;
   margin: 0 auto;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  /*
+  &.portfolio-prices .portfolio-box-overlay{
+    background: $overlay-green;
+  }
+  &.portfolio-prices:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+    color: darken($overlay-green,10%);
+  }
+
+  &.portfolio-counterfeits .portfolio-box-overlay{
+    background: $overlay-blue;
+  }
+  &.portfolio-counterfeits:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+    color: darken($overlay-blue,10%);
+  }
+
+  &.portfolio-compulsory-license .portfolio-box-overlay{
+    background: $overlay-orange;
+  }
+  &.portfolio-compulsory-license:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+    color: darken($overlay-orange,10%);
+  }
+
+  &.portfolio-patents .portfolio-box-overlay{
+    background: $overlay-yellow;
+  }
+  &.portfolio-patents:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+    color: darken($overlay-yellow,20%);
+  }
+  */ }
   .portfolio-box .portfolio-box-background {
     width: 100%;
     height: 100%;
@@ -9132,11 +9161,18 @@ h3, h4, h5 {
   .portfolio-box .portfolio-box-caption {
     color: white;
     text-align: center; }
+    .portfolio-box .portfolio-box-caption .portfolio-box-investigation {
+      display: inline;
+      color: #fefed1;
+      font-size: 0.813em;
+      letter-spacing: .075em;
+      text-transform: uppercase; }
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-      width: 100%;
-      text-align: center;
+      text-align: left;
       position: absolute;
       top: 50%;
+      left: 30px;
+      right: 30px;
       transform: translateY(-50%); }
       .portfolio-box .portfolio-box-caption .portfolio-box-caption-content h3 {
         color: #fefed1;
@@ -9144,38 +9180,30 @@ h3, h4, h5 {
         text-transform: uppercase;
         font-weight: 600;
         letter-spacing: .075em;
-        margin: 0 0 20px; }
+        margin: 20px 0; }
       .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .portfolio-box-caption-description {
         font-size: 1.125em;
-        width: 334px;
-        margin: 0 auto 32px;
+        max-width: 500px;
+        margin: 0 0 30px;
         font-weight: 300; }
   .portfolio-box:hover .portfolio-box-overlay {
     opacity: 0.5; }
   .portfolio-box:hover .portfolio-box-caption-content .read-more-btn {
     border-color: #fefed1;
     background: #fefed1; }
-  .portfolio-box.portfolio-prices .portfolio-box-overlay {
-    background: #5abda7; }
-  .portfolio-box.portfolio-prices:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
-    color: #41a38d; }
-  .portfolio-box.portfolio-counterfeits .portfolio-box-overlay {
-    background: #00c2b6; }
-  .portfolio-box.portfolio-counterfeits:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
-    color: #008f86; }
-  .portfolio-box.portfolio-compulsory-license .portfolio-box-overlay {
-    background: #e99267; }
-  .portfolio-box.portfolio-compulsory-license:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
-    color: #e2723b; }
-  .portfolio-box.portfolio-patents .portfolio-box-overlay {
-    background: #cadf70; }
-  .portfolio-box.portfolio-patents:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
-    color: #a3bf2a; }
   @media (min-width: 768px) {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
       font-size: 16px; }
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
       font-size: 22px; } }
+  .portfolio-box.investigation-access .portfolio-box-overlay {
+    background: #5abda7; }
+  .portfolio-box.investigation-access:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
+    color: #41a38d; }
+  .portfolio-box.investigation-vaccines .portfolio-box-overlay {
+    background: #e99267; }
+  .portfolio-box.investigation-vaccines:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
+    color: #e2723b; }
 
 .read-more-btn {
   color: white;
@@ -9261,6 +9289,7 @@ h3, h4, h5 {
     padding: 0; } }
 
 .partners {
+  clear: both;
   color: #fefed1;
   font-weight: 300;
   padding: 40px 0;
@@ -9363,7 +9392,6 @@ header {
   min-height: 350px;
   text-align: center;
   color: white;
-  background: url("http://lorempixel.com/g/1280/720/nature/") center center no-repeat fixed;
   webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

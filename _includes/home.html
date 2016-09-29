@@ -1,11 +1,5 @@
-<!-- Lang Selector -->
-<div id="language-selector" class="menu-item menu-item-language">
-  {% include language_selector.html %}
-</div>
-
-
 <!-- Home Intro -->
-<header>
+<header id="home-header">
   <video autoplay loop poster="{{ site.baseurl }}/assets/images/home-bkg.jpg" id="home-bkg">
     <source src="{{ site.baseurl }}/assets/videos/home-bkg.m4v" type="video/mp4">
     <source src="{{ site.baseurl }}/assets/videos/home-bkg.webm" type="video/webm">
@@ -28,19 +22,21 @@
 <section class="no-padding" id="home">
   <div class="container-fluid">
     <div class="row no-gutter">
-      {% assign articles=site.articles | where:"lang", page.lang | sort:"order" %}
-      {% for article in articles %}
-        {% unless article.excluded %}
-        <div class="{% if article.highlighted %}col-lg-12 col-sm-6{% else %}col-lg-4 col-sm-6{% endif %}">
-          {% include home_item.html article=article %}
-        </div>
-        {% endunless %}
+      {% for item in site.data.home %}
+        {% assign articles=site.articles | where:"ref", item.ref %}
+        {% for article in articles %}
+          {% if article.lang == page.lang %}
+            <div class="col-sm-{{ item.size }}">
+              {% include home_item.html article=article %}
+            </div>
+          {% endif %}
+        {% endfor %}
       {% endfor %}
     </div>
   </div>
 </section>
 
-<!-- Home Key Findings -->
+<!-- Home Key Findings
 <section class="no-padding" id="key-findings">
   <div class="key-findings-overlay"></div>
   <div class="container">
@@ -54,3 +50,4 @@
     </div>
   </div>
 </section>
+-->

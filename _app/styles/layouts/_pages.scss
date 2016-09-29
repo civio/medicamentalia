@@ -7,7 +7,7 @@ header {
   min-height: 350px;
   text-align: center;
   color: white;
-  background: url('http://lorempixel.com/g/1280/720/nature/') center center no-repeat fixed;
+  //background: url('http://lorempixel.com/g/1280/720/nature/') center center no-repeat fixed;
   @include background-size( cover );
 
   .header-overlay{
