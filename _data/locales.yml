@@ -3,6 +3,9 @@ en:
   by: By
   description: A journalistic investigation into access to medicines around the world
   explore_data: Explore the data
+  investigations:
+    access: Access to medicine
+    vaccines: Vaccines
   lang: English
   readmore: Read more
   scroll: Scroll down
@@ -23,6 +26,9 @@ es:
   by: Por
   description: Investigación periodística sobre el acceso a los medicamentos en el mundo
   explore_data: Explora los datos
+  investigations:
+    access: Acceso a medicamentos
+    vaccines: Vacunas
   lang: Español
   readmore: Leer más
   scroll: Scroll down
