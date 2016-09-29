@@ -8922,7 +8922,8 @@ h3, h4, h5 {
       border: none;
       margin-bottom: 1px;
       background: #fefed1;
-      text-align: center; }
+      text-align: center;
+      list-style: none; }
       .home #language-selector > ul li:hover {
         background: white; }
     .home #language-selector > ul a {
