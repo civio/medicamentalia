@@ -1,4 +1,5 @@
 ---
+investigation:    access
 title:            Counterfeits
 subtitle:         False friends in the fight against malaria
 description:      The high prices of medicines, especially on developing coutries, open the door to an illegal market of dangerous counterfeits

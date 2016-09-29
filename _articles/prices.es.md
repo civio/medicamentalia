@@ -1,4 +1,5 @@
 ---
+investigation:    access
 title:            Precios
 subtitle:         11 días de trabajo por un inhalador para el asma
 description:      14 medicinas. 61 países. Compara y analiza las diferencias entre ellos
