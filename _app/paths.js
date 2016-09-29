@@ -30,6 +30,7 @@ paths.scriptSrc = {
     paths.npmDir + '/jquery/dist/jquery.js',
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
+    paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/popovers.js',
     paths.npmDir + '/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
