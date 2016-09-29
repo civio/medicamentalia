@@ -16,8 +16,9 @@
   var setup = function(){
       
     // Toogle Lang Menu
-    $('#main-menu .navbar-nav>li.menu-item-language>a').click(function(e){
-      $('#main-menu .submenu-languages').toggle();
+    $('#language-selector>a').click(function(e){
+      e.preventDefault();
+      $('#language-selector .submenu-languages').toggle();
     });
 
     // Add Selection Sharer (https://github.com/xdamman/selection-sharer)

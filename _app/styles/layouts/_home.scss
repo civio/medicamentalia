@@ -60,53 +60,47 @@
   }
 }
 
-.home #lang_sel_click{
+.home #language-selector{
   position: absolute;
-  top: 6px;
-  right: 8px;
+  top: 8px;
+  right: 10px;
   z-index: 90;
+  font-size: 14px;
   background-color: transparent;
+  text-transform: uppercase;
 
-  li{
-    width: auto;
-    list-style: none;
-    text-align: center;
+  > a{
+    color: $brand-secondary;
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    background-color: transparent;
+    border: none;
+    padding: 0 6px;
 
-    a{
-      color: $brand-secondary;
-      font-family: $font-family-sans-serif;
-      font-weight: 300;
-      font-size: 14px;
-      text-transform: uppercase;
-      background-color: transparent;
-      border: none;
-      padding: 0 6px;
-
-      &:hover,
-      &:focus{
-        color: white;
-        text-decoration: none;
-      }
+    &:hover,
+    &:focus{
+      color: white;
+      text-decoration: none;
+    }
+    
+    &:after{
+      content: "\e252";
+      position: relative;
+      top: -1px;
+      padding-left: 4px;
+      display: inline-block;
+      font-size: 0.6em;
+      font-family: 'Glyphicons Halflings';
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
   }
 
-  > ul > li > a:after{
-    content: "\e252";
-    position: relative;
-    top: -1px;
-    padding-left: 4px;
-    display: inline-block;
-    font-size: 0.6em;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  } 
-
-  ul ul{
-    visibility: hidden;
+  > ul{
+    display: none;
     border: none;
     margin: 0;
     padding: 4px 0 0;
@@ -115,6 +109,7 @@
       border: none;
       margin-bottom: 1px;
       background: $brand-secondary;
+      text-align: center;
 
       &:hover{
         background: white;

@@ -8882,59 +8882,56 @@ h3, h4, h5 {
     left: 50%;
     display: block; }
 
-.home #lang_sel_click {
+.home #language-selector {
   position: absolute;
-  top: 6px;
-  right: 8px;
+  top: 8px;
+  right: 10px;
   z-index: 90;
-  background-color: transparent; }
-  .home #lang_sel_click li {
-    width: auto;
-    list-style: none;
-    text-align: center; }
-    .home #lang_sel_click li a {
-      color: #fefed1;
-      font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-      font-weight: 300;
-      font-size: 14px;
-      text-transform: uppercase;
-      background-color: transparent;
-      border: none;
-      padding: 0 6px; }
-      .home #lang_sel_click li a:hover, .home #lang_sel_click li a:focus {
-        color: white;
-        text-decoration: none; }
-  .home #lang_sel_click > ul > li > a:after {
-    content: "\e252";
-    position: relative;
-    top: -1px;
-    padding-left: 4px;
-    display: inline-block;
-    font-size: 0.6em;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; }
-  .home #lang_sel_click ul ul {
-    visibility: hidden;
+  font-size: 14px;
+  background-color: transparent;
+  text-transform: uppercase; }
+  .home #language-selector > a {
+    color: #fefed1;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    background-color: transparent;
+    border: none;
+    padding: 0 6px; }
+    .home #language-selector > a:hover, .home #language-selector > a:focus {
+      color: white;
+      text-decoration: none; }
+    .home #language-selector > a:after {
+      content: "\e252";
+      position: relative;
+      top: -1px;
+      padding-left: 4px;
+      display: inline-block;
+      font-size: 0.6em;
+      font-family: 'Glyphicons Halflings';
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+  .home #language-selector > ul {
+    display: none;
     border: none;
     margin: 0;
     padding: 4px 0 0; }
-    .home #lang_sel_click ul ul li {
+    .home #language-selector > ul li {
       border: none;
       margin-bottom: 1px;
-      background: #fefed1; }
-      .home #lang_sel_click ul ul li:hover {
+      background: #fefed1;
+      text-align: center; }
+      .home #language-selector > ul li:hover {
         background: white; }
-    .home #lang_sel_click ul ul a {
+    .home #language-selector > ul a {
       color: #00797d;
       line-height: 22px;
       background: none;
       padding: 0 6px;
       font-weight: 400; }
-      .home #lang_sel_click ul ul a:hover {
+      .home #language-selector > ul a:hover {
         color: #00797d; }
 
 @media (min-width: 768px) {
