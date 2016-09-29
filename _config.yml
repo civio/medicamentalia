@@ -19,7 +19,7 @@ index:
 collections:
   articles:
     output: true
-    permalink: /articles/:slug/
+    permalink: /:categories/:slug/
 
 # Defaults
 defaults:
