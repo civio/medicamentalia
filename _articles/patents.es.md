@@ -1,5 +1,5 @@
 ---
-investigation:    access
+category:         access
 title:            Patentes
 subtitle:         Peaje a la salud
 description:      Aunque existen modelos alternativos, la aplicación de los derechos de propiedad intelectual a los medicamentos sigue siendo el camino marcado por la industria

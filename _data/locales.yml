@@ -1,11 +1,11 @@
 en:
   articles: Articles
   by: By
-  description: A journalistic investigation into access to medicines around the world
-  explore_data: Explore the data
-  investigations:
+  categories:
     access: Access to medicine
     vaccines: Vaccines
+  description: A journalistic investigation into access to medicines around the world
+  explore_data: Explore the data
   lang: English
   readmore: Read more
   scroll: Scroll down
@@ -24,11 +24,11 @@ en:
 es:
   articles: Artículos
   by: Por
-  description: Investigación periodística sobre el acceso a los medicamentos en el mundo
-  explore_data: Explora los datos
-  investigations:
+  categories:
     access: Acceso a medicamentos
     vaccines: Vacunas
+  description: Investigación periodística sobre el acceso a los medicamentos en el mundo
+  explore_data: Explora los datos
   lang: Español
   readmore: Leer más
   scroll: Scroll down

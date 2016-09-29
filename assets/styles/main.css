@@ -9161,7 +9161,7 @@ h3, h4, h5 {
   .portfolio-box .portfolio-box-caption {
     color: white;
     text-align: center; }
-    .portfolio-box .portfolio-box-caption .portfolio-box-investigation {
+    .portfolio-box .portfolio-box-caption .portfolio-box-category {
       display: inline;
       color: #fefed1;
       font-size: 0.813em;
@@ -9196,13 +9196,13 @@ h3, h4, h5 {
       font-size: 16px; }
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
       font-size: 22px; } }
-  .portfolio-box.investigation-access .portfolio-box-overlay {
+  .portfolio-box.category-access .portfolio-box-overlay {
     background: #5abda7; }
-  .portfolio-box.investigation-access:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
+  .portfolio-box.category-access:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
     color: #41a38d; }
-  .portfolio-box.investigation-vaccines .portfolio-box-overlay {
+  .portfolio-box.category-vaccines .portfolio-box-overlay {
     background: #e99267; }
-  .portfolio-box.investigation-vaccines:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
+  .portfolio-box.category-vaccines:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
     color: #e2723b; }
 
 .read-more-btn {
@@ -9217,6 +9217,7 @@ h3, h4, h5 {
   transition: 0.4s ease-out background-color; }
 
 #key-findings {
+  clear: both;
   position: relative;
   padding: 50px 0 30px;
   color: white;

@@ -349,7 +349,7 @@ $btn-scroll-down-icon-size: 44px;
     //background: fade(@theme-primary, 90%);
     text-align: center;
 
-    .portfolio-box-investigation{
+    .portfolio-box-category{
       display: inline;
       color: $brand-secondary;
       //background: $brand-secondary;
@@ -444,7 +444,7 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
 
-  &.investigation-access{
+  &.category-access{
 
     .portfolio-box-overlay{
       background: $overlay-green;
@@ -455,7 +455,7 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
 
-  &.investigation-vaccines{
+  &.category-vaccines{
   
     .portfolio-box-overlay{
       background: $overlay-orange;
@@ -482,6 +482,7 @@ $btn-scroll-down-icon-size: 44px;
 // Key Findings
 
 #key-findings {
+  clear: both;
   position: relative;
   padding: 50px 0 30px;
   color: white;

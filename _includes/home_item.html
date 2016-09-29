@@ -1,4 +1,4 @@
-<a class="portfolio-box portfolio-{{ article.ref }} investigation-{{ article.investigation }}" href="{{ article.url | prepend: site.baseurl }}" title="{{ article.title }}">
+<a class="portfolio-box portfolio-{{ article.ref }} category-{{ article.category }}" href="{{ article.url | prepend: site.baseurl }}" title="{{ article.title }}">
   {% if article.img %}
     <div class="portfolio-box-background" style="background-image: url('{{ site.baseurl }}/assets/images/{{ article.img }}')"></div>
   {% else %}
@@ -7,8 +7,10 @@
   <div class="portfolio-box-overlay"></div>
   <div class="portfolio-box-caption">
     <div class="portfolio-box-caption-content">
-      {% if article.investigation %}
-      <p class="portfolio-box-investigation">{{ site.data.locales[page.lang].investigations[article.investigation] }}</p>
+      {% if page.layout == 'home' %}
+      {% if article.category %}
+      <p class="portfolio-box-category">{{ site.data.locales[page.lang].categories[article.category] }}</p>
+      {% endif %}
       {% endif %}
       <h3>{{ article.title }}</h3>
       <div class="portfolio-box-caption-description">{{ article.home_description }}</div>

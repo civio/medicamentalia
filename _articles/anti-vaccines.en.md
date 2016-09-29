@@ -1,5 +1,5 @@
 ---
-investigation:    vaccines
+category:         vaccines
 title:            Anti vaccines
 subtitle:         A toll on health
 description:      Although there are alternative models, the use of intellectual property rights, as applied to medicine, remains mandatory for the industry

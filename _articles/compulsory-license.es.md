@@ -1,5 +1,5 @@
 ---
-investigation:    access
+category:         access
 title:            Licencia obligatoria
 subtitle:         Un acto soberano –y aislado– contra las patentes
 description:      Ocho años después de tumbar la patente sobre el efavirenz, un antirretroviral, vuelven las dudas sobre la sostenibilidad del programa AIDS del gobierno de Brasil
