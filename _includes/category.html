@@ -1,0 +1,41 @@
+<!-- Home Intro -->
+<header id="home-header">
+  <video autoplay loop poster="{{ site.baseurl }}/assets/images/home-bkg.jpg" id="home-bkg">
+    <source src="{{ site.baseurl }}/assets/videos/home-bkg.m4v" type="video/mp4">
+    <source src="{{ site.baseurl }}/assets/videos/home-bkg.webm" type="video/webm">
+    <source src="{{ site.baseurl }}/assets/videos/home-bkg.ogv" type="video/ogg">
+  </video>
+  <div class="header-content">
+    <div class="header-content-inner">
+        <h1>{{ site.data.locales[page.lang].categories[include.id] }}</h1>
+        <p>Lorem ipsum dolor sit amet</p>
+    </div>
+  </div>
+</header>
+
+<!-- Investigation articles -->
+<section class="no-padding" id="home">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      {% assign articles=site.articles | where:"category", include.id | sort:"order" %}
+      {% for article in articles %}
+        {% if article.lang == page.lang %}
+          <div class="col-sm-12">
+            {% include home_item.html article=article %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Key Findings -->
+<section class="no-padding" id="key-findings">
+  <div class="key-findings-overlay"></div>
+  <div class="container">
+    {% capture keyFindings %}
+    {% include key_findings.{{ page.lang }}.md %}
+    {% endcapture %}
+    {{ keyFindings | markdownify }}
+  </div>
+</section>
