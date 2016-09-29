@@ -9080,12 +9080,12 @@ h3, h4, h5 {
 #home [class*=col-] {
   height: 300px; }
 
-#home.page-footer {
+.page-footer {
   height: auto; }
-  #home.page-footer .container-fluid,
-  #home.page-footer .row {
+  .page-footer .container-fluid,
+  .page-footer .row {
     height: auto; }
-  #home.page-footer [class*=col-] {
+  .page-footer [class*=col-] {
     height: 300px; }
 
 @media (min-width: 768px) {
@@ -10370,36 +10370,36 @@ Infographic
       font-size: 1em; } }
 
 @media (max-width: 992px) {
-  .page-template-template-article .infographic .fixed {
+  .articles .infographic .fixed {
     position: static !important; }
-  .page-template-template-article .infographic .infographic-content {
+  .articles .infographic .infographic-content {
     position: static;
     padding-top: 1px; }
-    .page-template-template-article .infographic .infographic-content li {
+    .articles .infographic .infographic-content li {
       position: static;
       opacity: 1;
       margin-bottom: 30px;
       border-bottom: 1px solid #148487; }
-      .page-template-template-article .infographic .infographic-content li:last-child {
+      .articles .infographic .infographic-content li:last-child {
         border-bottom: none; }
-      .page-template-template-article .infographic .infographic-content li img,
-      .page-template-template-article .infographic .infographic-content li svg {
+      .articles .infographic .infographic-content li img,
+      .articles .infographic .infographic-content li svg {
         display: block;
         width: 100%;
         height: auto;
         margin: 20px 0; }
-  .page-template-template-article .infographic .infographic-graph,
-  .page-template-template-article .infographic .infographic-nav,
-  .page-template-template-article .infographic .infographic-frame {
+  .articles .infographic .infographic-graph,
+  .articles .infographic .infographic-nav,
+  .articles .infographic .infographic-frame {
     display: none; }
-  .page-template-template-article .infographic .infographic-frame li {
+  .articles .infographic .infographic-frame li {
     outline: 1px solid white; }
-  .page-template-template-article #prices-infographic {
+  .articles #prices-infographic {
     font-size: 0.875em; }
-    .page-template-template-article #prices-infographic .infographic-content li {
+    .articles #prices-infographic .infographic-content li {
       width: 100%;
       padding: 0 4% 30px;
       text-align: center;
       margin-top: 30px; }
-  .page-template-template-article #prices-infographic-tooltip {
+  .articles #prices-infographic-tooltip {
     display: none; } }

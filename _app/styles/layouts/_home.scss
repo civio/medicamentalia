@@ -270,21 +270,19 @@ $btn-scroll-down-icon-size: 44px;
   [class*=col-] {
     height: 300px;
   }
+}
 
-  &.page-footer{
+.page-footer{
+  height: auto;
+
+  .container-fluid,
+  .row {
     height: auto;
-
-    .container-fluid,
-    .row {
-      height: auto;
-    }
-
-    [class*=col-] {
-      height: 300px;
-    }
   }
 
-  
+  [class*=col-] {
+    height: 300px;
+  }
 }
 
 @media (min-width: $screen-sm) {
