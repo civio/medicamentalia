@@ -8712,12 +8712,31 @@ h3, h4, h5 {
     text-transform: uppercase;
     padding-left: 32px;
     background: url(../images/medicamentalia-small.png) no-repeat 4px center transparent;
-    -webkit-transition: 0.3s ease-in-out opacity;
-    -o-transition: 0.3s ease-in-out opacity;
-    transition: 0.3s ease-in-out opacity; }
+    -webkit-transition: 0.3s ease-in-out color;
+    -o-transition: 0.3s ease-in-out color;
+    transition: 0.3s ease-in-out color; }
+    .navbar-default .navbar-brand h1 {
+      font-size: 1em;
+      margin: 0; }
     .navbar-default .navbar-brand:hover {
-      color: #fefed1;
-      opacity: 0.5; }
+      color: #41a38d; }
+  .navbar-default .navbar-category {
+    float: left;
+    padding: 15px 5px;
+    -webkit-transition: 0.3s ease-in-out color;
+    -o-transition: 0.3s ease-in-out color;
+    transition: 0.3s ease-in-out color; }
+    .navbar-default .navbar-category h2 {
+      color: #41a38d;
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0.03em;
+      font-weight: 300;
+      text-transform: uppercase; }
+    .navbar-default .navbar-category:hover {
+      text-decoration: none; }
+      .navbar-default .navbar-category:hover h2 {
+        color: #fefed1; }
 
 .navbar-toggle {
   width: 50px;
@@ -8858,6 +8877,7 @@ h3, h4, h5 {
       padding: 0;
       max-width: 640px; }
     #home-header .header-content h1 {
+      color: #fefed1;
       font-size: 38px;
       font-weight: 400;
       line-height: 100px;
@@ -9456,18 +9476,18 @@ header {
         max-width: 640px;
         margin: 0 auto 15px; }
     header .header-content h1 {
-      color: #fefed1;
-      font-size: 36px;
-      font-weight: 600;
-      letter-spacing: .03em;
-      margin: 15px 0; }
-    header .header-content h2 {
       color: #bbd646;
       font-size: 22px;
       margin: 0;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       font-weight: 400; }
+    header .header-content h2 {
+      color: #fefed1;
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: .03em;
+      margin: 15px 0; }
     header .header-content p {
       font-weight: 300; }
 
