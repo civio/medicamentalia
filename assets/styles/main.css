@@ -8867,15 +8867,18 @@ h3, h4, h5 {
       text-align: center;
       text-transform: uppercase;
       letter-spacing: .1em; }
-    #home-header .header-content p {
+    #home-header .header-content h2 {
+      display: block;
+      color: white;
       font-size: 20px;
       font-family: "Source Serif Pro", Georgia, serif;
+      line-height: 1.375em;
       letter-spacing: .03em;
       padding-left: 40px;
       padding-right: 40px;
-      margin-top: -10px;
+      margin: 0;
       text-align: center;
-      margin-bottom: 80px; }
+      text-transform: none; }
   #home-header .btn-scroll-down {
     position: absolute;
     bottom: 0;
@@ -8943,7 +8946,7 @@ h3, h4, h5 {
     line-height: 139px;
     background-position: 0 0;
     text-align: left; }
-  #home-header .header-content p {
+  #home-header .header-content h2 {
     font-size: 22px;
     padding-left: 174px;
     text-align: left; } }

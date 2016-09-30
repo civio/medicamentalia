@@ -42,15 +42,18 @@
       letter-spacing: .1em;
     }
 
-    p{
+    h2{
+      display: block;
+      color: white;
       font-size: 20px;
       font-family: $font-family-serif;
+      line-height: 1.375em;
       letter-spacing: .03em;
       padding-left: 40px;
       padding-right: 40px;
-      margin-top: -10px;
+      margin: 0;
       text-align: center;
-      margin-bottom: 80px;
+      text-transform: none;
     }
   }
 
@@ -147,7 +150,7 @@
       text-align: left;
     }
 
-    p{
+    h2{
       font-size: 22px;
       padding-left: 174px;
       text-align: left;
