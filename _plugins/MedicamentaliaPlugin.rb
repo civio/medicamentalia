@@ -1,9 +1,22 @@
 module Jekyll
 
   module MedicamentaliaUtils
+
     def slugify(str)
       return str.downcase.strip.gsub(' ', '-').gsub(/[^a-z0-9-]/, '').gsub(/[-]+/, '-')
     end
+
+    def get_link(context, markup, pages)
+      id = context[markup.strip]
+      lang = context.registers[:page]['lang']
+      pages.each do |p|
+        if p.data['ref'] == id and p.data['lang'] == lang
+          return '<a href="'+context.registers[:site].config['url']+p.url+'" title="'+p.data['title']+'">'+p.data['title']+'</a>'
+        end
+      end
+      return ''
+    end
+
   end
   
   module AnchorLinksGenerator
@@ -43,6 +56,32 @@ module Jekyll
       return menu
     end
   end
+
+  class PageLinkTag < Liquid::Tag
+
+    include MedicamentaliaUtils
+
+    def initialize(tag_name, markup, tokens)
+      super
+    end
+
+    def render(context)
+      render = get_link(context, @markup, context.registers[:site].pages)
+    end
+  end
+
+  class ArticleLinkTag < Liquid::Tag
+
+    include MedicamentaliaUtils
+
+    def initialize(tag_name, markup, tokens)
+      super
+    end
+
+    def render(context)
+      render = get_link(context, @markup, context.registers[:site].collections['articles'].docs)
+    end
+  end
 end
 
 # Use add_anchor_links filter as {{ content | add_anchor_links }}
@@ -50,3 +89,9 @@ Liquid::Template.register_filter(Jekyll::AnchorLinksGenerator)
 
 # Use article_menu tag as {% article_menu page %}
 Liquid::Template.register_tag('page_menu', Jekyll::PageMenuTag)
+
+# Use page_link tag as {% page_link ref %}
+Liquid::Template.register_tag('page_link', Jekyll::PageLinkTag)
+
+# Use article_link tag as {% article_link ref %}
+Liquid::Template.register_tag('article_link', Jekyll::ArticleLinkTag)
