@@ -14,7 +14,11 @@ module Jekyll
           return '<a href="'+context.registers[:site].config['url']+p.url+'" title="'+p.data['title']+'">'+p.data['title']+'</a>'
         end
       end
-      return ''
+      
+      raise ArgumentError, <<eos
+Could not find page ref '#{id}' in class '#{self.class}'.
+Make sure the document exists and the ref is correct.
+eos
     end
 
   end
