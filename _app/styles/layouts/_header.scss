@@ -51,6 +51,7 @@
 
   .navbar-category{
     float: left;
+    height: 20px;
     padding: 15px 5px;
     @include transition(.3s ease-in-out color);
 

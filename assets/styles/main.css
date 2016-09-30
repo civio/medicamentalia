@@ -8722,6 +8722,7 @@ h3, h4, h5 {
       color: #41a38d; }
   .navbar-default .navbar-category {
     float: left;
+    height: 20px;
     padding: 15px 5px;
     -webkit-transition: 0.3s ease-in-out color;
     -o-transition: 0.3s ease-in-out color;

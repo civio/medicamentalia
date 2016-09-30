@@ -21,31 +21,20 @@
 
     <div id="main-menu" class="collapse navbar-collapse">
       <ul id="menu-main-menu" class="nav navbar-nav navbar-right">
-        <!--
-        {% for nav in site.data.nav %}
-
+        {% if page.category %}
+        {% for nav in site.data.nav[page.category] %}
           {% if nav.type == 'article' %}
-            {% assign articles_items=site.articles | where:"ref", nav.ref %}
-            {% for item in articles_items %}
-              {% if item.lang == page.lang %}
-              <li class="menu-item {% if item.ref == page.ref %}current-menu-item{% endif %}">
-                <a href="{{ site.url }}/articles/{{ item.slug }}" title="{{ item.title }}">{{ item.title }}</a>
-              </li>
-              {% endif %}
-            {% endfor %}
-
+          <li class="menu-item {% if nav.ref == page.ref %}current-menu-item{% endif %}">
+            {% article_link nav.ref %}
+          </li>
           {% else if nav.type == 'page' %}
-            {% assign page_item=site.pages | where:"ref", nav.ref %}
-            {% for item in page_item %}
-              {% if item.lang == page.lang %}
-              <li class="menu-item {% if item.ref == page.ref %}current-menu-item{% endif %}">
-                <a href="{{ site.url }}{{ item.permalink }}" title="{{ item.title }}">{{ item.title }}</a>
-              </li>
-              {% endif %}
-            {% endfor %}
+          <li class="menu-item {% if nav.ref == page.ref %}current-menu-item{% endif %}">
+            {% page_link nav.ref %}
+          </li>
           {% endif %}
         {% endfor %}
-        -->
+        {% endif %}
+
         <li id="language-selector" class="menu-item menu-item-language">
           {% include language_selector.html %}
         </li>
