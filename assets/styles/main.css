@@ -9346,6 +9346,14 @@ h3, h4, h5 {
   @media (min-width: 768px) {
     .partners .main-partners > div {
       padding-top: 0; } }
+  .partners .awards a {
+    margin-top: 10px;
+    margin-bottom: 20px; }
+  .partners .finalists {
+    margin-top: 20px; }
+    .partners .finalists a {
+      margin-top: 10px;
+      margin-bottom: 10px; }
   .partners hr {
     margin: 40px 0;
     border-color: #41a38d; }

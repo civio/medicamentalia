@@ -15,12 +15,14 @@ en:
     facebook: Share in Facebook
     gplus: Share in Google Plus
   footer:
-    project_by: Medicamentalia is a project by
+    awards: Has been awarded
+    finalist: Finalist in
     funded_by: Funded by
     media_partners: Has media partners such as
     more_info: 'If you want more information, subscribe to our newsletter or contact us at'
-    subscribe: SUBSCRIBE TO OUR NEWSLETTER
+    project_by: Medicamentalia is a project by
     send: Send
+    subscribe: SUBSCRIBE TO OUR NEWSLETTER
 es:
   articles: Artículos
   by: Por
@@ -38,9 +40,11 @@ es:
     facebook: Compartir en Facebook
     gplus: Compartir en Google Plus
   footer:
-    project_by: Medicamentalia es un proyecto de
+    awards: Ha sido premiado
+    finalist: Finalista en
     funded_by: Financiado por
+    project_by: Medicamentalia es un proyecto de
     media_partners: Cuenta con media partners como
     more_info: 'Si quieres más información, suscríbete a nuestro boletín o escríbenos a'
-    subscribe: SUSCRÍBETE AL BOLETÍN
     send: Enviar
+    subscribe: SUSCRÍBETE AL BOLETÍN
