@@ -64,6 +64,26 @@
     left: 50%;
     display: block;
   }
+
+  &.category-header{
+    min-height: 50%;
+    background: $brand-primary;
+
+    .header-content{
+
+      h2{
+        padding: 0;
+        margin-bottom: 10px;
+        color: $brand-secondary;
+        font-family: $font-family-sans-serif;
+        font-size: 2.5em;
+        font-weight: 400;
+        letter-spacing: 0.07em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
 
 .home #language-selector{
@@ -467,6 +487,18 @@ $btn-scroll-down-icon-size: 44px;
 
     &:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
       color: darken($overlay-orange,10%);
+    }
+  }
+}
+
+.category-home{
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content{
+    text-align: center;
+
+    .portfolio-box-caption-description{
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

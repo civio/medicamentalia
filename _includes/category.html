@@ -1,20 +1,15 @@
 <!-- Home Intro -->
-<header id="home-header">
-  <video autoplay loop poster="{{ site.baseurl }}/assets/images/home-bkg.jpg" id="home-bkg">
-    <source src="{{ site.baseurl }}/assets/videos/home-bkg.m4v" type="video/mp4">
-    <source src="{{ site.baseurl }}/assets/videos/home-bkg.webm" type="video/webm">
-    <source src="{{ site.baseurl }}/assets/videos/home-bkg.ogv" type="video/ogg">
-  </video>
+<header id="home-header" class="category-header">
   <div class="header-content">
     <div class="header-content-inner">
-        <h1>{{ site.data.locales[page.lang].categories[include.id] }}</h1>
+        <h2>{{ site.data.locales[page.lang].categories[include.id] }}</h2>
         <p>Lorem ipsum dolor sit amet</p>
     </div>
   </div>
 </header>
 
 <!-- Investigation articles -->
-<section class="no-padding" id="home">
+<section id="home" class="no-padding category-home">
   <div class="container-fluid">
     <div class="row no-gutter">
       {% assign articles=site.articles | where:"category", include.id | sort:"order" %}

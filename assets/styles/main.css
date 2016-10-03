@@ -8905,6 +8905,19 @@ h3, h4, h5 {
     bottom: 0;
     left: 50%;
     display: block; }
+  #home-header.category-header {
+    min-height: 50%;
+    background: #00797d; }
+    #home-header.category-header .header-content h2 {
+      padding: 0;
+      margin-bottom: 10px;
+      color: #fefed1;
+      font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+      font-size: 2.5em;
+      font-weight: 400;
+      letter-spacing: 0.07em;
+      text-align: center;
+      text-transform: uppercase; }
 
 .home #language-selector {
   position: absolute;
@@ -9228,6 +9241,12 @@ h3, h4, h5 {
     background: #e99267; }
   .portfolio-box.category-vaccines:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
     color: #e2723b; }
+
+.category-home .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+  text-align: center; }
+  .category-home .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .portfolio-box-caption-description {
+    margin-left: auto;
+    margin-right: auto; }
 
 .read-more-btn {
   color: white;
