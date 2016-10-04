@@ -22,7 +22,7 @@ function patents_graph( _id ) {
       xAxis,
       line;
 
-  var parseDate = d3.timeFormat ('%Y').parse;
+  var parseDate = d3.timeFormat('%Y').parse;
 
 
   // Public Methods
