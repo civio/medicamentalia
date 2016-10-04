@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="{{ page.url | replace:'/',' ' | strip }}" data-baseurl="{{ site.url }}">
+  <body class="{{ page.url | replace:'/',' ' | strip }}{% if page.layout == 'article' %} article{% endif %}" data-baseurl="{{ site.url }}">
 
     {% include header.html %}
 
