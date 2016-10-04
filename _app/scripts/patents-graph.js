@@ -19,15 +19,17 @@ function patents_graph( _id ) {
 
   var svg,
       x, y,
-      xAxis, yAxis,
+      xAxis,
       line;
 
-  var parseDate = d3.time.format('%Y').parse;
+  var parseDate = d3.timeFormat ('%Y').parse;
 
 
   // Public Methods
 
   that.init = function() {
+
+    console.log('init patents graph');
 
     widthCont = $el.width();
     heightCont = widthCont*0.5625;
@@ -35,21 +37,19 @@ function patents_graph( _id ) {
     width = widthCont - margin.left - margin.right;
     height = heightCont - margin.top - margin.bottom;
 
-    x = d3.scale.ordinal()
-      .rangeRoundBands([0, width], 0.1);
+    x = d3.scaleBand()
+      .range([0, width])
+      .round(true)
+      .paddingInner(0.1)
+      .paddingOuter(0);
 
-    y = d3.scale.linear()
+    y = d3.scaleLinear()
       .range([height, 0]);
 
-    xAxis = d3.svg.axis()
-      .scale(x)
-      .orient('bottom');
+    xAxis = d3.axisBottom()
+      .scale(x);
 
-    yAxis = d3.svg.axis()
-      .scale(y)
-      .orient('left');
-
-    line = d3.svg.line()
+    line = d3.line()
       .x(function(d) { return x(d.date); })
       .y(function(d) { return y(d.patents); });
 
@@ -73,7 +73,7 @@ function patents_graph( _id ) {
       svg.append('g')
         .attr('class', 'x axis')
         .attr('transform', 'translate(0,' + height + ')')
-        .call(xAxis);
+        .call(d3.axisBottom(x));
 
       svg.append('line')
         .attr('class', 'marker')
@@ -95,16 +95,15 @@ function patents_graph( _id ) {
         .attr('x', function(d) { return x(d.date); })
         .attr('y', height )
         .attr('height', 0)
-        .attr('width', x.rangeBand());
+        .attr('width', x.bandwidth());
 
       svg.selectAll('.bar-label')
         .data(data)
       .enter().append('text')
         .attr('class', 'bar-label')
-        .attr('x', function(d) { return x(d.date); })
+        .attr('x', function(d) { return x(d.date)+(x.bandwidth()*0.5); })
         .attr('y', function(d) { return y(d.patents); })
-        .attr('dy', '1em')
-        .attr('dx', '4px')
+        .attr('dy', '1.5em')
         .text( function(d){ return d.patents; });
 
        d3.selectAll('.bar')
@@ -139,23 +138,25 @@ function patents_graph( _id ) {
       .attr('width', widthCont)
       .attr('height', heightCont);
 
-    x.rangeRoundBands([0, width], 0.1);
+    x.range([0, width]);
     y.range([height, 0]);
+
+    console.log('x', x.bandwidth(), x.range(), x.domain() );
 
     d3.select('g.x.axis')
       .attr('transform', 'translate(0,' + height + ')')
-      .call(xAxis);
+      .call(d3.axisBottom(x));
 
     d3.select('.marker-label text').attr('x', function(d) { return x(2007); });
 
     d3.selectAll('.bar')
       .attr('x', function(d) { return x(d.date); })
       .attr('y', function(d) { return y(d.patents); })
-      .attr('width', x.rangeBand())
+      .attr('width', x.bandwidth())
       .attr('height', function(d) { return height - y(d.patents); });
 
     d3.selectAll('.bar-label')
-      .attr('x', function(d) { return x(d.date); })
+      .attr('x', function(d) { return x(d.date)+(x.bandwidth()*0.5); })
       .attr('y', function(d) { return y(d.patents); });
 
     d3.select('.marker')

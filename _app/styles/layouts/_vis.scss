@@ -12,8 +12,8 @@ Patentes
   }
 
   .axis text {
-    font-size: 0.75em;
-    color: $gray-light;
+    font-size: 10px;
+    fill: $gray-light;
   }
 
   .bar {
@@ -28,6 +28,7 @@ Patentes
     fill: white;
     font-size: 0.75em;
     font-weight: 300;
+    text-anchor: middle;
   }
 
   .marker{
@@ -907,7 +908,7 @@ Infographic
 
 @media (min-width: $screen-sm) and (max-width: $screen-md) {
   #patents-graph .axis text{
-    font-size: 0.6em;
+    font-size: 8.5px;
   }
 }
 
