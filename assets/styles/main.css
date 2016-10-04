@@ -10017,6 +10017,8 @@ Infographic
   #prices-infographic .infographic-graph {
     top: 0;
     z-index: 60; }
+    #prices-infographic .infographic-graph text {
+      font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
     #prices-infographic .infographic-graph .axis path,
     #prices-infographic .infographic-graph .axis line {
       fill: none;
@@ -10026,9 +10028,11 @@ Infographic
       fill: #777777;
       font-weight: 400; }
     #prices-infographic .infographic-graph .x.axis text {
-      font-size: 0.75em; }
+      font-size: 12px; }
+      #prices-infographic .infographic-graph .x.axis text.active {
+        fill: #e2723b; }
     #prices-infographic .infographic-graph .y.axis text {
-      font-size: 0.75em;
+      font-size: 12px;
       font-weight: 300; }
     #prices-infographic .infographic-graph .y.axis .tick line {
       stroke: #d7d7d7; }
@@ -10047,8 +10051,7 @@ Infographic
     #prices-infographic .infographic-graph .country-marker {
       stroke: #d7d7d7;
       shape-rendering: crispEdges; }
-    #prices-infographic .infographic-graph .country-label,
-    #prices-infographic .infographic-graph .country-label-code {
+    #prices-infographic .infographic-graph .country-label {
       fill: #e2723b;
       font-size: 0.75em;
       text-transform: uppercase;
