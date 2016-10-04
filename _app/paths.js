@@ -41,7 +41,7 @@ paths.scriptSrc = {
   ],
   // infograpic.js sources
   infographics: [
-    paths.npmDir + '/d3/d3.js',
+    paths.npmDir + '/d3/build/d3.js',
     paths.appScriptFiles + '/queue.js',
     paths.appScriptFiles + '/patents-graph.js',
     paths.appScriptFiles + '/infographic.js',
