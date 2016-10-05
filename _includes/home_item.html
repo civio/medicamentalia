@@ -9,7 +9,7 @@
     <div class="portfolio-box-caption-content">
       {% if page.layout == 'home' %}
       {% if article.category %}
-      <p class="portfolio-box-category">{{ site.data.locales[page.lang].categories[article.category] }}</p>
+      <p class="portfolio-box-category">{{ site.data.locales[page.lang].categories[article.category].title }}</p>
       {% endif %}
       {% endif %}
       <h3>{{ article.title }}</h3>

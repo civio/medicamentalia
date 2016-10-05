@@ -2,8 +2,12 @@ en:
   articles: Articles
   by: By
   categories:
-    access: Access to medicine
-    vaccines: Vaccines
+    access: 
+      title: Access to medicine
+      description: A journalistic investigation into access to medicines around the world
+    vaccines: 
+      title: Vaccines
+      description: A journalistic investigation into access to vaccines around the world
   description: A journalistic investigation into access to medicines around the world
   explore_data: Explore the data
   lang: English
@@ -27,8 +31,12 @@ es:
   articles: Artículos
   by: Por
   categories:
-    access: Acceso a medicamentos
-    vaccines: Vacunas
+    access: 
+      title: Acceso a medicamentos
+      description: Investigación periodística sobre el acceso a los medicamentos en el mundo
+    vaccines: 
+      title: Vacunas
+      description: Investigación periodística sobre el acceso a las vacunas en el mundo
   description: Investigación periodística sobre el acceso a los medicamentos en el mundo
   explore_data: Explora los datos
   lang: Español
