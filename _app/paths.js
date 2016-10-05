@@ -42,7 +42,6 @@ paths.scriptSrc = {
   // infograpic.js sources
   infographics: [
     paths.appScriptFiles + '/vendor/d3-bundle.js',
-    paths.appScriptFiles + '/queue.js',
     paths.appScriptFiles + '/patents-graph.js',
     paths.appScriptFiles + '/infographic.js',
     paths.appScriptFiles + '/antimalaricos-infographic.js',

@@ -126,7 +126,7 @@ function Prices_Infographic( _id ) {
     drugsFiltered = drugsFilteredAll;
 
     // Load CSVs
-    queue()
+    d3.queue()
       .defer(d3.csv, $('body').data('baseurl')+'/assets/csv/prices.csv')
       .defer(d3.csv, $('body').data('baseurl')+'/assets/csv/affordability.csv')
       .defer(d3.csv, $('body').data('baseurl')+'/assets/csv/countries.csv')
@@ -359,6 +359,8 @@ function Prices_Infographic( _id ) {
   // Private Methods
 
   var onDataReady = function( error, prices, affordability, countries ){
+
+    if (error) throw error;
 
     prices = prices.filter(function(d){ return d['Unit/MPR'] === 'MPR'; });
     prices.forEach(function(d) {
