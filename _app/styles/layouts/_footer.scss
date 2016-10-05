@@ -136,11 +136,19 @@
   }
 }
 
-/*
 @media (min-width: $screen-sm) {
 
   .partners .media-partner{
-    width: 20% !important;
+    float: left;
+    width: 18% !important;
+    margin: 0 1%;
   }
 }
-*/
+
+@media (min-width: $screen-md) {
+
+  .partners .media-partner{
+    width: 20% !important;
+    margin: 0;
+  }
+}

@@ -9408,14 +9408,17 @@ h3, h4, h5 {
       color: #653015;
       text-decoration: none; }
 
-/*
-@media (min-width: $screen-sm) {
+@media (min-width: 768px) {
+  .partners .media-partner {
+    float: left;
+    width: 18% !important;
+    margin: 0 1%; } }
 
-  .partners .media-partner{
+@media (min-width: 992px) {
+  .partners .media-partner {
     width: 20% !important;
-  }
-}
-*/
+    margin: 0; } }
+
 header {
   position: relative;
   width: 100%;
