@@ -425,7 +425,7 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
 
-  /*
+  
   &.portfolio-prices .portfolio-box-overlay{
     background: $overlay-green;
   }
@@ -453,7 +453,32 @@ $btn-scroll-down-icon-size: 44px;
   &.portfolio-patents:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
     color: darken($overlay-yellow,20%);
   }
-  */
+  
+
+  // Categoy colors
+
+  // &.category-access{
+
+  //   .portfolio-box-overlay{
+  //     background: $overlay-green;
+  //   }
+
+  //   &:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+  //     color: darken($overlay-green,10%);
+  //   }
+  // }
+
+  // &.category-vaccines{
+  
+  //   .portfolio-box-overlay{
+  //     background: $overlay-orange;
+  //   }
+
+  //   &:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+  //     color: darken($overlay-orange,10%);
+  //   }
+  // }
+  
 
   @media (min-width: $screen-sm) {
     .portfolio-box-caption {
@@ -465,28 +490,6 @@ $btn-scroll-down-icon-size: 44px;
           font-size: 22px;
         }
       }
-    }
-  }
-
-  &.category-access{
-
-    .portfolio-box-overlay{
-      background: $overlay-green;
-    }
-
-    &:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-      color: darken($overlay-green,10%);
-    }
-  }
-
-  &.category-vaccines{
-  
-    .portfolio-box-overlay{
-      background: $overlay-orange;
-    }
-
-    &:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-      color: darken($overlay-orange,10%);
     }
   }
 }

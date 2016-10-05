@@ -9144,36 +9144,7 @@ h3, h4, h5 {
   display: block;
   margin: 0 auto;
   width: 100%;
-  height: 100%;
-  /*
-  &.portfolio-prices .portfolio-box-overlay{
-    background: $overlay-green;
-  }
-  &.portfolio-prices:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-    color: darken($overlay-green,10%);
-  }
-
-  &.portfolio-counterfeits .portfolio-box-overlay{
-    background: $overlay-blue;
-  }
-  &.portfolio-counterfeits:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-    color: darken($overlay-blue,10%);
-  }
-
-  &.portfolio-compulsory-license .portfolio-box-overlay{
-    background: $overlay-orange;
-  }
-  &.portfolio-compulsory-license:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-    color: darken($overlay-orange,10%);
-  }
-
-  &.portfolio-patents .portfolio-box-overlay{
-    background: $overlay-yellow;
-  }
-  &.portfolio-patents:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-    color: darken($overlay-yellow,20%);
-  }
-  */ }
+  height: 100%; }
   .portfolio-box .portfolio-box-background {
     width: 100%;
     height: 100%;
@@ -9228,19 +9199,27 @@ h3, h4, h5 {
   .portfolio-box:hover .portfolio-box-caption-content .read-more-btn {
     border-color: #fefed1;
     background: #fefed1; }
+  .portfolio-box.portfolio-prices .portfolio-box-overlay {
+    background: #5abda7; }
+  .portfolio-box.portfolio-prices:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
+    color: #41a38d; }
+  .portfolio-box.portfolio-counterfeits .portfolio-box-overlay {
+    background: #00c2b6; }
+  .portfolio-box.portfolio-counterfeits:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
+    color: #008f86; }
+  .portfolio-box.portfolio-compulsory-license .portfolio-box-overlay {
+    background: #e99267; }
+  .portfolio-box.portfolio-compulsory-license:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
+    color: #e2723b; }
+  .portfolio-box.portfolio-patents .portfolio-box-overlay {
+    background: #cadf70; }
+  .portfolio-box.portfolio-patents:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
+    color: #a3bf2a; }
   @media (min-width: 768px) {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
       font-size: 16px; }
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
       font-size: 22px; } }
-  .portfolio-box.category-access .portfolio-box-overlay {
-    background: #5abda7; }
-  .portfolio-box.category-access:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
-    color: #41a38d; }
-  .portfolio-box.category-vaccines .portfolio-box-overlay {
-    background: #e99267; }
-  .portfolio-box.category-vaccines:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
-    color: #e2723b; }
 
 .home .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
   text-align: left; }
