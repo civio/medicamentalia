@@ -1,15 +1,14 @@
 ---
-category:         access
-title:            Patents
+title:            Superbacterias
 subtitle:         A toll on health
 description:      Although there are alternative models, the use of intellectual property rights, as applied to medicine, remains mandatory for the industry
 home_description: Although there are alternative models, the use of intellectual property rights, as applied to medicine, remains mandatory for the industry
 img:              articles/home-patentes-1040x694.jpg
 order:            2
 author:           Eva Belmonte
-slug:             patents
-ref:              patents
-lang:             en
+slug:             superbacterias
+ref:              superbugs
+lang:             es
 ---
 
 <div class="container page-content" markdown="1">

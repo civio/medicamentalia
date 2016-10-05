@@ -1,14 +1,14 @@
 ---
-category:         access
-title:            Patents
+category:         vaccines
+title:            Anti vaccines
 subtitle:         A toll on health
 description:      Although there are alternative models, the use of intellectual property rights, as applied to medicine, remains mandatory for the industry
 home_description: Although there are alternative models, the use of intellectual property rights, as applied to medicine, remains mandatory for the industry
-img:              articles/home-patentes-1040x694.jpg
+img:              articles/home-brasil-1040x694.jpg
 order:            2
 author:           Eva Belmonte
-slug:             patents
-ref:              patents
+slug:             anti-vaccines
+ref:              anti-vaccines
 lang:             en
 ---
 

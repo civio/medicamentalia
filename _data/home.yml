@@ -1,0 +1,16 @@
+- ref: access-vaccines
+  size: 12
+- ref: anti-vaccines
+  size: 6
+- ref: immunization-coverage
+  size: 6
+- ref: superbugs
+  size: 12
+- ref: prices
+  size: 12
+- ref: patents
+  size: 4
+- ref: compulsory-license
+  size: 4
+- ref: counterfeits
+  size: 4

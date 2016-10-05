@@ -1,0 +1,36 @@
+<!-- Home Intro -->
+<header id="home-header" class="category-header">
+  <div class="header-content">
+    <div class="header-content-inner">
+        <h2>{{ site.data.locales[page.lang].categories[include.id] }}</h2>
+        <p>Lorem ipsum dolor sit amet</p>
+    </div>
+  </div>
+</header>
+
+<!-- Investigation articles -->
+<section id="home" class="no-padding category-home">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      {% assign articles=site.articles | where:"category", include.id | sort:"order" %}
+      {% for article in articles %}
+        {% if article.lang == page.lang %}
+          <div class="col-sm-12">
+            {% include home_item.html article=article %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Key Findings -->
+<section class="no-padding" id="key-findings">
+  <div class="key-findings-overlay"></div>
+  <div class="container">
+    {% capture keyFindings %}
+    {% include key_findings.{{ page.lang }}.md %}
+    {% endcapture %}
+    {{ keyFindings | markdownify }}
+  </div>
+</section>

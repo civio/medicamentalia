@@ -144,7 +144,7 @@
   // Code for Articles only !!!! 
   // ----------------------------
 
-  if( $('body').hasClass('articles') ){
+  if( $('body').hasClass('article') ){
     setupInfographics();
   }
   

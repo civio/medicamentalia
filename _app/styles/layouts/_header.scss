@@ -37,11 +37,39 @@
     text-transform: uppercase;
     padding-left: 32px;
     background: url(../images/medicamentalia-small.png) no-repeat 4px center transparent;
-    @include transition(.3s ease-in-out opacity);
+    @include transition(.3s ease-in-out color);
+
+    h1{
+      font-size: 1em;
+      margin: 0;
+    }
 
     &:hover{
-      color: $brand-secondary;
-      opacity: 0.5;
+      color: $color-green-light;
+    }
+  }
+
+  .navbar-category{
+    float: left;
+    height: 20px;
+    padding: 15px 5px;
+    @include transition(.3s ease-in-out color);
+
+    h2{
+      color: $color-green-light;
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0.03em;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    &:hover{
+      text-decoration: none;
+
+      h2{
+        color: $brand-secondary;
+      }
     }
   }
 }

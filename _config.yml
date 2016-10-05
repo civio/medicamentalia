@@ -9,7 +9,7 @@
 title: Medicamentalia
 email: raul@civio.es
 baseurl: "" # the subpath of your site, e.g. /blog
-url: http://medicamentalia.org" # the base hostname & protocol for your site
+url: "http://medicamentalia.org" # the base hostname & protocol for your site
 
 index:
   en: index.html
@@ -19,7 +19,7 @@ index:
 collections:
   articles:
     output: true
-    permalink: /articles/:slug/
+    permalink: /:categories/:slug/
 
 # Defaults
 defaults:
@@ -52,5 +52,7 @@ exclude:
 - gulpfile.js
 - node_modules
 - package.json
+- rollup-entry.js
+- rollup.config.js
 - README*
 - ".gitignore"

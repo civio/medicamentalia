@@ -12,36 +12,46 @@ var Patents_Infographic = function( _id ) {
   that.init = function() {
 
     // Load external SVG
-    d3.xml( $('body').data('baseurl')+'/assets/images/svg/patentes.svg', 'image/svg+xml', function(xml) {
+    d3.xml( $('body').data('baseurl')+'/assets/images/svg/patentes.svg' ).mimeType('image/svg+xml').get( function(xml) {
     
-      $(id).append( xml.documentElement );  // Append external SVG to Container
+        $(id).append( xml.documentElement );  // Append external SVG to Container
 
-      svg = d3.select(id).select('svg');    // Get SVG Element
+        svg = d3.select(id).select('svg');    // Get SVG Element
 
-      // Initial Setup: all grups hidden
-      svg.selectAll('#World, #Doc1, #Doc2').style('opacity', 0);
-      svg.selectAll('#Chemistry, #Time').selectAll('g').style('opacity', 0);
-      svg.selectAll('#Sign').selectAll('g').style('opacity', function(d,i){ return (i<4) ? 0 : 1; });
+        // Initial Setup: all grups hidden
+        svg.selectAll('#World, #Doc1, #Doc2').style('opacity', 0);
+        svg.selectAll('#Chemistry, #Time').selectAll('g').style('opacity', 0);
+        svg.selectAll('#Sign').selectAll('g').style('opacity', function(d,i){ return (i<4) ? 0 : 1; });
 
-      countries = d3.shuffle(countries);
+        countries = d3.shuffle(countries);
 
-      svg.select('#World').selectAll('text')
-        .style('text-anchor', function(d,i){ return (i<21) ? 'end' : 'start'; })
-        .text(function(d,i){ return countries[i]; })
-        .transition()
-          .duration(1800)
-          .delay(function(d,i) { return i * 100; })
-          .each(slide);
+        svg.select('#World').selectAll('text')
+          .style('text-anchor', function(d,i){ return (i<21) ? 'end' : 'start'; })
+          .text(function(d,i){ return countries[i]; })
+          .style('opacity', 0)
+          .transition()
+            .delay(function(d,i) { return i * 100; })
+            .on('start', function repeat() {
+              if (c >= countries.length) { c=0; }
+              d3.active(this)
+                .style('opacity', 0)
+                .text(countries[c++])
+                .transition().duration(1800)
+                .style('opacity', 1)
+                .transition().duration(900)
+                .style('opacity', 0)
+                .transition().on('start', repeat);
+            });
 
-      /*
-      svg.select('#World').selectAll('.text')
-        .data(countries)
-      .enter().append('text')
-        .attr('class', 'country-label')
-        .style('text-anchor', 'middle')
-        .text(function(d){ return d3.values(d)[0]; });
-      */
-    });
+        /*
+        svg.select('#World').selectAll('.text')
+          .data(countries)
+        .enter().append('text')
+          .attr('class', 'country-label')
+          .style('text-anchor', 'middle')
+          .text(function(d){ return d3.values(d)[0]; });
+        */
+      });
 
     return that;
   };
@@ -164,21 +174,6 @@ var Patents_Infographic = function( _id ) {
     lastState = stateID;
 
     return that;
-  };
-
-  var slide = function () {
-    var label = d3.select(this);
-    (function repeat() {
-      label = label.transition()
-          .style('opacity', 0)
-          .each('end', function(){ 
-            if (c >= countries.length) { c=0; } 
-            d3.select(this).text(countries[c++]); 
-          })
-        .transition()
-          .style('opacity', 1)
-          .each('end', repeat);
-    })();
   };
 
   // Private Methods

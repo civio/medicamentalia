@@ -12,8 +12,8 @@ Patentes
   }
 
   .axis text {
-    font-size: 0.75em;
-    color: $gray-light;
+    font-size: 10px;
+    fill: $gray-light;
   }
 
   .bar {
@@ -28,6 +28,7 @@ Patentes
     fill: white;
     font-size: 0.75em;
     font-weight: 300;
+    text-anchor: middle;
   }
 
   .marker{
@@ -268,6 +269,10 @@ Infographic
     top: 0;
     z-index: 60;
 
+    text{
+      font-family: $font-family-sans-serif;
+    }
+
     .axis path,
     .axis line {
       fill: none;
@@ -281,12 +286,17 @@ Infographic
     }
 
     .x.axis text{
-      font-size: 0.75em;
+      font-size: 12px;
       //text-anchor: start !important;
+
+      &.active{
+        fill: $color-orange;
+        //font-weight: 600;
+      }
     }
 
     .y.axis text{
-      font-size: 0.75em;
+      font-size: 12px;
       font-weight: 300;
     }
 
@@ -320,8 +330,7 @@ Infographic
       shape-rendering: crispEdges;
     }
 
-    .country-label,
-    .country-label-code{
+    .country-label{
       fill: $color-orange;
       font-size: 0.75em;
       text-transform: uppercase;
@@ -907,7 +916,7 @@ Infographic
 
 @media (min-width: $screen-sm) and (max-width: $screen-md) {
   #patents-graph .axis text{
-    font-size: 0.6em;
+    font-size: 8.5px;
   }
 }
 

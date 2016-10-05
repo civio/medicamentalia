@@ -1,8 +1,8 @@
 // Home Header
-.home header{
+#home-header{
   margin-top: 0;
   min-height: 100%;
-  background: none;
+  //background: $color-green-dark;
 
   #home-bkg {
     position: fixed;
@@ -22,13 +22,16 @@
   .header-content{
     width: 100%; 
     padding: 0;
+    //top: 62%;
     //background: url(../images/noise.png) repeat 0 0 transparent;
 
     .header-content-inner{
+      padding: 0;
       max-width: 640px;
     }
 
     h1{
+      color: $brand-secondary;
       font-size: 38px;
       font-weight: 400;
       line-height: 100px;
@@ -40,15 +43,18 @@
       letter-spacing: .1em;
     }
 
-    p{
+    h2{
+      display: block;
+      color: white;
       font-size: 20px;
       font-family: $font-family-serif;
+      line-height: 1.375em;
       letter-spacing: .03em;
       padding-left: 40px;
       padding-right: 40px;
-      margin-top: -10px;
+      margin: 0;
       text-align: center;
-      margin-bottom: 80px;
+      text-transform: none;
     }
   }
 
@@ -57,6 +63,26 @@
     bottom: 0;
     left: 50%;
     display: block;
+  }
+
+  &.category-header{
+    min-height: 50%;
+    background: $brand-primary;
+
+    .header-content{
+
+      h2{
+        padding: 0;
+        margin-bottom: 10px;
+        color: $brand-secondary;
+        font-family: $font-family-sans-serif;
+        font-size: 2.5em;
+        font-weight: 400;
+        letter-spacing: 0.07em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
   }
 }
 
@@ -134,7 +160,7 @@
 
 @media (min-width: $screen-sm) {
 
-  .home header .header-content{
+  #home-header .header-content{
 
     h1{
       font-size: 48px;
@@ -145,7 +171,7 @@
       text-align: left;
     }
 
-    p{
+    h2{
       font-size: 22px;
       padding-left: 174px;
       text-align: left;
@@ -347,11 +373,24 @@ $btn-scroll-down-icon-size: 44px;
     //background: fade(@theme-primary, 90%);
     text-align: center;
 
+    .portfolio-box-category{
+      display: inline;
+      color: $brand-secondary;
+      //background: $brand-secondary;
+      //padding: 3px 10px 4px;
+      font-size: 0.813em;
+      letter-spacing: .075em;
+      text-transform: uppercase;
+    }
+
     .portfolio-box-caption-content {
-      width: 100%;
-      text-align: center;
+      //width: 100%;
+      text-align: left;
       position: absolute;
       top: 50%;
+      //padding: 0 30px;
+      left: 30px;
+      right: 30px;
       transform: translateY(-50%);
 
       h3 {
@@ -360,14 +399,15 @@ $btn-scroll-down-icon-size: 44px;
         text-transform: uppercase;
         font-weight: 600;
         letter-spacing: .075em;
-        margin: 0 0 20px;
+        margin: 20px 0;
       }
 
       .portfolio-box-caption-description{
         //font-family: $font-family-serif;
         font-size: 1.125em;
-        width: 334px;
-        margin: 0 auto 32px;
+        //width: 334px;
+        max-width: 500px;
+        margin: 0 0 30px;
         font-weight: 300;
       }
     }
@@ -384,7 +424,8 @@ $btn-scroll-down-icon-size: 44px;
       }
     }
   }
-  
+
+  /*
   &.portfolio-prices .portfolio-box-overlay{
     background: $overlay-green;
   }
@@ -412,6 +453,7 @@ $btn-scroll-down-icon-size: 44px;
   &.portfolio-patents:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
     color: darken($overlay-yellow,20%);
   }
+  */
 
   @media (min-width: $screen-sm) {
     .portfolio-box-caption {
@@ -425,7 +467,42 @@ $btn-scroll-down-icon-size: 44px;
       }
     }
   }
+
+  &.category-access{
+
+    .portfolio-box-overlay{
+      background: $overlay-green;
+    }
+
+    &:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+      color: darken($overlay-green,10%);
+    }
+  }
+
+  &.category-vaccines{
+  
+    .portfolio-box-overlay{
+      background: $overlay-orange;
+    }
+
+    &:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+      color: darken($overlay-orange,10%);
+    }
+  }
 }
+
+.category-home{
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content{
+    text-align: center;
+
+    .portfolio-box-caption-description{
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
 
 .read-more-btn{
   color: white;
@@ -441,6 +518,7 @@ $btn-scroll-down-icon-size: 44px;
 // Key Findings
 
 #key-findings {
+  clear: both;
   position: relative;
   padding: 50px 0 30px;
   color: white;

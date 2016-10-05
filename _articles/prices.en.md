@@ -1,4 +1,5 @@
 ---
+category:         access
 title:            Prices
 subtitle:         11 days' wages to buy an asthma inhaler
 description:      14 medicines, 61 countries. Compare and analyse the differences between them

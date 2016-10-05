@@ -1,4 +1,5 @@
 .partners{
+  clear: both;
   color: $brand-secondary;
   font-weight: 300;
   padding: 40px 0;
@@ -20,6 +21,20 @@
       > div{
         padding-top: 0;
       }
+    }
+  }
+
+  .awards{
+    a{
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  .finalists{
+    margin-top: 20px;
+    a{
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
   }
 
