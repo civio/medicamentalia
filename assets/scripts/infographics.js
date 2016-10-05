@@ -8070,9 +8070,7 @@ function Prices_Infographic( _id ) {
       updateData( 'affordability', 'private' );
 
       // Show all dots
-      $dots.transition(1000)
-        .style('fill', function(d){ return color(d.Drug); })
-        .style('opacity', DOT_OPACITY );
+      setDotsColor()
 
       setTooltipOnTour('.dot.drug-captopril.country-ghana');
 
@@ -8110,9 +8108,7 @@ function Prices_Infographic( _id ) {
       drugsFiltered = drugsFilteredAll;
       updateData( 'prices', 'private' );
 
-      $dots.transition(1000)
-        .style('fill', function(d){ return color(d.Drug); })
-        .style('opacity', DOT_OPACITY);
+      setDotsColor();
 
       setTooltipOnTour('.dot.drug-ciprofloxacin.country-morocco');
      
@@ -8137,9 +8133,7 @@ function Prices_Infographic( _id ) {
       drugsFiltered = drugsFilteredAll;
       updateData( 'prices', 'public' );
 
-      $dots.transition(1000)
-        .style('fill', function(d){ return color(d.Drug); })
-        .style('opacity', DOT_OPACITY);
+      setDotsColor();
 
       setTooltipOnTour('.dot.drug-diclofenac.country-sudan');
      
@@ -8148,9 +8142,7 @@ function Prices_Infographic( _id ) {
       drugsFiltered = drugsFilteredAll;
       updateData( 'prices', 'public' );
 
-      $dots.transition(1000)
-        .style('fill', function(d){ return color(d.Drug); })
-        .style('opacity', DOT_OPACITY);
+      setDotsColor();
 
       setTooltipOnTour('.dot.drug-amoxicillin.country-brazil--rio-grande-do-sul-state');
 
@@ -8179,9 +8171,7 @@ function Prices_Infographic( _id ) {
       $tooltip.css('opacity', '0');
       tooltipItem = null;
 
-      $dots.transition(1000)
-        .style('fill', function(d){ return color(d.Drug); })
-        .style('opacity', DOT_OPACITY);
+      setDotsColor();
     }
 
     return that;
@@ -8738,6 +8728,8 @@ function Prices_Infographic( _id ) {
 
     item = ( tooltipItem ) ? tooltipItem : item;
 
+    if( !item ) return;
+
     var data = +item.data()[0][ current.label ];
     var dataIcon = (current.data !== 'prices') ? 'glyphicon-time' : ( (data < 1) ? 'glyphicon-arrow-down' : 'glyphicon-arrow-up' );
 
@@ -8921,7 +8913,7 @@ function Prices_Infographic( _id ) {
     
     d3.selectAll('.x.axis .tick text').each(function(d){
       c = getCountryDataByCode( d );
-      if (temp !== c[0][label]) {
+      if (c[0] && temp !== c[0][label]) {
         temp = c[0][label];
         $xArea.find('li').last().css('width', (100*(x(c[0].Code)-xpos)/width)+'%' );
         xpos = x(c[0].Code);
@@ -8938,6 +8930,14 @@ function Prices_Infographic( _id ) {
     heightCont = $el.height();
     width = widthCont - margin.left - margin.right;
     height = heightCont - margin.top - margin.bottom;
+  };
+
+  var setDotsColor = function() {
+    if ($dots) {
+      $dots.transition(1000)
+        .style('fill', function(d){ return color(d.Drug); })
+        .style('opacity', DOT_OPACITY);
+    }
   };
 
   return that;
