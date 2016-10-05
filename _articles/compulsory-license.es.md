@@ -5,7 +5,7 @@ subtitle:         Un acto soberano –y aislado– contra las patentes
 description:      Ocho años después de tumbar la patente sobre el efavirenz, un antirretroviral, vuelven las dudas sobre la sostenibilidad del programa AIDS del gobierno de Brasil
 home_description: Ocho años después de tumbar la patente sobre el efavirenz, un antirretroviral, vuelven las dudas sobre la sostenibilidad del programa AIDS del gobierno de Brasil
 img:              articles/home-brasil-1040x694.jpg
-order:            4
+order:            3
 author:           Eva Belmonte <i>/ Rio de Janeiro</i>
 slug:             licencia-obligatoria
 ref:              compulsory-license

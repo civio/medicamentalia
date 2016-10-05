@@ -16,7 +16,7 @@ gallery:
   - image: articles/Medicine-report-4-2-1040x694.jpg
     title: In the foreground, the liquid chromatography equipment. At the back, the dissolution apparatus in the CePAT laboratory. | Henry Nelson Souza
 
-order:            3
+order:            2
 author:           Antonio Villarreal <i>/ Accra</i>
 slug:             counterfeits
 ref:              counterfeits
