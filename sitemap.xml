@@ -5,7 +5,11 @@ layout: null
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for article in site.articles %}
   <url>
-    <loc>{{ site.url }}/articles/{{ article.slug }}</loc>
+    {% if article.category %}
+    <loc>{{ site.url }}/{{ article.category }}/{{ article.slug }}</loc>
+    {% else %}
+    <loc>{{ site.url }}/{{ article.slug }}</loc>
+    {% endif %}
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
