@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="iframe {{ page.url | replace:'/',' ' | strip }}" data-baseurl="{{ site.url }}">
+  <body class="iframe article {{ page.url | replace:'/',' ' | strip }}" data-baseurl="{{ site.url }}">
 
     {{ content }}
 
