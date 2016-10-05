@@ -10,7 +10,7 @@
   size: 12
 - ref: patents
   size: 4
-- ref: compulsory-license
-  size: 4
 - ref: counterfeits
+  size: 4
+- ref: compulsory-license
   size: 4
