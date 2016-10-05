@@ -29,7 +29,7 @@
   <div class="key-findings-overlay"></div>
   <div class="container">
     {% capture keyFindings %}
-    {% include key_findings.{{ page.lang }}.md %}
+    {% include key_findings_{{ include.id }}.{{ page.lang }}.md %}
     {% endcapture %}
     {{ keyFindings | markdownify }}
   </div>
