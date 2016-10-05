@@ -67,7 +67,7 @@
 
   &.category-header{
     min-height: 50%;
-    background: $brand-primary;
+    background: url("../images/medicine-pattern.jpg") repeat 0 0 $brand-primary;
 
     .header-content{
 
@@ -385,7 +385,7 @@ $btn-scroll-down-icon-size: 44px;
 
     .portfolio-box-caption-content {
       //width: 100%;
-      text-align: left;
+      text-align: center;
       position: absolute;
       top: 50%;
       //padding: 0 30px;
@@ -407,7 +407,7 @@ $btn-scroll-down-icon-size: 44px;
         font-size: 1.125em;
         //width: 334px;
         max-width: 500px;
-        margin: 0 0 30px;
+        margin: 0 auto 30px;
         font-weight: 300;
       }
     }
@@ -491,18 +491,17 @@ $btn-scroll-down-icon-size: 44px;
   }
 }
 
-.category-home{
+.home{
 
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content{
-    text-align: center;
+    text-align: left;
 
     .portfolio-box-caption-description{
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
-
 
 .read-more-btn{
   color: white;

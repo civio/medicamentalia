@@ -9205,7 +9205,7 @@ h3, h4, h5 {
       letter-spacing: .075em;
       text-transform: uppercase; }
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-      text-align: left;
+      text-align: center;
       position: absolute;
       top: 50%;
       left: 30px;
@@ -9221,7 +9221,7 @@ h3, h4, h5 {
       .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .portfolio-box-caption-description {
         font-size: 1.125em;
         max-width: 500px;
-        margin: 0 0 30px;
+        margin: 0 auto 30px;
         font-weight: 300; }
   .portfolio-box:hover .portfolio-box-overlay {
     opacity: 0.5; }
@@ -9242,11 +9242,11 @@ h3, h4, h5 {
   .portfolio-box.category-vaccines:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
     color: #e2723b; }
 
-.category-home .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-  text-align: center; }
-  .category-home .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .portfolio-box-caption-description {
-    margin-left: auto;
-    margin-right: auto; }
+.home .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+  text-align: left; }
+  .home .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .portfolio-box-caption-description {
+    margin-left: 0;
+    margin-right: 0; }
 
 .read-more-btn {
   color: white;
