@@ -5,7 +5,7 @@
     {% for item in articles %}
       {% if item.lang != page.lang %}
       <li class="menu-item menu-item-language menu-item-language-current">
-        <a href="{{ site.url }}/articles/{{ item.slug }}" class="{{ item.lang }}" title="{{ site.data.locales[item.lang].lang }}">{{ site.data.locales[item.lang].lang }}</a>
+        <a href="{{ site.url }}/{{ page.category }}/{{ item.slug }}" class="{{ item.lang }}" title="{{ site.data.locales[item.lang].lang }}">{{ site.data.locales[item.lang].lang }}</a>
       </li>
       {% endif %}
     {% endfor %}
