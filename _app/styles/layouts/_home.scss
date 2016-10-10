@@ -453,6 +453,13 @@ $btn-scroll-down-icon-size: 44px;
   &.portfolio-patents:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
     color: darken($overlay-yellow,20%);
   }
+
+  &.portfolio-access-team .portfolio-box-overlay{
+    background: lighten($brand-primary,10%);
+  }
+  &.portfolio-access-team:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+    color: darken($brand-primary,5%);
+  }
   
 
   // Categoy colors

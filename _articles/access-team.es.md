@@ -1,5 +1,5 @@
 ---
-layout:     page
+category:   access
 title:      Equipo y metodología
 img:        pages/nosotros-1040x552.jpg
 
@@ -18,9 +18,10 @@ gallery:
     title: Miguel, desquiciado con la base de datos.
   - image: pages/Redecilla.jpg
     title: Eva, en el laboratorio público Farmanginhos, vestida para la ocasión.| Anne Vigna
-    
-permalink:  /nosotros/
-ref:        team
+
+order:      5
+slug:       nosotros
+ref:        access-team
 lang:       es
 ---
 

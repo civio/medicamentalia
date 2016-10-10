@@ -7,12 +7,14 @@ access:
     type: article
   - ref: patents
     type: article
-  - ref: team
-    type: page
+  - ref: access-team
+    type: article
 vaccines:
   - ref: access-vaccines
     type: article
   - ref: immunization-coverage
     type: article
   - ref: anti-vaccines
+    type: article
+  - ref: vaccines-team
     type: article

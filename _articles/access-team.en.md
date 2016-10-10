@@ -1,5 +1,5 @@
 ---
-layout:     page
+category:   access
 title:      Team and methodology
 img:        pages/nosotros-1040x552.jpg
 
@@ -19,8 +19,9 @@ gallery:
   - image: pages/Redecilla.jpg
     title: Eva, en el laboratorio público Farmanginhos, vestida para la ocasión.| Anne Vigna
 
-permalink:  /team/
-ref:        team
+order:      5
+slug:       team
+ref:        access-team
 lang:       en
 ---
 
