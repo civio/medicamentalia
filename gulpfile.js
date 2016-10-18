@@ -7,6 +7,7 @@ var concat        = require('gulp-concat');
 var cp            = require('child_process');
 var del           = require('del');
 var env           = require('gulp-environments');
+var ghPages       = require('gulp-gh-pages');
 var gulp          = require('gulp');
 var gutil         = require('gulp-util');
 var htmlmin       = require('gulp-htmlmin');
@@ -78,15 +79,6 @@ gulp.task('build:scripts:infographics', function() {
 gulp.task('build:scripts', ['build:scripts:main', 'build:scripts:infographics'], function(cb) {
   browserSync.reload();
   cb();
-});
-
-
-// Minify HTML Files.
-
-gulp.task('build:html', ['build:jekyll:noincremental'], function() {
-  return gulp.src(paths.siteDir+'**/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest(paths.siteDir));
 });
 
 // Creates optimized versions of files with different qualities, sizes, and
@@ -196,7 +188,19 @@ gulp.task('watch', function() {
 // Build task
 gulp.task('build', ['build:styles', 'build:scripts', 'build:jekyll']);
 
-gulp.task('publish', ['build:html']);
+
+// Minify HTML Files.
+gulp.task('build:html', ['build:jekyll:noincremental'], function() {
+  return gulp.src(paths.siteDir+'**/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(paths.siteDir));
+});
+
+// Publish site folder in gh-pages branch
+gulp.task('publish', ['build:html'], function() {
+  return gulp.src(paths.siteDir+'**/*')
+    .pipe(ghPages());
+});
 
 // Start Everything with the default task
 gulp.task('default', [ 'build', 'serve', 'watch' ]);

@@ -3,26 +3,16 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for article in site.articles %}
-  {% unless article.draft %}
-  <url>
-    {% if article.category %}
-    <loc>{{ site.url }}/{{ article.category }}/{{ article.slug }}</loc>
-    {% else %}
-    <loc>{{ site.url }}/{{ article.slug }}</loc>
-    {% endif %}
+  {% for article in site.articles %}{% unless article.draft %}<url>
+    {% if article.category %}<loc>{{ site.url }}/{{ article.category }}/{{ article.slug }}</loc>{% else %}<loc>{{ site.url }}/{{ article.slug }}</loc>{% endif %}
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
-  </url>
-  {% endunless %}
-  {% endfor %}
-  {% for page in site.pages %}
-  <url>
+  </url>{% endunless %}{% endfor %}
+  {% for page in site.pages %}<url>
     <loc>{{ site.url }}{{ page.permalink }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
-  </url>
-  {% endfor %}
+  </url>{% endfor %}
 </urlset>
