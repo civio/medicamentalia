@@ -46,10 +46,9 @@ var production   = env.production;
 gulp.task('build:styles', function () {
   return gulp.src(paths.appSassFiles + '/main.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(paths.assetsStylesFiles))
     .pipe(production(autoprefixer({browsers: ['last 2 versions', 'ie >= 10']})))
     .pipe(production(minifycss()))
-    .pipe(gulp.dest(paths.siteStylesFiles))
+    .pipe(gulp.dest(paths.assetsStylesFiles))
     .pipe(browserSync.reload({stream:true, once: true}))
     .on('error', gutil.log);
 });
@@ -61,18 +60,16 @@ gulp.task('build:styles', function () {
 gulp.task('build:scripts:main', function() {
   return gulp.src(paths.scriptSrc.main)
     .pipe(concat('main.js'))
-    .pipe(gulp.dest(paths.assetsScriptFiles))
     .pipe(production(uglify(uglifyOptions)))
-    .pipe(gulp.dest(paths.siteScriptFiles))
+    .pipe(gulp.dest(paths.assetsScriptFiles))
     .on('error', gutil.log);
 });
 
 gulp.task('build:scripts:infographics', function() {
   return gulp.src(paths.scriptSrc.infographics)
     .pipe(concat('infographics.js'))
-    .pipe(gulp.dest(paths.assetsScriptFiles))
     .pipe(production(uglify(uglifyOptions)))
-    .pipe(gulp.dest(paths.siteScriptFiles))
+    .pipe(gulp.dest(paths.assetsScriptFiles))
     .on('error', gutil.log);
 });
 
@@ -192,7 +189,7 @@ gulp.task('build', ['build:styles', 'build:scripts', 'build:jekyll']);
 // Minify HTML Files.
 gulp.task('build:html', ['build:jekyll:noincremental'], function() {
   return gulp.src(paths.siteDir+'**/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
     .pipe(gulp.dest(paths.siteDir));
 });
 
