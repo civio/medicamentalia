@@ -11784,10 +11784,12 @@ return jQuery;
     }
 
     // Smooth page scroll to an anchor on the same page.
-    $('a[href*=\\#]').not('[href=\\#]').not('.carousel-control').click(function() {
+    $('#page-menu a').click(function() {
+    //$('a[href*=\\#]').not('[href=\\#]').not('.carousel-control').click(function() {
       if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        //console.log('anchor', target, target.offset().top);
         if (target.length) {
           $('html,body').animate({
             scrollTop: target.offset().top
