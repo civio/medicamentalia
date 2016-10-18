@@ -16,5 +16,3 @@ vaccines:
     type: article
   - ref: anti-vaccines
     type: article
-  - ref: vaccines-team
-    type: article
