@@ -9,6 +9,7 @@ var del           = require('del');
 var env           = require('gulp-environments');
 var gulp          = require('gulp');
 var gutil         = require('gulp-util');
+var htmlmin       = require('gulp-htmlmin');
 var jshint        = require('gulp-jshint');
 var minifycss     = require('gulp-clean-css');
 //var notify        = require('gulp-notify');
@@ -35,9 +36,8 @@ var uglifyOptions = {
 
 var paths        = require('./_app/paths');
 
-var dev          = env.development;
-var prod         = env.production;
-
+var development  = env.development;
+var production   = env.production;
 
 // Uses Sass compiler to process styles, adds vendor prefixes, minifies,
 // and then outputs file to appropriate location(s)
@@ -46,8 +46,8 @@ gulp.task('build:styles', function () {
   return gulp.src(paths.appSassFiles + '/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(paths.assetsStylesFiles))
-    .pipe(prod(autoprefixer({browsers: ['last 2 versions', 'ie >= 10']})))
-    .pipe(prod(minifycss()))
+    .pipe(production(autoprefixer({browsers: ['last 2 versions', 'ie >= 10']})))
+    .pipe(production(minifycss()))
     .pipe(gulp.dest(paths.siteStylesFiles))
     .pipe(browserSync.reload({stream:true, once: true}))
     .on('error', gutil.log);
@@ -61,7 +61,7 @@ gulp.task('build:scripts:main', function() {
   return gulp.src(paths.scriptSrc.main)
     .pipe(concat('main.js'))
     .pipe(gulp.dest(paths.assetsScriptFiles))
-    .pipe(prod(uglify(uglifyOptions)))
+    .pipe(production(uglify(uglifyOptions)))
     .pipe(gulp.dest(paths.siteScriptFiles))
     .on('error', gutil.log);
 });
@@ -70,7 +70,7 @@ gulp.task('build:scripts:infographics', function() {
   return gulp.src(paths.scriptSrc.infographics)
     .pipe(concat('infographics.js'))
     .pipe(gulp.dest(paths.assetsScriptFiles))
-    .pipe(prod(uglify(uglifyOptions)))
+    .pipe(production(uglify(uglifyOptions)))
     .pipe(gulp.dest(paths.siteScriptFiles))
     .on('error', gutil.log);
 });
@@ -80,6 +80,14 @@ gulp.task('build:scripts', ['build:scripts:main', 'build:scripts:infographics'],
   cb();
 });
 
+
+// Minify HTML Files.
+
+gulp.task('build:html', ['build:jekyll:noincremental'], function() {
+  return gulp.src(paths.siteDir+'**/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(paths.siteDir));
+});
 
 // Creates optimized versions of files with different qualities, sizes, and
 // formats, then outputs to appropriate location(s)
@@ -138,6 +146,14 @@ gulp.task('build:jekyll', function(done) {
     .on('close', done);
 });
 
+gulp.task('build:jekyll:noincremental', ['build:styles', 'build:scripts'], function(done) {
+  return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+    .on('error', function(error){
+      gutil.log(gutil.colors.red(error.message));
+    })
+    .on('close', done);
+});
+
 // Special tasks for building and then reloading BrowserSync
 gulp.task('build:jekyll:watch', ['build:jekyll'], function(cb) {
   browserSync.reload();
@@ -178,7 +194,9 @@ gulp.task('watch', function() {
 
 
 // Build task
-gulp.task('build', [ 'build:styles', 'build:scripts', 'build:jekyll' ]);
+gulp.task('build', ['build:styles', 'build:scripts', 'build:jekyll']);
+
+gulp.task('publish', ['build:html']);
 
 // Start Everything with the default task
 gulp.task('default', [ 'build', 'serve', 'watch' ]);
