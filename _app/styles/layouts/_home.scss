@@ -454,9 +454,11 @@ $btn-scroll-down-icon-size: 44px;
     color: darken($overlay-yellow,20%);
   }
 
+  &.portfolio-superbugs .portfolio-box-overlay,
   &.portfolio-access-team .portfolio-box-overlay{
     background: lighten($brand-primary,10%);
   }
+  &.portfolio-superbugs:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn,
   &.portfolio-access-team:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
     color: darken($brand-primary,5%);
   }

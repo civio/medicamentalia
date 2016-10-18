@@ -9215,8 +9215,10 @@ h3, h4, h5 {
     background: #cadf70; }
   .portfolio-box.portfolio-patents:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
     color: #a3bf2a; }
+  .portfolio-box.portfolio-superbugs .portfolio-box-overlay,
   .portfolio-box.portfolio-access-team .portfolio-box-overlay {
     background: #00aab0; }
+  .portfolio-box.portfolio-superbugs:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn,
   .portfolio-box.portfolio-access-team:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn {
     color: #006064; }
   @media (min-width: 768px) {
