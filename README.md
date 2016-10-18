@@ -29,3 +29,7 @@ Build site:
 Serve & watch site:
 
     $ gulp
+
+Publish site in `gh-pages` branch
+
+    $ gulp publish --env=production
