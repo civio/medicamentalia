@@ -33,6 +33,8 @@ defaults:
   values:
     layout: "article"
 
+analytics_id: UA-28946840-11
+
 fb_id: 620090684758872
 
 # Build settings
