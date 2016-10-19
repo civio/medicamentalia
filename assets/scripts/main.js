@@ -11783,20 +11783,17 @@ return jQuery;
       $('.page-content-container p').selectionSharer();
     }
 
-    // Smooth page scroll to an anchor on the same page.
+    // Smooth page scroll to an article section
     $('#page-menu a').click(function() {
-    //$('a[href*=\\#]').not('[href=\\#]').not('.carousel-control').click(function() {
-      if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        //console.log('anchor', target, target.offset().top);
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
-      }
+      animateLink( $($(this).attr('href')), 1 );
+    });
+    // Smooth page scroll to a notes anchor
+    $('a[href^="#notes-anchor"]').click(function() {
+      animateLink( $($(this).attr('href')), 0 );
+    });
+    // Smooth page scroll to a notes ref
+    $('a[href^="#notes-ref"]').click(function() {
+      animateLink( $($(this).attr('href')), -50 );
     });
 
     // Set Suscribe Input Text
@@ -11862,6 +11859,15 @@ return jQuery;
     }
   };
 
+  // Animate link
+  var animateLink = function( target, offsetTop ){
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top + offsetTop
+      }, 1000);
+      return false;
+    }
+  };
 
   // Infographics setup
   var setupInfographics = function(){
@@ -11881,8 +11887,8 @@ return jQuery;
       $(window).resize( fakes_infographic.onResize );
     }
     else if ($('#patents-graph').length > 0) {
-      var graph = patents_graph('#patents-graph').init();
-      $(window).resize( graph.onResize );
+      var graph_patents = patents_graph('#patents-graph').init();
+      $(window).resize( graph_patents.onResize );
     }
     else if ($('#patents-infographic').length > 0) {
       var patentes_infographic = new Infographic('#patents-infographic', 'patentes');
@@ -11895,6 +11901,28 @@ return jQuery;
         patentes_infographic.onResize();
         antimalaricos_infographic.onResize();
       });
+    }
+    if ($('#antibiotics-graph').length > 0) {
+      var graph_antibiotics = new BarGraph('antibiotics-graph', $('body').data('baseurl')+'/assets/csv/antibiotics.csv');
+      graph_antibiotics.txt = {
+        'es': 'Media EU28',
+        'en': 'EU28 Average'
+      };
+      graph_antibiotics.markerValue = 36;
+      graph_antibiotics.aspectRatio = 0.5;
+      graph_antibiotics.init();
+      $(window).resize( graph_antibiotics.onResize );
+    }
+    if ($('#antibiotics-animals-graph').length > 0) {
+      var graph_antibiotics_animals = new BarGraph('antibiotics-animals-graph', $('body').data('baseurl')+'/assets/csv/antibiotics-animals.csv');
+      graph_antibiotics_animals.txt = {
+        'es': 'Media',
+        'en': 'Average'
+      };
+      graph_antibiotics_animals.markerValue = 107.8;
+      graph_antibiotics_animals.aspectRatio = 0.5;
+      graph_antibiotics_animals.init();
+      $(window).resize( graph_antibiotics_animals.onResize );
     }
   };
    

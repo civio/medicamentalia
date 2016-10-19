@@ -40,17 +40,6 @@ export {
 } from "d3-request";
 
 export {
-  timeFormat,
-  timeParse,
-  utcFormat,
-  utcParse,
-  isoFormat,
-  isoParse,
-  timeFormatLocale,
-  timeFormatDefaultLocale
-} from "d3-time-format";
-
-export {
   scaleBand,
   scalePoint,
   scaleLinear,

@@ -11,6 +11,7 @@ function patents_graph( _id ) {
     'es': 'Se aprueba la licencia obligatoria',
     'en': 'Compulsory license is approved'
   };
+  var markerValue = 2007;
 
   var margin = {top: 20, right: 0, bottom: 20, left: 0},
       widthCont = 1140,
@@ -22,14 +23,12 @@ function patents_graph( _id ) {
       xAxis,
       line;
 
-  var parseDate = d3.timeFormat('%Y').parse;
-
 
   // Public Methods
 
   that.init = function() {
 
-    console.log('init patents graph');
+    //console.log('init patents graph');
 
     widthCont = $el.width();
     heightCont = widthCont*0.5625;
@@ -77,15 +76,15 @@ function patents_graph( _id ) {
 
       svg.append('line')
         .attr('class', 'marker')
-        .attr("x1", function(d) { return x(2007); })
+        .attr("x1", function(d) { return x(markerValue); })
         .attr("y1", height)
-        .attr("x2", function(d) { return x(2007); })
+        .attr("x2", function(d) { return x(markerValue); })
         .attr("y2", height);
 
       svg.append('g')
         .attr('class', 'marker-label')
         .append('text')
-        .attr('x', function(d) { return x(2007); })
+        .attr('x', function(d) { return x(markerValue); })
         .text( txt[lang] );
 
       svg.selectAll('.bar')
@@ -141,13 +140,11 @@ function patents_graph( _id ) {
     x.range([0, width]);
     y.range([height, 0]);
 
-    console.log('x', x.bandwidth(), x.range(), x.domain() );
-
     d3.select('g.x.axis')
       .attr('transform', 'translate(0,' + height + ')')
       .call(d3.axisBottom(x));
 
-    d3.select('.marker-label text').attr('x', function(d) { return x(2007); });
+    d3.select('.marker-label text').attr('x', function(d) { return x(markerValue); });
 
     d3.selectAll('.bar')
       .attr('x', function(d) { return x(d.date); })
@@ -160,8 +157,8 @@ function patents_graph( _id ) {
       .attr('y', function(d) { return y(d.patents); });
 
     d3.select('.marker')
-      .attr("x1", function(d) { return x(2007); })
-      .attr("x2", function(d) { return x(2007); })
+      .attr("x1", function(d) { return x(markerValue); })
+      .attr("x2", function(d) { return x(markerValue); })
       .attr('y2', height );
   };
 
