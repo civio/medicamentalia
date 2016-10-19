@@ -1,8 +1,8 @@
 ---
 title:            Superbugs
-subtitle:         Spain, much ado about little data
-description:      The government plan against antibiotic resistance shows apocalyptic images with citizens anxiously devouring pills, but we still don’t have enough information to address the issue.
-home_description: The government plan against antibiotic resistance shows apocalyptic images with citizens anxiously devouring pills, but we still don’t have enough information to address the issue.
+subtitle:         Apocalyptic scenarios of antibiotic resistance, but little action
+description:      The Spanish government plan shows apocalyptic images with citizens anxiously devouring pills, but we still don’t have enough information to address the issue.
+home_description: The Spanish government plan against antibiotic resistance shows apocalyptic images with citizens anxiously devouring pills, but we still don’t have enough information to address the issue.
 img:              articles/home-superbugs.jpg
 order:            2
 author:           Eva Belmonte
@@ -66,9 +66,9 @@ In 2006, nearly two million Euro [had been allocated](http://www.lamoncloa.gob.e
 
 ## Veterinary use
 
-Spain has a population of meat producing animals of around 7 million tons, it in third place just behind Germany (8,526,000 tons) and France (7,165,000 tons), according to the [2013 ESVAC report](http://www.ema.europa.eu/docs/en_GB/document_library/Report/2015/10/WC500195687.pdf). Despite being only third in the production table, it leads when looking at purchase of antibiotics: 2201.9 tons were sold in Spain in 2013, more than in any other European country, followed by Germany with 1,527.2 tons, according to data provided by pharmaceutical companies.
+Spain has a population of meat producing animals of more than 7 million tons, it in second place just behind Germany (8,749,000 tons), according to the [2014 ESVAC report](http://www.ema.europa.eu/docs/en_GB/document_library/Report/2016/10/WC500214217.pdf). Despite being only second in the population table, it leads when looking at purchase of antibiotics: 2,965.5 tons were sold in Spain in 2014, more than in any other European country, followed by Italy with 1,441.6 tons, according to data provided by pharmaceutical companies.
 
-The report calculates the milligrams of antibiotic consumed per kilogram of meat sold. In 2013, with a ratio of 317.1, Spain was only behind Cyprus. The use of antibiotics that year increased considerably: It went from 1,693 tons in 2012 to 2,202 in 2013, that is, from 242 milligrams per kilogram to 317.
+The report calculates the milligrams of antibiotic consumed per kilogram of meat sold. In 2014, with a ratio of 418.8, Spain was also the leader.
 
 <p class="video-container-caption" style="margin: 0">Sales of antibiotics in mg of active ingredient by kg of meat, by country (mg/PCU) in 2014</p>
 <div class="video-container antibiotics-graph-container">

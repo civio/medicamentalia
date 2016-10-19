@@ -1,8 +1,8 @@
 ---
 title:            Superbacterias
-subtitle:         España, mucha alarma y pocos datos
-description:      El plan del Gobierno contra la resistencia a los antibióticos difunde imágenes apocalípticas en las que los ciudadanos aparecen como ansiosos devoradores de pastillas, pero seguimos sin tener información suficiente para atajar el problema
-home_description: El plan del Gobierno contra la resistencia a los antibióticos difunde imágenes apocalípticas en las que los ciudadanos aparecen como ansiosos devoradores de pastillas, pero seguimos sin tener información suficiente para atajar el problema
+subtitle:         Escenarios apocalípticos pero pocos datos para frenar la resistencia a los antibióticos
+description:      El plan del gobierno español difunde imágenes en las que los ciudadanos aparecen como ansiosos devoradores de pastillas, pero seguimos sin tener información suficiente para atajar el problema
+home_description: El plan del gobierno español contra la resistencia a los antibióticos difunde imágenes apocalípticas en las que los ciudadanos aparecen como ansiosos devoradores de pastillas, pero seguimos sin tener información suficiente para atajar el problema
 img:              articles/home-superbugs.jpg
 order:            2
 author:           Eva Belmonte
@@ -30,7 +30,7 @@ A principios de este mismo año, el plan se presentaba en sociedad en un [vídeo
 {% include video-container.html videoid="er2-h5GH97o" title="Vídeo de presentación del Plan Estratégico para reducir la resistencia a los antibióticos del Gobierno" %}
   
 ## Datos escasos 
-Pese a la gravedad del problema y a que uno de los objetivos del plan es establecer sistemas de control como la receta electrónica en salud humana y veterinaria, España está lejos de conocer de forma detallada todos los datos sobre este problema. En 2011, solo el 40% de los hospitales contaba con programas de monitorización del uso de antibióticos. Las estimaciones incluidas en el plan hablan de que, si en Europa, en un día, el 30% de los pacientes ingresados en los hospitales recibe un antibiótico, ese porcentaje sube hasta el 46% si el paciente está en un centro español.
+Pese a la gravedad de la situación y a que uno de los objetivos del plan es establecer sistemas de control como la receta electrónica en salud humana y veterinaria, España está lejos de conocer de forma detallada todos los datos sobre este problema. En 2011, solo el 40% de los hospitales contaba con programas de monitorización del uso de antibióticos. Las estimaciones incluidas en el plan hablan de que, si en Europa, en un día, el 30% de los pacientes ingresados en los hospitales recibe un antibiótico, ese porcentaje sube hasta el 46% si el paciente está en un centro español.
 
 Pero esas cifras son estimaciones. Los [datos](http://ecdc.europa.eu/en/healthtopics/antimicrobial_resistance/esac-net-database/Pages/Antimicrobial-consumption-rates-by-country.aspx) sobre consumo de antibióticos que recoge desde 1997 el European Centre for Disease Prevention and Control (ECDC) sobre España solo incluyen información de antibióticos recetados por el Sistema Nacional de Salud (SNS) público, pero no aquellos que compren quienes tengan receta expedida por un médico privado <small>[[2]](#notes-anchor-2){: #notes-ref-2}</small>. Y, además, no incluyen el consumo hospitalario. Según esa porción de los datos, las dosis diarias por cada 1.000 habitantes y día de antibióticos en España es de 21,65, un número record desde que se recogen estas cifras, frente a los 14,6 de, por ejemplo, Alemania. 
 
@@ -70,7 +70,7 @@ En noviembre de 2013 se emitía en radio y televisión una campaña pública que
 
 ## En animales
 
-España tiene una población de animales productores de carne (PCU <small>[[4]](#notes-anchor-4){: #notes-ref-4}</small>) de más de siete millones de toneladas, lo que la sitúa en segundo lugar solo por detrás de Alemania (8,749,000 toneladas), según datos del [informe ESVAC de 2014](http://www.ema.europa.eu/docs/en_GB/document_library/Report/2016/10/WC500214217.pdf). Pese a no liderar esa tabla, sí lo hace en la de compra de antibióticos: en 2014 se vendieron 2,965.5 toneladas, más que ningún otro país europeo y seguido por Italia, con 1,441.6 toneladas, según datos proporcionados por los laboratorios. El informe analiza los miligramos de antibiótico vendidos por kilogramo de carne <small >[[5]](#notes-anchor-5){: #notes-ref-5}</small>. España registró en 2014 la cifra más alta de todos los países europeos analizados: 418,8 mg/PCU.
+España tiene una población de animales productores de carne (PCU <small>[[4]](#notes-anchor-4){: #notes-ref-4}</small>) de más de siete millones de toneladas, lo que la sitúa en segundo lugar solo por detrás de Alemania (8.749.000 toneladas), según datos del [informe ESVAC de 2014](http://www.ema.europa.eu/docs/en_GB/document_library/Report/2016/10/WC500214217.pdf). Pese a no liderar esa tabla, sí lo hace en la de compra de antibióticos: en 2014 se vendieron 2.965,5 toneladas, más que ningún otro país europeo y seguido por Italia, con 1.441,6 toneladas, según datos proporcionados por los laboratorios. El informe analiza los miligramos de antibiótico vendidos por kilogramo de carne <small >[[5]](#notes-anchor-5){: #notes-ref-5}</small>. España registró en 2014 la cifra más alta de todos los países europeos analizados: 418,8 mg/PCU.
 
 <p class="video-container-caption" style="margin: 0">Ventas de antibióticos en miligramos de principio activo por kilo de carne por país (mg/PCU) en 2014</p>
 <div class="video-container antibiotics-graph-container">
@@ -80,7 +80,7 @@ España tiene una población de animales productores de carne (PCU <small>[[4]](
 
 Estos datos, una vez más, no son perfectos: cuando hablamos de población de animales productores de carne hablamos de estimaciones y los datos de venta los aportan los laboratorios de forma voluntaria en España, puesto que no es obligatorio. Aun así, dan una idea del uso intensivo de los antibióticos en el país. Pese a eso, las campañas públicas del Gobierno no se dirigen a este sector y, más allá de la de 2007, no conocemos otros anuncios públicos para el uso racional de los antibióticos veterinarios. 
 
-España tiene altos niveles de consumo, sobre todo en animales, el problema persistente de la automedicación y, pese a todo, una falta de control y de datos detallados, fiables y actualizados para evaluar y enfrentar el problema con solidez.
+España tiene altos niveles de consumo de antibióticos, sobre todo en animales, el problema persistente de la automedicación y, pese a todo, una falta de control y de datos detallados, fiables y actualizados para evaluar y enfrentar el problema con solidez.
 
 <div class="notes" markdown="1">
 
