@@ -75,7 +75,7 @@ It wasn’t only the companies that protested; some governments also did. **The 
 
 <div class="video-container-right">
 <div class="video-container">
-  <div id="patents-graph" data-lang="en"></div>
+  <div id="patents-graph" class="bar-graph" data-lang="en"></div>
 </div>
 <p class="video-container-caption">Number of patents</p>
 </div>

@@ -3,8 +3,8 @@ en:
   by: By
   categories:
     access: 
-      title: Access to medicine
-      description: A journalistic investigation into access to medicines around the world
+      title: Access to medicines
+      description: A journalistic investigation into the issues limiting access to medicines around the world, country differences, the patent system and its alternatives.
     vaccines: 
       title: Vaccines
       description: A journalistic investigation into access to vaccines around the world
@@ -19,7 +19,7 @@ en:
     facebook: Share in Facebook
     gplus: Share in Google Plus
   footer:
-    awards: Has been awarded
+    awards: Awards
     finalist: Finalist in
     funded_by: Funded by
     media_partners: Has media partners such as
@@ -33,7 +33,7 @@ es:
   categories:
     access: 
       title: Acceso a medicamentos
-      description: Investigación periodística sobre el acceso a los medicamentos en el mundo
+      description: Investigación periodística sobre las dificultades para adquirir medicinas esenciales en todo el mundo, las diferencias entre países, el sistema de patentes y sus alternativas.
     vaccines: 
       title: Vacunas
       description: Investigación periodística sobre el acceso a las vacunas en el mundo
@@ -48,7 +48,7 @@ es:
     facebook: Compartir en Facebook
     gplus: Compartir en Google Plus
   footer:
-    awards: Ha sido premiado
+    awards: Premios
     finalist: Finalista en
     funded_by: Financiado por
     project_by: Medicamentalia es un proyecto de

@@ -65,7 +65,7 @@ No solo protestaron las empresas, también ciertos gobiernos. **La Cámara de Co
 
 <div class="video-container-right">
 <div class="video-container">
-  <div id="patents-graph" data-lang="es"></div>
+  <div id="patents-graph" class="bar-graph" data-lang="es"></div>
 </div>
 <p class="video-container-caption">Número de patentes</p>
 </div>

@@ -2,7 +2,7 @@
 Patentes
 */
 
-#patents-graph{
+.bar-graph{
 
   font-family: $font-family-sans-serif;
 
@@ -39,6 +39,23 @@ Patentes
     font-size: 0.75em;
     fill: $brand-primary;
   }
+}
+
+#antibiotics-graph #ES.bar,
+#antibiotics-animals-graph #ES.bar{
+  fill: $color-orange;
+}
+
+#antibiotics-animals-graph #FI.bar-label,
+#antibiotics-animals-graph #SE.bar-label,
+#antibiotics-animals-graph #IS.bar-label,
+#antibiotics-animals-graph #NO.bar-label{
+  display: none;
+}
+
+.page-content .video-container.antibiotics-graph-container{
+  margin-top: 30px;
+  padding-bottom: 50%; 
 }
 
 /*

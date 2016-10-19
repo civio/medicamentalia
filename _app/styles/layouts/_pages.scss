@@ -51,9 +51,10 @@ header {
       margin-right: auto;
       padding-top: 30px;
 
-      >p{
+      > p{
         max-width: 640px;
         margin: 0 auto 15px;
+        line-height: 24px;
       }
     }
 
@@ -280,9 +281,12 @@ header {
     &.page-compulsory-license .navbar-nav li{
       width: 16.6666%;
     }
-    &.page-superbugs .navbar-nav li{
-      width: 25%;
-    }
+  }
+}
+
+@media (min-width: $screen-md) {
+  .lang-es .nav-page.page-superbugs .navbar-nav li{
+    width: 25%;
   }
 }
 
@@ -397,6 +401,7 @@ header {
 
     strong{
       color: $brand-primary;
+      font-size: 18px;
     }
 
     a.page-anchor{

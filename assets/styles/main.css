@@ -9490,7 +9490,8 @@ header {
       padding-top: 30px; }
       header .header-content .header-content-inner > p {
         max-width: 640px;
-        margin: 0 auto 15px; }
+        margin: 0 auto 15px;
+        line-height: 24px; }
     header .header-content h1 {
       color: #bbd646;
       font-size: 22px;
@@ -9629,9 +9630,11 @@ header {
           border-bottom: 0;
           border-right: 1px solid #653015; }
     .nav-page.page-compulsory-license .navbar-nav li {
-      width: 16.6666%; }
-    .nav-page.page-superbugs .navbar-nav li {
-      width: 25%; } }
+      width: 16.6666%; } }
+
+@media (min-width: 992px) {
+  .lang-es .nav-page.page-superbugs .navbar-nav li {
+    width: 25%; } }
 
 @media (max-width: 992px) {
   .nav-page .container {
@@ -9705,7 +9708,8 @@ header {
     .page-content .notes h3 {
       margin-bottom: 0; }
     .page-content .notes strong {
-      color: #00797d; }
+      color: #00797d;
+      font-size: 18px; }
     .page-content .notes a.page-anchor {
       padding-top: 30px;
       margin-bottom: 30px; }
@@ -9845,28 +9849,42 @@ blockquote {
 /*
 Patentes
 */
-#patents-graph {
+.bar-graph {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
-  #patents-graph .axis path,
-  #patents-graph .axis line {
+  .bar-graph .axis path,
+  .bar-graph .axis line {
     display: none; }
-  #patents-graph .axis text {
+  .bar-graph .axis text {
     font-size: 10px;
     fill: #777777; }
-  #patents-graph .bar {
+  .bar-graph .bar {
     fill: #00797d; }
-  #patents-graph .bar:hover {
+  .bar-graph .bar:hover {
     fill: #e2723b; }
-  #patents-graph .bar-label {
+  .bar-graph .bar-label {
     fill: white;
     font-size: 0.75em;
     font-weight: 300;
     text-anchor: middle; }
-  #patents-graph .marker {
+  .bar-graph .marker {
     stroke: #e2723b; }
-  #patents-graph .marker-label text {
+  .bar-graph .marker-label text {
     font-size: 0.75em;
     fill: #00797d; }
+
+#antibiotics-graph #ES.bar,
+#antibiotics-animals-graph #ES.bar {
+  fill: #e2723b; }
+
+#antibiotics-animals-graph #FI.bar-label,
+#antibiotics-animals-graph #SE.bar-label,
+#antibiotics-animals-graph #IS.bar-label,
+#antibiotics-animals-graph #NO.bar-label {
+  display: none; }
+
+.page-content .video-container.antibiotics-graph-container {
+  margin-top: 30px;
+  padding-bottom: 50%; }
 
 /*
 Infographic
