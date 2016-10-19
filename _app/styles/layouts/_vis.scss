@@ -58,6 +58,20 @@ Patentes
   padding-bottom: 50%; 
 }
 
+@media (max-width: $screen-sm) {
+  #antibiotics-graph,
+  #antibiotics-animals-graph{
+    .tick,
+    .bar-label{
+      display: none;
+    }
+    #ES.bar-label{
+      display: block;
+    }
+  }
+}
+
+
 /*
 Infographic
 */
