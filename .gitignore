@@ -4,3 +4,7 @@ _site
 node_modules
 
 .publish/
+
+fabfile.py
+
+fabfile.pyc
