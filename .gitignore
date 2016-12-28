@@ -2,5 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 node_modules
-
 .publish/
+fabfile.py
+fabfile.pyc
