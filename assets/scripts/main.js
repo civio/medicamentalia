@@ -11784,7 +11784,7 @@ return jQuery;
     }
 
     // Smooth page scroll to an article section
-    $('#page-menu a').click(function() {
+    $('.nav-page a[href^="#"]').click(function() {
       animateLink( $($(this).attr('href')), 1 );
     });
     // Smooth page scroll to a notes anchor
@@ -11923,6 +11923,12 @@ return jQuery;
       graph_antibiotics_animals.aspectRatio = 0.5;
       graph_antibiotics_animals.init();
       $(window).resize( graph_antibiotics_animals.onResize );
+    }
+    if ($('#vaccine-measles-graph').length > 0) {
+      var graph_vaccine_measles = new VaccineGraph('vaccine-measles-graph', $('body').data('baseurl')+'/assets/csv/measles/casos.csv');
+      graph_vaccine_measles.init();
+      $(window).resize( graph_vaccine_measles.onResize );
+      
     }
   };
    

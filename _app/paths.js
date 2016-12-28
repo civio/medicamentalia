@@ -44,6 +44,7 @@ paths.scriptSrc = {
     paths.appScriptFiles + '/vendor/d3-bundle.js',
     paths.appScriptFiles + '/bar-graph.js',
     paths.appScriptFiles + '/patents-graph.js',
+    paths.appScriptFiles + '/vaccine-graph.js',
     paths.appScriptFiles + '/infographic.js',
     paths.appScriptFiles + '/antimalaricos-infographic.js',
     paths.appScriptFiles + '/fakes-infographic.js',

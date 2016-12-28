@@ -167,6 +167,12 @@
       graph_antibiotics_animals.init();
       $(window).resize( graph_antibiotics_animals.onResize );
     }
+    if ($('#vaccine-measles-graph').length > 0) {
+      var graph_vaccine_measles = new VaccineGraph('vaccine-measles-graph', $('body').data('baseurl')+'/assets/csv/measles/casos.csv');
+      graph_vaccine_measles.init();
+      $(window).resize( graph_vaccine_measles.onResize );
+      
+    }
   };
    
   setup();
