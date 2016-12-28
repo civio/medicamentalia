@@ -9471,6 +9471,8 @@ header {
     background: #e99267; }
   header.page-patents .header-overlay {
     background: #cadf70; }
+  header.page-access-vaccines .header-overlay {
+    background: #5abda7; }
   header .header-content {
     position: relative;
     text-align: center;
@@ -9895,6 +9897,37 @@ Patentes
   #antibiotics-graph #ES.bar-label,
   #antibiotics-animals-graph #ES.bar-label {
     display: block; } }
+
+/*
+Vaccines
+*/
+.vaccine-graph {
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 100px;
+  margin-bottom: 60px; }
+  .vaccine-graph .cell-container {
+    position: relative;
+    width: 100%; }
+  .vaccine-graph .cell {
+    position: absolute; }
+  .vaccine-graph .axis {
+    position: relative; }
+  .vaccine-graph .axis-item {
+    position: absolute;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-size: 0.813em; }
+  .vaccine-graph .x-axis {
+    top: -20px; }
+    .vaccine-graph .x-axis .axis-item {
+      text-indent: -0.333em; }
+  .vaccine-graph .y-axis {
+    left: -100px; }
+    .vaccine-graph .y-axis .axis-item {
+      width: 100px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
 
 /*
 Infographic

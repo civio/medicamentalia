@@ -1,13 +1,11 @@
-var VaccineGraph = function( _id, _source ) {
+var VaccineGraph = function( _id, _data_url ) {
 
   var $ = jQuery.noConflict();
 
   var that = this;
 
-  that.id      = _id;
-  that.source  = _source;
-
-  that.margin = {top: 0, right: 0, bottom: 0, left: 0};
+  that.id       = _id;
+  that.data_url = _data_url;
 
   // Public Methods
 
@@ -18,150 +16,142 @@ var VaccineGraph = function( _id, _source ) {
     that.$el  = $('#'+that.id);
     that.lang = that.$el.data('lang');
 
-    that.getDimensions();
-
-    /*
     that.x = d3.scaleBand()
-      .range([0, that.width])
       .round(true)
       .paddingInner(0.1)
       .paddingOuter(0);
 
-    that.y = d3.scaleLinear()
-      .range([that.height, 0]);
-    */
+    that.y = d3.scaleBand()
+      .round(true)
+      .paddingInner(0.1)
+      .paddingOuter(0);
 
-    that.svg = d3.select('#'+that.id).append('svg')
-      .attr('id', that.id+'-svg')
-      .attr('width', that.widthCont)
-      .attr('height', that.heightCont)
-    .append('g')
-      .attr('transform', 'translate(' + that.margin.left + ',' + that.margin.top + ')');
+    that.color = d3.scaleSequential(d3.interpolateInferno);
 
-    // Load CSV
-    d3.csv( that.source, function(error, data) {
-
-      console.log(data);
-
-      /*
-      data.forEach(function(d) {
-        d.value = +d.value;
-      });
-
-      that.x.domain(data.map(function(d) { return d.label; }));
-      that.y.domain([0, d3.max(data, function(d) { return d.value; })]);
-
-      that.svg.append('g')
-        .attr('class', 'x axis')
-        .attr('transform', 'translate(0,' + that.height + ')')
-        .call(d3.axisBottom(that.x));
-
-      if (that.markerValue) {
-
-        that.svg.append('line')
-          .attr('class', 'marker')
-          .attr("x1", 0)
-          .attr("y1", function(d) { return that.y(that.markerValue); })
-          .attr("x2", that.width)
-          .attr("y2", function(d) { return that.y(that.markerValue); });
-
-        that.svg.append('g')
-          .attr('class', 'marker-label')
-          .append('text')
-          .attr('x', that.width )
-          .attr('y', function(d) { return that.y(that.markerValue); })
-          .attr('dy', '1em' )
-          .style('text-anchor', 'end')
-          .text( that.txt[that.lang] );
-      }
-
-      that.svg.selectAll('.bar')
-        .data(data)
-      .enter().append('rect')
-        .attr('class', 'bar')
-        .attr('id', function(d) { return d.label; })
-        .attr('x', function(d) { return that.x(d.label); })
-        .attr('y', function(d) { return that.y(d.value); } )
-        .attr('height', function(d) { return that.height - that.y(d.value); })
-        .attr('width', that.x.bandwidth());
-
-      that.svg.selectAll('.bar-label')
-        .data(data)
-      .enter().append('text')
-        .attr('class', 'bar-label')
-        .attr('id', function(d) { return d.label; })
-        .attr('x', function(d) { return that.x(d.label)+(that.x.bandwidth()*0.5); })
-        .attr('y', function(d) { return that.y(d.value); })
-        .attr('dy', '1.5em')
-        .text( function(d){ return parseInt(d.value); });
-
-       // d3.selectAll('.bar')
-       //  .transition().duration(800).delay( function(d,i){ return 100*i; })
-       //  .attr('id', function(d) { return d.label; })
-       //  .attr('y', function(d) { return that.y(d.value); })
-       //  .attr('height', function(d) { return height - that.y(d.value); });
-
-      // d3.select('.marker')
-      //   .transition().duration(600).delay(1500)
-      //   .attr('x2', width );
-      */
-    });
+    // Load CSVs
+    d3.queue()
+      .defer(d3.csv, that.data_url)
+      .defer(d3.csv, $('body').data('baseurl')+'/assets/csv/countries.csv')
+      .await( onDataReady );
 
     return that;
   };
 
   that.onResize = function() {
-
     that.getDimensions();
-    that.updateData();
-
+    //that.updateData();
     return that;
   };
 
-  that.updateData = function(){
-    /*
-    that.svg
-      .attr('width', that.widthCont)
-      .attr('height', that.heightCont);
-
-    that.x.range([0, that.width]);
-    that.y.range([that.height, 0]);
-
-    that.svg.select('g.x.axis')
-      .attr('transform', 'translate(0,' + that.height + ')')
-      .call(d3.axisBottom(that.x));
-
-    that.svg.selectAll('.bar')
-      .attr('x', function(d) { return that.x(d.label); })
-      .attr('y', function(d) { return that.y(d.value); })
-      .attr('width', that.x.bandwidth())
-      .attr('height', function(d) { return that.height - that.y(d.value); });
-
-    that.svg.selectAll('.bar-label')
-      .attr('x', function(d) { return that.x(d.label)+(that.x.bandwidth()*0.5); })
-      .attr('y', function(d) { return that.y(d.value); });
-
-    if (that.markerValue) {
-
-      that.svg.select('.marker-label text')
-        .attr('x', that.width )
-        .attr('y', function(d) { return that.y(that.markerValue); });
-
-      that.svg.select('.marker')
-        .attr("y1", function(d) { return that.y(that.markerValue); })
-        .attr("y2", function(d) { return that.y(that.markerValue); })
-        .attr('x2', that.width );
-    }
-    */
+  that.getDimensions = function(){
+    that.width    = that.$el.width();
+    that.cellSize = Math.floor(that.width / that.years.length);
+    that.height   = (that.countries.length * that.cellSize);
+    return that;
   };
 
-  that.getDimensions = function(){
+  var onDataReady = function(error, data_csv, countries_csv) {
 
-    that.widthCont = that.$el.width();
-    that.heightCont = that.widthCont;
+    console.log(countries_csv);
 
-    that.width = that.widthCont - that.margin.left - that.margin.right;
-    that.height = that.heightCont - that.margin.top - that.margin.bottom;
+    // Get array of country names
+    that.countries = d3.nest()
+      .key(function(d){ return d.ISO_code_2; })
+      .entries(data_csv)
+      .map(function(d){ return d.key; });
+
+    // Get array of years
+    that.years = d3.keys(data_csv[0])
+      .map(function(d){ return +d; })
+      .filter(function(d){ return !isNaN(d); });
+
+    console.log(that.countries);
+    console.log(that.years);
+
+    // Get array of data values
+    that.data = [];
+    data_csv.forEach(function(d){
+      that.years.forEach(function(year){
+        if (d[year]) {
+          that.data.push({
+            country: d.ISO_code_2,
+            year: year,
+            value: +d[year]
+          });
+        }
+      });
+    });
+
+    setup();
+  };
+
+  var setup = function() {
+
+    // Get dimensions (height is based on countries length)
+    that.getDimensions();
+
+    that.x
+      .domain(that.years)
+      .range([0, that.width]);
+
+    that.y
+      .domain(that.countries)
+      .range([0, that.height]);
+
+    that.color.domain([d3.max(that.data, function(d){ return d.value; }), 0]);
+
+    console.log('color domain', that.color.domain());
+
+    // Add svg
+    that.container = d3.select('#'+that.id)
+      .style('height', that.height+'px');
+
+    /*
+    .append('svg')
+      .attr('id', that.id+'-svg')
+      .attr('width', that.widthCont)
+      .attr('height', that.heightCont)
+    .append('g')
+      .attr('transform', 'translate(' + that.margin.left + ',' + that.margin.top + ')');
+    */
+
+    console.log(+that.container.style('padding-left').slice(0,-2));
+
+    // Draw cells
+    that.container.append('div')
+      .attr('class', 'cell-container')
+      .selectAll('.cell')
+      .data(that.data)
+    .enter().append('div')
+      .attr('class', 'cell')
+      .style('left', function(d){ return that.x(d.year)+'px'; })
+      .style('top', function(d){ return that.y(d.country)+'px'; } )
+      .style('width', that.x.bandwidth()+'px')
+      .style('height', that.y.bandwidth()+'px')
+      .style('background', function(d){ return that.color(d.value); })
+      .on('mouseover', function(d){
+        console.log(d.country, d.year, d.value);
+      });
+
+    // Draw countries x axis
+    that.container.append('div')
+      .attr('class', 'x-axis axis')
+      .selectAll('.axis-item')
+      .data(that.years.filter(function(d){ return d%5===0; }))
+    .enter().append('div')
+      .attr('class', 'axis-item')
+      .style('left', function(d){ return that.x(d)+'px'; })
+      .html(function(d){ return d; });
+
+    // Draw years y axis
+    that.container.append('div')
+      .attr('class', 'y-axis axis')
+      .selectAll('.axis-item')
+      .data(that.countries)
+    .enter().append('div')
+      .attr('class', 'axis-item')
+      .style('top', function(d){ return that.y(d)+'px'; })
+      .html(function(d){ return d; });
   };
 
   return that;

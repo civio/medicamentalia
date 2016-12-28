@@ -520,6 +520,395 @@
     return elasticInOut;
   })(amplitude, period);
 
+  function node_each(callback) {
+    var node = this, current, next = [node], children, i, n;
+    do {
+      current = next.reverse(), next = [];
+      while (node = current.pop()) {
+        callback(node), children = node.children;
+        if (children) for (i = 0, n = children.length; i < n; ++i) {
+          next.push(children[i]);
+        }
+      }
+    } while (next.length);
+    return this;
+  }
+
+  function node_eachBefore(callback) {
+    var node = this, nodes = [node], children, i;
+    while (node = nodes.pop()) {
+      callback(node), children = node.children;
+      if (children) for (i = children.length - 1; i >= 0; --i) {
+        nodes.push(children[i]);
+      }
+    }
+    return this;
+  }
+
+  function node_eachAfter(callback) {
+    var node = this, nodes = [node], next = [], children, i, n;
+    while (node = nodes.pop()) {
+      next.push(node), children = node.children;
+      if (children) for (i = 0, n = children.length; i < n; ++i) {
+        nodes.push(children[i]);
+      }
+    }
+    while (node = next.pop()) {
+      callback(node);
+    }
+    return this;
+  }
+
+  function node_sum(value) {
+    return this.eachAfter(function(node) {
+      var sum = +value(node.data) || 0,
+          children = node.children,
+          i = children && children.length;
+      while (--i >= 0) sum += children[i].value;
+      node.value = sum;
+    });
+  }
+
+  function node_sort(compare) {
+    return this.eachBefore(function(node) {
+      if (node.children) {
+        node.children.sort(compare);
+      }
+    });
+  }
+
+  function node_path(end) {
+    var start = this,
+        ancestor = leastCommonAncestor(start, end),
+        nodes = [start];
+    while (start !== ancestor) {
+      start = start.parent;
+      nodes.push(start);
+    }
+    var k = nodes.length;
+    while (end !== ancestor) {
+      nodes.splice(k, 0, end);
+      end = end.parent;
+    }
+    return nodes;
+  }
+
+  function leastCommonAncestor(a, b) {
+    if (a === b) return a;
+    var aNodes = a.ancestors(),
+        bNodes = b.ancestors(),
+        c = null;
+    a = aNodes.pop();
+    b = bNodes.pop();
+    while (a === b) {
+      c = a;
+      a = aNodes.pop();
+      b = bNodes.pop();
+    }
+    return c;
+  }
+
+  function node_ancestors() {
+    var node = this, nodes = [node];
+    while (node = node.parent) {
+      nodes.push(node);
+    }
+    return nodes;
+  }
+
+  function node_descendants() {
+    var nodes = [];
+    this.each(function(node) {
+      nodes.push(node);
+    });
+    return nodes;
+  }
+
+  function node_leaves() {
+    var leaves = [];
+    this.eachBefore(function(node) {
+      if (!node.children) {
+        leaves.push(node);
+      }
+    });
+    return leaves;
+  }
+
+  function node_links() {
+    var root = this, links = [];
+    root.each(function(node) {
+      if (node !== root) { // Don’t include the root’s parent, if any.
+        links.push({source: node.parent, target: node});
+      }
+    });
+    return links;
+  }
+
+  function hierarchy(data, children) {
+    var root = new Node(data),
+        valued = +data.value && (root.value = data.value),
+        node,
+        nodes = [root],
+        child,
+        childs,
+        i,
+        n;
+
+    if (children == null) children = defaultChildren;
+
+    while (node = nodes.pop()) {
+      if (valued) node.value = +node.data.value;
+      if ((childs = children(node.data)) && (n = childs.length)) {
+        node.children = new Array(n);
+        for (i = n - 1; i >= 0; --i) {
+          nodes.push(child = node.children[i] = new Node(childs[i]));
+          child.parent = node;
+          child.depth = node.depth + 1;
+        }
+      }
+    }
+
+    return root.eachBefore(computeHeight);
+  }
+
+  function node_copy() {
+    return hierarchy(this).eachBefore(copyData);
+  }
+
+  function defaultChildren(d) {
+    return d.children;
+  }
+
+  function copyData(node) {
+    node.data = node.data.data;
+  }
+
+  function computeHeight(node) {
+    var height = 0;
+    do node.height = height;
+    while ((node = node.parent) && (node.height < ++height));
+  }
+
+  function Node(data) {
+    this.data = data;
+    this.depth =
+    this.height = 0;
+    this.parent = null;
+  }
+
+  Node.prototype = hierarchy.prototype = {
+    constructor: Node,
+    each: node_each,
+    eachAfter: node_eachAfter,
+    eachBefore: node_eachBefore,
+    sum: node_sum,
+    sort: node_sort,
+    path: node_path,
+    ancestors: node_ancestors,
+    descendants: node_descendants,
+    leaves: node_leaves,
+    links: node_links,
+    copy: node_copy
+  };
+
+  function required(f) {
+    if (typeof f !== "function") throw new Error;
+    return f;
+  }
+
+  function treemapDice(parent, x0, y0, x1, y1) {
+    var nodes = parent.children,
+        node,
+        i = -1,
+        n = nodes.length,
+        k = parent.value && (x1 - x0) / parent.value;
+
+    while (++i < n) {
+      node = nodes[i], node.y0 = y0, node.y1 = y1;
+      node.x0 = x0, node.x1 = x0 += node.value * k;
+    }
+  }
+
+  var keyPrefix = "$";
+  var preroot = {depth: -1};
+  var ambiguous = {};
+  function defaultId(d) {
+    return d.id;
+  }
+
+  function defaultParentId(d) {
+    return d.parentId;
+  }
+
+  function stratify() {
+    var id = defaultId,
+        parentId = defaultParentId;
+
+    function stratify(data) {
+      var d,
+          i,
+          n = data.length,
+          root,
+          parent,
+          node,
+          nodes = new Array(n),
+          nodeId,
+          nodeKey,
+          nodeByKey = {};
+
+      for (i = 0; i < n; ++i) {
+        d = data[i], node = nodes[i] = new Node(d);
+        if ((nodeId = id(d, i, data)) != null && (nodeId += "")) {
+          nodeKey = keyPrefix + (node.id = nodeId);
+          nodeByKey[nodeKey] = nodeKey in nodeByKey ? ambiguous : node;
+        }
+      }
+
+      for (i = 0; i < n; ++i) {
+        node = nodes[i], nodeId = parentId(data[i], i, data);
+        if (nodeId == null || !(nodeId += "")) {
+          if (root) throw new Error("multiple roots");
+          root = node;
+        } else {
+          parent = nodeByKey[keyPrefix + nodeId];
+          if (!parent) throw new Error("missing: " + nodeId);
+          if (parent === ambiguous) throw new Error("ambiguous: " + nodeId);
+          if (parent.children) parent.children.push(node);
+          else parent.children = [node];
+          node.parent = parent;
+        }
+      }
+
+      if (!root) throw new Error("no root");
+      root.parent = preroot;
+      root.eachBefore(function(node) { node.depth = node.parent.depth + 1; --n; }).eachBefore(computeHeight);
+      root.parent = null;
+      if (n > 0) throw new Error("cycle");
+
+      return root;
+    }
+
+    stratify.id = function(x) {
+      return arguments.length ? (id = required(x), stratify) : id;
+    };
+
+    stratify.parentId = function(x) {
+      return arguments.length ? (parentId = required(x), stratify) : parentId;
+    };
+
+    return stratify;
+  }
+
+  function treemapSlice(parent, x0, y0, x1, y1) {
+    var nodes = parent.children,
+        node,
+        i = -1,
+        n = nodes.length,
+        k = parent.value && (y1 - y0) / parent.value;
+
+    while (++i < n) {
+      node = nodes[i], node.x0 = x0, node.x1 = x1;
+      node.y0 = y0, node.y1 = y0 += node.value * k;
+    }
+  }
+
+  var phi = (1 + Math.sqrt(5)) / 2;
+
+  function squarifyRatio(ratio, parent, x0, y0, x1, y1) {
+    var rows = [],
+        nodes = parent.children,
+        row,
+        nodeValue,
+        i0 = 0,
+        i1 = 0,
+        n = nodes.length,
+        dx, dy,
+        value = parent.value,
+        sumValue,
+        minValue,
+        maxValue,
+        newRatio,
+        minRatio,
+        alpha,
+        beta;
+
+    while (i0 < n) {
+      dx = x1 - x0, dy = y1 - y0;
+
+      // Find the next non-empty node.
+      do sumValue = nodes[i1++].value; while (!sumValue && i1 < n);
+      minValue = maxValue = sumValue;
+      alpha = Math.max(dy / dx, dx / dy) / (value * ratio);
+      beta = sumValue * sumValue * alpha;
+      minRatio = Math.max(maxValue / beta, beta / minValue);
+
+      // Keep adding nodes while the aspect ratio maintains or improves.
+      for (; i1 < n; ++i1) {
+        sumValue += nodeValue = nodes[i1].value;
+        if (nodeValue < minValue) minValue = nodeValue;
+        if (nodeValue > maxValue) maxValue = nodeValue;
+        beta = sumValue * sumValue * alpha;
+        newRatio = Math.max(maxValue / beta, beta / minValue);
+        if (newRatio > minRatio) { sumValue -= nodeValue; break; }
+        minRatio = newRatio;
+      }
+
+      // Position and record the row orientation.
+      rows.push(row = {value: sumValue, dice: dx < dy, children: nodes.slice(i0, i1)});
+      if (row.dice) treemapDice(row, x0, y0, x1, value ? y0 += dy * sumValue / value : y1);
+      else treemapSlice(row, x0, y0, value ? x0 += dx * sumValue / value : x1, y1);
+      value -= sumValue, i0 = i1;
+    }
+
+    return rows;
+  }
+
+  (function custom(ratio) {
+
+    function squarify(parent, x0, y0, x1, y1) {
+      squarifyRatio(ratio, parent, x0, y0, x1, y1);
+    }
+
+    squarify.ratio = function(x) {
+      return custom((x = +x) > 1 ? x : 1);
+    };
+
+    return squarify;
+  })(phi);
+
+  (function custom(ratio) {
+
+    function resquarify(parent, x0, y0, x1, y1) {
+      if ((rows = parent._squarify) && (rows.ratio === ratio)) {
+        var rows,
+            row,
+            nodes,
+            i,
+            j = -1,
+            n,
+            m = rows.length,
+            value = parent.value;
+
+        while (++j < m) {
+          row = rows[j], nodes = row.children;
+          for (i = row.value = 0, n = nodes.length; i < n; ++i) row.value += nodes[i].value;
+          if (row.dice) treemapDice(row, x0, y0, x1, y0 += (y1 - y0) * row.value / value);
+          else treemapSlice(row, x0, y0, x0 += (x1 - x0) * row.value / value, y1);
+          value -= row.value;
+        }
+      } else {
+        parent._squarify = rows = squarifyRatio(ratio, parent, x0, y0, x1, y1);
+        rows.ratio = ratio;
+      }
+    }
+
+    resquarify.ratio = function(x) {
+      return custom((x = +x) > 1 ? x : 1);
+    };
+
+    return resquarify;
+  })(phi);
+
   var slice$1 = [].slice;
 
   var noabort = {};
@@ -781,7 +1170,7 @@
     }
   };
 
-  function constant$1(x) {
+  function constant$2(x) {
     return function constant() {
       return x;
     };
@@ -832,7 +1221,7 @@
   function line() {
     var x$$ = x,
         y$$ = y,
-        defined = constant$1(true),
+        defined = constant$2(true),
         context = null,
         curve = curveLinear,
         output = null;
@@ -858,15 +1247,15 @@
     }
 
     line.x = function(_) {
-      return arguments.length ? (x$$ = typeof _ === "function" ? _ : constant$1(+_), line) : x$$;
+      return arguments.length ? (x$$ = typeof _ === "function" ? _ : constant$2(+_), line) : x$$;
     };
 
     line.y = function(_) {
-      return arguments.length ? (y$$ = typeof _ === "function" ? _ : constant$1(+_), line) : y$$;
+      return arguments.length ? (y$$ = typeof _ === "function" ? _ : constant$2(+_), line) : y$$;
     };
 
     line.defined = function(_) {
-      return arguments.length ? (defined = typeof _ === "function" ? _ : constant$1(!!_), line) : defined;
+      return arguments.length ? (defined = typeof _ === "function" ? _ : constant$2(!!_), line) : defined;
     };
 
     line.curve = function(_) {
@@ -2524,7 +2913,7 @@
     }
   }));
 
-  function constant$2(x) {
+  function constant$3(x) {
     return function() {
       return x;
     };
@@ -2544,18 +2933,18 @@
 
   function hue(a, b) {
     var d = b - a;
-    return d ? linear$2(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant$2(isNaN(a) ? b : a);
+    return d ? linear$2(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant$3(isNaN(a) ? b : a);
   }
 
   function gamma(y) {
     return (y = +y) === 1 ? nogamma : function(a, b) {
-      return b - a ? exponential(a, b, y) : constant$2(isNaN(a) ? b : a);
+      return b - a ? exponential(a, b, y) : constant$3(isNaN(a) ? b : a);
     };
   }
 
   function nogamma(a, b) {
     var d = b - a;
-    return d ? linear$2(a, d) : constant$2(isNaN(a) ? b : a);
+    return d ? linear$2(a, d) : constant$3(isNaN(a) ? b : a);
   }
 
   var rgb = (function rgbGamma(y) {
@@ -2695,7 +3084,7 @@
 
   function interpolateValue(a, b) {
     var t = typeof b, c;
-    return b == null || t === "boolean" ? constant$2(b)
+    return b == null || t === "boolean" ? constant$3(b)
         : (t === "number" ? reinterpolate
         : t === "string" ? ((c = color(b)) ? (b = c, rgb) : string)
         : b instanceof color ? rgb
@@ -2738,7 +3127,7 @@
   cubehelix$1(hue);
   var interpolateCubehelixLong = cubehelix$1(nogamma);
 
-  function constant$3(x) {
+  function constant$4(x) {
     return function() {
       return x;
     };
@@ -2753,7 +3142,7 @@
   function deinterpolate(a, b) {
     return (b -= (a = +a))
         ? function(x) { return (x - a) / b; }
-        : constant$3(b);
+        : constant$4(b);
   }
 
   function deinterpolateClamp(deinterpolate) {
@@ -3255,7 +3644,7 @@
     function deinterpolate(a, b) {
       return (b = raise(b, exponent) - (a = raise(a, exponent)))
           ? function(x) { return (raise(x, exponent) - a) / b; }
-          : constant$3(b);
+          : constant$4(b);
     }
 
     function reinterpolate(a, b) {
@@ -4138,6 +4527,35 @@
 
   var plasma = ramp(colors("0d088710078813078916078a19068c1b068d1d068e20068f2206902406912605912805922a05932c05942e05952f059631059733059735049837049938049a3a049a3c049b3e049c3f049c41049d43039e44039e46039f48039f4903a04b03a14c02a14e02a25002a25102a35302a35502a45601a45801a45901a55b01a55c01a65e01a66001a66100a76300a76400a76600a76700a86900a86a00a86c00a86e00a86f00a87100a87201a87401a87501a87701a87801a87a02a87b02a87d03a87e03a88004a88104a78305a78405a78606a68707a68808a68a09a58b0aa58d0ba58e0ca48f0da4910ea3920fa39410a29511a19613a19814a099159f9a169f9c179e9d189d9e199da01a9ca11b9ba21d9aa31e9aa51f99a62098a72197a82296aa2395ab2494ac2694ad2793ae2892b02991b12a90b22b8fb32c8eb42e8db52f8cb6308bb7318ab83289ba3388bb3488bc3587bd3786be3885bf3984c03a83c13b82c23c81c33d80c43e7fc5407ec6417dc7427cc8437bc9447aca457acb4679cc4778cc4977cd4a76ce4b75cf4c74d04d73d14e72d24f71d35171d45270d5536fd5546ed6556dd7566cd8576bd9586ada5a6ada5b69db5c68dc5d67dd5e66de5f65de6164df6263e06363e16462e26561e26660e3685fe4695ee56a5de56b5de66c5ce76e5be76f5ae87059e97158e97257ea7457eb7556eb7655ec7754ed7953ed7a52ee7b51ef7c51ef7e50f07f4ff0804ef1814df1834cf2844bf3854bf3874af48849f48948f58b47f58c46f68d45f68f44f79044f79143f79342f89441f89540f9973ff9983ef99a3efa9b3dfa9c3cfa9e3bfb9f3afba139fba238fca338fca537fca636fca835fca934fdab33fdac33fdae32fdaf31fdb130fdb22ffdb42ffdb52efeb72dfeb82cfeba2cfebb2bfebd2afebe2afec029fdc229fdc328fdc527fdc627fdc827fdca26fdcb26fccd25fcce25fcd025fcd225fbd324fbd524fbd724fad824fada24f9dc24f9dd25f8df25f8e125f7e225f7e425f6e626f6e826f5e926f5eb27f4ed27f3ee27f3f027f2f227f1f426f1f525f0f724f0f921"));
 
+  function sequential(interpolator) {
+    var x0 = 0,
+        x1 = 1,
+        clamp = false;
+
+    function scale(x) {
+      var t = (x - x0) / (x1 - x0);
+      return interpolator(clamp ? Math.max(0, Math.min(1, t)) : t);
+    }
+
+    scale.domain = function(_) {
+      return arguments.length ? (x0 = +_[0], x1 = +_[1], scale) : [x0, x1];
+    };
+
+    scale.clamp = function(_) {
+      return arguments.length ? (clamp = !!_, scale) : clamp;
+    };
+
+    scale.interpolator = function(_) {
+      return arguments.length ? (interpolator = _, scale) : interpolator;
+    };
+
+    scale.copy = function() {
+      return sequential(interpolator).domain([x0, x1]).clamp(clamp);
+    };
+
+    return linearish(scale);
+  }
+
   var xhtml = "http://www.w3.org/1999/xhtml";
 
   var namespaces = {
@@ -4448,13 +4866,13 @@
     querySelectorAll: function(selector) { return this._parent.querySelectorAll(selector); }
   };
 
-  function constant$4(x) {
+  function constant$5(x) {
     return function() {
       return x;
     };
   }
 
-  var keyPrefix = "$"; // Protect against keys like “__proto__”.
+  var keyPrefix$1 = "$"; // Protect against keys like “__proto__”.
 
   function bindIndex(parent, group, enter, update, exit, data) {
     var i = 0,
@@ -4495,7 +4913,7 @@
     // If multiple nodes have the same key, the duplicates are added to exit.
     for (i = 0; i < groupLength; ++i) {
       if (node = group[i]) {
-        keyValues[i] = keyValue = keyPrefix + key.call(node, node.__data__, i, group);
+        keyValues[i] = keyValue = keyPrefix$1 + key.call(node, node.__data__, i, group);
         if (keyValue in nodeByKeyValue) {
           exit[i] = node;
         } else {
@@ -4508,7 +4926,7 @@
     // If there a node associated with this key, join and add it to update.
     // If there is not (or the key is a duplicate), add it to enter.
     for (i = 0; i < dataLength; ++i) {
-      keyValue = keyPrefix + key.call(parent, data[i], i, data);
+      keyValue = keyPrefix$1 + key.call(parent, data[i], i, data);
       if (node = nodeByKeyValue[keyValue]) {
         update[i] = node;
         node.__data__ = data[i];
@@ -4537,7 +4955,7 @@
         parents = this._parents,
         groups = this._groups;
 
-    if (typeof value !== "function") value = constant$4(value);
+    if (typeof value !== "function") value = constant$5(value);
 
     for (var m = groups.length, update = new Array(m), enter = new Array(m), exit = new Array(m), j = 0; j < m; ++j) {
       var parent = parents[j],
@@ -5970,7 +6388,7 @@
     }
   }));
 
-  function constant$5(x) {
+  function constant$6(x) {
     return function() {
       return x;
     };
@@ -5990,18 +6408,18 @@
 
   function hue$1(a, b) {
     var d = b - a;
-    return d ? linear$3(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant$5(isNaN(a) ? b : a);
+    return d ? linear$3(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant$6(isNaN(a) ? b : a);
   }
 
   function gamma$1(y) {
     return (y = +y) === 1 ? nogamma$1 : function(a, b) {
-      return b - a ? exponential$1(a, b, y) : constant$5(isNaN(a) ? b : a);
+      return b - a ? exponential$1(a, b, y) : constant$6(isNaN(a) ? b : a);
     };
   }
 
   function nogamma$1(a, b) {
     var d = b - a;
-    return d ? linear$3(a, d) : constant$5(isNaN(a) ? b : a);
+    return d ? linear$3(a, d) : constant$6(isNaN(a) ? b : a);
   }
 
   var interpolateRgb = (function rgbGamma(y) {
@@ -7011,6 +7429,7 @@
   exports.nest = nest;
   exports.easeCubic = easeCubicInOut;
   exports.easeSinInOut = sinInOut;
+  exports.stratify = stratify;
   exports.queue = queue;
   exports.line = line;
   exports.request = request;
@@ -7021,6 +7440,8 @@
   exports.scaleLinear = linear$1;
   exports.scaleOrdinal = ordinal;
   exports.scalePow = pow;
+  exports.scaleSequential = sequential;
+  exports.interpolateInferno = inferno;
   exports.creator = creator;
   exports.customEvent = customEvent;
   exports.local = local;

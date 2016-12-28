@@ -71,6 +71,59 @@ Patentes
   }
 }
 
+/*
+Vaccines
+*/
+
+.vaccine-graph{
+
+  $padding-top: 20px;
+  $padding-left: 100px;
+
+  width: 100%;
+  padding-top: $padding-top;
+  padding-left: $padding-left;
+  margin-bottom: 60px;
+
+  .cell-container{
+    position: relative;
+    width: 100%;
+  }
+
+  .cell{
+    position: absolute;
+  }
+
+  .axis{
+    position: relative;
+  }
+
+  .axis-item{
+    position: absolute;
+    font-family: $font-family-sans-serif;
+    font-size: 0.813em;
+  }
+
+  .x-axis{
+    top: -$padding-top;
+
+    .axis-item{
+      text-indent: -0.333em; // Center label in cell
+    }
+  }
+
+  .y-axis{
+    left: -$padding-left;
+
+    .axis-item{
+      width: $padding-left;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
 
 /*
 Infographic
