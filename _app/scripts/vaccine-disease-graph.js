@@ -17,16 +17,23 @@ var VaccineDiseaseGraph = function( _id ) {
 
     console.log('Vaccine Graph init', that.id, that.disease);
 
-    that.$el  = $('#'+that.id);
-    that.lang = that.$el.data('lang');
+    that.$el      = $('#'+that.id);
+    that.$tooltip = $('#vaccine-disease-tooltip');
+    that.lang     = that.$el.data('lang');
 
     that.x = d3.scaleBand()
+      .padding(0)
+      .paddingInner(0)
+      .paddingOuter(0)
       .round(true);
 
     that.y = d3.scaleBand()
+      .padding(0)
+      .paddingInner(0)
+      .paddingOuter(0)
       .round(true);
 
-    that.color = d3.scaleSequential(d3.interpolateInferno);
+    that.color = d3.scaleSequential(d3.interpolateMagma);
 
     if (that.data) {
       clear();
@@ -60,11 +67,43 @@ var VaccineDiseaseGraph = function( _id ) {
 
     that.data = data_csv;
     that.dataPopulation = population_csv;
+
+    // we don't need the columns attribute
+    delete that.data.columns;
+
     that.data.forEach(function(d){
       d.disease = d.disease.toLowerCase();
       if (d.year_introduction) {
         d.year_introduction = +d.year_introduction.replace('prior to', '');
       }
+     
+      d.values = {};
+
+      // set value es cases /1000 habitants
+      var populationItem = population_csv.filter(function(country){ return country.code === d.code; });
+      if (populationItem.length > 0) {
+        for(var year=1980; year<2016; year++){
+          if (d[year]) {
+            var population = +populationItem[0][year];
+            if (population !== 0) {
+              //d[year] = 1000 * (+d[year] / population);
+              d.values[year] = 1000 * (+d[year] / population);
+            } else {
+              //d[year] = null;
+              //console.log('No hay datos de población para', d.name, 'en ', year, d[year]);
+            }
+          } else{
+            //d[year] = null;
+            //console.log('No hay datos de casos de ' + d.disease + ' para', d.name, 'en ', year, ':', d[year], typeof d[year]);
+          }
+          delete d[year];
+        }
+      } else {
+        console.log('No hay datos de población para', d.name);
+      }
+
+      // Get total cases by country & disease
+      d.total = d3.values(d.values).reduce(function(a,b){return a + b;}, 0);
     });
 
     setupData();
@@ -74,48 +113,40 @@ var VaccineDiseaseGraph = function( _id ) {
   var setupData = function() {
 
     // Filter data based on selected disease
-    that.current_data = that.data.filter(function(d){ return d.disease === that.disease; });
+    that.current_data = that.data.filter(function(d){ return d.disease === that.disease && d3.values(d.values).length > 0; });
 
     // Sort data by year of introduction
-    that.current_data.sort(function(a,b){ return (isNaN(a.year_introduction)) ? 1 : (isNaN(b.year_introduction)) ? -1 : b.year_introduction-a.year_introduction; });
+    //that.current_data.sort(function(a,b){ return (isNaN(a.year_introduction)) ? 1 : (isNaN(b.year_introduction)) ? -1 : b.year_introduction-a.year_introduction; });
+    that.current_data.sort(function(a,b){ return b.total-a.total; });
+
+    console.log( that.current_data);
 
     // Get array of country names
     that.countries = that.current_data.map(function(d){ return d.code; });
 
     // Get array of years
-    that.years = d3.keys(that.current_data[0])
-      .map(function(d){ return +d; })
-      .filter(function(d){ return !isNaN(d); });
-    removeEmptyYears();
+    var min_year = d3.min(that.current_data, function(d){ return d3.min(d3.keys(d.values)); });
+    var max_year = d3.max(that.current_data, function(d){ return d3.max(d3.keys(d.values)); });
+    that.years = d3.range(min_year, max_year, 1);
+    that.years.push(+max_year);
 
-    //console.log(that.countries);
-    //console.log(that.years);
+    console.log(min_year, max_year, that.years);
+    console.log(that.countries);
 
     // Get array of data values
     that.cells_data = [];
     that.current_data.forEach(function(d){
-      var populationItem = that.dataPopulation.filter(function(country){ return country.code === d.code; });
-      if (populationItem.length > 0) {
-        that.years.forEach(function(year){
-          if (d[year]) {
-            var population = +populationItem[0][year];
-            if (population !== 0) {
-              that.cells_data.push({
-                country: d.code,
-                name: d.name,
-                year: year,
-                value: 1000 * (+d[year] / population)
-              });
-            } else {
-              console.log('No hay datos de población para', d.name, 'en ', year);
-            }
-          }
+      for (var value in d.values){
+        that.cells_data.push({
+          country: d.code,
+          name: d.name,
+          year: value,
+          value: d.values[value]
         });
-      } else {
-        console.log('No hay datos de población para', d.name);
       }
     });
 
+    /*
     that.current_data.forEach(function(d){
       var counter = 0;
       that.years.forEach(function(year){
@@ -125,6 +156,7 @@ var VaccineDiseaseGraph = function( _id ) {
       if(counter <= 20) // that.years.length/2)
         console.log(d.name + ' has only values for ' + counter + ' years');
     });
+    */
   };
 
   var setupGraph = function() {
@@ -141,7 +173,7 @@ var VaccineDiseaseGraph = function( _id ) {
       .range([0, that.height]);
 
     //that.color.domain([d3.max(that.cells_data, function(d){ return d.value; }), 0]);
-    that.color.domain([10, 0]);
+    that.color.domain([4, 0]);
 
     console.log('Maximum cases value: '+ d3.max(that.cells_data, function(d){ return d.value; }));
 
@@ -152,6 +184,7 @@ var VaccineDiseaseGraph = function( _id ) {
     // Draw cells
     that.container.append('div')
       .attr('class', 'cell-container')
+      .style('height', that.height+'px')
       .selectAll('.cell')
       .data(that.cells_data)
     .enter().append('div')
@@ -161,11 +194,10 @@ var VaccineDiseaseGraph = function( _id ) {
       .style('width', that.x.bandwidth()+'px')
       .style('height', that.y.bandwidth()+'px')
       .style('background', function(d){ return that.color(d.value); })
-      .on('mouseover', function(d){
-        console.log(d.name, d.year, d.value);
-      });
+      .on('mouseover', onMouseOver)
+      .on('mouseout', onMouseOut);
 
-    // Draw countries x axis
+    // Draw years x axis
     that.container.append('div')
       .attr('class', 'x-axis axis')
       .selectAll('.axis-item')
@@ -175,7 +207,7 @@ var VaccineDiseaseGraph = function( _id ) {
       .style('left', function(d){ return that.x(d)+'px'; })
       .html(function(d){ return d; });
 
-    // Draw years y axis
+    // Draw countries y axis
     that.container.append('div')
       .attr('class', 'y-axis axis')
       .selectAll('.axis-item')
@@ -195,7 +227,7 @@ var VaccineDiseaseGraph = function( _id ) {
       .attr('class', 'introduction')
       .style('top', function(d){ return that.y(d.code)+'px'; })
       .style('left', function(d){
-        return (d.year < that.years[0]) ? that.x(that.years[0])+'px' : (d.year < that.years[that.years.length-1]) ? that.x(d.year)+'px' : (that.x.bandwidth()+that.x(that.years[that.years.length-1]))+'px';
+        return (d.year < that.years[0]) ? (that.x(that.years[0])-1)+'px' : (d.year < that.years[that.years.length-1]) ? (that.x(d.year)-1)+'px' : (that.x.bandwidth()+that.x(that.years[that.years.length-1]))+'px';
       })
       .style('height', that.y.bandwidth()+'px');
   };
@@ -205,24 +237,23 @@ var VaccineDiseaseGraph = function( _id ) {
     that.container.selectAll('.axis').remove();
   };
 
-  var removeEmptyYears = function(){
-    var c = that.years.length-1;
-    while( c >= 0) {
-      var year = that.years[c];
-      var empties = that.current_data
-        .map(function(d){ return d[year]; })
-        .filter(function(d){ return d === ''; })
-        .length;
-      // Delete years with all values empty
-      if(empties === that.countries.length){
-        that.years.splice(c, 1);
-      }
-      c--;
-    }
+  var onMouseOver = function(d){
+    console.log(that.$tooltip, d.name, d.year, d.value);
+
+    that.$tooltip.find('.tooltip-inner').html('<small>'+d.year+'</small><strong>'+d.name+'</strong><p>'+d.value.toFixed(1)+' casos por cada 1000 habitantes</p>');
+    that.$tooltip.css({
+      'left': $(this).offset().left + that.x.bandwidth(),
+      'top': $(this).offset().top + (that.y.bandwidth()*0.5) - (that.$tooltip.height()*0.5),
+      'opacity': '1'
+    });
+  };
+
+  var onMouseOut = function(d){
+    that.$tooltip.css('opacity', '0');
   };
 
   var getCountryName = function(code) {
-    var country = that.cells_data.filter(function(d){ return d.country === code; });
+    var country = that.current_data.filter(function(d){ return d.code === code; });
     return (country[0]) ? country[0].name : '';
   };
 

@@ -78,25 +78,30 @@ Vaccines
 #vaccine-disease-graph{
   font-family: $font-family-sans-serif;
 
-  $padding-top: 20px;
   $padding-left: 100px;
 
   .graph-container{
+    position: relative;
     width: 100%;
-    padding-top: $padding-top;
+    margin-top: $grid-gutter-width;
     padding-left: $padding-left;
     margin-bottom: 2*$grid-gutter-width;
-    margin-top: $grid-gutter-width/2;
   }
 
   .cell-container{
     position: relative;
     width: 100%;
+    background: $gray-lighter;
   }
 
   .cell{
     position: absolute;
     outline: 1px solid white;
+
+    &:hover{
+      outline-width: 2px;
+      z-index: 90;
+    }
   }
 
   .introduction{
@@ -106,7 +111,7 @@ Vaccines
   }
 
   .axis{
-    position: relative;
+    position: absolute;
   }
 
   .axis-item{
@@ -115,15 +120,16 @@ Vaccines
   }
 
   .x-axis{
-    top: -$padding-top;
+    top: -20px;
 
     .axis-item{
-      text-indent: -0.333em; // Center label in cell
+      //text-indent: -0.333em; // Center label in cell
     }
   }
 
   .y-axis{
-    left: -$padding-left;
+    top: 0;
+    left: 0;
 
     .axis-item{
       width: $padding-left;
@@ -131,6 +137,44 @@ Vaccines
       white-space: nowrap;
       text-overflow: ellipsis;
     }
+  }
+
+  .form-group{
+    float: right;
+    margin-top: -70px;
+    font-size: 0.913em;
+
+    select{
+      font-size: 14px;
+    }
+  }
+}
+
+#vaccine-disease-tooltip{
+  pointer-events: none;
+
+  .tooltip-inner{
+    text-align: left;
+  }
+
+  small{
+    display: block;
+    font-size: 1em;
+    color: $text-color;
+    font-weight: 400;
+  }
+
+  strong{
+    display: block;
+    font-size: 1.25em;
+    font-weight: 600;
+    padding-top: $grid-gutter-width/6;
+  }
+
+  p{
+    color: $brand-primary;
+    margin-bottom: 0;
+    font-weight: 400;
   }
 }
 

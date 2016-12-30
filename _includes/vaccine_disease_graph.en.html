@@ -1,0 +1,23 @@
+</div>
+<div id="vaccine-disease-graph" data-lang="{{ page.lang }}">
+  <ul id="disease-selector" class="nav nav-tabs">
+    <li role="presentation"><a href="#mumps">Paperas</a></li>
+    <li role="presentation"><a href="#polio">Polio</a></li>
+    <li role="presentation"><a href="#rubella">Rubeola</a></li>
+    <li role="presentation" class="active"><a href="#measles">Sarampión</a></li>
+    <li role="presentation"><a href="#pertussis">Tosferina</a></li>
+  </ul>
+  <div class="form-group">
+    <label for="order-selector" class="control-label">Order by</label>
+    <select id="order-selector" class="form-control">
+      <option>Vaccine year of introduction</option>
+      <option>Number of cases per habitant</option>
+    </select>
+  </div>
+  <div class="graph-container"></div>
+  <div id="vaccine-disease-tooltip" class="tooltip right" role="tooltip">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner"></div>
+  </div>
+</div>
+<div class="page-content-container" markdown="1">

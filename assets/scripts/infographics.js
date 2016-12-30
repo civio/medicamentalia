@@ -520,395 +520,6 @@
     return elasticInOut;
   })(amplitude, period);
 
-  function node_each(callback) {
-    var node = this, current, next = [node], children, i, n;
-    do {
-      current = next.reverse(), next = [];
-      while (node = current.pop()) {
-        callback(node), children = node.children;
-        if (children) for (i = 0, n = children.length; i < n; ++i) {
-          next.push(children[i]);
-        }
-      }
-    } while (next.length);
-    return this;
-  }
-
-  function node_eachBefore(callback) {
-    var node = this, nodes = [node], children, i;
-    while (node = nodes.pop()) {
-      callback(node), children = node.children;
-      if (children) for (i = children.length - 1; i >= 0; --i) {
-        nodes.push(children[i]);
-      }
-    }
-    return this;
-  }
-
-  function node_eachAfter(callback) {
-    var node = this, nodes = [node], next = [], children, i, n;
-    while (node = nodes.pop()) {
-      next.push(node), children = node.children;
-      if (children) for (i = 0, n = children.length; i < n; ++i) {
-        nodes.push(children[i]);
-      }
-    }
-    while (node = next.pop()) {
-      callback(node);
-    }
-    return this;
-  }
-
-  function node_sum(value) {
-    return this.eachAfter(function(node) {
-      var sum = +value(node.data) || 0,
-          children = node.children,
-          i = children && children.length;
-      while (--i >= 0) sum += children[i].value;
-      node.value = sum;
-    });
-  }
-
-  function node_sort(compare) {
-    return this.eachBefore(function(node) {
-      if (node.children) {
-        node.children.sort(compare);
-      }
-    });
-  }
-
-  function node_path(end) {
-    var start = this,
-        ancestor = leastCommonAncestor(start, end),
-        nodes = [start];
-    while (start !== ancestor) {
-      start = start.parent;
-      nodes.push(start);
-    }
-    var k = nodes.length;
-    while (end !== ancestor) {
-      nodes.splice(k, 0, end);
-      end = end.parent;
-    }
-    return nodes;
-  }
-
-  function leastCommonAncestor(a, b) {
-    if (a === b) return a;
-    var aNodes = a.ancestors(),
-        bNodes = b.ancestors(),
-        c = null;
-    a = aNodes.pop();
-    b = bNodes.pop();
-    while (a === b) {
-      c = a;
-      a = aNodes.pop();
-      b = bNodes.pop();
-    }
-    return c;
-  }
-
-  function node_ancestors() {
-    var node = this, nodes = [node];
-    while (node = node.parent) {
-      nodes.push(node);
-    }
-    return nodes;
-  }
-
-  function node_descendants() {
-    var nodes = [];
-    this.each(function(node) {
-      nodes.push(node);
-    });
-    return nodes;
-  }
-
-  function node_leaves() {
-    var leaves = [];
-    this.eachBefore(function(node) {
-      if (!node.children) {
-        leaves.push(node);
-      }
-    });
-    return leaves;
-  }
-
-  function node_links() {
-    var root = this, links = [];
-    root.each(function(node) {
-      if (node !== root) { // Don’t include the root’s parent, if any.
-        links.push({source: node.parent, target: node});
-      }
-    });
-    return links;
-  }
-
-  function hierarchy(data, children) {
-    var root = new Node(data),
-        valued = +data.value && (root.value = data.value),
-        node,
-        nodes = [root],
-        child,
-        childs,
-        i,
-        n;
-
-    if (children == null) children = defaultChildren;
-
-    while (node = nodes.pop()) {
-      if (valued) node.value = +node.data.value;
-      if ((childs = children(node.data)) && (n = childs.length)) {
-        node.children = new Array(n);
-        for (i = n - 1; i >= 0; --i) {
-          nodes.push(child = node.children[i] = new Node(childs[i]));
-          child.parent = node;
-          child.depth = node.depth + 1;
-        }
-      }
-    }
-
-    return root.eachBefore(computeHeight);
-  }
-
-  function node_copy() {
-    return hierarchy(this).eachBefore(copyData);
-  }
-
-  function defaultChildren(d) {
-    return d.children;
-  }
-
-  function copyData(node) {
-    node.data = node.data.data;
-  }
-
-  function computeHeight(node) {
-    var height = 0;
-    do node.height = height;
-    while ((node = node.parent) && (node.height < ++height));
-  }
-
-  function Node(data) {
-    this.data = data;
-    this.depth =
-    this.height = 0;
-    this.parent = null;
-  }
-
-  Node.prototype = hierarchy.prototype = {
-    constructor: Node,
-    each: node_each,
-    eachAfter: node_eachAfter,
-    eachBefore: node_eachBefore,
-    sum: node_sum,
-    sort: node_sort,
-    path: node_path,
-    ancestors: node_ancestors,
-    descendants: node_descendants,
-    leaves: node_leaves,
-    links: node_links,
-    copy: node_copy
-  };
-
-  function required(f) {
-    if (typeof f !== "function") throw new Error;
-    return f;
-  }
-
-  function treemapDice(parent, x0, y0, x1, y1) {
-    var nodes = parent.children,
-        node,
-        i = -1,
-        n = nodes.length,
-        k = parent.value && (x1 - x0) / parent.value;
-
-    while (++i < n) {
-      node = nodes[i], node.y0 = y0, node.y1 = y1;
-      node.x0 = x0, node.x1 = x0 += node.value * k;
-    }
-  }
-
-  var keyPrefix = "$";
-  var preroot = {depth: -1};
-  var ambiguous = {};
-  function defaultId(d) {
-    return d.id;
-  }
-
-  function defaultParentId(d) {
-    return d.parentId;
-  }
-
-  function stratify() {
-    var id = defaultId,
-        parentId = defaultParentId;
-
-    function stratify(data) {
-      var d,
-          i,
-          n = data.length,
-          root,
-          parent,
-          node,
-          nodes = new Array(n),
-          nodeId,
-          nodeKey,
-          nodeByKey = {};
-
-      for (i = 0; i < n; ++i) {
-        d = data[i], node = nodes[i] = new Node(d);
-        if ((nodeId = id(d, i, data)) != null && (nodeId += "")) {
-          nodeKey = keyPrefix + (node.id = nodeId);
-          nodeByKey[nodeKey] = nodeKey in nodeByKey ? ambiguous : node;
-        }
-      }
-
-      for (i = 0; i < n; ++i) {
-        node = nodes[i], nodeId = parentId(data[i], i, data);
-        if (nodeId == null || !(nodeId += "")) {
-          if (root) throw new Error("multiple roots");
-          root = node;
-        } else {
-          parent = nodeByKey[keyPrefix + nodeId];
-          if (!parent) throw new Error("missing: " + nodeId);
-          if (parent === ambiguous) throw new Error("ambiguous: " + nodeId);
-          if (parent.children) parent.children.push(node);
-          else parent.children = [node];
-          node.parent = parent;
-        }
-      }
-
-      if (!root) throw new Error("no root");
-      root.parent = preroot;
-      root.eachBefore(function(node) { node.depth = node.parent.depth + 1; --n; }).eachBefore(computeHeight);
-      root.parent = null;
-      if (n > 0) throw new Error("cycle");
-
-      return root;
-    }
-
-    stratify.id = function(x) {
-      return arguments.length ? (id = required(x), stratify) : id;
-    };
-
-    stratify.parentId = function(x) {
-      return arguments.length ? (parentId = required(x), stratify) : parentId;
-    };
-
-    return stratify;
-  }
-
-  function treemapSlice(parent, x0, y0, x1, y1) {
-    var nodes = parent.children,
-        node,
-        i = -1,
-        n = nodes.length,
-        k = parent.value && (y1 - y0) / parent.value;
-
-    while (++i < n) {
-      node = nodes[i], node.x0 = x0, node.x1 = x1;
-      node.y0 = y0, node.y1 = y0 += node.value * k;
-    }
-  }
-
-  var phi = (1 + Math.sqrt(5)) / 2;
-
-  function squarifyRatio(ratio, parent, x0, y0, x1, y1) {
-    var rows = [],
-        nodes = parent.children,
-        row,
-        nodeValue,
-        i0 = 0,
-        i1 = 0,
-        n = nodes.length,
-        dx, dy,
-        value = parent.value,
-        sumValue,
-        minValue,
-        maxValue,
-        newRatio,
-        minRatio,
-        alpha,
-        beta;
-
-    while (i0 < n) {
-      dx = x1 - x0, dy = y1 - y0;
-
-      // Find the next non-empty node.
-      do sumValue = nodes[i1++].value; while (!sumValue && i1 < n);
-      minValue = maxValue = sumValue;
-      alpha = Math.max(dy / dx, dx / dy) / (value * ratio);
-      beta = sumValue * sumValue * alpha;
-      minRatio = Math.max(maxValue / beta, beta / minValue);
-
-      // Keep adding nodes while the aspect ratio maintains or improves.
-      for (; i1 < n; ++i1) {
-        sumValue += nodeValue = nodes[i1].value;
-        if (nodeValue < minValue) minValue = nodeValue;
-        if (nodeValue > maxValue) maxValue = nodeValue;
-        beta = sumValue * sumValue * alpha;
-        newRatio = Math.max(maxValue / beta, beta / minValue);
-        if (newRatio > minRatio) { sumValue -= nodeValue; break; }
-        minRatio = newRatio;
-      }
-
-      // Position and record the row orientation.
-      rows.push(row = {value: sumValue, dice: dx < dy, children: nodes.slice(i0, i1)});
-      if (row.dice) treemapDice(row, x0, y0, x1, value ? y0 += dy * sumValue / value : y1);
-      else treemapSlice(row, x0, y0, value ? x0 += dx * sumValue / value : x1, y1);
-      value -= sumValue, i0 = i1;
-    }
-
-    return rows;
-  }
-
-  (function custom(ratio) {
-
-    function squarify(parent, x0, y0, x1, y1) {
-      squarifyRatio(ratio, parent, x0, y0, x1, y1);
-    }
-
-    squarify.ratio = function(x) {
-      return custom((x = +x) > 1 ? x : 1);
-    };
-
-    return squarify;
-  })(phi);
-
-  (function custom(ratio) {
-
-    function resquarify(parent, x0, y0, x1, y1) {
-      if ((rows = parent._squarify) && (rows.ratio === ratio)) {
-        var rows,
-            row,
-            nodes,
-            i,
-            j = -1,
-            n,
-            m = rows.length,
-            value = parent.value;
-
-        while (++j < m) {
-          row = rows[j], nodes = row.children;
-          for (i = row.value = 0, n = nodes.length; i < n; ++i) row.value += nodes[i].value;
-          if (row.dice) treemapDice(row, x0, y0, x1, y0 += (y1 - y0) * row.value / value);
-          else treemapSlice(row, x0, y0, x0 += (x1 - x0) * row.value / value, y1);
-          value -= row.value;
-        }
-      } else {
-        parent._squarify = rows = squarifyRatio(ratio, parent, x0, y0, x1, y1);
-        rows.ratio = ratio;
-      }
-    }
-
-    resquarify.ratio = function(x) {
-      return custom((x = +x) > 1 ? x : 1);
-    };
-
-    return resquarify;
-  })(phi);
-
   var slice$1 = [].slice;
 
   var noabort = {};
@@ -1170,7 +781,7 @@
     }
   };
 
-  function constant$2(x) {
+  function constant$1(x) {
     return function constant() {
       return x;
     };
@@ -1221,7 +832,7 @@
   function line() {
     var x$$ = x,
         y$$ = y,
-        defined = constant$2(true),
+        defined = constant$1(true),
         context = null,
         curve = curveLinear,
         output = null;
@@ -1247,15 +858,15 @@
     }
 
     line.x = function(_) {
-      return arguments.length ? (x$$ = typeof _ === "function" ? _ : constant$2(+_), line) : x$$;
+      return arguments.length ? (x$$ = typeof _ === "function" ? _ : constant$1(+_), line) : x$$;
     };
 
     line.y = function(_) {
-      return arguments.length ? (y$$ = typeof _ === "function" ? _ : constant$2(+_), line) : y$$;
+      return arguments.length ? (y$$ = typeof _ === "function" ? _ : constant$1(+_), line) : y$$;
     };
 
     line.defined = function(_) {
-      return arguments.length ? (defined = typeof _ === "function" ? _ : constant$2(!!_), line) : defined;
+      return arguments.length ? (defined = typeof _ === "function" ? _ : constant$1(!!_), line) : defined;
     };
 
     line.curve = function(_) {
@@ -2913,7 +2524,7 @@
     }
   }));
 
-  function constant$3(x) {
+  function constant$2(x) {
     return function() {
       return x;
     };
@@ -2933,18 +2544,18 @@
 
   function hue(a, b) {
     var d = b - a;
-    return d ? linear$2(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant$3(isNaN(a) ? b : a);
+    return d ? linear$2(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant$2(isNaN(a) ? b : a);
   }
 
   function gamma(y) {
     return (y = +y) === 1 ? nogamma : function(a, b) {
-      return b - a ? exponential(a, b, y) : constant$3(isNaN(a) ? b : a);
+      return b - a ? exponential(a, b, y) : constant$2(isNaN(a) ? b : a);
     };
   }
 
   function nogamma(a, b) {
     var d = b - a;
-    return d ? linear$2(a, d) : constant$3(isNaN(a) ? b : a);
+    return d ? linear$2(a, d) : constant$2(isNaN(a) ? b : a);
   }
 
   var rgb = (function rgbGamma(y) {
@@ -3084,7 +2695,7 @@
 
   function interpolateValue(a, b) {
     var t = typeof b, c;
-    return b == null || t === "boolean" ? constant$3(b)
+    return b == null || t === "boolean" ? constant$2(b)
         : (t === "number" ? reinterpolate
         : t === "string" ? ((c = color(b)) ? (b = c, rgb) : string)
         : b instanceof color ? rgb
@@ -3127,7 +2738,7 @@
   cubehelix$1(hue);
   var interpolateCubehelixLong = cubehelix$1(nogamma);
 
-  function constant$4(x) {
+  function constant$3(x) {
     return function() {
       return x;
     };
@@ -3142,7 +2753,7 @@
   function deinterpolate(a, b) {
     return (b -= (a = +a))
         ? function(x) { return (x - a) / b; }
-        : constant$4(b);
+        : constant$3(b);
   }
 
   function deinterpolateClamp(deinterpolate) {
@@ -3644,7 +3255,7 @@
     function deinterpolate(a, b) {
       return (b = raise(b, exponent) - (a = raise(a, exponent)))
           ? function(x) { return (raise(x, exponent) - a) / b; }
-          : constant$4(b);
+          : constant$3(b);
     }
 
     function reinterpolate(a, b) {
@@ -4519,7 +4130,7 @@
     };
   }
 
-  ramp(colors("44015444025645045745055946075a46085c460a5d460b5e470d60470e6147106347116447136548146748166848176948186a481a6c481b6d481c6e481d6f481f70482071482173482374482475482576482677482878482979472a7a472c7a472d7b472e7c472f7d46307e46327e46337f463480453581453781453882443983443a83443b84433d84433e85423f854240864241864142874144874045884046883f47883f48893e49893e4a893e4c8a3d4d8a3d4e8a3c4f8a3c508b3b518b3b528b3a538b3a548c39558c39568c38588c38598c375a8c375b8d365c8d365d8d355e8d355f8d34608d34618d33628d33638d32648e32658e31668e31678e31688e30698e306a8e2f6b8e2f6c8e2e6d8e2e6e8e2e6f8e2d708e2d718e2c718e2c728e2c738e2b748e2b758e2a768e2a778e2a788e29798e297a8e297b8e287c8e287d8e277e8e277f8e27808e26818e26828e26828e25838e25848e25858e24868e24878e23888e23898e238a8d228b8d228c8d228d8d218e8d218f8d21908d21918c20928c20928c20938c1f948c1f958b1f968b1f978b1f988b1f998a1f9a8a1e9b8a1e9c891e9d891f9e891f9f881fa0881fa1881fa1871fa28720a38620a48621a58521a68522a78522a88423a98324aa8325ab8225ac8226ad8127ad8128ae8029af7f2ab07f2cb17e2db27d2eb37c2fb47c31b57b32b67a34b67935b77937b87838b9773aba763bbb753dbc743fbc7340bd7242be7144bf7046c06f48c16e4ac16d4cc26c4ec36b50c46a52c56954c56856c66758c7655ac8645cc8635ec96260ca6063cb5f65cb5e67cc5c69cd5b6ccd5a6ece5870cf5773d05675d05477d1537ad1517cd2507fd34e81d34d84d44b86d54989d5488bd6468ed64590d74393d74195d84098d83e9bd93c9dd93ba0da39a2da37a5db36a8db34aadc32addc30b0dd2fb2dd2db5de2bb8de29bade28bddf26c0df25c2df23c5e021c8e020cae11fcde11dd0e11cd2e21bd5e21ad8e219dae319dde318dfe318e2e418e5e419e7e419eae51aece51befe51cf1e51df4e61ef6e620f8e621fbe723fde725"));
+  var viridis = ramp(colors("44015444025645045745055946075a46085c460a5d460b5e470d60470e6147106347116447136548146748166848176948186a481a6c481b6d481c6e481d6f481f70482071482173482374482475482576482677482878482979472a7a472c7a472d7b472e7c472f7d46307e46327e46337f463480453581453781453882443983443a83443b84433d84433e85423f854240864241864142874144874045884046883f47883f48893e49893e4a893e4c8a3d4d8a3d4e8a3c4f8a3c508b3b518b3b528b3a538b3a548c39558c39568c38588c38598c375a8c375b8d365c8d365d8d355e8d355f8d34608d34618d33628d33638d32648e32658e31668e31678e31688e30698e306a8e2f6b8e2f6c8e2e6d8e2e6e8e2e6f8e2d708e2d718e2c718e2c728e2c738e2b748e2b758e2a768e2a778e2a788e29798e297a8e297b8e287c8e287d8e277e8e277f8e27808e26818e26828e26828e25838e25848e25858e24868e24878e23888e23898e238a8d228b8d228c8d228d8d218e8d218f8d21908d21918c20928c20928c20938c1f948c1f958b1f968b1f978b1f988b1f998a1f9a8a1e9b8a1e9c891e9d891f9e891f9f881fa0881fa1881fa1871fa28720a38620a48621a58521a68522a78522a88423a98324aa8325ab8225ac8226ad8127ad8128ae8029af7f2ab07f2cb17e2db27d2eb37c2fb47c31b57b32b67a34b67935b77937b87838b9773aba763bbb753dbc743fbc7340bd7242be7144bf7046c06f48c16e4ac16d4cc26c4ec36b50c46a52c56954c56856c66758c7655ac8645cc8635ec96260ca6063cb5f65cb5e67cc5c69cd5b6ccd5a6ece5870cf5773d05675d05477d1537ad1517cd2507fd34e81d34d84d44b86d54989d5488bd6468ed64590d74393d74195d84098d83e9bd93c9dd93ba0da39a2da37a5db36a8db34aadc32addc30b0dd2fb2dd2db5de2bb8de29bade28bddf26c0df25c2df23c5e021c8e020cae11fcde11dd0e11cd2e21bd5e21ad8e219dae319dde318dfe318e2e418e5e419e7e419eae51aece51befe51cf1e51df4e61ef6e620f8e621fbe723fde725"));
 
   var magma = ramp(colors("00000401000501010601010802010902020b02020d03030f03031204041405041606051806051a07061c08071e0907200a08220b09240c09260d0a290e0b2b100b2d110c2f120d31130d34140e36150e38160f3b180f3d19103f1a10421c10441d11471e114920114b21114e22115024125325125527125829115a2a115c2c115f2d11612f116331116533106734106936106b38106c390f6e3b0f703d0f713f0f72400f74420f75440f764510774710784910784a10794c117a4e117b4f127b51127c52137c54137d56147d57157e59157e5a167e5c167f5d177f5f187f601880621980641a80651a80671b80681c816a1c816b1d816d1d816e1e81701f81721f817320817521817621817822817922827b23827c23827e24828025828125818326818426818627818827818928818b29818c29818e2a81902a81912b81932b80942c80962c80982d80992d809b2e7f9c2e7f9e2f7fa02f7fa1307ea3307ea5317ea6317da8327daa337dab337cad347cae347bb0357bb2357bb3367ab5367ab73779b83779ba3878bc3978bd3977bf3a77c03a76c23b75c43c75c53c74c73d73c83e73ca3e72cc3f71cd4071cf4070d0416fd2426fd3436ed5446dd6456cd8456cd9466bdb476adc4869de4968df4a68e04c67e24d66e34e65e44f64e55064e75263e85362e95462ea5661eb5760ec5860ed5a5fee5b5eef5d5ef05f5ef1605df2625df2645cf3655cf4675cf4695cf56b5cf66c5cf66e5cf7705cf7725cf8745cf8765cf9785df9795df97b5dfa7d5efa7f5efa815ffb835ffb8560fb8761fc8961fc8a62fc8c63fc8e64fc9065fd9266fd9467fd9668fd9869fd9a6afd9b6bfe9d6cfe9f6dfea16efea36ffea571fea772fea973feaa74feac76feae77feb078feb27afeb47bfeb67cfeb77efeb97ffebb81febd82febf84fec185fec287fec488fec68afec88cfeca8dfecc8ffecd90fecf92fed194fed395fed597fed799fed89afdda9cfddc9efddea0fde0a1fde2a3fde3a5fde5a7fde7a9fde9aafdebacfcecaefceeb0fcf0b2fcf2b4fcf4b6fcf6b8fcf7b9fcf9bbfcfbbdfcfdbf"));
 
@@ -4866,13 +4477,13 @@
     querySelectorAll: function(selector) { return this._parent.querySelectorAll(selector); }
   };
 
-  function constant$5(x) {
+  function constant$4(x) {
     return function() {
       return x;
     };
   }
 
-  var keyPrefix$1 = "$"; // Protect against keys like “__proto__”.
+  var keyPrefix = "$"; // Protect against keys like “__proto__”.
 
   function bindIndex(parent, group, enter, update, exit, data) {
     var i = 0,
@@ -4913,7 +4524,7 @@
     // If multiple nodes have the same key, the duplicates are added to exit.
     for (i = 0; i < groupLength; ++i) {
       if (node = group[i]) {
-        keyValues[i] = keyValue = keyPrefix$1 + key.call(node, node.__data__, i, group);
+        keyValues[i] = keyValue = keyPrefix + key.call(node, node.__data__, i, group);
         if (keyValue in nodeByKeyValue) {
           exit[i] = node;
         } else {
@@ -4926,7 +4537,7 @@
     // If there a node associated with this key, join and add it to update.
     // If there is not (or the key is a duplicate), add it to enter.
     for (i = 0; i < dataLength; ++i) {
-      keyValue = keyPrefix$1 + key.call(parent, data[i], i, data);
+      keyValue = keyPrefix + key.call(parent, data[i], i, data);
       if (node = nodeByKeyValue[keyValue]) {
         update[i] = node;
         node.__data__ = data[i];
@@ -4955,7 +4566,7 @@
         parents = this._parents,
         groups = this._groups;
 
-    if (typeof value !== "function") value = constant$5(value);
+    if (typeof value !== "function") value = constant$4(value);
 
     for (var m = groups.length, update = new Array(m), enter = new Array(m), exit = new Array(m), j = 0; j < m; ++j) {
       var parent = parents[j],
@@ -6388,7 +5999,7 @@
     }
   }));
 
-  function constant$6(x) {
+  function constant$5(x) {
     return function() {
       return x;
     };
@@ -6408,18 +6019,18 @@
 
   function hue$1(a, b) {
     var d = b - a;
-    return d ? linear$3(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant$6(isNaN(a) ? b : a);
+    return d ? linear$3(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant$5(isNaN(a) ? b : a);
   }
 
   function gamma$1(y) {
     return (y = +y) === 1 ? nogamma$1 : function(a, b) {
-      return b - a ? exponential$1(a, b, y) : constant$6(isNaN(a) ? b : a);
+      return b - a ? exponential$1(a, b, y) : constant$5(isNaN(a) ? b : a);
     };
   }
 
   function nogamma$1(a, b) {
     var d = b - a;
-    return d ? linear$3(a, d) : constant$6(isNaN(a) ? b : a);
+    return d ? linear$3(a, d) : constant$5(isNaN(a) ? b : a);
   }
 
   var interpolateRgb = (function rgbGamma(y) {
@@ -7429,7 +7040,6 @@
   exports.nest = nest;
   exports.easeCubic = easeCubicInOut;
   exports.easeSinInOut = sinInOut;
-  exports.stratify = stratify;
   exports.queue = queue;
   exports.line = line;
   exports.request = request;
@@ -7442,6 +7052,9 @@
   exports.scalePow = pow;
   exports.scaleSequential = sequential;
   exports.interpolateInferno = inferno;
+  exports.interpolateMagma = magma;
+  exports.interpolatePlasma = plasma;
+  exports.interpolateViridis = viridis;
   exports.creator = creator;
   exports.customEvent = customEvent;
   exports.local = local;
@@ -7824,16 +7437,23 @@ var VaccineDiseaseGraph = function( _id ) {
 
     console.log('Vaccine Graph init', that.id, that.disease);
 
-    that.$el  = $('#'+that.id);
-    that.lang = that.$el.data('lang');
+    that.$el      = $('#'+that.id);
+    that.$tooltip = $('#vaccine-disease-tooltip');
+    that.lang     = that.$el.data('lang');
 
     that.x = d3.scaleBand()
+      .padding(0)
+      .paddingInner(0)
+      .paddingOuter(0)
       .round(true);
 
     that.y = d3.scaleBand()
+      .padding(0)
+      .paddingInner(0)
+      .paddingOuter(0)
       .round(true);
 
-    that.color = d3.scaleSequential(d3.interpolateInferno);
+    that.color = d3.scaleSequential(d3.interpolateMagma);
 
     if (that.data) {
       clear();
@@ -7867,11 +7487,43 @@ var VaccineDiseaseGraph = function( _id ) {
 
     that.data = data_csv;
     that.dataPopulation = population_csv;
+
+    // we don't need the columns attribute
+    delete that.data.columns;
+
     that.data.forEach(function(d){
       d.disease = d.disease.toLowerCase();
       if (d.year_introduction) {
         d.year_introduction = +d.year_introduction.replace('prior to', '');
       }
+     
+      d.values = {};
+
+      // set value es cases /1000 habitants
+      var populationItem = population_csv.filter(function(country){ return country.code === d.code; });
+      if (populationItem.length > 0) {
+        for(var year=1980; year<2016; year++){
+          if (d[year]) {
+            var population = +populationItem[0][year];
+            if (population !== 0) {
+              //d[year] = 1000 * (+d[year] / population);
+              d.values[year] = 1000 * (+d[year] / population);
+            } else {
+              //d[year] = null;
+              //console.log('No hay datos de población para', d.name, 'en ', year, d[year]);
+            }
+          } else{
+            //d[year] = null;
+            //console.log('No hay datos de casos de ' + d.disease + ' para', d.name, 'en ', year, ':', d[year], typeof d[year]);
+          }
+          delete d[year];
+        }
+      } else {
+        console.log('No hay datos de población para', d.name);
+      }
+
+      // Get total cases by country & disease
+      d.total = d3.values(d.values).reduce(function(a,b){return a + b;}, 0);
     });
 
     setupData();
@@ -7881,48 +7533,40 @@ var VaccineDiseaseGraph = function( _id ) {
   var setupData = function() {
 
     // Filter data based on selected disease
-    that.current_data = that.data.filter(function(d){ return d.disease === that.disease; });
+    that.current_data = that.data.filter(function(d){ return d.disease === that.disease && d3.values(d.values).length > 0; });
 
     // Sort data by year of introduction
-    that.current_data.sort(function(a,b){ return (isNaN(a.year_introduction)) ? 1 : (isNaN(b.year_introduction)) ? -1 : b.year_introduction-a.year_introduction; });
+    //that.current_data.sort(function(a,b){ return (isNaN(a.year_introduction)) ? 1 : (isNaN(b.year_introduction)) ? -1 : b.year_introduction-a.year_introduction; });
+    that.current_data.sort(function(a,b){ return b.total-a.total; });
+
+    console.log( that.current_data);
 
     // Get array of country names
     that.countries = that.current_data.map(function(d){ return d.code; });
 
     // Get array of years
-    that.years = d3.keys(that.current_data[0])
-      .map(function(d){ return +d; })
-      .filter(function(d){ return !isNaN(d); });
-    removeEmptyYears();
+    var min_year = d3.min(that.current_data, function(d){ return d3.min(d3.keys(d.values)); });
+    var max_year = d3.max(that.current_data, function(d){ return d3.max(d3.keys(d.values)); });
+    that.years = d3.range(min_year, max_year, 1);
+    that.years.push(+max_year);
 
-    //console.log(that.countries);
-    //console.log(that.years);
+    console.log(min_year, max_year, that.years);
+    console.log(that.countries);
 
     // Get array of data values
     that.cells_data = [];
     that.current_data.forEach(function(d){
-      var populationItem = that.dataPopulation.filter(function(country){ return country.code === d.code; });
-      if (populationItem.length > 0) {
-        that.years.forEach(function(year){
-          if (d[year]) {
-            var population = +populationItem[0][year];
-            if (population !== 0) {
-              that.cells_data.push({
-                country: d.code,
-                name: d.name,
-                year: year,
-                value: 1000 * (+d[year] / population)
-              });
-            } else {
-              console.log('No hay datos de población para', d.name, 'en ', year);
-            }
-          }
+      for (var value in d.values){
+        that.cells_data.push({
+          country: d.code,
+          name: d.name,
+          year: value,
+          value: d.values[value]
         });
-      } else {
-        console.log('No hay datos de población para', d.name);
       }
     });
 
+    /*
     that.current_data.forEach(function(d){
       var counter = 0;
       that.years.forEach(function(year){
@@ -7932,6 +7576,7 @@ var VaccineDiseaseGraph = function( _id ) {
       if(counter <= 20) // that.years.length/2)
         console.log(d.name + ' has only values for ' + counter + ' years');
     });
+    */
   };
 
   var setupGraph = function() {
@@ -7948,7 +7593,7 @@ var VaccineDiseaseGraph = function( _id ) {
       .range([0, that.height]);
 
     //that.color.domain([d3.max(that.cells_data, function(d){ return d.value; }), 0]);
-    that.color.domain([10, 0]);
+    that.color.domain([4, 0]);
 
     console.log('Maximum cases value: '+ d3.max(that.cells_data, function(d){ return d.value; }));
 
@@ -7959,6 +7604,7 @@ var VaccineDiseaseGraph = function( _id ) {
     // Draw cells
     that.container.append('div')
       .attr('class', 'cell-container')
+      .style('height', that.height+'px')
       .selectAll('.cell')
       .data(that.cells_data)
     .enter().append('div')
@@ -7968,11 +7614,10 @@ var VaccineDiseaseGraph = function( _id ) {
       .style('width', that.x.bandwidth()+'px')
       .style('height', that.y.bandwidth()+'px')
       .style('background', function(d){ return that.color(d.value); })
-      .on('mouseover', function(d){
-        console.log(d.name, d.year, d.value);
-      });
+      .on('mouseover', onMouseOver)
+      .on('mouseout', onMouseOut);
 
-    // Draw countries x axis
+    // Draw years x axis
     that.container.append('div')
       .attr('class', 'x-axis axis')
       .selectAll('.axis-item')
@@ -7982,7 +7627,7 @@ var VaccineDiseaseGraph = function( _id ) {
       .style('left', function(d){ return that.x(d)+'px'; })
       .html(function(d){ return d; });
 
-    // Draw years y axis
+    // Draw countries y axis
     that.container.append('div')
       .attr('class', 'y-axis axis')
       .selectAll('.axis-item')
@@ -8002,7 +7647,7 @@ var VaccineDiseaseGraph = function( _id ) {
       .attr('class', 'introduction')
       .style('top', function(d){ return that.y(d.code)+'px'; })
       .style('left', function(d){
-        return (d.year < that.years[0]) ? that.x(that.years[0])+'px' : (d.year < that.years[that.years.length-1]) ? that.x(d.year)+'px' : (that.x.bandwidth()+that.x(that.years[that.years.length-1]))+'px';
+        return (d.year < that.years[0]) ? (that.x(that.years[0])-1)+'px' : (d.year < that.years[that.years.length-1]) ? (that.x(d.year)-1)+'px' : (that.x.bandwidth()+that.x(that.years[that.years.length-1]))+'px';
       })
       .style('height', that.y.bandwidth()+'px');
   };
@@ -8012,24 +7657,23 @@ var VaccineDiseaseGraph = function( _id ) {
     that.container.selectAll('.axis').remove();
   };
 
-  var removeEmptyYears = function(){
-    var c = that.years.length-1;
-    while( c >= 0) {
-      var year = that.years[c];
-      var empties = that.current_data
-        .map(function(d){ return d[year]; })
-        .filter(function(d){ return d === ''; })
-        .length;
-      // Delete years with all values empty
-      if(empties === that.countries.length){
-        that.years.splice(c, 1);
-      }
-      c--;
-    }
+  var onMouseOver = function(d){
+    console.log(that.$tooltip, d.name, d.year, d.value);
+
+    that.$tooltip.find('.tooltip-inner').html('<small>'+d.year+'</small><strong>'+d.name+'</strong><p>'+d.value.toFixed(1)+' casos por cada 1000 habitantes</p>');
+    that.$tooltip.css({
+      'left': $(this).offset().left + that.x.bandwidth(),
+      'top': $(this).offset().top + (that.y.bandwidth()*0.5) - (that.$tooltip.height()*0.5),
+      'opacity': '1'
+    });
+  };
+
+  var onMouseOut = function(d){
+    that.$tooltip.css('opacity', '0');
   };
 
   var getCountryName = function(code) {
-    var country = that.cells_data.filter(function(d){ return d.country === code; });
+    var country = that.current_data.filter(function(d){ return d.code === code; });
     return (country[0]) ? country[0].name : '';
   };
 

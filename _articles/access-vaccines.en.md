@@ -16,20 +16,7 @@ draft:            true
 <div class="container page-content" markdown="1">
   <div class="page-content-container" markdown="1">
 
-  </div>
-
-<div id="vaccine-disease-graph">
-  <ul id="disease-selector" class="nav nav-tabs">
-    <li role="presentation" class="active"><a href="#mumps">Paperas</a></li>
-    <li role="presentation"><a href="#polio">Polio</a></li>
-    <li role="presentation"><a href="#rubella">Rubeola</a></li>
-    <li role="presentation"><a href="#measles">Sarampión</a></li>
-    <li role="presentation"><a href="#pertussis">Tosferina</a></li>
-  </ul>
-  <div class="graph-container"></div>
-</div>
-
-  <div class="page-content-container" markdown="1">
+  {% include vaccine_disease_graph.en.html %}
 
   </div>
 </div>
