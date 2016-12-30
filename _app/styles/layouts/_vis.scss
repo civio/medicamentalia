@@ -75,15 +75,19 @@ Patentes
 Vaccines
 */
 
-.vaccine-graph{
+#vaccine-disease-graph{
+  font-family: $font-family-sans-serif;
 
   $padding-top: 20px;
   $padding-left: 100px;
 
-  width: 100%;
-  padding-top: $padding-top;
-  padding-left: $padding-left;
-  margin-bottom: 60px;
+  .graph-container{
+    width: 100%;
+    padding-top: $padding-top;
+    padding-left: $padding-left;
+    margin-bottom: 2*$grid-gutter-width;
+    margin-top: $grid-gutter-width/2;
+  }
 
   .cell-container{
     position: relative;
@@ -92,6 +96,13 @@ Vaccines
 
   .cell{
     position: absolute;
+    outline: 1px solid white;
+  }
+
+  .introduction{
+    position: absolute;
+    width: 2px;
+    background: #222;
   }
 
   .axis{
@@ -100,7 +111,6 @@ Vaccines
 
   .axis-item{
     position: absolute;
-    font-family: $font-family-sans-serif;
     font-size: 0.813em;
   }
 

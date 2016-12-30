@@ -9901,29 +9901,36 @@ Patentes
 /*
 Vaccines
 */
-.vaccine-graph {
-  width: 100%;
-  padding-top: 20px;
-  padding-left: 100px;
-  margin-bottom: 60px; }
-  .vaccine-graph .cell-container {
+#vaccine-disease-graph {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
+  #vaccine-disease-graph .graph-container {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 100px;
+    margin-bottom: 60px;
+    margin-top: 15px; }
+  #vaccine-disease-graph .cell-container {
     position: relative;
     width: 100%; }
-  .vaccine-graph .cell {
-    position: absolute; }
-  .vaccine-graph .axis {
-    position: relative; }
-  .vaccine-graph .axis-item {
+  #vaccine-disease-graph .cell {
     position: absolute;
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    outline: 1px solid white; }
+  #vaccine-disease-graph .introduction {
+    position: absolute;
+    width: 2px;
+    background: #222; }
+  #vaccine-disease-graph .axis {
+    position: relative; }
+  #vaccine-disease-graph .axis-item {
+    position: absolute;
     font-size: 0.813em; }
-  .vaccine-graph .x-axis {
+  #vaccine-disease-graph .x-axis {
     top: -20px; }
-    .vaccine-graph .x-axis .axis-item {
+    #vaccine-disease-graph .x-axis .axis-item {
       text-indent: -0.333em; }
-  .vaccine-graph .y-axis {
+  #vaccine-disease-graph .y-axis {
     left: -100px; }
-    .vaccine-graph .y-axis .axis-item {
+    #vaccine-disease-graph .y-axis .axis-item {
       width: 100px;
       overflow: hidden;
       white-space: nowrap;

@@ -167,11 +167,16 @@
       graph_antibiotics_animals.init();
       $(window).resize( graph_antibiotics_animals.onResize );
     }
-    if ($('#vaccine-measles-graph').length > 0) {
-      var graph_vaccine_measles = new VaccineGraph('vaccine-measles-graph', $('body').data('baseurl')+'/assets/csv/measles/casos.csv');
-      graph_vaccine_measles.init();
-      $(window).resize( graph_vaccine_measles.onResize );
-      
+    if ($('#vaccine-disease-graph').length > 0) {
+      var graph_vaccine_disease = new VaccineDiseaseGraph('vaccine-disease-graph');
+      graph_vaccine_disease.init( $('#disease-selector .active a').attr('href').substring(1) );
+      $(window).resize( graph_vaccine_disease.onResize );
+      // Update vaccines disease graph based on selected disease
+      $('#disease-selector a').click(function(e){
+        e.preventDefault();
+        $(this).tab('show');
+        graph_vaccine_disease.init( $(this).attr('href').substring(1) );
+      });
     }
   };
    
