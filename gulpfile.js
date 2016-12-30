@@ -43,6 +43,7 @@ var js_paths = {
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/popovers.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
     '_app/scripts/vendor/selection-sharer.js',
@@ -53,7 +54,7 @@ var js_paths = {
     '_app/scripts/vendor/d3-bundle.js',
     '_app/scripts/bar-graph.js',
     '_app/scripts/patents-graph.js',
-    '_app/scripts/vaccine-graph.js',
+    '_app/scripts/vaccine-disease-graph.js',
     '_app/scripts/infographic.js',
     '_app/scripts/antimalaricos-infographic.js',
     '_app/scripts/fakes-infographic.js',
@@ -140,7 +141,7 @@ gulp.task('watch', function() {
   // Watch app .js files
   gulp.watch('_app/scripts/**/*.js', ['js']);
   // Watch Jekyll html files
-  gulp.watch(['**/*.html', '_articles/**/**', '_pages/**/*.*'], ['jekyll-rebuild']);
+  gulp.watch(['**/*.html', '_articles/**/**', '_pages/**/*.*', 'assets/csv/**/*.csv'], ['jekyll-rebuild']);
   // Watch Jekyll sitemap XML file
   //gulp.watch('sitemap.xml', ['jekyll-rebuild']);
   // Watch Jekyll data files
