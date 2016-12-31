@@ -11784,7 +11784,7 @@ return jQuery;
     }
 
     // Smooth page scroll to an article section
-    $('#page-menu a').click(function() {
+    $('.nav-page a[href^="#"]').click(function() {
       animateLink( $($(this).attr('href')), 1 );
     });
     // Smooth page scroll to a notes anchor

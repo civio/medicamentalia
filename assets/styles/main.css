@@ -9886,6 +9886,16 @@ Patentes
   margin-top: 30px;
   padding-bottom: 50%; }
 
+@media (max-width: 768px) {
+  #antibiotics-graph .tick,
+  #antibiotics-graph .bar-label,
+  #antibiotics-animals-graph .tick,
+  #antibiotics-animals-graph .bar-label {
+    display: none; }
+  #antibiotics-graph #ES.bar-label,
+  #antibiotics-animals-graph #ES.bar-label {
+    display: block; } }
+
 /*
 Infographic
 */
