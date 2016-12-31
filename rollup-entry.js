@@ -44,7 +44,9 @@ export {
   scalePoint,
   scaleLinear,
   scaleOrdinal,
-  scalePow
+  scalePow,
+  scaleSequential,
+  interpolateMagma
 } from "d3-scale";
 
 export {

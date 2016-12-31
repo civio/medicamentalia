@@ -167,6 +167,21 @@
       graph_antibiotics_animals.init();
       $(window).resize( graph_antibiotics_animals.onResize );
     }
+    if ($('#vaccine-disease-graph').length > 0) {
+      var graph_vaccine_disease = new VaccineDiseaseGraph('vaccine-disease-graph');
+      graph_vaccine_disease.init( $('#disease-selector .active a').attr('href').substring(1), $('#order-selector').val() );
+      $(window).resize( graph_vaccine_disease.onResize );
+      // Update graph based on selected disease
+      $('#disease-selector a').click(function(e){
+        e.preventDefault();
+        $(this).tab('show');
+        graph_vaccine_disease.init( $(this).attr('href').substring(1), $('#order-selector').val() );
+      });
+      // Update graph baseon on order selector
+      $('#order-selector').change(function(d){
+        graph_vaccine_disease.init( $('#disease-selector .active a').attr('href').substring(1), $('#order-selector').val() );
+      });
+    }
   };
    
   setup();

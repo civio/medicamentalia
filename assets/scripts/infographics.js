@@ -4138,6 +4138,35 @@
 
   var plasma = ramp(colors("0d088710078813078916078a19068c1b068d1d068e20068f2206902406912605912805922a05932c05942e05952f059631059733059735049837049938049a3a049a3c049b3e049c3f049c41049d43039e44039e46039f48039f4903a04b03a14c02a14e02a25002a25102a35302a35502a45601a45801a45901a55b01a55c01a65e01a66001a66100a76300a76400a76600a76700a86900a86a00a86c00a86e00a86f00a87100a87201a87401a87501a87701a87801a87a02a87b02a87d03a87e03a88004a88104a78305a78405a78606a68707a68808a68a09a58b0aa58d0ba58e0ca48f0da4910ea3920fa39410a29511a19613a19814a099159f9a169f9c179e9d189d9e199da01a9ca11b9ba21d9aa31e9aa51f99a62098a72197a82296aa2395ab2494ac2694ad2793ae2892b02991b12a90b22b8fb32c8eb42e8db52f8cb6308bb7318ab83289ba3388bb3488bc3587bd3786be3885bf3984c03a83c13b82c23c81c33d80c43e7fc5407ec6417dc7427cc8437bc9447aca457acb4679cc4778cc4977cd4a76ce4b75cf4c74d04d73d14e72d24f71d35171d45270d5536fd5546ed6556dd7566cd8576bd9586ada5a6ada5b69db5c68dc5d67dd5e66de5f65de6164df6263e06363e16462e26561e26660e3685fe4695ee56a5de56b5de66c5ce76e5be76f5ae87059e97158e97257ea7457eb7556eb7655ec7754ed7953ed7a52ee7b51ef7c51ef7e50f07f4ff0804ef1814df1834cf2844bf3854bf3874af48849f48948f58b47f58c46f68d45f68f44f79044f79143f79342f89441f89540f9973ff9983ef99a3efa9b3dfa9c3cfa9e3bfb9f3afba139fba238fca338fca537fca636fca835fca934fdab33fdac33fdae32fdaf31fdb130fdb22ffdb42ffdb52efeb72dfeb82cfeba2cfebb2bfebd2afebe2afec029fdc229fdc328fdc527fdc627fdc827fdca26fdcb26fccd25fcce25fcd025fcd225fbd324fbd524fbd724fad824fada24f9dc24f9dd25f8df25f8e125f7e225f7e425f6e626f6e826f5e926f5eb27f4ed27f3ee27f3f027f2f227f1f426f1f525f0f724f0f921"));
 
+  function sequential(interpolator) {
+    var x0 = 0,
+        x1 = 1,
+        clamp = false;
+
+    function scale(x) {
+      var t = (x - x0) / (x1 - x0);
+      return interpolator(clamp ? Math.max(0, Math.min(1, t)) : t);
+    }
+
+    scale.domain = function(_) {
+      return arguments.length ? (x0 = +_[0], x1 = +_[1], scale) : [x0, x1];
+    };
+
+    scale.clamp = function(_) {
+      return arguments.length ? (clamp = !!_, scale) : clamp;
+    };
+
+    scale.interpolator = function(_) {
+      return arguments.length ? (interpolator = _, scale) : interpolator;
+    };
+
+    scale.copy = function() {
+      return sequential(interpolator).domain([x0, x1]).clamp(clamp);
+    };
+
+    return linearish(scale);
+  }
+
   var xhtml = "http://www.w3.org/1999/xhtml";
 
   var namespaces = {
@@ -7021,6 +7050,8 @@
   exports.scaleLinear = linear$1;
   exports.scaleOrdinal = ordinal;
   exports.scalePow = pow;
+  exports.scaleSequential = sequential;
+  exports.interpolateMagma = magma;
   exports.creator = creator;
   exports.customEvent = customEvent;
   exports.local = local;
@@ -7384,6 +7415,271 @@ function patents_graph( _id ) {
   return that;
 }
 
+var VaccineDiseaseGraph = function( _id ) {
+
+  var $ = jQuery.noConflict();
+
+  var that = this;
+
+  var Y_AXIS_WIDTH = 100; // Must be the ame value than #vaccine-disease-graph $padding-left scss variable
+
+  that.id = _id;
+
+
+  // Public Methods
+
+  that.init = function( _disease, _sort ) {
+
+    that.disease = _disease;
+    this.sort = _sort;
+
+    console.log('Vaccine Graph init', that.id, that.disease, that.sort);
+
+    that.$el      = $('#'+that.id);
+    that.$tooltip = $('#vaccine-disease-tooltip');
+    that.lang     = that.$el.data('lang');
+
+    that.x = d3.scaleBand()
+      .padding(0)
+      .paddingInner(0)
+      .paddingOuter(0)
+      .round(true);
+
+    that.y = d3.scaleBand()
+      .padding(0)
+      .paddingInner(0)
+      .paddingOuter(0)
+      .round(true);
+
+    that.color = d3.scaleSequential(d3.interpolateMagma);
+
+    if (that.data) {
+      clear();
+      setupData();
+      setupGraph();
+    } else {
+      // Load CSVs
+      d3.queue()
+        .defer(d3.csv, $('body').data('baseurl')+'assets/csv/diseases-cases.csv')
+        .defer(d3.csv, $('body').data('baseurl')+'assets/csv/population.csv')
+        .await( onDataReady );
+    }
+
+    return that;
+  };
+
+  that.onResize = function() {
+    that.getDimensions();
+    //that.updateData();
+    return that;
+  };
+
+  that.getDimensions = function(){
+    that.width    = that.$el.width() - Y_AXIS_WIDTH;
+    that.cellSize = Math.floor(that.width / that.years.length);
+    that.height   = (that.cellSize < 20) ? that.cellSize*that.countries.length : 20*that.countries.length; // clip cellsize height to 20px
+    return that;
+  };
+
+  var onDataReady = function(error, data_csv, population_csv) {
+
+    that.data = data_csv;
+    that.dataPopulation = population_csv;
+
+    // we don't need the columns attribute
+    delete that.data.columns;
+
+    that.data.forEach(function(d){
+      d.disease = d.disease.toLowerCase();
+      if (d.year_introduction) {
+        d.year_introduction = +d.year_introduction.replace('prior to', '');
+      }
+     
+      d.values = {};
+
+      // set value es cases /1000 habitants
+      var populationItem = population_csv.filter(function(country){ return country.code === d.code; });
+      if (populationItem.length > 0) {
+        for(var year=1980; year<2016; year++){
+          if (d[year]) {
+            var population = +populationItem[0][year];
+            if (population !== 0) {
+              //d[year] = 1000 * (+d[year] / population);
+              d.values[year] = 1000 * (+d[year] / population);
+            } else {
+              //d[year] = null;
+              //console.log('No hay datos de población para', d.name, 'en ', year, d[year]);
+            }
+          } else{
+            //d[year] = null;
+            //console.log('No hay datos de casos de ' + d.disease + ' para', d.name, 'en ', year, ':', d[year], typeof d[year]);
+          }
+          delete d[year];
+        }
+      } else {
+        console.log('No hay datos de población para', d.name);
+      }
+
+      // Get total cases by country & disease
+      d.total = d3.values(d.values).reduce(function(a,b){return a + b;}, 0);
+    });
+
+    setupData();
+    setupGraph();
+  };
+
+  var setupData = function() {
+
+    // Filter data based on selected disease
+    that.current_data = that.data.filter(function(d){ return d.disease === that.disease && d3.values(d.values).length > 0; });
+
+    // Sort data
+    if (that.sort === 'year'){
+      that.current_data.sort(function(a,b){ return (isNaN(a.year_introduction)) ? 1 : (isNaN(b.year_introduction)) ? -1 : b.year_introduction-a.year_introduction; });
+    } else if (that.sort === 'cases'){
+      that.current_data.sort(function(a,b){ return b.total-a.total; });
+    }
+
+    console.log( that.current_data);
+
+    // Get array of country names
+    that.countries = that.current_data.map(function(d){ return d.code; });
+
+    // Get array of years
+    var min_year = d3.min(that.current_data, function(d){ return d3.min(d3.keys(d.values)); });
+    var max_year = d3.max(that.current_data, function(d){ return d3.max(d3.keys(d.values)); });
+    that.years = d3.range(min_year, max_year, 1);
+    that.years.push(+max_year);
+
+    console.log(min_year, max_year, that.years);
+    console.log(that.countries);
+
+    // Get array of data values
+    that.cells_data = [];
+    that.current_data.forEach(function(d){
+      for (var value in d.values){
+        that.cells_data.push({
+          country: d.code,
+          name: d.name,
+          year: value,
+          value: d.values[value]
+        });
+      }
+    });
+
+    /*
+    that.current_data.forEach(function(d){
+      var counter = 0;
+      that.years.forEach(function(year){
+        if (d[year])
+          counter++;
+      });
+      if(counter <= 20) // that.years.length/2)
+        console.log(d.name + ' has only values for ' + counter + ' years');
+    });
+    */
+  };
+
+  var setupGraph = function() {
+
+    // Get dimensions (height is based on countries length)
+    that.getDimensions();
+
+    that.x
+      .domain(that.years)
+      .range([0, that.width]);
+
+    that.y
+      .domain(that.countries)
+      .range([0, that.height]);
+
+    //that.color.domain([d3.max(that.cells_data, function(d){ return d.value; }), 0]);
+    that.color.domain([4, 0]);
+
+    console.log('Maximum cases value: '+ d3.max(that.cells_data, function(d){ return d.value; }));
+
+    // Add svg
+    that.container = d3.select('#'+that.id+' .graph-container')
+      .style('height', that.height+'px');
+
+    // Draw cells
+    that.container.append('div')
+      .attr('class', 'cell-container')
+      .style('height', that.height+'px')
+      .selectAll('.cell')
+      .data(that.cells_data)
+    .enter().append('div')
+      .attr('class', 'cell')
+      .style('left', function(d){ return that.x(d.year)+'px'; })
+      .style('top', function(d){ return that.y(d.country)+'px'; } )
+      .style('width', that.x.bandwidth()+'px')
+      .style('height', that.y.bandwidth()+'px')
+      .style('background', function(d){ return that.color(d.value); })
+      .on('mouseover', onMouseOver)
+      .on('mouseout', onMouseOut);
+
+    // Draw years x axis
+    that.container.append('div')
+      .attr('class', 'x-axis axis')
+      .selectAll('.axis-item')
+      .data(that.years.filter(function(d){ return d%5===0; }))
+    .enter().append('div')
+      .attr('class', 'axis-item')
+      .style('left', function(d){ return that.x(d)+'px'; })
+      .html(function(d){ return d; });
+
+    // Draw countries y axis
+    that.container.append('div')
+      .attr('class', 'y-axis axis')
+      .selectAll('.axis-item')
+      .data(that.countries)
+    .enter().append('div')
+      .attr('class', 'axis-item')
+      .style('top', function(d){ return that.y(d)+'px'; })
+      .html(function(d){ return getCountryName(d); });
+
+    // Draw year introduction mark
+    that.container.select('.cell-container')
+      .selectAll('.introduction')
+      .data(that.current_data
+        .map(function(d){ return {code: d.code, year: d.year_introduction}; })
+        .filter(function(d){ return !isNaN(d.year); }))
+    .enter().append('div')
+      .attr('class', 'introduction')
+      .style('top', function(d){ return that.y(d.code)+'px'; })
+      .style('left', function(d){
+        return (d.year < that.years[0]) ? (that.x(that.years[0])-1)+'px' : (d.year < that.years[that.years.length-1]) ? (that.x(d.year)-1)+'px' : (that.x.bandwidth()+that.x(that.years[that.years.length-1]))+'px';
+      })
+      .style('height', that.y.bandwidth()+'px');
+  };
+
+  var clear = function() {
+    that.container.select('.cell-container').remove();
+    that.container.selectAll('.axis').remove();
+  };
+
+  var onMouseOver = function(d){
+    console.log(that.$tooltip, d.name, d.year, d.value);
+
+    that.$tooltip.find('.tooltip-inner').html('<small>'+d.year+'</small><strong>'+d.name+'</strong><p>'+d.value.toFixed(1)+' casos por cada 1000 habitantes</p>');
+    that.$tooltip.css({
+      'left': $(this).offset().left + that.x.bandwidth(),
+      'top': $(this).offset().top + (that.y.bandwidth()*0.5) - (that.$tooltip.height()*0.5),
+      'opacity': '1'
+    });
+  };
+
+  var onMouseOut = function(d){
+    that.$tooltip.css('opacity', '0');
+  };
+
+  var getCountryName = function(code) {
+    var country = that.current_data.filter(function(d){ return d.code === code; });
+    return (country[0]) ? country[0].name : '';
+  };
+
+  return that;
+};
 var Infographic = function( _id, _type ) {
 
   var $ = jQuery.noConflict();

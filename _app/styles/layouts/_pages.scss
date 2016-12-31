@@ -32,6 +32,9 @@ header {
   &.page-patents .header-overlay{
     background: $overlay-yellow;
   }
+  &.page-access-vaccines .header-overlay{
+    background: $overlay-green;
+  }
 
   .header-content {
     position: relative;
