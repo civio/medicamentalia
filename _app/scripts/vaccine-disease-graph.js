@@ -11,11 +11,12 @@ var VaccineDiseaseGraph = function( _id ) {
 
   // Public Methods
 
-  that.init = function( _disease ) {
+  that.init = function( _disease, _sort ) {
 
     that.disease = _disease;
+    this.sort = _sort;
 
-    console.log('Vaccine Graph init', that.id, that.disease);
+    console.log('Vaccine Graph init', that.id, that.disease, that.sort);
 
     that.$el      = $('#'+that.id);
     that.$tooltip = $('#vaccine-disease-tooltip');
@@ -115,9 +116,12 @@ var VaccineDiseaseGraph = function( _id ) {
     // Filter data based on selected disease
     that.current_data = that.data.filter(function(d){ return d.disease === that.disease && d3.values(d.values).length > 0; });
 
-    // Sort data by year of introduction
-    //that.current_data.sort(function(a,b){ return (isNaN(a.year_introduction)) ? 1 : (isNaN(b.year_introduction)) ? -1 : b.year_introduction-a.year_introduction; });
-    that.current_data.sort(function(a,b){ return b.total-a.total; });
+    // Sort data
+    if (that.sort === 'year'){
+      that.current_data.sort(function(a,b){ return (isNaN(a.year_introduction)) ? 1 : (isNaN(b.year_introduction)) ? -1 : b.year_introduction-a.year_introduction; });
+    } else if (that.sort === 'cases'){
+      that.current_data.sort(function(a,b){ return b.total-a.total; });
+    }
 
     console.log( that.current_data);
 

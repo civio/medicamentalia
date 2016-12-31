@@ -46,7 +46,6 @@ export {
   scaleOrdinal,
   scalePow,
   scaleSequential,
-  interpolateInferno,
   interpolateMagma
 } from "d3-scale";
 
