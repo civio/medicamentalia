@@ -50,6 +50,10 @@ export {
 } from "d3-scale";
 
 export {
+  interpolateOrRd
+} from "d3-scale-chromatic";
+
+export {
   creator,
   customEvent,
   event,

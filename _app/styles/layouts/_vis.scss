@@ -104,10 +104,11 @@ Vaccines
     }
   }
 
-  .introduction{
+  .marker{
     position: absolute;
     width: 2px;
     background: #222;
+    z-index: 99;
   }
 
   .axis{
@@ -148,33 +149,44 @@ Vaccines
       font-size: 14px;
     }
   }
-}
 
-#vaccine-disease-tooltip{
-  pointer-events: none;
+  .tooltip{
+    pointer-events: none;
+    width: 190px;
 
-  .tooltip-inner{
-    text-align: left;
-  }
+    .tooltip-inner{
+      text-align: left;
+    }
 
-  small{
-    display: block;
-    font-size: 1em;
-    color: $text-color;
-    font-weight: 400;
-  }
+    p{
+      font-size: 1em;
+      line-height: 1.375em;
+      margin-bottom: $grid-gutter-width/6;
+    }
 
-  strong{
-    display: block;
-    font-size: 1.25em;
-    font-weight: 600;
-    padding-top: $grid-gutter-width/6;
-  }
+    .title{
+      font-weight: 400;
+      text-transform: uppercase;
 
-  p{
-    color: $brand-primary;
-    margin-bottom: 0;
-    font-weight: 400;
+      .year{
+        font-size: 0.875em;
+        color: $text-color;
+        font-weight: 400;
+      }
+    }
+
+    .description{
+      color: $brand-primary;
+      
+      margin-top: 0;
+      margin-bottom: 0;
+      font-weight: 400;
+
+      strong{
+        font-size: 1.125em;
+        font-weight: 600;   
+      }
+    }
   }
 }
 

@@ -4167,6 +4167,1008 @@
     return linearish(scale);
   }
 
+  function colors$1(specifier) {
+    var n = specifier.length / 6 | 0, colors = new Array(n), i = 0;
+    while (i < n) colors[i] = "#" + specifier.slice(i * 6, ++i * 6);
+    return colors;
+  }
+
+  var Accent = colors$1("7fc97fbeaed4fdc086ffff99386cb0f0027fbf5b17666666");
+
+  var Dark2 = colors$1("1b9e77d95f027570b3e7298a66a61ee6ab02a6761d666666");
+
+  var Paired = colors$1("a6cee31f78b4b2df8a33a02cfb9a99e31a1cfdbf6fff7f00cab2d66a3d9affff99b15928");
+
+  var Pastel1 = colors$1("fbb4aeb3cde3ccebc5decbe4fed9a6ffffcce5d8bdfddaecf2f2f2");
+
+  var Pastel2 = colors$1("b3e2cdfdcdaccbd5e8f4cae4e6f5c9fff2aef1e2cccccccc");
+
+  var Set1 = colors$1("e41a1c377eb84daf4a984ea3ff7f00ffff33a65628f781bf999999");
+
+  var Set2 = colors$1("66c2a5fc8d628da0cbe78ac3a6d854ffd92fe5c494b3b3b3");
+
+  var Set3 = colors$1("8dd3c7ffffb3bebadafb807280b1d3fdb462b3de69fccde5d9d9d9bc80bdccebc5ffed6f");
+
+  function define$1(constructor, factory, prototype) {
+    constructor.prototype = factory.prototype = prototype;
+    prototype.constructor = constructor;
+  }
+
+  function extend$1(parent, definition) {
+    var prototype = Object.create(parent.prototype);
+    for (var key in definition) prototype[key] = definition[key];
+    return prototype;
+  }
+
+  function Color$1() {}
+
+  var darker$1 = 0.7;
+  var brighter$1 = 1 / darker$1;
+
+  var reI = "\\s*([+-]?\\d+)\\s*";
+  var reN = "\\s*([+-]?\\d*\\.?\\d+(?:[eE][+-]?\\d+)?)\\s*";
+  var reP = "\\s*([+-]?\\d*\\.?\\d+(?:[eE][+-]?\\d+)?)%\\s*";
+  var reHex3$1 = /^#([0-9a-f]{3})$/;
+  var reHex6$1 = /^#([0-9a-f]{6})$/;
+  var reRgbInteger$1 = new RegExp("^rgb\\(" + [reI, reI, reI] + "\\)$");
+  var reRgbPercent$1 = new RegExp("^rgb\\(" + [reP, reP, reP] + "\\)$");
+  var reRgbaInteger$1 = new RegExp("^rgba\\(" + [reI, reI, reI, reN] + "\\)$");
+  var reRgbaPercent$1 = new RegExp("^rgba\\(" + [reP, reP, reP, reN] + "\\)$");
+  var reHslPercent$1 = new RegExp("^hsl\\(" + [reN, reP, reP] + "\\)$");
+  var reHslaPercent$1 = new RegExp("^hsla\\(" + [reN, reP, reP, reN] + "\\)$");
+  var named$1 = {
+    aliceblue: 0xf0f8ff,
+    antiquewhite: 0xfaebd7,
+    aqua: 0x00ffff,
+    aquamarine: 0x7fffd4,
+    azure: 0xf0ffff,
+    beige: 0xf5f5dc,
+    bisque: 0xffe4c4,
+    black: 0x000000,
+    blanchedalmond: 0xffebcd,
+    blue: 0x0000ff,
+    blueviolet: 0x8a2be2,
+    brown: 0xa52a2a,
+    burlywood: 0xdeb887,
+    cadetblue: 0x5f9ea0,
+    chartreuse: 0x7fff00,
+    chocolate: 0xd2691e,
+    coral: 0xff7f50,
+    cornflowerblue: 0x6495ed,
+    cornsilk: 0xfff8dc,
+    crimson: 0xdc143c,
+    cyan: 0x00ffff,
+    darkblue: 0x00008b,
+    darkcyan: 0x008b8b,
+    darkgoldenrod: 0xb8860b,
+    darkgray: 0xa9a9a9,
+    darkgreen: 0x006400,
+    darkgrey: 0xa9a9a9,
+    darkkhaki: 0xbdb76b,
+    darkmagenta: 0x8b008b,
+    darkolivegreen: 0x556b2f,
+    darkorange: 0xff8c00,
+    darkorchid: 0x9932cc,
+    darkred: 0x8b0000,
+    darksalmon: 0xe9967a,
+    darkseagreen: 0x8fbc8f,
+    darkslateblue: 0x483d8b,
+    darkslategray: 0x2f4f4f,
+    darkslategrey: 0x2f4f4f,
+    darkturquoise: 0x00ced1,
+    darkviolet: 0x9400d3,
+    deeppink: 0xff1493,
+    deepskyblue: 0x00bfff,
+    dimgray: 0x696969,
+    dimgrey: 0x696969,
+    dodgerblue: 0x1e90ff,
+    firebrick: 0xb22222,
+    floralwhite: 0xfffaf0,
+    forestgreen: 0x228b22,
+    fuchsia: 0xff00ff,
+    gainsboro: 0xdcdcdc,
+    ghostwhite: 0xf8f8ff,
+    gold: 0xffd700,
+    goldenrod: 0xdaa520,
+    gray: 0x808080,
+    green: 0x008000,
+    greenyellow: 0xadff2f,
+    grey: 0x808080,
+    honeydew: 0xf0fff0,
+    hotpink: 0xff69b4,
+    indianred: 0xcd5c5c,
+    indigo: 0x4b0082,
+    ivory: 0xfffff0,
+    khaki: 0xf0e68c,
+    lavender: 0xe6e6fa,
+    lavenderblush: 0xfff0f5,
+    lawngreen: 0x7cfc00,
+    lemonchiffon: 0xfffacd,
+    lightblue: 0xadd8e6,
+    lightcoral: 0xf08080,
+    lightcyan: 0xe0ffff,
+    lightgoldenrodyellow: 0xfafad2,
+    lightgray: 0xd3d3d3,
+    lightgreen: 0x90ee90,
+    lightgrey: 0xd3d3d3,
+    lightpink: 0xffb6c1,
+    lightsalmon: 0xffa07a,
+    lightseagreen: 0x20b2aa,
+    lightskyblue: 0x87cefa,
+    lightslategray: 0x778899,
+    lightslategrey: 0x778899,
+    lightsteelblue: 0xb0c4de,
+    lightyellow: 0xffffe0,
+    lime: 0x00ff00,
+    limegreen: 0x32cd32,
+    linen: 0xfaf0e6,
+    magenta: 0xff00ff,
+    maroon: 0x800000,
+    mediumaquamarine: 0x66cdaa,
+    mediumblue: 0x0000cd,
+    mediumorchid: 0xba55d3,
+    mediumpurple: 0x9370db,
+    mediumseagreen: 0x3cb371,
+    mediumslateblue: 0x7b68ee,
+    mediumspringgreen: 0x00fa9a,
+    mediumturquoise: 0x48d1cc,
+    mediumvioletred: 0xc71585,
+    midnightblue: 0x191970,
+    mintcream: 0xf5fffa,
+    mistyrose: 0xffe4e1,
+    moccasin: 0xffe4b5,
+    navajowhite: 0xffdead,
+    navy: 0x000080,
+    oldlace: 0xfdf5e6,
+    olive: 0x808000,
+    olivedrab: 0x6b8e23,
+    orange: 0xffa500,
+    orangered: 0xff4500,
+    orchid: 0xda70d6,
+    palegoldenrod: 0xeee8aa,
+    palegreen: 0x98fb98,
+    paleturquoise: 0xafeeee,
+    palevioletred: 0xdb7093,
+    papayawhip: 0xffefd5,
+    peachpuff: 0xffdab9,
+    peru: 0xcd853f,
+    pink: 0xffc0cb,
+    plum: 0xdda0dd,
+    powderblue: 0xb0e0e6,
+    purple: 0x800080,
+    rebeccapurple: 0x663399,
+    red: 0xff0000,
+    rosybrown: 0xbc8f8f,
+    royalblue: 0x4169e1,
+    saddlebrown: 0x8b4513,
+    salmon: 0xfa8072,
+    sandybrown: 0xf4a460,
+    seagreen: 0x2e8b57,
+    seashell: 0xfff5ee,
+    sienna: 0xa0522d,
+    silver: 0xc0c0c0,
+    skyblue: 0x87ceeb,
+    slateblue: 0x6a5acd,
+    slategray: 0x708090,
+    slategrey: 0x708090,
+    snow: 0xfffafa,
+    springgreen: 0x00ff7f,
+    steelblue: 0x4682b4,
+    tan: 0xd2b48c,
+    teal: 0x008080,
+    thistle: 0xd8bfd8,
+    tomato: 0xff6347,
+    turquoise: 0x40e0d0,
+    violet: 0xee82ee,
+    wheat: 0xf5deb3,
+    white: 0xffffff,
+    whitesmoke: 0xf5f5f5,
+    yellow: 0xffff00,
+    yellowgreen: 0x9acd32
+  };
+
+  define$1(Color$1, color$1, {
+    displayable: function() {
+      return this.rgb().displayable();
+    },
+    toString: function() {
+      return this.rgb() + "";
+    }
+  });
+
+  function color$1(format) {
+    var m;
+    format = (format + "").trim().toLowerCase();
+    return (m = reHex3$1.exec(format)) ? (m = parseInt(m[1], 16), new Rgb$1((m >> 8 & 0xf) | (m >> 4 & 0x0f0), (m >> 4 & 0xf) | (m & 0xf0), ((m & 0xf) << 4) | (m & 0xf), 1)) // #f00
+        : (m = reHex6$1.exec(format)) ? rgbn$1(parseInt(m[1], 16)) // #ff0000
+        : (m = reRgbInteger$1.exec(format)) ? new Rgb$1(m[1], m[2], m[3], 1) // rgb(255, 0, 0)
+        : (m = reRgbPercent$1.exec(format)) ? new Rgb$1(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, 1) // rgb(100%, 0%, 0%)
+        : (m = reRgbaInteger$1.exec(format)) ? rgba$1(m[1], m[2], m[3], m[4]) // rgba(255, 0, 0, 1)
+        : (m = reRgbaPercent$1.exec(format)) ? rgba$1(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, m[4]) // rgb(100%, 0%, 0%, 1)
+        : (m = reHslPercent$1.exec(format)) ? hsla$1(m[1], m[2] / 100, m[3] / 100, 1) // hsl(120, 50%, 50%)
+        : (m = reHslaPercent$1.exec(format)) ? hsla$1(m[1], m[2] / 100, m[3] / 100, m[4]) // hsla(120, 50%, 50%, 1)
+        : named$1.hasOwnProperty(format) ? rgbn$1(named$1[format])
+        : format === "transparent" ? new Rgb$1(NaN, NaN, NaN, 0)
+        : null;
+  }
+
+  function rgbn$1(n) {
+    return new Rgb$1(n >> 16 & 0xff, n >> 8 & 0xff, n & 0xff, 1);
+  }
+
+  function rgba$1(r, g, b, a) {
+    if (a <= 0) r = g = b = NaN;
+    return new Rgb$1(r, g, b, a);
+  }
+
+  function rgbConvert$1(o) {
+    if (!(o instanceof Color$1)) o = color$1(o);
+    if (!o) return new Rgb$1;
+    o = o.rgb();
+    return new Rgb$1(o.r, o.g, o.b, o.opacity);
+  }
+
+  function colorRgb$1(r, g, b, opacity) {
+    return arguments.length === 1 ? rgbConvert$1(r) : new Rgb$1(r, g, b, opacity == null ? 1 : opacity);
+  }
+
+  function Rgb$1(r, g, b, opacity) {
+    this.r = +r;
+    this.g = +g;
+    this.b = +b;
+    this.opacity = +opacity;
+  }
+
+  define$1(Rgb$1, colorRgb$1, extend$1(Color$1, {
+    brighter: function(k) {
+      k = k == null ? brighter$1 : Math.pow(brighter$1, k);
+      return new Rgb$1(this.r * k, this.g * k, this.b * k, this.opacity);
+    },
+    darker: function(k) {
+      k = k == null ? darker$1 : Math.pow(darker$1, k);
+      return new Rgb$1(this.r * k, this.g * k, this.b * k, this.opacity);
+    },
+    rgb: function() {
+      return this;
+    },
+    displayable: function() {
+      return (0 <= this.r && this.r <= 255)
+          && (0 <= this.g && this.g <= 255)
+          && (0 <= this.b && this.b <= 255)
+          && (0 <= this.opacity && this.opacity <= 1);
+    },
+    toString: function() {
+      var a = this.opacity; a = isNaN(a) ? 1 : Math.max(0, Math.min(1, a));
+      return (a === 1 ? "rgb(" : "rgba(")
+          + Math.max(0, Math.min(255, Math.round(this.r) || 0)) + ", "
+          + Math.max(0, Math.min(255, Math.round(this.g) || 0)) + ", "
+          + Math.max(0, Math.min(255, Math.round(this.b) || 0))
+          + (a === 1 ? ")" : ", " + a + ")");
+    }
+  }));
+
+  function hsla$1(h, s, l, a) {
+    if (a <= 0) h = s = l = NaN;
+    else if (l <= 0 || l >= 1) h = s = NaN;
+    else if (s <= 0) h = NaN;
+    return new Hsl$1(h, s, l, a);
+  }
+
+  function hslConvert$1(o) {
+    if (o instanceof Hsl$1) return new Hsl$1(o.h, o.s, o.l, o.opacity);
+    if (!(o instanceof Color$1)) o = color$1(o);
+    if (!o) return new Hsl$1;
+    if (o instanceof Hsl$1) return o;
+    o = o.rgb();
+    var r = o.r / 255,
+        g = o.g / 255,
+        b = o.b / 255,
+        min = Math.min(r, g, b),
+        max = Math.max(r, g, b),
+        h = NaN,
+        s = max - min,
+        l = (max + min) / 2;
+    if (s) {
+      if (r === max) h = (g - b) / s + (g < b) * 6;
+      else if (g === max) h = (b - r) / s + 2;
+      else h = (r - g) / s + 4;
+      s /= l < 0.5 ? max + min : 2 - max - min;
+      h *= 60;
+    } else {
+      s = l > 0 && l < 1 ? 0 : h;
+    }
+    return new Hsl$1(h, s, l, o.opacity);
+  }
+
+  function colorHsl$1(h, s, l, opacity) {
+    return arguments.length === 1 ? hslConvert$1(h) : new Hsl$1(h, s, l, opacity == null ? 1 : opacity);
+  }
+
+  function Hsl$1(h, s, l, opacity) {
+    this.h = +h;
+    this.s = +s;
+    this.l = +l;
+    this.opacity = +opacity;
+  }
+
+  define$1(Hsl$1, colorHsl$1, extend$1(Color$1, {
+    brighter: function(k) {
+      k = k == null ? brighter$1 : Math.pow(brighter$1, k);
+      return new Hsl$1(this.h, this.s, this.l * k, this.opacity);
+    },
+    darker: function(k) {
+      k = k == null ? darker$1 : Math.pow(darker$1, k);
+      return new Hsl$1(this.h, this.s, this.l * k, this.opacity);
+    },
+    rgb: function() {
+      var h = this.h % 360 + (this.h < 0) * 360,
+          s = isNaN(h) || isNaN(this.s) ? 0 : this.s,
+          l = this.l,
+          m2 = l + (l < 0.5 ? l : 1 - l) * s,
+          m1 = 2 * l - m2;
+      return new Rgb$1(
+        hsl2rgb$1(h >= 240 ? h - 240 : h + 120, m1, m2),
+        hsl2rgb$1(h, m1, m2),
+        hsl2rgb$1(h < 120 ? h + 240 : h - 120, m1, m2),
+        this.opacity
+      );
+    },
+    displayable: function() {
+      return (0 <= this.s && this.s <= 1 || isNaN(this.s))
+          && (0 <= this.l && this.l <= 1)
+          && (0 <= this.opacity && this.opacity <= 1);
+    }
+  }));
+
+  /* From FvD 13.37, CSS Color Module Level 3 */
+  function hsl2rgb$1(h, m1, m2) {
+    return (h < 60 ? m1 + (m2 - m1) * h / 60
+        : h < 180 ? m2
+        : h < 240 ? m1 + (m2 - m1) * (240 - h) / 60
+        : m1) * 255;
+  }
+
+  var deg2rad$1 = Math.PI / 180;
+  var rad2deg$1 = 180 / Math.PI;
+
+  var Kn$1 = 18;
+  var Xn$1 = 0.950470;
+  var Yn$1 = 1;
+  var Zn$1 = 1.088830;
+  var t0$3 = 4 / 29;
+  var t1$3 = 6 / 29;
+  var t2$1 = 3 * t1$3 * t1$3;
+  var t3$1 = t1$3 * t1$3 * t1$3;
+  function labConvert$1(o) {
+    if (o instanceof Lab$1) return new Lab$1(o.l, o.a, o.b, o.opacity);
+    if (o instanceof Hcl$1) {
+      var h = o.h * deg2rad$1;
+      return new Lab$1(o.l, Math.cos(h) * o.c, Math.sin(h) * o.c, o.opacity);
+    }
+    if (!(o instanceof Rgb$1)) o = rgbConvert$1(o);
+    var b = rgb2xyz$1(o.r),
+        a = rgb2xyz$1(o.g),
+        l = rgb2xyz$1(o.b),
+        x = xyz2lab$1((0.4124564 * b + 0.3575761 * a + 0.1804375 * l) / Xn$1),
+        y = xyz2lab$1((0.2126729 * b + 0.7151522 * a + 0.0721750 * l) / Yn$1),
+        z = xyz2lab$1((0.0193339 * b + 0.1191920 * a + 0.9503041 * l) / Zn$1);
+    return new Lab$1(116 * y - 16, 500 * (x - y), 200 * (y - z), o.opacity);
+  }
+
+  function lab$2(l, a, b, opacity) {
+    return arguments.length === 1 ? labConvert$1(l) : new Lab$1(l, a, b, opacity == null ? 1 : opacity);
+  }
+
+  function Lab$1(l, a, b, opacity) {
+    this.l = +l;
+    this.a = +a;
+    this.b = +b;
+    this.opacity = +opacity;
+  }
+
+  define$1(Lab$1, lab$2, extend$1(Color$1, {
+    brighter: function(k) {
+      return new Lab$1(this.l + Kn$1 * (k == null ? 1 : k), this.a, this.b, this.opacity);
+    },
+    darker: function(k) {
+      return new Lab$1(this.l - Kn$1 * (k == null ? 1 : k), this.a, this.b, this.opacity);
+    },
+    rgb: function() {
+      var y = (this.l + 16) / 116,
+          x = isNaN(this.a) ? y : y + this.a / 500,
+          z = isNaN(this.b) ? y : y - this.b / 200;
+      y = Yn$1 * lab2xyz$1(y);
+      x = Xn$1 * lab2xyz$1(x);
+      z = Zn$1 * lab2xyz$1(z);
+      return new Rgb$1(
+        xyz2rgb$1( 3.2404542 * x - 1.5371385 * y - 0.4985314 * z), // D65 -> sRGB
+        xyz2rgb$1(-0.9692660 * x + 1.8760108 * y + 0.0415560 * z),
+        xyz2rgb$1( 0.0556434 * x - 0.2040259 * y + 1.0572252 * z),
+        this.opacity
+      );
+    }
+  }));
+
+  function xyz2lab$1(t) {
+    return t > t3$1 ? Math.pow(t, 1 / 3) : t / t2$1 + t0$3;
+  }
+
+  function lab2xyz$1(t) {
+    return t > t1$3 ? t * t * t : t2$1 * (t - t0$3);
+  }
+
+  function xyz2rgb$1(x) {
+    return 255 * (x <= 0.0031308 ? 12.92 * x : 1.055 * Math.pow(x, 1 / 2.4) - 0.055);
+  }
+
+  function rgb2xyz$1(x) {
+    return (x /= 255) <= 0.04045 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4);
+  }
+
+  function hclConvert$1(o) {
+    if (o instanceof Hcl$1) return new Hcl$1(o.h, o.c, o.l, o.opacity);
+    if (!(o instanceof Lab$1)) o = labConvert$1(o);
+    var h = Math.atan2(o.b, o.a) * rad2deg$1;
+    return new Hcl$1(h < 0 ? h + 360 : h, Math.sqrt(o.a * o.a + o.b * o.b), o.l, o.opacity);
+  }
+
+  function colorHcl$1(h, c, l, opacity) {
+    return arguments.length === 1 ? hclConvert$1(h) : new Hcl$1(h, c, l, opacity == null ? 1 : opacity);
+  }
+
+  function Hcl$1(h, c, l, opacity) {
+    this.h = +h;
+    this.c = +c;
+    this.l = +l;
+    this.opacity = +opacity;
+  }
+
+  define$1(Hcl$1, colorHcl$1, extend$1(Color$1, {
+    brighter: function(k) {
+      return new Hcl$1(this.h, this.c, this.l + Kn$1 * (k == null ? 1 : k), this.opacity);
+    },
+    darker: function(k) {
+      return new Hcl$1(this.h, this.c, this.l - Kn$1 * (k == null ? 1 : k), this.opacity);
+    },
+    rgb: function() {
+      return labConvert$1(this).rgb();
+    }
+  }));
+
+  var A$1 = -0.14861;
+  var B$1 = +1.78277;
+  var C$1 = -0.29227;
+  var D$1 = -0.90649;
+  var E$1 = +1.97294;
+  var ED$1 = E$1 * D$1;
+  var EB$1 = E$1 * B$1;
+  var BC_DA$1 = B$1 * C$1 - D$1 * A$1;
+  function cubehelixConvert$1(o) {
+    if (o instanceof Cubehelix$1) return new Cubehelix$1(o.h, o.s, o.l, o.opacity);
+    if (!(o instanceof Rgb$1)) o = rgbConvert$1(o);
+    var r = o.r / 255,
+        g = o.g / 255,
+        b = o.b / 255,
+        l = (BC_DA$1 * b + ED$1 * r - EB$1 * g) / (BC_DA$1 + ED$1 - EB$1),
+        bl = b - l,
+        k = (E$1 * (g - l) - C$1 * bl) / D$1,
+        s = Math.sqrt(k * k + bl * bl) / (E$1 * l * (1 - l)), // NaN if l=0 or l=1
+        h = s ? Math.atan2(k, bl) * rad2deg$1 - 120 : NaN;
+    return new Cubehelix$1(h < 0 ? h + 360 : h, s, l, o.opacity);
+  }
+
+  function cubehelix$4(h, s, l, opacity) {
+    return arguments.length === 1 ? cubehelixConvert$1(h) : new Cubehelix$1(h, s, l, opacity == null ? 1 : opacity);
+  }
+
+  function Cubehelix$1(h, s, l, opacity) {
+    this.h = +h;
+    this.s = +s;
+    this.l = +l;
+    this.opacity = +opacity;
+  }
+
+  define$1(Cubehelix$1, cubehelix$4, extend$1(Color$1, {
+    brighter: function(k) {
+      k = k == null ? brighter$1 : Math.pow(brighter$1, k);
+      return new Cubehelix$1(this.h, this.s, this.l * k, this.opacity);
+    },
+    darker: function(k) {
+      k = k == null ? darker$1 : Math.pow(darker$1, k);
+      return new Cubehelix$1(this.h, this.s, this.l * k, this.opacity);
+    },
+    rgb: function() {
+      var h = isNaN(this.h) ? 0 : (this.h + 120) * deg2rad$1,
+          l = +this.l,
+          a = isNaN(this.s) ? 0 : this.s * l * (1 - l),
+          cosh = Math.cos(h),
+          sinh = Math.sin(h);
+      return new Rgb$1(
+        255 * (l + a * (A$1 * cosh + B$1 * sinh)),
+        255 * (l + a * (C$1 * cosh + D$1 * sinh)),
+        255 * (l + a * (E$1 * cosh)),
+        this.opacity
+      );
+    }
+  }));
+
+  function basis$3(t1, v0, v1, v2, v3) {
+    var t2 = t1 * t1, t3 = t2 * t1;
+    return ((1 - 3 * t1 + 3 * t2 - t3) * v0
+        + (4 - 6 * t2 + 3 * t3) * v1
+        + (1 + 3 * t1 + 3 * t2 - 3 * t3) * v2
+        + t3 * v3) / 6;
+  }
+
+  function basis$4(values) {
+    var n = values.length - 1;
+    return function(t) {
+      var i = t <= 0 ? (t = 0) : t >= 1 ? (t = 1, n - 1) : Math.floor(t * n),
+          v1 = values[i],
+          v2 = values[i + 1],
+          v0 = i > 0 ? values[i - 1] : 2 * v1 - v2,
+          v3 = i < n - 1 ? values[i + 2] : 2 * v2 - v1;
+      return basis$3((t - i / n) * n, v0, v1, v2, v3);
+    };
+  }
+
+  function constant$4(x) {
+    return function() {
+      return x;
+    };
+  }
+
+  function linear$3(a, d) {
+    return function(t) {
+      return a + t * d;
+    };
+  }
+
+  function exponential$1(a, b, y) {
+    return a = Math.pow(a, y), b = Math.pow(b, y) - a, y = 1 / y, function(t) {
+      return Math.pow(a + t * b, y);
+    };
+  }
+
+  function hue$1(a, b) {
+    var d = b - a;
+    return d ? linear$3(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant$4(isNaN(a) ? b : a);
+  }
+
+  function gamma$1(y) {
+    return (y = +y) === 1 ? nogamma$1 : function(a, b) {
+      return b - a ? exponential$1(a, b, y) : constant$4(isNaN(a) ? b : a);
+    };
+  }
+
+  function nogamma$1(a, b) {
+    var d = b - a;
+    return d ? linear$3(a, d) : constant$4(isNaN(a) ? b : a);
+  }
+
+  (function rgbGamma(y) {
+    var color = gamma$1(y);
+
+    function rgb(start, end) {
+      var r = color((start = colorRgb$1(start)).r, (end = colorRgb$1(end)).r),
+          g = color(start.g, end.g),
+          b = color(start.b, end.b),
+          opacity = nogamma$1(start.opacity, end.opacity);
+      return function(t) {
+        start.r = r(t);
+        start.g = g(t);
+        start.b = b(t);
+        start.opacity = opacity(t);
+        return start + "";
+      };
+    }
+
+    rgb.gamma = rgbGamma;
+
+    return rgb;
+  })(1);
+
+  function rgbSpline$1(spline) {
+    return function(colors) {
+      var n = colors.length,
+          r = new Array(n),
+          g = new Array(n),
+          b = new Array(n),
+          i, color;
+      for (i = 0; i < n; ++i) {
+        color = colorRgb$1(colors[i]);
+        r[i] = color.r || 0;
+        g[i] = color.g || 0;
+        b[i] = color.b || 0;
+      }
+      r = spline(r);
+      g = spline(g);
+      b = spline(b);
+      color.opacity = 1;
+      return function(t) {
+        color.r = r(t);
+        color.g = g(t);
+        color.b = b(t);
+        return color + "";
+      };
+    };
+  }
+
+  var rgbBasis$1 = rgbSpline$1(basis$4);
+
+  function cubehelix$5(hue) {
+    return (function cubehelixGamma(y) {
+      y = +y;
+
+      function cubehelix(start, end) {
+        var h = hue((start = cubehelix$4(start)).h, (end = cubehelix$4(end)).h),
+            s = nogamma$1(start.s, end.s),
+            l = nogamma$1(start.l, end.l),
+            opacity = nogamma$1(start.opacity, end.opacity);
+        return function(t) {
+          start.h = h(t);
+          start.s = s(t);
+          start.l = l(Math.pow(t, y));
+          start.opacity = opacity(t);
+          return start + "";
+        };
+      }
+
+      cubehelix.gamma = cubehelixGamma;
+
+      return cubehelix;
+    })(1);
+  }
+
+  cubehelix$5(hue$1);
+  var cubehelixLong = cubehelix$5(nogamma$1);
+
+  function ramp$1(scheme) {
+    return rgbBasis$1(scheme[scheme.length - 1]);
+  }
+
+  var scheme = new Array(3).concat(
+    "d8b365f5f5f55ab4ac",
+    "a6611adfc27d80cdc1018571",
+    "a6611adfc27df5f5f580cdc1018571",
+    "8c510ad8b365f6e8c3c7eae55ab4ac01665e",
+    "8c510ad8b365f6e8c3f5f5f5c7eae55ab4ac01665e",
+    "8c510abf812ddfc27df6e8c3c7eae580cdc135978f01665e",
+    "8c510abf812ddfc27df6e8c3f5f5f5c7eae580cdc135978f01665e",
+    "5430058c510abf812ddfc27df6e8c3c7eae580cdc135978f01665e003c30",
+    "5430058c510abf812ddfc27df6e8c3f5f5f5c7eae580cdc135978f01665e003c30"
+  ).map(colors$1);
+
+  var BrBG = ramp$1(scheme);
+
+  var scheme$1 = new Array(3).concat(
+    "af8dc3f7f7f77fbf7b",
+    "7b3294c2a5cfa6dba0008837",
+    "7b3294c2a5cff7f7f7a6dba0008837",
+    "762a83af8dc3e7d4e8d9f0d37fbf7b1b7837",
+    "762a83af8dc3e7d4e8f7f7f7d9f0d37fbf7b1b7837",
+    "762a839970abc2a5cfe7d4e8d9f0d3a6dba05aae611b7837",
+    "762a839970abc2a5cfe7d4e8f7f7f7d9f0d3a6dba05aae611b7837",
+    "40004b762a839970abc2a5cfe7d4e8d9f0d3a6dba05aae611b783700441b",
+    "40004b762a839970abc2a5cfe7d4e8f7f7f7d9f0d3a6dba05aae611b783700441b"
+  ).map(colors$1);
+
+  var PRGn = ramp$1(scheme$1);
+
+  var scheme$2 = new Array(3).concat(
+    "e9a3c9f7f7f7a1d76a",
+    "d01c8bf1b6dab8e1864dac26",
+    "d01c8bf1b6daf7f7f7b8e1864dac26",
+    "c51b7de9a3c9fde0efe6f5d0a1d76a4d9221",
+    "c51b7de9a3c9fde0eff7f7f7e6f5d0a1d76a4d9221",
+    "c51b7dde77aef1b6dafde0efe6f5d0b8e1867fbc414d9221",
+    "c51b7dde77aef1b6dafde0eff7f7f7e6f5d0b8e1867fbc414d9221",
+    "8e0152c51b7dde77aef1b6dafde0efe6f5d0b8e1867fbc414d9221276419",
+    "8e0152c51b7dde77aef1b6dafde0eff7f7f7e6f5d0b8e1867fbc414d9221276419"
+  ).map(colors$1);
+
+  var PiYG = ramp$1(scheme$2);
+
+  var scheme$3 = new Array(3).concat(
+    "f1a340f7f7f7998ec3",
+    "e66101fdb863b2abd25e3c99",
+    "e66101fdb863f7f7f7b2abd25e3c99",
+    "b35806f1a340fee0b6d8daeb998ec3542788",
+    "b35806f1a340fee0b6f7f7f7d8daeb998ec3542788",
+    "b35806e08214fdb863fee0b6d8daebb2abd28073ac542788",
+    "b35806e08214fdb863fee0b6f7f7f7d8daebb2abd28073ac542788",
+    "7f3b08b35806e08214fdb863fee0b6d8daebb2abd28073ac5427882d004b",
+    "7f3b08b35806e08214fdb863fee0b6f7f7f7d8daebb2abd28073ac5427882d004b"
+  ).map(colors$1);
+
+  var PuOr = ramp$1(scheme$3);
+
+  var scheme$4 = new Array(3).concat(
+    "ef8a62f7f7f767a9cf",
+    "ca0020f4a58292c5de0571b0",
+    "ca0020f4a582f7f7f792c5de0571b0",
+    "b2182bef8a62fddbc7d1e5f067a9cf2166ac",
+    "b2182bef8a62fddbc7f7f7f7d1e5f067a9cf2166ac",
+    "b2182bd6604df4a582fddbc7d1e5f092c5de4393c32166ac",
+    "b2182bd6604df4a582fddbc7f7f7f7d1e5f092c5de4393c32166ac",
+    "67001fb2182bd6604df4a582fddbc7d1e5f092c5de4393c32166ac053061",
+    "67001fb2182bd6604df4a582fddbc7f7f7f7d1e5f092c5de4393c32166ac053061"
+  ).map(colors$1);
+
+  var RdBu = ramp$1(scheme$4);
+
+  var scheme$5 = new Array(3).concat(
+    "ef8a62ffffff999999",
+    "ca0020f4a582bababa404040",
+    "ca0020f4a582ffffffbababa404040",
+    "b2182bef8a62fddbc7e0e0e09999994d4d4d",
+    "b2182bef8a62fddbc7ffffffe0e0e09999994d4d4d",
+    "b2182bd6604df4a582fddbc7e0e0e0bababa8787874d4d4d",
+    "b2182bd6604df4a582fddbc7ffffffe0e0e0bababa8787874d4d4d",
+    "67001fb2182bd6604df4a582fddbc7e0e0e0bababa8787874d4d4d1a1a1a",
+    "67001fb2182bd6604df4a582fddbc7ffffffe0e0e0bababa8787874d4d4d1a1a1a"
+  ).map(colors$1);
+
+  var RdGy = ramp$1(scheme$5);
+
+  var scheme$6 = new Array(3).concat(
+    "fc8d59ffffbf91bfdb",
+    "d7191cfdae61abd9e92c7bb6",
+    "d7191cfdae61ffffbfabd9e92c7bb6",
+    "d73027fc8d59fee090e0f3f891bfdb4575b4",
+    "d73027fc8d59fee090ffffbfe0f3f891bfdb4575b4",
+    "d73027f46d43fdae61fee090e0f3f8abd9e974add14575b4",
+    "d73027f46d43fdae61fee090ffffbfe0f3f8abd9e974add14575b4",
+    "a50026d73027f46d43fdae61fee090e0f3f8abd9e974add14575b4313695",
+    "a50026d73027f46d43fdae61fee090ffffbfe0f3f8abd9e974add14575b4313695"
+  ).map(colors$1);
+
+  var RdYlBu = ramp$1(scheme$6);
+
+  var scheme$7 = new Array(3).concat(
+    "fc8d59ffffbf91cf60",
+    "d7191cfdae61a6d96a1a9641",
+    "d7191cfdae61ffffbfa6d96a1a9641",
+    "d73027fc8d59fee08bd9ef8b91cf601a9850",
+    "d73027fc8d59fee08bffffbfd9ef8b91cf601a9850",
+    "d73027f46d43fdae61fee08bd9ef8ba6d96a66bd631a9850",
+    "d73027f46d43fdae61fee08bffffbfd9ef8ba6d96a66bd631a9850",
+    "a50026d73027f46d43fdae61fee08bd9ef8ba6d96a66bd631a9850006837",
+    "a50026d73027f46d43fdae61fee08bffffbfd9ef8ba6d96a66bd631a9850006837"
+  ).map(colors$1);
+
+  var RdYlGn = ramp$1(scheme$7);
+
+  var scheme$8 = new Array(3).concat(
+    "fc8d59ffffbf99d594",
+    "d7191cfdae61abdda42b83ba",
+    "d7191cfdae61ffffbfabdda42b83ba",
+    "d53e4ffc8d59fee08be6f59899d5943288bd",
+    "d53e4ffc8d59fee08bffffbfe6f59899d5943288bd",
+    "d53e4ff46d43fdae61fee08be6f598abdda466c2a53288bd",
+    "d53e4ff46d43fdae61fee08bffffbfe6f598abdda466c2a53288bd",
+    "9e0142d53e4ff46d43fdae61fee08be6f598abdda466c2a53288bd5e4fa2",
+    "9e0142d53e4ff46d43fdae61fee08bffffbfe6f598abdda466c2a53288bd5e4fa2"
+  ).map(colors$1);
+
+  var Spectral = ramp$1(scheme$8);
+
+  var scheme$9 = new Array(3).concat(
+    "e5f5f999d8c92ca25f",
+    "edf8fbb2e2e266c2a4238b45",
+    "edf8fbb2e2e266c2a42ca25f006d2c",
+    "edf8fbccece699d8c966c2a42ca25f006d2c",
+    "edf8fbccece699d8c966c2a441ae76238b45005824",
+    "f7fcfde5f5f9ccece699d8c966c2a441ae76238b45005824",
+    "f7fcfde5f5f9ccece699d8c966c2a441ae76238b45006d2c00441b"
+  ).map(colors$1);
+
+  var BuGn = ramp$1(scheme$9);
+
+  var scheme$10 = new Array(3).concat(
+    "e0ecf49ebcda8856a7",
+    "edf8fbb3cde38c96c688419d",
+    "edf8fbb3cde38c96c68856a7810f7c",
+    "edf8fbbfd3e69ebcda8c96c68856a7810f7c",
+    "edf8fbbfd3e69ebcda8c96c68c6bb188419d6e016b",
+    "f7fcfde0ecf4bfd3e69ebcda8c96c68c6bb188419d6e016b",
+    "f7fcfde0ecf4bfd3e69ebcda8c96c68c6bb188419d810f7c4d004b"
+  ).map(colors$1);
+
+  var BuPu = ramp$1(scheme$10);
+
+  var scheme$11 = new Array(3).concat(
+    "e0f3dba8ddb543a2ca",
+    "f0f9e8bae4bc7bccc42b8cbe",
+    "f0f9e8bae4bc7bccc443a2ca0868ac",
+    "f0f9e8ccebc5a8ddb57bccc443a2ca0868ac",
+    "f0f9e8ccebc5a8ddb57bccc44eb3d32b8cbe08589e",
+    "f7fcf0e0f3dbccebc5a8ddb57bccc44eb3d32b8cbe08589e",
+    "f7fcf0e0f3dbccebc5a8ddb57bccc44eb3d32b8cbe0868ac084081"
+  ).map(colors$1);
+
+  var GnBu = ramp$1(scheme$11);
+
+  var scheme$12 = new Array(3).concat(
+    "fee8c8fdbb84e34a33",
+    "fef0d9fdcc8afc8d59d7301f",
+    "fef0d9fdcc8afc8d59e34a33b30000",
+    "fef0d9fdd49efdbb84fc8d59e34a33b30000",
+    "fef0d9fdd49efdbb84fc8d59ef6548d7301f990000",
+    "fff7ecfee8c8fdd49efdbb84fc8d59ef6548d7301f990000",
+    "fff7ecfee8c8fdd49efdbb84fc8d59ef6548d7301fb300007f0000"
+  ).map(colors$1);
+
+  var OrRd = ramp$1(scheme$12);
+
+  var scheme$13 = new Array(3).concat(
+    "ece2f0a6bddb1c9099",
+    "f6eff7bdc9e167a9cf02818a",
+    "f6eff7bdc9e167a9cf1c9099016c59",
+    "f6eff7d0d1e6a6bddb67a9cf1c9099016c59",
+    "f6eff7d0d1e6a6bddb67a9cf3690c002818a016450",
+    "fff7fbece2f0d0d1e6a6bddb67a9cf3690c002818a016450",
+    "fff7fbece2f0d0d1e6a6bddb67a9cf3690c002818a016c59014636"
+  ).map(colors$1);
+
+  var PuBuGn = ramp$1(scheme$13);
+
+  var scheme$14 = new Array(3).concat(
+    "ece7f2a6bddb2b8cbe",
+    "f1eef6bdc9e174a9cf0570b0",
+    "f1eef6bdc9e174a9cf2b8cbe045a8d",
+    "f1eef6d0d1e6a6bddb74a9cf2b8cbe045a8d",
+    "f1eef6d0d1e6a6bddb74a9cf3690c00570b0034e7b",
+    "fff7fbece7f2d0d1e6a6bddb74a9cf3690c00570b0034e7b",
+    "fff7fbece7f2d0d1e6a6bddb74a9cf3690c00570b0045a8d023858"
+  ).map(colors$1);
+
+  var PuBu = ramp$1(scheme$14);
+
+  var scheme$15 = new Array(3).concat(
+    "e7e1efc994c7dd1c77",
+    "f1eef6d7b5d8df65b0ce1256",
+    "f1eef6d7b5d8df65b0dd1c77980043",
+    "f1eef6d4b9dac994c7df65b0dd1c77980043",
+    "f1eef6d4b9dac994c7df65b0e7298ace125691003f",
+    "f7f4f9e7e1efd4b9dac994c7df65b0e7298ace125691003f",
+    "f7f4f9e7e1efd4b9dac994c7df65b0e7298ace125698004367001f"
+  ).map(colors$1);
+
+  var PuRd = ramp$1(scheme$15);
+
+  var scheme$16 = new Array(3).concat(
+    "fde0ddfa9fb5c51b8a",
+    "feebe2fbb4b9f768a1ae017e",
+    "feebe2fbb4b9f768a1c51b8a7a0177",
+    "feebe2fcc5c0fa9fb5f768a1c51b8a7a0177",
+    "feebe2fcc5c0fa9fb5f768a1dd3497ae017e7a0177",
+    "fff7f3fde0ddfcc5c0fa9fb5f768a1dd3497ae017e7a0177",
+    "fff7f3fde0ddfcc5c0fa9fb5f768a1dd3497ae017e7a017749006a"
+  ).map(colors$1);
+
+  var RdPu = ramp$1(scheme$16);
+
+  var scheme$17 = new Array(3).concat(
+    "edf8b17fcdbb2c7fb8",
+    "ffffcca1dab441b6c4225ea8",
+    "ffffcca1dab441b6c42c7fb8253494",
+    "ffffccc7e9b47fcdbb41b6c42c7fb8253494",
+    "ffffccc7e9b47fcdbb41b6c41d91c0225ea80c2c84",
+    "ffffd9edf8b1c7e9b47fcdbb41b6c41d91c0225ea80c2c84",
+    "ffffd9edf8b1c7e9b47fcdbb41b6c41d91c0225ea8253494081d58"
+  ).map(colors$1);
+
+  var YlGnBu = ramp$1(scheme$17);
+
+  var scheme$18 = new Array(3).concat(
+    "f7fcb9addd8e31a354",
+    "ffffccc2e69978c679238443",
+    "ffffccc2e69978c67931a354006837",
+    "ffffccd9f0a3addd8e78c67931a354006837",
+    "ffffccd9f0a3addd8e78c67941ab5d238443005a32",
+    "ffffe5f7fcb9d9f0a3addd8e78c67941ab5d238443005a32",
+    "ffffe5f7fcb9d9f0a3addd8e78c67941ab5d238443006837004529"
+  ).map(colors$1);
+
+  var YlGn = ramp$1(scheme$18);
+
+  var scheme$19 = new Array(3).concat(
+    "fff7bcfec44fd95f0e",
+    "ffffd4fed98efe9929cc4c02",
+    "ffffd4fed98efe9929d95f0e993404",
+    "ffffd4fee391fec44ffe9929d95f0e993404",
+    "ffffd4fee391fec44ffe9929ec7014cc4c028c2d04",
+    "ffffe5fff7bcfee391fec44ffe9929ec7014cc4c028c2d04",
+    "ffffe5fff7bcfee391fec44ffe9929ec7014cc4c02993404662506"
+  ).map(colors$1);
+
+  var YlOrBr = ramp$1(scheme$19);
+
+  var scheme$20 = new Array(3).concat(
+    "ffeda0feb24cf03b20",
+    "ffffb2fecc5cfd8d3ce31a1c",
+    "ffffb2fecc5cfd8d3cf03b20bd0026",
+    "ffffb2fed976feb24cfd8d3cf03b20bd0026",
+    "ffffb2fed976feb24cfd8d3cfc4e2ae31a1cb10026",
+    "ffffccffeda0fed976feb24cfd8d3cfc4e2ae31a1cb10026",
+    "ffffccffeda0fed976feb24cfd8d3cfc4e2ae31a1cbd0026800026"
+  ).map(colors$1);
+
+  var YlOrRd = ramp$1(scheme$20);
+
+  var scheme$21 = new Array(3).concat(
+    "deebf79ecae13182bd",
+    "eff3ffbdd7e76baed62171b5",
+    "eff3ffbdd7e76baed63182bd08519c",
+    "eff3ffc6dbef9ecae16baed63182bd08519c",
+    "eff3ffc6dbef9ecae16baed64292c62171b5084594",
+    "f7fbffdeebf7c6dbef9ecae16baed64292c62171b5084594",
+    "f7fbffdeebf7c6dbef9ecae16baed64292c62171b508519c08306b"
+  ).map(colors$1);
+
+  var Blues = ramp$1(scheme$21);
+
+  var scheme$22 = new Array(3).concat(
+    "e5f5e0a1d99b31a354",
+    "edf8e9bae4b374c476238b45",
+    "edf8e9bae4b374c47631a354006d2c",
+    "edf8e9c7e9c0a1d99b74c47631a354006d2c",
+    "edf8e9c7e9c0a1d99b74c47641ab5d238b45005a32",
+    "f7fcf5e5f5e0c7e9c0a1d99b74c47641ab5d238b45005a32",
+    "f7fcf5e5f5e0c7e9c0a1d99b74c47641ab5d238b45006d2c00441b"
+  ).map(colors$1);
+
+  var Greens = ramp$1(scheme$22);
+
+  var scheme$23 = new Array(3).concat(
+    "f0f0f0bdbdbd636363",
+    "f7f7f7cccccc969696525252",
+    "f7f7f7cccccc969696636363252525",
+    "f7f7f7d9d9d9bdbdbd969696636363252525",
+    "f7f7f7d9d9d9bdbdbd969696737373525252252525",
+    "fffffff0f0f0d9d9d9bdbdbd969696737373525252252525",
+    "fffffff0f0f0d9d9d9bdbdbd969696737373525252252525000000"
+  ).map(colors$1);
+
+  var Greys = ramp$1(scheme$23);
+
+  var scheme$24 = new Array(3).concat(
+    "efedf5bcbddc756bb1",
+    "f2f0f7cbc9e29e9ac86a51a3",
+    "f2f0f7cbc9e29e9ac8756bb154278f",
+    "f2f0f7dadaebbcbddc9e9ac8756bb154278f",
+    "f2f0f7dadaebbcbddc9e9ac8807dba6a51a34a1486",
+    "fcfbfdefedf5dadaebbcbddc9e9ac8807dba6a51a34a1486",
+    "fcfbfdefedf5dadaebbcbddc9e9ac8807dba6a51a354278f3f007d"
+  ).map(colors$1);
+
+  var Purples = ramp$1(scheme$24);
+
+  var scheme$25 = new Array(3).concat(
+    "fee0d2fc9272de2d26",
+    "fee5d9fcae91fb6a4acb181d",
+    "fee5d9fcae91fb6a4ade2d26a50f15",
+    "fee5d9fcbba1fc9272fb6a4ade2d26a50f15",
+    "fee5d9fcbba1fc9272fb6a4aef3b2ccb181d99000d",
+    "fff5f0fee0d2fcbba1fc9272fb6a4aef3b2ccb181d99000d",
+    "fff5f0fee0d2fcbba1fc9272fb6a4aef3b2ccb181da50f1567000d"
+  ).map(colors$1);
+
+  var Reds = ramp$1(scheme$25);
+
+  var scheme$26 = new Array(3).concat(
+    "fee6cefdae6be6550d",
+    "feeddefdbe85fd8d3cd94701",
+    "feeddefdbe85fd8d3ce6550da63603",
+    "feeddefdd0a2fdae6bfd8d3ce6550da63603",
+    "feeddefdd0a2fdae6bfd8d3cf16913d948018c2d04",
+    "fff5ebfee6cefdd0a2fdae6bfd8d3cf16913d948018c2d04",
+    "fff5ebfee6cefdd0a2fdae6bfd8d3cf16913d94801a636037f2704"
+  ).map(colors$1);
+
+  var Oranges = ramp$1(scheme$26);
+
   var xhtml = "http://www.w3.org/1999/xhtml";
 
   var namespaces = {
@@ -4477,7 +5479,7 @@
     querySelectorAll: function(selector) { return this._parent.querySelectorAll(selector); }
   };
 
-  function constant$4(x) {
+  function constant$5(x) {
     return function() {
       return x;
     };
@@ -4566,7 +5568,7 @@
         parents = this._parents,
         groups = this._groups;
 
-    if (typeof value !== "function") value = constant$4(value);
+    if (typeof value !== "function") value = constant$5(value);
 
     for (var m = groups.length, update = new Array(m), enter = new Array(m), exit = new Array(m), j = 0; j < m; ++j) {
       var parent = parents[j],
@@ -5499,31 +6501,31 @@
     });
   }
 
-  function define$1(constructor, factory, prototype) {
+  function define$2(constructor, factory, prototype) {
     constructor.prototype = factory.prototype = prototype;
     prototype.constructor = constructor;
   }
 
-  function extend$1(parent, definition) {
+  function extend$2(parent, definition) {
     var prototype = Object.create(parent.prototype);
     for (var key in definition) prototype[key] = definition[key];
     return prototype;
   }
 
-  function Color$1() {}
+  function Color$2() {}
 
-  var darker$1 = 0.7;
-  var brighter$1 = 1 / darker$1;
+  var darker$2 = 0.7;
+  var brighter$2 = 1 / darker$2;
 
-  var reHex3$1 = /^#([0-9a-f]{3})$/;
-  var reHex6$1 = /^#([0-9a-f]{6})$/;
-  var reRgbInteger$1 = /^rgb\(\s*([-+]?\d+)\s*,\s*([-+]?\d+)\s*,\s*([-+]?\d+)\s*\)$/;
-  var reRgbPercent$1 = /^rgb\(\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*\)$/;
-  var reRgbaInteger$1 = /^rgba\(\s*([-+]?\d+)\s*,\s*([-+]?\d+)\s*,\s*([-+]?\d+)\s*,\s*([-+]?\d+(?:\.\d+)?)\s*\)$/;
-  var reRgbaPercent$1 = /^rgba\(\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)\s*\)$/;
-  var reHslPercent$1 = /^hsl\(\s*([-+]?\d+(?:\.\d+)?)\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*\)$/;
-  var reHslaPercent$1 = /^hsla\(\s*([-+]?\d+(?:\.\d+)?)\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)\s*\)$/;
-  var named$1 = {
+  var reHex3$2 = /^#([0-9a-f]{3})$/;
+  var reHex6$2 = /^#([0-9a-f]{6})$/;
+  var reRgbInteger$2 = /^rgb\(\s*([-+]?\d+)\s*,\s*([-+]?\d+)\s*,\s*([-+]?\d+)\s*\)$/;
+  var reRgbPercent$2 = /^rgb\(\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*\)$/;
+  var reRgbaInteger$2 = /^rgba\(\s*([-+]?\d+)\s*,\s*([-+]?\d+)\s*,\s*([-+]?\d+)\s*,\s*([-+]?\d+(?:\.\d+)?)\s*\)$/;
+  var reRgbaPercent$2 = /^rgba\(\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)\s*\)$/;
+  var reHslPercent$2 = /^hsl\(\s*([-+]?\d+(?:\.\d+)?)\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*\)$/;
+  var reHslaPercent$2 = /^hsla\(\s*([-+]?\d+(?:\.\d+)?)\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)\s*\)$/;
+  var named$2 = {
     aliceblue: 0xf0f8ff,
     antiquewhite: 0xfaebd7,
     aqua: 0x00ffff,
@@ -5674,7 +6676,7 @@
     yellowgreen: 0x9acd32
   };
 
-  define$1(Color$1, color$1, {
+  define$2(Color$2, color$2, {
     displayable: function() {
       return this.rgb().displayable();
     },
@@ -5683,57 +6685,57 @@
     }
   });
 
-  function color$1(format) {
+  function color$2(format) {
     var m;
     format = (format + "").trim().toLowerCase();
-    return (m = reHex3$1.exec(format)) ? (m = parseInt(m[1], 16), new Rgb$1((m >> 8 & 0xf) | (m >> 4 & 0x0f0), (m >> 4 & 0xf) | (m & 0xf0), ((m & 0xf) << 4) | (m & 0xf), 1)) // #f00
-        : (m = reHex6$1.exec(format)) ? rgbn$1(parseInt(m[1], 16)) // #ff0000
-        : (m = reRgbInteger$1.exec(format)) ? new Rgb$1(m[1], m[2], m[3], 1) // rgb(255, 0, 0)
-        : (m = reRgbPercent$1.exec(format)) ? new Rgb$1(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, 1) // rgb(100%, 0%, 0%)
-        : (m = reRgbaInteger$1.exec(format)) ? rgba$1(m[1], m[2], m[3], m[4]) // rgba(255, 0, 0, 1)
-        : (m = reRgbaPercent$1.exec(format)) ? rgba$1(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, m[4]) // rgb(100%, 0%, 0%, 1)
-        : (m = reHslPercent$1.exec(format)) ? hsla$1(m[1], m[2] / 100, m[3] / 100, 1) // hsl(120, 50%, 50%)
-        : (m = reHslaPercent$1.exec(format)) ? hsla$1(m[1], m[2] / 100, m[3] / 100, m[4]) // hsla(120, 50%, 50%, 1)
-        : named$1.hasOwnProperty(format) ? rgbn$1(named$1[format])
-        : format === "transparent" ? new Rgb$1(NaN, NaN, NaN, 0)
+    return (m = reHex3$2.exec(format)) ? (m = parseInt(m[1], 16), new Rgb$2((m >> 8 & 0xf) | (m >> 4 & 0x0f0), (m >> 4 & 0xf) | (m & 0xf0), ((m & 0xf) << 4) | (m & 0xf), 1)) // #f00
+        : (m = reHex6$2.exec(format)) ? rgbn$2(parseInt(m[1], 16)) // #ff0000
+        : (m = reRgbInteger$2.exec(format)) ? new Rgb$2(m[1], m[2], m[3], 1) // rgb(255, 0, 0)
+        : (m = reRgbPercent$2.exec(format)) ? new Rgb$2(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, 1) // rgb(100%, 0%, 0%)
+        : (m = reRgbaInteger$2.exec(format)) ? rgba$2(m[1], m[2], m[3], m[4]) // rgba(255, 0, 0, 1)
+        : (m = reRgbaPercent$2.exec(format)) ? rgba$2(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, m[4]) // rgb(100%, 0%, 0%, 1)
+        : (m = reHslPercent$2.exec(format)) ? hsla$2(m[1], m[2] / 100, m[3] / 100, 1) // hsl(120, 50%, 50%)
+        : (m = reHslaPercent$2.exec(format)) ? hsla$2(m[1], m[2] / 100, m[3] / 100, m[4]) // hsla(120, 50%, 50%, 1)
+        : named$2.hasOwnProperty(format) ? rgbn$2(named$2[format])
+        : format === "transparent" ? new Rgb$2(NaN, NaN, NaN, 0)
         : null;
   }
 
-  function rgbn$1(n) {
-    return new Rgb$1(n >> 16 & 0xff, n >> 8 & 0xff, n & 0xff, 1);
+  function rgbn$2(n) {
+    return new Rgb$2(n >> 16 & 0xff, n >> 8 & 0xff, n & 0xff, 1);
   }
 
-  function rgba$1(r, g, b, a) {
+  function rgba$2(r, g, b, a) {
     if (a <= 0) r = g = b = NaN;
-    return new Rgb$1(r, g, b, a);
+    return new Rgb$2(r, g, b, a);
   }
 
-  function rgbConvert$1(o) {
-    if (!(o instanceof Color$1)) o = color$1(o);
-    if (!o) return new Rgb$1;
+  function rgbConvert$2(o) {
+    if (!(o instanceof Color$2)) o = color$2(o);
+    if (!o) return new Rgb$2;
     o = o.rgb();
-    return new Rgb$1(o.r, o.g, o.b, o.opacity);
+    return new Rgb$2(o.r, o.g, o.b, o.opacity);
   }
 
-  function colorRgb$1(r, g, b, opacity) {
-    return arguments.length === 1 ? rgbConvert$1(r) : new Rgb$1(r, g, b, opacity == null ? 1 : opacity);
+  function colorRgb$2(r, g, b, opacity) {
+    return arguments.length === 1 ? rgbConvert$2(r) : new Rgb$2(r, g, b, opacity == null ? 1 : opacity);
   }
 
-  function Rgb$1(r, g, b, opacity) {
+  function Rgb$2(r, g, b, opacity) {
     this.r = +r;
     this.g = +g;
     this.b = +b;
     this.opacity = +opacity;
   }
 
-  define$1(Rgb$1, colorRgb$1, extend$1(Color$1, {
+  define$2(Rgb$2, colorRgb$2, extend$2(Color$2, {
     brighter: function(k) {
-      k = k == null ? brighter$1 : Math.pow(brighter$1, k);
-      return new Rgb$1(this.r * k, this.g * k, this.b * k, this.opacity);
+      k = k == null ? brighter$2 : Math.pow(brighter$2, k);
+      return new Rgb$2(this.r * k, this.g * k, this.b * k, this.opacity);
     },
     darker: function(k) {
-      k = k == null ? darker$1 : Math.pow(darker$1, k);
-      return new Rgb$1(this.r * k, this.g * k, this.b * k, this.opacity);
+      k = k == null ? darker$2 : Math.pow(darker$2, k);
+      return new Rgb$2(this.r * k, this.g * k, this.b * k, this.opacity);
     },
     rgb: function() {
       return this;
@@ -5754,18 +6756,18 @@
     }
   }));
 
-  function hsla$1(h, s, l, a) {
+  function hsla$2(h, s, l, a) {
     if (a <= 0) h = s = l = NaN;
     else if (l <= 0 || l >= 1) h = s = NaN;
     else if (s <= 0) h = NaN;
-    return new Hsl$1(h, s, l, a);
+    return new Hsl$2(h, s, l, a);
   }
 
-  function hslConvert$1(o) {
-    if (o instanceof Hsl$1) return new Hsl$1(o.h, o.s, o.l, o.opacity);
-    if (!(o instanceof Color$1)) o = color$1(o);
-    if (!o) return new Hsl$1;
-    if (o instanceof Hsl$1) return o;
+  function hslConvert$2(o) {
+    if (o instanceof Hsl$2) return new Hsl$2(o.h, o.s, o.l, o.opacity);
+    if (!(o instanceof Color$2)) o = color$2(o);
+    if (!o) return new Hsl$2;
+    if (o instanceof Hsl$2) return o;
     o = o.rgb();
     var r = o.r / 255,
         g = o.g / 255,
@@ -5784,28 +6786,28 @@
     } else {
       s = l > 0 && l < 1 ? 0 : h;
     }
-    return new Hsl$1(h, s, l, o.opacity);
+    return new Hsl$2(h, s, l, o.opacity);
   }
 
-  function colorHsl$1(h, s, l, opacity) {
-    return arguments.length === 1 ? hslConvert$1(h) : new Hsl$1(h, s, l, opacity == null ? 1 : opacity);
+  function colorHsl$2(h, s, l, opacity) {
+    return arguments.length === 1 ? hslConvert$2(h) : new Hsl$2(h, s, l, opacity == null ? 1 : opacity);
   }
 
-  function Hsl$1(h, s, l, opacity) {
+  function Hsl$2(h, s, l, opacity) {
     this.h = +h;
     this.s = +s;
     this.l = +l;
     this.opacity = +opacity;
   }
 
-  define$1(Hsl$1, colorHsl$1, extend$1(Color$1, {
+  define$2(Hsl$2, colorHsl$2, extend$2(Color$2, {
     brighter: function(k) {
-      k = k == null ? brighter$1 : Math.pow(brighter$1, k);
-      return new Hsl$1(this.h, this.s, this.l * k, this.opacity);
+      k = k == null ? brighter$2 : Math.pow(brighter$2, k);
+      return new Hsl$2(this.h, this.s, this.l * k, this.opacity);
     },
     darker: function(k) {
-      k = k == null ? darker$1 : Math.pow(darker$1, k);
-      return new Hsl$1(this.h, this.s, this.l * k, this.opacity);
+      k = k == null ? darker$2 : Math.pow(darker$2, k);
+      return new Hsl$2(this.h, this.s, this.l * k, this.opacity);
     },
     rgb: function() {
       var h = this.h % 360 + (this.h < 0) * 360,
@@ -5813,10 +6815,10 @@
           l = this.l,
           m2 = l + (l < 0.5 ? l : 1 - l) * s,
           m1 = 2 * l - m2;
-      return new Rgb$1(
-        hsl2rgb$1(h >= 240 ? h - 240 : h + 120, m1, m2),
-        hsl2rgb$1(h, m1, m2),
-        hsl2rgb$1(h < 120 ? h + 240 : h - 120, m1, m2),
+      return new Rgb$2(
+        hsl2rgb$2(h >= 240 ? h - 240 : h + 120, m1, m2),
+        hsl2rgb$2(h, m1, m2),
+        hsl2rgb$2(h < 120 ? h + 240 : h - 120, m1, m2),
         this.opacity
       );
     },
@@ -5828,216 +6830,216 @@
   }));
 
   /* From FvD 13.37, CSS Color Module Level 3 */
-  function hsl2rgb$1(h, m1, m2) {
+  function hsl2rgb$2(h, m1, m2) {
     return (h < 60 ? m1 + (m2 - m1) * h / 60
         : h < 180 ? m2
         : h < 240 ? m1 + (m2 - m1) * (240 - h) / 60
         : m1) * 255;
   }
 
-  var deg2rad$1 = Math.PI / 180;
-  var rad2deg$1 = 180 / Math.PI;
+  var deg2rad$2 = Math.PI / 180;
+  var rad2deg$2 = 180 / Math.PI;
 
-  var Kn$1 = 18;
-  var Xn$1 = 0.950470;
-  var Yn$1 = 1;
-  var Zn$1 = 1.088830;
-  var t0$3 = 4 / 29;
-  var t1$3 = 6 / 29;
-  var t2$1 = 3 * t1$3 * t1$3;
-  var t3$1 = t1$3 * t1$3 * t1$3;
-  function labConvert$1(o) {
-    if (o instanceof Lab$1) return new Lab$1(o.l, o.a, o.b, o.opacity);
-    if (o instanceof Hcl$1) {
-      var h = o.h * deg2rad$1;
-      return new Lab$1(o.l, Math.cos(h) * o.c, Math.sin(h) * o.c, o.opacity);
+  var Kn$2 = 18;
+  var Xn$2 = 0.950470;
+  var Yn$2 = 1;
+  var Zn$2 = 1.088830;
+  var t0$4 = 4 / 29;
+  var t1$4 = 6 / 29;
+  var t2$2 = 3 * t1$4 * t1$4;
+  var t3$2 = t1$4 * t1$4 * t1$4;
+  function labConvert$2(o) {
+    if (o instanceof Lab$2) return new Lab$2(o.l, o.a, o.b, o.opacity);
+    if (o instanceof Hcl$2) {
+      var h = o.h * deg2rad$2;
+      return new Lab$2(o.l, Math.cos(h) * o.c, Math.sin(h) * o.c, o.opacity);
     }
-    if (!(o instanceof Rgb$1)) o = rgbConvert$1(o);
-    var b = rgb2xyz$1(o.r),
-        a = rgb2xyz$1(o.g),
-        l = rgb2xyz$1(o.b),
-        x = xyz2lab$1((0.4124564 * b + 0.3575761 * a + 0.1804375 * l) / Xn$1),
-        y = xyz2lab$1((0.2126729 * b + 0.7151522 * a + 0.0721750 * l) / Yn$1),
-        z = xyz2lab$1((0.0193339 * b + 0.1191920 * a + 0.9503041 * l) / Zn$1);
-    return new Lab$1(116 * y - 16, 500 * (x - y), 200 * (y - z), o.opacity);
+    if (!(o instanceof Rgb$2)) o = rgbConvert$2(o);
+    var b = rgb2xyz$2(o.r),
+        a = rgb2xyz$2(o.g),
+        l = rgb2xyz$2(o.b),
+        x = xyz2lab$2((0.4124564 * b + 0.3575761 * a + 0.1804375 * l) / Xn$2),
+        y = xyz2lab$2((0.2126729 * b + 0.7151522 * a + 0.0721750 * l) / Yn$2),
+        z = xyz2lab$2((0.0193339 * b + 0.1191920 * a + 0.9503041 * l) / Zn$2);
+    return new Lab$2(116 * y - 16, 500 * (x - y), 200 * (y - z), o.opacity);
   }
 
-  function lab$2(l, a, b, opacity) {
-    return arguments.length === 1 ? labConvert$1(l) : new Lab$1(l, a, b, opacity == null ? 1 : opacity);
+  function lab$4(l, a, b, opacity) {
+    return arguments.length === 1 ? labConvert$2(l) : new Lab$2(l, a, b, opacity == null ? 1 : opacity);
   }
 
-  function Lab$1(l, a, b, opacity) {
+  function Lab$2(l, a, b, opacity) {
     this.l = +l;
     this.a = +a;
     this.b = +b;
     this.opacity = +opacity;
   }
 
-  define$1(Lab$1, lab$2, extend$1(Color$1, {
+  define$2(Lab$2, lab$4, extend$2(Color$2, {
     brighter: function(k) {
-      return new Lab$1(this.l + Kn$1 * (k == null ? 1 : k), this.a, this.b, this.opacity);
+      return new Lab$2(this.l + Kn$2 * (k == null ? 1 : k), this.a, this.b, this.opacity);
     },
     darker: function(k) {
-      return new Lab$1(this.l - Kn$1 * (k == null ? 1 : k), this.a, this.b, this.opacity);
+      return new Lab$2(this.l - Kn$2 * (k == null ? 1 : k), this.a, this.b, this.opacity);
     },
     rgb: function() {
       var y = (this.l + 16) / 116,
           x = isNaN(this.a) ? y : y + this.a / 500,
           z = isNaN(this.b) ? y : y - this.b / 200;
-      y = Yn$1 * lab2xyz$1(y);
-      x = Xn$1 * lab2xyz$1(x);
-      z = Zn$1 * lab2xyz$1(z);
-      return new Rgb$1(
-        xyz2rgb$1( 3.2404542 * x - 1.5371385 * y - 0.4985314 * z), // D65 -> sRGB
-        xyz2rgb$1(-0.9692660 * x + 1.8760108 * y + 0.0415560 * z),
-        xyz2rgb$1( 0.0556434 * x - 0.2040259 * y + 1.0572252 * z),
+      y = Yn$2 * lab2xyz$2(y);
+      x = Xn$2 * lab2xyz$2(x);
+      z = Zn$2 * lab2xyz$2(z);
+      return new Rgb$2(
+        xyz2rgb$2( 3.2404542 * x - 1.5371385 * y - 0.4985314 * z), // D65 -> sRGB
+        xyz2rgb$2(-0.9692660 * x + 1.8760108 * y + 0.0415560 * z),
+        xyz2rgb$2( 0.0556434 * x - 0.2040259 * y + 1.0572252 * z),
         this.opacity
       );
     }
   }));
 
-  function xyz2lab$1(t) {
-    return t > t3$1 ? Math.pow(t, 1 / 3) : t / t2$1 + t0$3;
+  function xyz2lab$2(t) {
+    return t > t3$2 ? Math.pow(t, 1 / 3) : t / t2$2 + t0$4;
   }
 
-  function lab2xyz$1(t) {
-    return t > t1$3 ? t * t * t : t2$1 * (t - t0$3);
+  function lab2xyz$2(t) {
+    return t > t1$4 ? t * t * t : t2$2 * (t - t0$4);
   }
 
-  function xyz2rgb$1(x) {
+  function xyz2rgb$2(x) {
     return 255 * (x <= 0.0031308 ? 12.92 * x : 1.055 * Math.pow(x, 1 / 2.4) - 0.055);
   }
 
-  function rgb2xyz$1(x) {
+  function rgb2xyz$2(x) {
     return (x /= 255) <= 0.04045 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4);
   }
 
-  function hclConvert$1(o) {
-    if (o instanceof Hcl$1) return new Hcl$1(o.h, o.c, o.l, o.opacity);
-    if (!(o instanceof Lab$1)) o = labConvert$1(o);
-    var h = Math.atan2(o.b, o.a) * rad2deg$1;
-    return new Hcl$1(h < 0 ? h + 360 : h, Math.sqrt(o.a * o.a + o.b * o.b), o.l, o.opacity);
+  function hclConvert$2(o) {
+    if (o instanceof Hcl$2) return new Hcl$2(o.h, o.c, o.l, o.opacity);
+    if (!(o instanceof Lab$2)) o = labConvert$2(o);
+    var h = Math.atan2(o.b, o.a) * rad2deg$2;
+    return new Hcl$2(h < 0 ? h + 360 : h, Math.sqrt(o.a * o.a + o.b * o.b), o.l, o.opacity);
   }
 
-  function colorHcl$1(h, c, l, opacity) {
-    return arguments.length === 1 ? hclConvert$1(h) : new Hcl$1(h, c, l, opacity == null ? 1 : opacity);
+  function colorHcl$2(h, c, l, opacity) {
+    return arguments.length === 1 ? hclConvert$2(h) : new Hcl$2(h, c, l, opacity == null ? 1 : opacity);
   }
 
-  function Hcl$1(h, c, l, opacity) {
+  function Hcl$2(h, c, l, opacity) {
     this.h = +h;
     this.c = +c;
     this.l = +l;
     this.opacity = +opacity;
   }
 
-  define$1(Hcl$1, colorHcl$1, extend$1(Color$1, {
+  define$2(Hcl$2, colorHcl$2, extend$2(Color$2, {
     brighter: function(k) {
-      return new Hcl$1(this.h, this.c, this.l + Kn$1 * (k == null ? 1 : k), this.opacity);
+      return new Hcl$2(this.h, this.c, this.l + Kn$2 * (k == null ? 1 : k), this.opacity);
     },
     darker: function(k) {
-      return new Hcl$1(this.h, this.c, this.l - Kn$1 * (k == null ? 1 : k), this.opacity);
+      return new Hcl$2(this.h, this.c, this.l - Kn$2 * (k == null ? 1 : k), this.opacity);
     },
     rgb: function() {
-      return labConvert$1(this).rgb();
+      return labConvert$2(this).rgb();
     }
   }));
 
-  var A$1 = -0.14861;
-  var B$1 = +1.78277;
-  var C$1 = -0.29227;
-  var D$1 = -0.90649;
-  var E$1 = +1.97294;
-  var ED$1 = E$1 * D$1;
-  var EB$1 = E$1 * B$1;
-  var BC_DA$1 = B$1 * C$1 - D$1 * A$1;
-  function cubehelixConvert$1(o) {
-    if (o instanceof Cubehelix$1) return new Cubehelix$1(o.h, o.s, o.l, o.opacity);
-    if (!(o instanceof Rgb$1)) o = rgbConvert$1(o);
+  var A$2 = -0.14861;
+  var B$2 = +1.78277;
+  var C$2 = -0.29227;
+  var D$2 = -0.90649;
+  var E$2 = +1.97294;
+  var ED$2 = E$2 * D$2;
+  var EB$2 = E$2 * B$2;
+  var BC_DA$2 = B$2 * C$2 - D$2 * A$2;
+  function cubehelixConvert$2(o) {
+    if (o instanceof Cubehelix$2) return new Cubehelix$2(o.h, o.s, o.l, o.opacity);
+    if (!(o instanceof Rgb$2)) o = rgbConvert$2(o);
     var r = o.r / 255,
         g = o.g / 255,
         b = o.b / 255,
-        l = (BC_DA$1 * b + ED$1 * r - EB$1 * g) / (BC_DA$1 + ED$1 - EB$1),
+        l = (BC_DA$2 * b + ED$2 * r - EB$2 * g) / (BC_DA$2 + ED$2 - EB$2),
         bl = b - l,
-        k = (E$1 * (g - l) - C$1 * bl) / D$1,
-        s = Math.sqrt(k * k + bl * bl) / (E$1 * l * (1 - l)), // NaN if l=0 or l=1
-        h = s ? Math.atan2(k, bl) * rad2deg$1 - 120 : NaN;
-    return new Cubehelix$1(h < 0 ? h + 360 : h, s, l, o.opacity);
+        k = (E$2 * (g - l) - C$2 * bl) / D$2,
+        s = Math.sqrt(k * k + bl * bl) / (E$2 * l * (1 - l)), // NaN if l=0 or l=1
+        h = s ? Math.atan2(k, bl) * rad2deg$2 - 120 : NaN;
+    return new Cubehelix$2(h < 0 ? h + 360 : h, s, l, o.opacity);
   }
 
-  function cubehelix$4(h, s, l, opacity) {
-    return arguments.length === 1 ? cubehelixConvert$1(h) : new Cubehelix$1(h, s, l, opacity == null ? 1 : opacity);
+  function cubehelix$7(h, s, l, opacity) {
+    return arguments.length === 1 ? cubehelixConvert$2(h) : new Cubehelix$2(h, s, l, opacity == null ? 1 : opacity);
   }
 
-  function Cubehelix$1(h, s, l, opacity) {
+  function Cubehelix$2(h, s, l, opacity) {
     this.h = +h;
     this.s = +s;
     this.l = +l;
     this.opacity = +opacity;
   }
 
-  define$1(Cubehelix$1, cubehelix$4, extend$1(Color$1, {
+  define$2(Cubehelix$2, cubehelix$7, extend$2(Color$2, {
     brighter: function(k) {
-      k = k == null ? brighter$1 : Math.pow(brighter$1, k);
-      return new Cubehelix$1(this.h, this.s, this.l * k, this.opacity);
+      k = k == null ? brighter$2 : Math.pow(brighter$2, k);
+      return new Cubehelix$2(this.h, this.s, this.l * k, this.opacity);
     },
     darker: function(k) {
-      k = k == null ? darker$1 : Math.pow(darker$1, k);
-      return new Cubehelix$1(this.h, this.s, this.l * k, this.opacity);
+      k = k == null ? darker$2 : Math.pow(darker$2, k);
+      return new Cubehelix$2(this.h, this.s, this.l * k, this.opacity);
     },
     rgb: function() {
-      var h = isNaN(this.h) ? 0 : (this.h + 120) * deg2rad$1,
+      var h = isNaN(this.h) ? 0 : (this.h + 120) * deg2rad$2,
           l = +this.l,
           a = isNaN(this.s) ? 0 : this.s * l * (1 - l),
           cosh = Math.cos(h),
           sinh = Math.sin(h);
-      return new Rgb$1(
-        255 * (l + a * (A$1 * cosh + B$1 * sinh)),
-        255 * (l + a * (C$1 * cosh + D$1 * sinh)),
-        255 * (l + a * (E$1 * cosh)),
+      return new Rgb$2(
+        255 * (l + a * (A$2 * cosh + B$2 * sinh)),
+        255 * (l + a * (C$2 * cosh + D$2 * sinh)),
+        255 * (l + a * (E$2 * cosh)),
         this.opacity
       );
     }
   }));
 
-  function constant$5(x) {
+  function constant$6(x) {
     return function() {
       return x;
     };
   }
 
-  function linear$3(a, d) {
+  function linear$4(a, d) {
     return function(t) {
       return a + t * d;
     };
   }
 
-  function exponential$1(a, b, y) {
+  function exponential$2(a, b, y) {
     return a = Math.pow(a, y), b = Math.pow(b, y) - a, y = 1 / y, function(t) {
       return Math.pow(a + t * b, y);
     };
   }
 
-  function hue$1(a, b) {
+  function hue$2(a, b) {
     var d = b - a;
-    return d ? linear$3(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant$5(isNaN(a) ? b : a);
+    return d ? linear$4(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant$6(isNaN(a) ? b : a);
   }
 
-  function gamma$1(y) {
-    return (y = +y) === 1 ? nogamma$1 : function(a, b) {
-      return b - a ? exponential$1(a, b, y) : constant$5(isNaN(a) ? b : a);
+  function gamma$2(y) {
+    return (y = +y) === 1 ? nogamma$2 : function(a, b) {
+      return b - a ? exponential$2(a, b, y) : constant$6(isNaN(a) ? b : a);
     };
   }
 
-  function nogamma$1(a, b) {
+  function nogamma$2(a, b) {
     var d = b - a;
-    return d ? linear$3(a, d) : constant$5(isNaN(a) ? b : a);
+    return d ? linear$4(a, d) : constant$6(isNaN(a) ? b : a);
   }
 
   var interpolateRgb = (function rgbGamma(y) {
-    var color = gamma$1(y);
+    var color = gamma$2(y);
 
     function rgb(start, end) {
-      var r = color((start = colorRgb$1(start)).r, (end = colorRgb$1(end)).r),
+      var r = color((start = colorRgb$2(start)).r, (end = colorRgb$2(end)).r),
           g = color(start.g, end.g),
           b = color(start.b, end.b),
           opacity = color(start.opacity, end.opacity);
@@ -6061,22 +7063,22 @@
     };
   }
 
-  var reA$1 = /[-+]?(?:\d+\.?\d*|\.?\d+)(?:[eE][-+]?\d+)?/g;
-  var reB$1 = new RegExp(reA$1.source, "g");
-  function zero$1(b) {
+  var reA$2 = /[-+]?(?:\d+\.?\d*|\.?\d+)(?:[eE][-+]?\d+)?/g;
+  var reB$2 = new RegExp(reA$2.source, "g");
+  function zero$2(b) {
     return function() {
       return b;
     };
   }
 
-  function one$1(b) {
+  function one$2(b) {
     return function(t) {
       return b(t) + "";
     };
   }
 
   function interpolateString(a, b) {
-    var bi = reA$1.lastIndex = reB$1.lastIndex = 0, // scan index for next number in b
+    var bi = reA$2.lastIndex = reB$2.lastIndex = 0, // scan index for next number in b
         am, // current match in a
         bm, // current match in b
         bs, // string preceding current number in b, if any
@@ -6088,8 +7090,8 @@
     a = a + "", b = b + "";
 
     // Interpolate pairs of numbers in a & b.
-    while ((am = reA$1.exec(a))
-        && (bm = reB$1.exec(b))) {
+    while ((am = reA$2.exec(a))
+        && (bm = reB$2.exec(b))) {
       if ((bs = bm.index) > bi) { // a string precedes the next number in b
         bs = b.slice(bi, bs);
         if (s[i]) s[i] += bs; // coalesce with previous string
@@ -6102,7 +7104,7 @@
         s[++i] = null;
         q.push({i: i, x: interpolateNumber(am, bm)});
       }
-      bi = reB$1.lastIndex;
+      bi = reB$2.lastIndex;
     }
 
     // Add remains of b.
@@ -6115,17 +7117,17 @@
     // Special optimization for only a single match.
     // Otherwise, interpolate each of the numbers and rejoin the string.
     return s.length < 2 ? (q[0]
-        ? one$1(q[0].x)
-        : zero$1(b))
+        ? one$2(q[0].x)
+        : zero$2(b))
         : (b = q.length, function(t) {
             for (var i = 0, o; i < b; ++i) s[(o = q[i]).i] = o.x(t);
             return s.join("");
           });
   }
 
-  var degrees$1 = 180 / Math.PI;
+  var degrees$2 = 180 / Math.PI;
 
-  var identity$5 = {
+  var identity$6 = {
     translateX: 0,
     translateY: 0,
     rotate: 0,
@@ -6134,7 +7136,7 @@
     scaleY: 1
   };
 
-  function decompose$1(a, b, c, d, e, f) {
+  function decompose$2(a, b, c, d, e, f) {
     var scaleX, scaleY, skewX;
     if (scaleX = Math.sqrt(a * a + b * b)) a /= scaleX, b /= scaleX;
     if (skewX = a * c + b * d) c -= a * skewX, d -= b * skewX;
@@ -6143,37 +7145,37 @@
     return {
       translateX: e,
       translateY: f,
-      rotate: Math.atan2(b, a) * degrees$1,
-      skewX: Math.atan(skewX) * degrees$1,
+      rotate: Math.atan2(b, a) * degrees$2,
+      skewX: Math.atan(skewX) * degrees$2,
       scaleX: scaleX,
       scaleY: scaleY
     };
   }
 
-  var cssNode$1;
-  var cssRoot$1;
-  var cssView$1;
-  var svgNode$1;
-  function parseCss$1(value) {
-    if (value === "none") return identity$5;
-    if (!cssNode$1) cssNode$1 = document.createElement("DIV"), cssRoot$1 = document.documentElement, cssView$1 = document.defaultView;
-    cssNode$1.style.transform = value;
-    value = cssView$1.getComputedStyle(cssRoot$1.appendChild(cssNode$1), null).getPropertyValue("transform");
-    cssRoot$1.removeChild(cssNode$1);
+  var cssNode$2;
+  var cssRoot$2;
+  var cssView$2;
+  var svgNode$2;
+  function parseCss$2(value) {
+    if (value === "none") return identity$6;
+    if (!cssNode$2) cssNode$2 = document.createElement("DIV"), cssRoot$2 = document.documentElement, cssView$2 = document.defaultView;
+    cssNode$2.style.transform = value;
+    value = cssView$2.getComputedStyle(cssRoot$2.appendChild(cssNode$2), null).getPropertyValue("transform");
+    cssRoot$2.removeChild(cssNode$2);
     value = value.slice(7, -1).split(",");
-    return decompose$1(+value[0], +value[1], +value[2], +value[3], +value[4], +value[5]);
+    return decompose$2(+value[0], +value[1], +value[2], +value[3], +value[4], +value[5]);
   }
 
-  function parseSvg$1(value) {
-    if (value == null) return identity$5;
-    if (!svgNode$1) svgNode$1 = document.createElementNS("http://www.w3.org/2000/svg", "g");
-    svgNode$1.setAttribute("transform", value);
-    if (!(value = svgNode$1.transform.baseVal.consolidate())) return identity$5;
+  function parseSvg$2(value) {
+    if (value == null) return identity$6;
+    if (!svgNode$2) svgNode$2 = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    svgNode$2.setAttribute("transform", value);
+    if (!(value = svgNode$2.transform.baseVal.consolidate())) return identity$6;
     value = value.matrix;
-    return decompose$1(value.a, value.b, value.c, value.d, value.e, value.f);
+    return decompose$2(value.a, value.b, value.c, value.d, value.e, value.f);
   }
 
-  function interpolateTransform$1(parse, pxComma, pxParen, degParen) {
+  function interpolateTransform$2(parse, pxComma, pxParen, degParen) {
 
     function pop(s) {
       return s.length ? s.pop() + " " : "";
@@ -6231,18 +7233,18 @@
     };
   }
 
-  var interpolateTransform$2 = interpolateTransform$1(parseCss$1, "px, ", "px)", "deg)");
-  var interpolateTransformSvg$1 = interpolateTransform$1(parseSvg$1, ", ", ")", ")");
+  var interpolateTransform$3 = interpolateTransform$2(parseCss$2, "px, ", "px)", "deg)");
+  var interpolateTransformSvg$2 = interpolateTransform$2(parseSvg$2, ", ", ")", ")");
 
-  function cubehelix$5(hue) {
+  function cubehelix$8(hue) {
     return (function cubehelixGamma(y) {
       y = +y;
 
       function cubehelix(start, end) {
-        var h = hue((start = cubehelix$4(start)).h, (end = cubehelix$4(end)).h),
-            s = nogamma$1(start.s, end.s),
-            l = nogamma$1(start.l, end.l),
-            opacity = nogamma$1(start.opacity, end.opacity);
+        var h = hue((start = cubehelix$7(start)).h, (end = cubehelix$7(end)).h),
+            s = nogamma$2(start.s, end.s),
+            l = nogamma$2(start.l, end.l),
+            opacity = nogamma$2(start.opacity, end.opacity);
         return function(t) {
           start.h = h(t);
           start.s = s(t);
@@ -6258,8 +7260,8 @@
     })(1);
   }
 
-  cubehelix$5(hue$1);
-  var cubehelixLong = cubehelix$5(nogamma$1);
+  cubehelix$8(hue$2);
+  var cubehelixLong$1 = cubehelix$8(nogamma$2);
 
   function tweenRemove(id, name) {
     var tween0, tween1;
@@ -6344,8 +7346,8 @@
   function interpolate(a, b) {
     var c;
     return (typeof b === "number" ? interpolateNumber
-        : b instanceof color$1 ? interpolateRgb
-        : (c = color$1(b)) ? (b = c, interpolateRgb)
+        : b instanceof color$2 ? interpolateRgb
+        : (c = color$2(b)) ? (b = c, interpolateRgb)
         : interpolateString)(a, b);
   }
 
@@ -6412,7 +7414,7 @@
   }
 
   function transition_attr(name, value) {
-    var fullname = namespace(name), i = fullname === "transform" ? interpolateTransformSvg$1 : interpolate;
+    var fullname = namespace(name), i = fullname === "transform" ? interpolateTransformSvg$2 : interpolate;
     return this.attrTween(name, typeof value === "function"
         ? (fullname.local ? attrFunctionNS$1 : attrFunction$1)(fullname, i, tweenValue(this, "attr." + name, value))
         : value == null ? (fullname.local ? attrRemoveNS$1 : attrRemove$1)(fullname)
@@ -6679,7 +7681,7 @@
   }
 
   function transition_style(name, value, priority) {
-    var i = (name += "") === "transform" ? interpolateTransform$2 : interpolate;
+    var i = (name += "") === "transform" ? interpolateTransform$3 : interpolate;
     return value == null ? this
             .styleTween(name, styleRemove$1(name, i))
             .on("end.style." + name, styleRemoveEnd(name))
@@ -6856,7 +7858,7 @@
 
   var slice$4 = Array.prototype.slice;
 
-  function identity$6(x) {
+  function identity$7(x) {
     return x;
   }
 
@@ -6897,13 +7899,13 @@
 
     function axis(context) {
       var values = tickValues == null ? (scale.ticks ? scale.ticks.apply(scale, tickArguments) : scale.domain()) : tickValues,
-          format = tickFormat == null ? (scale.tickFormat ? scale.tickFormat.apply(scale, tickArguments) : identity$6) : tickFormat,
+          format = tickFormat == null ? (scale.tickFormat ? scale.tickFormat.apply(scale, tickArguments) : identity$7) : tickFormat,
           spacing = Math.max(tickSizeInner, 0) + tickPadding,
           transform = orient === top || orient === bottom ? translateX : translateY,
           range = scale.range(),
           range0 = range[0] + 0.5,
           range1 = range[range.length - 1] + 0.5,
-          position = (scale.bandwidth ? center : identity$6)(scale.copy()),
+          position = (scale.bandwidth ? center : identity$7)(scale.copy()),
           selection = context.selection ? context.selection() : context,
           path = selection.selectAll(".domain").data([null]),
           tick = selection.selectAll(".tick").data(values, scale).order(),
@@ -7071,6 +8073,68 @@
   exports.transition = transition;
   exports.axisBottom = axisBottom;
   exports.axisLeft = axisLeft;
+  exports.schemeAccent = Accent;
+  exports.schemeDark2 = Dark2;
+  exports.schemePaired = Paired;
+  exports.schemePastel1 = Pastel1;
+  exports.schemePastel2 = Pastel2;
+  exports.schemeSet1 = Set1;
+  exports.schemeSet2 = Set2;
+  exports.schemeSet3 = Set3;
+  exports.interpolateBrBG = BrBG;
+  exports.schemeBrBG = scheme;
+  exports.interpolatePRGn = PRGn;
+  exports.schemePRGn = scheme$1;
+  exports.interpolatePiYG = PiYG;
+  exports.schemePiYG = scheme$2;
+  exports.interpolatePuOr = PuOr;
+  exports.schemePuOr = scheme$3;
+  exports.interpolateRdBu = RdBu;
+  exports.schemeRdBu = scheme$4;
+  exports.interpolateRdGy = RdGy;
+  exports.schemeRdGy = scheme$5;
+  exports.interpolateRdYlBu = RdYlBu;
+  exports.schemeRdYlBu = scheme$6;
+  exports.interpolateRdYlGn = RdYlGn;
+  exports.schemeRdYlGn = scheme$7;
+  exports.interpolateSpectral = Spectral;
+  exports.schemeSpectral = scheme$8;
+  exports.interpolateBuGn = BuGn;
+  exports.schemeBuGn = scheme$9;
+  exports.interpolateBuPu = BuPu;
+  exports.schemeBuPu = scheme$10;
+  exports.interpolateGnBu = GnBu;
+  exports.schemeGnBu = scheme$11;
+  exports.interpolateOrRd = OrRd;
+  exports.schemeOrRd = scheme$12;
+  exports.interpolatePuBuGn = PuBuGn;
+  exports.schemePuBuGn = scheme$13;
+  exports.interpolatePuBu = PuBu;
+  exports.schemePuBu = scheme$14;
+  exports.interpolatePuRd = PuRd;
+  exports.schemePuRd = scheme$15;
+  exports.interpolateRdPu = RdPu;
+  exports.schemeRdPu = scheme$16;
+  exports.interpolateYlGnBu = YlGnBu;
+  exports.schemeYlGnBu = scheme$17;
+  exports.interpolateYlGn = YlGn;
+  exports.schemeYlGn = scheme$18;
+  exports.interpolateYlOrBr = YlOrBr;
+  exports.schemeYlOrBr = scheme$19;
+  exports.interpolateYlOrRd = YlOrRd;
+  exports.schemeYlOrRd = scheme$20;
+  exports.interpolateBlues = Blues;
+  exports.schemeBlues = scheme$21;
+  exports.interpolateGreens = Greens;
+  exports.schemeGreens = scheme$22;
+  exports.interpolateGreys = Greys;
+  exports.schemeGreys = scheme$23;
+  exports.interpolatePurples = Purples;
+  exports.schemePurples = scheme$24;
+  exports.interpolateReds = Reds;
+  exports.schemeReds = scheme$25;
+  exports.interpolateOranges = Oranges;
+  exports.schemeOranges = scheme$26;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 

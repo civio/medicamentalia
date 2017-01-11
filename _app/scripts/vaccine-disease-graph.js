@@ -19,7 +19,7 @@ var VaccineDiseaseGraph = function( _id ) {
     //console.log('Vaccine Graph init', that.id, that.disease, that.sort);
 
     that.$el      = $('#'+that.id);
-    that.$tooltip = $('#vaccine-disease-tooltip');
+    that.$tooltip = that.$el.find('.tooltip');
     that.lang     = that.$el.data('lang');
 
     that.x = d3.scaleBand()
@@ -34,7 +34,7 @@ var VaccineDiseaseGraph = function( _id ) {
       .paddingOuter(0)
       .round(true);
 
-    that.color = d3.scaleSequential(d3.interpolateMagma);
+    that.color = d3.scaleSequential(d3.interpolateOrRd);
 
     if (that.data) {
       clear();
@@ -53,7 +53,7 @@ var VaccineDiseaseGraph = function( _id ) {
 
   that.onResize = function() {
     that.getDimensions();
-    //that.updateData();
+    if (that.data) updateGraph();
     return that;
   };
 
@@ -83,6 +83,7 @@ var VaccineDiseaseGraph = function( _id ) {
         d.year_introduction = +d.year_introduction.replace('prior to', '');
       }
      
+      d.cases = {};
       d.values = {};
 
       // set value es cases /1000 habitants
@@ -93,6 +94,7 @@ var VaccineDiseaseGraph = function( _id ) {
             var population = +populationItem[0][year];
             if (population !== 0) {
               //d[year] = 1000 * (+d[year] / population);
+              d.cases[year] = +d[year];
               d.values[year] = 1000 * (+d[year] / population);
             } else {
               //d[year] = null;
@@ -148,6 +150,7 @@ var VaccineDiseaseGraph = function( _id ) {
           country: d.code,
           name: d.name,
           year: value,
+          cases: d.cases[value],
           value: d.values[value]
         });
       }
@@ -180,7 +183,7 @@ var VaccineDiseaseGraph = function( _id ) {
       .range([0, that.height]);
 
     //that.color.domain([d3.max(that.cells_data, function(d){ return d.value; }), 0]);
-    that.color.domain([4, 0]);
+    that.color.domain([0, 4]);
 
     //console.log('Maximum cases value: '+ d3.max(that.cells_data, function(d){ return d.value; }));
 
@@ -196,11 +199,8 @@ var VaccineDiseaseGraph = function( _id ) {
       .data(that.cells_data)
     .enter().append('div')
       .attr('class', 'cell')
-      .style('left', function(d){ return that.x(d.year)+'px'; })
-      .style('top', function(d){ return that.y(d.country)+'px'; } )
-      .style('width', that.x.bandwidth()+'px')
-      .style('height', that.y.bandwidth()+'px')
       .style('background', function(d){ return that.color(d.value); })
+      .call(setCellDimensions)
       .on('mouseover', onMouseOver)
       .on('mouseout', onMouseOut);
 
@@ -226,17 +226,35 @@ var VaccineDiseaseGraph = function( _id ) {
 
     // Draw year introduction mark
     that.container.select('.cell-container')
-      .selectAll('.introduction')
+      .selectAll('.marker')
       .data(that.current_data
         .map(function(d){ return {code: d.code, year: d.year_introduction}; })
         .filter(function(d){ return !isNaN(d.year); }))
     .enter().append('div')
-      .attr('class', 'introduction')
-      .style('top', function(d){ return that.y(d.code)+'px'; })
-      .style('left', function(d){
-        return (d.year < that.years[0]) ? (that.x(that.years[0])-1)+'px' : (d.year < that.years[that.years.length-1]) ? (that.x(d.year)-1)+'px' : (that.x.bandwidth()+that.x(that.years[that.years.length-1]))+'px';
-      })
-      .style('height', that.y.bandwidth()+'px');
+      .attr('class', 'marker')
+      .call(setMarkerDimensions);
+  };
+
+  var updateGraph = function() {
+    // Update scales
+    that.x.range([0, that.width]);
+    that.y.range([0, that.height]);
+
+    that.container.style('height', that.height+'px');
+
+    that.container.select('.cell-container')
+      .style('height', that.height+'px');
+      
+    that.container.selectAll('.cell')
+      .call(setCellDimensions);
+
+    that.container.select('.x-axis').selectAll('.axis-item')
+      .style('left', function(d){ return that.x(d)+'px'; });
+    that.container.select('.y-axis').selectAll('.axis-item')
+      .style('top', function(d){ return that.y(d)+'px'; });
+
+    that.container.select('.cell-container').selectAll('.marker')
+      .call(setMarkerDimensions);
   };
 
   var clear = function() {
@@ -244,11 +262,42 @@ var VaccineDiseaseGraph = function( _id ) {
     that.container.selectAll('.axis').remove();
   };
 
+  var setCellDimensions = function(selection) {
+    selection
+      .style('left', function(d){ return that.x(d.year)+'px'; })
+      .style('top', function(d){ return that.y(d.country)+'px'; } )
+      .style('width', that.x.bandwidth()+'px')
+      .style('height', that.y.bandwidth()+'px');
+  };
+
+  var setMarkerDimensions = function(selection) {
+    selection
+      .style('top', function(d){ return that.y(d.code)+'px'; })
+      .style('left', function(d){
+        return (d.year < that.years[0]) ? (that.x(that.years[0])-1)+'px' : (d.year < that.years[that.years.length-1]) ? (that.x(d.year)-1)+'px' : (that.x.bandwidth()+that.x(that.years[that.years.length-1]))+'px';
+      })
+      .style('height', that.y.bandwidth()+'px');
+  };
+
   var onMouseOver = function(d){
-    that.$tooltip.find('.tooltip-inner').html('<small>'+d.year+'</small><strong>'+d.name+'</strong><p>'+d.value.toFixed(1)+' casos por cada 1000 habitantes</p>');
+    var cases_str = (that.lang === 'es') ? 'casos' : 'cases';
+    var cases_single_str = (that.lang === 'es') ? 'caso' : 'case';
+    that.$tooltip.find('.tooltip-inner .country').html(d.name);
+    that.$tooltip.find('.tooltip-inner .year').html(d.year);
+    that.$tooltip.find('.tooltip-inner .value').html( formatDecimal(d.value, that.lang) );
+    that.$tooltip.find('.tooltip-inner .cases').html( (d.cases !== 1) ? d.cases.toLocaleString(that.lang)+' '+cases_str : d.cases.toLocaleString(that.lang)+' '+cases_single_str );
+    
+    var xpos = $(this).offset().left + that.x.bandwidth()*0.5 - that.$tooltip.width()*0.5;
+
+    //console.log($(this).offset().left, $(this).position().left);
+
+    console.log( that.$el.width()-xpos );
+
+    //if( xpos > )
+
     that.$tooltip.css({
-      'left': $(this).offset().left + that.x.bandwidth(),
-      'top': $(this).offset().top + (that.y.bandwidth()*0.5) - (that.$tooltip.height()*0.5),
+      'left': xpos,
+      'top': $(this).offset().top - that.y.bandwidth()*0.5 - that.$tooltip.height(),
       'opacity': '1'
     });
   };
@@ -260,6 +309,10 @@ var VaccineDiseaseGraph = function( _id ) {
   var getCountryName = function(code) {
     var country = that.current_data.filter(function(d){ return d.code === code; });
     return (country[0]) ? country[0].name : '';
+  };
+
+  var formatDecimal = function(number, lang){
+    return (number < 0.001) ? 0 : (number >= 0.1) ? number.toFixed(1).toLocaleString(lang) : (number >= 0.01) ? number.toFixed(2).toLocaleString(lang) : number.toFixed(3).toLocaleString(lang);
   };
 
   return that;
