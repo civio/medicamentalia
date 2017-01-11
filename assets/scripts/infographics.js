@@ -8483,41 +8483,55 @@ var VaccineDiseaseGraph = function( _id ) {
 
   var $ = jQuery.noConflict();
 
-  var that = this;
-
   var Y_AXIS_WIDTH = 100; // Must be the ame value than #vaccine-disease-graph $padding-left scss variable
 
-  that.id = _id;
+  var that = this,
+      id = _id,
+      disease,
+      sort,
+      lang,
+      data,
+      dataPopulation,
+      currentData,
+      cellData,
+      countries,
+      years,
+      cellSize,
+      container,
+      x, y,
+      width, height,
+      $el,
+      $tooltip;
 
 
   // Public Methods
 
   that.init = function( _disease, _sort ) {
 
-    that.disease = _disease;
-    this.sort = _sort;
+    disease = _disease;
+    sort = _sort;
 
-    //console.log('Vaccine Graph init', that.id, that.disease, that.sort);
+    //console.log('Vaccine Graph init', id, disease, sort);
 
-    that.$el      = $('#'+that.id);
-    that.$tooltip = that.$el.find('.tooltip');
-    that.lang     = that.$el.data('lang');
+    $el      = $('#'+id);
+    $tooltip = $el.find('.tooltip');
+    lang     = $el.data('lang');
 
-    that.x = d3.scaleBand()
+    x = d3.scaleBand()
       .padding(0)
       .paddingInner(0)
       .paddingOuter(0)
       .round(true);
 
-    that.y = d3.scaleBand()
+    y = d3.scaleBand()
       .padding(0)
       .paddingInner(0)
       .paddingOuter(0)
       .round(true);
 
-    that.color = d3.scaleSequential(d3.interpolateOrRd);
+    color = d3.scaleSequential(d3.interpolateOrRd);
 
-    if (that.data) {
+    if (data) {
       clear();
       setupData();
       setupGraph();
@@ -8533,32 +8547,25 @@ var VaccineDiseaseGraph = function( _id ) {
   };
 
   that.onResize = function() {
-    that.getDimensions();
-    if (that.data) updateGraph();
-    return that;
-  };
-
-  that.getDimensions = function(){
-    that.width    = that.$el.width() - Y_AXIS_WIDTH;
-    that.cellSize = Math.floor(that.width / that.years.length);
-    that.height   = (that.cellSize < 20) ? that.cellSize*that.countries.length : 20*that.countries.length; // clip cellsize height to 20px
+    getDimensions();
+    if (data) updateGraph();
     return that;
   };
 
   var onDataReady = function(error, data_csv, population_csv) {
 
-    that.data = data_csv;
-    that.dataPopulation = population_csv;
+    data = data_csv;
+    dataPopulation = population_csv;
 
     // we don't need the columns attribute
-    delete that.data.columns;
+    delete data.columns;
 
     // We can define a filter function to show only some selected countries
     if (that.filter) {
-      that.data = that.data.filter(that.filter);
+      data = data.filter(that.filter);
     }
 
-    that.data.forEach(function(d){
+    data.forEach(function(d){
       d.disease = d.disease.toLowerCase();
       if (d.year_introduction) {
         d.year_introduction = +d.year_introduction.replace('prior to', '');
@@ -8602,32 +8609,32 @@ var VaccineDiseaseGraph = function( _id ) {
   var setupData = function() {
 
     // Filter data based on selected disease
-    that.current_data = that.data.filter(function(d){ return d.disease === that.disease && d3.values(d.values).length > 0; });
+    currentData = data.filter(function(d){ return d.disease === disease && d3.values(d.values).length > 0; });
 
     // Sort data
-    if (that.sort === 'year'){
-      that.current_data.sort(function(a,b){ return (isNaN(a.year_introduction)) ? 1 : (isNaN(b.year_introduction)) ? -1 : b.year_introduction-a.year_introduction; });
-    } else if (that.sort === 'cases'){
-      that.current_data.sort(function(a,b){ return b.total-a.total; });
+    if (sort === 'year'){
+      currentData.sort(function(a,b){ return (isNaN(a.year_introduction)) ? 1 : (isNaN(b.year_introduction)) ? -1 : b.year_introduction-a.year_introduction; });
+    } else if (sort === 'cases'){
+      currentData.sort(function(a,b){ return b.total-a.total; });
     }
 
     // Get array of country names
-    that.countries = that.current_data.map(function(d){ return d.code; });
+    countries = currentData.map(function(d){ return d.code; });
 
     // Get array of years
-    var min_year = d3.min(that.current_data, function(d){ return d3.min(d3.keys(d.values)); });
-    var max_year = d3.max(that.current_data, function(d){ return d3.max(d3.keys(d.values)); });
-    that.years = d3.range(min_year, max_year, 1);
-    that.years.push(+max_year);
+    var minYear = d3.min(currentData, function(d){ return d3.min(d3.keys(d.values)); });
+    var maxYear = d3.max(currentData, function(d){ return d3.max(d3.keys(d.values)); });
+    years = d3.range(minYear, maxYear, 1);
+    years.push(+maxYear);
 
-    //console.log(min_year, max_year, that.years);
-    //console.log(that.countries);
+    //console.log(minYear, maxYear, years);
+    //console.log(countries);
 
     // Get array of data values
-    that.cells_data = [];
-    that.current_data.forEach(function(d){
+    cellsData = [];
+    currentData.forEach(function(d){
       for (var value in d.values){
-        that.cells_data.push({
+        cellsData.push({
           country: d.code,
           name: d.name,
           year: value,
@@ -8638,13 +8645,13 @@ var VaccineDiseaseGraph = function( _id ) {
     });
 
     /*
-    that.current_data.forEach(function(d){
+    currentData.forEach(function(d){
       var counter = 0;
-      that.years.forEach(function(year){
+      years.forEach(function(year){
         if (d[year])
           counter++;
       });
-      if(counter <= 20) // that.years.length/2)
+      if(counter <= 20) // years.length/2)
         console.log(d.name + ' has only values for ' + counter + ' years');
     });
     */
@@ -8653,62 +8660,58 @@ var VaccineDiseaseGraph = function( _id ) {
   var setupGraph = function() {
 
     // Get dimensions (height is based on countries length)
-    that.getDimensions();
+    getDimensions();
 
-    that.x
-      .domain(that.years)
-      .range([0, that.width]);
+    x.domain(years).range([0, width]);
 
-    that.y
-      .domain(that.countries)
-      .range([0, that.height]);
+    y.domain(countries).range([0, height]);
 
-    //that.color.domain([d3.max(that.cells_data, function(d){ return d.value; }), 0]);
-    that.color.domain([0, 4]);
+    //color.domain([d3.max(cellsData, function(d){ return d.value; }), 0]);
+    color.domain([0, 4]);
 
-    //console.log('Maximum cases value: '+ d3.max(that.cells_data, function(d){ return d.value; }));
+    //console.log('Maximum cases value: '+ d3.max(cellsData, function(d){ return d.value; }));
 
     // Add svg
-    that.container = d3.select('#'+that.id+' .graph-container')
-      .style('height', that.height+'px');
+    container = d3.select('#'+id+' .graph-container')
+      .style('height', height+'px');
 
     // Draw cells
-    that.container.append('div')
+    container.append('div')
       .attr('class', 'cell-container')
-      .style('height', that.height+'px')
+      .style('height', height+'px')
       .selectAll('.cell')
-      .data(that.cells_data)
+      .data(cellsData)
     .enter().append('div')
       .attr('class', 'cell')
-      .style('background', function(d){ return that.color(d.value); })
+      .style('background', function(d){ return color(d.value); })
       .call(setCellDimensions)
       .on('mouseover', onMouseOver)
       .on('mouseout', onMouseOut);
 
     // Draw years x axis
-    that.container.append('div')
+    container.append('div')
       .attr('class', 'x-axis axis')
       .selectAll('.axis-item')
-      .data(that.years.filter(function(d){ return d%5===0; }))
+      .data(years.filter(function(d){ return d%5===0; }))
     .enter().append('div')
       .attr('class', 'axis-item')
-      .style('left', function(d){ return that.x(d)+'px'; })
+      .style('left', function(d){ return x(d)+'px'; })
       .html(function(d){ return d; });
 
     // Draw countries y axis
-    that.container.append('div')
+    container.append('div')
       .attr('class', 'y-axis axis')
       .selectAll('.axis-item')
-      .data(that.countries)
+      .data(countries)
     .enter().append('div')
       .attr('class', 'axis-item')
-      .style('top', function(d){ return that.y(d)+'px'; })
+      .style('top', function(d){ return y(d)+'px'; })
       .html(function(d){ return getCountryName(d); });
 
     // Draw year introduction mark
-    that.container.select('.cell-container')
+    container.select('.cell-container')
       .selectAll('.marker')
-      .data(that.current_data
+      .data(currentData
         .map(function(d){ return {code: d.code, year: d.year_introduction}; })
         .filter(function(d){ return !isNaN(d.year); }))
     .enter().append('div')
@@ -8718,78 +8721,78 @@ var VaccineDiseaseGraph = function( _id ) {
 
   var updateGraph = function() {
     // Update scales
-    that.x.range([0, that.width]);
-    that.y.range([0, that.height]);
+    x.range([0, width]);
+    y.range([0, height]);
 
-    that.container.style('height', that.height+'px');
+    container.style('height', height+'px');
 
-    that.container.select('.cell-container')
-      .style('height', that.height+'px');
+    container.select('.cell-container')
+      .style('height', height+'px');
       
-    that.container.selectAll('.cell')
+    container.selectAll('.cell')
       .call(setCellDimensions);
 
-    that.container.select('.x-axis').selectAll('.axis-item')
-      .style('left', function(d){ return that.x(d)+'px'; });
-    that.container.select('.y-axis').selectAll('.axis-item')
-      .style('top', function(d){ return that.y(d)+'px'; });
+    container.select('.x-axis').selectAll('.axis-item')
+      .style('left', function(d){ return x(d)+'px'; });
+    container.select('.y-axis').selectAll('.axis-item')
+      .style('top', function(d){ return y(d)+'px'; });
 
-    that.container.select('.cell-container').selectAll('.marker')
+    container.select('.cell-container').selectAll('.marker')
       .call(setMarkerDimensions);
   };
 
   var clear = function() {
-    that.container.select('.cell-container').remove();
-    that.container.selectAll('.axis').remove();
+    container.select('.cell-container').remove();
+    container.selectAll('.axis').remove();
   };
 
   var setCellDimensions = function(selection) {
     selection
-      .style('left', function(d){ return that.x(d.year)+'px'; })
-      .style('top', function(d){ return that.y(d.country)+'px'; } )
-      .style('width', that.x.bandwidth()+'px')
-      .style('height', that.y.bandwidth()+'px');
+      .style('left', function(d){ return x(d.year)+'px'; })
+      .style('top', function(d){ return y(d.country)+'px'; } )
+      .style('width', x.bandwidth()+'px')
+      .style('height', y.bandwidth()+'px');
   };
 
   var setMarkerDimensions = function(selection) {
     selection
-      .style('top', function(d){ return that.y(d.code)+'px'; })
+      .style('top', function(d){ return y(d.code)+'px'; })
       .style('left', function(d){
-        return (d.year < that.years[0]) ? (that.x(that.years[0])-1)+'px' : (d.year < that.years[that.years.length-1]) ? (that.x(d.year)-1)+'px' : (that.x.bandwidth()+that.x(that.years[that.years.length-1]))+'px';
+        return (d.year < years[0]) ? (x(years[0])-1)+'px' : (d.year < years[years.length-1]) ? (x(d.year)-1)+'px' : (x.bandwidth()+x(years[years.length-1]))+'px';
       })
-      .style('height', that.y.bandwidth()+'px');
+      .style('height', y.bandwidth()+'px');
   };
 
   var onMouseOver = function(d){
-    var cases_str = (that.lang === 'es') ? 'casos' : 'cases';
-    var cases_single_str = (that.lang === 'es') ? 'caso' : 'case';
-    that.$tooltip.find('.tooltip-inner .country').html(d.name);
-    that.$tooltip.find('.tooltip-inner .year').html(d.year);
-    that.$tooltip.find('.tooltip-inner .value').html( formatDecimal(d.value, that.lang) );
-    that.$tooltip.find('.tooltip-inner .cases').html( (d.cases !== 1) ? d.cases.toLocaleString(that.lang)+' '+cases_str : d.cases.toLocaleString(that.lang)+' '+cases_single_str );
-    
-    var xpos = $(this).offset().left + that.x.bandwidth()*0.5 - that.$tooltip.width()*0.5;
-
-    //console.log($(this).offset().left, $(this).position().left);
-
-    console.log( that.$el.width()-xpos );
-
-    //if( xpos > )
-
-    that.$tooltip.css({
-      'left': xpos,
-      'top': $(this).offset().top - that.y.bandwidth()*0.5 - that.$tooltip.height(),
+    // Set tooltip content
+    var cases_str = (lang === 'es') ? 'casos' : 'cases';
+    var cases_single_str = (lang === 'es') ? 'caso' : 'case';
+    $tooltip.find('.tooltip-inner .country').html(d.name);
+    $tooltip.find('.tooltip-inner .year').html(d.year);
+    $tooltip.find('.tooltip-inner .value').html( formatDecimal(d.value, lang) );
+    $tooltip.find('.tooltip-inner .cases').html( (d.cases !== 1) ? d.cases.toLocaleString(lang)+' '+cases_str : d.cases.toLocaleString(lang)+' '+cases_single_str );
+    // Set tooltip position
+    $tooltip.css({
+      'left': $(this).offset().left + x.bandwidth()*0.5 - $tooltip.width()*0.5,
+      'top': $(this).offset().top - y.bandwidth()*0.5 - $tooltip.height(),
       'opacity': '1'
     });
   };
 
   var onMouseOut = function(d){
-    that.$tooltip.css('opacity', '0');
+    $tooltip.css('opacity', '0');
   };
 
   var getCountryName = function(code) {
-    var country = that.current_data.filter(function(d){ return d.code === code; });
+    var country = currentData.filter(function(d){ return d.code === code; });
     return (country[0]) ? country[0].name : '';
+  };
+
+  var getDimensions = function(){
+    width    = $el.width() - Y_AXIS_WIDTH;
+    cellSize = Math.floor(width / years.length);
+    height   = (cellSize < 20) ? cellSize*countries.length : 20*countries.length; // clip cellsize height to 20px
+    return that;
   };
 
   var formatDecimal = function(number, lang){
