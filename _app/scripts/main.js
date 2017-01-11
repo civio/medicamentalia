@@ -194,26 +194,16 @@
       var countries_1 = ['AFG', 'ARG', 'AUS', 'AUT', 'BEL', 'BOL'];
       var graph_vaccine_measles_1 = new VaccineDiseaseGraph('vaccine-measles-graph-1');
       graph_vaccine_measles_1.filter = function(d){ return countries_1.indexOf(d.code) !== -1; };
-      graph_vaccine_measles_1.init( 'measles', $('#vaccine-measles-graph-1 #order-selector').val() );
-
+      graph_vaccine_measles_1.init( 'measles', 'cases' );
       $(window).resize( graph_vaccine_measles_1.onResize );
-      // Update graph baseon on order selector
-      $('#vaccine-measles-graph-1 #order-selector').change(function(d){
-        graph_vaccine_measles_1.init( 'measles', $(this).val() );
-      });
     }
     // Vaccine measles graph 2
     if ($('#vaccine-measles-graph-2').length > 0) {
       var countries_2 = ['ESP', 'ROU', 'RUS', 'RWA', 'SYR', 'USA', 'VEN'];
       var graph_vaccine_measles_2 = new VaccineDiseaseGraph('vaccine-measles-graph-2');
       graph_vaccine_measles_2.filter = function(d){ return countries_2.indexOf(d.code) !== -1; };
-      graph_vaccine_measles_2.init( 'measles', $('#vaccine-measles-graph-2 #order-selector').val() );
-
+      graph_vaccine_measles_2.init( 'measles', 'cases' );
       $(window).resize( graph_vaccine_measles_2.onResize );
-      // Update graph baseon on order selector
-      $('#vaccine-measles-graph-2 #order-selector').change(function(d){
-        graph_vaccine_measles_2.init( 'measles', $(this).val() );
-      });
     }
   };
    
