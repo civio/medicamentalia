@@ -58,3 +58,5 @@ exclude:
 - rollup.config.js
 - README*
 - ".gitignore"
+- "fabfile.py"
+- "fabfile.pyc"

@@ -104,14 +104,14 @@ gulp.task('js', ['js-main', 'js-infographics']);
 // Jekyll build
 gulp.task('jekyll-build', function(done) {
   browserSync.notify('Running jekyll build');
-  return cp.spawn('jekyll', ['build', '--incremental'], {stdio: 'inherit'})
+  return cp.spawn('jekyll', ['build', '--incremental', '--config', '_config.yml,_config-dev.yml'], {stdio: 'inherit'})
     .on('error', function(error){
       gutil.log(gutil.colors.red(error.message));
     })
     .on('close', done);
 });
 
-gulp.task('jekyll-build-noincremental', function(done) {
+gulp.task('jekyll-build-production', function(done) {
   return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
     .on('error', function(error){
       gutil.log(gutil.colors.red(error.message));
@@ -149,7 +149,7 @@ gulp.task('watch', function() {
 });
 
 // Minify HTML Files
-gulp.task('html', ['css', 'js', 'jekyll-build-noincremental'], function() {
+gulp.task('html', ['css', 'js', 'jekyll-build-production'], function() {
   return gulp.src('_site/**/*.html')
     .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
     .pipe(gulp.dest('_site'));
