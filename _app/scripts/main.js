@@ -119,20 +119,24 @@
     $('.dropdown-toggle').dropdown();       // Init Dropdown
     $('#region-dropdown-menu, #drug-dropdown-menu').click(function(e){ e.stopPropagation(); });
 
+    // Prices graph
     if ($('#prices-infographic').length > 0) {
       var prices_infographic = new Infographic('#prices-infographic', 'prices');
       $(window).scroll( prices_infographic.onScroll );
       $(window).resize( prices_infographic.onResize );
     }
+    // Counterfaits infographic
     else if ($('#counterfeits-infographic').length > 0) {
       var fakes_infographic = new Infographic('#counterfeits-infographic', 'fakes');
       $(window).scroll( fakes_infographic.onScroll );
       $(window).resize( fakes_infographic.onResize );
     }
+    // Patent graph
     else if ($('#patents-graph').length > 0) {
       var graph_patents = patents_graph('#patents-graph').init();
       $(window).resize( graph_patents.onResize );
     }
+    // Patents infographic
     else if ($('#patents-infographic').length > 0) {
       var patentes_infographic = new Infographic('#patents-infographic', 'patentes');
       var antimalaricos_infographic = new Infographic('#antimalaricos-infographic', 'antimalaricos');
@@ -145,6 +149,7 @@
         antimalaricos_infographic.onResize();
       });
     }
+    // Antibiotics bar graph
     if ($('#antibiotics-graph').length > 0) {
       var graph_antibiotics = new BarGraph('antibiotics-graph', $('body').data('baseurl')+'/assets/csv/antibiotics.csv');
       graph_antibiotics.txt = {
@@ -156,6 +161,7 @@
       graph_antibiotics.init();
       $(window).resize( graph_antibiotics.onResize );
     }
+    // Antibiotics bar graph
     if ($('#antibiotics-animals-graph').length > 0) {
       var graph_antibiotics_animals = new BarGraph('antibiotics-animals-graph', $('body').data('baseurl')+'/assets/csv/antibiotics-animals.csv');
       graph_antibiotics_animals.txt = {
@@ -167,19 +173,46 @@
       graph_antibiotics_animals.init();
       $(window).resize( graph_antibiotics_animals.onResize );
     }
-    if ($('#vaccine-disease-graph').length > 0) {
-      var graph_vaccine_disease = new VaccineDiseaseGraph('vaccine-disease-graph');
-      graph_vaccine_disease.init( $('#disease-selector .active a').attr('href').substring(1), $('#order-selector').val() );
-      $(window).resize( graph_vaccine_disease.onResize );
+    // Vaccine all diseases graph
+    if ($('#vaccine-all-diseases-graph').length > 0) {
+      var graph_vaccine_all_diseases = new VaccineDiseaseGraph('vaccine-all-diseases-graph');
+      graph_vaccine_all_diseases.init( $('#disease-selector .active a').attr('href').substring(1), $('#vaccine-all-diseases-graph #order-selector').val() );
+      $(window).resize( graph_vaccine_all_diseases.onResize );
       // Update graph based on selected disease
       $('#disease-selector a').click(function(e){
         e.preventDefault();
         $(this).tab('show');
-        graph_vaccine_disease.init( $(this).attr('href').substring(1), $('#order-selector').val() );
+        graph_vaccine_all_diseases.init( $(this).attr('href').substring(1), $('#vaccine-all-diseases-graph #order-selector').val() );
       });
       // Update graph baseon on order selector
-      $('#order-selector').change(function(d){
-        graph_vaccine_disease.init( $('#disease-selector .active a').attr('href').substring(1), $('#order-selector').val() );
+      $('#vaccine-all-diseases-graph #order-selector').change(function(d){
+        graph_vaccine_all_diseases.init( $('#disease-selector .active a').attr('href').substring(1), $(this).val() );
+      });
+    }
+    // Vaccine measles graph 1
+    if ($('#vaccine-measles-graph-1').length > 0) {
+      var countries_1 = ['AFG', 'ARG', 'AUS', 'AUT', 'BEL', 'BOL'];
+      var graph_vaccine_measles_1 = new VaccineDiseaseGraph('vaccine-measles-graph-1');
+      graph_vaccine_measles_1.filter = function(d){ return countries_1.indexOf(d.code) !== -1; };
+      graph_vaccine_measles_1.init( 'measles', $('#vaccine-measles-graph-1 #order-selector').val() );
+
+      $(window).resize( graph_vaccine_measles_1.onResize );
+      // Update graph baseon on order selector
+      $('#vaccine-measles-graph-1 #order-selector').change(function(d){
+        graph_vaccine_measles_1.init( 'measles', $(this).val() );
+      });
+    }
+    // Vaccine measles graph 2
+    if ($('#vaccine-measles-graph-2').length > 0) {
+      var countries_2 = ['ESP', 'ROU', 'RUS', 'RWA', 'SYR', 'USA', 'VEN'];
+      var graph_vaccine_measles_2 = new VaccineDiseaseGraph('vaccine-measles-graph-2');
+      graph_vaccine_measles_2.filter = function(d){ return countries_2.indexOf(d.code) !== -1; };
+      graph_vaccine_measles_2.init( 'measles', $('#vaccine-measles-graph-2 #order-selector').val() );
+
+      $(window).resize( graph_vaccine_measles_2.onResize );
+      // Update graph baseon on order selector
+      $('#vaccine-measles-graph-2 #order-selector').change(function(d){
+        graph_vaccine_measles_2.init( 'measles', $(this).val() );
       });
     }
   };

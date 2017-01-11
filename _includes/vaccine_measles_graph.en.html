@@ -1,0 +1,17 @@
+</div>
+<div id="{{ include.id }}" class="vaccine-disease-graph" data-lang="{{ page.lang }}">
+  <p><strong>{{ include.title }}</strong></p>
+  <div class="form-group">
+    <label for="order-selector" class="control-label">Order by</label>
+    <select id="order-selector" class="form-control">
+      <option value="year">Vaccine year of introduction</option>
+      <option value="cases">Number of cases per habitant</option>
+    </select>
+  </div>
+  <div class="graph-container"></div>
+  <div id="vaccine-disease-tooltip" class="tooltip right" role="tooltip">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner"></div>
+  </div>
+</div>
+<div class="page-content-container" markdown="1">

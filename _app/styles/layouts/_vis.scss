@@ -75,7 +75,7 @@ Patentes
 Vaccines
 */
 
-#vaccine-disease-graph{
+.vaccine-disease-graph{
   font-family: $font-family-sans-serif;
 
   $padding-left: 100px;
@@ -83,7 +83,7 @@ Vaccines
   .graph-container{
     position: relative;
     width: 100%;
-    margin-top: $grid-gutter-width;
+    margin-top: 1.5 * $grid-gutter-width;
     padding-left: $padding-left;
     margin-bottom: 2*$grid-gutter-width;
   }
