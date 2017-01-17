@@ -9851,6 +9851,9 @@ blockquote {
   .video-container-right {
     margin-right: -16.7%; } }
 
+.graph-container {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
+
 /*
 Patentes
 */
@@ -9904,74 +9907,81 @@ Patentes
 /*
 Vaccines
 */
-.vaccine-disease-graph {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
-  .vaccine-disease-graph .graph-container {
-    position: relative;
-    width: 100%;
-    margin-top: 45px;
-    padding-left: 100px;
-    margin-bottom: 60px; }
-  .vaccine-disease-graph .cell-container {
-    position: relative;
-    width: 100%;
-    background: #eeeeee; }
-  .vaccine-disease-graph .cell {
-    position: absolute;
-    outline: 1px solid white; }
-    .vaccine-disease-graph .cell:hover {
-      outline-width: 2px;
-      z-index: 90; }
-  .vaccine-disease-graph .marker {
-    position: absolute;
-    width: 2px;
-    background: #222;
-    z-index: 99; }
-  .vaccine-disease-graph .axis {
-    position: absolute; }
-  .vaccine-disease-graph .axis-item {
-    position: absolute;
-    font-size: 0.813em; }
-  .vaccine-disease-graph .x-axis {
-    top: -20px; }
-  .vaccine-disease-graph .y-axis {
-    top: 0;
-    left: 0; }
-    .vaccine-disease-graph .y-axis .axis-item {
-      width: 100px;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis; }
-  .vaccine-disease-graph .form-group {
-    float: right;
-    margin-top: -70px;
-    font-size: 0.913em; }
-    .vaccine-disease-graph .form-group select {
-      font-size: 14px; }
-  .vaccine-disease-graph .tooltip {
-    pointer-events: none;
-    width: 190px; }
-    .vaccine-disease-graph .tooltip .tooltip-inner {
-      text-align: left; }
-    .vaccine-disease-graph .tooltip p {
-      font-size: 1em;
-      line-height: 1.375em;
-      margin-bottom: 5px; }
-    .vaccine-disease-graph .tooltip .title {
-      font-weight: 400;
-      text-transform: uppercase; }
-      .vaccine-disease-graph .tooltip .title .year {
-        font-size: 0.875em;
-        color: #333333;
-        font-weight: 400; }
-    .vaccine-disease-graph .tooltip .description {
-      color: #00797d;
-      margin-top: 0;
-      margin-bottom: 0;
+.vaccines-disease-graph .graph-container {
+  position: relative;
+  width: 100%;
+  margin-top: 45px;
+  padding-left: 100px;
+  margin-bottom: 60px; }
+
+.vaccines-disease-graph .cell-container {
+  position: relative;
+  width: 100%;
+  background: #eeeeee; }
+
+.vaccines-disease-graph .cell {
+  position: absolute;
+  outline: 1px solid white; }
+  .vaccines-disease-graph .cell:hover {
+    outline-width: 2px;
+    z-index: 90; }
+
+.vaccines-disease-graph .marker {
+  position: absolute;
+  width: 2px;
+  background: #222;
+  z-index: 99; }
+
+.vaccines-disease-graph .axis {
+  position: absolute; }
+
+.vaccines-disease-graph .axis-item {
+  position: absolute;
+  font-size: 0.813em; }
+
+.vaccines-disease-graph .x-axis {
+  top: -20px; }
+
+.vaccines-disease-graph .y-axis {
+  top: 0;
+  left: 0; }
+  .vaccines-disease-graph .y-axis .axis-item {
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+
+.vaccines-disease-graph .form-group {
+  float: right;
+  margin-top: -70px;
+  font-size: 0.913em; }
+  .vaccines-disease-graph .form-group select {
+    font-size: 14px; }
+
+.vaccines-disease-graph .tooltip {
+  pointer-events: none;
+  width: 190px; }
+  .vaccines-disease-graph .tooltip .tooltip-inner {
+    text-align: left; }
+  .vaccines-disease-graph .tooltip p {
+    font-size: 1em;
+    line-height: 1.375em;
+    margin-bottom: 5px; }
+  .vaccines-disease-graph .tooltip .title {
+    font-weight: 400;
+    text-transform: uppercase; }
+    .vaccines-disease-graph .tooltip .title .year {
+      font-size: 0.875em;
+      color: #333333;
       font-weight: 400; }
-      .vaccine-disease-graph .tooltip .description strong {
-        font-size: 1.125em;
-        font-weight: 600; }
+  .vaccines-disease-graph .tooltip .description {
+    color: #00797d;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400; }
+    .vaccines-disease-graph .tooltip .description strong {
+      font-size: 1.125em;
+      font-weight: 600; }
 
 /*
 Vaccine Map
@@ -9984,6 +9994,22 @@ Vaccine Map
 /*
 Video Map Polio
 */
+.video-map-polio-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px; }
+  .video-map-polio-container .video-map-polio-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; }
+    .video-map-polio-container .video-map-polio-cover p {
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      width: 100%; }
+
 /*
 Infographic
 */

@@ -1,3 +1,7 @@
+.graph-container{
+  font-family: $font-family-sans-serif;
+}
+
 /*
 Patentes
 */
@@ -75,9 +79,7 @@ Patentes
 Vaccines
 */
 
-.vaccine-disease-graph{
-  font-family: $font-family-sans-serif;
-
+.vaccines-disease-graph{
   $padding-left: 100px;
 
   .graph-container{
@@ -203,6 +205,31 @@ Vaccine Map
 /*
 Video Map Polio
 */
+
+.video-map-polio-container{
+  position: relative;
+  width: 100%;
+  margin-bottom: $grid-gutter-width;
+
+  .video-map-polio-cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    p{
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+#video-map-polio-description{
+
+}
 
 
 /*
