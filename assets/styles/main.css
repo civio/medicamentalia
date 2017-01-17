@@ -9646,7 +9646,8 @@ header {
   font-family: "Source Serif Pro", Georgia, serif;
   max-width: 1040px; }
   .page-content .page-content-container {
-    width: 100%; }
+    width: 100%;
+    margin: auto; }
     .page-content .page-content-container li {
       font-size: 18px;
       line-height: 29px; }
@@ -9655,7 +9656,8 @@ header {
     color: #00797d;
     font-size: 1em;
     margin-top: 80px;
-    font-weight: 300; }
+    font-weight: 300;
+    text-align: center; }
     .page-content .author span {
       text-transform: uppercase;
       font-weight: 400; }
@@ -9666,6 +9668,8 @@ header {
     margin-top: 0;
     padding-top: 40px;
     font-size: 38px; }
+  .page-content h2, .page-content h3 {
+    text-align: center; }
   .page-content a.page-anchor {
     display: block;
     padding-top: 40px;
@@ -9805,9 +9809,10 @@ blockquote {
 
 .social-share {
   padding: 0;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
   .social-share li {
-    float: left;
+    display: inline-block;
     list-style: none;
     margin: 0 10px 40px 0; }
     .social-share li > a {
@@ -9826,8 +9831,7 @@ blockquote {
   .alignright,
   .video-container-right {
     float: right;
-    width: 40% !important;
-    margin-right: 0; }
+    width: 50% !important; }
   .alignright {
     margin-left: 30px; }
   .page-content .video-container-right {
@@ -9841,12 +9845,11 @@ blockquote {
   header {
     min-height: 240px; }
   .page-content .page-content-container {
-    width: 75%; }
+    width: 70%; }
   blockquote,
   .alignright,
   .video-container-right {
-    width: 55.55556% !important;
-    margin-right: -33.33333%; } }
+    margin-right: -16.7%; } }
 
 /*
 Patentes
@@ -9970,6 +9973,17 @@ Vaccines
         font-size: 1.125em;
         font-weight: 600; }
 
+/*
+Vaccine Map
+*/
+#vaccine-map {
+  width: 1280px;
+  height: 720px;
+  margin: 0 auto 30px; }
+
+/*
+Video Map Polio
+*/
 /*
 Infographic
 */

@@ -12064,7 +12064,7 @@ return jQuery;
     }
     // Antibiotics bar graph
     if ($('#antibiotics-graph').length > 0) {
-      var graph_antibiotics = new BarGraph('antibiotics-graph', $('body').data('baseurl')+'/assets/csv/antibiotics.csv');
+      var graph_antibiotics = new BarGraph('antibiotics-graph', $('body').data('baseurl')+'/assets/data/antibiotics.csv');
       graph_antibiotics.txt = {
         'es': 'Media EU28',
         'en': 'EU28 Average'
@@ -12076,7 +12076,7 @@ return jQuery;
     }
     // Antibiotics bar graph
     if ($('#antibiotics-animals-graph').length > 0) {
-      var graph_antibiotics_animals = new BarGraph('antibiotics-animals-graph', $('body').data('baseurl')+'/assets/csv/antibiotics-animals.csv');
+      var graph_antibiotics_animals = new BarGraph('antibiotics-animals-graph', $('body').data('baseurl')+'/assets/data/antibiotics-animals.csv');
       graph_antibiotics_animals.txt = {
         'es': 'Media',
         'en': 'Average'
@@ -12086,6 +12086,7 @@ return jQuery;
       graph_antibiotics_animals.init();
       $(window).resize( graph_antibiotics_animals.onResize );
     }
+    /*
     // Vaccine all diseases graph
     if ($('#vaccine-all-diseases-graph').length > 0) {
       var graph_vaccine_all_diseases = new VaccineDiseaseGraph('vaccine-all-diseases-graph');
@@ -12117,6 +12118,27 @@ return jQuery;
       graph_vaccine_measles_2.filter = function(d){ return countries_2.indexOf(d.code) !== -1; };
       graph_vaccine_measles_2.init( 'measles', 'cases' );
       $(window).resize( graph_vaccine_measles_2.onResize );
+    }
+    // Vaccine map
+    if ($('#vaccine-map').length > 0) {
+      var vaccine_map = new VaccineMap('vaccine-map');
+      //vaccine_map.getData = true; // Set true to download a polio cases csv
+      //vaccine_map.getPictureSequence = true; // Set true to download a map picture sequence
+      vaccine_map.init($('body').data('baseurl')+'/assets/data/diseases-polio-cases.csv', $('body').data('baseurl')+'/assets/data/map-polio-cases.csv');
+      $(window).resize( vaccine_map.onResize );
+    }
+    */
+    if ($('#video-map-polio').length > 0) {
+      var wrapper = Popcorn.HTMLYouTubeVideoElement('#video-map-polio');
+      wrapper.src = 'http://www.youtube.com/embed/l1F2Xd5FFlQ?controls=0&showinfo=0';
+      var popcorn = Popcorn(wrapper);
+      popcorn.footnote({
+        start: 1,
+        end: 5,
+        text: 'Works with YouTube!',
+        target: 'video-map-polio-description'
+      });
+      //popcorn.play();
     }
   };
    

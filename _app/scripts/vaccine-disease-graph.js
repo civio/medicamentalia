@@ -57,8 +57,8 @@ var VaccineDiseaseGraph = function( _id ) {
     } else {
       // Load CSVs
       d3.queue()
-        .defer(d3.csv, $('body').data('baseurl')+'/assets/csv/diseases-cases.csv')
-        .defer(d3.csv, $('body').data('baseurl')+'/assets/csv/population.csv')
+        .defer(d3.csv, $('body').data('baseurl')+'/assets/data/diseases-cases.csv')
+        .defer(d3.csv, $('body').data('baseurl')+'/assets/data/population.csv')
         .await( onDataReady );
     }
 

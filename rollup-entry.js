@@ -25,6 +25,7 @@ export {
   easeSinInOut,
 } from "d3-ease";
 
+
 export {
   queue
 } from "d3-queue";
@@ -36,6 +37,7 @@ export {
 export {
   request,
   csv,
+  json,
   xml,
 } from "d3-request";
 
@@ -81,3 +83,17 @@ export {
   axisBottom,
   axisLeft
 } from "d3-axis";
+
+/*
+//Modules for Vaccine Map
+
+export * from "d3-geo";
+
+export * from "d3-geo-projection";
+
+export * from "d3-polygon";
+
+export {
+  timer
+} from "d3-timer";
+*/

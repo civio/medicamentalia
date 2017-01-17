@@ -52,9 +52,12 @@ var js_paths = {
   // infograpic.js sources
   infographics: [
     '_app/scripts/vendor/d3-bundle.js',
+    '_app/scripts/vendor/popcorn.js',
+    //'node_modules/topojson-client/dist/topojson-client.js',
     '_app/scripts/bar-graph.js',
     '_app/scripts/patents-graph.js',
     '_app/scripts/vaccine-disease-graph.js',
+    //'_app/scripts/vaccine-map.js',
     '_app/scripts/infographic.js',
     '_app/scripts/antimalaricos-infographic.js',
     '_app/scripts/fakes-infographic.js',
@@ -141,7 +144,7 @@ gulp.task('watch', function() {
   // Watch app .js files
   gulp.watch('_app/scripts/**/*.js', ['js']);
   // Watch Jekyll html files
-  gulp.watch(['**/*.html', '_articles/**/**', '_pages/**/*.*', 'assets/csv/**/*.csv'], ['jekyll-rebuild']);
+  gulp.watch(['**/*.html', '_articles/**/**', '_pages/**/*.*', 'assets/data/**/**'], ['jekyll-rebuild']);
   // Watch Jekyll sitemap XML file
   //gulp.watch('sitemap.xml', ['jekyll-rebuild']);
   // Watch Jekyll data files

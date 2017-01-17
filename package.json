@@ -12,12 +12,16 @@
     "d3-collection": "1.0.1",
     "d3-ease": "1.0.1",
     "d3-format": "1.0.2",
+    "d3-geo": "^1.4.0",
+    "d3-geo-projection": "^1.2.1",
+    "d3-polygon": "^1.0.2",
     "d3-queue": "3.0.3",
     "d3-request": "1.0.2",
     "d3-scale": "1.0.3",
     "d3-scale-chromatic": "1.1.0",
     "d3-selection": "1.0.2",
     "d3-shape": "1.0.3",
+    "d3-timer": "1.0.3",
     "d3-transition": "1.0.2",
     "jshint": "^2.9.3",
     "gulp": "^3.9.1",
@@ -35,6 +39,7 @@
     "gulp-util": "^3.0.7",
     "jquery": "^3.1.1",
     "rollup": "^0.26.3",
-    "rollup-plugin-node-resolve": "^1.5.0"
+    "rollup-plugin-node-resolve": "^1.5.0",
+    "topojson-client": "^2.1.0"
   }
 }
