@@ -9651,19 +9651,25 @@ header {
     .page-content .page-content-container li {
       font-size: 18px;
       line-height: 29px; }
-  .page-content .author {
+  .page-content .author,
+  .page-content .date {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    color: #00797d;
     font-size: 1em;
-    margin-top: 80px;
     font-weight: 300;
     text-align: center; }
+  .page-content .author {
+    color: #00797d;
+    margin-top: 80px;
+    margin-bottom: 0; }
     .page-content .author span {
       text-transform: uppercase;
       font-weight: 400; }
     .page-content .author i {
       font-weight: 300;
       font-style: normal; }
+  .page-content .date {
+    color: #e2723b;
+    line-height: 1.375em; }
   .page-content h2 {
     margin-top: 0;
     padding-top: 40px;

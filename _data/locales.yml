@@ -8,6 +8,8 @@ en:
     vaccines: 
       title: Vaccines
       description: A journalistic investigation into access to vaccines around the world
+  date:
+    format: '%B %-d, %Y'
   description: A journalistic investigation into access to medicines around the world
   explore_data: Explore the data
   lang: English
@@ -37,6 +39,21 @@ es:
     vaccines: 
       title: Vacunas
       description: Investigación periodística sobre el acceso a las vacunas en el mundo
+  date:
+    format: '%-d de %B de %Y'
+    months:
+      - Enero
+      - Febrero
+      - Marzo
+      - Abril
+      - Mayo
+      - Junio
+      - Julio
+      - Agosto
+      - Septiembre
+      - Octubre
+      - Noviembre
+      - Diciembre
   description: Investigación periodística sobre el acceso a los medicamentos en el mundo
   explore_data: Explora los datos
   lang: Español

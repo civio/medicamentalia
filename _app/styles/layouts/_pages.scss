@@ -316,13 +316,18 @@ header {
     }
   }
 
-  .author{
+  .author,
+  .date{
     font-family: $font-family-sans-serif;
-    color: $brand-primary;
     font-size: 1em;
-    margin-top: 80px;
     font-weight: 300;
     text-align: center;
+  }
+
+  .author{
+    color: $brand-primary;
+    margin-top: 80px;
+    margin-bottom: 0;
 
     span{
       text-transform: uppercase;
@@ -333,6 +338,11 @@ header {
       font-weight: 300;
       font-style: normal;
     }
+  }
+
+  .date{
+    color: $color-orange;
+    line-height: 1.375em;
   }
 
   h2{
