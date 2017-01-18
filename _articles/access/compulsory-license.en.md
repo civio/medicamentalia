@@ -73,11 +73,11 @@ Above and beyond pressures [from pharmaceutical companies] (some of them describ
 
 It wasn’t only the companies that protested; some governments also did. **The United States Chamber of Commerce described it as a "huge step backwards" for Brazil**. Furthermore, the measure took place only a few days after the US government had upgraded the South American country to a higher category due to its protection of intellectual property and fight against counterfeiting and piracy. "Brazil is working to attract investment in innovative industries that rely on intellectual property, and this move will likely cause investments to go elsewhere," they [affirmed](http://www.bloomberg.com/apps/news?pid=newsarchive&sid=aAHMaYgcQA4o).
 
-<div class="video-container-right">
-<div class="video-container">
-  <div id="patents-graph" class="bar-graph" data-lang="en"></div>
-</div>
-<p class="video-container-caption">Number of patents</p>
+<div class="graph-container-right">
+  <div class="graph-container">
+    <div id="patents-graph" class="bar-graph" data-lang="en"></div>
+    <p class="graph-container-caption">Number of patents</p>
+  </div>
 </div>
 
 But what happened? Were the negative predictions fulfilled? **Did the pharmaceutical companies leave Brazil and stop investing? All the experts consulted agree that this didn’t happen**. The INPI (National Institute of Industrial Property) Director of Patents, Júlio César Castelo, affirms that there was not a decline in registration requests. [The numbers](http://www.inpi.gov.br/portal/artigo/estatisticas) prove him right. In 2007, 17 pharmaceutical patents were approved, a number which kept growing over the following years: 31 in 2008, 43 in 2009 and 59 in 2010. This growth peaked that year. With the compulsory license approval already far behind and, claims Castelo, due to other reasons, the number of approved patents decreased to 42 patents in 2011, and fell to 16 in 2012. **With more than 200 million inhabitants and a single health system** which has to respect the right of free access to health, as indicated by the Constitution, Brazil is the world's sixth largest market. It cannot be ignored.

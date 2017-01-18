@@ -63,11 +63,11 @@ Más que presiones (algunas calificadas de “antiéticas” por parte de la soc
 
 No solo protestaron las empresas, también ciertos gobiernos. **La Cámara de Comercio de Estados Unidos denominó la medida como un “enorme paso atrás” para Brasil** que, además, se había tomado apenas unos días después de que el gobierno estadounidense ascendiera de categoría al país sudamericano en su escala sobre protección de la propiedad intelectual y contra la falsificación y la piratería. “Brasil está trabajando para atraer inversiones en las industrias innovadoras que se basan en la propiedad intelectual y este movimiento probablemente hará que las inversiones vayan a otra parte”, [afirmaron entonces](http://www.bloomberg.com/apps/news?pid=newsarchive&sid=aAHMaYgcQA4o).
 
-<div class="video-container-right">
-<div class="video-container">
-  <div id="patents-graph" class="bar-graph" data-lang="es"></div>
-</div>
-<p class="video-container-caption">Número de patentes</p>
+<div class="graph-container-right">
+  <div class="graph-container">
+    <div id="patents-graph" class="bar-graph" data-lang="es"></div>
+    <p class="graph-container-caption">Número de patentes</p>
+  </div>
 </div>
 
 Pero, ¿qué pasó? ¿se cumplieron los malos augurios? **¿Las farmacéuticas abandonaron Brasil, dejaron de invertir? Todos los expertos consultados coinciden en que no fue así**. El director de patentes del INPI (Instituto Nacional da Propiedade Industrial), Júlio César Castelo, afirma que no hubo un descenso de las peticiones de registro. Y [los números](http://www.inpi.gov.br/portal/artigo/estatisticas) le dan la razón. En 2007 se aprobaron 17 patentes de la industria farmacéutica, un número que fue creciendo en los años sucesivos: 31 en 2008, 43 en 2009 y 59 en 2010. Este crecimiento tocó techo ese año y, ya en 2011, con la aprobación de la licencia obligatoria lejos y por otras causas, como segura Castelo, volvió a la senda descendente: 42 patentes aprobadas ese año, que bajaron hasta 16 en 2012. **Con más de 200 millones de habitantes y un sistema de salud único** que debe respetar el derecho de acceso gratuito a la salud que marca la Constitución, Brasil es el sexto mercado más grande del mundo. Imposible obviarlo.

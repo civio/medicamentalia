@@ -1,5 +1,25 @@
+/*
+Common
+*/
+
 .graph-container{
-  font-family: $font-family-sans-serif;
+
+  .axis{
+    path,
+    line {
+      display: none;
+    }
+    text {
+      font-size: 10px;
+      fill: $gray-light;
+    }
+  }
+
+  .line{
+    fill: none;
+    stroke: $brand-primary;
+    stroke-width: 1px;
+  }
 }
 
 /*
@@ -7,18 +27,6 @@ Patentes
 */
 
 .bar-graph{
-
-  font-family: $font-family-sans-serif;
-
-  .axis path,
-  .axis line {
-    display: none;
-  }
-
-  .axis text {
-    font-size: 10px;
-    fill: $gray-light;
-  }
 
   .bar {
     fill: $brand-primary;
@@ -227,8 +235,16 @@ Video Map Polio
   }
 }
 
-#video-map-polio-description{
+#video-map-polio{
+  margin-top: 0;
+}
 
+#video-map-polio-description{
+  text-align: center;
+
+  p{
+    margin-bottom: 0;
+  }
 }
 
 

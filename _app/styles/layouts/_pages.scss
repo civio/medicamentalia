@@ -121,7 +121,7 @@ header {
 
   .container{
     position: relative;
-    max-width: 1040px;
+    max-width: $container-max-width;
   }
 
   .navbar-header{
@@ -304,7 +304,7 @@ header {
 
 .page-content{
   font-family: $font-family-serif;
-  max-width: 1040px;
+  max-width: $container-max-width;
 
   .page-content-container{
     width: 100%;
@@ -316,10 +316,17 @@ header {
     }
   }
 
+  p{
+    font-size: 19px;
+    line-height: 34px;
+    margin-bottom: 30px;
+  }
+
   .author,
   .date{
     font-family: $font-family-sans-serif;
     font-size: 1em;
+    line-height: 1.5em;
     font-weight: 300;
     text-align: center;
   }
@@ -342,7 +349,6 @@ header {
 
   .date{
     color: $color-orange;
-    line-height: 1.375em;
   }
 
   h2{
@@ -399,6 +405,19 @@ header {
     strong{
       font-weight: 400;
     }
+  }
+
+  .graph-container{
+    font-family: $font-family-sans-serif;
+    margin-bottom: $grid-gutter-width;
+  }
+
+  .graph-container-caption{
+    color: $brand-primary;
+    font-weight: 700;
+    line-height: 1.375em;
+    margin-top: $grid-gutter-width/6;
+    margin-bottom: 0;
   }
 
   .credits{
@@ -478,9 +497,6 @@ header {
 
 
 // Blockquote
-
-$page-content-container: 0.7;
-$blockquote-margin-right: -(300% / 12) / $page-content-container;
 
 blockquote{
   position: relative;
@@ -587,18 +603,18 @@ blockquote{
 
   blockquote,
   .alignright,
-  .video-container-right{
+  .video-container-right,
+  .graph-container-right{
     float: right;
     width: 50% !important;
-    
   }
 
   .alignright{
-    margin-left: 30px;
+    margin-left: $grid-gutter-width;
   }
 
   .page-content .video-container-right{
-    margin-left: 30px;
+    margin-left: $grid-gutter-width;
 
     .video-container{
       margin-top: 0;
@@ -606,6 +622,10 @@ blockquote{
     .video-container-caption{
       margin-bottom: 20px;
     }
+  }
+
+  .page-content .graph-container-right{
+    margin-left: $grid-gutter-width;
   }
 }
 
@@ -615,14 +635,30 @@ blockquote{
     min-height: 240px;
   }
 
+  $page-content-container-margin: ($container-md - $page-content-container-width) / 2;
+
   .page-content .page-content-container{
-    width: $page-content-container * 100%;
+    width: $page-content-container-width; // Setup a content max width of 700px
   }
 
   blockquote,
   .alignright,
-  .video-container-right{
-    //width: 50% !important; // (500% / 12) / $page-content-container !important;
-    margin-right: -16.7%; // $blockquote-margin-right;
+  .video-container-right,
+  .graph-container-right{
+    width: ($page-content-container-width/2) + $page-content-container-margin - (1.5 * $grid-gutter-width) !important;
+    margin-right: ($grid-gutter-width / 2) - $page-content-container-margin;  // -16.7%; // $blockquote-margin-right;
+  }
+}
+
+@media (min-width: $screen-lg) {
+
+  $page-content-container-margin: ($container-max-width - $page-content-container-width) / 2;
+
+  blockquote,
+  .alignright,
+  .video-container-right,
+  .graph-container-right{
+    width: ($page-content-container-width/2) + $page-content-container-margin - (1.5 * $grid-gutter-width) !important;
+    margin-right: ($grid-gutter-width / 2) - $page-content-container-margin;
   }
 }
