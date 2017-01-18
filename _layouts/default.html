@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="{{ page.url | replace:'/',' ' | strip }} lang-{{ page.lang }}{% if page.layout == 'article' %} article{% endif %}" data-baseurl="{{ site.url }}">
+  <body class="{{ page.url | replace:'/',' ' | strip }} lang-{{ page.lang }}{% if page.layout == 'article' %} article{% endif %}" data-baseurl="{{ site.url }}{{ site.baseurl }}">
 
     {% include header.html %}
 

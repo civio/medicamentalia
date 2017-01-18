@@ -1,3 +1,4 @@
 # This config file overrides _config.yml for developmnet environment
 
+baseurl: ""
 url: "http://localhost:3000" # the base hostname & protocol for your site
