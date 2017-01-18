@@ -227,6 +227,20 @@
       });
       //popcorn.play();
     }
+    if ($('#immunization-coverage-graph').length > 0) {
+      var graph_immunization = new LineGraph('immunization-coverage-graph', $('body').data('baseurl')+'/assets/data/immunization-coverage.csv');
+      graph_immunization.dataFilter = function(d){ return d.vaccine === $('#immunization-coverage-vaccine-selector').val(); };
+      graph_immunization.dataSort = function(a,b){ return (a.code === $('#immunization-coverage-country-1-selector').val() || a.code === $('#immunization-coverage-country-2-selector').val()) ? 1 : -1; };
+      graph_immunization.activeLines = [$('#immunization-coverage-country-1-selector').val(), $('#immunization-coverage-country-2-selector').val()];
+      graph_immunization.init();
+      
+      // Update data based on selected vaccine
+      $('#immunization-coverage-vaccine-selector, #immunization-coverage-country-1-selector, #immunization-coverage-country-2-selector').change(function(e){
+        graph_immunization.activeLines = [$('#immunization-coverage-country-1-selector').val(), $('#immunization-coverage-country-2-selector').val()];
+        graph_immunization.update();
+      });
+      $(window).resize( graph_immunization.onResize );
+    }
   };
    
   setup();

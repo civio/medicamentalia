@@ -9651,10 +9651,15 @@ header {
     .page-content .page-content-container li {
       font-size: 18px;
       line-height: 29px; }
+  .page-content p {
+    font-size: 19px;
+    line-height: 34px;
+    margin-bottom: 30px; }
   .page-content .author,
   .page-content .date {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     font-size: 1em;
+    line-height: 1.5em;
     font-weight: 300;
     text-align: center; }
   .page-content .author {
@@ -9668,8 +9673,7 @@ header {
       font-weight: 300;
       font-style: normal; }
   .page-content .date {
-    color: #e2723b;
-    line-height: 1.375em; }
+    color: #e2723b; }
   .page-content h2 {
     margin-top: 0;
     padding-top: 40px;
@@ -9707,6 +9711,15 @@ header {
     margin: -20px 0 40px; }
     .page-content .video-container-caption strong {
       font-weight: 400; }
+  .page-content .graph-container {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    margin-bottom: 30px; }
+  .page-content .graph-container-caption {
+    color: #00797d;
+    font-weight: 700;
+    line-height: 1.375em;
+    margin-top: 5px;
+    margin-bottom: 0; }
   .page-content .credits {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     padding: 12px 15px;
@@ -9835,7 +9848,8 @@ blockquote {
     height: 100%; }
   blockquote,
   .alignright,
-  .video-container-right {
+  .video-container-right,
+  .graph-container-right {
     float: right;
     width: 50% !important; }
   .alignright {
@@ -9845,46 +9859,67 @@ blockquote {
     .page-content .video-container-right .video-container {
       margin-top: 0; }
     .page-content .video-container-right .video-container-caption {
-      margin-bottom: 20px; } }
+      margin-bottom: 20px; }
+  .page-content .graph-container-right {
+    margin-left: 30px; } }
 
 @media (min-width: 992px) {
   header {
     min-height: 240px; }
   .page-content .page-content-container {
-    width: 70%; }
+    width: 700px; }
   blockquote,
   .alignright,
-  .video-container-right {
-    margin-right: -16.7%; } }
+  .video-container-right,
+  .graph-container-right {
+    width: 440px !important;
+    margin-right: -120px; } }
 
-.graph-container {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
+@media (min-width: 1200px) {
+  blockquote,
+  .alignright,
+  .video-container-right,
+  .graph-container-right {
+    width: 475px !important;
+    margin-right: -155px; } }
+
+/*
+Common
+*/
+.graph-container .axis line,
+.graph-container .axis path {
+  display: none; }
+
+.graph-container .axis text {
+  font-size: 10px;
+  fill: #777777; }
+
+.graph-container .line {
+  fill: none;
+  stroke: #00797d;
+  stroke-width: 1px; }
 
 /*
 Patentes
 */
-.bar-graph {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
-  .bar-graph .axis path,
-  .bar-graph .axis line {
-    display: none; }
-  .bar-graph .axis text {
-    font-size: 10px;
-    fill: #777777; }
-  .bar-graph .bar {
-    fill: #00797d; }
-  .bar-graph .bar:hover {
-    fill: #e2723b; }
-  .bar-graph .bar-label {
-    fill: white;
-    font-size: 0.75em;
-    font-weight: 300;
-    text-anchor: middle; }
-  .bar-graph .marker {
-    stroke: #e2723b; }
-  .bar-graph .marker-label text {
-    font-size: 0.75em;
-    fill: #00797d; }
+.bar-graph .bar {
+  fill: #00797d; }
+
+.bar-graph .bar:hover {
+  fill: #e2723b; }
+
+.bar-graph .bar-label {
+  fill: white;
+  font-size: 0.75em;
+  font-weight: 300;
+  text-anchor: middle; }
+
+.bar-graph .marker {
+  stroke: #e2723b; }
+
+.bar-graph .marker-label text {
+  font-size: 0.75em;
+  fill: #00797d; }
 
 #antibiotics-graph #ES.bar,
 #antibiotics-animals-graph #ES.bar {
@@ -9911,7 +9946,7 @@ Patentes
     display: block; } }
 
 /*
-Vaccines
+Vaccines diseases
 */
 .vaccines-disease-graph .graph-container {
   position: relative;
@@ -10015,6 +10050,31 @@ Video Map Polio
       top: 50%;
       text-align: center;
       width: 100%; }
+
+#video-map-polio {
+  margin-top: 0; }
+
+#video-map-polio-description {
+  text-align: center; }
+  #video-map-polio-description p {
+    margin-bottom: 0; }
+
+/*
+Vaccines coverage
+*/
+#immunization-coverage-graph .y.axis line {
+  display: block;
+  stroke: #777777; }
+
+#immunization-coverage-graph .y.axis text {
+  display: none; }
+
+#immunization-coverage-graph .line {
+  stroke: #bfbfbf; }
+
+#immunization-coverage-graph .line.active {
+  stroke: #00797d;
+  stroke-width: 1.5px; }
 
 /*
 Infographic

@@ -55,6 +55,7 @@ var js_paths = {
     '_app/scripts/vendor/popcorn.js',
     //'node_modules/topojson-client/dist/topojson-client.js',
     '_app/scripts/bar-graph.js',
+    '_app/scripts/line-graph.js',
     '_app/scripts/patents-graph.js',
     '_app/scripts/vaccine-disease-graph.js',
     //'_app/scripts/vaccine-map.js',

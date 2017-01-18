@@ -31,7 +31,8 @@ export {
 } from "d3-queue";
 
 export {
-  line
+  line,
+  curveCatmullRom
 } from "d3-shape";
 
 export {

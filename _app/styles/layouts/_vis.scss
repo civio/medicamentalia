@@ -5,8 +5,8 @@ Common
 .graph-container{
 
   .axis{
-    path,
-    line {
+    line,
+    path {
       display: none;
     }
     text {
@@ -84,7 +84,7 @@ Patentes
 }
 
 /*
-Vaccines
+Vaccines diseases
 */
 
 .vaccines-disease-graph{
@@ -209,7 +209,6 @@ Vaccine Map
   height: 720px;
   margin: 0 auto $grid-gutter-width;
 }
-
 /*
 Video Map Polio
 */
@@ -244,6 +243,28 @@ Video Map Polio
 
   p{
     margin-bottom: 0;
+  }
+}
+
+/*
+Vaccines coverage
+*/
+
+#immunization-coverage-graph{
+  .y.axis line{
+    display: block;
+    stroke: $gray-light;
+  }
+  .y.axis text{
+    display: none;
+  }
+
+  .line{
+    stroke: mix( $gray-lighter, $gray-light, 60% );
+  }
+  .line.active{
+    stroke: $brand-primary;
+    stroke-width: 1.5px;
   }
 }
 

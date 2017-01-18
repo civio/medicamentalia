@@ -1227,7 +1227,7 @@
     }
   };
 
-  (function custom(alpha) {
+  var catmullRom = (function custom(alpha) {
 
     function catmullRom(context) {
       return alpha ? new CatmullRom(context, alpha) : new Cardinal(context, 0);
@@ -8048,6 +8048,7 @@
   exports.easeSinInOut = sinInOut;
   exports.queue = queue;
   exports.line = line;
+  exports.curveCatmullRom = catmullRom;
   exports.request = request;
   exports.csv = csv;
   exports.json = json;
