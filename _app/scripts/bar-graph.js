@@ -24,7 +24,7 @@ var BarGraph = function( _id, _source ) {
 
     that.x = d3.scaleBand()
       .range([0, that.width])
-      .round(true)
+      //.round(true)
       .paddingInner(0.1)
       .paddingOuter(0);
 
@@ -39,71 +39,75 @@ var BarGraph = function( _id, _source ) {
       .attr('transform', 'translate(' + that.margin.left + ',' + that.margin.top + ')');
 
     // Load CSV
-    d3.csv( that.source, function(error, data) {
-
-      data.forEach(function(d) {
-        d.value = +d.value;
-      });
-
-      that.x.domain(data.map(function(d) { return d.label; }));
-      that.y.domain([0, d3.max(data, function(d) { return d.value; })]);
-
-      that.svg.append('g')
-        .attr('class', 'x axis')
-        .attr('transform', 'translate(0,' + that.height + ')')
-        .call(d3.axisBottom(that.x));
-
-      if (that.markerValue) {
-
-        that.svg.append('line')
-          .attr('class', 'marker')
-          .attr("x1", 0)
-          .attr("y1", function(d) { return that.y(that.markerValue); })
-          .attr("x2", that.width)
-          .attr("y2", function(d) { return that.y(that.markerValue); });
-
-        that.svg.append('g')
-          .attr('class', 'marker-label')
-          .append('text')
-          .attr('x', that.width )
-          .attr('y', function(d) { return that.y(that.markerValue); })
-          .attr('dy', '1em' )
-          .style('text-anchor', 'end')
-          .text( that.txt[that.lang] );
-      }
-
-      that.svg.selectAll('.bar')
-        .data(data)
-      .enter().append('rect')
-        .attr('class', 'bar')
-        .attr('id', function(d) { return d.label; })
-        .attr('x', function(d) { return that.x(d.label); })
-        .attr('y', function(d) { return that.y(d.value); } )
-        .attr('height', function(d) { return that.height - that.y(d.value); })
-        .attr('width', that.x.bandwidth());
-
-      that.svg.selectAll('.bar-label')
-        .data(data)
-      .enter().append('text')
-        .attr('class', 'bar-label')
-        .attr('id', function(d) { return d.label; })
-        .attr('x', function(d) { return that.x(d.label)+(that.x.bandwidth()*0.5); })
-        .attr('y', function(d) { return that.y(d.value); })
-        .attr('dy', '1.5em')
-        .text( function(d){ return parseInt(d.value); });
-
-       // d3.selectAll('.bar')
-       //  .transition().duration(800).delay( function(d,i){ return 100*i; })
-       //  .attr('id', function(d) { return d.label; })
-       //  .attr('y', function(d) { return that.y(d.value); })
-       //  .attr('height', function(d) { return height - that.y(d.value); });
-
-      // d3.select('.marker')
-      //   .transition().duration(600).delay(1500)
-      //   .attr('x2', width );
-    });
+    if (that.source) {
+      d3.csv( that.source, that.onDataReady);
+    }
 
     return that;
+  };
+
+  that.onDataReady = function(error, data) {
+
+    data.forEach(function(d) {
+      d.value = +d.value;
+    });
+
+    that.x.domain(data.map(function(d) { return d.label; }));
+    that.y.domain([0, d3.max(data, function(d) { return d.value; })]);
+
+    that.svg.append('g')
+      .attr('class', 'x axis')
+      .attr('transform', 'translate(0,' + that.height + ')')
+      .call(d3.axisBottom(that.x));
+
+    if (that.markerValue) {
+
+      that.svg.append('line')
+        .attr('class', 'marker')
+        .attr("x1", 0)
+        .attr("y1", function(d) { return that.y(that.markerValue); })
+        .attr("x2", that.width)
+        .attr("y2", function(d) { return that.y(that.markerValue); });
+
+      that.svg.append('g')
+        .attr('class', 'marker-label')
+        .append('text')
+        .attr('x', that.width )
+        .attr('y', function(d) { return that.y(that.markerValue); })
+        .attr('dy', '1em' )
+        .style('text-anchor', 'end')
+        .text( that.txt[that.lang] );
+    }
+
+    that.svg.selectAll('.bar')
+      .data(data)
+    .enter().append('rect')
+      .attr('class', function(d) { return (d.active) ? 'bar active' : 'bar'; })
+      .attr('id', function(d) { return d.label; })
+      .attr('x', function(d) { return that.x(d.label); })
+      .attr('y', function(d) { return that.y(d.value); } )
+      .attr('height', function(d) { return that.height - that.y(d.value); })
+      .attr('width', that.x.bandwidth());
+
+    that.svg.selectAll('.bar-label')
+      .data(data)
+    .enter().append('text')
+      .attr('class', 'bar-label')
+      .attr('id', function(d) { return d.label; })
+      .attr('x', function(d) { return that.x(d.label)+(that.x.bandwidth()*0.5); })
+      .attr('y', function(d) { return that.y(d.value); })
+      .attr('dy', '1.5em')
+      .text( function(d){ return parseInt(d.value); });
+
+     // d3.selectAll('.bar')
+     //  .transition().duration(800).delay( function(d,i){ return 100*i; })
+     //  .attr('id', function(d) { return d.label; })
+     //  .attr('y', function(d) { return that.y(d.value); })
+     //  .attr('height', function(d) { return height - that.y(d.value); });
+
+    // d3.select('.marker')
+    //   .transition().duration(600).delay(1500)
+    //   .attr('x2', width );
   };
 
   that.onResize = function() {

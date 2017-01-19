@@ -16,7 +16,23 @@ draft:            true
 <div class="container page-content" markdown="1">
   <div class="page-content-container" markdown="1">
 
-In the USA, it’s known as the $1,000 pill. And that’s not a metaphor. Each pill of sofosbuvir, the new drug for the treatment of Hepatitis C, costs exactly that. The medicine, sold by Gilead under the name Sovaldi, has again sparked discussion on the patent system and how it affects access to medicines and **the sustainability of health budgets** in countries of all income levels, especially developing ones. In September 2014, the company decided to bypass the traditional model in India, granting seven local pharmaceutical companies a voluntary license. These companies are permitted to develop and produce Sofosbuvir **in exchange for 7% of the final profit**. The [agreement](http://gilead.com/~/media/Files/pdfs/other/HCVGenericAgreementFactSheet.pdf) comes with small print; these laboratories can export their low cost version to 91 countries listed in the conditions (15 of which are small island states). According to Gilead’s estimates, this means that the cheaper treatment produced in India will reach 100 million people. Of course, the rest of the world is left out.
+In the USA, it’s known as the $1,000 pill. And that’s not a metaphor. Each pill of sofosbuvir, the new drug for the treatment of Hepatitis C, costs exactly that. The medicine, sold by Gilead under the name Sovaldi, has again sparked discussion on the patent system and how it affects access to medicines and **the sustainability of health budgets** in countries of all income levels, especially developing ones.
+
+<div class="graph-container-right">
+  <div id="immunization-coverage-country-graphs" class="graph-container">
+    <p class="graph-container-caption">Sarampión</p> 
+    <p>La cobertura de inmunización del sarampión en España es del <span id="measles-immunization-data"></span></p> 
+    <div id="measles-bar-graph"></div>
+    <p class="graph-container-caption">Polio</p> 
+    <p>La cobertura de inmunización de la polio en España es del <span id="polio-immunization-data"></span></p> 
+    <div id="polio-bar-graph"></div>
+    <p class="graph-container-caption">Tos ferina</p> 
+    <p>La cobertura de inmunización de la tos ferina en España es del <span id="pertussis-immunization-data"></span></p> 
+    <div id="pertussis-bar-graph"></div>
+  </div>
+</div>
+
+In the USA, it’s known as the $1,000 pill. And that’s not a metaphor. Each pill of sofosbuvir, the new drug for the treatment of Hepatitis C, costs exactly that. The medicine, sold by Gilead under the name Sovaldi, has again sparked discussion on the patent system and how it affects access to medicines and **the sustainability of health budgets** in countries of all income levels, especially developing ones. In September 2014, the company decided to bypass the traditional model in India, granting seven local pharmaceutical companies a voluntary license. These companies are permitted to develop and produce Sofosbuvir **in exchange for 7% of the final profit**. The [agreement](http://gilead.com/~/media/Files/pdfs/other/HCVGenericAgreementFactSheet.pdf) comes with small print; these laboratories can export their low cost version to 91 countries listed in the conditions (15 of which are small island states). According to Gilead’s estimates, this means that the cheaper treatment produced in India will reach 100 million people. Of course, the rest of the world is left out. In September 2014, the company decided to bypass the traditional model in India, granting seven local pharmaceutical companies a voluntary license. These companies are permitted to develop and produce Sofosbuvir **in exchange for 7% of the final profit**. The [agreement](http://gilead.com/~/media/Files/pdfs/other/HCVGenericAgreementFactSheet.pdf) comes with small print; these laboratories can export their low cost version to 91 countries listed in the conditions (15 of which are small island states). According to Gilead’s estimates, this means that the cheaper treatment produced in India will reach 100 million people. Of course, the rest of the world is left out.
 
 <div class="graph-container">
   <p class="graph-container-caption">Immunization coverage</p>

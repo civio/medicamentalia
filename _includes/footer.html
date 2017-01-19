@@ -111,11 +111,17 @@
   </div>
 </footer>
 
-{% if page.collection == 'articles' %}
-  <script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/infographics.js'></script>
-{% endif %}
-
 <script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/main.js'></script>
+
+{% if page.collection == 'articles' %}
+  {% if page.category  == 'access' %}
+    <script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/access.js'></script>
+  {% elsif page.category  == 'vaccines' %}
+    <script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/vaccines.js'></script>
+  {% else %}
+    <script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/others.js'></script>
+  {% endif %}
+{% endif %}
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

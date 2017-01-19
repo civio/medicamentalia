@@ -9714,12 +9714,17 @@ header {
   .page-content .graph-container {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     margin-bottom: 30px; }
-  .page-content .graph-container-caption {
-    color: #00797d;
-    font-weight: 700;
-    line-height: 1.375em;
-    margin-top: 5px;
-    margin-bottom: 0; }
+    .page-content .graph-container p {
+      font-size: 1em;
+      line-height: 1.25em;
+      margin-bottom: 15px; }
+    .page-content .graph-container .graph-container-caption {
+      color: #00797d;
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 700;
+      margin-top: 5px;
+      margin-bottom: 0; }
   .page-content .credits {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     padding: 12px 15px;
@@ -9899,20 +9904,23 @@ Common
   stroke: #00797d;
   stroke-width: 1px; }
 
-/*
-Patentes
-*/
-.bar-graph .bar {
+.graph-container .bar {
   fill: #00797d; }
 
-.bar-graph .bar:hover {
+.graph-container .bar.active {
   fill: #e2723b; }
 
-.bar-graph .bar-label {
+.graph-container .bar-label {
   fill: white;
   font-size: 0.75em;
   font-weight: 300;
   text-anchor: middle; }
+
+/*
+Patentes
+*/
+.bar-graph .bar:hover {
+  fill: #e2723b; }
 
 .bar-graph .marker {
   stroke: #e2723b; }
@@ -10075,6 +10083,19 @@ Vaccines coverage
 #immunization-coverage-graph .line.active {
   stroke: #00797d;
   stroke-width: 1.5px; }
+
+/*
+Conutries vaccines coverage
+*/
+#immunization-coverage-country-graphs .axis text,
+#immunization-coverage-country-graphs .bar-label {
+  display: none; }
+
+#immunization-coverage-country-graphs .bar {
+  fill: #cbcbcb; }
+
+#immunization-coverage-country-graphs .bar.active {
+  fill: #00797d; }
 
 /*
 Infographic

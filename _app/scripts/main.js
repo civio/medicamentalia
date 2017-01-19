@@ -1,106 +1,95 @@
-/* ========================================================================
- * DOM-based Routing
- * Based on http://goo.gl/EUTi53 by Paul Irish
- *
- * Only fires on body classes that match. If a body class contains a dash,
- * replace the dash with an underscore when adding it to the object below.
- *
- * .noConflict()
- * The routing is enclosed within an anonymous function so that you can
- * always reference jQuery with $, even when in .noConflict() mode.
- * ======================================================================== */
+// Common site setup
 
 (function($) {
 
-  // Common setup
-  var setup = function(){
-      
-    // Toogle Lang Menu
-    $('#language-selector>a').click(function(e){
-      e.preventDefault();
-      $('#language-selector .submenu-languages').toggle();
-    });
+  // Toogle Lang Menu
+  $('#language-selector>a').click(function(e){
+    e.preventDefault();
+    $('#language-selector .submenu-languages').toggle();
+  });
 
-    // Add Selection Sharer (https://github.com/xdamman/selection-sharer)
-    if (!Modernizr.touch) {
-      $('.page-content-container p').selectionSharer();
+  // Add Selection Sharer (https://github.com/xdamman/selection-sharer)
+  if (!Modernizr.touch) {
+    $('.page-content-container p').selectionSharer();
+  }
+
+  // Smooth page scroll to an article section
+  $('.nav-page a[href^="#"]').click(function() {
+    animateLink( $($(this).attr('href')), 1 );
+  });
+  // Smooth page scroll to a notes anchor
+  $('a[href^="#notes-anchor"]').click(function() {
+    animateLink( $($(this).attr('href')), 0 );
+  });
+  // Smooth page scroll to a notes ref
+  $('a[href^="#notes-ref"]').click(function() {
+    animateLink( $($(this).attr('href')), -50 );
+  });
+
+  // Set Suscribe Input Text
+  var suscribe = null;
+  $('#mc-embedded-subscribe-form .email').focus(function(){
+    suscribe = ( !suscribe ) ? $(this).val() : suscribe;
+    $(this).val('');
+  }).focusout(function(){
+    if( $(this).val() === '' ){
+      $(this).val(suscribe);
     }
+  });
 
-    // Smooth page scroll to an article section
-    $('.nav-page a[href^="#"]').click(function() {
-      animateLink( $($(this).attr('href')), 1 );
-    });
-    // Smooth page scroll to a notes anchor
-    $('a[href^="#notes-anchor"]').click(function() {
-      animateLink( $($(this).attr('href')), 0 );
-    });
-    // Smooth page scroll to a notes ref
-    $('a[href^="#notes-ref"]').click(function() {
-      animateLink( $($(this).attr('href')), -50 );
+  var lastId,
+    $navPage = $('.nav-page');
+
+  var menuItems = $navPage.find('.navbar-nav li a');
+
+  if( menuItems.length > 0 ){
+
+    menuItems.click(function(e){
+      menuItems.parent().removeClass('active');
+      $(this).parent().addClass('active');
+      $('#page-menu').removeClass('in');
     });
 
-    // Set Suscribe Input Text
-    var suscribe = null;
-    $('#mc-embedded-subscribe-form .email').focus(function(){
-      suscribe = ( !suscribe ) ? $(this).val() : suscribe;
-      $(this).val('');
-    }).focusout(function(){
-      if( $(this).val() === '' ){
-        $(this).val(suscribe);
+    // Anchors corresponding to menu items
+    var scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+    // Fix Nav Page & activate items when scroll down
+    $(window).scroll(function(e) {
+      
+      if ($(this).scrollTop() > $('body > header').height()+50) {
+        $navPage.addClass("fixed");
+      } else {
+        $navPage.removeClass("fixed");
+      }
+
+      // Get container scroll position
+      var fromTop = $(this).scrollTop();
+     
+      // Get id of current scroll item
+      var cur = scrollItems.map(function(){
+       if ($(this).offset().top <= fromTop){
+         return this;
+       }
+      });
+      // Get the id of the current element
+      cur = cur[cur.length-1];
+      var id = cur && cur.length ? cur[0].id : "";
+
+      if (lastId !== id) {
+        lastId = id;
+        // Set/remove active class
+        menuItems
+          .parent().removeClass("active")
+          .end().filter("[href=\\#"+id+"]").parent().addClass("active");
       }
     });
+  }
 
-    var lastId,
-      $navPage = $('.nav-page');
-
-    var menuItems = $navPage.find('.navbar-nav li a');
-
-    if( menuItems.length > 0 ){
-
-      menuItems.click(function(e){
-        menuItems.parent().removeClass('active');
-        $(this).parent().addClass('active');
-        $('#page-menu').removeClass('in');
-      });
-
-      // Anchors corresponding to menu items
-      var scrollItems = menuItems.map(function(){
-        var item = $($(this).attr("href"));
-        if (item.length) { return item; }
-      });
-
-      // Fix Nav Page & activate items when scroll down
-      $(window).scroll(function(e) {
-        
-        if ($(this).scrollTop() > $('body > header').height()+50) {
-          $navPage.addClass("fixed");
-        } else {
-          $navPage.removeClass("fixed");
-        }
-
-        // Get container scroll position
-        var fromTop = $(this).scrollTop();
-       
-        // Get id of current scroll item
-        var cur = scrollItems.map(function(){
-         if ($(this).offset().top <= fromTop){
-           return this;
-         }
-        });
-        // Get the id of the current element
-        cur = cur[cur.length-1];
-        var id = cur && cur.length ? cur[0].id : "";
-
-        if (lastId !== id) {
-          lastId = id;
-          // Set/remove active class
-          menuItems
-            .parent().removeClass("active")
-            .end().filter("[href=\\#"+id+"]").parent().addClass("active");
-        }
-      });
-    }
-  };
+  $('[data-toggle="tooltip"]').tooltip(); // Init Tooltips
+  $('.dropdown-toggle').dropdown();       // Init Dropdown
 
   // Animate link
   var animateLink = function( target, offsetTop ){
@@ -112,11 +101,10 @@
     }
   };
 
+  /*
   // Infographics setup
   var setupInfographics = function(){
 
-    $('[data-toggle="tooltip"]').tooltip(); // Init Tooltips
-    $('.dropdown-toggle').dropdown();       // Init Dropdown
     $('#region-dropdown-menu, #drug-dropdown-menu').click(function(e){ e.stopPropagation(); });
 
     // Prices graph
@@ -205,7 +193,6 @@
       graph_vaccine_measles_2.init( 'measles', 'cases' );
       $(window).resize( graph_vaccine_measles_2.onResize );
     }
-    /*
     // Vaccine map
     if ($('#vaccine-map').length > 0) {
       var vaccine_map = new VaccineMap('vaccine-map');
@@ -214,7 +201,6 @@
       vaccine_map.init($('body').data('baseurl')+'/assets/data/diseases-polio-cases.csv', $('body').data('baseurl')+'/assets/data/map-polio-cases.csv');
       $(window).resize( vaccine_map.onResize );
     }
-    */
     if ($('#video-map-polio').length > 0) {
       var wrapper = Popcorn.HTMLYouTubeVideoElement('#video-map-polio');
       wrapper.src = 'http://www.youtube.com/embed/l1F2Xd5FFlQ?controls=0&showinfo=0';
@@ -241,16 +227,60 @@
       });
       $(window).resize( graph_immunization.onResize );
     }
+    if ($('#immunization-coverage-country-graphs').length > 0) {
+      var graph_measles_immunization   = new BarGraph('measles-bar-graph', null);
+      var graph_polio_immunization     = new BarGraph('polio-bar-graph', null);
+      var graph_pertussis_immunization = new BarGraph('pertussis-bar-graph', null);
+      // Setup graphs aspect ratio
+      graph_measles_immunization.aspectRatio = graph_polio_immunization.aspectRatio = graph_pertussis_immunization.aspectRatio = 0.25;
+      // Init graphs
+      graph_measles_immunization.init();
+      graph_polio_immunization.init();
+      graph_pertussis_immunization.init();
+      // On resize
+      $(window).resize(function(){
+        graph_measles_immunization.onResize();
+        graph_polio_immunization.onResize();
+        graph_pertussis_immunization.onResize();
+      });
+      // Load data
+      d3.csv( $('body').data('baseurl')+'/assets/data/immunization-coverage.csv', function(error, data) {
+        var country = 'ESP';
+        var data_parser = function(d){
+          var obj = {label: d.code, value: +d['2015']};
+          if (d.code === country ) obj.active = true;
+          return obj;
+        };
+        var data_sort = function(a,b){ return b.value-a.value; };
+        var measels_data = data
+          .filter(function(d){ return d.vaccine === 'MCV1' && d['2015'] !== ''; })
+          .map(data_parser)
+          .sort(data_sort);
+        var polio_data = data
+          .filter(function(d){ return d.vaccine === 'Pol3' && d['2015'] !== ''; })
+          .map(data_parser)
+          .sort(data_sort);
+        var pertussis_data = data
+          .filter(function(d){ return d.vaccine === 'DTP3' && d['2015'] !== ''; })
+          .map(data_parser)
+          .sort(data_sort);
+
+        var country_measles = measels_data.filter(function(d){ return d.label === country; });
+        var country_polio = polio_data.filter(function(d){ return d.label === country; });
+        var country_pertussis = pertussis_data.filter(function(d){ return d.label === country; });
+        if (country_measles.length > 0)
+          $('#measles-immunization-data').html('<strong>'+country_measles[0].value+'%</strong>');
+        if (country_polio.length > 0)
+          $('#polio-immunization-data').html('<strong>'+country_polio[0].value+'%</strong>');
+        if (country_pertussis.length > 0)
+          $('#pertussis-immunization-data').html('<strong>'+country_pertussis[0].value+'%</strong>');
+
+        graph_measles_immunization.onDataReady(error, measels_data);
+        graph_polio_immunization.onDataReady(error, polio_data);
+        graph_pertussis_immunization.onDataReady(error, pertussis_data);
+      });
+    }
   };
+  */
    
-  setup();
-
-  // Code for Articles only !!!! 
-  // ----------------------------
-
-  if( $('body').hasClass('article') ){
-    setupInfographics();
-  }
-  
-
 })(jQuery); // Fully reference jQuery after this point.

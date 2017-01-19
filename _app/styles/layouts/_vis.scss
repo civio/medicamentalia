@@ -20,19 +20,11 @@ Common
     stroke: $brand-primary;
     stroke-width: 1px;
   }
-}
-
-/*
-Patentes
-*/
-
-.bar-graph{
 
   .bar {
     fill: $brand-primary;
   }
-
-  .bar:hover {
+  .bar.active {
     fill: $color-orange;
   }
 
@@ -42,6 +34,19 @@ Patentes
     font-weight: 300;
     text-anchor: middle;
   }
+}
+
+/*
+Patentes
+*/
+
+.bar-graph{
+
+  .bar:hover {
+    fill: $color-orange;
+  }
+
+  
 
   .marker{
     stroke: $color-orange;
@@ -268,6 +273,23 @@ Vaccines coverage
   }
 }
 
+/*
+Conutries vaccines coverage
+*/
+
+#immunization-coverage-country-graphs{
+  .axis text,
+  .bar-label{
+    display: none;
+  }
+
+  .bar{
+    fill: mix( $gray-light, $gray-lighter, 30% );
+  }
+  .bar.active{
+    fill: $brand-primary;
+  }
+}
 
 /*
 Infographic

@@ -410,14 +410,21 @@ header {
   .graph-container{
     font-family: $font-family-sans-serif;
     margin-bottom: $grid-gutter-width;
-  }
 
-  .graph-container-caption{
-    color: $brand-primary;
-    font-weight: 700;
-    line-height: 1.375em;
-    margin-top: $grid-gutter-width/6;
-    margin-bottom: 0;
+    p{
+      font-size: 1em;
+      line-height: 1.25em;
+      margin-bottom: $grid-gutter-width/2;
+    }
+
+    .graph-container-caption{
+      color: $brand-primary;
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 700;
+      margin-top: $grid-gutter-width/6;
+      margin-bottom: 0;
+    }
   }
 
   .credits{

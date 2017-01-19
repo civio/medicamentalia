@@ -49,21 +49,34 @@ var js_paths = {
     '_app/scripts/vendor/selection-sharer.js',
     '_app/scripts/main.js'
   ],
-  // infograpic.js sources
-  infographics: [
+  // main-access.js sources
+  access: [
+    '_app/scripts/vendor/d3-bundle.js',
+    '_app/scripts/bar-graph.js',
+    '_app/scripts/patents-graph.js',
+    '_app/scripts/infographic.js',
+    '_app/scripts/antimalaricos-infographic.js',
+    '_app/scripts/fakes-infographic.js',
+    '_app/scripts/patents-infographic.js',
+    '_app/scripts/prices-infographic.js',
+    '_app/scripts/main-access.js'
+  ],
+  // main-vaccines.js sources
+  vaccines: [
     '_app/scripts/vendor/d3-bundle.js',
     '_app/scripts/vendor/popcorn.js',
     //'node_modules/topojson-client/dist/topojson-client.js',
     '_app/scripts/bar-graph.js',
     '_app/scripts/line-graph.js',
-    '_app/scripts/patents-graph.js',
     '_app/scripts/vaccine-disease-graph.js',
     //'_app/scripts/vaccine-map.js',
-    '_app/scripts/infographic.js',
-    '_app/scripts/antimalaricos-infographic.js',
-    '_app/scripts/fakes-infographic.js',
-    '_app/scripts/patents-infographic.js',
-    '_app/scripts/prices-infographic.js'
+    '_app/scripts/main-vaccines.js'
+  ],
+  // main-vaccines.js sources
+  others: [
+    '_app/scripts/vendor/d3-bundle.js',
+    '_app/scripts/bar-graph.js',
+    '_app/scripts/main-others.js'
   ]
 };
 
@@ -83,27 +96,26 @@ gulp.task('css', function() {
 
 // Concatenates and uglifies JS files and outputs result to
 // the appropriate location(s).
-gulp.task('js-main', function() {
-  return gulp.src(js_paths.main)
-    .pipe(concat('main.js'))
-    .pipe(production(uglify(uglifyOptions)))
-    .pipe(gulp.dest('_site/assets/scripts'))
-    .pipe(reload({stream:true}))
-    .pipe(gulp.dest('assets/scripts'))
-    .on('error', gutil.log);
+
+// Get js paths object keys (main, acces, vaccines, ...)
+var js_tasks = Object.keys(js_paths);
+
+// Create a task for each js paths key
+// Based on http://stackoverflow.com/questions/22968516/creating-tasks-using-a-loop-gulp
+js_tasks.forEach(function(name) {
+  gulp.task('js-'+name, function() {
+    return gulp.src(js_paths[name])
+      .pipe(concat(name+'.js'))
+      .pipe(production(uglify(uglifyOptions)))
+      .pipe(gulp.dest('_site/assets/scripts'))
+      .pipe(reload({stream:true}))
+      .pipe(gulp.dest('assets/scripts'))
+      .on('error', gutil.log);
+  });
 });
 
-gulp.task('js-infographics', function() {
-  return gulp.src(js_paths.infographics)
-    .pipe(concat('infographics.js'))
-    .pipe(production(uglify(uglifyOptions)))
-    .pipe(gulp.dest('_site/assets/scripts'))
-    .pipe(reload({stream:true}))
-    .pipe(gulp.dest('assets/scripts'))
-    .on('error', gutil.log);
-});
-
-gulp.task('js', ['js-main', 'js-infographics']);
+// Create a js task wich call all js task dynamically defined
+gulp.task('js', js_tasks.map(function(d){ return 'js-'+d; }));
 
 // Jekyll build
 gulp.task('jekyll-build', function(done) {
