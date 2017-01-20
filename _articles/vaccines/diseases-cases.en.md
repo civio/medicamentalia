@@ -24,7 +24,7 @@ draft:            true
 
   <h3>Diseases cases</h3>
 
-  {% include vaccines_all_diseases_graph.en.html %}
+  {% include vaccines/all_diseases_graph.en.html %}
 
   </div>
 </div>

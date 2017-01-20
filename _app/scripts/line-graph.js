@@ -1,24 +1,18 @@
-var LineGraph = function( _id, _source ) {
+var LineGraph = function() {
 
   var $ = jQuery.noConflict();
 
   var that = this,
       data, currentData;
 
-  that.id      = _id;
-  that.source  = _source;
-
   that.margin = {top: 0, right: 15, bottom: 20, left: 15};
   that.aspectRatio = 0.5625;
   that.markerValue = null;
   that.activeLines = [];
 
-  // Public Methods
+  that.setup = function( _id ) {
 
-  that.init = function() {
-
-    console.log('Line Graph init', that.id, that.source);
-
+    that.id   = _id;
     that.$el  = $('#'+that.id);
     that.lang = that.$el.data('lang');
 
@@ -32,17 +26,22 @@ var LineGraph = function( _id, _source ) {
       .range([that.height, 0]);
 
     // Setup axis
-    that.xAxis = d3.axisBottom(that.x);
+    that.xAxis = d3.axisBottom(that.x)
+      .tickFormat(d3.format(''));
 
     that.yAxis = d3.axisLeft(that.y)
-      .tickSize(that.width)
-      .tickValues([0, 25, 50, 75, 100]);
-
+      .tickSize(that.width);
+      
     // Setup line
-    that.line = d3.line()
-      .curve(d3.curveCatmullRom)
-      .x(function(d){ return that.x(+d.key); })
-      .y(function(d){ return that.y(d.value); });
+    that.line = (!that.isArea) ?
+      d3.line()
+        .y(function(d){ return that.y(d.value); }) :
+      d3.area()
+        .y0(that.height)
+        .y1(function(d){ return that.y(d.value); });
+
+    that.line.x(function(d){ return that.x(+d.key); });
+    that.line.curve(d3.curveCatmullRom);
 
     // Create svg
     that.svg = d3.select('#'+that.id).append('svg')
@@ -51,33 +50,31 @@ var LineGraph = function( _id, _source ) {
       .attr('height', that.heightCont)
     .append('g')
       .attr('transform', 'translate(' + that.margin.left + ',' + that.margin.top + ')');
+  };
 
-    // Load CSV
-    d3.csv(that.source, that.onDataReady);
+  // Load CSV data
+  that.loadData = function(_source) {
+    d3.csv(_source, function(error, _data) {
+      that.setData(_data);
+    });
 
     return that;
   };
 
-  that.update = function() {
-    that.setData();
-    that.updateGraph();
-
-    return that;
-  };
-
-  that.onDataReady = function(error, _data) {
+  // Set data
+  that.setData = function(_data) {
 
     that.years = that.getYears(_data);
 
     data = that.dataParser(_data);
 
-    that.setData();
+    that.updateData();
     that.setGraph();
 
     return that;
   };
 
-  that.setData = function() {
+  that.updateData = function() {
 
     // Filter data (that.dataFilter function must be defined outside)
     currentData = (that.dataFilter) ? data.filter(that.dataFilter) : data;
@@ -86,6 +83,15 @@ var LineGraph = function( _id, _source ) {
     if (that.dataSort) {
       currentData = currentData.sort(that.dataSort);
     }
+
+    return that;
+  };
+
+  that.update = function() {
+    that.updateData();
+    that.updateGraph();
+
+    return that;
   };
 
   that.getYears = function(_data) {
@@ -114,9 +120,10 @@ var LineGraph = function( _id, _source ) {
   };
 
   that.setGraph = function() {
+
     // Set scales domain
-    that.x.domain([that.years[0], that.years[that.years.length-1]]);
-    that.y.domain([0, 100]);  // TODO!!! Make this dynamic
+    that.x.domain( that.getScaleXDomain() );
+    that.y.domain( that.getScaleYDomain() );
 
     // Draw axis
     that.svg.append('g')
@@ -156,30 +163,12 @@ var LineGraph = function( _id, _source ) {
     return that;
   };
 
-  that.updateData = function(){
+  that.getScaleXDomain = function(){
+    return [that.years[0], that.years[that.years.length-1]];
+  };
 
-    /*
-    that.svg
-      .attr('width', that.widthCont)
-      .attr('height', that.heightCont);
-
-    that.x.range([0, that.width]);
-    that.y.range([that.height, 0]);
-
-    that.svg.select('g.x.axis')
-      .attr('transform', 'translate(0,' + that.height + ')')
-      .call(d3.axisBottom(that.x));
-
-    that.svg.selectAll('.bar')
-      .attr('x', function(d) { return that.x(d.label); })
-      .attr('y', function(d) { return that.y(d.value); })
-      .attr('width', that.x.bandwidth())
-      .attr('height', function(d) { return that.height - that.y(d.value); });
-
-    that.svg.selectAll('.bar-label')
-      .attr('x', function(d) { return that.x(d.label)+(that.x.bandwidth()*0.5); })
-      .attr('y', function(d) { return that.y(d.value); });
-    */
+  that.getScaleYDomain = function(){
+    return [0, d3.max(currentData, function(d){ return d3.max(d3.values(d.values)); })];
   };
 
   that.getDimensions = function(){

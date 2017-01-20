@@ -25,12 +25,14 @@ export {
   easeSinInOut,
 } from "d3-ease";
 
+export * from "d3-format";
 
 export {
   queue
 } from "d3-queue";
 
 export {
+  area,
   line,
   curveCatmullRom
 } from "d3-shape";

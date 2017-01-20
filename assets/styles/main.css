@@ -10085,7 +10085,7 @@ Vaccines coverage
   stroke-width: 1.5px; }
 
 /*
-Conutries vaccines coverage
+Countries vaccines coverage
 */
 #immunization-coverage-country-graphs .axis text,
 #immunization-coverage-country-graphs .bar-label {
@@ -10096,6 +10096,21 @@ Conutries vaccines coverage
 
 #immunization-coverage-country-graphs .bar.active {
   fill: #00797d; }
+
+/*
+World diseases cases
+*/
+#world-cases .graph-container .line {
+  fill: #e2723b;
+  stroke: #e2723b; }
+
+#world-cases .y.axis line {
+  display: block;
+  stroke: #777777; }
+
+#world-cases .graph-container .graph-container-caption {
+  text-align: center;
+  margin-bottom: 10px; }
 
 /*
 Infographic

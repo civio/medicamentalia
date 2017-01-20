@@ -214,6 +214,7 @@ Vaccine Map
   height: 720px;
   margin: 0 auto $grid-gutter-width;
 }
+
 /*
 Video Map Polio
 */
@@ -274,7 +275,7 @@ Vaccines coverage
 }
 
 /*
-Conutries vaccines coverage
+Countries vaccines coverage
 */
 
 #immunization-coverage-country-graphs{
@@ -290,6 +291,30 @@ Conutries vaccines coverage
     fill: $brand-primary;
   }
 }
+
+/*
+World diseases cases
+*/
+
+#world-cases{
+  .graph-container .line{
+    fill: $color-orange;
+    stroke: $color-orange;
+  }
+  .y.axis line{
+    display: block;
+    stroke: $gray-light;
+  }
+  .y.axis text{
+  //  display: none;
+  }
+
+  .graph-container .graph-container-caption{
+    text-align: center;
+    margin-bottom: $grid-gutter-width/3;
+  }
+}
+
 
 /*
 Infographic

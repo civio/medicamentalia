@@ -59,11 +59,14 @@
     //popcorn.play();
   }
   if ($('#immunization-coverage-graph').length > 0) {
-    var graph_immunization = new LineGraph('immunization-coverage-graph', $('body').data('baseurl')+'/assets/data/immunization-coverage.csv');
+    var graph_immunization = new LineGraph();
+    graph_immunization.getScaleYDomain = function(d){ return [0,100]; };
     graph_immunization.dataFilter = function(d){ return d.vaccine === $('#immunization-coverage-vaccine-selector').val(); };
     graph_immunization.dataSort = function(a,b){ return (a.code === $('#immunization-coverage-country-1-selector').val() || a.code === $('#immunization-coverage-country-2-selector').val()) ? 1 : -1; };
     graph_immunization.activeLines = [$('#immunization-coverage-country-1-selector').val(), $('#immunization-coverage-country-2-selector').val()];
-    graph_immunization.init();
+    graph_immunization.setup('immunization-coverage-graph');
+    graph_immunization.yAxis.tickValues([0, 25, 50, 75, 100]);
+    graph_immunization.loadData($('body').data('baseurl')+'/assets/data/immunization-coverage.csv');
     
     // Update data based on selected vaccine
     $('#immunization-coverage-vaccine-selector, #immunization-coverage-country-1-selector, #immunization-coverage-country-2-selector').change(function(e){
@@ -71,6 +74,31 @@
       graph_immunization.update();
     });
     $(window).resize( graph_immunization.onResize );
+  }
+  if ($('#world-cases').length > 0) {
+    var diseases = ['diphteria', 'measles', 'pertussis', 'polio', 'tetanus'];
+    d3.csv( $('body').data('baseurl')+'/assets/data/diseases-cases-world.csv', function(error, data) {
+      // Get max value to create a common y scale
+      var maxValue1 = d3.max(data, function(d){ return d3.max(d3.values(d), function(e){ return +e; }); });
+      var maxValue2 = d3.max(data.filter(function(d){ return ['diphteria', 'polio', 'tetanus'].indexOf(d.disease) !== -1; }),
+        function(d){ return d3.max(d3.values(d), function(e){ return +e; }); });
+      // Create a line graph for each disease
+      diseases.forEach(function(disease){
+        // get current disease data
+        var disease_data = data
+          .filter(function(d){ return d.disease === disease; })
+          .map(function(d){ return $.extend({}, d); });
+        // setup line chart
+        var graph_world = new LineGraph();
+        graph_world.getScaleYDomain = function(){ return [0, (disease === 'measles' || disease === 'pertussis') ? maxValue1 : maxValue2]; };
+        graph_world.isArea = true;
+        graph_world.margin.left = 20;
+        graph_world.setup(disease+'-world-graph');
+        graph_world.xAxis.tickValues([1980, 2015]);
+        graph_world.yAxis.ticks(2).tickFormat(d3.format('.0s'));
+        graph_world.setData(disease_data);
+      });
+    });
   }
   if ($('#immunization-coverage-country-graphs').length > 0) {
     var graph_measles_immunization   = new BarGraph('measles-bar-graph', null);
