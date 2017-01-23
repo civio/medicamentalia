@@ -12787,18 +12787,18 @@ var VaccineDiseaseGraph = function( _id ) {
   }
   // Vaccine measles graph 1
   if ($('#vaccines-measles-graph-1').length > 0) {
-    var countries_1 = ['AFG', 'ARG', 'AUS', 'AUT', 'BEL', 'BOL'];
+    var countries_1 = ['FIN', 'HUN', 'PRT', 'URY', 'MEX', 'COL'];
     var graph_vaccine_measles_1 = new VaccineDiseaseGraph('vaccines-measles-graph-1');
     graph_vaccine_measles_1.filter = function(d){ return countries_1.indexOf(d.code) !== -1; };
-    graph_vaccine_measles_1.init( 'measles', 'cases' );
+    graph_vaccine_measles_1.init( 'measles', 'year' );
     $(window).resize( graph_vaccine_measles_1.onResize );
   }
   // Vaccine measles graph 2
   if ($('#vaccines-measles-graph-2').length > 0) {
-    var countries_2 = ['ESP', 'ROU', 'RUS', 'RWA', 'SYR', 'USA', 'VEN'];
+    var countries_2 = ['IRQ', 'BGR', 'MNG', 'ZAF', 'FRA', 'GEO'];
     var graph_vaccine_measles_2 = new VaccineDiseaseGraph('vaccines-measles-graph-2');
     graph_vaccine_measles_2.filter = function(d){ return countries_2.indexOf(d.code) !== -1; };
-    graph_vaccine_measles_2.init( 'measles', 'cases' );
+    graph_vaccine_measles_2.init( 'measles', 'year' );
     $(window).resize( graph_vaccine_measles_2.onResize );
   }
   /*
@@ -12839,8 +12839,8 @@ var VaccineDiseaseGraph = function( _id ) {
       $('#video-map-polio-description').fadeTo(300, 1);
     });
   }
-  // Immunization coverage line grah
-  if ($('#immunization-coverage-graph').length > 0) {
+  // Immunization coverage line grah (all countries)
+  if ($('#immunization-coverage-graph-all').length > 0) {
     var graph_immunization = new LineGraph();
     graph_immunization.getScaleYDomain = function(d){ return [0,100]; };
     graph_immunization.dataFilter = function(d){ return d.vaccine === $('#immunization-coverage-vaccine-selector').val(); };
@@ -12855,6 +12855,17 @@ var VaccineDiseaseGraph = function( _id ) {
       graph_immunization.activeLines = [$('#immunization-coverage-country-1-selector').val(), $('#immunization-coverage-country-2-selector').val()];
       graph_immunization.update();
     });
+    $(window).resize( graph_immunization.onResize );
+  }
+  // Immunization coverage line grah
+  if ($('#immunization-coverage-graph').length > 0) {
+    var $el = $('#immunization-coverage-graph');
+    var graph_immunization = new LineGraph();
+    graph_immunization.getScaleYDomain = function(d){ return [0,100]; };
+    graph_immunization.dataFilter = function(d){ return $el.data('countries').indexOf(d.code) !== -1; };
+    graph_immunization.setup('immunization-coverage-graph');
+    graph_immunization.yAxis.tickValues([0, 25, 50, 75, 100]);
+    graph_immunization.loadData($('body').data('baseurl')+'/assets/data/immunization-coverage-mcv2.csv');
     $(window).resize( graph_immunization.onResize );
   }
   // Multiple small world cases area graph

@@ -9738,7 +9738,10 @@ header {
       line-height: 1.375em;
       font-weight: 700;
       margin-top: 5px;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      text-align: center; }
+  .page-content .container-right .graph-container .graph-container-caption {
+    text-align: left; }
   .page-content .credits {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     padding: 12px 15px;
@@ -9761,12 +9764,14 @@ header {
       font-size: 16px;
       line-height: 25px;
       margin-bottom: 0; }
+  .page-content .twitter-tweet {
+    margin: 0 auto 35px !important; }
 
 .video-container {
   position: relative;
   margin: 60px 0 30px; }
 
-.video-container-right .video-container {
+.container-right .video-container {
   margin-top: 40px; }
 
 .alignright {
@@ -9867,20 +9872,17 @@ blockquote {
     height: 100%; }
   blockquote,
   .alignright,
-  .video-container-right,
-  .graph-container-right {
+  .container-right {
     float: right;
     width: 50% !important; }
   .alignright {
     margin-left: 30px; }
-  .page-content .video-container-right {
+  .page-content .container-right {
     margin-left: 30px; }
-    .page-content .video-container-right .video-container {
+    .page-content .container-right .video-container {
       margin-top: 0; }
-    .page-content .video-container-right .video-container-caption {
-      margin-bottom: 20px; }
-  .page-content .graph-container-right {
-    margin-left: 30px; } }
+    .page-content .container-right .video-container-caption {
+      margin-bottom: 20px; } }
 
 @media (min-width: 992px) {
   header {
@@ -9889,16 +9891,14 @@ blockquote {
     width: 700px; }
   blockquote,
   .alignright,
-  .video-container-right,
-  .graph-container-right {
+  .container-right {
     width: 440px !important;
     margin-right: -120px; } }
 
 @media (min-width: 1200px) {
   blockquote,
   .alignright,
-  .video-container-right,
-  .graph-container-right {
+  .container-right {
     width: 475px !important;
     margin-right: -155px; } }
 
@@ -10143,7 +10143,6 @@ World diseases cases
   stroke: #777777; }
 
 #world-cases .graph-container .graph-container-caption {
-  text-align: center;
   margin-bottom: 10px; }
 
 /*
