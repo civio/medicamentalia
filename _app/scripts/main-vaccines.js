@@ -74,6 +74,7 @@
       $('#video-map-polio-description').fadeTo(300, 1);
     });
   }
+  // Immunization coverage line grah
   if ($('#immunization-coverage-graph').length > 0) {
     var graph_immunization = new LineGraph();
     graph_immunization.getScaleYDomain = function(d){ return [0,100]; };
@@ -91,6 +92,7 @@
     });
     $(window).resize( graph_immunization.onResize );
   }
+  // Multiple small world cases area graph
   if ($('#world-cases').length > 0) {
     var diseases = ['diphteria', 'measles', 'pertussis', 'polio', 'tetanus'];
     d3.csv( $('body').data('baseurl')+'/assets/data/diseases-cases-world.csv', function(error, data) {
@@ -116,57 +118,45 @@
       });
     });
   }
-  if ($('#immunization-coverage-country-graphs').length > 0) {
-    var graph_measles_immunization   = new BarGraph('measles-bar-graph', null);
-    var graph_polio_immunization     = new BarGraph('polio-bar-graph', null);
-    var graph_pertussis_immunization = new BarGraph('pertussis-bar-graph', null);
-    // Setup graphs aspect ratio
-    graph_measles_immunization.aspectRatio = graph_polio_immunization.aspectRatio = graph_pertussis_immunization.aspectRatio = 0.25;
-    // Init graphs
-    graph_measles_immunization.init();
-    graph_polio_immunization.init();
-    graph_pertussis_immunization.init();
-    // On resize
-    $(window).resize(function(){
-      graph_measles_immunization.onResize();
-      graph_polio_immunization.onResize();
-      graph_pertussis_immunization.onResize();
-    });
+  // Immunization coverage by disease bar graph
+  if ($('.immunization-coverage-disease-graph').length > 0) {
     // Load data
     d3.csv( $('body').data('baseurl')+'/assets/data/immunization-coverage.csv', function(error, data) {
+      // Setup current country -> TODO!!! we have to get user country
       var country = 'ESP';
+      // setup data
       var data_parser = function(d){
         var obj = {label: d.code, value: +d['2015']};
         if (d.code === country ) obj.active = true;
         return obj;
       };
       var data_sort = function(a,b){ return b.value-a.value; };
-      var measels_data = data
-        .filter(function(d){ return d.vaccine === 'MCV1' && d['2015'] !== ''; })
-        .map(data_parser)
-        .sort(data_sort);
-      var polio_data = data
-        .filter(function(d){ return d.vaccine === 'Pol3' && d['2015'] !== ''; })
-        .map(data_parser)
-        .sort(data_sort);
-      var pertussis_data = data
-        .filter(function(d){ return d.vaccine === 'DTP3' && d['2015'] !== ''; })
-        .map(data_parser)
-        .sort(data_sort);
-
-      var country_measles = measels_data.filter(function(d){ return d.label === country; });
-      var country_polio = polio_data.filter(function(d){ return d.label === country; });
-      var country_pertussis = pertussis_data.filter(function(d){ return d.label === country; });
-      if (country_measles.length > 0)
-        $('#measles-immunization-data').html('<strong>'+country_measles[0].value+'%</strong>');
-      if (country_polio.length > 0)
-        $('#polio-immunization-data').html('<strong>'+country_polio[0].value+'%</strong>');
-      if (country_pertussis.length > 0)
-        $('#pertussis-immunization-data').html('<strong>'+country_pertussis[0].value+'%</strong>');
-
-      graph_measles_immunization.onDataReady(error, measels_data);
-      graph_polio_immunization.onDataReady(error, polio_data);
-      graph_pertussis_immunization.onDataReady(error, pertussis_data);
+      // loop through each graph
+      $('.immunization-coverage-disease-graph').each(function(){
+        var $el = $(this),
+            disease = $el.data('disease'),
+            vaccine = $el.data('vaccine');
+        // Get graph data & value
+        var graph_data = data
+          .filter(function(d){ return d.vaccine === vaccine && d['2015'] !== ''; })
+          .map(data_parser)
+          .sort(data_sort);
+        console.log(disease, vaccine, graph_data);
+        var graph_value = graph_data.filter(function(d){ return d.label === country; });
+        // Setup graph
+        var graph = new BarGraph(disease+'-immunization-bar-graph', null);
+        // Setup graph aspect ratio
+        graph.aspectRatio = 0.25;
+        // Init graph
+        graph.init();
+        // Set data graph
+        graph.onDataReady(error, graph_data);
+        // Setup graph value
+        if (graph_value.length > 0)
+          $el.find('.immunization-data').html('<strong>'+graph_value[0].value+'%</strong>');
+        // On resize
+        $(window).resize(function(){ graph.onResize(); });
+      });
     });
   }
 

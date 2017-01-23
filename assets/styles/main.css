@@ -5998,6 +5998,20 @@ h3, h4, h5 {
   border-radius: 0;
   font-weight: 300; }
 
+.page-content .panel {
+  clear: both;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  background: #d9ede8;
+  padding: 0 30px 10px;
+  border-radius: 0; }
+  .page-content .panel h2, .page-content .panel h3, .page-content .panel h4, .page-content .panel h5 {
+    color: #00797d;
+    margin-bottom: 15px; }
+  .page-content .panel p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 15px; }
+
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -10101,16 +10115,16 @@ Vaccines coverage
   stroke-width: 1.5px; }
 
 /*
-Countries vaccines coverage
+User country disease immunization coverage
 */
-#immunization-coverage-country-graphs .axis text,
-#immunization-coverage-country-graphs .bar-label {
+.immunization-coverage-disease-graph .axis text,
+.immunization-coverage-disease-graph .bar-label {
   display: none; }
 
-#immunization-coverage-country-graphs .bar {
+.immunization-coverage-disease-graph .bar {
   fill: #cbcbcb; }
 
-#immunization-coverage-country-graphs .bar.active {
+.immunization-coverage-disease-graph .bar.active {
   fill: #00797d; }
 
 /*
