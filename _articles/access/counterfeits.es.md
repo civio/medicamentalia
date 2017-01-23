@@ -46,7 +46,7 @@ Aunque en los últimos 15 años la tasa de mortalidad por malaria ha logrado red
 
 Poco a poco, Ghana avanza desde la cabeza de los países con bajos ingresos a la cola de los países con ingresos medios, tal y como [reconoce](http://data.worldbank.org/about/country-and-lending-groups) el Banco Mundial. Salvo en 2009, donde el PIB sólo creció un 4% debido a la recesión, llevan varios años creciendo por encima del 7%. Pero todavía, casi **uno de cada tres ciudadanos** vive bajo el umbral de la pobreza. En enero, el gobierno aumentó el salario mínimo diario de 6 a 7 cedis, un euro y sesenta céntimos.
 
-<div class="video-container-right">
+<div class="container-right">
 {% include video-container.html videoid="3ZIP4kCAWTY" title="Kwame Agyekum regenta uno de esos pequeños negocios al borde de la acequia." credit="Vídeo: Elio Stamm y Miguel Á. Gavilanes" %}
 </div>
 

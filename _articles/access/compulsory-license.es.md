@@ -63,7 +63,7 @@ Más que presiones (algunas calificadas de “antiéticas” por parte de la soc
 
 No solo protestaron las empresas, también ciertos gobiernos. **La Cámara de Comercio de Estados Unidos denominó la medida como un “enorme paso atrás” para Brasil** que, además, se había tomado apenas unos días después de que el gobierno estadounidense ascendiera de categoría al país sudamericano en su escala sobre protección de la propiedad intelectual y contra la falsificación y la piratería. “Brasil está trabajando para atraer inversiones en las industrias innovadoras que se basan en la propiedad intelectual y este movimiento probablemente hará que las inversiones vayan a otra parte”, [afirmaron entonces](http://www.bloomberg.com/apps/news?pid=newsarchive&sid=aAHMaYgcQA4o).
 
-<div class="graph-container-right">
+<div class="container-right">
   <div class="graph-container">
     <div id="patents-graph" class="bar-graph" data-lang="es"></div>
     <p class="graph-container-caption">Número de patentes</p>

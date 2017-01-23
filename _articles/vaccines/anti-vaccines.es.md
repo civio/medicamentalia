@@ -34,7 +34,10 @@ Italia ha vacunado al 82% de los niños a los que les tocaba esa segunda dosis, 
 
 Dinamarca, por su parte, ha ido descendiendo en los últimos años hasta quedarse en un 80% de cobertura en la segunda dosis de la vacuna del sarampión, por debajo de unos 100 países, entre los que se encuentran Ruanda (87) o Vietnam (92%), por poner solo dos ejemplos. Francia no ha enviado a la OMS datos de 2015, pero en 2014 tenía un 74% de inmunización. Una cifra baja que, al menos, ha ido a mejor: era de un 67% en 2013.
 
-> Cruzaíto??? 
+<div class="graph-container">
+  <p class="graph-container-caption">Nivel de vacunación de sarampión</p>
+  <div id="immunization-coverage-graph" data-countries="FRA,DNK,RUA,VIE" data-vaccine="MCV2"></div>
+</div>
 
 De hecho, Francia es el país con un nivel más elevado de desconfianza en las vacunas, según el projecto [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/), realizado por la London School of Hygiene and Tropical Medicine y para el que entrevistaron a 65.819 personas en 67 países. Un 40% de los franceses encuestados (frente a una media del 12% en el total) respondieron que estaban en desacuerdo o totalmente en desacuerdo a la afirmación de que las vacunas eran seguras. De hecho, siete de los diez países con menor confianza en las vacunas son europeos. Y eso, pese a que los efectos secundarios graves de las vacunas [son extremadamente raros](https://www.science.org.au/learning/general-audience/science-booklets/science-immunisation/4-are-vaccines-safe).
 
@@ -55,7 +58,9 @@ Sí lo están en regiones en las que las epidemias de enfermedades como el saram
 
 Que la memoria esté más fresca y las dificultades de acceso a la salud hacen que, en ciertas regiones, como en Centroamérica, el movimiento antivacunas sea algo que sí ocurría en el pasado, por miedo a lo desconocido, pero que ahora es anecdótico. Esas comunidades han pasado "de esconder a sus niños a hacer cola por la vacuna en el centro de salud", como narra Adimir Vasques, del programa nacional de inmunizaciones del Ministerio de Salud de Guatemala.
 
-> vídeo: ### Adimir Vasques, del programa nacional de inmunizaciones del Ministerio de Salud de Guatemala "Cuando yo inicié a trabar en salud pública, que hace bastante tiempo, cuando eran las jornadas de vacunación íbamos a una comunidad, a las aldeas, los papás escondían a los niños, y nos costaba andar persiguiendo y convenciendo. [Y toda esta evolución es importante]. Ahora la gente demanda".
+<div class="container-right">
+{% include video-container.html videoid="gB_DH1g1hVU" title="Adimir Vasques, del programa nacional de inmunizaciones del Ministerio de Salud de Guatemala &quot;Cuando yo inicié a trabar en salud pública, que hace bastante tiempo, cuando eran las jornadas de vacunación íbamos a una comunidad, a las aldeas, los papás escondían a los niños, y nos costaba andar persiguiendo y convenciendo. [Y toda esta evolución es importante]. Ahora la gente demanda&quot;" credit="" %}
+</div>
 
 ### ¿Cómo se combate?
 Todas las personas entrevistadas para este reportaje coinciden y repiten la misma palabra: pedagogía. Pedagogía e [información contra los mitos](http://www.who.int/features/qa/84/es/). Pero no es sencillo. 

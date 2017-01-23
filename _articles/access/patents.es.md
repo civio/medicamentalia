@@ -79,7 +79,7 @@ Aun con sus fallos, Guimarães es pragmático a la hora de evaluar el sistema de
 
 Una [investigación](http://www.ifpma.org/fileadmin/content/Publication/2012/Assembling_the_RD_puzzle_FINAL.pdf) pagada por la propia IFPMA y publicada en 2012 analiza esas posibles vías paralelas. Nombran mecanismos como las _patent pools_, o consorcios entre varias firmas para intercambiar licencias, un sistema que descartan porque, en su opinión, “solo sirven para mitigar el coste de fabricación de genéricos”. Las conclusiones del estudio tampoco son prometedoras para otras alternativas como los créditos fiscales, que se han probado en Reino Unido; o las becas de innovación. En estos dos últimos casos, **consideran que son modelos vulnerables porque dependen de la capacidad económica e intereses políticos de administraciones públicas o donantes**. Tampoco se salvan de la quema los premios, formulados como un sistema de pago único cuando el medicamento es aprobado para su comercialización. En este caso, el informe considera que “solo llega a los ganadores y, por lo tanto, no mitiga el riesgo de innovación” y la IFPMA añade que los legisladores pueden caer en la “tentación de infravalorar la innovación” y, por lo tanto, pagar poco. Este sistema, en cambio, es el que defiende Eloan Pinheiro: “Si creas una innovación que de verdad revolucione un tratamiento, los gobiernos deberían pagar y que pase a ser de dominio público”.
 
-<div class="video-container-right">
+<div class="container-right">
 {% include video-container.html videoid="R8Ed_PYRswk" title="¿Qué son las PDP?" credit="Vídeo: Anne Vigna and Miguel Á. Gavilanes" %}
 </div>
 
@@ -91,7 +91,7 @@ Por desgracia, para algunas enfermedades no hay patentes contra las que luchar. 
 
 En su caso, el obstáculo a saltar no es la propiedad intelectual de los fármacos, sino la **escasez de nuevas moléculas**. Millones de personas necesitan nuevos tratamientos que ayuden a erradicar enfermedades padecidas por la población más pobre y marginada del planeta. “Es un olvido político, un fallo del mercado”, afirma.
 
-<div class="video-container-right">
+<div class="container-right">
 {% include video-container.html videoid="ePSbZAqVcgM" title="Eric Stobbaerts (DNDi) habla de modelos alternativos." credit="Vídeo: Anne Vigna and Miguel Á. Gavilanes" %}
 </div>
 

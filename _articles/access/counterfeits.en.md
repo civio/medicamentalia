@@ -48,7 +48,7 @@ Although in the last 15 years the mortality rate due to malaria has been greatly
 
 Gradually, Ghana advances from the head of the low-income countries to the tail of the middle-income countries, as [recognized](http://data.worldbank.org/about/country-and-lending-groups) by the World Bank. Except in 2009, when GDP grew only by 4% due to the recession, the country has experienced several years of growing by over 7%. But still, **almost one in three people** live below the poverty line. In January, the government increased the minimum daily wage from 6 to 7 cedis, one euro and sixty cents.
 
-<div class="video-container-right">
+<div class="container-right">
 {% include video-container.html videoid="gB_DH1g1hVU" title="Kwame Agyekum runs one of those small businesses at the edge of the ditch." credit="Video: Elio Stamm and Miguel Á. Gavilanes" %}
 </div>
 

@@ -70,7 +70,7 @@ Even with its flaws, Guimarães is pragmatic when it comes to assessing the pate
 
 A [study](http://www.ifpma.org/fileadmin/content/Publication/2012/Assembling_the_RD_puzzle_FINAL.pdf) paid for by the IFPMA and published in 2012 discusses these possible parallel tracks and looks into mechanisms such as patent pools or consortia of several firms exchanging licenses. A system that was ruled out, because in IFPMA’s opinion it "only serves to mitigate the cost of manufacturing generics". The study findings are not promising for other alternatives such as tax credits, which have been tested in the UK, or innovation grants. In the latter two cases, they consider these models to be vulnerable as they rely on the economic capacity and political interests of governments or donors. Nor are awards spared from criticism; formulated as a system of single payment when the drug is approved for marketing. In this case, the report considers that they "only go to the winners and, therefore, do not mitigate the risk of innovation". The IFPMA added that lawmakers may fall into the "temptation to undervalue innovation" and therefore, pay little. However, this system is the one Eloan Pinheiro defends: "If you create an innovation that will really revolutionize treatment, governments should pay so that it passes into the public domain."
 
-<div class="video-container-right">
+<div class="container-right">
 {% include video-container.html videoid="wTF8f4oMdws" title="What does PDP mean?" credit="Video: Anne Vigna and Miguel Á. Gavilanes" %}
 </div>
 
@@ -82,7 +82,7 @@ Unfortunately, for some diseases there are no patents to fight against. We are t
 
 In their case, the main challenge is not intellectual property of drugs, but **the shortage of new molecules**. Millions of people need new treatments that help eradicate diseases suffered by the poorest and most marginalized people on the planet. "It's a political oblivion, a market failure," he says.
 
-<div class="video-container-right">
+<div class="container-right">
 {% include video-container.html videoid="1zRRQhpRK_4" title="Eric Stobbaerts (DNDi) talks about alternative models." credit="Video: Anne Vigna and Miguel Á. Gavilanes" %}
 </div>
 

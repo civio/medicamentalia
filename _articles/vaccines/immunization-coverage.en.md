@@ -53,7 +53,7 @@ draft:            true
       </div>
     </div>
   </div>
-  <div id="immunization-coverage-graph"></div>
+  <div id="immunization-coverage-graph-all"></div>
 </div>
 
 </div>

@@ -73,7 +73,7 @@ Above and beyond pressures [from pharmaceutical companies] (some of them describ
 
 It wasn’t only the companies that protested; some governments also did. **The United States Chamber of Commerce described it as a "huge step backwards" for Brazil**. Furthermore, the measure took place only a few days after the US government had upgraded the South American country to a higher category due to its protection of intellectual property and fight against counterfeiting and piracy. "Brazil is working to attract investment in innovative industries that rely on intellectual property, and this move will likely cause investments to go elsewhere," they [affirmed](http://www.bloomberg.com/apps/news?pid=newsarchive&sid=aAHMaYgcQA4o).
 
-<div class="graph-container-right">
+<div class="container-right">
   <div class="graph-container">
     <div id="patents-graph" class="bar-graph" data-lang="en"></div>
     <p class="graph-container-caption">Number of patents</p>

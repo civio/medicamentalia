@@ -424,7 +424,12 @@ header {
       font-weight: 700;
       margin-top: $grid-gutter-width/6;
       margin-bottom: 0;
+      text-align: center;
     }
+  }
+  
+  .container-right .graph-container .graph-container-caption{
+    text-align: left;
   }
 
   .credits{
@@ -460,6 +465,10 @@ header {
       margin-bottom: 0;
     }
   }
+
+  .twitter-tweet{
+    margin: 0 auto 7*$grid-gutter-width/6 !important;
+  }
 }
 
 .video-container{
@@ -467,7 +476,7 @@ header {
   margin: 60px 0 30px;
 }
 
-.video-container-right{
+.container-right{
   .video-container{
     margin-top: 40px;
   }
@@ -610,8 +619,7 @@ blockquote{
 
   blockquote,
   .alignright,
-  .video-container-right,
-  .graph-container-right{
+  .container-right{
     float: right;
     width: 50% !important;
   }
@@ -620,7 +628,7 @@ blockquote{
     margin-left: $grid-gutter-width;
   }
 
-  .page-content .video-container-right{
+  .page-content .container-right{
     margin-left: $grid-gutter-width;
 
     .video-container{
@@ -629,10 +637,6 @@ blockquote{
     .video-container-caption{
       margin-bottom: 20px;
     }
-  }
-
-  .page-content .graph-container-right{
-    margin-left: $grid-gutter-width;
   }
 }
 
@@ -650,8 +654,7 @@ blockquote{
 
   blockquote,
   .alignright,
-  .video-container-right,
-  .graph-container-right{
+  .container-right{
     width: ($page-content-container-width/2) + $page-content-container-margin - (1.5 * $grid-gutter-width) !important;
     margin-right: ($grid-gutter-width / 2) - $page-content-container-margin;  // -16.7%; // $blockquote-margin-right;
   }
@@ -663,8 +666,7 @@ blockquote{
 
   blockquote,
   .alignright,
-  .video-container-right,
-  .graph-container-right{
+  .container-right{
     width: ($page-content-container-width/2) + $page-content-container-margin - (1.5 * $grid-gutter-width) !important;
     margin-right: ($grid-gutter-width / 2) - $page-content-container-margin;
   }

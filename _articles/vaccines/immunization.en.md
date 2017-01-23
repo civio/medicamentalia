@@ -18,7 +18,7 @@ draft:            true
 
 In the USA, it’s known as the $1,000 pill. And that’s not a metaphor. Each pill of sofosbuvir, the new drug for the treatment of Hepatitis C, costs exactly that. The medicine, sold by Gilead under the name Sovaldi, has again sparked discussion on the patent system and how it affects access to medicines and **the sustainability of health budgets** in countries of all income levels, especially developing ones.
 
-<div class="graph-container-right">
+<div class="container-right">
   <div id="immunization-coverage-country-graphs" class="graph-container">
     <p class="graph-container-caption">Sarampión</p> 
     <p>La cobertura de inmunización del sarampión en España es del <span id="measles-immunization-data"></span></p> 
