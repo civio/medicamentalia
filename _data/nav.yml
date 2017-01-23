@@ -10,9 +10,11 @@ access:
   - ref: access-team
     type: article
 vaccines:
-  - ref: access-vaccines
-    type: article
-  - ref: immunization-coverage
+  - ref: immunization
     type: article
   - ref: anti-vaccines
+    type: article
+  - ref: stockout
+    type: article
+  - ref: success
     type: article

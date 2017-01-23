@@ -8,9 +8,9 @@ img:              articles/home-falsificaciones-1040x694.jpg
 order:            1
 author:           Eva Belmonte
 date:             2017-01-16
-slug:             access-vaccines
-ref:              access-vaccines
-lang:             en
+slug:             exitos
+ref:              success
+lang:             es
 draft:            true
 ---
 

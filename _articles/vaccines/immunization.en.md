@@ -4,22 +4,36 @@ title:            Immunization coverage
 subtitle:         A toll on health
 description:      Although there are alternative models, the use of intellectual property rights, as applied to medicine, remains mandatory for the industry
 home_description: Although there are alternative models, the use of intellectual property rights, as applied to medicine, remains mandatory for the industry
-img:              articles/home-falsificaciones-1040x694.jpg
-order:            1
+img:              articles/home-patentes-1040x694.jpg
+order:            3
 author:           Eva Belmonte
-slug:             immunization-coverage
-ref:              immunization-coverage
+slug:             immunization
+ref:              immunization
 lang:             en
 draft:            true
 ---
 
-<!--
-<div id="vaccine-map"></div>
--->
-
 <div class="container page-content" markdown="1">
   <div class="page-content-container" markdown="1">
-  
+
+In the USA, it’s known as the $1,000 pill. And that’s not a metaphor. Each pill of sofosbuvir, the new drug for the treatment of Hepatitis C, costs exactly that. The medicine, sold by Gilead under the name Sovaldi, has again sparked discussion on the patent system and how it affects access to medicines and **the sustainability of health budgets** in countries of all income levels, especially developing ones.
+
+<div class="graph-container-right">
+  <div id="immunization-coverage-country-graphs" class="graph-container">
+    <p class="graph-container-caption">Sarampión</p> 
+    <p>La cobertura de inmunización del sarampión en España es del <span id="measles-immunization-data"></span></p> 
+    <div id="measles-bar-graph"></div>
+    <p class="graph-container-caption">Polio</p> 
+    <p>La cobertura de inmunización de la polio en España es del <span id="polio-immunization-data"></span></p> 
+    <div id="polio-bar-graph"></div>
+    <p class="graph-container-caption">Tos ferina</p> 
+    <p>La cobertura de inmunización de la tos ferina en España es del <span id="pertussis-immunization-data"></span></p> 
+    <div id="pertussis-bar-graph"></div>
+  </div>
+</div>
+
+In the USA, it’s known as the $1,000 pill. And that’s not a metaphor. Each pill of sofosbuvir, the new drug for the treatment of Hepatitis C, costs exactly that. The medicine, sold by Gilead under the name Sovaldi, has again sparked discussion on the patent system and how it affects access to medicines and **the sustainability of health budgets** in countries of all income levels, especially developing ones. In September 2014, the company decided to bypass the traditional model in India, granting seven local pharmaceutical companies a voluntary license. These companies are permitted to develop and produce Sofosbuvir **in exchange for 7% of the final profit**. The [agreement](http://gilead.com/~/media/Files/pdfs/other/HCVGenericAgreementFactSheet.pdf) comes with small print; these laboratories can export their low cost version to 91 countries listed in the conditions (15 of which are small island states). According to Gilead’s estimates, this means that the cheaper treatment produced in India will reach 100 million people. Of course, the rest of the world is left out. In September 2014, the company decided to bypass the traditional model in India, granting seven local pharmaceutical companies a voluntary license. These companies are permitted to develop and produce Sofosbuvir **in exchange for 7% of the final profit**. The [agreement](http://gilead.com/~/media/Files/pdfs/other/HCVGenericAgreementFactSheet.pdf) comes with small print; these laboratories can export their low cost version to 91 countries listed in the conditions (15 of which are small island states). According to Gilead’s estimates, this means that the cheaper treatment produced in India will reach 100 million people. Of course, the rest of the world is left out.
+
 <div class="graph-container">
   <p class="graph-container-caption">Immunization coverage</p>
   <div class="row">
@@ -56,5 +70,6 @@ draft:            true
   <div id="immunization-coverage-graph"></div>
 </div>
 
-</div>
+Hence, in European countries like Spain, it costs [€7.862](http://www.contratacion.euskadi.eus/w32-1084/es/contenidos/anuncio_contratacion/exposakidetza22363/es_doc/adjuntos/resolucion_definitiva1.pdf?rand=50165) to buy a box of 28 tablets, which equates to €23,587 for the basic three-month treatment. In France, the same prescription [climbs](http://www.pmlive.com/pharma_news/france_agrees_lowest_sovaldi_pricing_in_eu_618661) to a cost of to €41,000 (13,667 per box). Although there is a considerable reduction in price in America (of €75,000 per treatment*), the figures are so high that, as NGO Médicos del Mundo warns, "[they] are unaffordable for healthcare systems". So many patients that could benefit from the treatment do not have access to it. As a consequence, the NGO [appealed against Gilead](http://www.medicosdelmundo.org/index.php/mod.conts/mem.detalle_cn/relmenu.111/id.4220) before the European Patent Office in February. While admitting the treatment "is an important therapeutic advance," they argue in their appeal that "the molecule itself is not new enough to justify a patent."
+  </div>
 </div>
