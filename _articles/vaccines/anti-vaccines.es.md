@@ -54,7 +54,9 @@ En una [entrevista](http://www.theatlantic.com/health/archive/2014/10/the-anti-v
 
 Sí lo están en regiones en las que las epidemias de enfermedades como el sarampión o los casos de polio son mucho más recientes. O en la memoria de los más mayores. 
 
-> vídeo: ### Mario Martinez, consultor de inmunizaciones de la Organización Panamericana de la Salud (OPS) - "A veces los médicos más jóvenes, que no han visto el sarampión, no tienen en su memoria reciente que el sarampión mata. Y mata a entre el 5 y el 15% de las criaturas infectadas".
+<div class="container-right">
+{% include video-container.html videoid="gB_DH1g1hVU" title="Mario Martinez, consultor de inmunizaciones de la Organización Panamericana de la Salud (OPS) - &quot;A veces los médicos más jóvenes, que no han visto el sarampión, no tienen en su memoria reciente que el sarampión mata. Y mata a entre el 5 y el 15% de las criaturas infectadas&quot;" credit="" %}
+</div>
 
 Que la memoria esté más fresca y las dificultades de acceso a la salud hacen que, en ciertas regiones, como en Centroamérica, el movimiento antivacunas sea algo que sí ocurría en el pasado, por miedo a lo desconocido, pero que ahora es anecdótico. Esas comunidades han pasado "de esconder a sus niños a hacer cola por la vacuna en el centro de salud", como narra Adimir Vasques, del programa nacional de inmunizaciones del Ministerio de Salud de Guatemala.
 
