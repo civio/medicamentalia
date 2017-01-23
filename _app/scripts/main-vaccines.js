@@ -46,17 +46,33 @@
     $(window).resize( vaccine_map.onResize );
   }
   */
+  // Video of polio map cases
   if ($('#video-map-polio').length > 0) {
     var wrapper = Popcorn.HTMLYouTubeVideoElement('#video-map-polio');
-    wrapper.src = 'http://www.youtube.com/embed/l1F2Xd5FFlQ?controls=0&showinfo=0';
+    wrapper.src = 'http://www.youtube.com/embed/l1F2Xd5FFlQ?controls=0&showinfo=0&hd=1';
     var popcorn = Popcorn(wrapper);
-    popcorn.footnote({
-      start: 1,
-      end: 5,
-      text: 'Works with YouTube!',
-      target: 'video-map-polio-description'
+    var i, notes = 2016-1980;
+    for(i=0; i<=notes; i++){
+      popcorn.footnote({
+        start:  1.6222*i,
+        end:    1.6222*(i+1),
+        text:   1980+i,
+        target: 'video-map-polio-description'
+      });
+    }
+    // Show cover when video ended
+    wrapper.addEventListener('ended', function(e){
+      $('.video-map-polio-cover').fadeIn();
+      $('#video-map-polio-description').fadeTo(300, 0);
+      popcorn.currentTime(0);
+    }, false );
+    // Show video when play btn clicked
+    $('#video-map-polio-play-btn').click(function(e){
+      e.preventDefault();
+      popcorn.play();
+      $('.video-map-polio-cover').fadeOut();
+      $('#video-map-polio-description').fadeTo(300, 1);
     });
-    //popcorn.play();
   }
   if ($('#immunization-coverage-graph').length > 0) {
     var graph_immunization = new LineGraph();

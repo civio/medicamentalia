@@ -12227,16 +12227,20 @@ var LineGraph = function() {
       .tickSize(that.width);
       
     // Setup line
-    that.line = (!that.isArea) ?
-      d3.line()
-        .y(function(d){ return that.y(d.value); }) :
-      d3.area()
+    that.line = d3.line()
+      .curve(d3.curveCatmullRom)
+      .x(function(d){ return that.x(+d.key); })
+      .y(function(d){ return that.y(d.value); });
+
+    // Setup area
+    if (that.isArea) {
+      that.area = d3.area()
+        .curve(d3.curveCatmullRom)
+        .x(function(d){ return that.x(+d.key); })
         .y0(that.height)
         .y1(function(d){ return that.y(d.value); });
-
-    that.line.x(function(d){ return that.x(+d.key); });
-    that.line.curve(d3.curveCatmullRom);
-
+    }
+    
     // Create svg
     that.svg = d3.select('#'+that.id).append('svg')
       .attr('id', that.id+'-svg')
@@ -12409,6 +12413,20 @@ var LineGraph = function() {
     .append('path')
       .datum(function(d){ return d3.entries(d.values); })
       .attr('d', that.line);
+
+    // Draw area
+    if (that.isArea) {
+      that.svg.append('g')
+      .attr('class', 'ares')
+      .selectAll('.area')
+        .data(currentData)
+      .enter().append('g')
+        .attr('class', function(d){ return (that.activeLines.indexOf(d.code) === -1) ? 'area' : 'area active'; })
+        .attr('id', function(d){ return 'area-'+d.code; })
+      .append('path')
+        .datum(function(d){ return d3.entries(d.values); })
+        .attr('d', that.area);
+    }
   };
 
   var onLineOver = function(d){
@@ -12793,17 +12811,33 @@ var VaccineDiseaseGraph = function( _id ) {
     $(window).resize( vaccine_map.onResize );
   }
   */
+  // Video of polio map cases
   if ($('#video-map-polio').length > 0) {
     var wrapper = Popcorn.HTMLYouTubeVideoElement('#video-map-polio');
-    wrapper.src = 'http://www.youtube.com/embed/l1F2Xd5FFlQ?controls=0&showinfo=0';
+    wrapper.src = 'http://www.youtube.com/embed/l1F2Xd5FFlQ?controls=0&showinfo=0&hd=1';
     var popcorn = Popcorn(wrapper);
-    popcorn.footnote({
-      start: 1,
-      end: 5,
-      text: 'Works with YouTube!',
-      target: 'video-map-polio-description'
+    var i, notes = 2016-1980;
+    for(i=0; i<=notes; i++){
+      popcorn.footnote({
+        start:  1.6222*i,
+        end:    1.6222*(i+1),
+        text:   1980+i,
+        target: 'video-map-polio-description'
+      });
+    }
+    // Show cover when video ended
+    wrapper.addEventListener('ended', function(e){
+      $('.video-map-polio-cover').fadeIn();
+      $('#video-map-polio-description').fadeTo(300, 0);
+      popcorn.currentTime(0);
+    }, false );
+    // Show video when play btn clicked
+    $('#video-map-polio-play-btn').click(function(e){
+      e.preventDefault();
+      popcorn.play();
+      $('.video-map-polio-cover').fadeOut();
+      $('#video-map-polio-description').fadeTo(300, 1);
     });
-    //popcorn.play();
   }
   if ($('#immunization-coverage-graph').length > 0) {
     var graph_immunization = new LineGraph();

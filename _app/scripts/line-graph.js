@@ -33,16 +33,20 @@ var LineGraph = function() {
       .tickSize(that.width);
       
     // Setup line
-    that.line = (!that.isArea) ?
-      d3.line()
-        .y(function(d){ return that.y(d.value); }) :
-      d3.area()
+    that.line = d3.line()
+      .curve(d3.curveCatmullRom)
+      .x(function(d){ return that.x(+d.key); })
+      .y(function(d){ return that.y(d.value); });
+
+    // Setup area
+    if (that.isArea) {
+      that.area = d3.area()
+        .curve(d3.curveCatmullRom)
+        .x(function(d){ return that.x(+d.key); })
         .y0(that.height)
         .y1(function(d){ return that.y(d.value); });
-
-    that.line.x(function(d){ return that.x(+d.key); });
-    that.line.curve(d3.curveCatmullRom);
-
+    }
+    
     // Create svg
     that.svg = d3.select('#'+that.id).append('svg')
       .attr('id', that.id+'-svg')
@@ -215,6 +219,20 @@ var LineGraph = function() {
     .append('path')
       .datum(function(d){ return d3.entries(d.values); })
       .attr('d', that.line);
+
+    // Draw area
+    if (that.isArea) {
+      that.svg.append('g')
+      .attr('class', 'ares')
+      .selectAll('.area')
+        .data(currentData)
+      .enter().append('g')
+        .attr('class', function(d){ return (that.activeLines.indexOf(d.code) === -1) ? 'area' : 'area active'; })
+        .attr('id', function(d){ return 'area-'+d.code; })
+      .append('path')
+        .datum(function(d){ return d3.entries(d.values); })
+        .attr('d', that.area);
+    }
   };
 
   var onLineOver = function(d){

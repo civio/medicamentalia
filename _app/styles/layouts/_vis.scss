@@ -21,6 +21,10 @@ Common
     stroke-width: 1px;
   }
 
+  .area{
+    fill: $brand-primary;
+  }
+
   .bar {
     fill: $brand-primary;
   }
@@ -233,9 +237,23 @@ Video Map Polio
 
     p{
       position: absolute;
-      top: 50%;
-      text-align: center;
       width: 100%;
+      top: 50%;
+      margin-top: - $grid-gutter-width;
+      text-align: center;
+      text-shadow: 0 1px 0px rgba(255,255,255,0.85);
+    }
+
+    a{
+      display: block;
+      width: 2*$grid-gutter-width;
+      height: 2*$grid-gutter-width;
+      margin: $grid-gutter-width/3 auto 0;
+      text-indent: -9999px;
+      overflow: hidden;
+      border-radius: $grid-gutter-width;
+      background: $color-orange;
+      opacity: 0.85;
     }
   }
 }
@@ -246,6 +264,7 @@ Video Map Polio
 
 #video-map-polio-description{
   text-align: center;
+  opacity: 0;
 
   p{
     margin-bottom: 0;
@@ -298,8 +317,12 @@ World diseases cases
 
 #world-cases{
   .graph-container .line{
-    fill: $color-orange;
     stroke: $color-orange;
+    stroke-width: 2px;
+  }
+  .graph-container .area{
+    fill: $color-orange;
+    opacity: 0.7;
   }
   .y.axis line{
     display: block;

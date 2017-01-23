@@ -9904,6 +9904,9 @@ Common
   stroke: #00797d;
   stroke-width: 1px; }
 
+.graph-container .area {
+  fill: #00797d; }
+
 .graph-container .bar {
   fill: #00797d; }
 
@@ -10055,15 +10058,28 @@ Video Map Polio
     right: 0; }
     .video-map-polio-container .video-map-polio-cover p {
       position: absolute;
+      width: 100%;
       top: 50%;
+      margin-top: -30px;
       text-align: center;
-      width: 100%; }
+      text-shadow: 0 1px 0px rgba(255, 255, 255, 0.85); }
+    .video-map-polio-container .video-map-polio-cover a {
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin: 10px auto 0;
+      text-indent: -9999px;
+      overflow: hidden;
+      border-radius: 30px;
+      background: #e2723b;
+      opacity: 0.85; }
 
 #video-map-polio {
   margin-top: 0; }
 
 #video-map-polio-description {
-  text-align: center; }
+  text-align: center;
+  opacity: 0; }
   #video-map-polio-description p {
     margin-bottom: 0; }
 
@@ -10101,8 +10117,12 @@ Countries vaccines coverage
 World diseases cases
 */
 #world-cases .graph-container .line {
+  stroke: #e2723b;
+  stroke-width: 2px; }
+
+#world-cases .graph-container .area {
   fill: #e2723b;
-  stroke: #e2723b; }
+  opacity: 0.7; }
 
 #world-cases .y.axis line {
   display: block;
