@@ -12900,7 +12900,10 @@ var VaccineDiseaseGraph = function( _id ) {
     d3.csv( $('body').data('baseurl')+'/assets/data/immunization-coverage.csv', function(error, data) {
       // Setup current country -> TODO!!! we have to get user country
       var country = 'ESP';
-      // setup data
+      // Filter data
+      var excludedCountries = ['TUV','NRU','PLW','VGB','MAF','SMR','GIB','TCA','LIE','MCO','SXM','FRO','MHL','MNP','ASM','KNA','GRL','CY','BMU','AND','DMA','IMN','ATG','SYC','VIR','ABW','FSM','TON','GRD','VCT','KIR','CUW','CHI','GUM','LCA','STP','WSM','VUT','NCL','PYF','BRB'];
+      data = data.filter(function(d){ return excludedCountries.indexOf(d.code) === -1; });
+      // Data parse & sorting funtions
       var data_parser = function(d){
         var obj = {label: d.code, value: +d['2015']};
         if (d.code === country ) obj.active = true;
