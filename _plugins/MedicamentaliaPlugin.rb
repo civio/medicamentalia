@@ -11,7 +11,7 @@ module Jekyll
       lang = context.registers[:page]['lang']
       pages.each do |p|
         if p.data['ref'] == id and p.data['lang'] == lang
-          return '<a href="'+context.registers[:site].config['url']+p.url+'" title="'+p.data['title']+'">'+p.data['title']+'</a>'
+          return '<a href="'+context.registers[:site].config['url']+context.registers[:site].config['baseurl']+p.url+'" title="'+p.data['title']+'">'+p.data['title']+'</a>'
         end
       end
       
