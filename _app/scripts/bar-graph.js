@@ -9,6 +9,7 @@ var BarGraph = function( _id, _source ) {
 
   that.margin = {top: 0, right: 0, bottom: 20, left: 0};
   that.aspectRatio = 0.5625;
+  that.markers = [];
   that.markerValue = null;
 
   // Public Methods
@@ -34,8 +35,9 @@ var BarGraph = function( _id, _source ) {
     that.svg = d3.select('#'+that.id).append('svg')
       .attr('id', that.id+'-svg')
       .attr('width', that.widthCont)
-      .attr('height', that.heightCont)
-    .append('g')
+      .attr('height', that.heightCont);
+
+    that.container = that.svg.append('g')
       .attr('transform', 'translate(' + that.margin.left + ',' + that.margin.top + ')');
 
     // Load CSV
@@ -55,31 +57,16 @@ var BarGraph = function( _id, _source ) {
     that.x.domain(data.map(function(d) { return d.label; }));
     that.y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
-    that.svg.append('g')
+    that.container.append('g')
       .attr('class', 'x axis')
       .attr('transform', 'translate(0,' + that.height + ')')
       .call(d3.axisBottom(that.x));
 
-    if (that.markerValue) {
+    // Draw each marker register with addMarker
+    drawMarkers();
 
-      that.svg.append('line')
-        .attr('class', 'marker')
-        .attr("x1", 0)
-        .attr("y1", function(d) { return that.y(that.markerValue); })
-        .attr("x2", that.width)
-        .attr("y2", function(d) { return that.y(that.markerValue); });
-
-      that.svg.append('g')
-        .attr('class', 'marker-label')
-        .append('text')
-        .attr('x', that.width )
-        .attr('y', function(d) { return that.y(that.markerValue); })
-        .attr('dy', '1em' )
-        .style('text-anchor', 'end')
-        .text( that.txt[that.lang] );
-    }
-
-    that.svg.selectAll('.bar')
+    // Draw bars & labels
+    that.container.selectAll('.bar')
       .data(data)
     .enter().append('rect')
       .attr('class', function(d) { return (d.active) ? 'bar active' : 'bar'; })
@@ -89,7 +76,7 @@ var BarGraph = function( _id, _source ) {
       .attr('height', function(d) { return that.height - that.y(d.value); })
       .attr('width', that.x.bandwidth());
 
-    that.svg.selectAll('.bar-label')
+    that.container.selectAll('.bar-label')
       .data(data)
     .enter().append('text')
       .attr('class', 'bar-label')
@@ -99,11 +86,11 @@ var BarGraph = function( _id, _source ) {
       .attr('dy', '1.5em')
       .text( function(d){ return parseInt(d.value); });
 
-     // d3.selectAll('.bar')
-     //  .transition().duration(800).delay( function(d,i){ return 100*i; })
-     //  .attr('id', function(d) { return d.label; })
-     //  .attr('y', function(d) { return that.y(d.value); })
-     //  .attr('height', function(d) { return height - that.y(d.value); });
+    // d3.selectAll('.bar')
+    //  .transition().duration(800).delay( function(d,i){ return 100*i; })
+    //  .attr('id', function(d) { return d.label; })
+    //  .attr('y', function(d) { return that.y(d.value); })
+    //  .attr('height', function(d) { return height - that.y(d.value); });
 
     // d3.select('.marker')
     //   .transition().duration(600).delay(1500)
@@ -127,31 +114,30 @@ var BarGraph = function( _id, _source ) {
     that.x.range([0, that.width]);
     that.y.range([that.height, 0]);
 
-    that.svg.select('g.x.axis')
+    that.container.select('g.x.axis')
       .attr('transform', 'translate(0,' + that.height + ')')
       .call(d3.axisBottom(that.x));
 
-    that.svg.selectAll('.bar')
+    that.container.selectAll('.bar')
       .attr('x', function(d) { return that.x(d.label); })
       .attr('y', function(d) { return that.y(d.value); })
       .attr('width', that.x.bandwidth())
       .attr('height', function(d) { return that.height - that.y(d.value); });
 
-    that.svg.selectAll('.bar-label')
+    that.container.selectAll('.bar-label')
       .attr('x', function(d) { return that.x(d.label)+(that.x.bandwidth()*0.5); })
       .attr('y', function(d) { return that.y(d.value); });
 
-    if (that.markerValue) {
+    // Update each marker register with addMarker
+    that.markers.forEach(updateMarker);
+  };
 
-      that.svg.select('.marker-label text')
-        .attr('x', that.width )
-        .attr('y', function(d) { return that.y(that.markerValue); });
-
-      that.svg.select('.marker')
-        .attr("y1", function(d) { return that.y(that.markerValue); })
-        .attr("y2", function(d) { return that.y(that.markerValue); })
-        .attr('x2', that.width );
-    }
+  that.addMarker = function(value, label, isVertical) {
+    that.markers.push({
+      value: value,
+      label: label,
+      isVertical: isVertical
+    });
   };
 
   that.getDimensions = function(){
@@ -172,6 +158,48 @@ var BarGraph = function( _id, _source ) {
 
   //   return that;
   // };
+
+  var drawMarkers = function() {
+    // Draw marker line
+    that.container.selectAll('.marker')
+      .data(that.markers)
+    .enter().append('line')
+      .attr('class', 'marker')
+      .call(setupMarkerLine);
+      
+    // Draw marker label
+    that.container.selectAll('.marker-label')
+      .data(that.markers)
+    .enter().append('g')
+      .attr('class', 'marker-label')
+      .append('text')
+      .style('text-anchor', function(d){ return (d.isVertical) ? 'middle' : 'end'; })
+      .text( function(d){ return d.label; })
+      .call(setupMarkerLabel);
+  };
+
+  var updateMarker = function(marker) {
+    // Update marker line
+    that.container.select('.marker')
+      .call(setupMarkerLine);
+    // Update marker label
+    that.container.select('.marker-label text')
+      .call(setupMarkerLabel);
+  };
+
+  var setupMarkerLine = function(element){
+    element
+      .attr("x1", function(d){ return (d.isVertical) ? that.x(d.value) : 0; })
+      .attr("y1", function(d){ return (d.isVertical) ? 0 : that.y(d.value); })
+      .attr("x2", function(d){ return (d.isVertical) ? that.x(d.value) : that.width; })
+      .attr("y2", function(d){ return (d.isVertical) ? that.height : that.y(d.value); });
+  };
+
+  var setupMarkerLabel = function(element){
+    element
+      .attr('x', function(d){ return (d.isVertical) ? that.x(d.value) : that.width ; })
+      .attr('y', function(d){ return (d.isVertical) ? that.height : that.y(d.value); });
+  };
 
   return that;
 };
