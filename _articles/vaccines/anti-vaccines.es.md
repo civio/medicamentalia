@@ -1,7 +1,7 @@
 ---
 category:         vaccines
-title:            Cuando el problema no es de medios, sino de confianza
-subtitle:         
+title:            Antivacunas
+subtitle:         Cuando el problema no es solo de recursos
 description:      
 home_description: 
 img:              articles/home-brasil-1040x694.jpg
