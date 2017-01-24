@@ -89,11 +89,14 @@ h3, h4, h5{
   clear: both;
   font-family: $font-family-sans-serif;
   background: mix( $color-green-light, white, 20% );
-  padding: 0 $grid-gutter-width $grid-gutter-width/3;
+  padding: 2*$grid-gutter-width/3 $grid-gutter-width $grid-gutter-width/6;
+  margin-top: $grid-gutter-width/6;
+  margin-bottom: 4*$grid-gutter-width/3;
   border-radius: 0;
 
   h2, h3, h4, h5{
     color: $brand-primary;
+    margin-top: $grid-gutter-width/6;
     margin-bottom: $grid-gutter-width/2;
   }
 

@@ -6002,10 +6002,13 @@ h3, h4, h5 {
   clear: both;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   background: #d9ede8;
-  padding: 0 30px 10px;
+  padding: 20px 30px 5px;
+  margin-top: 5px;
+  margin-bottom: 40px;
   border-radius: 0; }
   .page-content .panel h2, .page-content .panel h3, .page-content .panel h4, .page-content .panel h5 {
     color: #00797d;
+    margin-top: 5px;
     margin-bottom: 15px; }
   .page-content .panel p {
     font-size: 18px;
@@ -9727,19 +9730,21 @@ header {
       font-weight: 400; }
   .page-content .graph-container {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    margin-bottom: 30px; }
+    color: #00797d;
+    margin-bottom: 30px;
+    text-align: center; }
     .page-content .graph-container p {
       font-size: 1em;
       line-height: 1.25em;
-      margin-bottom: 15px; }
+      margin: 0 auto 15px;
+      max-width: 700px; }
+      .page-content .graph-container p strong {
+        font-weight: 600; }
     .page-content .graph-container .graph-container-caption {
-      color: #00797d;
       font-size: 19px;
       line-height: 1.375em;
-      font-weight: 700;
-      margin-top: 5px;
-      margin-bottom: 0;
-      text-align: center; }
+      font-weight: 600;
+      margin: 5px auto 0; }
   .page-content .container-right .graph-container .graph-container-caption {
     text-align: left; }
   .page-content .credits {
@@ -9945,6 +9950,10 @@ Patentes
 .bar-graph .marker-label text {
   font-size: 0.75em;
   fill: #00797d; }
+
+#antibiotics-graph,
+#antibiotics-animals-graph {
+  margin: 10px 0; }
 
 #antibiotics-graph #ES.bar,
 #antibiotics-animals-graph #ES.bar {

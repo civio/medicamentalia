@@ -62,6 +62,11 @@ Patentes
   }
 }
 
+#antibiotics-graph,
+#antibiotics-animals-graph{
+  margin: $grid-gutter-width/3 0;
+}
+
 #antibiotics-graph #ES.bar,
 #antibiotics-animals-graph #ES.bar{
   fill: $color-orange;
