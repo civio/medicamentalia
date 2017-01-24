@@ -36,10 +36,12 @@ Dinamarca, por su parte, ha ido descendiendo en los últimos años hasta quedars
 
 <div class="graph-container">
   <p class="graph-container-caption">Nivel de vacunación de sarampión</p>
-  <div id="immunization-coverage-graph" data-countries="FRA,DNK,RUA,VIE" data-vaccine="MCV2"></div>
+  <div id="immunization-coverage-graph" class="line-graph" data-countries="FRA,DNK,DZA,LKA" data-vaccine="MCV2"></div>
 </div>
 
 De hecho, Francia es el país con un nivel más elevado de desconfianza en las vacunas, según el projecto [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/), realizado por la London School of Hygiene and Tropical Medicine y para el que entrevistaron a 65.819 personas en 67 países. Un 40% de los franceses encuestados (frente a una media del 12% en el total) respondieron que estaban en desacuerdo o totalmente en desacuerdo a la afirmación de que las vacunas eran seguras. De hecho, siete de los diez países con menor confianza en las vacunas son europeos. Y eso, pese a que los efectos secundarios graves de las vacunas [son extremadamente raros](https://www.science.org.au/learning/general-audience/science-booklets/science-immunisation/4-are-vaccines-safe).
+
+_**Raúl -> Scatterplot nivel confianza vacunas vs. GDP**_
 
 De hecho, uno de los argumentos de algunos movimientos antivacunas están basados en la relación entre la triple vírica y el autismo. En 1998, Andrew Wakefield publicó en The Lancet un estudio en el que afirmaba demostrar ese vínculo. En 2010, después de que varios colegas lo refutaran, la revista [retiró](http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(97)11096-0/abstract) el artículo. 
 

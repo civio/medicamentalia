@@ -28,7 +28,7 @@ Es el [porcentaje de cobertura necesario para frenar la transmisión](http://www
 
 En 2015, 105 países -de los 187 que analizó la OMS sobre unos 196 existentes- no alcanzaron el porcentaje de inmunización necesario para formar un escudo capaz de frenar la transmisión del sarampión, la llamada *inmunización de rebaño*. Es decir, en más de la mitad de los países del mundo no vacunaron de la primera dosis de esta enfermedad, al menos, al 95% de los niños a los que les tocaba por calendario, la cifra necesaria para que el escudo sea efectivo. Y es que el sarampión, que se contagia de forma muy rápida, necesita porcentajes muy elevados de población vacunada para crear esta barrera protectora. Vacunar al 95% de la población no solo evita que el sarampión se extienda cuando hay un brote, sino que, al frenar la transmisión, protegen a aquellos que no se pueden vacunar, como los bebés que no tienen edad para hacerlo o las personas inmunodeficientes, con alergias u otros problemas de salud. Gracias al efecto rebaño, ellos también están protegidos. Un [brote](http://www.vaccinestoday.eu/stories/romania-measles-outbreak-kills-two-children/) ocurrido en 2016 en Rumanía, que acabó con la vida de bebés menores de un año -que no habían alcanzado la edad de vacunación- mostró las consecuencias que puede tener que no se alcancen esos porcentajes.
 
-{% include vaccines/immunization_coverage_disease_graph.en.html disease="measles" vaccine="MCV1" title="Sarampión" description="del sarampión" %}
+{% include vaccines/immunization_coverage_disease_graph.en.html disease="measles" vaccine="MCV1" title="Sarampión" description="de la primera dosis contra el sarampión" %}
 
 El patrón es claro (aunque haya excepciones): mientras el porcentaje de inmunización global es del 85%, la mediana en los países de bajos ingresos (low income, según el Banco Mundial) es del 86%. En los países de ingresos más altos es del 95%.
 
@@ -54,13 +54,13 @@ Aunque el final de esta enfermedad vírica, que ataca al sistema nervioso y prov
 
 En 2015, los niveles mundiales de vacunación de la tercera y última dosis de la polio están en un 86%. Pakistán, uno de los últimos reductos de esta enfermedad, consiguió alcanzar niveles del 75% en 2015. La historia de este país también incluye algo de paso atrás (estuvo en un 89% en 2011 y 2012) y un poco de esperanza hacia la mejora, ya que en 2013 los niveles eran mucho peores, de un 66%. Los países con peores coberturas son Somalia (42%) y Guinea Ecuatorial (27%). 
 
-{% include vaccines/immunization_coverage_disease_graph.en.html disease="polio" vaccine="Pol3" title="Polio" description="de la polio" %}
+{% include vaccines/immunization_coverage_disease_graph.en.html disease="polio" vaccine="Pol3" title="Polio" description="de la tercera dosis contra la polio " %}
 
 Somalia y Guinea Ecuatorial son también los que presentan peores cifras de vacunación (44 y 17%, respectivamente), junto a Ucrania, de la tercera dosis de la DTP (difteria, tétanos, tos ferina, en sus siglas en inglés). El caso de Ucrania es otro ejemplo de marcha atrás: sufrió un bajón considerable de sus cifras: pasó de un 76% de inmunización en 2012 a un 23% en 2015. 
 
 La DTP incluye tres dosis y, en algunos países, una cuarta de refuerzo. Como pasa con el sarampión, la pérdida de niños vacunados entre la primera y la última dosis es considerable. En Guatemala vacunaron a un 96% de los niños de la primera dosis, una cifra alta y más que suficiente para alcanzar la inmunización de rebaño, pero alcanzaron a un 73%, muchos menos con la tercera dosis. En Panamá, un caso similar, pasaron de un 99 a un 74%.  
 
-{% include vaccines/immunization_coverage_disease_graph.en.html disease="pertussis" vaccine="DTP3" title="Tosferina" description="de la tosferina" %}
+{% include vaccines/immunization_coverage_disease_graph.en.html disease="pertussis" vaccine="DTP3" title="Difteria, tétanos y tos ferina" description="de la tercera dosis contra la difteria, el tétanos y la tos ferina" %}
 
 Esta vacuna protege contra la difteria, el tétanos y la tos ferina, tres enfermedades que siguen estando presentes, aunque en algunos países suenen a leyendas negras de otras épocas. En 2015 se produjeron más de 10.000 casos de tétanos y más de 4.500 de difteria en todo el mundo. Ambas enfermedades han visto caer estas cifras de forma drástica gracias, entre otras cosas, a las vacunas. 
 
@@ -89,7 +89,6 @@ En otros, en los que la situación había mejorado y la enfermedad estaba casi e
 {% include vaccines/measles_graph.en.html id="vaccines-measles-graph-2" title="Casos de sarampión" %}
 
 Aunque hay razones para ser [optimista](al otro tema) en algunas zonas, como Las Américas -donde se han erradicado enfermedades como la polio, la viruela y la rubeola-, la dificultad de vacunar a todos los niños en áreas en conflicto o con problemas de resursos e infraestructuras, y en mucha menor medida, [la oposición a las vacunas](enlace al otro tema), no permite erradicar enfermedades para las que, desde hace décadas, tenemos un escudo más que efectivo. [Según la propia OMS](http://www.who.int/topics/immunization/es/), 21,8 millones de lactantes no reciben las vacunas básicas.
-
 
 <div class="panel" markdown="1">
 #### Las causas, según MSF
