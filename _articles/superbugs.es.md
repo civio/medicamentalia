@@ -14,8 +14,9 @@ lang:             es
 <div class="container page-content" markdown="1">
   <div class="page-content-container" markdown="1">
 
-<p class="credits" markdown='1'>Este artículo forma parte de una colaboración de [Civio](https://www.civio.es) con la organización periodística alemana [Correctiv](https://correctiv.org/en/), que está analizando a través de su proyecto [Superbugs](https://correctiv.org/en/investigations/superbugs/) el impacto de la resistencia a los antibióticos en los ciudadanos y qué medidas se están tomando en distintos países para ponerle freno. Ha sido publicado en [inglés](https://correctiv.org/en/investigations/superbugs/article/2016/08/08/spain-antibiotic-resistance-superbugs-overview/) y en [alemán](https://correctiv.org/recherchen/keime/artikel/2016/08/09/spanien-antibiotika/).
-</p>
+<div class="panel" markdown="1">
+Este artículo forma parte de una colaboración de [Civio](https://www.civio.es) con la organización periodística alemana [Correctiv](https://correctiv.org/en/), que está analizando a través de su proyecto [Superbugs](https://correctiv.org/en/investigations/superbugs/) el impacto de la resistencia a los antibióticos en los ciudadanos y qué medidas se están tomando en distintos países para ponerle freno. Ha sido publicado en [inglés](https://correctiv.org/en/investigations/superbugs/article/2016/08/08/spain-antibiotic-resistance-superbugs-overview/) y en [alemán](https://correctiv.org/recherchen/keime/artikel/2016/08/09/spanien-antibiotika/).
+</div>
 
 Un monstruo enorme, sediento de sangre, se enfrenta a guerreros medievales en una batalla en la que la música eleva la épica de la imagen. En segundos, un nuevo plano muestra una enorme boca que traga y traga pastillas mientras se escuchan mensajes casi apocalípticos. Esa boca, en esta extraña metáfora visual con aires bélicos, es la de un español. Y esas imágenes muestran la batalla entre las bacterias resistentes y quienes las combaten. Este video es la forma que tiene el Gobierno de alertar a sus ciudadanos de los problemas de la resistencia bacteriana en un país en que la automedicación convive con altos niveles de consumo de antibióticos en humanos y, sobre todo, en animales.
 
@@ -56,11 +57,13 @@ La mitad lo consiguió en una farmacia (3%), pese a que la ley no lo permite. La
 
 El mal uso de los antibióticos está asociado, también, a la falta de conocimientos sobre ellos. A la pregunta ¿sirve un antibiótico para tratar los problemas ocasionados por virus? el 46% de los europeos dio una respuesta incorrecta y dijo que sí. Un 36% cree, también de forma errónea, que son útiles para tratar fiebres y resfriados. En España, esos porcentajes son más altos que la media: del 48 y el 45%.
 
-<p class="video-container-caption" style="margin: 0">Porcentaje de ciudadanos por país que cree, de forma errónea, que los antibióticos sirven para tratar resfriados y fiebre.</p>
-<div class="video-container antibiotics-graph-container">
-  <div id="antibiotics-graph" class="bar-graph" data-lang="es"></div>
 </div>
-<p class="video-container-caption">Fuente: <strong>Eurobarómetro especial, Abril 2016</strong></p>
+<div class="graph-container">
+  <p class="graph-container-caption">Porcentaje de ciudadanos por país que cree, de forma errónea, que los antibióticos sirven para tratar resfriados y fiebre.</p>
+  <div id="antibiotics-graph" class="bar-graph"></div>
+  <p><strong>Fuente:</strong> Eurobarómetro especial, Abril 2016</p>
+</div>
+<div class="page-content-container" markdown="1">
 
 La única manera de mejorar esos porcentajes es difundir información sobre los antibioticos. En el mismo Eurobarómetro, solo uno de cada cuatro españoles -frente a uno de cada tres europeos- aseguró haber recibido información sobre el uso responsable de los antibióticos en el último año. La mayoría, además, dijeron haberla recibido por televisión.
 
@@ -72,11 +75,13 @@ En noviembre de 2013 se emitía en radio y televisión una campaña pública que
 
 España tiene una población de animales productores de carne (PCU <small>[[4]](#notes-anchor-4){: #notes-ref-4}</small>) de más de siete millones de toneladas, lo que la sitúa en segundo lugar solo por detrás de Alemania (8.749.000 toneladas), según datos del [informe ESVAC de 2014](http://www.ema.europa.eu/docs/en_GB/document_library/Report/2016/10/WC500214217.pdf). Pese a no liderar esa tabla, sí lo hace en la de compra de antibióticos: en 2014 se vendieron 2.965,5 toneladas, más que ningún otro país europeo y seguido por Italia, con 1.441,6 toneladas, según datos proporcionados por los laboratorios. El informe analiza los miligramos de antibiótico vendidos por kilogramo de carne <small >[[5]](#notes-anchor-5){: #notes-ref-5}</small>. España registró en 2014 la cifra más alta de todos los países europeos analizados: 418,8 mg/PCU.
 
-<p class="video-container-caption" style="margin: 0">Ventas de antibióticos en miligramos de principio activo por kilo de carne por país (mg/PCU) en 2014</p>
-<div class="video-container antibiotics-graph-container">
-  <div id="antibiotics-animals-graph" class="bar-graph" data-lang="es"></div>
 </div>
-<p class="video-container-caption">Fuente: <strong>Sexto informe ESVAC</strong></p>
+<div class="graph-container">
+  <p class="graph-container-caption">Ventas de antibióticos en miligramos de principio activo por kilo de carne por país (mg/PCU) en 2014</p>
+  <div id="antibiotics-animals-graph" class="bar-graph"></div>
+  <p><strong>Fuente:</strong> Sexto informe ESVAC</p>
+</div>
+<div class="page-content-container" markdown="1">
 
 Estos datos, una vez más, no son perfectos: cuando hablamos de población de animales productores de carne hablamos de estimaciones y los datos de venta los aportan los laboratorios de forma voluntaria en España, puesto que no es obligatorio. Aun así, dan una idea del uso intensivo de los antibióticos en el país. Pese a eso, las campañas públicas del Gobierno no se dirigen a este sector y, más allá de la de 2007, no conocemos otros anuncios públicos para el uso racional de los antibióticos veterinarios. 
 

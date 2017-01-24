@@ -52,11 +52,13 @@ One possible solution discussed in the last years is providing less pills per pa
 
 Misuse of antibiotics goes hand in hand with insufficient knowledge. When asked whether an antibiotic is useful to treat problems caused by virus, 46 percent of Europeans gave the incorrect answer: yes. 36 percent think incorrectly they are useful to treat fevers or colds. In Spain, these percentages were even worse – 48 percent and 45 percent.
 
-<p class="video-container-caption" style="margin: 0">Percentage of citizens by country who believe, wrongly, that antibiotics are effective against colds and flu.</p>
-<div class="video-container antibiotics-graph-container">
-  <div id="antibiotics-graph" class="bar-graph" data-lang="en"></div>
 </div>
-<p class="video-container-caption">Source: <strong>Special Eurobarometer, April 2016</strong></p>
+<div class="graph-container">
+  <p class="graph-container-caption">Percentage of citizens by country who believe, wrongly, that antibiotics are effective against colds and flu.</p>
+  <div id="antibiotics-graph" class="bar-graph"></div>
+  <p><strong>Source:</strong> Special Eurobarometer, April 2016</p>
+</div>
+<div class="page-content-container" markdown="1">
 
 The only way to improve these percentages is to provide information on antibiotics. According to the same Eurobarometer, only every fourth Spaniard – versus every third European – said they had received information about the responsible use of antibiotics in the last year. Most also said they had seen it on television.
 
@@ -70,11 +72,13 @@ Spain has a population of meat producing animals of more than 7 million tons, it
 
 The report calculates the milligrams of antibiotic consumed per kilogram of meat sold. In 2014, with a ratio of 418.8, Spain was also the leader.
 
-<p class="video-container-caption" style="margin: 0">Sales of antibiotics in mg of active ingredient by kg of meat, by country (mg/PCU) in 2014</p>
-<div class="video-container antibiotics-graph-container">
-  <div id="antibiotics-animals-graph" class="bar-graph" data-lang="en"></div>
 </div>
-<p class="video-container-caption">Source: <strong>Sixth ESVAC Report</strong></p>
+<div class="graph-container">
+  <p class="graph-container-caption">Sales of antibiotics in mg of active ingredient by kg of meat, by country (mg/PCU) in 2014</p>
+  <div id="antibiotics-animals-graph" class="bar-graph"></div>
+  <p><strong>Source:</strong> Sixth ESVAC Report</p>
+</div>
+<div class="page-content-container" markdown="1">
 
 This data is not perfect: when we use population figures for meat-producing animals we only have estimates, and the sales data in Spain is contributed by the producers voluntarily, it isn't mandatory. Still, they show the intensive use of antibiotics in the country. However, public campaigns haven't targeted meat producers: We know of no public campaigns for the rational use of veterinary antibiotics, except the one in 2007.
 

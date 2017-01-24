@@ -38,17 +38,13 @@ Destacan casos como Malawi, con un 85% de inmunización en la primera dosis y un
 
 La caída del porcentaje de vacunados entre las primeras dosis -normalmente al nacimiento o cuando el niño es aún muy pequeño- y las siguientes es uno de los asuntos que preocupan a instituciones como el Grupo de Expertos de Vacunas de la OMS -The Strategic Advisory Group of Experts (SAGE)-, que lo reportó en su último [informe](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1), y a entidades sin ánimo de lucro que trabajan sobre el terreno como Médicos sin Fronteras. 
 
-<div class="container-right" markdown="1">
-<div class="panel" markdown="1">
-El responsable de un menor tiene que llevarle a vacunar, como mínimo, cinco veces en su primer año de vida.
-</div>
-</div>
+> El responsable de un menor tiene que llevarle a vacunar, como mínimo, cinco veces en su primer año de vida.
 
 En sus informes, la organización [incluye](https://www.msf.es/sites/default/files/legacy/adjuntos/Informe_La_Mejor_Vacuna_ESP_2012.pdf) el complejo calendario de vacunación como uno de los [problemas](ancla al otro lado) para acceder a las vacunas de los países con malas infraestructuras y escasez de y medios humanos y materiales. En la actualidad, el responsable de un menor tiene que llevarle a vacunar, al menos, cinco veces en su primer año de vida.   
 
 India, que concentró un 30% de las muertes por sarampión de menores de cuatro años en 2015, con un total de 22.703 fallecidos, tiene coberturas de un 81% en la primera dosis y un 69% en la segunda.
 
-#### Pakistán, reducto de polio
+### Pakistán, reducto de polio
 
 Muy cerca, en Pakistán, la polio se resiste a desaparecer del todo, aunque la vacuna se inventó en los años 50. En 2015 se registraron 106 casos de esta enfermedad en todo el mundo. 56 de ellos se produjeron en Pakistán y otros 20 justo al otro lado de la frontera, en Afganistán. 
 

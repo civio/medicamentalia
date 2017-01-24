@@ -9938,18 +9938,20 @@ Common
   font-weight: 300;
   text-anchor: middle; }
 
+.graph-container .marker {
+  stroke: #e2723b; }
+
+.graph-container .marker-label text {
+  font-size: 0.75em;
+  line-height: 1em;
+  fill: #00797d;
+  alignment-baseline: ideographic; }
+
 /*
 Patentes
 */
 .bar-graph .bar:hover {
   fill: #e2723b; }
-
-.bar-graph .marker {
-  stroke: #e2723b; }
-
-.bar-graph .marker-label text {
-  font-size: 0.75em;
-  fill: #00797d; }
 
 #antibiotics-graph,
 #antibiotics-animals-graph {
@@ -9959,6 +9961,8 @@ Patentes
 #antibiotics-animals-graph #ES.bar {
   fill: #e2723b; }
 
+#antibiotics-animals-graph #LT.bar-label,
+#antibiotics-animals-graph #SI.bar-label,
 #antibiotics-animals-graph #FI.bar-label,
 #antibiotics-animals-graph #SE.bar-label,
 #antibiotics-animals-graph #IS.bar-label,

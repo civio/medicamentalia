@@ -137,6 +137,11 @@
       var country = 'ESP';
       // Filter data
       var excludedCountries = ['TUV','NRU','PLW','VGB','MAF','SMR','GIB','TCA','LIE','MCO','SXM','FRO','MHL','MNP','ASM','KNA','GRL','CY','BMU','AND','DMA','IMN','ATG','SYC','VIR','ABW','FSM','TON','GRD','VCT','KIR','CUW','CHI','GUM','LCA','STP','WSM','VUT','NCL','PYF','BRB'];
+      var herdImmunity = {
+        'MCV1': 95,
+        'Pol3': 80,
+        'DTP3': 80,
+      };
       data = data.filter(function(d){ return excludedCountries.indexOf(d.code) === -1; });
       // Data parse & sorting funtions
       var data_parser = function(d){
@@ -155,12 +160,14 @@
           .filter(function(d){ return d.vaccine === vaccine && d['2015'] !== ''; })
           .map(data_parser)
           .sort(data_sort);
-        console.log(disease, vaccine, graph_data);
         var graph_value = graph_data.filter(function(d){ return d.label === country; });
         // Setup graph
         var graph = new BarGraph(disease+'-immunization-bar-graph', null);
         // Setup graph aspect ratio
         graph.aspectRatio = 0.25;
+        graph.margin.top = 20;
+        graph.margin.bottom = 0;
+        graph.addMarker(herdImmunity[vaccine], 'Nivel de rebaño', false);
         // Init graph
         graph.init();
         // Set data graph
