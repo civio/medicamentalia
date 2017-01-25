@@ -9910,13 +9910,34 @@ blockquote {
 /*
 Common
 */
+.graph-container svg {
+  overflow: visible; }
+
 .graph-container .axis line,
 .graph-container .axis path {
   display: none; }
 
-.graph-container .axis text {
+.graph-container .axis .tick text {
   font-size: 10px;
   fill: #777777; }
+
+.graph-container .x.axis .tick text {
+  text-anchor: middle; }
+
+.graph-container .y.axis .tick text {
+  text-anchor: end; }
+
+.graph-container .y.axis .tick line {
+  display: block;
+  stroke: #b3b3b3; }
+
+.graph-container .line-graph .x.axis .tick:nth-child(2) text,
+.graph-container .area-graph .x.axis .tick:nth-child(2) text {
+  text-anchor: start; }
+
+.graph-container .line-graph .x.axis .tick:last-child text,
+.graph-container .area-graph .x.axis .tick:last-child text {
+  text-anchor: end; }
 
 .graph-container .line {
   fill: none;
@@ -9941,11 +9962,15 @@ Common
 .graph-container .marker {
   stroke: #e2723b; }
 
-.graph-container .marker-label text {
+.graph-container .line-label,
+.graph-container .marker-label {
   font-size: 0.75em;
   line-height: 1em;
   fill: #00797d;
   alignment-baseline: ideographic; }
+
+.graph-container .line-label {
+  font-size: 0.875em; }
 
 /*
 Patentes
@@ -9986,7 +10011,7 @@ Patentes
 /*
 Vaccines diseases
 */
-.vaccines-disease-graph .graph-container {
+.vaccines-disease-graph .heatmap-container {
   position: relative;
   width: 100%;
   margin-top: 45px;
@@ -10113,19 +10138,36 @@ Video Map Polio
 /*
 Vaccines coverage
 */
-#immunization-coverage-graph .y.axis line {
-  display: block;
-  stroke: #777777; }
-
+#immunization-coverage-graph-all .y.axis text,
 #immunization-coverage-graph .y.axis text {
   display: none; }
 
-#immunization-coverage-graph .line {
-  stroke: #bfbfbf; }
+#immunization-coverage-graph-all .line {
+  stroke: #777777;
+  opacity: 0.3; }
 
-#immunization-coverage-graph .line.active {
+#immunization-coverage-graph-all .line-label {
+  display: none; }
+
+#immunization-coverage-graph-all .line-label.active {
+  display: block; }
+
+#immunization-coverage-graph-all .line.active {
   stroke: #00797d;
+  stroke-width: 2px;
+  opacity: 1; }
+
+#immunization-coverage-graph .line {
+  stroke: #e2723b;
   stroke-width: 1.5px; }
+
+#immunization-coverage-graph .line-label {
+  font-weight: 600;
+  text-shadow: 0 1px 0 white; }
+
+#immunization-coverage-graph #line-label-LKA,
+#immunization-coverage-graph #line-label-FRA {
+  alignment-baseline: text-before-edge; }
 
 /*
 User country disease immunization coverage
@@ -10150,10 +10192,6 @@ World diseases cases
 #world-cases .graph-container .area {
   fill: #e2723b;
   opacity: 0.7; }
-
-#world-cases .y.axis line {
-  display: block;
-  stroke: #777777; }
 
 #world-cases .graph-container .graph-container-caption {
   margin-bottom: 10px; }

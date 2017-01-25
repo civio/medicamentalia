@@ -3,6 +3,7 @@
 var gulp          = require('gulp'),
     autoprefixer  = require('gulp-autoprefixer'),
     cssmin        = require('gulp-clean-css'),
+    coffee        = require('gulp-coffee'),
     concat        = require('gulp-concat'),
     env           = require('gulp-environments'),
     development   = env.development,
@@ -11,6 +12,7 @@ var gulp          = require('gulp'),
     htmlmin       = require('gulp-htmlmin'),
     jshint        = require('gulp-jshint'),
     sass          = require('gulp-sass'),
+    sourcemaps    = require('gulp-sourcemaps'),
     uglify        = require('gulp-uglify'),
     gutil         = require('gulp-util'),
     browserSync   = require('browser-sync'),
@@ -47,11 +49,11 @@ var js_paths = {
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
     '_app/scripts/vendor/selection-sharer.js',
+    '_app/scripts/vendor/d3-bundle.js',
     '_app/scripts/main.js'
   ],
-  // main-access.js sources
+  // access.js sources
   access: [
-    '_app/scripts/vendor/d3-bundle.js',
     '_app/scripts/bar-graph.js',
     '_app/scripts/patents-graph.js',
     '_app/scripts/infographic.js',
@@ -61,31 +63,34 @@ var js_paths = {
     '_app/scripts/prices-infographic.js',
     '_app/scripts/main-access.js'
   ],
-  // main-vaccines.js sources
+  // vaccines.js sources
   vaccines: [
-    '_app/scripts/vendor/d3-bundle.js',
-    '_app/scripts/vendor/popcorn.js',
+    //'_app/scripts/vendor/popcorn.js',
     //'node_modules/topojson-client/dist/topojson-client.js',
-    '_app/scripts/bar-graph.js',
-    '_app/scripts/line-graph.js',
-    '_app/scripts/vaccine-disease-graph.js',
+    '_app/scripts/base-graph.coffee',
+    '_app/scripts/bar-graph.coffee',
+    '_app/scripts/line-graph.coffee',
+    '_app/scripts/heatmap-graph.coffee',
     //'_app/scripts/vaccine-map.js',
-    '_app/scripts/main-vaccines.js'
+    '_app/scripts/main-vaccines.coffee'
   ],
   // main-vaccines.js sources
   others: [
-    '_app/scripts/vendor/d3-bundle.js',
     '_app/scripts/bar-graph.js',
     '_app/scripts/main-others.js'
   ]
 };
 
-
 // Uses Sass compiler to process styles, adds vendor prefixes, minifies,
 // and then outputs file to appropriate location(s)
 gulp.task('css', function() {
+  var s = sass();
+  s.on('error',function(e){
+    gutil.log(e);
+    s.end();
+  });
   return gulp.src('_app/styles/main.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(s)
     .pipe(production(autoprefixer({browsers: ['last 2 versions', 'ie >= 10']})))
     .pipe(production(cssmin()))
     .pipe(gulp.dest('_site/assets/styles'))
@@ -94,6 +99,7 @@ gulp.task('css', function() {
     .on('error', gutil.log);
 });
 
+/*
 // Concatenates and uglifies JS files and outputs result to
 // the appropriate location(s).
 
@@ -105,7 +111,9 @@ var js_tasks = Object.keys(js_paths);
 js_tasks.forEach(function(name) {
   gulp.task('js-'+name, function() {
     return gulp.src(js_paths[name])
+      .pipe(sourcemaps.init())
       .pipe(concat(name+'.js'))
+      .pipe(sourcemaps.write())
       .pipe(production(uglify(uglifyOptions)))
       .pipe(gulp.dest('_site/assets/scripts'))
       .pipe(reload({stream:true}))
@@ -114,8 +122,42 @@ js_tasks.forEach(function(name) {
   });
 });
 
+js_tasks = js_tasks.map(function(d){ return 'js-'+d; });  // Setup js tasks as 'js-'+name
+//js_tasks.unshift('coffee'); // Prepend coffee task to js tasks array
+*/
+
+gulp.task('js-main', function() {
+  return gulp.src(js_paths.main)
+    //.pipe(sourcemaps.init())
+    .pipe(concat('main.js'))
+    //.pipe(sourcemaps.write())
+    .pipe(production(uglify(uglifyOptions)))
+    .pipe(gulp.dest('_site/assets/scripts'))
+    .pipe(reload({stream:true}))
+    .pipe(gulp.dest('assets/scripts'))
+    .on('error', gutil.log);
+});
+
+gulp.task('js-vaccines', function() {
+  var c = coffee();
+  c.on('error',function(e){
+    gutil.log(e);
+    c.end();
+  });
+  return gulp.src(js_paths.vaccines)
+    //.pipe(sourcemaps.init())
+    .pipe(c)
+    .pipe(concat('vaccines.js'))
+    //.pipe(sourcemaps.write())
+    .pipe(production(uglify(uglifyOptions)))
+    .pipe(gulp.dest('_site/assets/scripts'))
+    .pipe(reload({stream:true}))
+    .pipe(gulp.dest('assets/scripts'))
+    .on('error', gutil.log);
+});
+
 // Create a js task wich call all js task dynamically defined
-gulp.task('js', js_tasks.map(function(d){ return 'js-'+d; }));
+gulp.task('js', ['js-main', 'js-vaccines']);
 
 // Jekyll build
 gulp.task('jekyll-build', function(done) {
@@ -156,6 +198,8 @@ gulp.task('watch', function() {
   gulp.watch('_app/styles/**/*.scss', ['css']);
   // Watch app .js files
   gulp.watch('_app/scripts/**/*.js', ['js']);
+  // Watch app .js files
+  gulp.watch('_app/scripts/**/*.coffee', ['js']);
   // Watch Jekyll html files
   gulp.watch(['**/*.html', '_articles/**/**', '_pages/**/*.*', 'assets/data/**/**'], ['jekyll-rebuild']);
   // Watch Jekyll sitemap XML file
