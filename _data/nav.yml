@@ -12,7 +12,7 @@ access:
 vaccines:
   - ref: immunization
     type: article
-  - ref: anti-vaccines
+  - ref: antivaccines
     type: article
   - ref: stockout
     type: article

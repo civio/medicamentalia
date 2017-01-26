@@ -20,8 +20,7 @@ draft:            true
 
 Mientras el problema en zonas de [Centroamérica](enlace a Guate), África y Asia está en la falta de recursos, en las áreas más ricas del planeta la causa no hay que buscarla en la escasez de medios, sino en su alcance -que deja fuera a algunas comunidades aisladas- y la falta de [confianza](http://elpais.com/elpais/2016/03/15/ciencia/1458038627_317563.html) en las vacunas. El resurgir de algunas enfermedades casi olvidadas, en la mayoría de casos, se da en comunidades marginadas que no están cubiertas por los servicios básicos. En otros, el problema no tiene nada que ver con los recursos disponibles: simplemente, son padres que deciden no vacunar a sus hijos pese a la [evidencia científica](http://www.who.int/features/qa/84/es/).
 
-**Casos de measles 2015 por regiones o por países?**_
-
+**Ranking de casos de measles en 2015 por regiones (bar chart casos/habitante)**_
 
 Alemania alzancó los 2.464 casos de sarampión en 2015, solo superada en Europa por Kyrgyzstan. [En Sillicon Valley](https://www.wired.com/2016/03/silicon-valley-daycares-still-big-vaccination-problems/) se registran nuevos brotes y tasas de vacunación por debajo de los mínimos necesarios, mientras el nuevo presidente de Estados Unidos, Donald Trump, se reúne con líderes de los [movimientos antivacunas](http://www.chicagotribune.com/news/opinion/commentary/ct-donald-trump-anti-vaxxer-20170116-story.html). En España, en 2015 y después de tres décadas sin casos, un niño sin vacunar [murió de difteria](http://ccaa.elpais.com/ccaa/2015/06/27/catalunya/1435393852_158995.html).
 
