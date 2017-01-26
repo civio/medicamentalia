@@ -65,7 +65,7 @@ var js_paths = {
   ],
   // vaccines.js sources
   vaccines: [
-    //'_app/scripts/vendor/popcorn.js',
+    //'_app/scripts/vendor/popcorn.js.coffee',
     //'node_modules/topojson-client/dist/topojson-client.js',
     '_app/scripts/base-graph.coffee',
     '_app/scripts/bar-graph.coffee',
@@ -74,10 +74,11 @@ var js_paths = {
     //'_app/scripts/vaccine-map.js',
     '_app/scripts/main-vaccines.coffee'
   ],
-  // main-vaccines.js sources
+  // other.js sources
   others: [
-    '_app/scripts/bar-graph.js',
-    '_app/scripts/main-others.js'
+    '_app/scripts/base-graph.coffee',
+    '_app/scripts/bar-graph.coffee',
+    '_app/scripts/main-others.coffee'
   ]
 };
 
@@ -145,10 +146,28 @@ gulp.task('js-vaccines', function() {
     c.end();
   });
   return gulp.src(js_paths.vaccines)
-    //.pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(c)
     .pipe(concat('vaccines.js'))
-    //.pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
+    .pipe(production(uglify(uglifyOptions)))
+    .pipe(gulp.dest('_site/assets/scripts'))
+    .pipe(reload({stream:true}))
+    .pipe(gulp.dest('assets/scripts'))
+    .on('error', gutil.log);
+});
+
+gulp.task('js-others', function() {
+  var c = coffee();
+  c.on('error',function(e){
+    gutil.log(e);
+    c.end();
+  });
+  return gulp.src(js_paths.others)
+    .pipe(sourcemaps.init())
+    .pipe(c)
+    .pipe(concat('others.js'))
+    .pipe(sourcemaps.write())
     .pipe(production(uglify(uglifyOptions)))
     .pipe(gulp.dest('_site/assets/scripts'))
     .pipe(reload({stream:true}))
@@ -157,7 +176,7 @@ gulp.task('js-vaccines', function() {
 });
 
 // Create a js task wich call all js task dynamically defined
-gulp.task('js', ['js-main', 'js-vaccines']);
+gulp.task('js', ['js-main', 'js-vaccines', 'js-others']);
 
 // Jekyll build
 gulp.task('jekyll-build', function(done) {

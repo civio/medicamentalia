@@ -134,10 +134,11 @@
           margin:
             top: 20
             bottom: 0)   
-        graph.addMarker
-          value: herdImmunity[vaccine]
-          label: 'Nivel de rebaño'
-        graph.setData graph_data
+        graph
+          .addMarker
+            value: herdImmunity[vaccine]
+            label: 'Nivel de rebaño'
+          .setData graph_data
         # Setup graph value
         if graph_value.length > 0
           $el.find('.immunization-data').html '<strong>' + graph_value[0].value + '%</strong>'

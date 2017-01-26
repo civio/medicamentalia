@@ -18,7 +18,7 @@ class window.BaseGraph
     label: ''
     orientation: 'horizontal'
     align:'right'
-
+ 
 
   # Constructor
   # -----------
@@ -111,10 +111,10 @@ class window.BaseGraph
   # -------------
 
   addMarker: (marker) ->
-    @markers.push $.extend true, markerDefault, marker
+    @markers.push $.extend {}, markerDefault, marker
     return @
 
-  drawMarkers: ->
+  drawMarkers: -> 
     # Draw marker line
     @container.selectAll('.marker')
       .data(@markers)
@@ -132,10 +132,10 @@ class window.BaseGraph
 
   setupMarkerLine: (element) =>
     element
-    .attr 'x1', (d) => if d.orientation == 'horizontal' then 0 else @x(d.value)
-    .attr 'y1', (d) => if d.orientation == 'horizontal' then @y(d.value) else 0
-    .attr 'x2', (d) => if d.orientation == 'horizontal' then @width else @x(d.value) 
-    .attr 'y2', (d) => if d.orientation == 'horizontal' then @y(d.value) else @height 
+      .attr 'x1', (d) => if d.orientation == 'horizontal' then 0 else @x(d.value)
+      .attr 'y1', (d) => if d.orientation == 'horizontal' then @y(d.value) else 0
+      .attr 'x2', (d) => if d.orientation == 'horizontal' then @width else @x(d.value) 
+      .attr 'y2', (d) => if d.orientation == 'horizontal' then @y(d.value) else @height 
 
   setupMarkerLabel: (element) =>
     element

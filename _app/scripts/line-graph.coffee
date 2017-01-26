@@ -32,8 +32,8 @@ class window.LineGraph extends window.BaseGraph
       @years.forEach (year) =>
         if d[year]
           d.values[year] = +d[year]
-        else
-          console.log('No hay datos de para', d[@options.key.x], 'en ', year);
+        #else
+        #  console.log('No hay datos de para', d[@options.key.x], 'en ', year);
         delete d[year]
     return data
 

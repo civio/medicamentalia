@@ -57,8 +57,8 @@ class window.HeatmapGraph extends BaseGraph
       @years.forEach (year) =>
         if d[year]
           d.values[year] = +d[year]
-        else
-          console.log 'No hay datos de para', d.name, 'en ', year
+        #else
+        #  console.log 'No hay datos de para', d.name, 'en ', year
         delete d[year]
     return data
 
@@ -99,7 +99,6 @@ class window.HeatmapGraph extends BaseGraph
     return @countries 
 
   getDimensions: ->
-    console.log 'getDimensions', @
     @width = @$el.width() - 100  # y axis width = 100
     if @years and @countries
       cellSize = Math.floor @width / @years.length

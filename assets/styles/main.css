@@ -10037,7 +10037,8 @@ Vaccines diseases
   z-index: 99; }
 
 .vaccines-disease-graph .axis {
-  position: absolute; }
+  position: absolute;
+  color: #777777; }
 
 .vaccines-disease-graph .axis-item {
   position: absolute;
@@ -10050,10 +10051,14 @@ Vaccines diseases
   top: 0;
   left: 0; }
   .vaccines-disease-graph .y-axis .axis-item {
-    width: 100px;
+    color: #00797d;
+    font-size: 0.875em;
+    line-height: 1.35em;
+    width: 90px;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    text-align: right; }
 
 .vaccines-disease-graph .form-group {
   float: right;
