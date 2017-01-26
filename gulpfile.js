@@ -90,7 +90,9 @@ gulp.task('css', function() {
     s.end();
   });
   return gulp.src('_app/styles/main.scss')
+    .pipe(sourcemaps.init())
     .pipe(s)
+    .pipe(sourcemaps.write())
     .pipe(production(autoprefixer({browsers: ['last 2 versions', 'ie >= 10']})))
     .pipe(production(cssmin()))
     .pipe(gulp.dest('_site/assets/styles'))
