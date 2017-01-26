@@ -7,8 +7,13 @@
 
   # Measles cases Heatmap Graph
   setupHeatMapGraph = (id, data, countries, disease) ->
-    data = data.filter (d) -> countries.indexOf(d.code) != -1 and d.disease == disease and d3.values(d.values).length > 0
-    graph = new window.HeatmapGraph(id)
+    data = data
+      .filter (d) -> countries.indexOf(d.code) != -1 and d.disease == disease and d3.values(d.values).length > 0
+      .sort (a,b) -> a.total - b.total
+    graph = new window.HeatmapGraph(id,
+      margin: 
+        right: 0
+        left: 0)
     graph.setData data
     # Sort data
 #     if sort == 'year'
@@ -162,10 +167,7 @@
       .defer d3.csv, $('body').data('baseurl')+'/assets/data/diseases-cases.csv'
       .defer d3.csv, $('body').data('baseurl')+'/assets/data/population.csv'
       .await (error, data_cases, data_population) ->
-        #data = data_csv
-        #dataPopulation = population_csv
-        # we don't need the columns attribute
-        delete data_cases.columns
+        delete data_cases.columns  # we don't need the columns attribute
         data_cases.forEach (d) ->
           d.disease = d.disease.toLowerCase()
           if d.year_introduction
@@ -192,29 +194,9 @@
             console.log 'No hay datos de población para', d.name
           # Get total cases by country & disease
           d.total = d3.values(d.values).reduce(((a, b) -> a + b), 0)
-
         # Filter by selected countries & disease
         setupHeatMapGraph 'vaccines-measles-graph-1', data_cases, ['FIN','HUN','PRT','URY','MEX','COL'], 'measles'
-
-  ###
-  # Vaccine measles graph 2
-  if $('#vaccines-measles-graph-2').length > 0
-    countries_2 = [
-      'IRQ'
-      'BGR'
-      'MNG'
-      'ZAF'
-      'FRA'
-      'GEO'
-    ]
-    graph_vaccine_measles_2 = new VaccineDiseaseGraph('vaccines-measles-graph-2')
-
-    graph_vaccine_measles_2.filter = (d) ->
-      countries_2.indexOf(d.code) != -1
-
-    graph_vaccine_measles_2.init 'measles', 'year'
-    $(window).resize graph_vaccine_measles_2.onResize
-  ###
+        setupHeatMapGraph 'vaccines-measles-graph-2', data_cases, ['IRQ','BGR','MNG','ZAF','FRA','GEO'], 'measles'
 
   ###
   // Vaccine map

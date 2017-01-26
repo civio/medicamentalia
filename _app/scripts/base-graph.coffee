@@ -146,7 +146,7 @@ class window.BaseGraph
   # Resize methods
   # ------------
 
-  onResize: ->
+  onResize: =>
     @getDimensions()
     @updateGraphDimensions()
     return @

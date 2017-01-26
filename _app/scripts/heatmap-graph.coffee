@@ -5,6 +5,7 @@ class window.HeatmapGraph extends BaseGraph
 
   constructor: (id, options) ->
     console.log 'Heatmap Graph', id, options
+    @lang = $('body').data 'lang'
     super id, options
     return @
 
@@ -13,8 +14,9 @@ class window.HeatmapGraph extends BaseGraph
   # ------------
 
   setSVG: ->
-    @svg = null
-    @container = d3.select('#'+@id+' .heatmap-container')
+    @svg       = null
+    @container = d3.select '#'+@id+' .heatmap-container'
+    @$tooltip  = @$el.find '.tooltip'
 
   setData: (data) ->
     # Get years (x scale)
@@ -56,7 +58,7 @@ class window.HeatmapGraph extends BaseGraph
         if d[year]
           d.values[year] = +d[year]
         else
-          console.log('No hay datos de para', d[@options.key.x], 'en ', year);
+          console.log 'No hay datos de para', d.name, 'en ', year
         delete d[year]
     return data
 
@@ -97,7 +99,7 @@ class window.HeatmapGraph extends BaseGraph
     return @countries 
 
   getDimensions: ->
-    console.log @years
+    console.log 'getDimensions', @
     @width = @$el.width() - 100  # y axis width = 100
     if @years and @countries
       cellSize = Math.floor @width / @years.length
@@ -105,13 +107,12 @@ class window.HeatmapGraph extends BaseGraph
     return @
 
   setGraph: ->
-    console.log 'setGraph', @width, @height
     # setup scales range
     @x.range @getScaleXRange()
     @y.range @getScaleYRange()
     # setup container height
     @container.style 'height', @height+'px'
-    # Draw cells
+    # draw cells
     @container.append('div')
       .attr  'class', 'cell-container'
       .style 'height', @height+'px'
@@ -120,39 +121,102 @@ class window.HeatmapGraph extends BaseGraph
     .enter().append('div')
       .attr  'class', 'cell'
       .style 'background', (d) => @color(d.value)
+      .on    'mouseover', @onMouseOver
+      .on    'mouseout', @onMouseOut
+      .call  @setCellDimensions
+    # draw years x axis
+    @container.append('div')
+      .attr 'class', 'x-axis axis'
+    .selectAll('.axis-item')
+      .data(@years.filter((d) -> d % 5 == 0))
+    .enter().append('div')
+      .attr  'class', 'axis-item'
+      .style 'left', (d) => @x(d)+'px'
+      .html  (d) -> d
+    # draw countries y axis
+    @container.append('div')
+      .attr('class', 'y-axis axis')
+    .selectAll('.axis-item')
+      .data(@countries)
+    .enter().append('div')
+      .attr  'class', 'axis-item'
+      .style 'top', (d) => @y(d)+'px'
+      .html (d) => @getCountryName d
+    # draw year introduction mark
+    @container.select('.cell-container')
+      .selectAll('.marker')
+      .data @data.map((d) -> {code: d.code, year: d.year_introduction}).filter((d) -> !isNaN d.year)
+    .enter().append('div')
+      .attr 'class', 'marker'
+      .call @setMarkerDimensions
+
+  updateGraphDimensions: ->
+    # update scales
+    @x.range @getScaleXRange()
+    @y.range @getScaleYRange()
+    # update containers
+    @container
+      .style 'height', @height + 'px'
+    @container.select('.cell-container')
+      .style 'height', @height+'px'
+    @container.selectAll('.cell')
       .call @setCellDimensions
-      #.on 'mouseover', @onMouseOver
-      #.on 'mouseout', @onMouseOut
-
-    # Draw years x axis
-    # container.append('div').attr('class', 'x-axis axis').selectAll('.axis-item').data(years.filter((d) ->
-    #   d % 5 == 0
-    # )).enter().append('div').attr('class', 'axis-item').style('left', (d) ->
-    #   x(d) + 'px'
-    # ).html (d) ->
-    #   d
-    # # Draw countries y axis
-    # container.append('div').attr('class', 'y-axis axis').selectAll('.axis-item').data(countries).enter().append('div').attr('class', 'axis-item').style('top', (d) ->
-    #   y(d) + 'px'
-    # ).html (d) ->
-    #   getCountryName d
-    # # Draw year introduction mark
-    # container.select('.cell-container').selectAll('.marker').data(currentData.map((d) ->
-    #   {
-    #     code: d.code
-    #     year: d.year_introduction
-    #   }
-    # ).filter((d) ->
-    #   !isNaN(d.year)
-    # )).enter().append('div').attr('class', 'marker').call setMarkerDimensions
-
+    @container.select('.x-axis').selectAll('.axis-item')
+      .style 'left', (d) => @x(d)+'px'
+    @container.select('.y-axis').selectAll('.axis-item')
+      .style 'top', (d) => @y(d)+'px'
+    @container.select('.cell-container').selectAll('.marker')
+      .call @setMarkerDimensions
+    return @
 
   setCellDimensions: (selection) =>
     selection
-      .style 'left', (d) => @x(d.year)+'px'
-      .style 'top', (d) => console.log(d.country, @y.range(), @y.domain(), @y(d.country)); return@y(d.country)+'px'
-      .style 'width', @x.bandwidth()+'px'
+      .style 'left',   (d) => @x(d.year)+'px'
+      .style 'top',    (d) => @y(d.country)+'px'
+      .style 'width',  @x.bandwidth()+'px'
       .style 'height', @y.bandwidth()+'px'
+
+  setMarkerDimensions: (selection) =>
+    selection
+      .style 'top',    (d) => @y(d.code)+'px'
+      .style 'left',   (d) => if d.year < @years[0] then @x(@years[0])-1 + 'px' else if d.year < @years[@years.length-1] then @x(d.year)-1+'px' else @x.bandwidth()+@x(@years[@years.length-1])+'px'
+      .style 'height', @y.bandwidth()+'px'
+
+  onMouseOver: (d) =>
+    # Set tooltip content
+    offset           = $(d3.event.target).offset()
+    cases_str        = if @lang == 'es' then 'casos' else 'cases'
+    cases_single_str = if @lang == 'es' then 'caso' else 'case'
+    @$tooltip
+      .find '.tooltip-inner .country'
+      .html d.name
+    @$tooltip
+      .find '.tooltip-inner .year'
+      .html d.year
+    @$tooltip
+      .find '.tooltip-inner .value'
+      .html @formatDecimal(d.value, @lang)
+    @$tooltip
+      .find '.tooltip-inner .cases'
+      .html if d.cases != 1 then d.cases.toLocaleString(@lang) + ' ' + cases_str else d.cases.toLocaleString(@lang) + ' ' + cases_single_str
+    # Set tooltip position
+    @$tooltip.css
+      'left':    offset.left + @x.bandwidth() * 0.5 - (@$tooltip.width() * 0.5)
+      'top':     offset.top - (@y.bandwidth() * 0.5) - @$tooltip.height()
+      'opacity': '1'
+    return
+
+  onMouseOut: (d) =>
+    @$tooltip.css 'opacity', '0'
+    return
+
+  getCountryName: (code) =>
+    country = @data.filter (d) -> d.code == code
+    return if country[0] then country[0].name else ''
+
+  formatDecimal: (number, lang) ->
+    return if number < 0.001 then 0 else if number >= 0.1 then number.toFixed(1).toLocaleString(lang) else if number >= 0.01 then number.toFixed(2).toLocaleString(lang) else number.toFixed(3).toLocaleString(lang)
+
 
 
 # VaccineDiseaseGraph = (_id) ->
@@ -350,72 +414,10 @@ class window.HeatmapGraph extends BaseGraph
 #     )).enter().append('div').attr('class', 'marker').call setMarkerDimensions
 #     return
 
-#   updateGraph = ->
-#     # Update scales
-#     x.range [
-#       0
-#       width
-#     ]
-#     y.range [
-#       0
-#       height
-#     ]
-#     container.style 'height', height + 'px'
-#     container.select('.cell-container').style 'height', height + 'px'
-#     container.selectAll('.cell').call setCellDimensions
-#     container.select('.x-axis').selectAll('.axis-item').style 'left', (d) ->
-#       x(d) + 'px'
-#     container.select('.y-axis').selectAll('.axis-item').style 'top', (d) ->
-#       y(d) + 'px'
-#     container.select('.cell-container').selectAll('.marker').call setMarkerDimensions
-#     return
-
 #   clear = ->
 #     container.select('.cell-container').remove()
 #     container.selectAll('.axis').remove()
 #     return
 
 
-#   setMarkerDimensions = (selection) ->
-#     selection.style('top', (d) ->
-#       y(d.code) + 'px'
-#     ).style('left', (d) ->
-#       if d.year < years[0] then x(years[0]) - 1 + 'px' else if d.year < years[years.length - 1] then x(d.year) - 1 + 'px' else x.bandwidth() + x(years[years.length - 1]) + 'px'
-#     ).style 'height', y.bandwidth() + 'px'
-#     return
-
-#   onMouseOver = (d) ->
-#     # Set tooltip content
-#     cases_str = if lang == 'es' then 'casos' else 'cases'
-#     cases_single_str = if lang == 'es' then 'caso' else 'case'
-#     $tooltip.find('.tooltip-inner .country').html d.name
-#     $tooltip.find('.tooltip-inner .year').html d.year
-#     $tooltip.find('.tooltip-inner .value').html formatDecimal(d.value, lang)
-#     $tooltip.find('.tooltip-inner .cases').html if d.cases != 1 then d.cases.toLocaleString(lang) + ' ' + cases_str else d.cases.toLocaleString(lang) + ' ' + cases_single_str
-#     # Set tooltip position
-#     $tooltip.css
-#       'left': $(this).offset().left + x.bandwidth() * 0.5 - ($tooltip.width() * 0.5)
-#       'top': $(this).offset().top - (y.bandwidth() * 0.5) - $tooltip.height()
-#       'opacity': '1'
-#     return
-
-#   onMouseOut = (d) ->
-#     $tooltip.css 'opacity', '0'
-#     return
-
-#   getCountryName = (code) ->
-#     country = currentData.filter((d) ->
-#       d.code == code
-#     )
-#     if country[0] then country[0].name else ''
-
-#   getDimensions = ->
-#     width = $el.width() - Y_AXIS_WIDTH
-#     cellSize = Math.floor(width / years.length)
-#     height = if cellSize < 20 then cellSize * countries.length else 20 * countries.length
-#     # clip cellsize height to 20px
-#     that
-
-#   formatDecimal = (number, lang) ->
-#     if number < 0.001 then 0 else if number >= 0.1 then number.toFixed(1).toLocaleString(lang) else if number >= 0.01 then number.toFixed(2).toLocaleString(lang) else number.toFixed(3).toLocaleString(lang)
 
