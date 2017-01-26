@@ -65,7 +65,6 @@ var js_paths = {
   ],
   // vaccines.js sources
   vaccines: [
-    //'_app/scripts/vendor/popcorn.js.coffee',
     //'node_modules/topojson-client/dist/topojson-client.js',
     '_app/scripts/base-graph.coffee',
     '_app/scripts/bar-graph.coffee',
@@ -127,11 +126,31 @@ js_tasks = js_tasks.map(function(d){ return 'js-'+d; });  // Setup js tasks as '
 //js_tasks.unshift('coffee'); // Prepend coffee task to js tasks array
 */
 
+gulp.task('popcorn', function() {
+  return gulp.src('_app/scripts/vendor/popcorn.js')
+    .pipe(production(uglify(uglifyOptions)))
+    .pipe(gulp.dest('_site/assets/scripts'))
+    .pipe(gulp.dest('assets/scripts'))
+    .on('error', gutil.log);
+});
+
 gulp.task('js-main', function() {
   return gulp.src(js_paths.main)
-    //.pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
-    //.pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
+    .pipe(production(uglify(uglifyOptions)))
+    .pipe(gulp.dest('_site/assets/scripts'))
+    .pipe(reload({stream:true}))
+    .pipe(gulp.dest('assets/scripts'))
+    .on('error', gutil.log);
+});
+
+gulp.task('js-access', function() {
+  return gulp.src(js_paths.access)
+    .pipe(sourcemaps.init())
+    .pipe(concat('access.js'))
+    .pipe(sourcemaps.write())
     .pipe(production(uglify(uglifyOptions)))
     .pipe(gulp.dest('_site/assets/scripts'))
     .pipe(reload({stream:true}))
@@ -176,7 +195,7 @@ gulp.task('js-others', function() {
 });
 
 // Create a js task wich call all js task dynamically defined
-gulp.task('js', ['js-main', 'js-vaccines', 'js-others']);
+gulp.task('js', ['popcorn', 'js-main', 'js-access', 'js-vaccines', 'js-others']);
 
 // Jekyll build
 gulp.task('jekyll-build', function(done) {

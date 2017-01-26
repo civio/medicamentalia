@@ -3204,6 +3204,7 @@
         case 5:
           err.message = "The requested content cannot be played in an HTML5 player or another error related to the HTML5 player has occurred.";
           err.code = MediaError.MEDIA_ERR_DECODE;
+          break;
 
         // requested video not found
         case 100:
