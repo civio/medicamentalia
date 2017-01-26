@@ -10119,7 +10119,8 @@ Video Map Polio
       top: 50%;
       margin-top: -30px;
       text-align: center;
-      text-shadow: 0 1px 0px rgba(255, 255, 255, 0.85); }
+      text-shadow: 0 1px 0px rgba(255, 255, 255, 0.85);
+      max-width: none; }
     .video-map-polio-container .video-map-polio-cover a {
       display: block;
       width: 60px;

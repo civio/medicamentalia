@@ -5,6 +5,34 @@
   # Init Tooltips
   $('[data-toggle="tooltip"]').tooltip()
 
+
+  # Video of map polio cases
+  setVideoMapPolio = ->
+    wrapper = Popcorn.HTMLYouTubeVideoElement('#video-map-polio')
+    wrapper.src = 'http://www.youtube.com/embed/l1F2Xd5FFlQ?controls=0&showinfo=0&hd=1'
+    popcorn = Popcorn(wrapper)
+    notes = 2016 - 1980
+    i = 0
+    while i <= notes
+      popcorn.footnote
+        start:  1.6222 * i
+        end:    1.6222 * (i + 1)
+        text:   1980 + i
+        target: 'video-map-polio-description'
+      i++
+    # Show cover when video ended
+    wrapper.addEventListener 'ended', (e) ->
+      $('.video-map-polio-cover').fadeIn()
+      $('#video-map-polio-description').fadeTo 300, 0
+      popcorn.currentTime 0
+    # Show video when play btn clicked
+    $('#video-map-polio-play-btn').click (e) ->
+      e.preventDefault()
+      popcorn.play()
+      $('.video-map-polio-cover').fadeOut()
+      $('#video-map-polio-description').fadeTo 300, 1
+
+
   # Measles cases Heatmap Graph
   setupHeatMapGraph = (id, data, countries, disease) ->
     data = data
@@ -23,6 +51,44 @@
 #       currentData.sort (a, b) ->
 #         b.total - (a.total)
     $(window).resize graph.onResize
+
+
+  setupVaccineDiseaseHeatmapGraph = ->
+    d3.queue()
+      .defer d3.csv, $('body').data('baseurl')+'/assets/data/diseases-cases.csv'
+      .defer d3.csv, $('body').data('baseurl')+'/assets/data/population.csv'
+      .await (error, data_cases, data_population) ->
+        delete data_cases.columns  # we don't need the columns attribute
+        data_cases.forEach (d) ->
+          d.disease = d.disease.toLowerCase()
+          if d.year_introduction
+            d.year_introduction = +d.year_introduction.replace('prior to', '')
+          d.cases = {}
+          d.values = {}
+          # set values as cases/1000 habitants
+          populationItem = data_population.filter (country) -> country.code == d.code
+          if populationItem.length > 0
+            year = 1980
+            while year < 2016
+              if d[year]
+                population = +populationItem[0][year]
+                if population != 0
+                  d.cases[year] = +d[year]
+                  d.values[year] = 1000 * +d[year] / population
+                else
+                  #console.log('No hay datos de población para', d.name, 'en ', year, d[year]);
+              else
+                #console.log('No hay datos de casos de ' + d.disease + ' para', d.name, 'en ', year, ':', d[year], typeof d[year]);
+              delete d[year]
+              year++
+          else
+            console.log 'No hay datos de población para', d.name
+          # Get total cases by country & disease
+          d.total = d3.values(d.values).reduce(((a, b) -> a + b), 0)
+        # Filter by selected countries & disease
+        setupHeatMapGraph 'vaccines-measles-graph-1', data_cases, ['FIN','HUN','PRT','URY','MEX','COL'], 'measles'
+        setupHeatMapGraph 'vaccines-measles-graph-2', data_cases, ['IRQ','BGR','MNG','ZAF','FRA','GEO'], 'measles'
+
 
   # Immunization Coverage Dynamic Line Graph (we can select diferente diseases & countries)
   setupImmunizationCoverageDynamicLineGraph = ->
@@ -145,6 +211,25 @@
         # On resize
         $(window).resize -> graph.onResize()
   
+  
+
+  if $('#video-map-polio').length > 0
+    setVideoMapPolio()
+
+  ###
+  // Vaccine map
+  if ($('#vaccine-map').length > 0) {
+    var vaccine_map = new VaccineMap('vaccine-map');
+    //vaccine_map.getData = true; // Set true to download a polio cases csv
+    //vaccine_map.getPictureSequence = true; // Set true to download a map picture sequence
+    vaccine_map.init($('body').data('baseurl')+'/assets/data/diseases-polio-cases.csv', $('body').data('baseurl')+'/assets/data/map-polio-cases.csv');
+    $(window).resize( vaccine_map.onResize );
+  }
+  ###
+
+  if $('.vaccines-disease-graph').length > 0
+    setupVaccineDiseaseHeatmapGraph()
+
   ###
   # Vaccine all diseases graph
   if $('#vaccines-all-diseases-graph').length > 0
@@ -160,86 +245,6 @@
     # Update graph baseon on order selector
     $('#vaccines-all-diseases-graph #order-selector').change (d) ->
       graph_vaccine_all_diseases.init $('#disease-selector .active a').attr('href').substring(1), $(this).val()
-  ###
-
-
-  if $('#vaccines-measles-graph-1').length > 0
-    d3.queue()
-      .defer d3.csv, $('body').data('baseurl')+'/assets/data/diseases-cases.csv'
-      .defer d3.csv, $('body').data('baseurl')+'/assets/data/population.csv'
-      .await (error, data_cases, data_population) ->
-        delete data_cases.columns  # we don't need the columns attribute
-        data_cases.forEach (d) ->
-          d.disease = d.disease.toLowerCase()
-          if d.year_introduction
-            d.year_introduction = +d.year_introduction.replace('prior to', '')
-          d.cases = {}
-          d.values = {}
-          # set values as cases/1000 habitants
-          populationItem = data_population.filter (country) -> country.code == d.code
-          if populationItem.length > 0
-            year = 1980
-            while year < 2016
-              if d[year]
-                population = +populationItem[0][year]
-                if population != 0
-                  d.cases[year] = +d[year]
-                  d.values[year] = 1000 * +d[year] / population
-                else
-                  #console.log('No hay datos de población para', d.name, 'en ', year, d[year]);
-              else
-                #console.log('No hay datos de casos de ' + d.disease + ' para', d.name, 'en ', year, ':', d[year], typeof d[year]);
-              delete d[year]
-              year++
-          else
-            console.log 'No hay datos de población para', d.name
-          # Get total cases by country & disease
-          d.total = d3.values(d.values).reduce(((a, b) -> a + b), 0)
-        # Filter by selected countries & disease
-        setupHeatMapGraph 'vaccines-measles-graph-1', data_cases, ['FIN','HUN','PRT','URY','MEX','COL'], 'measles'
-        setupHeatMapGraph 'vaccines-measles-graph-2', data_cases, ['IRQ','BGR','MNG','ZAF','FRA','GEO'], 'measles'
-
-  ###
-  // Vaccine map
-  if ($('#vaccine-map').length > 0) {
-    var vaccine_map = new VaccineMap('vaccine-map');
-    //vaccine_map.getData = true; // Set true to download a polio cases csv
-    //vaccine_map.getPictureSequence = true; // Set true to download a map picture sequence
-    vaccine_map.init($('body').data('baseurl')+'/assets/data/diseases-polio-cases.csv', $('body').data('baseurl')+'/assets/data/map-polio-cases.csv');
-    $(window).resize( vaccine_map.onResize );
-  }
-  ###
-
-  ###
-  # Video of polio map cases
-  if $('#video-map-polio').length > 0
-    wrapper = Popcorn.HTMLYouTubeVideoElement('#video-map-polio')
-    wrapper.src = 'http://www.youtube.com/embed/l1F2Xd5FFlQ?controls=0&showinfo=0&hd=1'
-    popcorn = Popcorn(wrapper)
-    i = undefined
-    notes = 2016 - 1980
-    i = 0
-    while i <= notes
-      popcorn.footnote
-        start: 1.6222 * i
-        end: 1.6222 * (i + 1)
-        text: 1980 + i
-        target: 'video-map-polio-description'
-      i++
-    # Show cover when video ended
-    wrapper.addEventListener 'ended', ((e) ->
-      $('.video-map-polio-cover').fadeIn()
-      $('#video-map-polio-description').fadeTo 300, 0
-      popcorn.currentTime 0
-      return
-    ), false
-    # Show video when play btn clicked
-    $('#video-map-polio-play-btn').click (e) ->
-      e.preventDefault()
-      popcorn.play()
-      $('.video-map-polio-cover').fadeOut()
-      $('#video-map-polio-description').fadeTo 300, 1
-      return
   ###
 
   if $('#immunization-coverage-graph-all').length > 0
