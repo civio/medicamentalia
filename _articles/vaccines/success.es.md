@@ -30,9 +30,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {% include vaccines/world_cases.en.html %}
 
 
-### Measles
+Vídeo: 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+### Mario Martinez, consultor de inmunizaciones de la Organización Panamericana de la Salud (OPS) - DR-100.0189.wav
+
+* De 11,35 a 11,58. "En este negocio hemos tenido muchos éxitos. Un ejemplo es la viruela: desde finales de los 70 no tenemos viruela. Otro ejemplo es la poliomelitis. Tenemos muy pocos casos actualmente en el mundo y confiamos en que en pocos años vamos a erradicar esta enfermedad del mundo. Otro ejemplo es el sarampión, donde vamos ganando la batalla".
+
 
 {% include vaccines/measles_graph.en.html id="vaccines-measles-graph-1" title="Measles cases 1" %}
 
