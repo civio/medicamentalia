@@ -31,7 +31,7 @@ Dinamarca, por su parte, ha ido perdiendo cuota de vacunados los últimos años 
 
 <div class="graph-container">
   <p class="graph-container-caption">Nivel de vacunación de sarampión</p>
-  <div id="immunization-coverage-graph" class="line-graph" data-countries="FRA,DNK,DZA,LKA" data-vaccine="MCV2"></div>
+  <div id="immunization-coverage-graph" class="line-graph"></div>
 </div>
 
 De hecho, Francia es el país con mayor desconfianza en las vacunas, según el projecto [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/), realizado por la London School of Hygiene and Tropical Medicine y para el que entrevistaron a 65.819 personas en 67 países. Un 40% de los franceses encuestados (frente a una media del 12% en los datos mundiales) respondieron que estaban en desacuerdo o totalmente en desacuerdo con la siguiente afirmación: "Las vacunas son seguras". 

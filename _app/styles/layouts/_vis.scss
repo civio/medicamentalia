@@ -4,14 +4,42 @@ Common
 
 .graph-container{
 
+  svg{
+    overflow: visible;
+  }
+
   .axis{
     line,
     path {
       display: none;
     }
-    text {
+    .tick text {
       font-size: 10px;
       fill: $gray-light;
+    }
+  }
+  .x.axis .tick text {
+    text-anchor: middle;
+  }
+  .y.axis{
+    .tick text {
+      text-anchor: end;
+    }
+    .tick line {
+      display: block;
+      stroke: mix( $gray-light, $gray-lighter, 50% );
+    }
+  }
+
+  .line-graph,
+  .area-graph{
+    .x.axis{
+      .tick:nth-child(2) text{
+        text-anchor: start;
+      }
+      .tick:last-child text{
+        text-anchor: end;
+      }
     }
   }
 
@@ -43,11 +71,16 @@ Common
     stroke: $color-orange;
   }
 
-  .marker-label text{
+  .line-label,
+  .marker-label{
     font-size: 0.75em;
     line-height: 1em;
     fill: $brand-primary;
     alignment-baseline: ideographic;
+  }
+
+  .line-label{
+    font-size: 0.875em;
   }
 }
 
@@ -108,7 +141,7 @@ Vaccines diseases
 .vaccines-disease-graph{
   $padding-left: 100px;
 
-  .graph-container{
+  .heatmap-container{
     position: relative;
     width: 100%;
     margin-top: 1.5 * $grid-gutter-width;
@@ -141,6 +174,7 @@ Vaccines diseases
 
   .axis{
     position: absolute;
+    color: $gray-light;
   }
 
   .axis-item{
@@ -161,10 +195,14 @@ Vaccines diseases
     left: 0;
 
     .axis-item{
-      width: $padding-left;
+      color: $brand-primary;
+      font-size: 0.875em;
+      line-height: 1.35em;
+      width: $padding-left - 10;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      text-align: right;
     }
   }
 
@@ -251,6 +289,7 @@ Video Map Polio
       margin-top: - $grid-gutter-width;
       text-align: center;
       text-shadow: 0 1px 0px rgba(255,255,255,0.85);
+      max-width: none;
     }
 
     a{
@@ -284,23 +323,48 @@ Video Map Polio
 Vaccines coverage
 */
 
+#immunization-coverage-graph-all,
 #immunization-coverage-graph{
-  .y.axis line{
-    display: block;
-    stroke: $gray-light;
-  }
   .y.axis text{
     display: none;
   }
+}
 
+#immunization-coverage-graph-all{
   .line{
-    stroke: mix( $gray-lighter, $gray-light, 60% );
+    stroke: $gray-light;
+    opacity: 0.3;
   }
-  .line.active{
+  .line-label{
+    display: none;
+  }
+  .line-label.active{
+    display: block;
+  }
+  .line.active{  
     stroke: $brand-primary;
-    stroke-width: 1.5px;
+    stroke-width: 2px;
+    opacity: 1;
   }
 }
+
+#immunization-coverage-graph{
+  .line{
+    stroke: $color-orange;
+    stroke-width: 1.5px;
+  }
+  .line-label{
+    font-weight: 600;
+    text-shadow: 0 1px 0 white;
+  }
+
+  #line-label-LKA,
+  #line-label-FRA{
+    alignment-baseline: text-before-edge;
+  }
+}
+
+
 
 /*
 User country disease immunization coverage
@@ -333,14 +397,6 @@ World diseases cases
     fill: $color-orange;
     opacity: 0.7;
   }
-  .y.axis line{
-    display: block;
-    stroke: $gray-light;
-  }
-  .y.axis text{
-  //  display: none;
-  }
-
   .graph-container .graph-container-caption{
     margin-bottom: $grid-gutter-width/3;
   }

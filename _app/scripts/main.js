@@ -1,5 +1,4 @@
 // Common site setup
-
 (function($) {
 
   // Toogle Lang Menu
