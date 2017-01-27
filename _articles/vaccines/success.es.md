@@ -32,11 +32,11 @@ La viruela fue erradicada en 1980. Peste bovina? El fin de la polio está muy ce
 
 Daba mucho canguelo, pulmón de acero, síntomas de la polio. 
  
- {% include caption.html img="assets/images/polio.jpg" caption="Sala con los llamados 'pulmones de acero' para casos graves de polio." author="Polio Erradication" align="alignright" %}
+ {% include caption.html img="articles/polio.jpg" caption="Sala con los llamados 'pulmones de acero' para casos graves de polio." author="Polio Erradication" align="alignright" %}
 
 Historia Salk. 
 
- {% include caption.html img="assets/images/jonas-salk-portada revista Time_1954.jpg" caption="Jonas Salk, en la portada de la revista Time de 1954." author="Polio Erradication" align="alignleft" %}
+ {% include caption.html img="articles/jonas-salk.jpg" caption="Jonas Salk, en la portada de la revista Time de 1954." author="Polio Erradication" align="alignleft" %}
 
 Otros inventores
 

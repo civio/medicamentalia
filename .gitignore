@@ -4,7 +4,4 @@ _site
 node_modules
 .publish/
 fabfile.py
-
 fabfile.pyc
-
-assets/images/articles/Cámaras polio 1916_Polioeradication.jpg
