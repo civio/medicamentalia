@@ -39,6 +39,7 @@ Destacan casos como Malawi, con un 85% de inmunización en la primera dosis y un
 La caída del porcentaje de vacunados entre las primeras dosis -normalmente al nacimiento o cuando el niño es aún muy pequeño- y las siguientes es uno de los asuntos que preocupan a instituciones como el Grupo de Expertos de Vacunas de la OMS -The Strategic Advisory Group of Experts (SAGE)-, que lo reportó en su último [informe](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1), y a entidades sin ánimo de lucro que trabajan sobre el terreno como Médicos sin Fronteras. 
 
 > El responsable de un menor tiene que llevarle a vacunar, como mínimo, cinco veces en su primer año de vida.
+{: .no-quotes}
 
 En sus informes, la organización [incluye](https://www.msf.es/sites/default/files/legacy/adjuntos/Informe_La_Mejor_Vacuna_ESP_2012.pdf) el complejo calendario de vacunación como uno de los [problemas](ancla al otro lado) para acceder a las vacunas de los países con malas infraestructuras y escasez de y medios humanos y materiales. En la actualidad, el responsable de un menor tiene que llevarle a vacunar, al menos, cinco veces en su primer año de vida.   
 

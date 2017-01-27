@@ -381,9 +381,47 @@ header {
     }
   }
 
+  blockquote{
+    position: relative;
+    width: auto;
+    padding: 0;
+    margin: 0 30px 30px;
+    font-family: $font-family-sans-serif;
+    color: $color-orange;
+    font-weight: 600;
+    border: none;
+    text-indent: 1.5em;
+
+    > p{
+      font-size: 21px;
+      line-height: 34px;
+    }
+
+    &:before{
+      content: '“';
+      display: block;
+      position: absolute;
+      top: -0.05em;
+      left: -0.7em;
+      color: $brand-primary;
+      font-size: 2.25em;
+      font-weight: 700;
+      line-height: 1em;
+    }
+
+    &.no-quotes{
+      text-indent: 0;
+      &:before{
+        display: none;
+      }
+    }
+  }
+
   .video-container{
-    padding-bottom: 56.25%; /* 16:9 */
+    position: relative;
     height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+    margin: 60px 0 30px;
 
     iframe {
       position: absolute;
@@ -391,6 +429,12 @@ header {
       left: 0;
       width: 100%;
       height: 100%;
+    }
+  }
+
+  .container-right{
+    .video-container{
+      margin-top: 40px;
     }
   }
   
@@ -436,6 +480,12 @@ header {
     text-align: left;
   }
 
+  // Align right pictures
+  .alignright{
+    height: auto;
+    width: 100% !important;
+  }
+
   .credits{
     font-family: $font-family-sans-serif;
     padding: 12px 15px;
@@ -475,24 +525,6 @@ header {
   }
 }
 
-.video-container{
-  position: relative;
-  margin: 60px 0 30px;
-}
-
-.container-right{
-  .video-container{
-    margin-top: 40px;
-  }
-}
-
-
-// Align right pictures
-.alignright{
-  height: auto;
-  width: 100% !important;
-}
-
 .wp-caption{
   padding: 0;
   border: none;
@@ -512,38 +544,6 @@ header {
 
   strong{
     font-weight: 400;
-  }
-}
-
-
-// Blockquote
-
-blockquote{
-  position: relative;
-  width: auto;
-  padding: 0;
-  margin: 0 30px 30px;
-  font-family: $font-family-sans-serif;
-  color: $color-orange;
-  font-weight: 600;
-  border: none;
-  text-indent: 1.5em;
-
-  > p{
-    font-size: 21px;
-    line-height: 28px;
-  }
-
-  &:before{
-    content: '“';
-    display: block;
-    position: absolute;
-    top: -0.05em;
-    left: -0.7em;
-    color: $brand-primary;
-    font-size: 2.25em;
-    font-weight: 700;
-    line-height: 1em;
   }
 }
 
@@ -621,25 +621,32 @@ blockquote{
     height: 100%;
   }
 
-  blockquote,
-  .alignright,
-  .container-right{
-    float: right;
-    width: 50% !important;
-  }
+  .page-content {
 
-  .alignright{
-    margin-left: $grid-gutter-width;
-  }
-
-  .page-content .container-right{
-    margin-left: $grid-gutter-width;
-
-    .video-container{
-      margin-top: 0;
+    blockquote,
+    .alignright,
+    .container-right{
+      float: right;
+      width: 50% !important;
     }
-    .video-container-caption{
-      margin-bottom: 20px;
+
+    blockquote {
+      margin-top: -2px; // Adjust vertical alignment with parragraph
+    }
+
+    .alignright{
+      margin-left: $grid-gutter-width;
+    }
+
+    .container-right{
+      margin-left: $grid-gutter-width;
+
+      .video-container{
+        margin-top: 0;
+      }
+      .video-container-caption{
+        margin-bottom: 20px;
+      }
     }
   }
 }
@@ -652,15 +659,18 @@ blockquote{
 
   $page-content-container-margin: ($container-md - $page-content-container-width) / 2;
 
-  .page-content .page-content-container{
-    width: $page-content-container-width; // Setup a content max width of 700px
-  }
+  .page-content { 
 
-  blockquote,
-  .alignright,
-  .container-right{
-    width: ($page-content-container-width/2) + $page-content-container-margin - (1.5 * $grid-gutter-width) !important;
-    margin-right: ($grid-gutter-width / 2) - $page-content-container-margin;  // -16.7%; // $blockquote-margin-right;
+    .page-content-container{
+      width: $page-content-container-width; // Setup a content max width of 700px
+    }
+
+    blockquote,
+    .alignright,
+    .container-right{
+      width: ($page-content-container-width/2) + $page-content-container-margin - (1.5 * $grid-gutter-width) !important;
+      margin-right: ($grid-gutter-width / 2) - $page-content-container-margin;  // -16.7%; // $blockquote-margin-right;
+    }
   }
 }
 
@@ -668,10 +678,12 @@ blockquote{
 
   $page-content-container-margin: ($container-max-width - $page-content-container-width) / 2;
 
-  blockquote,
-  .alignright,
-  .container-right{
-    width: ($page-content-container-width/2) + $page-content-container-margin - (1.5 * $grid-gutter-width) !important;
-    margin-right: ($grid-gutter-width / 2) - $page-content-container-margin;
+  .page-content {
+    blockquote,
+    .alignright,
+    .container-right{
+      width: ($page-content-container-width/2) + $page-content-container-margin - (1.5 * $grid-gutter-width) !important;
+      margin-right: ($grid-gutter-width / 2) - $page-content-container-margin;
+    }
   }
 }
