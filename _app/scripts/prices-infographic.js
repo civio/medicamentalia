@@ -129,7 +129,7 @@ function Prices_Infographic( _id ) {
     d3.queue()
       .defer(d3.csv, $('body').data('baseurl')+'/assets/data/prices.csv')
       .defer(d3.csv, $('body').data('baseurl')+'/assets/data/affordability.csv')
-      .defer(d3.csv, $('body').data('baseurl')+'/assets/data/countries.csv')
+      .defer(d3.csv, $('body').data('baseurl')+'/assets/data/prices-countries.csv')
       .await( onDataReady );
 
     return that;
