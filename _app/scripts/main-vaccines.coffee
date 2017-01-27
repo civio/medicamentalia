@@ -2,8 +2,22 @@
 
 (($) ->
 
+  # Get current article lang & base url
+  lang    = $('body').data('lang')
+  baseurl = $('body').data('baseurl')
+
+
   # Init Tooltips
   $('[data-toggle="tooltip"]').tooltip()
+
+
+  # get country name auxiliar method
+  getCountryName = (countries, code, lang) ->
+    item = countries.filter (d) -> d.code == code
+    if item
+      item[0]['name_'+lang]
+    else
+      console.error 'No country name for code', code
 
 
   # Video of map polio cases
@@ -55,8 +69,8 @@
 
   setupVaccineDiseaseHeatmapGraph = ->
     d3.queue()
-      .defer d3.csv, $('body').data('baseurl')+'/assets/data/diseases-cases.csv'
-      .defer d3.csv, $('body').data('baseurl')+'/assets/data/population.csv'
+      .defer d3.csv, baseurl+'/assets/data/diseases-cases.csv'
+      .defer d3.csv, baseurl+'/assets/data/population.csv'
       .await (error, data_cases, data_population) ->
         delete data_cases.columns  # we don't need the columns attribute
         data_cases.forEach (d) ->
@@ -100,7 +114,7 @@
       margin: top: 20)
     graph.getScaleYDomain = (d) -> [0, 100]
     graph.yAxis.tickValues [0, 25, 50, 75, 100]
-    d3.csv $('body').data('baseurl')+'/assets/data/immunization-coverage.csv', (error, data) ->
+    d3.csv baseurl+'/assets/data/immunization-coverage.csv', (error, data) ->
       graph.setData data.filter((d) -> d.vaccine == $('#immunization-coverage-vaccine-selector').val())
       # Update data based on selected vaccine
       $('#immunization-coverage-vaccine-selector').change (e) ->
@@ -132,7 +146,7 @@
       value: 95
       label: 'Nivel de rebaño'
       align: 'left'
-    d3.csv $('body').data('baseurl')+'/assets/data/immunization-coverage-mcv2.csv', (error, data) ->
+    d3.csv baseurl+'/assets/data/immunization-coverage-mcv2.csv', (error, data) ->
       graph.setData data.filter((d) -> countries.indexOf(d.code) != -1)
     $(window).resize graph.onResize
 
@@ -141,7 +155,7 @@
     console.log 'setupWorldCasesMultipleSmallGraph'
     diseases = ['diphteria', 'measles','pertussis','polio','tetanus']
     # Load data
-    d3.csv $('body').data('baseurl')+'/assets/data/diseases-cases-world.csv', (error, data) ->
+    d3.csv baseurl+'/assets/data/diseases-cases-world.csv', (error, data) ->
       # Get max value to create a common y scale
       maxValue1 = d3.max data, (d) -> d3.max(d3.values(d), (e) -> +e)
       maxValue2 = d3.max data.filter((d) -> ['diphteria','polio','tetanus'].indexOf(d.disease) != -1), (d) -> d3.max(d3.values(d), (e) -> +e)
@@ -164,55 +178,61 @@
 
   setupImmunizationDiseaseBarGraph = ->
     # Load data
-    d3.csv $('body').data('baseurl')+'/assets/data/immunization-coverage.csv', (error, data) ->
-      # Setup current country -> TODO!!! we have to get user country
-      country = 'ESP'
-      # Filter data
-      excludedCountries = ['TUV','NRU','PLW','VGB','MAF','SMR','GIB','TCA','LIE','MCO','SXM','FRO','MHL','MNP','ASM','KNA','GRL','CY','BMU','AND','DMA','IMN','ATG','SYC','VIR','ABW','FSM','TON','GRD','VCT','KIR','CUW','CHI','GUM','LCA','STP','WSM','VUT','NCL','PYF','BRB']
-      herdImmunity = 
-        'MCV1': 95
-        'Pol3': 80
-        'DTP3': 80
-      data = data.filter (d) -> excludedCountries.indexOf(d.code) == -1
-      # Data parse & sorting funtions
-      data_parser = (d) ->
-        obj = 
-          key: d.code
-          value: +d['2015']
-        if d.code == country
-          obj.active = true
-        return obj
-      data_sort = (a,b) -> b.value-a.value
-      # loop through each graph
-      $('.immunization-coverage-disease-graph').each ->
-        $el     = $(this)
-        disease = $el.data('disease')
-        vaccine = $el.data('vaccine')
-        # Get graph data & value
-        graph_data = data
-          .filter((d) -> d.vaccine == vaccine and d['2015'] != '')
-          .map(data_parser)
-          .sort(data_sort)
-        graph_value = graph_data.filter((d) -> d.key == country)
-        # Setup graph
-        graph = new window.BarGraph(disease+'-immunization-bar-graph',
-          aspectRatio: 0.25
-          margin:
-            top: 20
-            bottom: 0)   
-        graph
-          .addMarker
-            value: herdImmunity[vaccine]
-            label: 'Nivel de rebaño'
-          .setData graph_data
-        # Setup graph value
-        if graph_value.length > 0
-          $el.find('.immunization-data').html '<strong>' + graph_value[0].value + '%</strong>'
-        # On resize
-        $(window).resize -> graph.onResize()
+    d3.queue()
+      .defer d3.csv, baseurl+'/assets/data/immunization-coverage.csv'
+      .defer d3.csv, baseurl+'/assets/data/countries.csv'
+      .await (error, data, countries) ->
+        # Setup current country -> TODO!!! we have to get user country
+        country = 'ESP'
+        # Filter data
+        excludedCountries = ['TUV','NRU','PLW','VGB','MAF','SMR','GIB','TCA','LIE','MCO','SXM','FRO','MHL','MNP','ASM','KNA','GRL','CY','BMU','AND','DMA','IMN','ATG','SYC','VIR','ABW','FSM','TON','GRD','VCT','KIR','CUW','CHI','GUM','LCA','STP','WSM','VUT','NCL','PYF','BRB']
+        herdImmunity = 
+          'MCV1': 95
+          'Pol3': 80
+          'DTP3': 80
+        data = data.filter (d) -> excludedCountries.indexOf(d.code) == -1
+        # Data parse & sorting funtions
+        data_parser = (d) ->
+          obj = 
+            key:   d.code
+            name:  getCountryName(countries, d.code, lang)
+            value: +d['2015']
+          if d.code == country
+            obj.active = true
+          return obj
+        data_sort = (a,b) -> b.value-a.value
+        # loop through each graph
+        $('.immunization-coverage-disease-graph').each ->
+          $el     = $(this)
+          disease = $el.data('disease')
+          vaccine = $el.data('vaccine')
+          # Get graph data & value
+          graph_data = data
+            .filter((d) -> d.vaccine == vaccine and d['2015'] != '')
+            .map(data_parser)
+            .sort(data_sort)
+          console.table graph_data
+          graph_value = graph_data.filter((d) -> d.key == country)
+          # Setup graph
+          graph = new window.BarGraph(disease+'-immunization-bar-graph',
+            aspectRatio: 0.25
+            label: true
+            key: x: 'name'
+            margin:
+              top: 20
+              bottom: 0)   
+          graph
+            .addMarker
+              value: herdImmunity[vaccine]
+              label: 'Nivel de rebaño'
+            .setData graph_data
+          # Setup graph value
+          if graph_value.length > 0
+            $el.find('.immunization-data').html '<strong>' + graph_value[0].value + '%</strong>'
+          # On resize
+          $(window).resize -> graph.onResize()
   
   
-
   if $('#video-map-polio').length > 0
     setVideoMapPolio()
 
@@ -222,7 +242,7 @@
     var vaccine_map = new VaccineMap('vaccine-map');
     //vaccine_map.getData = true; // Set true to download a polio cases csv
     //vaccine_map.getPictureSequence = true; // Set true to download a map picture sequence
-    vaccine_map.init($('body').data('baseurl')+'/assets/data/diseases-polio-cases.csv', $('body').data('baseurl')+'/assets/data/map-polio-cases.csv');
+    vaccine_map.init(baseurl+'/assets/data/diseases-polio-cases.csv', baseurl+'/assets/data/map-polio-cases.csv');
     $(window).resize( vaccine_map.onResize );
   }
   ###
