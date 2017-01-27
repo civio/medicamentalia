@@ -1,71 +1,213 @@
-Region_en,Region_es,Country_en,Country_es,Code,Area,PIB,PIB_Area,,(Source: World Bank)
-Afghanistan,Afganistán,Afghanistan,Afganistán,AF,Asia,664.764589156,Low income,,
-Argentina,Argentina,Argentina,Argentina,AR,America,14715.1800198,Upper middle income,,
-Armenia,Armenia,Armenia,Armenia,AM,Asia,3504.76675849,Lower middle income,,
-Belgium,Bélgica,Belgium,Bélgica,BE,Europe,46929.64,High income,,
-Bolivia,Bolivia,Bolivia,Bolivia,BO,America,2867.63979144,Lower middle income,,
-"Brazil, Rio Grande do Sul State","Brasil, Estado Grande do Sul",Brazil,Brasil,BR,America,11208.082735,Upper middle income,,
-Burkina Faso,Burkina Faso,Burkina Faso,Burkina Faso,BF,Africa,760.852951189,Low income,,
-Burundi,Burundi,Burundi,Burundi,BI,Africa,267.109321867,Low income,,
-Cameroon,Camerún,Cameroon,Camerún,CM,Africa,1328.64020534,Lower middle income,,
-Chad,Chad,Chad,Chad,TD,Africa,1053.66250097,Low income,,
-"China, Shaanxi Province","China, provincia de Shaanxi",China,China,CN,Asia,6807.43082412,Upper middle income,,
-"China, Shandong Province","China, provincia de Shandong",China,China,CN,Asia,6807.43082412,Upper middle income,,
-"China, Shanghai","China, Shanghai",China,China,CN,Asia,9572.85847212,Upper middle income,,
-Colombia,Colombia,Colombia,Colombia,CO,America,7831.21531317,Upper middle income,,
-Congo,Congo,Congo,Congo,CG,Africa,3167.0453222,Lower middle income,,
-Democratic Republic of Congo,República Democrática del Congo,Democratic Republic of Congo,República Democrática del Congo,CD,Africa,484.211471296,Low income,,
-Ecuador,Ecuador,Ecuador,Ecuador,EC,America,6002.88545889,Upper middle income,,
-Egypt,Egipto,Egypt,Egipto,EG,Africa,3314.46292796,Lower middle income,,
-El Salvador,El Salvador,El Salvador,El Salvador,SV,America,3826.08248558,Lower middle income,,
-Ethiopia,Etiopía,Ethiopia,Etiopía,ET,Africa,505.045745754,Low income,,
-Fiji,Fiyi,Fiji,Fiyi,FJ,Oceania,4375.40602175,Upper middle income,,
-Germany,Alemania,Germany,Alemania,DE,Europe,46251.3818043,High income,,
-Ghana,Ghana,Ghana,Ghana,GH,Africa,1858.24259798,Lower middle income,,
-Guatemala,Guatemala,Guatemala,Guatemala,GT,America,3673.14,Lower middle income,,
-Haiti,Haití,Haiti,Haití,HT,America,819.903914321,Low income,,
-"India, Chennai","India, Chennai",India,India,IN,Asia,1497.54986423,Lower middle income,,
-"India, Haryana","India, Haryana",India,India,IN,Asia,1497.54986423,Lower middle income,,
-"India, Karnataka","India, Karnataka",India,India,IN,Asia,1497.54986423,Lower middle income,,
-"India, Maharashtra 4 regions","India, Maharashtra 4 regions",India,India,IN,Asia,1497.54986423,Lower middle income,,
-"India, NCT, Delhi","India, NCT, Delhi",India,India,IN,Asia,1497.54986423,Lower middle income,,
-"India, Rajasthan","India, Rajasthan",India,India,IN,Asia,1497.54986423,Lower middle income,,
-"India, West Bengal","India, West Bengal",India,India,IN,Asia,1497.54986423,Lower middle income,,
-Indonesia,Indonesia,Indonesia,Indonesia,ID,Asia,3475.25047362,Lower middle income,,
-Iran,Irán,Iran,Irán,IR,Asia,4763.30330925,Upper middle income,,
-Italy,Italia,Italy,Italia,IT,Europe,35685.5990365,High income,,
-Jordan,Jordania,Jordan,Jordania,JO,Asia,5213.39011579,Upper middle income,,
-Kazakhstan,Kazajistán,Kazakhstan,Kazajistán,KZ,Asia,13611.537362,Upper middle income,,
-Kenya,Kenia,Kenya,Kenia,KE,Africa,1245.51204094,Low income,,
-Kuwait,Kuwait,Kuwait,Kuwait,KW,Asia,52197.3413357,High income,,
-Kyrgyzstan,Kirguistán,Kyrgyzstan,Kirguistán,KG,Asia,1263.42808261,Lower middle income,,
-Lao PDR,Laos,Laos,Laos,LA,Asia,1660.70603054,Lower middle income,,
-Lebanon,Líbano,Lebanon,Líbano,LB,Asia,9928.03809841,Upper middle income,,
-Malaysia,Malasia,Malaysia,Malasia,MY,Asia,10538.0578872,Upper middle income,,
-Mali,Malí,Mali,Malí,ML,Africa,715.133812989,Low income,,
-Mauritius,Mauricio,Mauritius,Mauricio,MU,Africa,9477.79158698,Upper middle income,,
-"Mexico, Mexico City","México, Ciudad de México",Mexico,México,MX,America,10307.2830361,Upper middle income,,
-Moldova,Moldavia,Moldova,Moldavia,MD,Europe,2239.55912744,Lower middle income,,
-Mongolia,Mongolia,Mongolia,Mongolia,MN,Asia,4056.39783877,Lower middle income,,
-Morocco,Marruecos,Morocco,Marruecos,MA,Africa,3092.6065451,Lower middle income,,
-Nicaragua,Nicaragua,Nicaragua,Nicaragua,NI,America,1851.10585221,Lower middle income,,
-Nigeria,Nigeria,Nigeria,Nigeria,NG,Africa,3005.51379634,Lower middle income,,
-Oman,Omán,Oman,Omán,OM,Asia,21929.0145745,High income,,
-Pakistan,Pakistán,Pakistan,Pakistán,PK,Asia,1275.30181716,Lower middle income,,
-Peru,Perú,Peru,Perú,PE,America,6661.59111226,Upper middle income,,
-Philippines,Filipinas,Philippines,Filipinas,PH,Asia,2765.08458658,Lower middle income,,
-"Russia, Tatarstan","Rusia, Tatarstan",Russia,Rusia,RU,Europe,14611.7007777,Upper middle income,,
-São Tomé and Príncipe,Santo Tomé y Príncipe,Sao Tome & Principe,Santo Tomé y Príncipe,ST,Africa,1609.82333938,Lower middle income,,
-"South Africa, Gauteng Province","Sudáfrica, Gauteng",South Africa,Sudáfrica,ZA,Africa,6886.29040549,Upper middle income,,
-Spain,España,Spain,España,ES,Europe,29882.1357928,High income,,
-Sudan,Sudán,Sudan,Sudán,SD,Africa,1753.3809104,Lower middle income,,
-Syria,Syria,Syria,Syria,SY,Asia,2065.53963217,Lower middle income,,
-Tajikistan,Tadjikistan,Tajikistan,Tadjikistan,TJ,Asia,1036.58327587,Low income,,
-Tanzania,Tanzania,Tanzania,Tanzania,TZ,Africa,912.700309667,Low income,,
-Thailand,Tailandia,Thailand,Tailandia,TH,Asia,5778.977216,Upper middle income,,
-Tunisia,Túnez,Tunisia,Túnez,TN,Africa,4316.68569497,Upper middle income,,
-Uganda,Uganda,Uganda,Uganda,UG,Africa,657.370663534,Low income,,
-Ukraine,Ucrania,Ukraine,Ucrania,UA,Europe,3900.46537574,Lower middle income,,
-United Arab Emirates,Emiratos Árabes Unidos,United Arab Emirates,Emiratos Árabes Unidos,AE,Asia,43048.8501492,High income,,
-Uzbekistan,Uzbekistán,Uzbekistan,Uzbekistán,UZ,Asia,1877.96451184,Lower middle income,,
-Yemen,Yemen,Yemen,Yemen,YE,Asia,1473.09956376,Lower middle income,,
+"name_en","name_es","code2","code","code_num","region","sub-region"
+"Afghanistan","Afganistán","AF","AFG",4,"Asia","Southern Asia"
+"Albania","Albania","AL","ALB",8,"Europe","Southern Europe"
+"Algeria","Argelia","DZ","DZA",12,"Africa","Northern Africa"
+"Andorra","Andorra","AD","AND",20,"Europe","Southern Europe"
+"Angola","Angola","AO","AGO",24,"Africa","Middle Africa"
+"Antigua and Barbuda","Antigua y Barbuda","AG","ATG",28,"Americas","Caribbean"
+"Argentina","Argentina","AR","ARG",32,"Americas","South America"
+"Armenia","Armenia","AM","ARM",51,"Asia","Western Asia"
+"Aruba","Aruba","AW","ABW",533,"Americas","Caribbean"
+"Australia","Australia","AU","AUS",36,"Oceania","Australia and New Zealand"
+"Austria","Austria","AT","AUT",40,"Europe","Western Europe"
+"Azerbaijan","Azerbaiyán","AZ","AZE",31,"Asia","Western Asia"
+"Bahamas","Bahamas","BS","BHS",44,"Americas","Caribbean"
+"Bahrain","Baréin","BH","BHR",48,"Asia","Western Asia"
+"Bangladesh","Bangladés","BD","BGD",50,"Asia","Southern Asia"
+"Barbados","Barbados","BB","BRB",52,"Americas","Caribbean"
+"Belarus","Bielorrusia","BY","BLR",112,"Europe","Eastern Europe"
+"Belgium","Bélgica","BE","BEL",56,"Europe","Western Europe"
+"Belize","Belice","BZ","BLZ",84,"Americas","Central America"
+"Benin","Benín","BJ","BEN",204,"Africa","Western Africa"
+"Bermuda","Bermudas","BM","BMU",60,"Americas","Northern America"
+"Bhutan","Bután","BT","BTN",64,"Asia","Southern Asia"
+"Bolivia","Bolivia","BO","BOL",68,"Americas","South America"
+"Bosnia and Herzegovina","Bosnia y Herzegovina","BA","BIH",70,"Europe","Southern Europe"
+"Botswana","Botsuana","BW","BWA",72,"Africa","Southern Africa"
+"Brazil","Brasil","BR","BRA",76,"Americas","South America"
+"Brunei","Brunéi","BN","BRN",96,"Asia","South-Eastern Asia"
+"Bulgaria","Bulgaria","BG","BGR",100,"Europe","Eastern Europe"
+"Burkina Faso","Burkina Faso","BF","BFA",854,"Africa","Western Africa"
+"Burundi","Burundi","BI","BDI",108,"Africa","Eastern Africa"
+"Cambodia","Camboya","KH","KHM",116,"Asia","South-Eastern Asia"
+"Cameroon","Camerún","CM","CMR",120,"Africa","Middle Africa"
+"Canada","Canadá","CA","CAN",124,"Americas","Northern America"
+"Cabo Verde","Cabo Verde","CV","CPV",132,"Africa","Western Africa"
+"Cayman Islands","Islas Caimán","KY","CYM",136,"Americas","Caribbean"
+"Central African Republic","República Centroafricana","CF","CAF",140,"Africa","Middle Africa"
+"Chad","Chad","TD","TCD",148,"Africa","Middle Africa"
+"Chile","Chile","CL","CHL",152,"Americas","South America"
+"China","China","CN","CHN",156,"Asia","Eastern Asia"
+"Colombia","Colombia","CO","COL",170,"Americas","South America"
+"Comoros","Comoras","KM","COM",174,"Africa","Eastern Africa"
+"Congo","Congo","CG","COG",178,"Africa","Middle Africa"
+"Democratic Republic of the Congo","República Democrática del Congo","CD","COD",180,"Africa","Middle Africa"
+"Cook Islands","Islas Cook","CK","COK",184,"Oceania","Polynesia"
+"Costa Rica","Costa Rica","CR","CRI",188,"Americas","Central America"
+"Côte d'Ivoire","Costa de Marfil","CI","CIV",384,"Africa","Western Africa"
+"Croatia","Croacia","HR","HRV",191,"Europe","Southern Europe"
+"Cuba","Cuba","CU","CUB",192,"Americas","Caribbean"
+"Cyprus","Chipre","CY","CYP",196,"Asia","Western Asia"
+"Czech Republic","República Checa","CZ","CZE",203,"Europe","Eastern Europe"
+"Denmark","Dinamarca","DK","DNK",208,"Europe","Northern Europe"
+"Djibouti","Yibuti","DJ","DJI",262,"Africa","Eastern Africa"
+"Dominica","Dominica","DM","DMA",212,"Americas","Caribbean"
+"Dominican Republic","República Dominicana","DO","DOM",214,"Americas","Caribbean"
+"Ecuador","Ecuador","EC","ECU",218,"Americas","South America"
+"Egypt","Egipto","EG","EGY",818,"Africa","Northern Africa"
+"El Salvador","El Salvador","SV","SLV",222,"Americas","Central America"
+"Equatorial Guinea","Guinea Ecuatorial","GQ","GNQ",226,"Africa","Middle Africa"
+"Eritrea","Eritrea","ER","ERI",232,"Africa","Eastern Africa"
+"Estonia","Estonia","EE","EST",233,"Europe","Northern Europe"
+"Ethiopia","Etiopía","ET","ETH",231,"Africa","Eastern Africa"
+"Falkland Islands","Islas Malvinas","FK","FLK",238,"Americas","South America"
+"Faroe Islands","Islas Feroe","FO","FRO",234,"Europe","Northern Europe"
+"Fiji","Fiyi","FJ","FJI",242,"Oceania","Melanesia"
+"Finland","Finlandia","FI","FIN",246,"Europe","Northern Europe"
+"France","Francia","FR","FRA",250,"Europe","Western Europe"
+"French Guiana","Guayana Francesa","GF","GUF",254,"Americas","South America"
+"French Polynesia","Polinesia Francesa","PF","PYF",258,"Oceania","Polynesia"
+"Gabon","Gabón","GA","GAB",266,"Africa","Middle Africa"
+"Gambia","Gambia","GM","GMB",270,"Africa","Western Africa"
+"Georgia","Georgia","GE","GEO",268,"Asia","Western Asia"
+"Germany","Alemania","DE","DEU",276,"Europe","Western Europe"
+"Ghana","Ghana","GH","GHA",288,"Africa","Western Africa"
+"Greece","Grecia","GR","GRC",300,"Europe","Southern Europe"
+"Greenland","Groenlandia","GL","GRL",304,"Americas","Northern America"
+"Grenada","Granada","GD","GRD",308,"Americas","Caribbean"
+"Guam","Guam","GU","GUM",316,"Oceania","Micronesia"
+"Guatemala","Guatemala","GT","GTM",320,"Americas","Central America"
+"Guinea","Guinea","GN","GIN",324,"Africa","Western Africa"
+"Guinea-Bissau","Guinea-Bisáu","GW","GNB",624,"Africa","Western Africa"
+"Guyana","Guyana","GY","GUY",328,"Americas","South America"
+"Haiti","Haiti","HT","HTI",332,"Americas","Caribbean"
+"Vatican City","Vaticano","VA","VAT",336,"Europe","Southern Europe"
+"Honduras","Honduras","HN","HND",340,"Americas","Central America"
+"Hong Kong","Hong Kong","HK","HKG",344,"Asia","Eastern Asia"
+"Hungary","Hungría","HU","HUN",348,"Europe","Eastern Europe"
+"Iceland","Islandia","IS","ISL",352,"Europe","Northern Europe"
+"India","India","IN","IND",356,"Asia","Southern Asia"
+"Indonesia","Indonesia","ID","IDN",360,"Asia","South-Eastern Asia"
+"Iran","Irán","IR","IRN",364,"Asia","Southern Asia"
+"Iraq","Irak","IQ","IRQ",368,"Asia","Western Asia"
+"Ireland","Irlanda","IE","IRL",372,"Europe","Northern Europe"
+"Israel","Israel","IL","ISR",376,"Asia","Western Asia"
+"Italy","Italia","IT","ITA",380,"Europe","Southern Europe"
+"Jamaica","Jamaica","JM","JAM",388,"Americas","Caribbean"
+"Japan","Japón","JP","JPN",392,"Asia","Eastern Asia"
+"Jordan","Jordania","JO","JOR",400,"Asia","Western Asia"
+"Kazakhstan","Kazajistán","KZ","KAZ",398,"Asia","Central Asia"
+"Kenya","Kenia","KE","KEN",404,"Africa","Eastern Africa"
+"Kiribati","Kiribati","KI","KIR",296,"Oceania","Micronesia"
+"North Korea","Corea del Norte","KP","PRK",408,"Asia","Eastern Asia"
+"South Korea","Corea del Sur","KR","KOR",410,"Asia","Eastern Asia"
+"Kuwait","Kuwait","KW","KWT",414,"Asia","Western Asia"
+"Kyrgyzstan","Kirguistán","KG","KGZ",417,"Asia","Central Asia"
+"Laos","Laos","LA","LAO",418,"Asia","South-Eastern Asia"
+"Latvia","Letonia","LV","LVA",428,"Europe","Northern Europe"
+"Lebanon","Líbano","LB","LBN",422,"Asia","Western Asia"
+"Lesotho","Lesoto","LS","LSO",426,"Africa","Southern Africa"
+"Liberia","Liberia","LR","LBR",430,"Africa","Western Africa"
+"Libya","Libia","LY","LBY",434,"Africa","Northern Africa"
+"Liechtenstein","Liechtenstein","LI","LIE",438,"Europe","Western Europe"
+"Lithuania","Lituania","LT","LTU",440,"Europe","Northern Europe"
+"Luxembourg","Luxemburgo","LU","LUX",442,"Europe","Western Europe"
+"Macao","Macao","MO","MAC",446,"Asia","Eastern Asia"
+"Macedonia","Macedonia","MK","MKD",807,"Europe","Southern Europe"
+"Madagascar","Madagascar","MG","MDG",450,"Africa","Eastern Africa"
+"Malawi","Malaui","MW","MWI",454,"Africa","Eastern Africa"
+"Malaysia","Malasia","MY","MYS",458,"Asia","South-Eastern Asia"
+"Maldives","Maldives","MV","MDV",462,"Asia","Southern Asia"
+"Mali","Mali","ML","MLI",466,"Africa","Western Africa"
+"Malta","Malta","MT","MLT",470,"Europe","Southern Europe"
+"Marshall Islands","Islas Marshall","MH","MHL",584,"Oceania","Micronesia"
+"Mauritania","Mauritania","MR","MRT",478,"Africa","Western Africa"
+"Mauritius","Mauricio","MU","MUS",480,"Africa","Eastern Africa"
+"Mexico","México","MX","MEX",484,"Americas","Central America"
+"Micronesia","Micronesia","FM","FSM",583,"Oceania","Micronesia"
+"Moldova","Moldavia","MD","MDA",498,"Europe","Eastern Europe"
+"Monaco","Mónaco","MC","MCO",492,"Europe","Western Europe"
+"Mongolia","Mongolia","MN","MNG",496,"Asia","Eastern Asia"
+"Montenegro","Montenegro","ME","MNE",499,"Europe","Southern Europe"
+"Montserrat","Montserrat","MS","MSR",500,"Americas","Caribbean"
+"Morocco","Marruecos","MA","MAR",504,"Africa","Northern Africa"
+"Mozambique","Mozambique","MZ","MOZ",508,"Africa","Eastern Africa"
+"Myanmar","Myanmar","MM","MMR",104,"Asia","South-Eastern Asia"
+"Namibia","Namibia","NA","NAM",516,"Africa","Southern Africa"
+"Nauru","Nauru","NR","NRU",520,"Oceania","Micronesia"
+"Nepal","Nepal","NP","NPL",524,"Asia","Southern Asia"
+"Netherlands","Países Bajos","NL","NLD",528,"Europe","Western Europe"
+"New Caledonia","Nueva Caledonia","NC","NCL",540,"Oceania","Melanesia"
+"New Zealand","Nueva Zelanda","NZ","NZL",554,"Oceania","Australia and New Zealand"
+"Nicaragua","Nicaragua","NI","NIC",558,"Americas","Central America"
+"Niger","Níger","NE","NER",562,"Africa","Western Africa"
+"Nigeria","Nigeria","NG","NGA",566,"Africa","Western Africa"
+"Niue","Niue","NU","NIU",570,"Oceania","Polynesia"
+"Norway","Noruega","NO","NOR",578,"Europe","Northern Europe"
+"Oman","Omán","OM","OMN",512,"Asia","Western Asia"
+"Pakistan","Pakistán","PK","PAK",586,"Asia","Southern Asia"
+"Palau","Palaos","PW","PLW",585,"Oceania","Micronesia"
+"Palestine","Palestina","PS","PSE",275,"Asia","Western Asia"
+"Panama","Panamá","PA","PAN",591,"Americas","Central America"
+"Papua New Guinea","Papúa Nueva Guinea","PG","PNG",598,"Oceania","Melanesia"
+"Paraguay","Paraguay","PY","PRY",600,"Americas","South America"
+"Peru","Perú","PE","PER",604,"Americas","South America"
+"Philippines","Filipinas","PH","PHL",608,"Asia","South-Eastern Asia"
+"Poland","Polonia","PL","POL",616,"Europe","Eastern Europe"
+"Portugal","Portugal","PT","PRT",620,"Europe","Southern Europe"
+"Puerto Rico","Puerto Rico","PR","PRI",630,"Americas","Caribbean"
+"Qatar","Catar","QA","QAT",634,"Asia","Western Asia"
+"Romania","Rumania","RO","ROU",642,"Europe","Eastern Europe"
+"Russia","Rusia","RU","RUS",643,"Europe","Eastern Europe"
+"Rwanda","Ruanda","RW","RWA",646,"Africa","Eastern Africa"
+"Saint Kitts and Nevis","San Cristóbal y Nieves","KN","KNA",659,"Americas","Caribbean"
+"Saint Lucia","Santa Lucía","LC","LCA",662,"Americas","Caribbean"
+"Saint Vincent and the Grenadines","San Vicente y las Granadinas","VC","VCT",670,"Americas","Caribbean"
+"Samoa","Samoa","WS","WSM",882,"Oceania","Polynesia"
+"San Marino","San Marino","SM","SMR",674,"Europe","Southern Europe"
+"Sao Tome and Principe","Santo Tomé y Príncipe","ST","STP",678,"Africa","Middle Africa"
+"Saudi Arabia","Arabia Saudí","SA","SAU",682,"Asia","Western Asia"
+"Senegal","Senegal","SN","SEN",686,"Africa","Western Africa"
+"Serbia","Serbia","RS","SRB",688,"Europe","Southern Europe"
+"Seychelles","Seychelles","SC","SYC",690,"Africa","Eastern Africa"
+"Sierra Leone","Sierra Leona","SL","SLE",694,"Africa","Western Africa"
+"Singapore","Singapur","SG","SGP",702,"Asia","South-Eastern Asia"
+"Slovakia","Eslovaquia","SK","SVK",703,"Europe","Eastern Europe"
+"Slovenia","Eslovenia","SI","SVN",705,"Europe","Southern Europe"
+"Solomon Islands","Islas Salomón","SB","SLB",90,"Oceania","Melanesia"
+"Somalia","Somalia","SO","SOM",706,"Africa","Eastern Africa"
+"South Africa","Sudáfrica","ZA","ZAF",710,"Africa","Southern Africa"
+"South Sudan","Sudán del Sur","SS","SSD",728,"Africa","Eastern Africa"
+"Spain","España","ES","ESP",724,"Europe","Southern Europe"
+"Sri Lanka","Sri Lanka","LK","LKA",144,"Asia","Southern Asia"
+"Sudan","Sudán","SD","SDN",729,"Africa","Northern Africa"
+"Suriname","Surinam","SR","SUR",740,"Americas","South America"
+"Swaziland","Suazilandia","SZ","SWZ",748,"Africa","Southern Africa"
+"Sweden","Suecia","SE","SWE",752,"Europe","Northern Europe"
+"Switzerland","Suiza","CH","CHE",756,"Europe","Western Europe"
+"Syria","Siria","SY","SYR",760,"Asia","Western Asia"
+"Taiwan","Taiwán","TW","TWN",158,"Asia","Eastern Asia"
+"Tajikistan","Tayikistán","TJ","TJK",762,"Asia","Central Asia"
+"Tanzania","Tanzania","TZ","TZA",834,"Africa","Eastern Africa"
+"Thailand","Tailandia","TH","THA",764,"Asia","South-Eastern Asia"
+"Timor-Leste","Timor Oriental","TL","TLS",626,"Asia","South-Eastern Asia"
+"Togo","Togo","TG","TGO",768,"Africa","Western Africa"
+"Tonga","Tonga","TO","TON",776,"Oceania","Polynesia"
+"Trinidad and Tobago","Trinidad y Tobago","TT","TTO",780,"Americas","Caribbean"
+"Tunisia","Túnez","TN","TUN",788,"Africa","Northern Africa"
+"Turkey","Turquía","TR","TUR",792,"Asia","Western Asia"
+"Turkmenistan","Turkmenistán","TM","TKM",795,"Asia","Central Asia"
+"Tuvalu","Tuvalu","TV","TUV",798,"Oceania","Polynesia"
+"Uganda","Uganda","UG","UGA",800,"Africa","Eastern Africa"
+"Ukraine","Ucrania","UA","UKR",804,"Europe","Eastern Europe"
+"United Arab Emirates","Emiratos Árabes Unidos","AE","ARE",784,"Asia","Western Asia"
+"United Kingdom","Reino Unido","GB","GBR",826,"Europe","Northern Europe"
+"United States","Estados Unidos","US","USA",840,"Americas","Northern America"
+"Uruguay","Uruguay","UY","URY",858,"Americas","South America"
+"Uzbekistan","Uzbekistán","UZ","UZB",860,"Asia","Central Asia"
+"Vanuatu","Vanuatu","VU","VUT",548,"Oceania","Melanesia"
+"Venezuela","Venezuela","VE","VEN",862,"Americas","South America"
+"Vietnam","Vietnam","VN","VNM",704,"Asia","South-Eastern Asia"
+"Yemen","Yemen","YE","YEM",887,"Asia","Western Asia"
+"Zambia","Zambia","ZM","ZMB",894,"Africa","Eastern Africa"
+"Zimbabwe","Zimbabue","ZW","ZWE",716,"Africa","Eastern Africa"
