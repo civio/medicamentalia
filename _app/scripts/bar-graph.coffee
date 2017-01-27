@@ -26,8 +26,6 @@ class window.BarGraph extends window.BaseGraph
     # set y scale
     @y = d3.scaleLinear()
       .range @getScaleYRange()
-    # set x axis
-    @xAxis = d3.axisBottom(@x)
     return @
 
   getScaleXDomain: =>
@@ -36,7 +34,7 @@ class window.BarGraph extends window.BaseGraph
   getScaleYDomain: =>
     return [0, d3.max(@data, (d) => d[@options.key.y])]
 
-  setGraph: ->
+  drawGraph: ->
     # draw bars
     @container.selectAll('.bar')
       .data(@data)
@@ -44,16 +42,27 @@ class window.BarGraph extends window.BaseGraph
       .attr 'class', (d) -> if d.active then 'bar active' else 'bar'
       .attr 'id',    (d) => d[@options.key.id]
       .call @setBarDimensions
-    # draw labels
     if @options.label
-      @container.selectAll('.bar-label')
+      # draw labels x
+      @container.selectAll('.bar-label-x')
         .data(@data)
       .enter().append('text')
-        .attr 'class', 'bar-label'
-        .attr 'id',    (d) => d[@options.key.id]
+        .attr 'class', (d) -> if d.active then 'bar-label-x active' else 'bar-label-x'
+        .attr 'id',    (d) => 'bar-label-x-'+d[@options.key.id]
         .attr 'dy',    '1.5em'
-        .text (d) => parseInt d[@options.key.y]
-        .call @setBarLabelDimensions
+        .attr 'text-anchor', 'middle'
+        .text (d) => d[@options.key.x]
+        .call @setBarLabelXDimensions
+       # draw labels y
+      @container.selectAll('.bar-label-y')
+        .data(@data)
+      .enter().append('text')
+        .attr 'class', (d) -> if d.active then 'bar-label-y active' else 'bar-label-y'
+        .attr 'id',    (d) => 'bar-label-y-'+d[@options.key.id]
+        .attr 'dy',    '-0.5em'
+        .attr 'text-anchor', 'middle'
+        .text (d) => d[@options.key.y]
+        .call @setBarLabelYDimensions
     return @
 
   updateGraphDimensions: ->
@@ -61,8 +70,10 @@ class window.BarGraph extends window.BaseGraph
     # update graph dimensions
     @container.selectAll('.bar')
       .call @setBarDimensions
-    @container.selectAll('.bar-label')
-      .call @setBarLabelDimensions
+    @container.selectAll('.bar-label-x')
+      .call @setBarLabelXDimensions
+    @container.selectAll('.bar-label-y')
+      .call @setBarLabelYDimensions
     return @
 
   setBarDimensions: (element) =>
@@ -72,7 +83,12 @@ class window.BarGraph extends window.BaseGraph
       .attr 'height', (d) => @height - @y(d[@options.key.y])
       .attr 'width',  @x.bandwidth()
 
-  setBarLabelDimensions: (element) =>
+  setBarLabelXDimensions: (element) =>
+    element
+      .attr 'x', (d) => @x(d[@options.key.x]) + @x.bandwidth() * 0.5
+      .attr 'y', (d) => @height
+
+  setBarLabelYDimensions: (element) =>
     element
       .attr 'x', (d) => @x(d[@options.key.x]) + @x.bandwidth() * 0.5
       .attr 'y', (d) => @y(d[@options.key.y])

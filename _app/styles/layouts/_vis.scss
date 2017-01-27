@@ -54,17 +54,32 @@ Common
   }
 
   .bar {
-    fill: $brand-primary;
-  }
-  .bar.active {
-    fill: $color-orange;
+    fill: mix( $gray-light, $gray-lighter, 40);
+    @include transition(.3s ease--out fill);
+
+    &:hover,
+    &.active {
+      fill: $brand-primary;
+    }
   }
 
-  .bar-label{
-    fill: white;
+  .bar-label-x,
+  .bar-label-y{
     font-size: 0.75em;
-    font-weight: 300;
     text-anchor: middle;
+  }
+  .bar-label-y{
+    fill: $gray-light;
+    &.active {
+      fill: $brand-primary;
+    }
+  }
+  .bar-label-x{
+    fill: $gray-light;
+    &.active {
+      fill: $brand-primary;
+      font-weight: 600;
+    }
   }
 
   .marker{
@@ -85,24 +100,31 @@ Common
 }
 
 /*
-Patentes
+Superbugs bar graph
 */
-
-.bar-graph{
-
-  .bar:hover {
-    fill: $color-orange;
-  }
-}
 
 #antibiotics-graph,
 #antibiotics-animals-graph{
   margin: $grid-gutter-width/3 0;
-}
 
-#antibiotics-graph #ES.bar,
-#antibiotics-animals-graph #ES.bar{
-  fill: $color-orange;
+  .bar-label-x,
+  .bar-label-y{
+    display: none;
+  }
+
+  #ES.bar,
+  #bar-label-x-ES{
+    fill: $brand-primary;
+  }
+
+  #bar-label-x-ES,
+  #bar-label-y-ES{
+    display: block;
+  }
+
+  #bar-label-x-ES{
+    font-weight: 600;
+  }
 }
 
 #antibiotics-animals-graph{
@@ -121,18 +143,6 @@ Patentes
   padding-bottom: 50%; 
 }
 
-@media (max-width: $screen-sm) {
-  #antibiotics-graph,
-  #antibiotics-animals-graph{
-    .tick,
-    .bar-label{
-      display: none;
-    }
-    #ES.bar-label{
-      display: block;
-    }
-  }
-}
 
 /*
 Vaccines diseases
@@ -371,9 +381,15 @@ User country disease immunization coverage
 */
 
 .immunization-coverage-disease-graph{
-  .axis text,
-  .bar-label{
+
+  .bar-label-x,
+  .bar-label-y{
     display: none;
+
+    &.active{
+      display: block;
+      fill: $brand-primary;
+    }
   }
 
   .bar{
