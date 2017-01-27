@@ -36,29 +36,21 @@ Así, la humanidad está a un empujón -si no baja la guardia- de eliminar de la
 
 {% include caption.html img="articles/jonas-salk.jpg" caption="Jonas Salk, en la portada de la revista Time de 1954." author="Polio Erradication" %}
 
-
-desde las primitivas inoculaciones   Otros inventores
+Con esa crisis sanitaria como contexto, Jonas Salk creó la vacuna contra la enfermedad y renunció a su patente. Hace poco más de 60 años que se empezó a utilizar. Poco después, Albert Bruce Sabin inventó la versión oral, clave para alcanzar a millones de niños en todo el mundo, gracias a su facilidad de administración. Ellos dos son algunos de los muchos hombres y mujeres que han contribuido, desde las primeras inoculaciones, a levantar un escudo preventivo frente a decenas de enfermedades. Muchos de ellos las habían vivido de cerca e investigaban con una dosis de motivación extra.
 
 {% include vaccines/inventors.es.html %}
 
-No solo las enfermedades que elimina, las que están a punto. 
+Los éxitos de las vacunas no solo se cuentan a guerra vencida, como con la viruela o, casi, como con la polio, sino a batalla ganada. Algunas enfermedades siguen presentes, pero su impacto ha menguado de forma drástica gracias a, entre otras mejoras sanitarias, la inmunización. 
 
-rubella ?
+Aunque [reaparece](enlace al otro tema) en algunas zonas, el sarampión es una de las enfermedades en las que es más evidente la reducción de efectivos del campo enemigo. Antes de que se aprobara el uso de la vacuna en 1963, mataba a unos dos millones de niños al año. Y, aunque en 2015 murieron 73.844 niños menores de cuatro años, el descenso en número de casos y de fallecidos es drástico. 
 
-En muertos: vacunas y otras cosas que ayudan
-
-Tetanus-DTP India
-
-"India has been declared as having eliminated of
-maternal and neonatal tetanus, demonstrating that
-disease elimination is possible even in challenging
-circumstances. "
-
-Pertussis-DTP
+Las tres vacunas que forman la DTP (difteria, tétanos, tos ferina) también han colaborado en logros como que el número de enfermos por tos ferina haya pasado [de dos millones en 1980 a unos 142.000 en los últimos tiempos](http://www.who.int/immunization/monitoring_surveillance/data/gs_gloprofile.pdf), una cifra que, por desgracia, se mantiene bastante estable, como también se mantienen las 60.000 muertes anuales por culpa de esta enfermedad. 
 
 {% include vaccines/world_cases.en.html %}
 
-Measles. Aunque aún mal, blabla
+La región de las Américas ha eliminado la rubeola y, en todo el continente, ya solo se dan casos en Estados Unidos. Y, aunque aún enferman 22.000 personas al año en todo el mundo, la cifra es mucho menor que el pico de [875.000 de 1999](http://www.who.int/immunization/monitoring_surveillance/data/gs_gloprofile.pdf). 
+
+Nuevas vacunas [contra la malaria](http://www.who.int/immunization/research/development/malaria_vaccine_qa/en/) y el [dengue](http://www.who.int/immunization/research/development/dengue_q_and_a/en/) se están empezando a utilizar en algunos países y los primeros resultados de la vacuna contra el [ébola](http://www.who.int/mediacentre/news/releases/2016/ebola-vaccine-results/en/) y los equipos de investigadores trabajando en vacunas contra el VIH o el cáncer en todo el mundo abren el camino hacia logros que ahora suenan a ciencia ficción. Como cuando nadie imaginaba que esos experimentos de Jenner con las ampollas de las vacas iban a ser el primer paso hacia la erradicación total de la viruela.
 
   </div>
 </div>
