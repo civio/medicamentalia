@@ -10,8 +10,8 @@ class window.BaseGraph
     label: false          # show/hide labels
     key:
       id: 'key'
-      x: 'key'            # name for x column
-      y: 'value'          # name for y column
+      x:  'key'            # name for x column
+      y:  'value'          # name for y column
 
   markerDefault =
     value: null
@@ -53,7 +53,7 @@ class window.BaseGraph
     @data = @dataParser(data)
     @drawScales()
     @drawMarkers()
-    @setGraph()
+    @drawGraph()
     return @
 
   # to overdrive

@@ -69,7 +69,7 @@ class window.LineGraph extends window.BaseGraph
   getScaleYDomain: ->
     return [0, d3.max @data, (d) -> d3.max(d3.values(d.values))]
 
-  setGraph: ->
+  drawGraph: ->
     # clear graph before setup
     @container.select('.graph').remove()
     # draw graph container 

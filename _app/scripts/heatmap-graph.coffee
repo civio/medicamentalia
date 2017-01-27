@@ -29,7 +29,7 @@ class window.HeatmapGraph extends BaseGraph
     @getDimensions() # force update dimensions
     @drawScales()
     @drawMarkers()
-    @setGraph()
+    @drawGraph()
     return @
 
   getYears: (data) ->
@@ -105,7 +105,7 @@ class window.HeatmapGraph extends BaseGraph
       @height = if cellSize < 20 then cellSize * @countries.length else 20 * @countries.length
     return @
 
-  setGraph: ->
+  drawGraph: ->
     # setup scales range
     @x.range @getScaleXRange()
     @y.range @getScaleYRange()
