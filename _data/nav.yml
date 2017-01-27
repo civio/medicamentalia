@@ -14,7 +14,7 @@ vaccines:
     type: article
   - ref: antivaccines
     type: article
-  - ref: stockout
-    type: article
   - ref: success
+    type: article
+  - ref: vaccines-team
     type: article
