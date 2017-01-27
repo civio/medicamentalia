@@ -93,6 +93,8 @@ En otros, en los que la situación había mejorado y la enfermedad estaba casi e
 
 Aunque hay razones para ser [optimista](al otro tema) en algunas zonas, como Las Américas -donde se han erradicado enfermedades como la polio, la viruela y la rubeola-, la dificultad de vacunar a todos los niños en áreas en conflicto o con problemas de resursos e infraestructuras, y en mucha menor medida, [la oposición a las vacunas](enlace al otro tema), no permite erradicar enfermedades para las que, desde hace décadas, tenemos un escudo más que efectivo. [Según la propia OMS](http://www.who.int/topics/immunization/es/), 21,8 millones de lactantes no reciben las vacunas básicas.
 
+El último [informe](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1) del grupo de expertos de la OMS es claro: "SAGE permanece muy preocupado porque el prograso hacia los objetivos de erradicar la polio, eliminar el sarampión y la rubeola y eliminar el tétanos maternal y neonatal es demasiado lento". Y es que la media mundial de coberturas solo se ha incrementado un 1% desde 2010.
+
 <div class="panel" markdown="1">
 #### Las causas, según MSF
 
