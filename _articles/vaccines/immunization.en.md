@@ -16,7 +16,13 @@ draft:            true
 <div class="container page-content" markdown="1">
   <div class="page-content-container" markdown="1">
 
-In the USA, it’s known as the $1,000 pill. And that’s not a metaphor. Each pill of sofosbuvir, the new drug for the treatment of Hepatitis C, costs exactly that. The medicine, sold by Gilead under the name Sovaldi, has again sparked discussion on the patent system and how it affects access to medicines and **the sustainability of health budgets** in countries of all income levels, especially developing ones.
+OJO > PAra el final, la versión original en inglés
+At the midpoint of the GVAP, SAGE remains very
+concerned that progress toward the goals to eradicate
+polio, eliminate measles and rubella, and eliminate
+maternal and neonatal tetanus is too slow. Global average
+immunization coverage has increased by only 1%
+since 2010. [Source](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1).
 
 <div class="container-right">
   <div id="immunization-coverage-country-graphs" class="graph-container">
