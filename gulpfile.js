@@ -241,7 +241,7 @@ gulp.task('watch', function() {
   // Watch app .js files
   gulp.watch('_app/scripts/**/*.coffee', ['js']);
   // Watch Jekyll html files
-  gulp.watch(['**/*.html', '_articles/**/**', '_pages/**/*.*', 'assets/data/**/**'], ['jekyll-rebuild']);
+  gulp.watch(['**/*.html', '_articles/**/**', '_pages/**/*.*', 'assets/data/**/**', 'assets/images/**/**'], ['jekyll-rebuild']);
   // Watch Jekyll sitemap XML file
   //gulp.watch('sitemap.xml', ['jekyll-rebuild']);
   // Watch Jekyll data files
