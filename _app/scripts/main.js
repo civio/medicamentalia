@@ -58,7 +58,9 @@
     // Fix Nav Page & activate items when scroll down
     $(window).scroll(function(e) {
 
-      if ($(this).scrollTop() > $('body > header').height()+50 && $(this).scrollTop() < $('.page-footer').offset().top-44) {
+      var footerOffset = $('.page-footer').length > 0 ? $('.page-footer').offset().top : $('.partners').offset().top;
+
+      if ($(this).scrollTop() > $('body > header').height()+50 && $(this).scrollTop() < footerOffset-44) {
         $navPage.addClass("fixed");
       } else {
         $navPage.removeClass("fixed");
