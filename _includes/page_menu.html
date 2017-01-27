@@ -1,3 +1,5 @@
+{% capture menu %}{% article_menu page %}{% endcapture %}
+{% if menu != '' %}
 <nav class="nav-page page-{{ page.ref }}">
   <div class="nav-page-container">
     <div class="container">
@@ -12,9 +14,7 @@
             </button>
         </div>
         <div id="page-menu" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-left">
-            {% page_menu page %}
-          </ul>
+          <ul class="nav navbar-nav navbar-left">{{ menu }}</ul>
         </div>
         <a href="#top" class="top-btn" title="Top"><i class="glyphicon glyphicon-chevron-up"></i></a>
         <a class="home-btn" href="{{ site.baseurl }}" title="{{ site.title }}">{{ site.title }}</a>
@@ -22,3 +22,4 @@
     </div>
   </div>
 </nav>
+{% endif %}

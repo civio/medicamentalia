@@ -32,7 +32,7 @@ eos
     end
   end
 
-  class PageMenuTag < Liquid::Tag
+  class ArticleMenuTag < Liquid::Tag
 
     include MedicamentaliaUtils
 
@@ -92,7 +92,7 @@ end
 Liquid::Template.register_filter(Jekyll::AnchorLinksGenerator)
 
 # Use article_menu tag as {% article_menu page %}
-Liquid::Template.register_tag('page_menu', Jekyll::PageMenuTag)
+Liquid::Template.register_tag('article_menu', Jekyll::ArticleMenuTag)
 
 # Use page_link tag as {% page_link ref %}
 Liquid::Template.register_tag('page_link', Jekyll::PageLinkTag)
