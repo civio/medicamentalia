@@ -7,7 +7,8 @@ class window.BaseGraph
       bottom: 20
       left: 0
     aspectRatio: 0.5625
-    label: false          # show/hide labels
+    label: false           # show/hide labels
+    mouseEvents: true      # add/remove mouse event listeners
     key:
       id: 'key'
       x:  'key'            # name for x column

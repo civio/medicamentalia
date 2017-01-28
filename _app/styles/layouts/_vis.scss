@@ -110,6 +110,10 @@ Superbugs bar graph
   .bar-label-x,
   .bar-label-y{
     display: none;
+    &.active{
+      display: block;
+      fill: $brand-primary;
+    }
   }
 
   #ES.bar,
@@ -124,17 +128,6 @@ Superbugs bar graph
 
   #bar-label-x-ES{
     font-weight: 600;
-  }
-}
-
-#antibiotics-animals-graph{
-  #LT.bar-label,
-  #SI.bar-label,
-  #FI.bar-label,
-  #SE.bar-label,
-  #IS.bar-label,
-  #NO.bar-label{
-    display: none;
   }
 }
 

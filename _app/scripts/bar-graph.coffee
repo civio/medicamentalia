@@ -42,6 +42,10 @@ class window.BarGraph extends window.BaseGraph
       .attr 'class', (d) -> if d.active then 'bar active' else 'bar'
       .attr 'id',    (d) => d[@options.key.id]
       .call @setBarDimensions
+    if @options.mouseEvents
+      @container.selectAll('.bar')
+        .on   'mouseover', @onMouseOver
+        .on   'mouseout', @onMouseOut
     if @options.label
       # draw labels x
       @container.selectAll('.bar-label-x')
@@ -49,7 +53,7 @@ class window.BarGraph extends window.BaseGraph
       .enter().append('text')
         .attr 'class', (d) -> if d.active then 'bar-label-x active' else 'bar-label-x'
         .attr 'id',    (d) => 'bar-label-x-'+d[@options.key.id]
-        .attr 'dy',    '1.5em'
+        .attr 'dy',    '1.25em'
         .attr 'text-anchor', 'middle'
         .text (d) => d[@options.key.x]
         .call @setBarLabelXDimensions
@@ -92,3 +96,17 @@ class window.BarGraph extends window.BaseGraph
     element
       .attr 'x', (d) => @x(d[@options.key.x]) + @x.bandwidth() * 0.5
       .attr 'y', (d) => @y(d[@options.key.y])
+
+  onMouseOver: (d) =>
+    @container.select('#bar-label-x-'+d[@options.key.id])
+      .classed 'active', true
+    @container.select('#bar-label-y-'+d[@options.key.id])
+      .classed 'active', true
+
+  onMouseOut: (d) =>
+    unless d.active
+      @container.select('#bar-label-x-'+d[@options.key.id])
+        .classed 'active', false
+      @container.select('#bar-label-y-'+d[@options.key.id])
+        .classed 'active', false
+    
