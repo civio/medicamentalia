@@ -60,6 +60,7 @@ Common
 
   .area{
     fill: $brand-primary;
+    opacity: 0.7;
   }
 
   .bar {
@@ -425,7 +426,6 @@ World diseases cases
     }
     .area{
       fill: $color-orange;
-      opacity: 0.7;
     }
     .graph-container-caption{
       margin-bottom: $grid-gutter-width/3;
@@ -1244,6 +1244,17 @@ Infographic
   }
 }
 
+#inventors{
+  h4{
+    margin-bottom: $grid-gutter-width/2;
+  }
+  p{
+    color: $text-color;
+    line-height: 1.5em;
+    margin-bottom: $grid-gutter-width;
+  }
+}
+
 // Iframe
 
 .iframe{
@@ -1311,6 +1322,25 @@ Infographic
   #patents-graph .axis text{
     font-size: 8.5px;
   }
+  #inventors .col-md-3:nth-child(3n+1){
+    clear: both;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  #inventors .col-md-3:nth-child(2n+1){
+    clear: both;
+  }
+}
+@media (min-width: $screen-sm) and (max-width: $screen-md) {
+  #inventors .col-md-3:nth-child(3n+1){
+    clear: both;
+  }
+}
+@media (min-width: $screen-md) {
+  #inventors .col-md-3:nth-child(4n+1){
+    clear: both;
+  }
 }
 
 @media (min-width: $screen-lg) {
@@ -1337,4 +1367,28 @@ Infographic
 
     @include infographic-mobile();
   }
+}
+
+#guatemala-coverage-mmr{
+  margin: 2*$grid-gutter-width 0;
+
+  .axis .tick text{
+    fill: white;
+  }
+  .axis .tick line{
+    stroke: white;
+  }
+
+  .axis .tick{
+    opacity: 0.8;
+  }
+
+  .line{
+    stroke: white;
+    stroke-width: 3px;
+  }
+}
+
+body.guatemala-graph {
+  background: $color-green-dark;
 }

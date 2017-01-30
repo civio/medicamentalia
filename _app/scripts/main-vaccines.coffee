@@ -152,7 +152,6 @@
 
   # World Cases Multiple Small
   setupWorldCasesMultipleSmallGraph = ->
-    console.log 'setupWorldCasesMultipleSmallGraph'
     diseases = ['diphteria', 'measles','pertussis','polio','tetanus']
     graphs = []
     # Load data
@@ -225,7 +224,6 @@
             .filter((d) -> d.vaccine == vaccine and d['2015'] != '')
             .map(data_parser)
             .sort(data_sort)
-          console.table graph_data
           graph_value = graph_data.filter((d) -> d.key == country)
           # Setup graph
           graph = new window.BarGraph(disease+'-immunization-bar-graph',
@@ -246,7 +244,36 @@
           # On resize
           $(window).resize -> graph.onResize()
   
-  
+  ###
+  setupGuatemalaCoverageLineGraph = ->
+    graph = new window.LineGraph('guatemala-coverage-mmr',
+      #isArea: true
+      margin: 
+        left: 0
+        right: 0
+        bottom: 20)
+    graph.xAxis.tickValues [2000, 2005, 2010, 2015]
+    graph.yAxis
+      .tickValues [0, 25, 50, 75, 100]
+      .tickFormat (d) -> d+'%'
+    graph.loadData baseurl+'/assets/data/guatemala-coverage-mmr.csv'
+    graph.$el.on 'draw-complete', (e) ->
+      line = graph.container.select('.line')
+      console.log line.node()
+      length = line.node().getTotalLength();
+      line
+        .attr('stroke-dasharray', length + ' ' + length)
+        .attr('stroke-dashoffset', length)
+        .transition()
+          .delay(5000)
+          .duration(5000)
+          .ease(d3.easeSinInOut)
+          .attr('stroke-dashoffset', 0)
+
+  if $('#guatemala-coverage-mmr').length > 0
+    setupGuatemalaCoverageLineGraph()
+  ###
+
   if $('#video-map-polio').length > 0
     setVideoMapPolio()
 
