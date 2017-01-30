@@ -4,16 +4,15 @@ title:      Equipo y metodología
 img:        pages/nosotros-1040x552.jpg
 
 gallery:
-  - image: images/articles/Pizarra.jpg
+  - image: articles/pizarra.jpg
     title: Raúl y Eva comentan la composición del proyecto y le dan vueltas a cómo será la web. 
-  - image: images/articles/Miguel.jpg
-    title: Miguel, en plena entrevista en Pretoria (atención al elefante falsete). | Foto: Serusha Govender
-  - image: images/articles/Eva-Asier.jpg
-    title: Eva y Asier, tras la entrevista al ginecólogo Gerson Eduardo Galvez, en Ciudad de Guatemala. | Foto: Manuel Penados
-  - image: images/articles/Raul.jpg
-    title: Raúl, creando cosas bonitas para explicar conceptos difíciles. 
- 
-
+  - image: articles/Miguel.jpg
+    title: "Miguel, en plena entrevista en Pretoria (atención al elefante falsete). | Foto: Serusha Govender"
+  - image: articles/eva-asier.jpg
+    title: "Eva y Asier, tras la entrevista al ginecólogo Gerson Eduardo Galvez, en Ciudad de Guatemala. | Foto: Manuel Penados"
+  - image: articles/raul.jpg
+    title: Raúl, creando cosas bonitas para explicar conceptos difíciles.
+  
 order:      5
 slug:       nosotros
 ref:        vaccines-team

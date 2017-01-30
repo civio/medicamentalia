@@ -34,11 +34,13 @@ El fin de la polio está muy cerca. En 2016 se registraron 42 casos de esta enfe
 
 Así, la humanidad está a un empujón -si no baja la guardia- de eliminar de la faz de la tierra, literalmente, una enfermedad que a principios del siglo XX tenía atemorizada a la población, ya que afecta sobre todo a niños. El virus provoca fiebre, cansancio, cefalea, vómitos, rigidez y dolores en los miembros. En algunos casos, además, causa parálisis y deriva en deformaciones, una imagen que quedó marcada en la mente de aquellos que convivieron con ella. Como otra imagen, la de los llamados pulmones de acero, unas cápsulas de metal que se utilizaron para tratar los casos más graves, aquellos en los que la parálisis había afectado también a los músculos encargados de poner en marcha la respiración. Introducían a cada paciente dentro de un aparato, de forma hermética, con solo cabeza y cuello en el exterior, y, a través de lo que se llamó presión negativa, conseguían que sus pulmones pudieran inspirar y espirar. 
 
-{% include caption.html img="articles/jonas-salk.jpg" caption="Jonas Salk, en la portada de la revista Time de 1954." author="Polio Erradication" %}
+{% include caption.html img="articles/jonas-salk.jpg" caption="Jonas Salk, en la portada de la revista Time de 1954." author="Polio Erradication" align="alignright" %}
 
 Con esa crisis sanitaria como contexto, Jonas Salk creó la vacuna contra la enfermedad y renunció a su patente. Hace poco más de 60 años que se empezó a utilizar. Poco después, Albert Bruce Sabin inventó la versión oral, clave para alcanzar a millones de niños en todo el mundo, gracias a su facilidad de administración. Ellos dos son algunos de los muchos hombres y mujeres que han contribuido, desde las primeras inoculaciones, a levantar un escudo preventivo frente a decenas de enfermedades. Muchos de ellos las habían vivido de cerca e investigaban con una dosis de motivación extra.
 
-### Los inventores
+<div style="clear: both"></div>
+
+### Los pioneros
 
 {% include vaccines/inventors.es.html %}
 
