@@ -1,6 +1,8 @@
 class window.LineGraph extends window.BaseGraph
 
-  activeLines: []
+
+  yFormat: d3.format('d')   # set labels hover format
+
 
   # Constructor
   # -----------
@@ -73,36 +75,22 @@ class window.LineGraph extends window.BaseGraph
     # clear graph before setup
     @container.select('.graph').remove()
     # draw graph container 
-    graph = @container.append('g')
+    @graph = @container.append('g')
       .attr 'class', 'graph'
     # draw lines
-    graph.selectAll('.line')
-      .data(@data)
-    .enter().append('path')
-      .attr 'class', (d) => if @activeLines.indexOf(d[@options.key.x]) == -1 then 'line' else 'line active'
-      .attr 'id',    (d) => 'line-' + d[@options.key.id]
-      .datum (d) -> return d3.entries(d.values)
-      .attr 'd', @line
-    # draw area
+    @drawLines()
+    # draw areas
     if @options.isArea
-      graph.selectAll('.area')
-        .data(@data)
-      .enter().append('path')
-        .attr  'class', (d) => if @activeLines.indexOf(d[@options.key.x]) == -1 then 'area' else 'area active'
-        .attr  'id',    (d) => 'area-' + d[@options.key.id]
-        .datum (d) -> d3.entries(d.values)
-        .attr 'd', @area
+      @drawAreas()
     # draw labels
     if @options.label
-      graph.selectAll('.line-label')
-        .data(@data)
-      .enter().append('text')
-        .attr 'class', 'line-label'
-        .attr 'id',    (d) => 'line-label-'+d[@options.key.id]
-        .attr 'text-anchor', 'end'
-        .attr 'dy', '-0.125em'
-        .text (d) => d[@options.key.x]
-        .call @setLabelDimensions
+      @drawLabels()
+    # draw mouse events labels
+    if @options.mouseEvents
+      @drawLineLabelHover()
+      # else
+      #   @drawTooltip()
+      @drawRectOverlay()
     return @
 
   updateGraphDimensions: ->
@@ -121,9 +109,137 @@ class window.LineGraph extends window.BaseGraph
     if @options.label
       @container.selectAll('.line-label')
         .call @setLabelDimensions
+    if @options.mouseEvents
+      @container.select('.overlay')
+        .call @setOverlayDimensions
     return @
+
+  drawLines: ->
+    @graph.selectAll('.line')
+      .data(@data)
+    .enter().append('path')
+      .attr 'class', 'line'
+      .attr 'id',    (d) => 'line-' + d[@options.key.id]
+      .datum (d) -> return d3.entries(d.values)
+      .attr 'd', @line
+
+  drawAreas: ->
+    @graph.selectAll('.area')
+      .data(@data)
+    .enter().append('path')
+      .attr  'class', 'area'
+      .attr  'id',    (d) => 'area-' + d[@options.key.id]
+      .datum (d) -> d3.entries(d.values)
+      .attr 'd', @area
+
+  drawLabels: ->
+    @graph.selectAll('.line-label')
+      .data(@data)
+    .enter().append('text')
+      .attr 'class', 'line-label'
+      .attr 'id',    (d) => 'line-label-'+d[@options.key.id]
+      .attr 'text-anchor', 'end'
+      .attr 'dy', '-0.125em'
+      .text (d) => d[@options.key.x]
+      .call @setLabelDimensions
+
+  drawLineLabelHover: ->
+    @container.selectAll('.line-label-point')
+      .data(@data)
+    .enter().append('circle')
+      .attr 'id',    (d) => 'line-label-point-'+d[@options.key.id]
+      .attr 'class', 'line-label-point'
+      .attr 'r', 4
+      .style 'display', 'none'
+    @container.append('text')
+      .attr 'class', 'tick-hover'
+      .attr 'dy', '0.71em'
+      .attr 'y', Math.round @height+9
+      .style 'display', 'none'
+    if @data.length == 1
+      @container.append('text')
+        .attr 'class', 'line-label-hover'
+        .attr 'text-anchor', 'middle'
+        .attr 'dy', '-0.5em'
+        .style 'display', 'none'
+
+  drawRectOverlay: ->
+    @container.append('rect')
+      .attr 'class', 'overlay'
+      .call @setOverlayDimensions
+      .on 'mouseover', @onMouseMove
+      .on 'mouseout',  @onMouseOut
+      .on 'mousemove', @onMouseMove
 
   setLabelDimensions: (element) =>
     element
       .attr 'x', @width
       .attr 'y', (d) => @y(d.values[@years[@years.length-1]])
+
+  setOverlayDimensions: (element) =>
+    element
+      .attr 'width', @width
+      .attr 'height', @height
+
+  onMouseOut: (d) =>
+    @$el.trigger 'mouseout'
+    @hideLabel()
+
+  onMouseMove: (d) =>
+    position = d3.mouse(d3.event.target)
+    year = Math.round @x.invert(position[0])
+    if year != @currentYear
+      @$el.trigger 'change-year', year
+      @setLabel year
+
+  setLabel: (year) ->
+    @currentYear = year
+    @xAxis.tickValues [year]
+    @container.select('.x.axis')
+      .selectAll('.tick')
+      .style 'display', 'none'
+    @container.selectAll('.line-label-point')
+      .each (d) => @setLineLabelHoverPosition d
+    @container.select('.tick-hover')
+      .style 'display', 'block'
+      .attr 'x', Math.round @x(@currentYear)
+      .text @currentYear
+
+  hideLabel: ->
+    @container.selectAll('.line-label-point')
+      .style 'display', 'none'
+    @container.selectAll('.line-label-hover')
+      .style 'display', 'none'
+    @container.select('.x.axis')
+      .selectAll('.tick')
+      .style 'display', 'block'
+    @container.select('.tick-hover')
+      .style 'display', 'none'
+
+  setLineLabelHoverPosition: (data) =>
+    # get current year
+    year = @currentYear
+    while @years.indexOf(year) == -1 && @currentYear > @years[0]
+      year--
+    @currentYear = year
+    # get point & label
+    point = d3.select('#line-label-point-'+data[@options.key.id])
+    label = @container.selectAll('.line-label-hover')
+    # hide point & label is there is no data
+    unless data.values[year]
+      point.style 'display', 'none'
+      label.style 'display', 'none'
+      return
+    # show point & label if there's data
+    point.style 'display', 'block'
+    label.style 'display', 'block'
+     # set line label point
+    point
+      .attr 'cx', (d) => @x year
+      .attr 'cy', (d) => if data.values[year] then @y(data.values[year]) else 0
+    # set line label hover
+    label
+      .attr 'x', (d) => @x year
+      .attr 'y', (d) => if data.values[year] then @y(data.values[year]) else 0
+      .text (d) => if data.values[year] then @yFormat(data.values[year]) else ''
+      

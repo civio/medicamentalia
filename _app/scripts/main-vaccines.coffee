@@ -154,6 +154,7 @@
   setupWorldCasesMultipleSmallGraph = ->
     console.log 'setupWorldCasesMultipleSmallGraph'
     diseases = ['diphteria', 'measles','pertussis','polio','tetanus']
+    graphs = []
     # Load data
     d3.csv baseurl+'/assets/data/diseases-cases-world.csv', (error, data) ->
       # Get max value to create a common y scale
@@ -169,11 +170,24 @@
         graph = new window.LineGraph(disease+'-world-graph',
           isArea: true
           margin: left: 20
-          key: x: 'disease')
+          key: 
+            x: 'disease'
+            id: 'disease')
+        graphs.push graph
         graph.xAxis.tickValues [1980, 2015]
         graph.yAxis.ticks(2).tickFormat d3.format('.0s')
+        graph.yFormat = d3.format('.2s')
         graph.getScaleYDomain = -> return [0, if disease == 'measles' or disease == 'pertussis' then maxValue1 else maxValue2]
         graph.setData disease_data
+        # listen to year changes & update each graph label
+        graph.$el.on 'change-year', (e, year) ->
+          graphs.forEach (g) ->
+            unless g == graph
+              g.setLabel year
+        graph.$el.on 'mouseout', (e) ->
+          graphs.forEach (g) ->
+            unless g == graph
+              g.hideLabel()
         $(window).resize graph.onResize
 
   setupImmunizationDiseaseBarGraph = ->

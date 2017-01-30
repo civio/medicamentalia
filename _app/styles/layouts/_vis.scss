@@ -14,12 +14,13 @@ Common
       display: none;
     }
     .tick text {
-      font-size: 10px;
+      font-size: 11px;
+      font-family: $font-family-sans-serif;
       fill: $gray-light;
     }
   }
   .x.axis .tick text {
-    text-anchor: middle;
+    text-anchor: middle;  
   }
   .y.axis{
     .tick text {
@@ -31,8 +32,7 @@ Common
     }
   }
 
-  .line-graph,
-  .area-graph{
+  .line-graph{
     .x.axis{
       .tick:nth-child(2) text{
         text-anchor: start;
@@ -40,6 +40,15 @@ Common
       .tick:last-child text{
         text-anchor: end;
       }
+    }
+    .tick-hover{
+      font-size: 11px;
+      fill: $gray-light;
+      text-anchor: middle;
+    }
+    .overlay {
+      fill: none;
+      pointer-events: all;
     }
   }
 
@@ -87,6 +96,7 @@ Common
   }
 
   .line-label,
+  .line-label-hover,
   .marker-label{
     font-size: 0.75em;
     line-height: 1em;
@@ -94,8 +104,17 @@ Common
     alignment-baseline: ideographic;
   }
 
-  .line-label{
+  .line-label,
+  .line-label-hover{
     font-size: 0.875em;
+    text-shadow: 0 1px 0 white;
+    font-weight: 600;
+  }
+
+  .line-label-point{
+    stroke: $brand-primary;
+    stroke-width: 2px;
+    fill: white;
   }
 }
 
@@ -356,11 +375,9 @@ Vaccines coverage
     stroke: $color-orange;
     stroke-width: 1.5px;
   }
-  .line-label{
-    font-weight: 600;
-    text-shadow: 0 1px 0 white;
+  .line-label-point{
+    stroke: $color-orange;
   }
-
   #line-label-LKA,
   #line-label-FRA{
     alignment-baseline: text-before-edge;
@@ -398,16 +415,21 @@ World diseases cases
 */
 
 #world-cases{
-  .graph-container .line{
-    stroke: $color-orange;
-    stroke-width: 2px;
-  }
-  .graph-container .area{
-    fill: $color-orange;
-    opacity: 0.7;
-  }
-  .graph-container .graph-container-caption{
-    margin-bottom: $grid-gutter-width/3;
+  .graph-container {
+    .line{
+      stroke: $color-orange;
+      stroke-width: 2px;
+    }
+    .line-label-point{
+      stroke: $color-orange;
+    }
+    .area{
+      fill: $color-orange;
+      opacity: 0.7;
+    }
+    .graph-container-caption{
+      margin-bottom: $grid-gutter-width/3;
+    }
   }
 }
 
