@@ -38,6 +38,8 @@ Así, la humanidad está a un empujón -si no baja la guardia- de eliminar de la
 
 Con esa crisis sanitaria como contexto, Jonas Salk creó la vacuna contra la enfermedad y renunció a su patente. Hace poco más de 60 años que se empezó a utilizar. Poco después, Albert Bruce Sabin inventó la versión oral, clave para alcanzar a millones de niños en todo el mundo, gracias a su facilidad de administración. Ellos dos son algunos de los muchos hombres y mujeres que han contribuido, desde las primeras inoculaciones, a levantar un escudo preventivo frente a decenas de enfermedades. Muchos de ellos las habían vivido de cerca e investigaban con una dosis de motivación extra.
 
+### Los inventores
+
 {% include vaccines/inventors.es.html %}
 
 Los éxitos de las vacunas no solo se cuentan a guerra vencida, como con la viruela o, casi, como con la polio, sino a batalla ganada. Algunas enfermedades siguen presentes, pero su impacto ha menguado de forma drástica gracias a, entre otras mejoras sanitarias, la inmunización. 

@@ -57,7 +57,7 @@ En 2015, los niveles mundiales de vacunación de la tercera y última dosis de l
 
 {% include vaccines/immunization_coverage_disease_graph.en.html disease="polio" vaccine="Pol3" title="Polio" description="de la tercera dosis contra la polio " %}
 
-Somalia y Guinea Ecuatorial son también los que presentan peores cifras de vacunación (44 y 17%, respectivamente), junto a Ucrania, de la tercera dosis de la DTP (difteria, tétanos, tos ferina, en sus siglas en inglés). El caso de Ucrania es otro ejemplo de marcha atrás: sufrió un bajón considerable de sus cifras: pasó de un 76% de inmunización en 2012 a un 23% en 2015. 
+Somalia y Guinea Ecuatorial son también los que presentan peores cifras de vacunación (44 y 17%, respectivamente), junto a Ucrania, de la tercera dosis de la DTP (difteria, tétanos, tos ferina, en sus siglas en inglés). El caso de Ucrania es otro ejemplo de marcha atrás: sufrió un bajón considerable de sus cifras: pasó de un 76% de inmunización en 2012 a un 23% en 2015.
 
 La DTP incluye tres dosis y, en algunos países, una cuarta de refuerzo. Como pasa con el sarampión, la pérdida de niños vacunados entre la primera y la última dosis es considerable. En Guatemala vacunaron a un 96% de los niños de la primera dosis, una cifra alta y más que suficiente para alcanzar la inmunización de rebaño, pero alcanzaron a un 73%, muchos menos con la tercera dosis. En Panamá, un caso similar, pasaron de un 99 a un 74%.  
 

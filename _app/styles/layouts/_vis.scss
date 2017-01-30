@@ -1253,6 +1253,10 @@ Infographic
     line-height: 1.5em;
     margin-bottom: $grid-gutter-width;
   }
+  img{
+    max-width: 200px;
+    height: auto;
+  }
 }
 
 // Iframe
@@ -1332,9 +1336,19 @@ Infographic
     clear: both;
   }
 }
+
+@media (max-width: 480px) {
+  #inventors .col-md-3 {
+    width: 100%;
+  }
+}
+
 @media (min-width: $screen-sm) and (max-width: $screen-md) {
   #inventors .col-md-3:nth-child(3n+1){
     clear: both;
+  }
+  #inventors .col-md-3:nth-child(7){
+    margin-left: 16.66667%;
   }
 }
 @media (min-width: $screen-md) {

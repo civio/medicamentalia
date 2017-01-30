@@ -58,11 +58,12 @@ Sí lo están en regiones en las que las epidemias de males como el sarampión o
 
 Que la memoria mantenga vivos los recuerdos de épocas peores y las dificultades de acceso a la salud actuales hacen que, en ciertas regiones, como en Centroamérica, la desconfianza no florezca. El miedo inicial a las vacunas en zonas rurales -por temor a lo desconocido- no ha evolucionado a movimientos antivacunas modernos, que son anecdóticos. Esas comunidades han pasado "de esconder a sus niños" cuando llegaban los responsables de las campañas de vacunación a "hacer cola cuando se enteran de que llegó la vacuna al centro de salud", como narra Ademir Vásquez, del programa nacional de inmunizaciones del Ministerio de Salud de Guatemala.
 
+### ¿Cómo se combate?
+
 <div class="container-right">
 {% include video-container.html videoid="gB_DH1g1hVU" title="Ademir Vásquez, del programa nacional de inmunizaciones del Ministerio de Salud de Guatemala &quot;Cuando yo inicié a trabar en salud pública, que hace bastante tiempo, cuando eran las jornadas de vacunación íbamos a una comunidad, a las aldeas, los papás escondían a los niños, y nos costaba andar persiguiendo y convenciendo. Y toda esta evolución es importante. Ahora la gente demanda&quot;" credit="Vídeo: Manuel Penados" %}
 </div>
 
-### ¿Cómo se combate?
 Todas las personas entrevistadas para este reportaje repiten la misma palabra: pedagogía. Pero no es sencillo. Un [artículo](http://elpais.com/elpais/2015/06/03/ciencia/1433354194_756223.html) publicado por el periodista Javier Salas en El País recopiló varios estudios que demostraban que ni atiborrarles de datos, ni asustarles con las posibles consecuencias, ni corregirles ni imponerles la vacunación funciona. De hecho, esas medidas [pueden ser contraproducentes](http://pediatrics.aappublications.org/content/early/2014/02/25/peds.2013-2365).
 
 Y ¿entonces? Un [estudio](http://www.ajpmonline.org/article/S0749-3797(11)00042-0/abstract) publicado en 2011 por la pediatra Allison Kempe probó que el mejor camino pasa por el médico de familia. Sus consejos, basados en experiencias personales -¿qué haría yo si fuera mi hijo?-, funcionan.  
