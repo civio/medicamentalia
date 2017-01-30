@@ -26,42 +26,41 @@ lang:       es
 ---
 
 <div class="container page-content" markdown="1">
-  <div class="page-content-container" markdown="1">
+<div class="page-content-container" markdown="1">
 
 ## Nosotros
 
-Medicamentalia es un proyecto de [Civio](http://www.civio.es/) en el que, además de los miembros de la fundación, hemos contado con valiosas colaboraciones. Ante todos ustedes, el equipo:
+Medicamentalia Vacunas es un trabajo periodístico de [Civio](http://www.civio.es/) sobre la situación de la vacunación en el mundo y que combina análisis de datos con trabajo de campo en varios países. Es la continuación del trabajo realizado en la primera investigación, centrada en el [acceso a medicinas](http://medicamentalia.org/access/) y que fue galardonada con el premio a la Mejor Investigación del año en redacción pequeña de los Data Journalism Awards y el Premio Gabriel García Márquez en su categoría de Innovación. 
 
-*   **Eva Belmonte**. Periodista. Idea, dirección de proyecto, investigación, creación y análisis de la base de datos y trabajo de campo en Brasil.
-*   **Miguel Ángel Gavilanes**. Periodista. Investigación, creación y análisis de la base de datos. Edición y coordinación de vídeos.
-*   **Raúl Díaz Poblete**. Desarrollador. Desarrollo web, diseño de interfaz y visualización de datos.
-*   **Antonio Villarreal**. Periodista. Investigación, trabajo de campo en Ghana y edición.
-*   **David Cabo**. Desarrollador. Extracción, creación y análisis de la base de datos.
-*   **Javier de Vega**. Periodista. Investigación, edición de textos y comunicación.
-*   **Antonio Guzmán**. Diseñador. Diseño web e ilustración.
-*   **Cristina Moreno**. Gestión de proyecto.
+En esta segunda investigación que, como la primera, ha contado con una beca de Journalism Grants, han trabajado los miembros de Civio y hemos contado con valiosísimas colaboraciones de varias disciplinas y países. Ante todos ustedes, el equipo:
+
+*   **Eva Belmonte**. Periodista. Dirección de proyecto, investigación, creación y análisis de bases de datos, trabajo de campo en Centroamérica, reportajes y edición.
+*   **Raúl Díaz Poblete**. Desarrollador. Desarrollo web, diseño de interfaz, análisis y visualización de datos.
+*   **Miguel Ángel Gavilanes**. Periodista. Investigación, creación y análisis de bases de datos, trabajo de campo en Sudáfrica y reportajes.
+*   **Javier de Vega**. Periodista. Investigación, reportajes, edición y comunicación.
+*   **David Cabo**. Desarrollador. Extracción, creación y análisis de bases de datos.
+* **Amir Campos**. Gestión de proyecto.
+* **Manuel Penados**. Vídeo y foto en Guatemala y El Salvador.
+* **Denise Pimentel**. Edición de vídeos de Centroamérica.
+* **Serusha Govender** y **Anne Gonschorek**. Vídeo en Sudáfrica.
 
 ### Colaboradores:
 
-*   **Anne Vigna**. Vídeos y fotos en Río de Janeiro.
-*   **Elio Stamm**. Vídeos en Ghana.
-*   **Joseph Akwasi**. Fotógrafo en Ghana.
-*   **Henry Souza Nelson**. Fotógrafo en Ghana.
-*   **Marta Silvera**. Traducciones al inglés.
-*   **Jen Bramley**. Edición de textos en inglés.
-*   **Fabiola Czubaj (La Nación)** nos ayudó a entender los datos argentinos.
-*   **Belinda Grasnik (Correctiv!)** recopiló la información de Alemania.
-*   **Kristof Clerix (Knack)** recopiló la información de Bélgica.
+*   **Phil Smart**. Traducción español-inglés.
+*   **Asier Andrés**. Apoyo a la investigación en Guatemala.
+*   **Julio Hernández**. Sonido en vídeos de El Salvador.
+
 
 ### Agradecimientos
+Este proyecto no habría sido posible sin el apoyo inicial de una beca de Journalism Grants. Queremos agradecer al European Journalism Center el patrocinio de esta investigación, como ya hizo con la primera fase de Medicamentalia, y su infinita paciencia y comprensión con los problemas que han ido retrasando este lanzamiento, en especial a Diana Lungu, siempre dispuesta a echar una mano. 
 
-Empezamos agradeciendo su apoyo a los _media partners_ del proyecto ([20 Minutos](http://www.20minutos.es/), [Cadena Ser](http://cadenaser.com/), [Corriere della Sera](http://www.corriere.it/), [Correctiv!](https://correctiv.org/) y [La Nación](http://www.lanacion.com.ar/)), porque nos dieron el "sí, quiero" antes incluso de ver ni una sola columna de la base de datos o una frase del texto, demostrando una confianza ciega que esperamos haber recompensado. Y a [Journalism Grants](http://journalismgrants.org/), que nos premió con la beca que ha permitido desarrollar Medicamentalia.
+También dieron su sí al proyecto, antes de que fuera una realidad, nuestros media partners. Gracias a Euronews, El Mundo, La Sexta, X Magazine, Correctiv, Wired Italy y The Bureau of Investigative Journalism por la confianza y el apoyo. Sin ellos, llegaríamos a mucha menos gente y buena parte del trabajo dedicado a esta investigación sería en vano. 
 
-La tarea de comprender algo tan complejo como las regulaciones y normas internacionales que afectan a los precios de las medicinas es colosal. Por ello, queremos agradecer a quienes nos ayudaron, a través de conversaciones sin grabadora, tanto presenciales como por teléfono, correo electrónico o videoconferencia, a saber qué y cómo investigar. Gracias a Elisa López Varela, médico del Centro de Investigación en Enfermedades Infecciosas en Mozambique; Elisa Sicuri, economista de la salud de ISGlobal en Londres; Carlos Miranda, de Farmamundi en Madrid; Judit Rius, directora para EEUU de la campaña de acceso a medicamentos de Médicos Sin Fronteras en Nueva York; Fran Franco, del departamento de Internacional de Farmaindustria en Madrid; Margaret Ewen, encargada de la base de datos de HAI en Holanda; y Bernard Appiah y Barbara Gastel, profesores de la Texas A&M University, por ayudarnos a mejorar la precisión y la profundidad de nuestro periodismo. Gracias también por su tiempo a Javier Pardo, de Médicos del Mundo; y a Paola Ariza, periodista que nos echó una mano con los datos de Colombia.
+Para profundizar sobre un tema tan complejo como las vacunas necesitábamos meternos a fondo en el asunto. Leímos decenas de *papers* científicos y  centenares de artículos previos sobre el tema. Buen parte de ellos están enlazados en los reportajes. Gracias a todos los investigadores y periodistas especializados por allanarnos el camino, como Javi Salas, de El País, autor de numerosos artículos sobre el tema. Y a los compañeros que nos ayudaron en el camino, como Ximena Villagrán en Guatemala.
 
-También nos gustaría agradecer de forma muy especial la paciencia de todos los entrevistados en Brasil y Ghana, que accedieron a dejarse grabar, preguntar y compartir sus conocimientos.
+Gracias a todas las personas que cedieron su tiempo y su sabiduría en las entrevistas, tanto las previas como las que aparecen en los reportajes, por su generosidad.
 
-Y acabamos agradeciendo a Fernando Toledo y Jen Bramley, porque nos ayudaron a contrarreloj a pulir los últimos detalles para que Medicamentalia saliera a la luz lo mejor posible.
+Durante el proceso, recibimos premios importantes que nos dieron un empujón poderoso. Gracias a los Data Journalism Awards y los Premios Gabo por ese reconocimiento. 
 
 {% include gallery.html id="team" %}
 
@@ -69,67 +68,93 @@ Y acabamos agradeciendo a Fernando Toledo y Jen Bramley, porque nos ayudaron a c
 
 ### Investigación previa
 
-Antes de empezar a trabajar necesitábamos aprender. Para embarcarnos en este proyecto, realizamos varias entrevistas y revisamos decenas de _papers_ y estudios sobre la medición de precios. Ni de lejos pensábamos que éramos los primeros en enfrentarnos a este tema y queríamos aprender de los que ya lo habían hecho. En este sentido, fue muy útil la experiencia de iniciativas como [Medicamentos Abiertos](http://www.revistazo.biz/medicamentosabiertos/), en Centroamérica, o del [proyectazo](http://mpr.code4sa.org/) de Code for South Africa.
+Como en todos los proyectos de Civio, el arranque de la investigación vino con el paso atrás necesario: tocaba zambullirse a fondo en el tema. Mientras en la primera fase de Medicamentalia nos dedicamos a investigar acceso a medicamentos -precios, sistema de patentes...- en esta segunda fase queríamos tratar el tema de las vacunas de forma internacional y, esta vez, sin fijarnos solo en los precios, sino en otros elemenos como los niveles de inmunización, qué problemas existían, cómo funcionaban los sistemas de compra conjunta y problemas de abastecimiento, entre otros asuntos. 
 
-Durante semanas, buscamos un criterio común con el que poder, de la forma mas rigurosa posible, comparar la accesibilidad al tratamiento en diferentes países. Fue entonces cuando descubrimos la piedra angular del proyecto, la [base de datos](http://www.haiweb.org/MedPriceDatabase/) desarrollada por la organización Health Action International ([HAI](http://www.haiweb.org/)). A través de una [metodología completa y detallada](http://www.haiweb.org/medicineprices/manual/documents.html), que estudiamos a fondo para entender la complejidad de los datos, han conseguido recopilar información de decenas de países en todo el mundo sobre precios, acceso, diferencias entre medicamentos de marca y genéricos, composición del coste... de 14 medicinas esenciales en composiciones específicas: diazepam, paracetamol, cotrimoxazol, atenolol, glibenclamida, diclofenaco, ceftriaxona, captopril, amoxicilina, amitriptilina, ciprofloxacino, omeprazol, salbutamol y simvastatina.
+Leímos decenas de *papers* y artículos y analizamos a fondo documentos de organizaciones internacionales, así como los reports anuales de SAGE, el organismo encargado de analizar los asuntos vinculados a inmunización en en la OMS. 
 
-### Base de datos
+No éramos los primeros en tratar un tema así, y nos inspiraron investigaciones de otros colegas. Destacan, entre muchos otros: el [análisis y visualización](http://graphics.wsj.com/infectious-diseases-and-vaccines/) del efecto de la introducción de la vacuna del sarampión en los diferentes estados de Estados Unidos realizado por el Wall Street Journal, que nos hizo plantearnos si sería posible realizar algo similar pero ampliado a todos -o casi todos- los países del mundo. Así lo hicimos en el gráfico que podéis ver en el reportaje sobre niveles de vacunación. También nos inpiró el [enfoque](http://www.economist.com/blogs/graphicdetail/2016/03/daily-chart-16?utm_content=31884172&utm_medium=social&utm_source=twitter) de The Economist sobre las diferencias sorprendentes en esos niveles de cobertura entre países en desarrollo y países desarrollados, justo algo que ya nos había llamado la atención cuando atacamos por primera vez los datos y que se refleja en el artículo sobre antivacunas. 
 
-El primer escollo para nuestra investigación, destinada a comparar países de diferentes zonas e ingresos, era que los estudios de HAI estaban fechados en diferentes años. Aunque nos planteamos actualizar todas las cifras a 2015 (teniendo en cuenta cambios de moneda e inflación), decidimos que las comparaciones serían poco precisas si utilizábamos datos absolutos. Esa es la razón por la que no encuentras precios en nuestra [visualización](/precios/#viz).
-{% include caption.html img="pages/Metodologia-460x355.jpg" caption="Analizando los datos de HAI" author="Javier De Vega" align="alignright" %}
-Así, **decidimos usar dos valores relativos** que incorporan los informes de HAI: **el MPR** (Median Price reference), que es la relación del precio del fármaco con un [valor de referencia internacional](http://www.msh.org/) marcado por la organización MSH. El desvío con respecto a este indicador nos permite valorar el precio vinculado a un valor igual para todos y que cambia cada año. El segundo valor que analizamos es **la _affordability_**, es decir, el tiempo de trabajo necesario en cada país para poder pagar un tratamiento completo, vinculado al salario neto del funcionario con menor sueldo (como marca la metodología de HAI para evitar otras cifras más volátiles en países en desarrollo). En ambos casos, **decidimos comparar el precio del genérico más barato y mostrar tanto los datos privados (compra directa en farmacia sin receta o con receta de aseguradoras privadas) como los públicos (compra costeada parcial o totalmente por sistemas públicos de salud)**.
+### Los datos
+Para esta investigación necesitábamos cruzar distintas bases de datos: niveles de inmunización, casos por enfermedad, muertes por enfermedad, calendarios de vacunación, niveles de stockouts, presupuestos públicos destinados a las campañas de inmunización, precios de compra de vacunas por parte de estados y organizaciones, además de elementos básicos necesarios para poner en contexto como producto interior bruto por país o población. La mayoría de los datos recogidos, aunque están actualizados a diciembre de 2016, se refieren a información que abarca hasta 2015.
 
-Con el objetivo claro, el 11 de marzo descargamos unos 70 documentos de la página web de HAI, los tratamos de forma automática para convertirlos en una base de datos manejable y [completamos, limpiamos, estructuramos y comprobamos](https://github.com/civio/medicamentalia-theme/wiki/Extra-notes-about-the-methodology) toda la información, tanto de forma automática como manual. De esa forma, conseguimos crear el campamento base: teníamos los datos de 56 países sobre esas 14 medicinas esenciales. Con la metodología aprendida y tras resolver algunas dudas gracias a Margaret Ewen (HAI), llegaba la segunda parte del trabajo de datos: añadir países desarrollados para poder llevar a cabo la comparativa. Lo hicimos a través de fuentes oficiales y tras un estudio de los sistemas de salud pública de cada uno de los cinco países incorporados: Italia, Argentina, España, Bélgica y Alemania. En todos estos casos, hemos utilizado los datos de 2015 y el último precio de referencia internacional disponible (del mismo modo que se hace en los estudios de HAI), el de 2013\. En el caso alemán, el equipo de Correctiv! recopiló los datos y nosotros realizamos una última comprobación de cada uno de ellos para comprobar, como así fue, que todo estaba perfecto.
+En algunos casos, los encontramos en bases de datos fáciles de reutilizar, aunque requerían alguna limpieza. En otros, la información estaba en algunas páginas web pero era necesario hacer scraping para obtener una versión con la que pudiéramos trabajar. En los más complicados, tuvimos que crearlos a partir de varias fuentes de datos. 
 
-### España
+#### ¿Qué vacunas vamos a analizar?
+Empezamos teniendo en cuenta la [lista de vacunas esenciales](http://www.who.int/medicines/publications/essentialmedicines/en/) de la OMS, actualizada en abril de 2015. Estudiamos las recomendaciones para cada una y los calendarios de vacunación, para intentar abarcar aquellas más comunes en todo el planeta, lo que permitiría comparar entre diferentes países. 
 
-En cada país, la obtención de los datos relativos a los **precios** ha variado en función de la aportación pública de la administración. En el caso de **España**, es la Seguridad Social, el sistema de protección social del Estado, quien provee la cobertura sanitaria a los ciudadanos. Respecto al **salario**, el fijado es el de un funcionario de la clase E, con un complemento de nivel 1 al que se le suma el complemento específico más bajo para el año 2015\. La [fuente](http://www.sepg.pap.minhap.gob.es/sitios/sepg/es-ES/CostesPersonal/EstadisticasInformes/Documents/Retribuciones%20del%20personal%20Funcionario%202015.pdf) es la Secretaría de Estado de Presupuestos y Gastos, del ministerio de Hacienda y Administraciones Públicas.
+Realizamos unas fichas de cada vacuna para relacionarlas con su enfermedad y entender mejor su funcionamiento: dosis, recomendaciones... Así, tuvimos que excluir de algunos análisis la relación entre enfermedades y vacunas que no tenían un solo origen, como pasa con la meningitis -cubierta por diferentes tipos de vacunas según el tipo-, por ejemplo. Usamos una amplia lista de base, pero según el análisis o los resultados, nombramos una u otra vacuna en las investigaciones. No significa que el resto no sean importantes, sino que hemos encontrado menos información relevante o sus datos no eran comparables. 
 
-En cuanto a los precios, el Ministerio de Sanidad publica en su Nomenclator de Facturación los fármacos subvencionados por el SNS. Nosotros hemos tomado los datos de Junio de 2015 de la [página web oficial](http://www.msssi.gob.es/profesionales/nomenclator.do). Hemos extraído los datos del genérico más barato de los 14 medicamentos analizados, con las dosis más cercanas a las establecidas por HAI, de acuerdo a su precio de venta al público con IVA (PVP). Este es el **precio privado**: el coste del fármaco por venta libre, sin aportación del Estado, adquirido sin receta o prescrito a través de aseguradoras privadas.
+**Estos datos no son perfectos**, pero sí lo suficientemente significativos para extraer conclusiones. De hecho, [una de las preocupaciones](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1) del grupo de expertos en vacunas de la OMS es la baja calidad de los datos. "¿Cómo atajar un problema si no tenemos toda la información objetiva disponible sobre el mismo? De algunos países no se recogen datos de inmunización. Además, algunas de las cifras recogidas por la OMS en sus estadísticas no acaban de encajar. Un claro ejemplo de este problema es que si comparas las estadísticas de casos de cada enfermedad de la OMS y de la ECDC Europea por países, no coinciden del todo. 
 
-Además, el Nomenclator indica la aportación del beneficiario. Estas 14 medicinas están sujetas a dos categorías de aportación: normal o especial. La aportación normal varía dependiendo del nivel de renta del paciente. Hemos escogido el nivel de renta más bajo posible, lo que, según la [legislación vigente](http://www.boe.es/diario_boe/txt.php?id=BOE-A-2012-5403), significa que el paciente paga un 40% de su precio de referencia. Para los fármacos de aportación especial, el porcentaje es del 10%.
+#### Datos de inmunización
+Son la base de buena parte de nuestras investigaciones y muestran qué porcentaje de personas que deben recibir la vacuna por edad lo ha hecho. Los datos van desde 1980 -en algunas enfermedades- hasta 2015. La [fuente](http://www.who.int/immunization/monitoring_surveillance/data/Coverage_survey_data.xls?ua=1) es la OMS. También revisamos el [Atlas interactivo de inmunización](http://gamapserver.who.int/gho/interactive_charts/immunization/polio/atlas.html) de la OMS, pero nos faltaba algo importante: relacionar los niveles con PIB y otras variables, no solo con su posición geográfica.
 
-### Italia
+Aunque son datos bastante completos y muy útiles para nuestra investigación, tenemos que tener en cuenta que estos datos son **estimaciones**. 
 
-El funcionamiento de la sanidad en **Italia** es similar al caso de España, con su _Servizio Sanitario Nazionale_ (SSN). El Gobierno establece tres tipologías de fármacos, con diferentes subvenciones: clase A, para medicamentos esenciales y para pacientes crónicos, que son subvencionados por el SSN; clase C, el resto de medicinas, que corren a cuenta del paciente; y clase H, de uso hospitalario.
+Más del [95% de los estados remite cada año](http://www.who.int/bulletin/volumes/87/7/08-053819.pdf?ua=1#page=3) sus estimaciones sobre los porcentajes de inmunización a la Organización Mundial de la Salud (OMS), que revisa los datos posteriormente. La OMS asume que las estimaciones finales cuentan con un [error de al menos un ± 3%](http://www.who.int/bulletin/volumes/87/7/08-053819.pdf?ua=1#page=5) y pueden llegar hasta un ± 20%.
 
-Doce de los medicamentos, a excepción del Diazepam y el Paracetamol, están incluidos en la clase A, cubiertos por el sistema de salud público. Sin embargo, el SSN subvenciona el precio de referencia, fijado en 2011, y de la diferencia se hace cargo el ciudadano. La Agencia Italiana del Fármaco (AIFA) publica un [listado](http://www.agenziafarmaco.gov.it/it/content/dati-sulle-liste-dei-farmaci-open-data) con el **precio privado**, la subvención y la diferencia. Esta última será el **precio público**. En la base de datos no están incluidos los medicamentos de la clase C, ya que no existe un documento oficial que recoja sus precios.
+Por su parte, los estados tienen dos herramientas para estimar la cobertura de vacunación de la población:
 
-Con todo, en Italia existe el pago de una tarifa por prescripción, el _ticket_, que cada región puede establecer debido a sus competencias y que se suma a la diferencia comentada en el párrafo anterior. Desde el 1€ en Trentino a los 3,5€ de Campania, los precios de los medicamentos varían según el lugar de residencia. Debido a esa disparidad de precios públicos por zonas, decidimos aunar los resultados en una mediana para todo el país.
+* Método administrativo: el porcentaje de vacunación se obtiene al dividir las vacunas administradas –el numerador– entre la población objetivo –el denominador–. Es el más común. Este método puede producir errores si existen fallos en algunos de los datos, como por ejemplo, en la población total, en los casos que existe una gran movilidad interior.
 
-Por último, el **sueldo** más bajo de un funcionario italiano, correspondiente al grupo A, está tomado de la media de 2013 que publica el gobierno ([aquí](https://www.aranagenzia.it/index.php/statistiche-e-pubblicazioni/dati-statistici “ target=)), ya que estos salarios no experimentaron ninguna subida en 2014 ni en 2015.
+Fuente: [OMS](http://www.who.int/immunization/monitoring_surveillance/routine/coverage/en/index1.html#), [PAHO](http://www.paho.org/immunization/toolkit/resources/reporting-monitoring/es/Modulo2-coberturas-administrativas.pdf?ua=1#page=19), [Ministerio de Sanidad](http://www.msssi.gob.es/profesionales/saludPublica/prevPromocion/vacunaciones/coberturas.htm)*
 
-### Argentina
+I.e., para calcular la cobertura de vacunación de los niños de 12 y 23 meses se divide el número de niños con edades entre 12 y 23 meses que han recibido todas las dosis que les corresponden, según el calendario de vacunación del país, entre el número total de niños entre 12 y 23 meses.
 
-El sistema sanitario en **Argentina** difiere de los sistemas públicos de salud europeos. La afiliación de los trabajadores a un servicio de salud es obligatoria por ley. Sin embargo, no es el Estado el garante de la organización, financiación y responsable de la atención médica. Estas funciones son delegadas en las Obras Sociales, los principales prestatarios de cobertura médica. Por otro lado, existe Medicina Prepaga, atención sanitaria prestada por aseguradoras privadas.
+* Encuestas: se deben realizar entre cada 3 y 5 años. Sirven para estudiar la fiabilidad del método administrativo, [o sustituirlo]((http://www.who.int/immunization/monitoring_surveillance/Vaccination_coverage_cluster_survey_with_annexes.pdf?ua=1#page=12)). Los datos se obtienen mediante la revisión de las cartillas de vacunación, el historial de vacunación de los centros o  entrevistas a las familias. El cálculo de numeradores y denominadores es similar al que se realiza en el método administrativo, pero en grupos más pequeños.
 
-Con todo, el [Programa Médico Obligatorio](http://www.sssalud.gov.ar/index/index.php?cat=beneficiarios&opc=pmoprincipal) (PMO) establece la canasta básica de prestaciones que han de brindar las obras sociales. Este estipula, además, la cobertura de los 14 medicamentos.
+Fuente: [OMS](http://www.who.int/immunization/monitoring_surveillance/routine/coverage/en/index2.html)
 
-En su mayoría, la subvención mínima por parte del asegurador será del 40% del precio de referencia del medicamento. En algunos genéricos, el Gobierno de la Nación determina [una reducción del 70% sobre el precio de referencia](http://www.sssalud.gov.ar/index/index.php?opc=genericos70). Es precisamente este listado el que hemos consultado en primer lugar para determinar el **precio privado** y el **precio público** de los que gozan de dicha subvención. La última actualización de la base de datos, del 29 de Mayo de 2015, contiene cuatro de los principios activos: Atenolol, Simvastatin, Salbutamol y Glibenclamida.
+En todos los casos tuvimos que tener en cuenta cómo tratábamos las dosis. En ocasiones era interesante comparar los resultados entre la primera y la última, pero para las investigaciones decidíamos qué dosis era la más representativa. En principio, para la mayoría de análisis, utilizábamos la última, al considerar que es la que marca que se ha alcanzado la inmunización completa. Para asegurar esa postura, analizamos y encontramos muy pocos casos anómalos en los que el porcentaje de inmunización de la última dosis sea más elevado que los anteriores.
 
-Para obtener los precios del resto de los fármacos hemos realizado una doble comprobación. Por un lado, hemos extraído los precios de los 10 medicamentos restantes (con idéntica dosis y presentación a la estudiada) de la revista científica para farmacias [Kairos](http://www.ar.kairosweb.com). Por otro lado, hemos descargado manualmente (última revisión a 19 de Junio de 2015) los medicamentos del [Vademécum Nacional de Medicamentos](http://anmatvademecum.servicios.pami.org.ar/index.html) (VNM) de la Administración Nacional de Medicamentos, Alimentos y Tecnología Médica (ANMAT), organismo regulador dependiente del ministerio de Salud de Argentina. El VNM es una fuente oficial y en continua actualización que publica todos los medicamentos que se comercializan en Argentina.
+Existen algunas excepciones concretas. Por ejemplo, para la segunda dosis de la vacuna del sarampión, Francia solo da datos hasta 2014. Para nuestro análisis, del mismo modo que hace la OMS en sus [fichas por países]((http://www.who.int/immunization/monitoring_surveillance/data/fra.pdf)), alargamos la cifra de 2014 a 2015 hasta contar con los datos definitivos, que se publicarán a lo largo de 2017.
 
-Con todo, hemos cruzado los valores más bajos de cada uno de los compuestos, donde prevalecen los datos de la ANMAT por su carácter de fuente oficial. El coste que figure será el **precio privado** y su reducción en un 40%, su **precio público** (al ser el precio del genérico comercializado más barato).
+Para la **inmunización de rebaño** hemos usado un 95% para el sarampión -por ser la cifra en la que coinciden más investigaciones-. Para la línea de la vacuna DTP utilizamos un 80%, que es la recomendación mínima de cobertura que establece el grupo SAGE de la OMS. Según los cálculos para obtener la inmunización de rebaño, la polio estaría entre un 80-86%. Utilizamos el 80%, el más bajo. Dos fuentes ([aquí](http://www.who.int/bulletin/volumes/86/2/07-040089/en/) y [aquí](http://cid.oxfordjournals.org/content/52/7/911.full)) sobre el tema, aunque hay muchas más.
 
-Para terminar, el **sueldo** más bajo de un funcionario argentino en 2015 –en vigor desde agosto de 2014– es de 5.777,95 pesos argentinos (que equivale a 562,66 € al cambio de 19 de Junio de 2015), según la [Oficina Nacional de Empleo Público](http://www.sgp.gov.ar/contenidos/onep/salarios/docs/SINEP_agosto_2014.pdf) (ONEP) de la República de Argentina.
+#### Casos y muertes por enfermedad
+Para saber los casos registrados al año de cada enfermedad usamos la [tabla de incidencia](http://www.who.int/immunization/monitoring_surveillance/data/en/) de la OMS, al que hemos añadido algunos datos:
 
-### Bélgica
+* Para añadir los datos de 2016 de casos de polio, usamos la información disponible en [Polio Erradication](http://polioeradication.org/polio-today/polio-now/), que informa casi al día de los casos que quedan en el mundo. 
 
-Los datos belgas, recopilados por Kristof Clerix, proceden de dos organismos públicos: el NIHDI (National Institute for Health and Disability Insurance) y el BCFI (Belgian Centre for Pharmacotherapeutical Information). En su caso, no incluimos el Paracetamol puesto que no está disponible en la dosis que marca la OMS. Más información, en la [noticia publicada en Knack](http://www.knack.be/nieuws/wereld/geneesmiddelen-zijn-bijna-nergens-zo-betaalbaar-als-in-belgie/article-normal-654589.html).
+* Para el vídeo sobre Guatemala añadimos la información de los últimos meses que se extrae del sondeo [sondeo](http://fundesa.org.gt/content/files/publicaciones/SegundoSondeoVacunacion.pdf) realizado por el Procurador de Derechos Humanos del país, Acción contra el Hambre, Alianmisar y la Alianza por la Nutrición.
 
-Con toda esta información, la de HAI y la de estos cuatro países, hemos construido nuestra base de datos, que puedes descargar [aquí](https://docs.google.com/spreadsheets/d/1ksuDMT-B0Y0VwpmRlW4b94GUna9NWkFCph96LNVfgTA/edit?usp=sharing). Y la hemos visualizado (ordenados por [PIB](http://data.worldbank.org/indicator/NY.GDP.PCAP.CD) o por zonas) usando Javascript y D3.js. Puedes encontrar el código de la web [aquí](https://github.com/civio/medicamentalia-theme).
+* Datos de [measles](http://www.who.int/immunization/monitoring_surveillance/burden/vpd/surveillance_type/active/measles_monthlydata/en/) mucho más actualizados y detallados. 
 
-### Reportajes sobre el terreno
+Como pasa con los datos de cobertura, los datos de casos [no son perfectos](http://apps.who.int/gho/indicatorregistry/App_Main/view_indicator.aspx?iid=57). Si tenemos en cuenta que se trata solo de aquellos casos que llegan a los servicios de salud y se registran, la conclusión es clara: se producen más casos que aquellos que aparecen en los datos. Como explican desde la organización: "Algunos países enfrentan dificultades para identificar, diagnosticar y reportar enfermedades infecciosas en los lugares más remotos de sus comunidades, falta de infraestructuras de transporte y comunicaciones, y falta de trabajadores de la salud cualificados o laboratorios para asegurar un diagnóstico preciso".
 
-En Civio sabemos muy bien que los datos, por sí solos, no dicen absolutamente nada. Analizar la base de datos nos permitió extraer conclusiones muy interesantes, pero la información de contexto y las explicaciones o consecuencias de los problemas de acceso a los medicamentos quedaban fuera. Por eso desde el principio tuvimos claro que necesitábamos reportajes sobre el terreno. Con este objetivo viajamos a Ghana para tratar el problema de la malaria y de los medicamentos falsos.
+>many countries face challenges in accurately identifying, diagnosing and reporting infectious diseases due to the remoteness of communities, lack of transport and a communication infrastructure, and shortage of skilled health-care workers and laboratory facilities to ensure accurate diagnosis. 
 
-Y a Brasil, para analizar una alternativa a las patentes que se utilizó en ese país en 2007, la licencia obligatoria. Además, tratamos a fondo el sistema de patentes y sus alternativas, puesto que los 14 medicamentos esenciales que marca la OMS se venden como genéricos y no queríamos dejar de investigar uno de los principales debates sobre el acceso a los fármacos en todo el mundo.
+Una muestra de que los datos no son 100% exactos es que no coinciden con otras bases de datos. Por ejemplo, para recoger la información se países europeos también existe la [base de datos de la ECDC](http://atlas.ecdc.europa.eu/public/index.aspx?Instance=GeneralAtlas). 
+Su [metodolodía](http://ecdc.europa.eu/en/activities/surveillance/Pages/index.aspx#sthash.Y3Namw3l.dpuf). Hicimos varias pruebas y los datos no coinciden -aunque no por mucho margen- y esto muestra hasta qué punto no hay un sistema claro y consolidado de recogida de los mismos. Los de la ECDC son más recientes y podemos usarlos en el texto, pero no como BBDD porque: solo incluye países europeos; faltan algunas enfermedades, porque solo están las infecciosas que ellos registran.
 
-## Colabora
+Para poner en contexto los datos, en la mayoría de casos los casos se tratan por cada mil habitanets. Hemos descartado de los análisis y las visualizaciones países con muy pocos datos.
 
-Medicamentalia no es un proyecto acabado, es un proyecto en movimiento. Nos encantaría añadir más países y más medicamentos, siempre siguiendo los mismos criterios de rigurosidad. Si quieres ayudarnos aportando información de tu país, escríbenos y te contamos cómo. También puedes apoyar éste y otros proyectos de Civio [haciéndote cómplice](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PECHBACVDZ3L) de la fundación o con [una donación](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=R5L232VBWWG62).
+También hemos utilizado datos de mortalidad, de dos fuentes: 
 
-**Tanto la base de datos como todos los materiales del proyecto son Creative Commons (CC BY). Puedes usar lo que necesites o te interese con una única condición: que cites y enlaces a Medicamentalia. Además, te pedimos un favor: avísanos, porque nos darás una alegría.**
+* Mortalidad infantil por países y [por enfermedad](http://apps.who.int/gho/data/view.main.ghe100-AGO?lang=en). Con datos de 2000 a 2015. 
+
+* Datos de mortalidad general por enfermedad, [aquí](http://vizhub.healthdata.org/gbd-compare/)
+
+#### Otros datos empleados y sus fuentes
+
+* Calendarios de vacunación de todo el mundo vía [OMS](http://apps.who.int/immunization_monitoring/globalsummary/schedules).
+* Año de introducción de la vacuna. En algunos casos, las fechas de introducción eran demasiado recientes y no concordaban con las informaciones de los países. Además, 28 países no tenían. Solicitamos esa información a ocho países. Solo respondió uno, Guatemala. 
+* Los datos de PIB son del Banco Mundial. También los de población. Para hacer casos por habitante y, en algunos casos, eliminar países de los gráficos porque eran demasiado grandes y no permitían hacer comparativas. Vamos a dejar fuera del gráfico que compara los diferentes niveles de inmunización a los países con menos de 300.000 habitantes. 
+
+### Reportajes y página web
+
+Los datos, por sí solos, no dicen absolutamente nada. Analizar toda esa información nos permitió extraer conclusiones muy interesantes, pero necesitábamos ir más allá. Por eso desde el principio tuvimos claro que necesitábamos reportajes sobre el terreno. Elegimos dos lugares de viaje y preparamos las entrevistas. Los destinos elegidos, por varios criterios:
+
+- Centroamérica: queremos analizar qué pasó en Guatemala con el bajón de las inmunizaciones, y ver qué pasa en Guate y El Salvador, que no tienen vacuna del papiloma, pero unos índices de cáncer de cuello de útero altísimos; además, queremos hablar con responsables del sistema de compra conjunta para ver cómo funciona. 
+- India/Sudáfrica: la idea inicial era ir a India, pero el visado de periodista -después de preguntar si era mejor pedirlo o no y pedir consejo- se ha retrasado meses, una locura. Entonces pensamos en un plan B y cómo de interesante era ver cómo funcionaba un país algo más avanzado, pero que por eso se sale de temas de compras conjuntas y los precios se disparan. 
+
+**Journalism Grants no se mete en lo editorial**
+
+## Colabora y republica
+
+Medicamentalia Vacunas no es un proyecto acabado. Si tienes información relevante o eres un medio que quiere republicar todo o parte del contenido, escríbenos y te ayudamos a ponerlo en marcha. **Tanto la base de datos como todos los materiales del proyecto son Creative Commons (CC BY). Puedes usar lo que necesites o te interese con una única condición: que cites y enlaces a Medicamentalia. Además, te pedimos un favor: avísanos, porque nos darás una alegría.**
+
+También puedes apoyar éste y otros proyectos de Civio [haciéndote cómplice](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PECHBACVDZ3L) de la fundación o con [una donación](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=R5L232VBWWG62).
 
   </div>
 </div>
