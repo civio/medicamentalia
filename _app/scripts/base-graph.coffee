@@ -47,6 +47,7 @@ class window.BaseGraph
 
   loadData: (url) ->
     d3.csv url, (error, data) =>
+      @$el.trigger 'data-loaded'
       @setData data
     return @
     
@@ -55,6 +56,7 @@ class window.BaseGraph
     @drawScales()
     @drawMarkers()
     @drawGraph()
+    @$el.trigger 'draw-complete'
     return @
 
   # to overdrive
@@ -81,13 +83,13 @@ class window.BaseGraph
     if @xAxis
       @container.append('g')
         .attr 'class', 'x axis'
-        .attr 'transform', 'translate(0,'+@height+')'
+        .attr 'transform', 'translate('+@options.margin.left+','+(@options.margin.top+@height)+')'
         .call @xAxis
     # set y axis
     if @yAxis
       @container.append('g')
         .attr 'class', 'y axis'
-        .attr 'transform', 'translate('+@width+' ,0)'
+        .attr 'transform', 'translate('+@width+' ,'+@options.margin.top+')'
         .call @yAxis
     return @
 
@@ -172,11 +174,11 @@ class window.BaseGraph
     # update axis dimensions
     if @xAxis
       @container.selectAll('.x.axis')
-        .attr 'transform', 'translate(0,'+@height+')'
+        .attr 'transform', 'translate('+@options.margin.left+','+(@options.margin.top+@height)+')'
         .call @xAxis
     if @yAxis
       @container.selectAll('.y.axis')
-        .attr 'transform', 'translate('+@width+' ,0)'
+        .attr 'transform', 'translate('+@width+' ,'+@options.margin.top+')'
         .call @yAxis
     # update markers
     @container.select('.marker')
