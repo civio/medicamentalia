@@ -46,7 +46,7 @@ Aunque [reaparece](enlace al otro tema) en algunas zonas, el sarampión es una d
 
 Las tres vacunas que forman la DTP (difteria, tétanos, tos ferina) también han colaborado en logros como que el número de enfermos por tos ferina haya pasado [de dos millones en 1980 a unos 142.000 en los últimos tiempos](http://www.who.int/immunization/monitoring_surveillance/data/gs_gloprofile.pdf), una cifra que, por desgracia, se mantiene bastante estable, como también se mantienen las 60.000 muertes anuales por culpa de esta enfermedad. 
 
-{% include vaccines/world_cases.en.html %}
+{% include vaccines/world_cases.es.html %}
 
 La región de las Américas ha eliminado la rubeola y, en todo el continente, ya solo se dan casos en Estados Unidos. Y, aunque aún enferman 22.000 personas al año en todo el mundo, la cifra es mucho menor que el pico de [875.000 de 1999](http://www.who.int/immunization/monitoring_surveillance/data/gs_gloprofile.pdf). 
 
