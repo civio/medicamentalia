@@ -380,6 +380,7 @@ Vaccines coverage
 }
 
 #immunization-coverage-graph{
+  margin: $grid-gutter-width 0 1.5*$grid-gutter-width;
   .line{
     stroke: $color-orange;
     stroke-width: 1.5px;

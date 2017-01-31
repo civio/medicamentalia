@@ -112,6 +112,8 @@ class window.LineGraph extends window.BaseGraph
     if @options.mouseEvents
       @container.select('.overlay')
         .call @setOverlayDimensions
+      @container.select('.tick-hover')
+        .call @setTickHoverPosition
     return @
 
   drawLines: ->
@@ -153,9 +155,9 @@ class window.LineGraph extends window.BaseGraph
       .style 'display', 'none'
     @container.append('text')
       .attr 'class', 'tick-hover'
-      .attr 'dy', '0.71em'
-      .attr 'y', Math.round @height+@options.margin.top+9
+      .attr 'dy', '0.71em'      
       .style 'display', 'none'
+      .call @setTickHoverPosition
     if @data.length == 1
       @container.append('text')
         .attr 'class', 'line-label-hover'
@@ -243,3 +245,5 @@ class window.LineGraph extends window.BaseGraph
       .attr 'y', (d) => if data.values[year] then @y(data.values[year]) else 0
       .text (d) => if data.values[year] then @yFormat(data.values[year]) else ''
       
+  setTickHoverPosition: (element) =>
+    element.attr 'y', Math.round @height+@options.margin.top+9
