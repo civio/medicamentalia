@@ -86,13 +86,13 @@ class window.BaseGraph
     if @xAxis
       @container.append('g')
         .attr 'class', 'x axis'
-        .attr 'transform', 'translate('+@options.margin.left+','+(@options.margin.top+@height)+')'
+        .call @setXAxisPosition 
         .call @xAxis
     # set y axis
     if @yAxis
       @container.append('g')
         .attr 'class', 'y axis'
-        .attr 'transform', 'translate('+@width+' ,'+@options.margin.top+')'
+        .call @setYAxisPosition
         .call @yAxis
     return @
 
@@ -168,6 +168,7 @@ class window.BaseGraph
       @containerHeight = @containerWidth * @options.aspectRatio
       @width           = @containerWidth - @options.margin.left - @options.margin.right
       @height          = @containerHeight - @options.margin.top - @options.margin.bottom
+      console.log 'dimensions', @options.margin, @containerWidth, @width, @containerHeight, @height
     return @
 
   # to overdrive
@@ -184,11 +185,11 @@ class window.BaseGraph
     # update axis dimensions
     if @xAxis
       @container.selectAll('.x.axis')
-        .attr 'transform', 'translate('+@options.margin.left+','+(@options.margin.top+@height)+')'
+        .call @setXAxisPosition
         .call @xAxis
     if @yAxis
       @container.selectAll('.y.axis')
-        .attr 'transform', 'translate('+@width+' ,'+@options.margin.top+')'
+        .attr @setYAxisPosition
         .call @yAxis
     # update markers
     @container.select('.marker')
@@ -197,12 +198,18 @@ class window.BaseGraph
       .call @setupMarkerLabel
     return @
 
+  setXAxisPosition: (selection) =>
+    selection.attr 'transform', 'translate(0,'+@height+')'
 
-    # Auxiliar methods
-    # ----------------
+  setYAxisPosition: (selection) =>
+    selection.attr 'transform', 'translate('+@width+',0)'
 
-    getDataX: ->
-      return d[@options.key.x]
 
-    getDataY: ->
-      return d[@options.key.y]
+  # Auxiliar methods
+  # ----------------
+
+  getDataX: ->
+    return d[@options.key.x]
+
+  getDataY: ->
+    return d[@options.key.y]
