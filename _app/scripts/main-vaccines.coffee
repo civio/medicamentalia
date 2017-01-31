@@ -158,7 +158,7 @@
     d3.csv baseurl+'/assets/data/diseases-cases-world.csv', (error, data) ->
       # Get max value to create a common y scale
       maxValue1 = d3.max data, (d) -> d3.max(d3.values(d), (e) -> +e)
-      maxValue2 = d3.max data.filter((d) -> ['diphteria','polio','tetanus'].indexOf(d.disease) != -1), (d) -> d3.max(d3.values(d), (e) -> +e)
+      maxValue2 = 100000 #d3.max data.filter((d) -> ['diphteria','polio','tetanus'].indexOf(d.disease) != -1), (d) -> d3.max(d3.values(d), (e) -> +e)
       # create a line graph for each disease
       diseases.forEach (disease) ->
         # get current disease data
@@ -236,7 +236,7 @@
           graph
             .addMarker
               value: herdImmunity[vaccine]
-              label: 'Nivel de rebaño'
+              label: if vaccine != 'DTP3' then 'Nivel de rebaño' else 'Recomendación OMS'
             .setData graph_data
           # Setup graph value
           if graph_value.length > 0
