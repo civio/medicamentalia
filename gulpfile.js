@@ -71,6 +71,7 @@ var js_paths = {
     '_app/scripts/line-graph.coffee',
     '_app/scripts/heatmap-graph.coffee',
     '_app/scripts/map-graph.coffee',
+    '_app/scripts/scatterplot-graph.coffee',
     //'_app/scripts/vaccine-map.js',
     '_app/scripts/main-vaccines.coffee'
   ],

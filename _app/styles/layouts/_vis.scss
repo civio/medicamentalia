@@ -125,6 +125,12 @@ Common
     stroke-width: 2px;
     fill: white;
   }
+
+  .scatterplot-graph{
+    .dot{
+      fill: $brand-primary;
+    }
+  }
 }
 
 /*
@@ -133,7 +139,6 @@ Superbugs bar graph
 
 #antibiotics-graph,
 #antibiotics-animals-graph{
-  margin: $grid-gutter-width/3 0;
 
   .bar-label-x,
   .bar-label-y{
@@ -175,9 +180,9 @@ Vaccines diseases
   .heatmap-container{
     position: relative;
     width: 100%;
-    margin-top: 1.5 * $grid-gutter-width;
     padding-left: $padding-left;
-    margin-bottom: 2*$grid-gutter-width;
+    margin-top: 1.5 * $grid-gutter-width;
+    margin-bottom: 1.5*$grid-gutter-width;
   }
 
   .cell-container{
@@ -210,15 +215,11 @@ Vaccines diseases
 
   .axis-item{
     position: absolute;
-    font-size: 0.813em;
+    font-size: 11px;
   }
 
   .x-axis{
     top: -20px;
-
-    .axis-item{
-      //text-indent: -0.333em; // Center label in cell
-    }
   }
 
   .y-axis{
@@ -380,7 +381,6 @@ Vaccines coverage
 }
 
 #immunization-coverage-graph{
-  margin: $grid-gutter-width 0 1.5*$grid-gutter-width;
   .line{
     stroke: $color-orange;
     stroke-width: 1.5px;
@@ -419,6 +419,10 @@ User country disease immunization coverage
     fill: $brand-primary;
   }
 }
+.page-content .immunization-coverage-disease-graph .graph-container-caption{
+  margin-bottom: 0;
+}
+
 
 /*
 World diseases cases

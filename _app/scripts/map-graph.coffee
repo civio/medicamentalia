@@ -45,17 +45,18 @@ class window.MapGraph extends window.BaseGraph
     @legend.selectAll('rect')
       .data legendData
       .enter().append('rect')
-        .attr 'x', (d,i) -> Math.round legenItemWidth*(i-(legendData.length/2))
-        .attr 'y', 5
+        .attr 'x', (d,i) -> Math.round legenItemWidth*(i-1-(legendData.length/2))
         .attr 'width', legenItemWidth
         .attr 'height', 8
         .attr 'fill', (d) => @color d
+    legendData.shift()
     # draw legend texts
     @legend.selectAll('text')
       .data legendData
       .enter().append('text')
-        .attr 'x', (d,i) -> Math.round( legenItemWidth*(i-(legendData.length/2)) + (legenItemWidth/2) )
-        .attr 'text-anchor', 'middle'
+        .attr 'x', (d,i) -> Math.round legenItemWidth*(i-0.5-(legendData.length/2))
+        .attr 'y', 20
+        .attr 'text-anchor', 'start'
         .text (d) -> d
 
   drawGraph: (map) ->

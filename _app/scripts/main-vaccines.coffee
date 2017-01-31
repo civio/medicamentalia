@@ -67,7 +67,7 @@
         # set graph
         graph = new window.MapGraph('measles-world-map-graph',
           margin: 
-            top: 50
+            top: 60
             bottom: 0
           legend: true)
         graph.setData countries, map
@@ -90,6 +90,38 @@
 #     else if sort == 'cases'
 #       currentData.sort (a, b) ->
 #         b.total - (a.total)
+    $(window).resize graph.onResize
+
+
+  setupVaccineConfidenceGraph = ->
+    graph = new window.ScatterplotGraph('vaccine-confidence-graph',
+      aspectRatio: 0.5
+      margin:
+        top: 0
+        right: 0
+        left: 50
+        bottom: 20
+      key:
+        x: 'confidence'
+        y: 'gdp'
+        id: 'country')
+    graph.setData [
+      {
+        country: 'AFG'
+        confidence: 34
+        gdp: 8777
+      },
+      {
+        country: 'NHG'
+        confidence: 27
+        gdp: 12777
+      },
+      {
+        country: 'XFG'
+        confidence: 54
+        gdp: 45777
+      },
+    ]
     $(window).resize graph.onResize
 
 
@@ -164,7 +196,7 @@
         id: 'code'
         x: 'name'
       label: true
-      margin: top: 20)
+      margin: bottom: 20)
     graph.getScaleYDomain = (d) -> [0, 100]
     graph.yAxis.tickValues [0,25,50,75,100]
     graph.xAxis.tickValues [2001,2003,2005,2007,2009,2011,2013,2015]
@@ -257,8 +289,7 @@
             label: true
             key: x: 'name'
             margin:
-              top: 20
-              bottom: 0)   
+              top: 20)   
           graph
             .addMarker
               value: herdImmunity[vaccine]
@@ -348,5 +379,8 @@
 
   if $('#measles-world-map-graph').length > 0
     setupMeaslesWorldMapGraph()
+
+  if $('#vaccine-confidence-graph').length > 0
+    setupVaccineConfidenceGraph()
 
 ) jQuery
