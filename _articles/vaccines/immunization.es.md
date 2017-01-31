@@ -68,7 +68,7 @@ Esta vacuna protege contra la difteria, el tétanos y la tos ferina, tres enferm
 La tos ferina, en cambio, sigue provocando un número elevado de enfermos y muertes infantiles, y las cifras de los últimos años no acaban de menguar. De hecho, en algunos años, como 2012 y 2014, crecieron. En 2015, se registraron 142.412 casos. De ellos, 56.696 niños murieron a causa de esta enfermedad, un 15% de ellos en Nigeria. 
 
 <div class="panel" markdown="1">
-#### El desplome de la vacunación en Guatemala
+### El desplome de la vacunación en Guatemala
 
 {% include video-container.html videoid="gB_DH1g1hVU" title="Lorem ipsum" credit="Dolor sit amet" %}
 
