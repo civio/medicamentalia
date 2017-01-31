@@ -41,7 +41,7 @@ La caída del porcentaje de vacunados entre las primeras dosis -normalmente al n
 > El responsable de un menor tiene que llevarle a vacunar, como mínimo, cinco veces en su primer año de vida.
 {: .no-quotes}
 
-En sus informes, la organización [incluye](https://www.msf.es/sites/default/files/legacy/adjuntos/Informe_La_Mejor_Vacuna_ESP_2012.pdf) el complejo calendario de vacunación como uno de los [problemas](ancla al otro lado) para acceder a las vacunas de los países con malas infraestructuras y escasez de y medios humanos y materiales. En la actualidad, el responsable de un menor tiene que llevarle a vacunar, al menos, cinco veces en su primer año de vida.   
+En sus informes, la organización [incluye](https://www.msf.es/sites/default/files/legacy/adjuntos/Informe_La_Mejor_Vacuna_ESP_2012.pdf) el complejo calendario de vacunación como uno de los problemas para acceder a las vacunas de los países con malas infraestructuras y escasez de y medios humanos y materiales. En la actualidad, el responsable de un menor tiene que llevarle a vacunar, al menos, cinco veces en su primer año de vida.   
 
 **India, donde se produjeron un 30% de las muertes por sarampión de menores de cuatro años en 2015 de todo el mundo, con 22.703 fallecidos, registró estimaciones de cobertura de un 81% en la primera dosis y un 69% en la segunda**.
 
@@ -59,7 +59,7 @@ En 2015, los niveles mundiales de vacunación de la tercera y última dosis de l
 
 Somalia y Guinea Ecuatorial son también los que presentan peores cifras de vacunación (44 y 17%, respectivamente), junto a Ucrania, de la tercera dosis de la DTP (que protege contra difteria, tétanos y tos ferina, en sus siglas en inglés). El caso de Ucrania es otro ejemplo de marcha atrás: sus cifras de inmunización cayeron en picado de un 76% en 2012 a un 23% en 2015.
 
-La DTP incluye tres dosis y, en algunos países, una cuarta de refuerzo. Como pasa con el sarampión, una buena parte de los vacunados en la primera tanda acaban perdiéndose las últimas. En Panamá, por ejemplo, consiguieron que un 99% de niños pasara por la primera dosis, pero solo lo hizo un 74% cuando llegó la tercera.  
+La DTP incluye tres dosis y, en algunos países, una cuarta de refuerzo. Como pasa con el sarampión, una buena parte de los vacunados en la primera tanda acaban perdiéndose las últimas. En Guatemala vacunaron a un 96% de los niños de la primera dosis, una cifra alta y más que suficiente para alcanzar la inmunización de rebaño, pero alcanzaron a un 73%, muchos menos con la tercera dosis. En Panamá, un caso similar, pasaron de un 99 a un 74%.
 
 {% include vaccines/immunization_coverage_disease_graph.en.html disease="pertussis" vaccine="DTP3" title="Difteria, tétanos y tos ferina" description="de la tercera dosis contra la difteria, el tétanos y la tos ferina" %}
 
