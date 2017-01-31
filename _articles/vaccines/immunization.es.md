@@ -2,8 +2,8 @@
 category:         vaccines
 title:            Niveles de vacunación
 subtitle:        Un escudo con agujeros
-description:      La mitad de los países del mundo no alcanzan porcentajes de inmunización suficientes para frenar la transmisión de enfermedades como el sarampión
-home_description: La mitad de los países del mundo no alcanzan niveles de inmunización suficientes para frenar la transmisión de enfermedades como el sarampión
+description:      La mitad de los países del mundo no alcanza porcentajes de inmunización suficientes para frenar la transmisión de enfermedades como el sarampión
+home_description: La mitad de los países del mundo no alcanza niveles de inmunización suficientes para frenar la transmisión de enfermedades como el sarampión
 img:              articles/home-patentes-1040x694.jpg
 order:            3
 author:           Eva Belmonte
@@ -22,7 +22,7 @@ La vacuna del sarampión se inventó en los años sesenta. Ya en los ochenta, su
 <div class="panel" markdown="1">
 #### Inmunización de rebaño
 
-Es el [porcentaje de cobertura necesario para frenar la transmisión](http://www.who.int/bulletin/volumes/86/2/07-040089/en/) de una enfermedad. Se calcula teniendo en cuenta su poder de contagio. Cuando más rápido y fácil se propague, más alto debe ser el nivel de inmunización para garantizar su control. 
+Es el [porcentaje de cobertura necesario para frenar la transmisión](http://www.who.int/bulletin/volumes/86/2/07-040089/en/) de una enfermedad. Se calcula teniendo en cuenta su poder de contagio. Cuanto más rápido y fácil se propague, más alto debe ser el nivel de inmunización para garantizar su control. 
 </div>
 </div>
 
@@ -34,7 +34,7 @@ El patrón es claro (aunque haya [desviaciones, como las causadas por movimiento
 
 Las cifras -[fuentes y metodología](http://medicamentalia.org/vaccines/nosotros/#metodologa)- empeoran si tenemos en cuenta que todos esos porcentajes de cobertura, que son estimaciones, corresponden a la primera dosis de la vacuna, la que se suele poner al año de edad -en la mayoría de casos, en combinación con otras como la de las paperas y la de la rubeola, la llamada triple vírica- y que [son necesarias dos dosis](http://www.who.int/immunization/policy/Immunization_routine_table2.pdf?ua=1) para que la protección sea efectiva. Pero los números de la segunda toma son aún peores. Solo 50 de los 143 países de los que la OMS tiene datos alcanzaron ese 95%. 
 
-Destacan casos como Malawi, con un 85% de inmunización en la primera dosis y un 8% en la segunda; O Níger, que pasa de 89 a 16%. Pero este problema no es exclusivo de países en vías de desarrollo: Luxemburgo pasa de un 99 a un 86% y, Bélgica, de un 96 a un 85%.
+Destacan casos como Malawi, con un 85% de inmunización en la primera dosis y un 8% en la segunda; o Níger, que pasa de 89 a 16%. Pero este problema no es exclusivo de países en vías de desarrollo: Luxemburgo pasa de un 99 a un 86% y, Bélgica, de un 96 a un 85%.
 
 La caída del porcentaje de vacunados entre las primeras dosis -normalmente al nacimiento o cuando el niño es aún muy pequeño- y las siguientes es uno de los asuntos que preocupan a instituciones como el Grupo de Expertos de Vacunas de la OMS -The Strategic Advisory Group of Experts (SAGE)-, que lo reportó en su último [informe](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1), y a entidades sin ánimo de lucro que trabajan sobre el terreno como Médicos sin Fronteras. 
 
