@@ -154,7 +154,7 @@ class window.LineGraph extends window.BaseGraph
     @container.append('text')
       .attr 'class', 'tick-hover'
       .attr 'dy', '0.71em'
-      .attr 'y', Math.round @height+9
+      .attr 'y', Math.round @height+@options.margin.top+9
       .style 'display', 'none'
     if @data.length == 1
       @container.append('text')
