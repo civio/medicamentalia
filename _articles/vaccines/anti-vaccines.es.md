@@ -29,7 +29,7 @@ Italia ha vacunado al 82% de los niños a los que les tocaba la segunda dosis de
 Dinamarca, por su parte, ha ido perdiendo cuota de vacunados los últimos años hasta quedarse en un 80% en la segunda toma del sarampión, por debajo de unos 100 países, entre los que se encuentran Sri Lanka o Argelia, por poner solo dos ejemplos. Francia no ha enviado a la OMS datos de 2015, pero en 2014 tenía un 74% de inmunización. Una cifra baja que, al menos, ha ido a mejor: era de un 67% en 2013.
 
 <div class="graph-container">
-  <p class="graph-container-caption">Nivel de vacunación de sarampión</p>
+  <p class="graph-container-caption">Porcentaje de vacunación de sarampión</p>
   <div id="immunization-coverage-graph" class="line-graph"></div>
 </div>
 
@@ -70,7 +70,9 @@ Y ¿entonces? Un [estudio](http://www.ajpmonline.org/article/S0749-3797(11)00042
 
 El Salvador aprobó una ley que establece que todo niño debe presentar su carné de vacunas para entrar a la escuela. El director del programa de inmunizaciones del Ministerio de Salud admite que, en la práctica, no impiden que un niño sin vacunar se matricule, porque pondrían barreras a otro derecho básico: la educación. Lo que hacen es aprovechar ese momento para proponer a las familias poner su cartilla al día. 
 
+<div class="container-right">
 {% include video-container.html videoid="gB_DH1g1hVU" title="Eduardo Suárez, director del programa de inmunizaciones del Ministerio de Salud de El Salvador &quot;La idea es que al niño que no tiene carnet no negarle la matricula, sino matricularlo y vacunarlo;" credit="Vídeo: Manuel Penados" %}
+</div>
 
 Eduardo Suárez lo explica en un despacho lleno de mascarillas (por si alguien se pone enfermo), mientras defiende con entusiasmo la vacunación a lo largo del curso de vida, y no solo para los más pequeños, admite que a veces tiene que agarrar de las orejas a algún empleado del ministerio para que se inmunice y critica que los medios latinoamericanos utilicen "vacunar" como sinónimo de algo negativo, de algo obligatorio y desagradable. Porque así, dice, es imposible hacer pedagogía. 
 
