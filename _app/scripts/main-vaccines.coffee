@@ -47,6 +47,32 @@
       $('#video-map-polio-description').fadeTo 300, 1
 
 
+  # Measles World Map Graph
+  setupMeaslesWorldMapGraph = ->
+    d3.queue()
+      .defer d3.csv,  baseurl+'/assets/data/measles-cases-who-regions.csv'
+      .defer d3.csv,  baseurl+'/assets/data/countries-who-regions.csv'
+      .defer d3.json, baseurl+'/assets/data/map-world-110.json'
+      .await (error, data, countries, map) ->
+        # get cases object with region key
+        cases = {}
+        data.forEach (d) ->
+          cases[d.region] = +d.cases*100000
+        # add cases to each country
+        countries.forEach (d) ->
+          d.value = cases[d.region]
+          d.name = d['name_'+lang]
+          delete d.name_es
+          delete d.name_en
+        # set graph
+        graph = new window.MapGraph('measles-world-map-graph',
+          margin: 
+            top: 50
+            bottom: 0
+          legend: true)
+        graph.setData countries, map
+        $(window).resize graph.onResize
+
   # Measles cases Heatmap Graph
   setupHeatMapGraph = (id, data, countries, disease) ->
     data = data
@@ -319,5 +345,8 @@
   
   if $('.immunization-coverage-disease-graph').length > 0
     setupImmunizationDiseaseBarGraph()
+
+  if $('#measles-world-map-graph').length > 0
+    setupMeaslesWorldMapGraph()
 
 ) jQuery

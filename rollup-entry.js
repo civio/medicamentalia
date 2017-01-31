@@ -55,7 +55,8 @@ export {
 } from "d3-scale";
 
 export {
-  interpolateOrRd
+  schemeOranges,
+  interpolateOranges
 } from "d3-scale-chromatic";
 
 export {
@@ -87,13 +88,17 @@ export {
   axisLeft
 } from "d3-axis";
 
-/*
+export {
+  geoPath
+} from "d3-geo";
+
+export {
+  geoKavrayskiy7
+} from "d3-geo-projection";
+
 //Modules for Vaccine Map
 
-export * from "d3-geo";
-
-export * from "d3-geo-projection";
-
+/*
 export * from "d3-polygon";
 
 export {

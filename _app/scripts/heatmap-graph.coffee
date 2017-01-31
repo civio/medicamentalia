@@ -78,7 +78,7 @@ class window.HeatmapGraph extends BaseGraph
       .round(true)
       .range @getScaleYRange()
     # set color scale
-    @color = d3.scaleSequential d3.interpolateOrRd
+    @color = d3.scaleSequential d3.interpolateOranges
     return @
 
   drawScales: ->

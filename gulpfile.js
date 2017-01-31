@@ -48,6 +48,7 @@ var js_paths = {
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+    'node_modules/topojson-client/dist/topojson-client.js',
     '_app/scripts/vendor/selection-sharer.js',
     '_app/scripts/vendor/d3-bundle.js',
     '_app/scripts/main.js'
@@ -65,11 +66,11 @@ var js_paths = {
   ],
   // vaccines.js sources
   vaccines: [
-    //'node_modules/topojson-client/dist/topojson-client.js',
     '_app/scripts/base-graph.coffee',
     '_app/scripts/bar-graph.coffee',
     '_app/scripts/line-graph.coffee',
     '_app/scripts/heatmap-graph.coffee',
+    '_app/scripts/map-graph.coffee',
     //'_app/scripts/vaccine-map.js',
     '_app/scripts/main-vaccines.coffee'
   ],

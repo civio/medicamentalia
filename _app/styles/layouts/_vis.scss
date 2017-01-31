@@ -96,6 +96,14 @@ Common
     stroke: $color-orange;
   }
 
+  .legend{
+    text{
+      font-size: 11px;
+      font-family: $font-family-sans-serif;
+      fill: $gray-light;
+    }
+  }
+
   .line-label,
   .line-label-hover,
   .marker-label{
@@ -433,6 +441,13 @@ World diseases cases
   }
 }
 
+/*
+Measles world map
+*/
+
+#measles-world-map-graph{
+  margin: $grid-gutter-width 0;
+}
 
 /*
 Infographic

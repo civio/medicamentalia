@@ -8,6 +8,7 @@ class window.BaseGraph
       left: 0
     aspectRatio: 0.5625
     label: false           # show/hide labels
+    legend: false          # show/hide legend
     mouseEvents: true      # add/remove mouse event listeners
     key:
       id: 'key'
@@ -54,6 +55,8 @@ class window.BaseGraph
   setData: (data) ->
     @data = @dataParser(data)
     @drawScales()
+    if @options.legend
+      @drawLegend()
     @drawMarkers()
     @drawGraph()
     @$el.trigger 'draw-complete'
@@ -108,6 +111,10 @@ class window.BaseGraph
   # to overdrive
   getScaleYDomain: ->
     return []
+
+  # to overdrive
+  drawLegend: ->
+    return @
 
 
   # Marker methods
@@ -170,8 +177,10 @@ class window.BaseGraph
       .attr 'width',  @containerWidth
       .attr 'height', @containerHeight
     # update scales dimensions
-    @x.range @getScaleXRange()
-    @y.range @getScaleYRange()
+    if @x
+      @x.range @getScaleXRange()
+    if @y
+      @y.range @getScaleYRange()
     # update axis dimensions
     if @xAxis
       @container.selectAll('.x.axis')
