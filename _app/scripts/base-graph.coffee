@@ -130,6 +130,7 @@ class window.BaseGraph
     .enter().append('text')
       .attr 'class', 'marker-label'
       .attr 'text-anchor', (d) -> if d.orientation == 'vertical' then 'middle' else if d.align == 'right' then 'end' else 'start'
+      .attr 'dy', (d) -> if d.orientation == 'horizontal' then '-0.25em' else 0
       .text (d) -> d.label
       .call @setupMarkerLabel
 
