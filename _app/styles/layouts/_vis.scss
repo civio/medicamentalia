@@ -137,6 +137,40 @@ Common
   }
 }
 
+#vaccine-confidence-graph{
+  .bar-label-x,
+  .bar-label-y{
+    display: none;
+    &.active{
+      display: block;
+      fill: $brand-primary;
+    }
+  }
+  #FRA.bar
+  {
+    fill: $brand-primary;
+  }
+
+  /*
+  #BIH.bar,
+  #RUS.bar,
+  #GRC.bar,
+  #UKR.bar,
+  #SVN.bar,
+  #ITA.bar,
+  #ROU.bar,
+  #LVA.bar,
+  */
+  
+  #bar-label-x-FRA{
+    fill: $brand-primary;
+  }
+  #bar-label-x-FRA,
+  #bar-label-y-FRA{
+    display: block;
+  }
+}
+
 /*
 Superbugs bar graph
 */

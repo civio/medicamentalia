@@ -93,7 +93,25 @@
     $(window).resize graph.onResize
 
 
-  setupVaccineConfidenceGraph = ->
+  setupVaccineConfidenceBarGraph = ->
+    graph = new window.BarGraph('vaccine-confidence-graph',
+      aspectRatio: 0.3
+      label: true
+      key:
+        x: 'name'
+        y: 'value'
+        id: 'code')
+    graph.dataParser = (data) ->
+      data.forEach (d) => 
+        d.value = +d.value
+        d.name = d['name_'+lang]
+        delete d.name_es
+        delete d.name_en
+      return data
+    graph.loadData baseurl+'/assets/data/confidence.csv'
+    $(window).resize graph.onResize
+
+  setupVaccineConfidenceScatterplotGraph = ->
     d3.queue()
       .defer d3.csv, baseurl+'/assets/data/confidence.csv'
       .defer d3.csv, baseurl+'/assets/data/countries.csv'
@@ -191,7 +209,7 @@
     graph.xAxis.tickValues [2001,2003,2005,2007,2009,2011,2013,2015]
     graph.addMarker
       value: 95
-      label: 'Nivel de rebaño'
+      label: if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
       align: 'left'
     d3.csv baseurl+'/assets/data/immunization-coverage-mcv2.csv', (error, data) ->
       graph.setData data.filter((d) -> countries.indexOf(d.code) != -1)
@@ -278,11 +296,14 @@
             label: true
             key: x: 'name'
             margin:
-              top: 20)   
+              top: 20)
+          marker = 
+            value: herdImmunity[vaccine]
+            label: if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
+          if vaccine == 'DTP3'
+            marker.label = if lang == 'es' then 'Recomendación OMS' else 'WHO recommendation'
           graph
-            .addMarker
-              value: herdImmunity[vaccine]
-              label: if vaccine != 'DTP3' then 'Nivel de rebaño' else 'Recomendación OMS'
+            .addMarker marker
             .setData graph_data
           # Setup graph value
           if graph_value.length > 0
@@ -370,6 +391,6 @@
     setupMeaslesWorldMapGraph()
 
   if $('#vaccine-confidence-graph').length > 0
-    setupVaccineConfidenceGraph()
+    setupVaccineConfidenceBarGraph()
 
 ) jQuery

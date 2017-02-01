@@ -14,7 +14,8 @@ class window.BarGraph extends window.BaseGraph
   # ------------
 
   dataParser: (data) ->
-    data.forEach (d) => d.value = +d.value
+    data.forEach (d) => 
+      d[@options.key.y] = +d[@options.key.y]
     return data
 
   setScales: ->
