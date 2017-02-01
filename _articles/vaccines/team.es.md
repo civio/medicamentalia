@@ -136,7 +136,7 @@ Analizar toda esa información nos permitió extraer conclusiones muy interesant
 - **Centroamérica**. El objetivo era analizar qué había pasado en Guatemala, que había sufrido un descenso importante en los niveles de cobertura de vacunas básicas, y analizar cuál era la situación en Guatemala y El Salvador con respecto a la vacuna del papiloma, puesto que no la habían incluido en sus calendarios pero tienen unos índices de cáncer de cuello de útero altísimos. Además, queríamos hablar con responsables de sistemas de compra conjunta como el fondo rotatorio de la PAHO o el grupo de COMISCA  para ver cómo funciona. 
 - **Sudáfrica**. Aunque la idea inicial era ir a India, varios problemas con la embajada retrasaron, y finalmente impidieron, el viaje. Pensamos en un plan B y elegimos Sudáfrica porque nos parecía muy interesante ver cómo funcionaba el sistema de vacunación en un país que no recibía ayudas externas y que había vivido problemas importantes de *stockouts* (desabastecimiento).
 
-Combinamos el análisis de datos y los reportajes y las historias que nos contaron en esos viajes en esta página web, en inglés y español, que está hecha con amor (*Raúl*).  
+Combinamos el análisis de datos y los reportajes y las historias que nos contaron en esos viajes en esta página web, en inglés y español, que está desarrollada con [Jekyll](https://jekyllrb.com/) y utiliza  Javascript y [D3.js](https://d3js.org/) para las visualizaciones. Puedes encontrar el código de la web en nuestro [repositorio de Github](https://github.com/civio/medicamentalia).  
 
 Journalism Grants ofreció su ayuda durante todo el proyecto, pero no influyó en ninguna decisión editorial ni tuvo acceso previo a la publicación.
 
