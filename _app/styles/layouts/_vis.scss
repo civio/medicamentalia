@@ -115,7 +115,7 @@ Common
 
   .line-label,
   .line-label-hover{
-    font-size: 0.875em;
+    font-size: 11px;
     text-shadow: 0 1px 0 white;
     font-weight: 600;
   }
@@ -129,6 +129,10 @@ Common
   .scatterplot-graph{
     .dot{
       fill: $brand-primary;
+    }
+    .dot-label{
+      font-size: 11px;
+      fill: $gray-light;
     }
   }
 }

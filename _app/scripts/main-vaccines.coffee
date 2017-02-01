@@ -74,9 +74,9 @@
         $(window).resize graph.onResize
 
   # Measles cases Heatmap Graph
-  setupHeatMapGraph = (id, data, countries, disease) ->
+  setupHeatMapGraph = (id, data, countries) ->
     data = data
-      .filter (d) -> countries.indexOf(d.code) != -1 and d.disease == disease and d3.values(d.values).length > 0
+      .filter (d) -> countries.indexOf(d.code) != -1 and d3.values(d.values).length > 0
       .sort (a,b) -> a.total - b.total
     graph = new window.HeatmapGraph(id,
       margin: 
@@ -94,49 +94,38 @@
 
 
   setupVaccineConfidenceGraph = ->
-    graph = new window.ScatterplotGraph('vaccine-confidence-graph',
-      aspectRatio: 0.5
-      margin:
-        top: 0
-        right: 0
-        left: 50
-        bottom: 20
-      key:
-        x: 'confidence'
-        y: 'gdp'
-        id: 'country')
-    graph.setData [
-      {
-        country: 'AFG'
-        confidence: 34
-        gdp: 8777
-      },
-      {
-        country: 'NHG'
-        confidence: 27
-        gdp: 12777
-      },
-      {
-        country: 'XFG'
-        confidence: 54
-        gdp: 45777
-      },
-    ]
-    $(window).resize graph.onResize
+    d3.queue()
+      .defer d3.csv, baseurl+'/assets/data/confidence.csv'
+      .defer d3.csv, baseurl+'/assets/data/countries.csv'
+      .await (error, data, countries) ->
+        graph = new window.ScatterplotGraph('vaccine-confidence-graph',
+          aspectRatio: 0.5
+          margin:
+            top: 0
+            right: 0
+            left: 50
+            bottom: 20
+          key:
+            x: 'gdp'
+            y: 'confidence'
+            id: 'country')
+        graph.xAxis.tickValues [5000, 20000, 40000, 60000]
+        graph.setData data
+        $(window).resize graph.onResize
 
 
   setupVaccineDiseaseHeatmapGraph = ->
     d3.queue()
-      .defer d3.csv, baseurl+'/assets/data/diseases-cases.csv'
+      .defer d3.csv, baseurl+'/assets/data/diseases-cases-measles.csv'
       .defer d3.csv, baseurl+'/assets/data/population.csv'
       .await (error, data_cases, data_population) ->
         delete data_cases.columns  # we don't need the columns attribute
         data_cases.forEach (d) ->
-          d.disease = d.disease.toLowerCase()
           if d.year_introduction
             d.year_introduction = +d.year_introduction.replace('prior to', '')
           d.cases = {}
           d.values = {}
+          d.name = getCountryName data_population, d.code, lang
           # set values as cases/1000 habitants
           populationItem = data_population.filter (country) -> country.code == d.code
           if populationItem.length > 0
@@ -158,8 +147,8 @@
           # Get total cases by country & disease
           d.total = d3.values(d.values).reduce(((a, b) -> a + b), 0)
         # Filter by selected countries & disease
-        setupHeatMapGraph 'vaccines-measles-graph-1', data_cases, ['FIN','HUN','PRT','URY','MEX','COL'], 'measles'
-        setupHeatMapGraph 'vaccines-measles-graph-2', data_cases, ['IRQ','BGR','MNG','ZAF','FRA','GEO'], 'measles'
+        setupHeatMapGraph 'vaccines-measles-graph-1', data_cases, ['FIN','HUN','PRT','URY','MEX','COL']
+        setupHeatMapGraph 'vaccines-measles-graph-2', data_cases, ['IRQ','BGR','MNG','ZAF','FRA','GEO']
 
 
   # Immunization Coverage Dynamic Line Graph (we can select diferente diseases & countries)

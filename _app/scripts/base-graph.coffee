@@ -168,7 +168,6 @@ class window.BaseGraph
       @containerHeight = @containerWidth * @options.aspectRatio
       @width           = @containerWidth - @options.margin.left - @options.margin.right
       @height          = @containerHeight - @options.margin.top - @options.margin.bottom
-      console.log 'dimensions', @options.margin, @containerWidth, @width, @containerHeight, @height
     return @
 
   # to overdrive
