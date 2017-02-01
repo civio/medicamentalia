@@ -88,7 +88,7 @@ Eduardo Suárez lo explica en un despacho lleno de mascarillas (por si alguien s
 
 {% include caption.html img="articles/british.jpg" caption="Caricatura de 1802 titulada The Cow-Pock-or-the Wonderful Effects of the New Inoculation!" author="© Trustees of the British Museum" align="alignright" %}
 
-Los movimientos antivacunas no son nuevos. En otras épocas, estaban vinculados al temor a lo nuevo, a lo desconocido. Ya fue así desde la primera vacuna, la que creó Edward Jenner contra la viruela. Que la inmunización pasara por inocularse la versión de la enfermedad que pasaba la vaca sorprendió y alarmó a muchos, que bromeaban -o no- sobre la posibilidad de que provocara chistosas deformaciones. En la actualidad, la clave está en la falta de confianza en instituciones, farmacéuticas, organizaciones y hasta en la evidencia científica.
+Los movimientos antivacunas no son nuevos. En otras épocas, estaban vinculados al temor a lo nuevo, a lo desconocido. Ya fue así desde la primera vacuna, la que creó Edward Jenner contra la viruela. Que la inmunización pasara por inocularse la versión bovina de la enfermedad sorprendió y alarmó a muchos, que bromeaban -o no- sobre la posibilidad de que provocara chistosas deformaciones. En la actualidad, la clave está en la falta de confianza en instituciones, farmacéuticas, organizaciones y hasta en la evidencia científica.
 
   </div>
 </div>
