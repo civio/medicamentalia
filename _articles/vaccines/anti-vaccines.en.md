@@ -1,9 +1,9 @@
 ---
 category:         vaccines
-title:            Anti vaccines
-subtitle:         A toll on health
-description:      Although there are alternative models, the use of intellectual property rights, as applied to medicine, remains mandatory for the industry
-home_description: Although there are alternative models, the use of intellectual property rights, as applied to medicine, remains mandatory for the industry
+title:            Antivacunas
+subtitle:         Cuando el problema no es solo de recursos
+description:   Países de renta alta han bajado la guardia y rebajado sus porcentajes de inmunización. En algunos, la confianza en las vacunas empieza a flojear   
+home_description: 
 img:              articles/home-brasil-1040x694.jpg
 order:            2
 author:           Eva Belmonte
@@ -16,84 +16,79 @@ lang:             en
 <div class="container page-content" markdown="1">
   <div class="page-content-container" markdown="1">
 
-In the USA, it’s known as the $1,000 pill. And that’s not a metaphor. Each pill of sofosbuvir, the new drug for the treatment of Hepatitis C, costs exactly that. The medicine, sold by Gilead under the name Sovaldi, has again sparked discussion on the patent system and how it affects access to medicines and **the sustainability of health budgets** in countries of all income levels, especially developing ones. In September 2014, the company decided to bypass the traditional model in India, granting seven local pharmaceutical companies a voluntary license. These companies are permitted to develop and produce Sofosbuvir **in exchange for 7% of the final profit**. The [agreement](http://gilead.com/~/media/Files/pdfs/other/HCVGenericAgreementFactSheet.pdf) comes with small print; these laboratories can export their low cost version to 91 countries listed in the conditions (15 of which are small island states). According to Gilead’s estimates, this means that the cheaper treatment produced in India will reach 100 million people. Of course, the rest of the world is left out.
+"Europa nos está mandando el sarampión", afirma el doctor Eduardo Suárez, director del programa de inmunizaciones del Ministerio de Salud de El Salvador. Y no le falta razón. Mientras la Región de las Américas [se declaraba libre](http://www.paho.org/hq/index.php?option=com_content&view=article&id=12528%3Aregion-americas-declared-free-measles&Itemid=1926&lang=en) de esta enfermedad, se multiplicaban los brotes en países con rentas mucho más altas. Si Europa registró casi 26.000 casos en 2015, en toda América sumaron muchos menos, 611, y la mayoría de ellos en Canadá y Estados Unidos. 
 
-Hence, in European countries like Spain, it costs [€7.862](http://www.contratacion.euskadi.eus/w32-1084/es/contenidos/anuncio_contratacion/exposakidetza22363/es_doc/adjuntos/resolucion_definitiva1.pdf?rand=50165) to buy a box of 28 tablets, which equates to €23,587 for the basic three-month treatment. In France, the same prescription [climbs](http://www.pmlive.com/pharma_news/france_agrees_lowest_sovaldi_pricing_in_eu_618661) to a cost of to €41,000 (13,667 per box). Although there is a considerable reduction in price in America (of €75,000 per treatment*), the figures are so high that, as NGO Médicos del Mundo warns, "[they] are unaffordable for healthcare systems". So many patients that could benefit from the treatment do not have access to it. As a consequence, the NGO [appealed against Gilead](http://www.medicosdelmundo.org/index.php/mod.conts/mem.detalle_cn/relmenu.111/id.4220) before the European Patent Office in February. While admitting the treatment "is an important therapeutic advance," they argue in their appeal that "the molecule itself is not new enough to justify a patent."
-
-And it is not just a first world problem. Countries like Brazil, China, Mexico, Turkey, Thailand, Ukraine and Morocco **have been banned from the list** of possible recipients of the Indian Sofosbuvir generic. Thai civil society [estimated](http://www.hepcoalition.org/IMG/pdf/thai_cso_s_statement_on_sof_vl_final.pdf) that treating all the patients in the country would require $121,000 million (€108,000 million), while their health budget in 2014 was $8,400 million (€7,500 million). In Brazil, where the drug was approved by the national drug agency ANVISA last March, the government is still negotiating with Gilead. Brazilian organizations have already criticized their exclusion from the Indian agreement, [estimating](http://abiaids.org.br/brasil-e-excluido-de-licenca-que-autoriza-producao-de-genericos-para-remedio-contra-hepatite-c/27134) that the final price of the 3-month basic treatment will cost around $7,000 (€6,200). In total, [46%](http://www.hepcoalition.org/actua/herramientas-de-incidencia/article/la-licencia-de-gilead-sobre-los?lang=en) **of global Hepatitis C patients are outside** the agreement between Gilead and the Indian laboratories; each of their countries will have to negotiate the price paid for Sovaldi.
-
-> And the differences don’t only lie in the price negotiated between the company and the destination country, dependent on economic characteristics and population supply size, but also in their varied legal systems.
-
-Months after the voluntary license agreement was signed in January, India, once more, became the protagonist in the controversy around the new treatment for Hepatitis C. The country's courts [accepted](http://www.msf.es/noticia/2015/india-rechaza-patente-del-sofosbuvir-para-tratamiento-hepatitis-c) an appeal of civil organizations and rejected the patent. Can they now export the generic everywhere? No, because by signing a voluntary license the laboratories have already committed to veto certain countries from its commercialization. Moreover, in most regions of the world, the Sovaldi patent is already approved, or in the process of being; closing the door to the entry of generics.
-
-And the differences don’t only lie in the price negotiated between the company and the destination country, dependent on economic characteristics and population supply size, but also in their varied legal systems. India, besides being the largest market for generics in the world, is a country with very strict patent approval systems. However, in places like Brazil, as argued by the specialist in access to medicines Eloan Pinheiro, "[…] things that **are not patentable**, where the patent is undeserved," are often accepted for, she explains "technical difficulties". In the INPI (National Institute of Industrial Property), it now takes more than 12 years to get a patent granted due to the lack of staff, according to INPI's director of patents Júlio César Castelo.
-
-<small>* The currency conversions to EUR, where applicable, are done using June 8th rates, retrieved from [xe.com](http://www.xe.com/).</small>
-
-## The patent system
-
-### One international agreement, 161 ways of applying it
-
-All national legislation springs from an international agreement called [TRIPS](https://www.wto.org/spanish/docs_s/legal_s/27-trips.pdf) (acronym for Trade-Related Aspects of Intellectual Property Rights), signed in 1994 in advance of the World Trade Organization (WTO). This harmonized the international systems for all types of patents, not only pharmaceuticals, when it came into effect in January 1995. The agreement established that a patent will last **20 years from the date it is first filed**, yet many countries grant extensions of several years — a minimum of five in the European Union, for example, if there are processing delays. In the case of Brazil, the law states that patents last 20 years from the application date, as stated by TRIPS, or — and here is the key — **ten years from the date of approval**. Hence, after the first ten years, every year of delay extends the monopoly on the drug. In Spain, the law is being [debated](http://www.congreso.es/docu/docum/ddocum/dosieres/sleg/legislatura_10/spl_71/pdfs/1.pdf), in Congress, on the path to reform. One international rule, 161 ways to apply it; the same figure as the number of countries who are members of the WTO.
-
-{% include infographic.html id="patents" %}
-
-She lives in a house on the outskirts of Rio with two turtles and a dog, surrounded by books and music. Eloan Pinheiro, with a background in chemistry, worked at a large pharmaceutical company leading research teams before becoming director of the Brazilian public laboratory Farmanginhos, where she studied production costs, and later joined the WHO. She is now a leader in the struggle for access to medicines. She works as a consultant for civil organizations and vehemently criticizes the patent system – gesticulating wildly and punctuating each point with a sharp finger "It's a cruel mechanism. Medicines are not a commodity, they are different to a car or a business. They save lives." Moving from general opinion to the particulars, she continues: "When patents were also applied to the products, knowledge was restricted. When it affected just processes, someone could come up with the same molecule through a different path. That is creative, inventive." In the same vein, a few days earlier from the headquarters of ABIA (Brazilian Interdisciplinary AIDS Association) Pedro Vilardi argued, as if an asynchronous conversation had been planned; "Copy is a demonized word, but is one of the most wonderful things in the world. There is an innovative process inherent to copying." But for pharmaceutical companies it is just the opposite: protection against the copy, the patent, is the mechanism that protects innovation, since it compensates it. In that regard, the director of the INPI is clear: "The patent system, in my opinion, is the best system of innovation, to award rewards for generated innovations".
-
-Reinaldo Guimarães enters this debate. After working in several positions linked to the public sector, he became Secretary of State for Science and Technology under the Brazilian Ministry of Health (2007-2010) and is now vice president of ABIFINA, the association that brings the local pharmaceutical industry together. Although he says that the patent system has "many merits", like disclosing the process (how was an innovation achieved?), Guimarães mistrusts the role of patents as a stimulus to innovation. Not only in the field of medicines, but for any industry. Because, he argues, "In the end, what stimulates innovation most is competition. Not monopoly. And patents are a monopoly." Organizations like ABIA also separate innovation and patents. “**The number of new molecules falls each year**;” argues Pedro Villardi, adding that "we are not in a scenario of great innovation and high prices. There is actually little innovation and high prices."<a name="cost"></a>
-
-## The cost of developing a new drug
-
-{% include video-container.html videoid="29PBm1nBbgk" title="Pharmaceuticals and civil society confront their numbers of developing a new drug." credit="Video: Anne Vigna and Miguel Á. Gavilanes" %}
-
-If the top of the patent system pyramid is the high price of certain drugs, as has happened with Sofosbuvir, the base that supports it is the companies' **investment in research** ; an investment recovered by intellectual property rights. The industry makes some estimates of the cost of developing a new molecule, analyzes the market and puts a price on its patented drug. The problem is that the base of the pyramid, those industry estimates of how much it costs to develop a new drug, is being **questioned**.
-
-The controversy revolves around a **mythical figure**, one billion dollars, that has been doing the rounds for years. That is the cost repeated over and over again when pricing the creation of a new drug. Its origin can be traced to a Tufts University (Massachusetts, USA) study, published in 2003, which asserted that the average investment to develop a molecule was $802 million (€714 million). Over time, the calculations of the study led by Joseph A. Dimasi were updated and rounded up to one billion dollars. "Not true," Eloan Pinheiro replies sharply. "Everything is _marketing_,” she adds.
-
-But the amount did not stop growing. In November 2014, the same researchers repeated the study with updated data. The [result](http://csdd.tufts.edu/news/complete_story/pr_tufts_csdd_2014_cost_study): the estimate rose to $2.558 million (about €2,277 million). From one billion to more than two billion, in just 11 years. But, where does that figure come from? According to the Tufts Center for the Study of Drug Development (Tufts CSDD), the department in charge of the investigation, [they analyzed](http://csdd.tufts.edu/files/uploads/cost_study_backgrounder.pdf) the costs of 106 randomly selected drugs that were tested on humans between 1995 and 2007, using data provided by ten pharmaceutical companies. However, **the data is not public** — a deep-seated opaqueness inherent to trade secrets — and, therefore, it is not possible for external evaluators to analyze the quality and level of detail. In fact, fighting **the lack of transparency in the sector** is one of the chores of organizations worldwide.
-
-40% of Tufts CSDD funds come from the pharmaceutical industry. Its [Financial Disclosure](http://csdd.tufts.edu/about/financial_disclosure) assures that "although the sponsors, regulators and academic enterprises may suggest research topics, the agenda is determined by the director and his team."
-
-For MSF, the figure has **credibility whatsoever**. According to a press release signed by Rohit Malpani, Director of Policy and Analysis for the organization, although the cost of creating a drug is variable, "our experience shows that a new drug can be developed for $50 million" (around €44.5 million). The gap between some numbers and others is abysmal.
-
-The Spanish Association of Pharmaceutical Industry, Farmaindustria, offers a more conservative figure than the American study. As reported in a recent campaign entitled [_The value of medicine_](http://www.farmaindustria.es/web/el-valor-del-medicamento/), bringing to light the value of the sector, research and development of a new drug in 2012 required an [investment](http://www.farmaindustria.es/web/infografia/cuanto-cuesta-desarrollar-un-medicamento/) of €1,172 million, which translates into seven million working hours or between 12 and 13 years. Similarly, in this case we also don’t know which formulas and disaggregated data made up the final figure. Judit Rius, director for the US Campaign for Access to Medicines MSF, argues that this opacity means, "**nobody knows how much it costs** to produce a drug."
-
-Robert W. Armstrong, former Vice President of Global R&D in Eli Lilly and Company, says the figures given by the industry, though varying from study to study, fall within a normal range. This is because, "the reality is that developing these drugs is very expensive and very difficult, and is becoming more difficult as we move forward.”
-
-More than €2 billion? €1,172 million? €44 million? What is the real cost? The differences between the calculations of industry and civil organizations are abysmal. To Guimarães, what separates them is **method of calculation**. "If you include all the phase IV clinical trials in R&D, which are more expensive, the figure rises". The same with including marketing. "And even more if you include the expectation of return on capital in the financial market", for example, what you would have earned if you had invested that money for the same amount of time as the duration of the research and production of the drug. That amount, the capital cost, has an important weight in the final result. In fact, the Tufts CSDD study breaks down its final figure into two components: of the total $2,558 million, $1,395 million correspond to direct spending, known as “out-of-pocket” spending, and the remaining $1,163 million are time costs; what investors **would have received** had they decided to put their money elsewhere while the drug was being developed. That, in the words of Guimarães, is the "magic formula".<a name="alternatives"></a>
-
-## Alternatives
-
-### Working around the traditional intellectual property model
-
-Even with its flaws, Guimarães is pragmatic when it comes to assessing the patent system: "If you have nothing to put in its place, whatever is available is the best." So are there no alternatives? Organizations, governments and pharmaceutical companies, sometimes forced by circumstances, **have sought and tried other models**. As an example, there is the voluntary license from Gilead in India, or the [compulsory license approved by Brazil in 2007](/en/compulsory-license); a measure allowed by the TRIPS agreement yet not considered the solution by the IFPMA (International Federation of Pharmaceutical Manufacturers and Associations) because, [they argue](http://www.ifpma.org/innovation/ip-access.html),there are other more effective ways in practice. Of course, according to the federation, these alternative paths **should always be complementary** to the patent system and be applied only when a clear market failure can be proved.
-
-A [study](http://www.ifpma.org/fileadmin/content/Publication/2012/Assembling_the_RD_puzzle_FINAL.pdf) paid for by the IFPMA and published in 2012 discusses these possible parallel tracks and looks into mechanisms such as patent pools or consortia of several firms exchanging licenses. A system that was ruled out, because in IFPMA’s opinion it "only serves to mitigate the cost of manufacturing generics". The study findings are not promising for other alternatives such as tax credits, which have been tested in the UK, or innovation grants. In the latter two cases, they consider these models to be vulnerable as they rely on the economic capacity and political interests of governments or donors. Nor are awards spared from criticism; formulated as a system of single payment when the drug is approved for marketing. In this case, the report considers that they "only go to the winners and, therefore, do not mitigate the risk of innovation". The IFPMA added that lawmakers may fall into the "temptation to undervalue innovation" and therefore, pay little. However, this system is the one Eloan Pinheiro defends: "If you create an innovation that will really revolutionize treatment, governments should pay so that it passes into the public domain."
-
-<div class="container-right">
-{% include video-container.html videoid="wTF8f4oMdws" title="What does PDP mean?" credit="Video: Anne Vigna and Miguel Á. Gavilanes" %}
+Mientras el problema en [otras zonas del planeta](/vaccines/inmunizacion) está en la falta de recursos, en las áreas más ricas el origen no hay que buscarlo en la escasez de medios, sino en su alcance -que deja fuera a algunas comunidades aisladas- y la falta de [confianza](http://elpais.com/elpais/2016/03/15/ciencia/1458038627_317563.html) en las vacunas. Así, a veces el problema no tiene nada que ver con la disponibilidad: son padres que deciden no vacunar a sus hijos pese a la [evidencia científica](http://www.who.int/features/qa/84/es/).
 </div>
 
-Of all the systems analyzed, **the favorites of the study** are open databases, [Advanced Market Commitments](https://en.wikipedia.org/wiki/Advance_market_commitments) governments or entities, sometimes formed by several countries, guaranteeing a viable market for a drug if it is developed — and Product Development Partnerships (PDPs) between industry, government, NGOs and academia to develop a new drug. Brazil kept the acronym. Its particular PDP, called [Parcerias de Desenvolvimiento Produtivo](http://bvsms.saude.gov.br/bvs/saudelegis/gm/2012/prt0837_18_04_2012.html), is based on collaborations between industry and government, which offers exclusive access to its enormous market in exchange for transfer of technology to public laboratories. Farmanginhos, the most important public laboratory, went from revenues of €57 million in 2012 to €143 million in 2013 thanks to these PDPs. They are the mainstay of Brazil's policy on access to medicines, however some people frown upon them.
-
-### Market failures
-
-Unfortunately, for some diseases there are no patents to fight against. We are talking about 17 **neglected diseases** (according to the [WHO classification](http://www.who.int/neglected_diseases/diseases/en/)) which affect one-sixth of the world population but have little visibility, and whose treatments **attract no innovation** in the pharmaceutical market. "We wish someone had tried to profit from them, at least then we would know how to start solving the problem", says Eric Stobbaerts, DNDi (Drugs for Neglected Diseases Initiative) director for Latin America, half jokingly.
-
-In their case, the main challenge is not intellectual property of drugs, but **the shortage of new molecules**. Millions of people need new treatments that help eradicate diseases suffered by the poorest and most marginalized people on the planet. "It's a political oblivion, a market failure," he says.
-
-<div class="container-right">
-{% include video-container.html videoid="1zRRQhpRK_4" title="Eric Stobbaerts (DNDi) talks about alternative models." credit="Video: Anne Vigna and Miguel Á. Gavilanes" %}
+<div class="graph-container">
+  <p class="graph-container-caption">Casos de sarampión por cada 100.000 habitantes en 2015</p>
+  <div id="measles-world-map-graph" class="map-graph"></div>
 </div>
 
-For all those diseases, "the law of supply and demand does not work". For that reason, DNDi has to be creative. They have no alternative. And they are proficient at implementing **alternative models** to the traditional industry — non-market solutions — "Here, we had to find other models of innovation and incentives".
+<div class="page-content-container" markdown="1">
+Alemania alzancó los 2.464 casos de sarampión en 2015, solo superada en Europa por Kyrgyzstan. [En Sillicon Valley](https://www.wired.com/2016/03/silicon-valley-daycares-still-big-vaccination-problems/) se registran nuevos brotes y tasas de vacunación por debajo de los mínimos necesarios, mientras el nuevo presidente de Estados Unidos, Donald Trump, se reúne con líderes de los [movimientos antivacunas](http://www.chicagotribune.com/news/opinion/commentary/ct-donald-trump-anti-vaxxer-20170116-story.html). En España, en 2015 y después de tres décadas sin casos, un niño sin vacunar [murió de difteria](http://ccaa.elpais.com/ccaa/2015/06/27/catalunya/1435393852_158995.html).
 
-The germ of DNDi's idea was conceived after the award of the 1999 Nobel Peace Prize to MSF, and took the form of a working group to make way for the current entity, which began work in 2003. As outsiders to the traditional, patent-based, market they have managed to develop, and make available, six new treatments; for sleeping sickness, Kala-Azar, Chagas disease and malaria. Six alternative paths.
+Italia ha vacunado al 82% de los niños a los que les tocaba la segunda dosis del sarampión, muy por debajo del mínimo para alcanzar inmunización de rebaño. Y, en la primera dosis, tampoco están para tirar cohetes: su cobertura es del 85%. San Marino apenas supera el 50%.
 
-{% include infographic.html id="antimalaricos" %}
+Dinamarca, por su parte, ha ido perdiendo cuota de vacunados en los últimos años hasta quedarse en un 80% en la segunda toma del sarampión, por debajo de unos 100 países, entre los que se encuentran Sri Lanka o Argelia, por poner solo dos ejemplos. Francia no ha enviado a la OMS datos de 2015, pero en 2014 tenía un 74% de inmunización. Una cifra baja que, al menos, ha ido a mejor: era de un 67% en 2013.
 
-DNDi's partner in the development of the anti-malarial ASMQ is the Brazilian public laboratory Farmanginhos. "The joint-development models and price agreements are our target, because in a capitalist structure no company will enter the game without making a profit," says director Hayne Felipe Da Silva. He adds: "We have to discuss at what point profit limits and harms the interests of a population, mainly in health issues. We need to be creative and find a model which solves that equation."
+<div class="graph-container">
+  <p class="graph-container-caption">Porcentaje de vacunación de sarampión</p>
+  <div id="immunization-coverage-graph" class="line-graph"></div>
+</div>
 
-Some of these roads are already being built, but **always parallel** to the highway of patents, whose toll is, sometimes, too expensive.
+De hecho, Francia es el país donde más se desconfía de la seguridad de las vacunas, según el projecto [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/), realizado por la London School of Hygiene and Tropical Medicine y para el que entrevistaron a 65.819 personas en 67 países. Un 40% de los franceses encuestados (frente a una media del 12% en los datos mundiales) respondieron que estaban en desacuerdo o totalmente en desacuerdo con la siguiente afirmación: "Las vacunas son seguras". 
+
+Siete de los diez países con menor confianza en las vacunas son europeos. Y eso, pese a que los efectos secundarios graves [son extremadamente raros](https://www.science.org.au/learning/general-audience/science-booklets/science-immunisation/4-are-vaccines-safe). Este problema [preocupa](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1) a el grupo de expertos en vacunación de la OMS. 
+
+</div>
+<div class="graph-container">
+  <p class="graph-container-caption">Nivel de confianza en las vacunas vs- GDP</p>
+  <div id="vaccine-confidence-graph" class="scatterplot-graph"></div>
+</div>
+<div class="page-content-container" markdown="1">
+
+Uno de los argumentos de algunos movimientos antivacunas está basado en la falsa relación entre la triple vírica y el autismo. En 1998, Andrew Wakefield divulgó a través de The Lancet un estudio en el que afirmaba demostrar ese vínculo. En 2010, después de que varios colegas lo refutaran, la revista lo [retiró y se retractó de lo publicado](http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(97)11096-0/abstract). 
+
+Poco a poco se fue desvelando [el fraude](http://www.elmundo.es/elmundosalud/2011/01/12/noticias/1294819509.html): Wakefield había cobrado de un abogado que reclutaba a padres de niños autistas para denunciar a las farmacéuticas, en una cruzada que los tribunales de Estados Unidos desestimaron. Ambos engañaron a los padres, fabricaron resultados y ocultaron sus intereses económicos en la investigación. Pese a todo, algunas personas, como el ahora presidente de Estados Unidos, siguen manteniendo esa teoría.
+
+<blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">Healthy young child goes to doctor, gets pumped with massive shot of many vaccines, doesn&#39;t feel good and changes - AUTISM. Many such cases!</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/449525268529815552">28 de marzo de 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+En 1953, un jovencísimo Peter L. Salk sonríe a cámara mientras su padre, Jonas Salk, le pone la vacuna para la polio que él mismo ha inventado. Peter siguió sus pasos y se dedica a la investigación en vacunas, además de presidir la [fundación](http://jonassalklegacyfoundation.org/) que lleva el nombre, y el legado, de su progenitor, fallecido en 1995. 
+
+En una [entrevista](http://www.theatlantic.com/health/archive/2014/10/the-anti-vaccine-movement-is-forgetting-the-polio-epidemic/381986/) en The Atlantic, asegura que los problemas de falta de información que acompañan a los movimientos antivacunas tienen tres patas: la preocupación de vivir "de forma natural", la descondianza en las instituciones y en las farmacéuticas, y el hecho de que muchas de esas enfermedades ya no están presentes en nuestro día a día. 
+
+Sí lo están en regiones en las que las epidemias de males como el sarampión o los casos de polio son mucho más recientes. O en la memoria de los más mayores. 
+
+<div class="container-right">
+{% include video-container.html videoid="gB_DH1g1hVU" credit="Vídeo: Manuel Penados" %}
+</div>
+
+Que la memoria mantenga vivos los recuerdos de épocas peores y las dificultades de acceso a la salud hacen que, en ciertas regiones, como en Centroamérica, la desconfianza no florezca. El miedo inicial a las vacunas en zonas rurales -por temor a lo desconocido- no ha evolucionado hasta transformarse en los movimientos antivacunas modernos, que son anecdóticos. Esas comunidades han pasado "de esconder a sus niños" cuando llegaban los responsables de las campañas de vacunación a "hacer cola cuando se enteran de que llegó la vacuna al centro de salud", como narra Ademir Vásquez, del programa nacional de inmunizaciones del Ministerio de Salud de Guatemala.
+
+### ¿Cómo se combate?
+
+<div class="container-right">
+{% include video-container.html videoid="gB_DH1g1hVU" credit="Vídeo: Manuel Penados" %}
+</div>
+
+Todas las personas entrevistadas para este reportaje repiten la misma palabra: pedagogía. Pero no es sencillo. Un [artículo](http://elpais.com/elpais/2015/06/03/ciencia/1433354194_756223.html) publicado por el periodista Javier Salas en El País recopiló varios estudios que demostraban que ni atiborrarles de datos, ni asustarles con las posibles consecuencias, ni corregirles ni imponerles la vacunación funciona. De hecho, esas medidas [pueden ser contraproducentes](http://pediatrics.aappublications.org/content/early/2014/02/25/peds.2013-2365).
+
+Y ¿entonces? Un [estudio](http://www.ajpmonline.org/article/S0749-3797(11)00042-0/abstract) publicado en 2011 por la pediatra Allison Kempe probó que el mejor camino pasa por el médico de familia. Sus consejos, basados en experiencias personales -¿qué haría yo si fuera mi hijo?-, funcionan.  
+
+El Salvador aprobó una ley que establece que todo niño debe presentar su carné de vacunas para entrar a la escuela. El director del programa de inmunizaciones del Ministerio de Salud admite que, en la práctica, no impiden que un niño sin vacunar se matricule, porque pondrían barreras a otro derecho básico: la educación. Lo que hacen es aprovechar ese momento para proponer a las familias poner su cartilla al día. 
+
+<div class="container-right">
+{% include video-container.html videoid="gB_DH1g1hVU" credit="Vídeo: Manuel Penados" %}
+</div>
+
+Eduardo Suárez lo explica en un despacho lleno de mascarillas (por si alguien se pone enfermo), mientras defiende con entusiasmo la vacunación a lo largo del curso de vida, y no solo para los más pequeños, admite que a veces tiene que agarrar de las orejas a algún empleado del ministerio para que se inmunice y critica que los medios latinoamericanos utilicen "vacunar" como sinónimo de algo negativo, de algo obligatorio y desagradable. Porque así, dice, es imposible hacer pedagogía. 
+
+{% include caption.html img="articles/british.jpg" caption="Caricatura de 1802 titulada The Cow-Pock-or-the Wonderful Effects of the New Inoculation!" author="© Trustees of the British Museum" align="alignright" %}
+
+Los movimientos antivacunas no son nuevos. En otras épocas, estaban vinculados al temor a lo nuevo, a lo desconocido. Ya fue así desde la primera vacuna, la que creó Edward Jenner contra la viruela. Que la inmunización pasara por inocularse la versión de la enfermedad que pasaba la vaca sorprendió y alarmó a muchos, que bromeaban -o no- sobre la posibilidad de que provocara chistosas deformaciones. En la actualidad, la clave está en la falta de confianza en instituciones, farmacéuticas, organizaciones y hasta en la evidencia científica. 
+
   </div>
 </div>

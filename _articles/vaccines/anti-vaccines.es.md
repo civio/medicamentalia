@@ -19,14 +19,14 @@ lang:             es
 "Europa nos está mandando el sarampión", afirma el doctor Eduardo Suárez, director del programa de inmunizaciones del Ministerio de Salud de El Salvador. Y no le falta razón. Mientras la Región de las Américas [se declaraba libre](http://www.paho.org/hq/index.php?option=com_content&view=article&id=12528%3Aregion-americas-declared-free-measles&Itemid=1926&lang=en) de esta enfermedad, se multiplicaban los brotes en países con rentas mucho más altas. Si Europa registró casi 26.000 casos en 2015, en toda América sumaron muchos menos, 611, y la mayoría de ellos en Canadá y Estados Unidos. 
 
 Mientras el problema en [otras zonas del planeta](/vaccines/inmunizacion) está en la falta de recursos, en las áreas más ricas el origen no hay que buscarlo en la escasez de medios, sino en su alcance -que deja fuera a algunas comunidades aisladas- y la falta de [confianza](http://elpais.com/elpais/2016/03/15/ciencia/1458038627_317563.html) en las vacunas. Así, a veces el problema no tiene nada que ver con la disponibilidad: son padres que deciden no vacunar a sus hijos pese a la [evidencia científica](http://www.who.int/features/qa/84/es/).
-
 </div>
+
 <div class="graph-container">
   <p class="graph-container-caption">Casos de sarampión por cada 100.000 habitantes en 2015</p>
   <div id="measles-world-map-graph" class="map-graph"></div>
 </div>
-<div class="page-content-container" markdown="1">
 
+<div class="page-content-container" markdown="1">
 Alemania alzancó los 2.464 casos de sarampión en 2015, solo superada en Europa por Kyrgyzstan. [En Sillicon Valley](https://www.wired.com/2016/03/silicon-valley-daycares-still-big-vaccination-problems/) se registran nuevos brotes y tasas de vacunación por debajo de los mínimos necesarios, mientras el nuevo presidente de Estados Unidos, Donald Trump, se reúne con líderes de los [movimientos antivacunas](http://www.chicagotribune.com/news/opinion/commentary/ct-donald-trump-anti-vaxxer-20170116-story.html). En España, en 2015 y después de tres décadas sin casos, un niño sin vacunar [murió de difteria](http://ccaa.elpais.com/ccaa/2015/06/27/catalunya/1435393852_158995.html).
 
 Italia ha vacunado al 82% de los niños a los que les tocaba la segunda dosis del sarampión, muy por debajo del mínimo para alcanzar inmunización de rebaño. Y, en la primera dosis, tampoco están para tirar cohetes: su cobertura es del 85%. San Marino apenas supera el 50%.
@@ -86,9 +86,9 @@ El Salvador aprobó una ley que establece que todo niño debe presentar su carn�
 
 Eduardo Suárez lo explica en un despacho lleno de mascarillas (por si alguien se pone enfermo), mientras defiende con entusiasmo la vacunación a lo largo del curso de vida, y no solo para los más pequeños, admite que a veces tiene que agarrar de las orejas a algún empleado del ministerio para que se inmunice y critica que los medios latinoamericanos utilicen "vacunar" como sinónimo de algo negativo, de algo obligatorio y desagradable. Porque así, dice, es imposible hacer pedagogía. 
 
-Los movimientos antivacunas no son nuevos. En otras épocas, estaban vinculados al temor a lo nuevo, a lo desconocido. Ya fue así desde la primera vacuna, la que creó Edward Jenner contra la viruela. Que la inmunización pasara por inocularse la versión de la enfermedad que pasaba la vaca sorprendió y alarmó a muchos, que bromeaban -o no- sobre la posibilidad de que provocara chistosas deformaciones. En la actualidad, la clave está en la falta de confianza en instituciones, farmacéuticas, organizaciones y hasta en la evidencia científica. 
+{% include caption.html img="articles/british.jpg" caption="Caricatura de 1802 titulada The Cow-Pock-or-the Wonderful Effects of the New Inoculation!" author="© Trustees of the British Museum" align="alignright" %}
 
-{% include caption.html img="articles/british.jpg" caption="Caricatura de 1802 titulada *The Cow-Pock-or-the Wonderful Effects of the New Inoculation!-*" author="©Trustees of the British Museum" align="alignright" %}
+Los movimientos antivacunas no son nuevos. En otras épocas, estaban vinculados al temor a lo nuevo, a lo desconocido. Ya fue así desde la primera vacuna, la que creó Edward Jenner contra la viruela. Que la inmunización pasara por inocularse la versión de la enfermedad que pasaba la vaca sorprendió y alarmó a muchos, que bromeaban -o no- sobre la posibilidad de que provocara chistosas deformaciones. En la actualidad, la clave está en la falta de confianza en instituciones, farmacéuticas, organizaciones y hasta en la evidencia científica.
 
   </div>
 </div>
