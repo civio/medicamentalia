@@ -11,7 +11,6 @@ pub_date:         2016-02-09
 slug:             antivacunas
 ref:              antivaccines
 lang:             es
-draft:            true
 ---
 
 <div class="container page-content" markdown="1">

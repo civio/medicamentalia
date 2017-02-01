@@ -14,7 +14,7 @@
     <div class="row no-gutter">
       {% assign articles=site.articles | where:"category", include.id | sort:"order" %}
       {% for article in articles %}
-        {% if article.lang == page.lang %}
+        {% if article.lang == page.lang and article.draft != true %}
           <div class="col-sm-12">
             {% include home_item.html article=article %}
           </div>
