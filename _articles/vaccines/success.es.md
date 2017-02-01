@@ -7,7 +7,6 @@ home_description: Han acabado con enfermedades y están a punto de aniquilar otr
 img:              articles/home-falsificaciones-1040x694.jpg
 order:            1
 author:           Eva Belmonte y Miguel Ángel Gavilanes
-date:             2017-01-16
 slug:             exitos
 ref:              success
 lang:             es

@@ -1,16 +1,16 @@
 ---
 category:         vaccines
 title:            Niveles de vacunación
-subtitle:        Un escudo con agujeros
+subtitle:         Un escudo con agujeros
 description:      La mitad de los países del mundo no alcanza porcentajes de inmunización suficientes para frenar la transmisión de enfermedades como el sarampión
 home_description: La mitad de los países del mundo no alcanza niveles de inmunización suficientes para frenar la transmisión de enfermedades como el sarampión
 img:              articles/home-patentes-1040x694.jpg
 order:            3
 author:           Eva Belmonte
+pub_date:         2016-02-09
 slug:             inmunizacion
 ref:              immunization
 lang:             es
-draft:            true
 ---
 
 <div class="container page-content" markdown="1">
@@ -28,7 +28,7 @@ Es el [porcentaje de cobertura necesario para frenar la transmisión](http://www
 
 En 2015, 105 países -de los 187 de los que recogió estimaciones la OMS sobre unos 196 existentes- no alcanzaron el porcentaje de inmunización necesario para formar un escudo capaz de frenar la transmisión del sarampión, la llamada *inmunización de rebaño*. Es decir, en más de la mitad de los países del mundo no vacunaron de la primera dosis de esta enfermedad, al menos, al 95% de los niños a los que les tocaba por edad. Y es que el sarampión, con una propagación fácil y rápida, necesita porcentajes muy elevados de población inmunizada para crear esta barrera protectora. Vacunar al 95% de la población no solo evita que el sarampión se extienda cuando hay un brote, sino que, al frenar la transmisión, protege a aquellos que más lo necesitan: quienes no se pueden vacunar (bebés que no alcanzan la edad suficiente o personas inmunodeficientes, con alergias a los componentes de las vacunas u otros problemas de salud). Gracias al efecto rebaño, ellos también están protegidos. Un [brote](http://www.vaccinestoday.eu/stories/romania-measles-outbreak-kills-two-children/) ocurrido en 2016 en Rumanía, que acabó con la vida de bebés menores de un año -que no habían alcanzado la edad de vacunación- mostró las consecuencias de no alcanzar esos porcentajes y tener el escudo a punto.
 
-{% include vaccines/immunization_coverage_disease_graph.en.html disease="measles" vaccine="MCV1" title="Sarampión" description="de la primera dosis contra el sarampión" %}
+{% include vaccines/immunization_coverage_disease_graph.es.html disease="measles" vaccine="MCV1" title="Sarampión" description="de la primera dosis contra el sarampión" %}
 
 El patrón es claro (aunque haya [desviaciones, como las causadas por movimientos antivatunas](http://medicamentalia.org/vaccines/antivacunas)): la media en los países de bajos ingresos (*low income*, según la clasificación del Banco Mundial) está por debajo del 83%, mientras en el grupo de los más ricos se acerca al 95%. Pero el contagio no es local, ni siquiera regional y ni mucho menos por sectores estancos divididos en niveles de ingresos. El contagio de una enfermedad tan escurridiza no se detiene en esas fronteras, es un problema global. Y el escudo del planeta contra el sarampión, en esa primera dosis, está en un 85%.
 
@@ -55,13 +55,13 @@ Aunque el final de esta enfermedad vírica esté cerca, es necesario mantener lo
 
 En 2015, los niveles mundiales de vacunación de la tercera y última dosis de la polio, una enfermedad que ataca al sistema nervioso y provoca parálisis que puede afectar al diafragma e imposibilitar la respiración, estaba en un 86%, según las estimaciones que recoge la OMS. Pakistán, uno de los últimos reductos donde se extiende esta enfermedad, consiguió alcanzar niveles del 75% en 2015. La historia de este país también incluye algo de paso atrás (estuvo en un 89% en 2011 y 2012) y un poco de esperanza hacia la mejora, ya que en 2013 los niveles eran mucho peores, de un 66%. Los países con peores coberturas son Somalia (42%) y Guinea Ecuatorial (27%). 
 
-{% include vaccines/immunization_coverage_disease_graph.en.html disease="polio" vaccine="Pol3" title="Polio" description="de la tercera dosis contra la polio " %}
+{% include vaccines/immunization_coverage_disease_graph.es.html disease="polio" vaccine="Pol3" title="Polio" description="de la tercera dosis contra la polio " %}
 
 Somalia y Guinea Ecuatorial son también los que presentan peores cifras de vacunación (44 y 17%, respectivamente), junto a Ucrania, de la tercera dosis de la DTP (que protege contra difteria, tétanos y tos ferina, en sus siglas en inglés). El caso de Ucrania es otro ejemplo de marcha atrás: sus cifras de inmunización cayeron en picado de un 76% en 2012 a un 23% en 2015.
 
 La DTP incluye tres dosis y, en algunos países, una cuarta de refuerzo. Como pasa con el sarampión, una buena parte de los vacunados en la primera tanda acaban perdiéndose las últimas. En Guatemala vacunaron a un 96% de los niños de la primera dosis, una cifra alta y más que suficiente para alcanzar la inmunización de rebaño, pero alcanzaron a un 73%, muchos menos con la tercera dosis. En Panamá, un caso similar, pasaron de un 99 a un 74%.
 
-{% include vaccines/immunization_coverage_disease_graph.en.html disease="pertussis" vaccine="DTP3" title="Difteria, tétanos y tos ferina" description="de la tercera dosis contra la difteria, el tétanos y la tos ferina" %}
+{% include vaccines/immunization_coverage_disease_graph.es.html disease="pertussis" vaccine="DTP3" title="Difteria, tétanos y tos ferina" description="de la tercera dosis contra la difteria, el tétanos y la tos ferina" %}
 
 Esta vacuna protege contra la difteria, el tétanos y la tos ferina, tres enfermedades que siguen activas, aunque en algunos países suenen a leyendas negras de otra época. En 2015 se produjeron más de 10.000 casos de tétanos y más de 4.500 de difteria en todo el mundo. Ambas enfermedades han visto caer estas cifras de forma drástica gracias, entre otras cosas, a las vacunas. 
 
@@ -83,13 +83,13 @@ La batalla hasta la erradicación total de una enfermedad es larga y con altibaj
 
 Desde que se inventó la vacuna del sarampión y se puso en marcha en todos los países del mundo, la enfermedad casi ha desaparecido en algunas regiones y países, en los que los más jóvenes ni la recuerdan.
 
-{% include vaccines/measles_graph.en.html id="vaccines-measles-graph-1" title="Casos de sarampión" %}
+{% include vaccines/measles_graph.es.html id="vaccines-measles-graph-1" title="Casos de sarampión" %}
 
 En otros, en los que la situación había mejorado y ya estaba casi erradicada, han vuelto los brotes. Así ocurrió en Iraq en el 98 y en 2009, vinculado a los problemas de acceso y medios antes, durante y después de los conflictos. O en Bulgaria, que tras casi una década con uno o ningún caso al año, vio renacer el sarampión con mas de 2.000 casos en 2009. En 2010 alcanzó los 22.000, el mayor número de toda su historia registrada. 
 
 En Mongolia, un [brote](http://www.wpro.who.int/mongolia/mediacentre/releases/20160505-measles-outbreak-faqs/en/) que asomó la cabeza en 2015 y se alargó durante 2016 reportó miles de casos y mató a más de un centenar de personas, la mayoría bebés de menos de ocho meses, aquellos que debían haber sido protegidos por la inmunización de rebaño. Las estimaciones que envió el país a la OMS aseguraban que los niveles de cobertura del país superaban esos umbrales mínimos. Pero si los datos no son precisos o se producen bolsas de población sin alcanzar los mínimos, el escudo tampoco funciona. 
 
-{% include vaccines/measles_graph.en.html id="vaccines-measles-graph-2" title="Casos de sarampión" %}
+{% include vaccines/measles_graph.es.html id="vaccines-measles-graph-2" title="Casos de sarampión" %}
 
 Aunque hay razones para ser [optimista](http://medicamentalia/vaccines/exitos/) en algunas zonas,, la dificultad de vacunar a todos los niños en áreas en conflicto o con problemas de recursos e infraestructuras, y en mucha menor medida, [la oposición a las vacunas](enlace al otro tema), no permite erradicar enfermedades para las que, desde hace décadas, tenemos un escudo más que efectivo. [Según la propia OMS](http://www.who.int/topics/immunization/es/), 21,8 millones de lactantes no reciben las vacunas básicas.
 

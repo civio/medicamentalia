@@ -7,7 +7,6 @@ home_description: Although there are alternative models, the use of intellectual
 img:              articles/home-falsificaciones-1040x694.jpg
 order:            1
 author:           Eva Belmonte
-date:             2017-01-16
 slug:             success
 ref:              success
 lang:             en
