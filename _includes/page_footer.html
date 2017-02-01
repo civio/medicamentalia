@@ -3,7 +3,7 @@
     <div class="row no-gutter">
       {% assign articles=site.articles | where:"category", page.category | sort:"order" %}
       {% for article in articles %}
-        {% if page.lang == article.lang %}
+        {% if page.lang == article.lang and article.draft != true %}
         {% if page.ref != article.ref %}
         <div class="col-sm-12">
           {% include home_item.html article=article %}

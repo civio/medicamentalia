@@ -97,7 +97,8 @@
   setupVaccineConfidenceBarGraph = ->
     graph = new window.BarGraph('vaccine-confidence-graph',
       aspectRatio: 0.3
-      label: true
+      label: 
+        format: (d) -> +d.toFixed(1)+'%'
       key:
         x: 'name'
         y: 'value'
@@ -110,10 +111,6 @@
         delete d.name_en
       return data
     graph.loadData baseurl+'/assets/data/confidence.csv'
-    graph.$el.on 'draw-complete', (e) ->
-      console.log 'bar graph draw complete'
-      graph.container.selectAll('.bar')
-        .attr 'class', (d) -> 'bar bar-'+d.region.toLowerCase()
     $(window).resize graph.onResize
 
   setupVaccineConfidenceScatterplotGraph = ->

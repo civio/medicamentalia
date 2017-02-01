@@ -146,24 +146,13 @@ Common
       fill: $brand-primary;
     }
   }
-  #FRA.bar
-  {
+
+  #FRA.bar{
     fill: $brand-primary;
   }
-
-  /*
-  #BIH.bar,
-  #RUS.bar,
-  #GRC.bar,
-  #UKR.bar,
-  #SVN.bar,
-  #ITA.bar,
-  #ROU.bar,
-  #LVA.bar,
-  */
-  
   #bar-label-x-FRA{
     fill: $brand-primary;
+    font-weight: 600;
   }
   #bar-label-x-FRA,
   #bar-label-y-FRA{

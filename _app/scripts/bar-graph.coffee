@@ -66,7 +66,7 @@ class window.BarGraph extends window.BaseGraph
         .attr 'id',    (d) => 'bar-label-y-'+d[@options.key.id]
         .attr 'dy',    '-0.5em'
         .attr 'text-anchor', 'middle'
-        .text (d) => d[@options.key.y]
+        .text (d) => if @options.label.format then @options.label.format(d[@options.key.y]) else d[@options.key.y]
         .call @setBarLabelYDimensions
     return @
 
