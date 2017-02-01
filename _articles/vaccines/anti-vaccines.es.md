@@ -40,7 +40,7 @@ Dinamarca, por su parte, ha ido perdiendo cuota de vacunados en los últimos añ
 
 De hecho, **Francia es el país donde más se desconfía de la seguridad de las vacunas**, según el projecto [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/), realizado por la London School of Hygiene and Tropical Medicine y para el que entrevistaron a 65.819 personas en 67 países. Un 40% de los franceses encuestados (frente a una media del 12% en los datos mundiales) respondieron que estaban **en desacuerdo o totalmente en desacuerdo** con la siguiente afirmación: "Las vacunas son seguras". 
 
-**Siete de los diez países con menor confianza en las vacunas son europeos**. Y eso, pese a que los efectos secundarios graves [son extremadamente raros](https://www.science.org.au/learning/general-audience/science-booklets/science-immunisation/4-are-vaccines-safe). Este problema [preocupa](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1) a el grupo de expertos en vacunación de la OMS. 
+**Siete de los diez países con menor confianza en las vacunas son europeos**, lo que [preocupa](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1) al grupo de expertos en vacunación de la OMS. Y eso, pese a que los efectos secundarios graves [son extremadamente raros](https://www.science.org.au/learning/general-audience/science-booklets/science-immunisation/4-are-vaccines-safe). 
 
 </div>
 <div class="graph-container">
