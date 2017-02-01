@@ -34,7 +34,12 @@ This is an impetus for humanity (if it keeps its guard up) to literally wipe off
 
 {% include caption.html img="articles/jonas-salk.jpg" caption="Jonas Salk, on the cover of Time magazine in 1954." author="Polio Eradication" %}
 
-In the context of this health crisis, Jonas Salk created the vaccine against the disease and renounced its patent. Just over 60 years ago, it began to be used. Shortly after, Albert Bruce Sabin developed the oral polio vaccine, the key to reaching millions of children worldwide, thanks to its ease of administration. These are just two examples of the many men and women that have contributed, since the first inoculations, towards raising a preventative shield to tens of diseases. Many of them had lived closely with a disease and investigated it with an extra measure of personal motivation.
+In the context of this health crisis, Jonas Salk created the vaccine against the disease and renounced its patent. Just over 60 years ago, it began to be used. Shortly after, Albert Bruce Sabin developed the oral polio vaccine, the key to reaching millions of children worldwide, thanks to its ease of administration. 
+
+These are just two examples of the many men and women that have contributed, since the first inoculations, towards raising a preventative shield to tens of diseases. Many of them had lived closely with a disease, as Camille Guerin, who saw how his father and his wife dead of tuberculosis. They investigated it with an extra measure of personal motivation.
+
+Ellos dos son algunos de los muchos hombres y mujeres que han contribuido, desde las primeras inoculaciones, a levantar un escudo preventivo frente a decenas de enfermedades. Muchos de ellos las habían vivido de cerca, como Camille Guerin, que había visto como su padre y su mujer fallecían por culpa de la tuberculosos. Investigaban con una dosis de motivación extra.
+
 
 <div style="clear: both"></div>
 
