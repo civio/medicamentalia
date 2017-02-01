@@ -12,13 +12,13 @@ layout: default
     {% endif %}
   </p>
   <p class="date">
-    {% if page.date %}
+    {% if page.pub_date %}
       {% assign date_format = site.data.locales[page.lang].date.format %}
-      {% assign m = page.date | date: "%-m" | minus: 1 %}
+      {% assign m = page.pub_date | date: "%-m" | minus: 1 %}
       {% if site.data.locales[page.lang].date.months[m] %}
         {% assign date_format = date_format | replace: "%B", site.data.locales[page.lang].date.months[m] %}
       {% endif %}
-      {{ page.date | date: date_format }}
+      {{ page.pub_date | date: date_format }}
     {% endif %}
   </p>
 </div>
