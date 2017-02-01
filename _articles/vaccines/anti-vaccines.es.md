@@ -7,6 +7,7 @@ home_description:
 img:              articles/home-brasil-1040x694.jpg
 order:            2
 author:           Eva Belmonte
+pub_date:         2016-02-09
 slug:             antivacunas
 ref:              antivaccines
 lang:             es

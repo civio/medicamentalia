@@ -7,10 +7,10 @@ home_description: Han acabado con enfermedades y están a punto de aniquilar otr
 img:              articles/home-falsificaciones-1040x694.jpg
 order:            1
 author:           Eva Belmonte y Miguel Ángel Gavilanes
+pub_date:         2016-02-09
 slug:             exitos
 ref:              success
 lang:             es
-draft:            true
 ---
 
 
@@ -27,7 +27,7 @@ En 1980, casi dos siglos después de los experimentos de Jenner, **la viruela fu
 
 El **fin de la polio está muy cerca**. En 2016 se registraron 42 casos de esta enfermedad en todo el mundo, localizados en cuatro países: Pakistán, Afganistán, Laos y Nigeria. Europa, América y la región del Pacífico han sido declaradas ya zonas libres de polio, un logro que solo se desbloquea después de tres años sin casos registrados. 
 
-{% include vaccines/map_polio.en.html %}
+{% include vaccines/map_polio.es.html %}
 
 {% include caption.html img="articles/polio.jpg" caption="Sala con los llamados 'pulmones de acero' para casos graves de polio." author="Polio Erradication" align="alignright" %}
 
