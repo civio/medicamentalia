@@ -6,7 +6,7 @@ description:      Vaccines have eradicated some diseases and are about to annihi
 home_description: Vaccines have eradicated some diseases and are about to annihilate others. We review the successes and their protagonists
 img:              articles/home-falsificaciones-1040x694.jpg
 order:            3
-author:           Eva Belmonte
+author:           Eva Belmonte & Miguel Ángel Gavilanes
 pub_date:         2016-02-09
 slug:             successes
 ref:              success
