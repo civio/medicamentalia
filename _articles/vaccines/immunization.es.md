@@ -87,7 +87,9 @@ Desde que se inventó la vacuna del sarampión y se puso en marcha en todos los 
 
 En otros, en los que la situación había mejorado y ya estaba casi erradicada, han vuelto los brotes. Así ocurrió en Iraq en el 98 y en 2009, vinculado a los problemas de acceso y medios antes, durante y después de los conflictos. O en Bulgaria, que tras casi una década con uno o ningún caso al año, vio renacer el sarampión con mas de 2.000 casos en 2009. En 2010 alcanzó los 22.000, el mayor número de toda su historia registrada. 
 
-En Mongolia, un [brote](http://www.wpro.who.int/mongolia/mediacentre/releases/20160505-measles-outbreak-faqs/en/) que asomó la cabeza en 2015 y se alargó durante 2016 reportó miles de casos y mató a más de un centenar de personas, la mayoría bebés de menos de ocho meses, aquellos que debían haber sido protegidos por la inmunización de rebaño. Las estimaciones que envió el país a la OMS aseguraban que los niveles de cobertura del país superaban esos umbrales mínimos. Pero si los datos no son precisos o se producen bolsas de población sin alcanzar los mínimos, el escudo tampoco funciona. 
+En Mongolia, un [brote](http://www.wpro.who.int/mongolia/mediacentre/releases/20160505-measles-outbreak-faqs/en/) que asomó la cabeza en 2015 y se alargó durante 2016 reportó miles de casos y mató a más de un centenar de personas, la mayoría bebés de menos de ocho meses, aquellos que debían haber sido protegidos por la inmunización de rebaño. La falta de confianza en las vacunas tiene mucho que ver: el 26,8% de los encuestados en ese país para el projecto [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/) se mostró en contra de la afirmación de que las vacunas eran seguras. 
+
+Las estimaciones que envió el país a la OMS aseguraban que los niveles de cobertura del país superaban los umbrales mínimos. Pero si los datos no son precisos o se producen bolsas de población sin alcanzar los niveles básicos, el escudo tampoco funciona.  
 
 {% include vaccines/measles_graph.es.html id="vaccines-measles-graph-2" title="Casos de sarampión" %}
 

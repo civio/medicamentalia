@@ -87,7 +87,9 @@ Since the measles vaccine was invented and introduced worldwide, the disease has
 
 In other regions, where the situation had previously improved and the disease had been practically eradicated, outbreaks have rebounded. This was the case in Iraq in 1998 and 2009, linked to the problems of access and lack of resources before, during and after these conflict periods. Bulgaria had gone nearly a decade without a recorded case, when in 2009 the country saw a resurgence of measles with over 2,000 cases. In 2010, this figure reached 22,000, the greatest number ever recorded in the country. 
 
-In Mongolia, an [outbreak](http://www.wpro.who.int/mongolia/mediacentre/releases/20160505-measles-outbreak-faqs/en/) in 2015 and extended to 2016 reported thousands of cases and killed more than a hundred people, most of them babies under eight months old, those who should have been protected by herd immunization. Estimates sent by the country to the WHO claimed that the country's coverage levels exceeded these minimum thresholds. But if the data is not accurate or population segments remain under the minimum threshold, the shield does not work either.
+In Mongolia, an [outbreak](http://www.wpro.who.int/mongolia/mediacentre/releases/20160505-measles-outbreak-faqs/en/) in 2015 and extended to 2016 reported thousands of cases and killed more than a hundred people, most of them babies under eight months old, those who should have been protected by herd immunization. The lack of confidence in vaccines has much to do: 26.8% of those surveyed in that country for [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/)  project were against the claim that the vaccines were safe.
+
+Estimates sent by the country to the WHO claimed that the country's coverage levels exceeded these minimum thresholds. But if the data is not accurate or population segments remain under the minimum threshold, the shield does not work either.
 
 {% include vaccines/measles_graph.en.html id="vaccines-measles-graph-2" title="Measles cases" %}
 
