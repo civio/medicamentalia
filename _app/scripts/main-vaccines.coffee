@@ -295,7 +295,8 @@
           # Setup graph
           graph = new window.BarGraph(disease+'-immunization-bar-graph',
             aspectRatio: 0.25
-            label: true
+            label:
+              format: (d) -> +d+'%'
             key: x: 'name'
             margin:
               top: 20)

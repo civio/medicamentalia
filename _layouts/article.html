@@ -22,7 +22,9 @@ layout: default
     {% endif %}
   </p>
 </div>
+
 {{ page.content | add_anchor_links }}
+
 <div class="container page-content">
   {% include social_share.html %}
 </div>
@@ -30,3 +32,18 @@ layout: default
 {% if page.category %}
 {% include page_footer.html %}
 {% endif %}
+
+<!--
+<div class="page-footer">
+  <div class="container page-content">
+    <div class="page-content-container">
+      <div class="donate">
+        <p><strong>¿Te ha gustado esta historia?</strong></p>
+        <p>Ayúdanos a seguir haciendo investigaciones necesarias como esta donando a Civio</p>
+      </div>
+
+      {% include social_share.html %}
+    </div>
+  </div>
+</div>
+-->

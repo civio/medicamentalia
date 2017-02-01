@@ -13,12 +13,8 @@ lang:             en
 draft:            true
 ---
 
-<!--
-<div id="vaccine-map"></div>
--->
-
 <div class="container page-content" markdown="1">
-  <div class="page-content-container" markdown="1">
+<div class="page-content-container" markdown="1">
   
 <div class="graph-container">
   <p class="graph-container-caption">Immunization coverage</p>

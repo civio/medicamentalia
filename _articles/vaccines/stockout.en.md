@@ -13,8 +13,7 @@ lang:             en
 draft:            true
 ---
 
-<div class="container page-content" markdown="1">
-  <div class="page-content-container" markdown="1">
+<div class="page-content-container" markdown="1">
 
 In the USA, it’s known as the $1,000 pill. And that’s not a metaphor. Each pill of sofosbuvir, the new drug for the treatment of Hepatitis C, costs exactly that. The medicine, sold by Gilead under the name Sovaldi, has again sparked discussion on the patent system and how it affects access to medicines and **the sustainability of health budgets** in countries of all income levels, especially developing ones. In September 2014, the company decided to bypass the traditional model in India, granting seven local pharmaceutical companies a voluntary license. These companies are permitted to develop and produce Sofosbuvir **in exchange for 7% of the final profit**. The [agreement](http://gilead.com/~/media/Files/pdfs/other/HCVGenericAgreementFactSheet.pdf) comes with small print; these laboratories can export their low cost version to 91 countries listed in the conditions (15 of which are small island states). According to Gilead’s estimates, this means that the cheaper treatment produced in India will reach 100 million people. Of course, the rest of the world is left out.
 
@@ -93,5 +92,5 @@ The germ of DNDi's idea was conceived after the award of the 1999 Nobel Peace Pr
 DNDi's partner in the development of the anti-malarial ASMQ is the Brazilian public laboratory Farmanginhos. "The joint-development models and price agreements are our target, because in a capitalist structure no company will enter the game without making a profit," says director Hayne Felipe Da Silva. He adds: "We have to discuss at what point profit limits and harms the interests of a population, mainly in health issues. We need to be creative and find a model which solves that equation."
 
 Some of these roads are already being built, but **always parallel** to the highway of patents, whose toll is, sometimes, too expensive.
-  </div>
+
 </div>

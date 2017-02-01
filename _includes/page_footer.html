@@ -1,16 +1,40 @@
-<section class="no-padding page-footer">
-  <div class="container-fluid">
-    <div class="row no-gutter">
-      {% assign articles=site.articles | where:"category", page.category | sort:"order" %}
-      {% for article in articles %}
-        {% if page.lang == article.lang and article.draft != true %}
-        {% if page.ref != article.ref %}
-        <div class="col-sm-12">
-          {% include home_item.html article=article %}
-        </div>
-        {% endif %}
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
+{% assign articles = site.articles | where:"category", page.category | sort:"order" %}
+{% assign counter = 0 %}
+{% for article in articles %}
+  {% if counter == 0 %}
+    {% if page.lang == article.lang and article.draft != true and article.order > page.order %}
+    {% if page.ref != article.ref %}
+      {% assign counter = counter | plus: 1 %}
+      <div class="next-article">
+        <p class="text-center">{{ site.data.locales[page.lang].next_reading }}</p>
+        <a class="portfolio-box portfolio-{{ article.ref }} category-{{ article.category }}" href="{{ article.url | prepend: site.baseurl }}" title="{{ article.title }}">
+          {% if article.img %}
+            <div class="portfolio-box-background" style="background-image: url('{{ site.baseurl }}/assets/images/{{ article.img }}')"></div>
+          {% else %}
+            <div class="portfolio-box-background"></div>
+          {% endif %}
+          <div class="portfolio-box-overlay"></div>
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              {% if page.layout == 'home' %}
+              {% if article.category %}
+              <p class="portfolio-box-category">{{ site.data.locales[page.lang].categories[article.category].title }}</p>
+              {% endif %}
+              {% endif %}
+              <h3>{{ article.title }}</h3>
+              <div class="portfolio-box-caption-description">{{ article.home_description }}</div>
+              <button class="read-more-btn btn">
+                {% if article.ref == 'prices' %}
+                  {{ site.data.locales[page.lang].explore_data  }}
+                {% else %}
+                  {{ site.data.locales[page.lang].readmore  }}
+                {% endif %}
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}

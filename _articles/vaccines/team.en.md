@@ -26,7 +26,7 @@ lang:       en
 ---
 
 <div class="container page-content" markdown="1">
-  <div class="page-content-container" markdown="1">
+<div class="page-content-container" markdown="1">
 
 ## The team
 
@@ -127,5 +127,5 @@ Medicamentalia is not a finished project, it's a project in motion. We'd love to
 
 **Both the data and the content are licensed as Creative Commons (CC BY). You can use what you need or find interesting with just one condition: give Medicamentalia proper credit and link back to this site. Oh, and one favour: let us know, we'll be happy to hear about it**.
 
-  </div>
+</div>
 </div>

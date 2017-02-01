@@ -1,9 +1,9 @@
 ---
 category:         vaccines
-title:            Antivacunas
-subtitle:         Cuando el problema no es solo de recursos
-description:   Países de renta alta han bajado la guardia y rebajado sus porcentajes de inmunización. En algunos, la confianza en las vacunas empieza a flojear   
-home_description: 
+title:            Anti-vaccines
+subtitle:         When the problem is not just a question of resources
+description:      Some high-income countries have lowered their guard and their immunization rates have dropped. In certain countries, confidence in vaccines has begun to fall. 
+home_description: Some high-income countries have lowered their guard and their immunization rates have dropped. In certain countries, confidence in vaccines has begun to fall.
 img:              articles/home-brasil-1040x694.jpg
 order:            2
 author:           Eva Belmonte
@@ -14,33 +14,34 @@ lang:             en
 ---
 
 <div class="container page-content" markdown="1">
-  <div class="page-content-container" markdown="1">
+<div class="page-content-container" markdown="1">
 
-"Europa nos está mandando el sarampión", afirma el doctor Eduardo Suárez, director del programa de inmunizaciones del Ministerio de Salud de El Salvador. Y no le falta razón. Mientras la Región de las Américas [se declaraba libre](http://www.paho.org/hq/index.php?option=com_content&view=article&id=12528%3Aregion-americas-declared-free-measles&Itemid=1926&lang=en) de esta enfermedad, se multiplicaban los brotes en países con rentas mucho más altas. Si Europa registró casi 26.000 casos en 2015, en toda América sumaron muchos menos, 611, y la mayoría de ellos en Canadá y Estados Unidos. 
+**"Europe is sending us measles"**, says Doctor Eduardo Suárez, director of the immunization programme at the Department of Health of El Salvador. And with good reason. Whilst the Americas [declared itself to be free](http://www.paho.org/hq/index.php?option=com_content&view=article&id=12528%3Aregion-americas-declared-free-measles&Itemid=1926&lang=en) of this disease, **outbreaks multiplied in significantly higher-income countries**. Almost 26,000 cases were registered in Europe in 2015, far more than the 611 registered across the American continent, the majority of which were in Canada and the United.
 
-Mientras el problema en [otras zonas del planeta](/vaccines/inmunizacion) está en la falta de recursos, en las áreas más ricas el origen no hay que buscarlo en la escasez de medios, sino en su alcance -que deja fuera a algunas comunidades aisladas- y la falta de [confianza](http://elpais.com/elpais/2016/03/15/ciencia/1458038627_317563.html) en las vacunas. Así, a veces el problema no tiene nada que ver con la disponibilidad: son padres que deciden no vacunar a sus hijos pese a la [evidencia científica](http://www.who.int/features/qa/84/es/).
+Whilst in [other areas of the planet](/vaccines/immunization) the problem is due to lack of resources, in the richest zones of the planet the origin is not to be found in the lack of means but in its scope (which leaves out certain isolated communities) and a lack of [confidence](http://elpais.com/elpais/2016/03/15/ciencia/1458038627_317563.html) in the vaccines. The resurgence of certain diseases that had been practically forgotten, in the majority of cases, occurs in marginalised communities that are not covered by basic services. Occasionally, the problem has nothing to do with the resources available, **certain parents simply choose not to vaccinate their children despite the [scientific evidence](http://www.who.int/features/qa/84/es/)**.
 </div>
 
 <div class="graph-container">
-  <p class="graph-container-caption">Casos de sarampión por cada 100.000 habitantes en 2015</p>
+  <p class="graph-container-caption">Measeles cases per 100,000 habitants in 2015</p>
   <div id="measles-world-map-graph" class="map-graph"></div>
 </div>
 
 <div class="page-content-container" markdown="1">
-Alemania alzancó los 2.464 casos de sarampión en 2015, solo superada en Europa por Kyrgyzstan. [En Sillicon Valley](https://www.wired.com/2016/03/silicon-valley-daycares-still-big-vaccination-problems/) se registran nuevos brotes y tasas de vacunación por debajo de los mínimos necesarios, mientras el nuevo presidente de Estados Unidos, Donald Trump, se reúne con líderes de los [movimientos antivacunas](http://www.chicagotribune.com/news/opinion/commentary/ct-donald-trump-anti-vaxxer-20170116-story.html). En España, en 2015 y después de tres décadas sin casos, un niño sin vacunar [murió de difteria](http://ccaa.elpais.com/ccaa/2015/06/27/catalunya/1435393852_158995.html).
 
-Italia ha vacunado al 82% de los niños a los que les tocaba la segunda dosis del sarampión, muy por debajo del mínimo para alcanzar inmunización de rebaño. Y, en la primera dosis, tampoco están para tirar cohetes: su cobertura es del 85%. San Marino apenas supera el 50%.
+Germany registered 2,464 measles cases in 2015, only exceeded in Europe by Kyrgyzstan. [In Silicon Valley](https://www.wired.com/2016/03/silicon-valley-daycares-still-big-vaccination-problems/) new outbreaks are being recorded, along with vaccination rates below the required minimum, whilst the new President of the United States, **Donald Trump**, has met with leaders of [anti-vaccine movements](http://www.chicagotribune.com/news/opinion/commentary/ct-donald-trump-anti-vaxxer-20170116-story.html). In Spain, in 2015, following three decades with no recorded cases in the country, an unvaccinated child [died of diphtheria](http://ccaa.elpais.com/ccaa/2015/06/27/catalunya/1435393852_158995.html).
 
-Dinamarca, por su parte, ha ido perdiendo cuota de vacunados en los últimos años hasta quedarse en un 80% en la segunda toma del sarampión, por debajo de unos 100 países, entre los que se encuentran Sri Lanka o Argelia, por poner solo dos ejemplos. Francia no ha enviado a la OMS datos de 2015, pero en 2014 tenía un 74% de inmunización. Una cifra baja que, al menos, ha ido a mejor: era de un 67% en 2013.
+Italy had vaccinated 82% of children that were due their second dose of measles vaccine, a figure significantly below the level required to achieve herd immunity. The 85% immunization rate in the country for the first dose of the measles vaccination did not score much better. San Marino barely exceeded a rate of 50%.
+
+The immunization rate in Denmark has fallen over recent years to the point of 80% for the second dose of the measles vaccine. The country is outperformed by over 100 countries, including Sri Lanka and Algeria, for instance. France did not provide 2015 data to the WHO, however in 2014 the country’s immunization rate was 74%. A low score, but better than previous years - the country recorded a rate of 67% in 2013.
 
 <div class="graph-container">
-  <p class="graph-container-caption">Porcentaje de vacunación de sarampión</p>
+  <p class="graph-container-caption">Measles immunization rates</p>
   <div id="immunization-coverage-graph" class="line-graph"></div>
 </div>
 
-De hecho, Francia es el país donde más se desconfía de la seguridad de las vacunas, según el projecto [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/), realizado por la London School of Hygiene and Tropical Medicine y para el que entrevistaron a 65.819 personas en 67 países. Un 40% de los franceses encuestados (frente a una media del 12% en los datos mundiales) respondieron que estaban en desacuerdo o totalmente en desacuerdo con la siguiente afirmación: "Las vacunas son seguras". 
+In fact, **France is the country with the lowest vaccine confidence level**, according to the project [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/), carried out by the London School of Hygiene and Tropical Medicine for which 65,819 people were interviewed in 67 countries. 40% of French respondents (vs. an average of 12% worldwide) responded that **they disagreed or strongly disagreed** with the following statement: “Vaccines are safe”. 
 
-Siete de los diez países con menor confianza en las vacunas son europeos. Y eso, pese a que los efectos secundarios graves [son extremadamente raros](https://www.science.org.au/learning/general-audience/science-booklets/science-immunisation/4-are-vaccines-safe). Este problema [preocupa](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1) a el grupo de expertos en vacunación de la OMS. 
+**Seven of the ten countries with the lowest vaccine confidence level were European**. This is in spite of the fact that serious side effects [are extremely rare](https://www.science.org.au/learning/general-audience/science-booklets/science-immunisation/4-are-vaccines-safe). This question [worries](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1) the experts on immunization from the WHO.
 
 </div>
 <div class="graph-container">
@@ -49,46 +50,47 @@ Siete de los diez países con menor confianza en las vacunas son europeos. Y eso
 </div>
 <div class="page-content-container" markdown="1">
 
-Uno de los argumentos de algunos movimientos antivacunas está basado en la falsa relación entre la triple vírica y el autismo. En 1998, Andrew Wakefield divulgó a través de The Lancet un estudio en el que afirmaba demostrar ese vínculo. En 2010, después de que varios colegas lo refutaran, la revista lo [retiró y se retractó de lo publicado](http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(97)11096-0/abstract). 
+One of the arguments of certain anti-vaccine movements is based on **the false relationship between the MMR vaccine and autism**. In 1998, Andrew Wakefield published a study in The Lancet in which he claimed to prove this link. In 2010, after many colleagues refuted these claims, the magazine [retracted the article](http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(97)11096-0/abstract). 
 
-Poco a poco se fue desvelando [el fraude](http://www.elmundo.es/elmundosalud/2011/01/12/noticias/1294819509.html): Wakefield había cobrado de un abogado que reclutaba a padres de niños autistas para denunciar a las farmacéuticas, en una cruzada que los tribunales de Estados Unidos desestimaron. Ambos engañaron a los padres, fabricaron resultados y ocultaron sus intereses económicos en la investigación. Pese a todo, algunas personas, como el ahora presidente de Estados Unidos, siguen manteniendo esa teoría.
+**[The fraud] was gradually revealed** (http://www.elmundo.es/elmundosalud/2011/01/12/noticias/1294819509.html): Wakefield had been paid by a lawyer who recruited the parents of autistic children to initiate a lawsuit against pharmacists, in a case which was dismissed by the U.S. courts. Both deceived the parents, fabricated results and concealed the financial interest that they held in the investigation. Despite the evidence against, certain people, including the new President of the United States, **continue to uphold this theory**.
 
 <blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">Healthy young child goes to doctor, gets pumped with massive shot of many vaccines, doesn&#39;t feel good and changes - AUTISM. Many such cases!</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/449525268529815552">28 de marzo de 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-En 1953, un jovencísimo Peter L. Salk sonríe a cámara mientras su padre, Jonas Salk, le pone la vacuna para la polio que él mismo ha inventado. Peter siguió sus pasos y se dedica a la investigación en vacunas, además de presidir la [fundación](http://jonassalklegacyfoundation.org/) que lleva el nombre, y el legado, de su progenitor, fallecido en 1995. 
+In 1953, the young Peter L. Salk smiled for the camera whilst his father, Jonas Salk, gives him the polio vaccination that he invented himself. He followed in his father’s footsteps, devoting his life to vaccination research, as well as presiding over the [foundation](http://jonassalklegacyfoundation.org/) that bore his name, and the legacy of this father, who died in 1995. 
 
-En una [entrevista](http://www.theatlantic.com/health/archive/2014/10/the-anti-vaccine-movement-is-forgetting-the-polio-epidemic/381986/) en The Atlantic, asegura que los problemas de falta de información que acompañan a los movimientos antivacunas tienen tres patas: la preocupación de vivir "de forma natural", la descondianza en las instituciones y en las farmacéuticas, y el hecho de que muchas de esas enfermedades ya no están presentes en nuestro día a día. 
+In an [interview](http://www.theatlantic.com/health/archive/2014/10/the-anti-vaccine-movement-is-forgetting-the-polio-epidemic/381986/) in The Atlantic, he stated that **the problems of lack of information that accompanies
+the anti-vaccine movements** are threefold: concerns about living "naturally", lack of confidence in the institutions and pharmacists, and the fact that many of those diseases are no longer present in our everyday life. 
 
-Sí lo están en regiones en las que las epidemias de males como el sarampión o los casos de polio son mucho más recientes. O en la memoria de los más mayores. 
-
-<div class="container-right">
-{% include video-container.html videoid="gB_DH1g1hVU" credit="Vídeo: Manuel Penados" %}
-</div>
-
-Que la memoria mantenga vivos los recuerdos de épocas peores y las dificultades de acceso a la salud hacen que, en ciertas regiones, como en Centroamérica, la desconfianza no florezca. El miedo inicial a las vacunas en zonas rurales -por temor a lo desconocido- no ha evolucionado hasta transformarse en los movimientos antivacunas modernos, que son anecdóticos. Esas comunidades han pasado "de esconder a sus niños" cuando llegaban los responsables de las campañas de vacunación a "hacer cola cuando se enteran de que llegó la vacuna al centro de salud", como narra Ademir Vásquez, del programa nacional de inmunizaciones del Ministerio de Salud de Guatemala.
-
-### ¿Cómo se combate?
+This is not the case in regions where epidemics of diseases such as measles or cases of polio are much more recent. Or in the memory of the elderly.
 
 <div class="container-right">
-{% include video-container.html videoid="gB_DH1g1hVU" credit="Vídeo: Manuel Penados" %}
+{% include video-container.html videoid="gB_DH1g1hVU" credit="Video: Manuel Penados" %}
 </div>
 
-Todas las personas entrevistadas para este reportaje repiten la misma palabra: pedagogía. Pero no es sencillo. Un [artículo](http://elpais.com/elpais/2015/06/03/ciencia/1433354194_756223.html) publicado por el periodista Javier Salas en El País recopiló varios estudios que demostraban que ni atiborrarles de datos, ni asustarles con las posibles consecuencias, ni corregirles ni imponerles la vacunación funciona. De hecho, esas medidas [pueden ser contraproducentes](http://pediatrics.aappublications.org/content/early/2014/02/25/peds.2013-2365).
+A recent memory of the awfulness of an epidemic, along with a consciousness of the current difficulties in accessing healthcare mean that in certain regions, such as Central America, confidence in vaccines is far greater. The initial fear of vaccines in rural areas (a fear of the unknown) **has not transformed into true anti-vaccine sentiment**, it remains anecdotal. Such communities have moved from "hiding their children" when vaccination campaigns arrived in their towns to "pushing their children to the front of the queue” for vaccines, according to Ademir Vásquez, from the Ministry of Health of Guatemala's national immunization programme.
 
-Y ¿entonces? Un [estudio](http://www.ajpmonline.org/article/S0749-3797(11)00042-0/abstract) publicado en 2011 por la pediatra Allison Kempe probó que el mejor camino pasa por el médico de familia. Sus consejos, basados en experiencias personales -¿qué haría yo si fuera mi hijo?-, funcionan.  
-
-El Salvador aprobó una ley que establece que todo niño debe presentar su carné de vacunas para entrar a la escuela. El director del programa de inmunizaciones del Ministerio de Salud admite que, en la práctica, no impiden que un niño sin vacunar se matricule, porque pondrían barreras a otro derecho básico: la educación. Lo que hacen es aprovechar ese momento para proponer a las familias poner su cartilla al día. 
+### How do we deal with this?
 
 <div class="container-right">
-{% include video-container.html videoid="gB_DH1g1hVU" credit="Vídeo: Manuel Penados" %}
+{% include video-container.html videoid="gB_DH1g1hVU" credit="Video: Manuel Penados" %}
 </div>
 
-Eduardo Suárez lo explica en un despacho lleno de mascarillas (por si alguien se pone enfermo), mientras defiende con entusiasmo la vacunación a lo largo del curso de vida, y no solo para los más pequeños, admite que a veces tiene que agarrar de las orejas a algún empleado del ministerio para que se inmunice y critica que los medios latinoamericanos utilicen "vacunar" como sinónimo de algo negativo, de algo obligatorio y desagradable. Porque así, dice, es imposible hacer pedagogía. 
+Every person interviewed for this article **repeated the same word: education**. But this is not straightforward. An [article](http://elpais.com/elpais/2015/06/03/ciencia/1433354194_756223.html) by journalist Javier Salas in El País compiled various studies showing that neither information overload, nor scare campaigns built around the potential consequences, nor enforcement of the vaccine was successful. In fact, these methods [can be counter-productive](http://pediatrics.aappublications.org/content/early/2014/02/25/peds.2013-2365).
 
-{% include caption.html img="articles/british.jpg" caption="Caricatura de 1802 titulada The Cow-Pock-or-the Wonderful Effects of the New Inoculation!" author="© Trustees of the British Museum" align="alignright" %}
+So, what is the solution? A [study](http://www.ajpmonline.org/article/S0749-3797(11)00042-0/abstract) published in 2011 by the paediatrician Allison Kempe proved that **the best way was via the family doctor**. Their advice, based on personal experiences –a ‘what would I do if it was my child’ approach- works.  
 
-Los movimientos antivacunas no son nuevos. En otras épocas, estaban vinculados al temor a lo nuevo, a lo desconocido. Ya fue así desde la primera vacuna, la que creó Edward Jenner contra la viruela. Que la inmunización pasara por inocularse la versión de la enfermedad que pasaba la vaca sorprendió y alarmó a muchos, que bromeaban -o no- sobre la posibilidad de que provocara chistosas deformaciones. En la actualidad, la clave está en la falta de confianza en instituciones, farmacéuticas, organizaciones y hasta en la evidencia científica. 
+El Salvador passed a law ruling that all children must present their immunization records in order to begin school. The director of the Ministry of Health's immunization programme admits that, in practice, they would not deny an unvaccinated child their schooling, as this would create a barrier to another basic right - education. However, they can take advantage of this scheme to encourage families to ensure that children's immunization records are up to date.
 
-  </div>
+<div class="container-right">
+{% include video-container.html videoid="gB_DH1g1hVU" credit="Video: Manuel Penados" %}
+</div>
+
+Eduardo Suárez explains his stance from an office filled with face masks (in case someone falls ill), whilst enthusiastically defending vaccination, not just in childhood, but throughout our lifetime. He admits that he sometimes has to force colleagues at the ministry to get vaccinated and condemns the Latin American media for using the term "vaccinate” as a **synonym of something negative**, compulsory and unpleasant. This makes it impossible to educate, says Suárez.
+
+{% include caption.html img="articles/british.jpg" caption="Satirical print from 1802 called The Cow-Pock-or-the Wonderful Effects of the New Inoculation!" author="© Trustees of the British Museum" align="alignright" %}
+
+**Anti-vaccine movements are nothing new**. In the past, they were linked to a fear of the new, the unknown. It has been this way since the first vaccine, created by Edward Jenner against smallpox. The fact that this immunization involved vaccination of a human with the bovine version of the disease surprised and alarmed many, who believed that the vaccine could cause shocking deformities. Nowadays, the anti-vaccine sentiment stems from a lack of confidence in institutions, pharmacists, organisations and even in scientific evidence.
+
+</div>
 </div>

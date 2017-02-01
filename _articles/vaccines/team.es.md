@@ -45,7 +45,6 @@ En esta segunda investigación que, como la primera, ha contado con una beca de 
 *   **Asier Andrés**. Apoyo a la investigación en Guatemala.
 *   **Julio Hernández**. Sonido en vídeos de El Salvador.
 
-
 ### Agradecimientos
 Este proyecto no habría sido posible sin el apoyo inicial de una beca de **Journalism Grants**. Queremos agradecer al [European Journalism Center](http://ejc.net/) el patrocinio de esta investigación, del mismo modo que ya lo hicieron en la primera fase de Medicamentalia, y su infinita paciencia y comprensión con los problemas que han ido retrasando el lanzamiento; en especial a **Diana Lungu**, siempre dispuesta a echar una mano. 
 
@@ -146,5 +145,5 @@ Medicamentalia Vacunas no es un proyecto cerrado. Si tienes información relevan
 
 También puedes apoyar éste y otros proyectos de Civio [haciéndote cómplice](http://haztecomplice.civio.es/#hazte-complice) de la fundación o con [una donación](http://haztecomplice.civio.es/#hazte-complice).
 
-  </div>
+</div>
 </div>

@@ -14,7 +14,7 @@ lang:             en
 ---
 
 <div class="container page-content" markdown="1">
-  <div class="page-content-container" markdown="1">
+<div class="page-content-container" markdown="1">
 
 The measles vaccine was invented in the 1960s and by the 1980s, its use was widespread. Decades later, however, the disease persists. In 2015, nearly 200,000 measles cases were registered worldwide and 73,844 children under the age of four [died](http://apps.who.int/gho/data/node.main.ghe1002015-by-country?lang=en) from this avoidable evil. The World Health Organization (WHO) has postponed its eradication target and now plans to achieve measles elimination in at least five of the six WHO regions by 2020. Based on the current immunization rates, this will be no easy task. 
 

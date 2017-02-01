@@ -14,11 +14,11 @@ draft:            true
 ---
 
 <div class="container page-content" markdown="1">
-
+  <div class="page-content-container" markdown="1">
   
-<div class="graph-container">
-  <div id="guatemala-coverage-mmr" class="line-graph"></div>
-</div>
+  <div class="graph-container">
+    <div id="guatemala-coverage-mmr" class="line-graph"></div>
+  </div>
 
-
+  </div>
 </div>

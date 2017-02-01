@@ -13,6 +13,7 @@ en:
   description: A journalistic investigation into access to medicines around the world
   explore_data: Explore the data
   lang: English
+  next_reading: Next story
   readmore: Read more
   scroll: Scroll down
   twitter_msg: A project by @civio
@@ -57,6 +58,7 @@ es:
   description: Investigación periodística sobre el acceso a los medicamentos en el mundo
   explore_data: Explora los datos
   lang: Español
+  next_reading: Sigue leyendo
   readmore: Leer más
   scroll: Scroll down
   twitter_msg: Un proyecto de @civio

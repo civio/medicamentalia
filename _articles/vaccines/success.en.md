@@ -14,7 +14,7 @@ lang:             en
 ---
 
 <div class="container page-content" markdown="1">
-  <div class="page-content-container" markdown="1">
+<div class="page-content-container" markdown="1">
 
 Mario Martínez works for the Revolving Fund of the Pan American Health Organization (PAHO), a pooled purchasing system for vaccines amongst Latin American countries. He has spent years in this "business", as he calls it and with the memory of how **diseases that have been practically eradicated today could decimate entire generations just a few years ago**, he is worried by the lack of confidence in vaccines amongst certain segments of the population. "A mistake in this field could destroy the past hundred years of successes". Since Edward Jenner used cowpox to create a vaccine against the smallpox and coined the word vaccine -from the Latin 'vacca' for cow-, in the late 18th century, there have been many such achievements. 
 
@@ -58,5 +58,5 @@ Rubella has been eradicated in the Americas region and across the whole continen
 
 New vaccines [against malaria](http://www.who.int/immunization/research/development/malaria_vaccine_qa/en/) and [dengue fever](http://www.who.int/immunization/research/development/dengue_q_and_a/en/) are starting to be used in certain countries and the first results of the vaccine against [ebola](http://www.who.int/mediacentre/news/releases/2016/ebola-vaccine-results/en/) and the research teams working on vaccines against HIV and cancer worldwide **are paving the way for achievements which still sound like science fiction**. But then, nobody ever imagined that Jenner's experiments with cows would be the first step towards total eradication of smallpox.
 
-  </div>
+</div>
 </div>

@@ -13,9 +13,8 @@ ref:              success
 lang:             es
 ---
 
-
 <div class="container page-content" markdown="1">
-  <div class="page-content-container" markdown="1">
+<div class="page-content-container" markdown="1">
 
 Mario Martínez trabaja en el Fondo Rotatorio de la Organización Panamericana de la Salud (OPS), un sistema de compra conjunta de vacunas entre países latinoamericanos. Lleva años en este "negocio", como él lo llama, y recuerda bien cómo **enfermedades casi erradicadas hoy arrasaban generaciones hace unos años**. Está preocupado -y mucho- por la [pérdida de confianza](vaccines/antivacunas) en las vacunas de una parte de la población. "Cometer un error en este terreno puede destruir los últimos 100 años de éxitos". Y lo cierto es que desde que Edward Jenner, a finales del siglo XVIII, utilizó la viruela bovina que contenían las ampollas de las ubres de las vacas para crear una vacuna para la enfermedad humana y ayudó a ponerle nombre al invento, los logros son muchos. 
 
@@ -57,5 +56,5 @@ La región de las Américas ha eliminado la rubeola y, en todo el continente, ya
 
 Nuevas vacunas [contra la malaria](http://www.who.int/immunization/research/development/malaria_vaccine_qa/en/) y el [dengue](http://www.who.int/immunization/research/development/dengue_q_and_a/en/) se empiezan a utilizar en algunos países y los primeros resultados de la vacuna contra el [ébola](http://www.who.int/mediacentre/news/releases/2016/ebola-vaccine-results/en/) y los equipos de investigadores trabajando en vacunas contra el VIH o el cáncer en todo el mundo **abren el camino hacia logros futuros** que ahora suenan a ciencia ficción. Como cuando nadie imaginaba que esos experimentos de Jenner con las ampollas de las ubres de las vacas iban a ser el primer paso hacia la erradicación total de la viruela.
 
-  </div>
+</div>
 </div>

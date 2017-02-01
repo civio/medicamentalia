@@ -14,7 +14,7 @@ lang:             es
 ---
 
 <div class="container page-content" markdown="1">
-  <div class="page-content-container" markdown="1">
+<div class="page-content-container" markdown="1">
 
 La vacuna del sarampión se inventó en los años sesenta. Ya en los ochenta, su uso se empezó a generalizar. Décadas después, la enfermedad sigue activa. En 2015 se registraron casi 200.000 casos en todo el mundo y 73.844 niños menores de cuatro años [murieron](http://apps.who.int/gho/data/node.main.ghe1002015-by-country?lang=en) a causa de este mal evitable. La Organización Mundial de la Salud (OMS) ha ido retrasando sus objetivos para la erradicación y, ahora mismo, el plan pasa por acabar con el sarampión en al menos cinco de las seis regiones del mundo en 2020. Con las cifras de inmunización actuales, no parece sencillo. 
 
