@@ -263,7 +263,7 @@
         # Setup current country -> TODO!!! we have to get user country
         country = 'ESP'
         # Filter data
-        excludedCountries = ['TUV','NRU','PLW','VGB','MAF','SMR','GIB','TCA','LIE','MCO','SXM','FRO','MHL','MNP','ASM','KNA','GRL','CY','BMU','AND','DMA','IMN','ATG','SYC','VIR','ABW','FSM','TON','GRD','VCT','KIR','CUW','CHI','GUM','LCA','STP','WSM','VUT','NCL','PYF','BRB']
+        excludedCountries = ['NIU','COK','TUV','NRU','PLW','VGB','MAF','SMR','GIB','TCA','LIE','MCO','SXM','FRO','MHL','MNP','ASM','KNA','GRL','CY','BMU','AND','DMA','IMN','ATG','SYC','VIR','ABW','FSM','TON','GRD','VCT','KIR','CUW','CHI','GUM','LCA','STP','WSM','VUT','NCL','PYF','BRB']
         herdImmunity = 
           'MCV1': 95
           'Pol3': 80
