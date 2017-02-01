@@ -66,6 +66,7 @@
           delete d.name_en
         # set graph
         graph = new window.MapGraph('measles-world-map-graph',
+          aspectRatio: 0.5625
           margin: 
             top: 60
             bottom: 0
@@ -109,6 +110,10 @@
         delete d.name_en
       return data
     graph.loadData baseurl+'/assets/data/confidence.csv'
+    graph.$el.on 'draw-complete', (e) ->
+      console.log 'bar graph draw complete'
+      graph.container.selectAll('.bar')
+        .attr 'class', (d) -> 'bar bar-'+d.region.toLowerCase()
     $(window).resize graph.onResize
 
   setupVaccineConfidenceScatterplotGraph = ->

@@ -1,65 +1,65 @@
-code,value,name_en,name_es
-FRA,40.97,France,Francia
-BIH,36.3,Bosnia and Herzegovina,Bosnia y Herzegovina
-RUS,27.4,Russia,Rusia
-MNG,26.8,Mongolia,Mongolia
-GRC,25.47,Greece,Grecia
-JPN,25.13,Japan,Japón
-UKR,25,Ukraine,Ucrania
-IRN,22.49,Iran,Irán
-SVN,22,Slovenia,Eslovenia
-ARM,21.56,Armenia,Armenia
-VNM,20.91,Vietnam,Vietnam
-ITA,20.64,Italy,Italia
-ROU,19.77,Romania,Rumania
-LVA,18.61,Latvia,Letonia
-HKG,18.51,Hong Kong,Hong Kong
-MKD,17.8,Macedonia,Macedonia
-TUR,17.04,Turkey,Turquía
-SRB,16.45,Serbia,Serbia
-CHN,15.83,China,China
-AUT,14.57,Austria,Austria
-MEX,14.38,Mexico,México
-BEL,13.99,Belgium,Bélgica
-COD,13.8,Democratic Republic of the Congo,República Democrática del Congo
-AZE,13.75,Azerbaijan,Azerbaiyán
-FJI,13.62,Fiji,Fiyi
-USA,13.5,United States,Estados Unidos
-PNG,12.74,Papua New Guinea,Papúa Nueva Guinea
-LBN,12.5,Lebanon,Líbano
-CAN,12.07,Canada,Canadá
-BGR,12.02,Bulgaria,Bulgaria
-POL,11.95,Poland,Polonia
-NLD,11.2,Netherlands,Países Bajos
-DEU,11.15,Germany,Alemania
-IRL,10.89,Ireland,Irlanda
-CZE,10.2,Czech Republic,República Checa
-ZAF,9.85,South Africa,Sudáfrica
-KOR,8.94,South Korea,Corea del Sur
-ESP,8.93,Spain,España
-COL,8.83,Colombia,Colombia
-IND,8.82,India,India
-GBR,8.69,United Kingdom,Reino Unido
-SWE,8.6,Sweden,Suecia
-AFG,8.42,Afghanistan,Afganistán
-PER,8.3,Peru,Perú
-TUN,7.56,Tunisia,Túnez
-PAN,7.34,Panama,Panamá
-PAK,7,Pakistan,Pakistán
-NGA,6.71,Nigeria,Nigeria
-DNK,6.33,Denmark,Dinamarca
-BRA,6,Brazil,Brasil
-MAR,5.7,Morocco,Marruecos
-ISL,5.59,Iceland,Islandia
-THA,5.54,Thailand,Tailandia
-AUS,5.37,Australia,Australia
-GHA,5.12,Ghana,Ghana
-FIN,4.9,Finland,Finlandia
-DZA,4.78,Algeria,Argelia
-PRT,4.2,Portugal,Portugal
-ETH,4.19,Ethiopia,Etiopía
-IDN,3.41,Indonesia,Indonesia
-ECU,2.75,Ecuador,Ecuador
-PHL,1.9,Philippines,Filipinas
-ARG,1.23,Argentina,Argentina
-SAU,1.18,Saudi Arabia,Arabia Saudí
+code,value,name_en,name_es,region
+FRA,40.97,France,Francia,Europe
+BIH,36.3,Bosnia and Herzegovina,Bosnia y Herzegovina,Europe
+RUS,27.4,Russia,Rusia,Europe
+MNG,26.8,Mongolia,Mongolia,Asia
+GRC,25.47,Greece,Grecia,Europe
+JPN,25.13,Japan,Japón,Asia
+UKR,25,Ukraine,Ucrania,Europe
+IRN,22.49,Iran,Irán,Asia
+SVN,22,Slovenia,Eslovenia,Europe
+ARM,21.56,Armenia,Armenia,Asia
+VNM,20.91,Vietnam,Vietnam,Asia
+ITA,20.64,Italy,Italia,Europe
+ROU,19.77,Romania,Rumania,Europe
+LVA,18.61,Latvia,Letonia,Europe
+HKG,18.51,Hong Kong,Hong Kong,Asia
+MKD,17.8,Macedonia,Macedonia,Europe
+TUR,17.04,Turkey,Turquía,Asia
+SRB,16.45,Serbia,Serbia,Europe
+CHN,15.83,China,China,Asia
+AUT,14.57,Austria,Austria,Europe
+MEX,14.38,Mexico,México,Americas
+BEL,13.99,Belgium,Bélgica,Europe
+COD,13.8,Democratic Republic of the Congo,República Democrática del Congo,Africa
+AZE,13.75,Azerbaijan,Azerbaiyán,Asia
+FJI,13.62,Fiji,Fiyi,Oceania
+USA,13.5,United States,Estados Unidos,Americas
+PNG,12.74,Papua New Guinea,Papúa Nueva Guinea,Oceania
+LBN,12.5,Lebanon,Líbano,Asia
+CAN,12.07,Canada,Canadá,Americas
+BGR,12.02,Bulgaria,Bulgaria,Europe
+POL,11.95,Poland,Polonia,Europe
+NLD,11.2,Netherlands,Países Bajos,Europe
+DEU,11.15,Germany,Alemania,Europe
+IRL,10.89,Ireland,Irlanda,Europe
+CZE,10.2,Czech Republic,República Checa,Europe
+ZAF,9.85,South Africa,Sudáfrica,Africa
+KOR,8.94,South Korea,Corea del Sur,Asia
+ESP,8.93,Spain,España,Europe
+COL,8.83,Colombia,Colombia,Americas
+IND,8.82,India,India,Asia
+GBR,8.69,United Kingdom,Reino Unido,Europe
+SWE,8.6,Sweden,Suecia,Europe
+AFG,8.42,Afghanistan,Afganistán,Asia
+PER,8.3,Peru,Perú,Americas
+TUN,7.56,Tunisia,Túnez,Africa
+PAN,7.34,Panama,Panamá,Americas
+PAK,7,Pakistan,Pakistán,Asia
+NGA,6.71,Nigeria,Nigeria,Africa
+DNK,6.33,Denmark,Dinamarca,Europe
+BRA,6,Brazil,Brasil,Americas
+MAR,5.7,Morocco,Marruecos,Africa
+ISL,5.59,Iceland,Islandia,Europe
+THA,5.54,Thailand,Tailandia,Asia
+AUS,5.37,Australia,Australia,Oceania
+GHA,5.12,Ghana,Ghana,Africa
+FIN,4.9,Finland,Finlandia,Europe
+DZA,4.78,Algeria,Argelia,Africa
+PRT,4.2,Portugal,Portugal,Europe
+ETH,4.19,Ethiopia,Etiopía,Africa
+IDN,3.41,Indonesia,Indonesia,Asia
+ECU,2.75,Ecuador,Ecuador,Americas
+PHL,1.9,Philippines,Filipinas,Asia
+ARG,1.23,Argentina,Argentina,Americas
+SAU,1.18,Saudi Arabia,Arabia Saudí,Asia
