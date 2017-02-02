@@ -23,7 +23,15 @@ Mientras el problema en [otras zonas del planeta](/vaccines/inmunizacion) está 
 </div>
 <div class="graph-container">
   <p class="graph-container-caption">Casos de sarampión por cada 100.000 habitantes en 2015</p>
-  <div id="measles-world-map-graph" class="map-graph"></div>
+  <div id="measles-world-map-graph" class="map-graph">
+    <div class="tooltip top" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">
+        <p class="title"></p>
+        <p class="description"><strong class="value"></strong> casos <br>por 100.000 habitantes <br>(<span class="cases"></span> casos)</p>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="page-content-container" markdown="1">
 

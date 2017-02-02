@@ -23,7 +23,15 @@ Whilst in [other areas of the planet](/vaccines/immunization) the problem is due
 
 <div class="graph-container">
   <p class="graph-container-caption">Measeles cases per 100,000 habitants in 2015</p>
-  <div id="measles-world-map-graph" class="map-graph"></div>
+  <div id="measles-world-map-graph" class="map-graph">
+    <div class="tooltip top" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">
+        <p class="title"></p>
+        <p class="description"><strong class="value"></strong> cases <br>per 100,000 habitants <br>(<span class="cases"></span> cases)</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="page-content-container" markdown="1">

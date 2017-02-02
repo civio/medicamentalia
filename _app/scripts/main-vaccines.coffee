@@ -6,6 +6,16 @@
   lang    = $('body').data('lang')
   baseurl = $('body').data('baseurl')
 
+  # setup format numbers
+  if lang == 'es'
+    d3.formatDefaultLocale {
+      "decimal": ","
+      "thousands": "."
+      "grouping": [3]
+    }
+
+  formatFloat = d3.format(',.1f')
+  formatInteger = d3.format(',d')
 
   # Init Tooltips
   $('[data-toggle="tooltip"]').tooltip()
@@ -54,16 +64,13 @@
       .defer d3.csv,  baseurl+'/assets/data/countries-who-regions.csv'
       .defer d3.json, baseurl+'/assets/data/map-world-110.json'
       .await (error, data, countries, map) ->
-        # get cases object with region key
-        cases = {}
-        data.forEach (d) ->
-          cases[d.region] = +d.cases*100000
         # add cases to each country
-        countries.forEach (d) ->
-          d.value = cases[d.region]
-          d.name = d['name_'+lang]
-          delete d.name_es
-          delete d.name_en
+        countries.forEach (country) ->
+          region = data.filter (d) -> d.region == country.region
+          if region.length > 0
+            country.value = region[0].cases*100000
+            country.cases = region[0].cases_total
+            country.name = region[0]['name_'+lang]
         # set graph
         graph = new window.MapGraph('measles-world-map-graph',
           aspectRatio: 0.5625
@@ -71,6 +78,7 @@
             top: 60
             bottom: 0
           legend: true)
+        console.table countries
         graph.setData countries, map
         $(window).resize graph.onResize
 
@@ -110,7 +118,7 @@
         graph = new window.BarGraph('vaccine-confidence-graph',
           aspectRatio: 0.3
           label: 
-            format: (d) -> +d.toFixed(1)+'%'
+            format: (d) ->  formatFloat(d)+'%'
           margin: top: 0
           key:
             x: 'name'

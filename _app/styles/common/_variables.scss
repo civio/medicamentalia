@@ -30,7 +30,7 @@ $overlay-blue:          lighten( $color-blue, 10% );
 $overlay-orange:        lighten( $color-orange, 10% );
 $overlay-yellow:        lighten( $color-yellow, 10% );
 
-$tooltip-arrow-color:   $color-orange;
+$tooltip-arrow-color:   white;  //$color-orange;
 $tooltip-color:         $color-orange;
 $tooltip-bg:            white;
 $tooltip-opacity:       1;
