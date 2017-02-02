@@ -138,6 +138,8 @@ Common
 }
 
 #vaccine-confidence-graph{
+  margin-bottom: 1.5*$grid-gutter-width;
+
   .bar-label-x,
   .bar-label-y{
     display: none;
@@ -408,16 +410,14 @@ Vaccines coverage
 }
 
 #immunization-coverage-graph{
+  margin-bottom: $grid-gutter-width/2;
+
+  .graph-container p{
+    margin-bottom: 2*$grid-gutter-width/3;
+  }
+
   .line{
-    stroke: $color-orange;
-    stroke-width: 1.5px;
-  }
-  .line-label-point{
-    stroke: $color-orange;
-  }
-  #line-label-LKA,
-  #line-label-FRA{
-    alignment-baseline: text-before-edge;
+    stroke-width: 2px;
   }
 }
 

@@ -33,10 +33,29 @@ Italia ha vacunado al 82% de los niños a los que les tocaba la segunda dosis de
 
 Dinamarca, por su parte, ha ido perdiendo cuota de vacunados en los últimos años hasta quedarse en un 80% en la segunda toma del sarampión, por debajo de unos 100 países, entre los que se encuentran Sri Lanka o Argelia, por poner solo dos ejemplos. Francia no ha enviado a la OMS datos de 2015, pero en 2014 tenía un 74% de inmunización. Una cifra baja que, al menos, ha ido a mejor: era de un 67% en 2013.
 
-<div class="graph-container">
-  <p class="graph-container-caption">Porcentaje de vacunación de sarampión</p>
-  <div id="immunization-coverage-graph" class="line-graph"></div>
 </div>
+<div id="immunization-coverage-graph" class="graph-container">
+  <p class="graph-container-caption">Porcentaje de vacunados de sarampión</p>
+  <div class="row">
+    <div class="col-xs-6 col-md-3 graph-container">
+      <p>Sri Lanka</p> 
+      <div id="immunization-coverage-lka-graph" class="line-graph"></div>
+    </div>
+    <div class="col-xs-6 col-md-3 graph-container">
+      <p>Argelia</p> 
+      <div id="immunization-coverage-dza-graph" class="line-graph"></div>
+    </div>
+    <div class="col-xs-6 col-md-3 graph-container">
+      <p>Dinamarca</p> 
+      <div id="immunization-coverage-dnk-graph" class="line-graph"></div>
+    </div>
+    <div class="col-xs-6 col-md-3 graph-container">
+      <p>Francia</p> 
+      <div id="immunization-coverage-fra-graph" class="line-graph"></div>
+    </div>
+  </div>
+</div>
+<div class="page-content-container" markdown="1">
 
 De hecho, **Francia es el país donde más se desconfía de la seguridad de las vacunas**, según el projecto [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/), realizado por la London School of Hygiene and Tropical Medicine y para el que entrevistaron a 65.819 personas en 67 países. Un 40% de los franceses encuestados (frente a una media del 12% en los datos mundiales) respondieron que estaban **en desacuerdo o totalmente en desacuerdo** con la siguiente afirmación: "Las vacunas son seguras". 
 
@@ -44,7 +63,7 @@ De hecho, **Francia es el país donde más se desconfía de la seguridad de las 
 
 </div>
 <div class="graph-container">
-  <p class="graph-container-caption">Nivel de confianza en las vacunas vs- GDP</p>
+  <p class="graph-container-caption">Nivel de desconfianza en la seguridad de las vacunas</p>
   <div id="vaccine-confidence-graph" class="scatterplot-graph"></div>
 </div>
 <div class="page-content-container" markdown="1">

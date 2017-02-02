@@ -111,6 +111,7 @@
           aspectRatio: 0.3
           label: 
             format: (d) -> +d.toFixed(1)+'%'
+          margin: top: 0
           key:
             x: 'name'
             y: 'value'
@@ -203,25 +204,46 @@
       $('#immunization-coverage-country-1-selector').trigger('change')
     $(window).resize graph.onResize
 
-  # Immunization Coverage Line Graph (width selected countries)
-  setupImmunizationCoverageLineGraph = ->
-    countries = ['FRA','DNK','DZA','LKA']
-    graph = new window.LineGraph('immunization-coverage-graph', 
-      key: 
-        id: 'code'
-        x: 'name'
-      label: true
-      margin: bottom: 20)
-    graph.getScaleYDomain = (d) -> [0, 100]
-    graph.yAxis.tickValues [0,25,50,75,100]
-    graph.xAxis.tickValues [2001,2003,2005,2007,2009,2011,2013,2015]
-    graph.addMarker
-      value: 95
-      label: if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
-      align: 'left'
+  # Immunization Coverage Multiple Small Graph (width selected countries)
+  setupImmunizationCoverageMultipleSmallGraph = ->
+    countries = ['LKA','DZA','DNK','FRA']
+    graphs = []
     d3.csv baseurl+'/assets/data/immunization-coverage-mcv2.csv', (error, data) ->
-      graph.setData data.filter((d) -> countries.indexOf(d.code) != -1)
-    $(window).resize graph.onResize
+      countries.forEach (country,i) ->
+        # get current disease data
+        country_data = data
+          .filter (d) -> d.code == country
+          .map    (d) -> $.extend({}, d)
+        country_data.forEach (d) ->
+          delete d['2001']
+          delete d['2002']
+        # setup line chart
+        graph = new window.LineGraph('immunization-coverage-'+country.toLowerCase()+'-graph',
+          isArea: true
+          key: 
+            x: 'name'
+            id: 'code')
+        graphs.push graph
+        graph.yFormat = (d) -> d+'%'
+        graph.getScaleYDomain = (d) -> [0, 100]
+        graph.yAxis.tickValues [50]
+        graph.xAxis.tickValues [2003,2015]
+        graph.addMarker
+          value: 95
+          label: if i < 3 then '' else if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
+          align: 'right'
+        graph.setData country_data
+        # listen to year changes & update each graph label
+        graph.$el.on 'change-year', (e, year) ->
+          graphs.forEach (g) ->
+            unless g == graph
+              g.setLabel year
+        graph.$el.on 'mouseout', (e) ->
+          graphs.forEach (g) ->
+            unless g == graph
+              g.hideLabel()
+        $(window).resize graph.onResize
+       
 
   # World Cases Multiple Small
   setupWorldCasesMultipleSmallGraph = ->
@@ -395,7 +417,7 @@
     setupImmunizationCoverageDynamicLineGraph()
 
   if $('#immunization-coverage-graph').length > 0
-    setupImmunizationCoverageLineGraph()
+    setupImmunizationCoverageMultipleSmallGraph()
 
   if $('#world-cases').length > 0
     setupWorldCasesMultipleSmallGraph()
