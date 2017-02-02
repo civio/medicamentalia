@@ -95,24 +95,30 @@
 
 
   setupVaccineConfidenceBarGraph = ->
-    graph = new window.BarGraph('vaccine-confidence-graph',
-      aspectRatio: 0.3
-      label: 
-        format: (d) -> +d.toFixed(1)+'%'
-      key:
-        x: 'name'
-        y: 'value'
-        id: 'code')
-    graph.dataParser = (data) ->
-      data.forEach (d) => 
-        d.value = +d.value
-        d.name = d['name_'+lang]
-        delete d.name_es
-        delete d.name_en
-      return data
-    graph.loadData baseurl+'/assets/data/confidence.csv'
-    $(window).resize graph.onResize
+    d3.queue()
+      .defer d3.csv, baseurl+'/assets/data/confidence.csv'
+      .defer d3.json, 'http://freegeoip.net/json/'
+      .await (error, data, location) ->
+        data.forEach (d) =>
+          d.value = +d.value
+          d.name = d['name_'+lang]
+          delete d.name_es
+          delete d.name_en
+          # set user country active
+          if location and d.code2 == location.country_code
+            d.active = true
+        graph = new window.BarGraph('vaccine-confidence-graph',
+          aspectRatio: 0.3
+          label: 
+            format: (d) -> +d.toFixed(1)+'%'
+          key:
+            x: 'name'
+            y: 'value'
+            id: 'code')
+        graph.setData data
+        $(window).resize graph.onResize
 
+  ###
   setupVaccineConfidenceScatterplotGraph = ->
     d3.queue()
       .defer d3.csv, baseurl+'/assets/data/confidence.csv'
@@ -132,7 +138,7 @@
         graph.xAxis.tickValues [5000, 20000, 40000, 60000]
         graph.setData data
         $(window).resize graph.onResize
-
+  ###
 
   setupVaccineDiseaseHeatmapGraph = ->
     d3.queue()
@@ -265,7 +271,6 @@
       .await (error, data, countries, location) ->
         # Setup user country
         if location
-          console.log location
           user_country = countries.filter (d) -> d.code2 == location.country_code
           location.code = user_country[0].code
           location.name = user_country[0]['name_'+lang]

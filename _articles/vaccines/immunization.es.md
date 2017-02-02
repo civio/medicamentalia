@@ -93,7 +93,7 @@ Las estimaciones que envió el país a la OMS aseguraban que los niveles de cobe
 
 {% include vaccines/measles_graph.es.html id="vaccines-measles-graph-2" title="Casos de sarampión" %}
 
-Aunque hay razones para ser [optimista](http://medicamentalia/vaccines/exitos/) en algunas zonas,, la dificultad de vacunar a todos los niños en áreas en conflicto o con problemas de recursos e infraestructuras, y en mucha menor medida, [la oposición a las vacunas](enlace al otro tema), no permite erradicar enfermedades para las que, desde hace décadas, tenemos un escudo más que efectivo. [Según la propia OMS](http://www.who.int/topics/immunization/es/), 21,8 millones de lactantes no reciben las vacunas básicas.
+Aunque hay razones para ser [optimista](http://medicamentalia/vaccines/exitos/) en algunas zonas, la dificultad de vacunar a todos los niños en áreas en conflicto o con problemas de recursos e infraestructuras, y en mucha menor medida, [la oposición a las vacunas](enlace al otro tema), no permite erradicar enfermedades para las que, desde hace décadas, tenemos un escudo más que efectivo. [Según la propia OMS](http://www.who.int/topics/immunization/es/), 21,8 millones de lactantes no reciben las vacunas básicas.
 
 El último [informe](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1) del grupo de expertos de la OMS es claro alerta de que siguen "muy preocupados" porque "el progreso hacia los objetivos de erradicar la polio, eliminar el sarampión y la rubeola y eliminar el tétanos maternal y neonatal es demasiado lento". Y es que **la media mundial de coberturas solo se ha incrementado un 1% desde 2010**.
 
