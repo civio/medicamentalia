@@ -261,9 +261,14 @@
     d3.queue()
       .defer d3.csv, baseurl+'/assets/data/immunization-coverage.csv'
       .defer d3.csv, baseurl+'/assets/data/countries.csv'
-      .await (error, data, countries) ->
-        # Setup current country -> TODO!!! we have to get user country
-        country = 'ESP'
+      .defer d3.json, 'http://freegeoip.net/json/'
+      .await (error, data, countries, location) ->
+        # Setup user country
+        if location
+          console.log location
+          user_country = countries.filter (d) -> d.code2 == location.country_code
+          location.code = user_country[0].code
+          location.name = user_country[0]['name_'+lang]
         # Filter data
         excludedCountries = ['NIU','COK','TUV','NRU','PLW','VGB','MAF','SMR','GIB','TCA','LIE','MCO','SXM','FRO','MHL','MNP','ASM','KNA','GRL','CY','BMU','AND','DMA','IMN','ATG','SYC','VIR','ABW','FSM','TON','GRD','VCT','KIR','CUW','CHI','GUM','LCA','STP','WSM','VUT','NCL','PYF','BRB']
         herdImmunity = 
@@ -277,7 +282,7 @@
             key:   d.code
             name:  getCountryName(countries, d.code, lang)
             value: +d['2015']
-          if d.code == country
+          if location and d.code == location.code
             obj.active = true
           return obj
         data_sort = (a,b) -> b.value-a.value
@@ -291,7 +296,8 @@
             .filter((d) -> d.vaccine == vaccine and d['2015'] != '')
             .map(data_parser)
             .sort(data_sort)
-          graph_value = graph_data.filter((d) -> d.key == country)
+          if location
+            graph_value = graph_data.filter (d) -> d.key == location.code
           # Setup graph
           graph = new window.BarGraph(disease+'-immunization-bar-graph',
             aspectRatio: 0.25
@@ -309,8 +315,10 @@
             .addMarker marker
             .setData graph_data
           # Setup graph value
-          if graph_value.length > 0
+          if graph_value and graph_value.length > 0
+            $el.find('.immunization-country').html location.name
             $el.find('.immunization-data').html '<strong>' + graph_value[0].value + '%</strong>'
+            $el.find('.immunization-description').show()
           # On resize
           $(window).resize -> graph.onResize()
   

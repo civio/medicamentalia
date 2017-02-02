@@ -445,7 +445,12 @@ User country disease immunization coverage
   .bar.active{
     fill: $brand-primary;
   }
+
+  .immunization-description{
+    display: none;
+  }
 }
+
 .page-content .immunization-coverage-disease-graph .graph-container-caption{
   margin-bottom: 0;
 }
