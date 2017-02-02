@@ -5,8 +5,9 @@ class window.HeatmapGraph extends BaseGraph
 
   constructor: (id, options) ->
     console.log 'Heatmap Graph', id, options
-    @lang = $('body').data 'lang'
     super id, options
+    @formatFloat   = d3.format(',.1f')
+    @formatInteger = d3.format(',d')
     return @
 
 
@@ -15,7 +16,9 @@ class window.HeatmapGraph extends BaseGraph
 
   setSVG: ->
     @svg       = null
-    @container = d3.select '#'+@id+' .heatmap-container'
+    @container = d3.select '#'+@id+' .heatmap-graph'
+    if @options.legend
+      @container.classed 'has-legend', true
     @$tooltip  = @$el.find '.tooltip'
 
   setData: (data) ->
@@ -29,6 +32,8 @@ class window.HeatmapGraph extends BaseGraph
     @getDimensions() # force update dimensions
     @drawScales()
     @drawMarkers()
+    if @options.legend
+      @drawLegend()
     @drawGraph()
     return @
 
@@ -83,7 +88,7 @@ class window.HeatmapGraph extends BaseGraph
 
   drawScales: ->
     super()
-    @color.domain [0, 4]  # TODO!!! -> Make this dynamic
+    @color.domain [0, 400]
     return @
 
   getScaleXRange: =>
@@ -110,19 +115,7 @@ class window.HeatmapGraph extends BaseGraph
     @x.range @getScaleXRange()
     @y.range @getScaleYRange()
     # setup container height
-    @container.style 'height', @height+'px'
-    # draw cells
-    @container.append('div')
-      .attr  'class', 'cell-container'
-      .style 'height', @height+'px'
-    .selectAll('.cell')
-      .data(@cellsData)
-    .enter().append('div')
-      .attr  'class', 'cell'
-      .style 'background', (d) => @color(d.value)
-      .on    'mouseover', @onMouseOver
-      .on    'mouseout', @onMouseOut
-      .call  @setCellDimensions
+    #@container.style 'height', @height+'px'
     # draw years x axis
     @container.append('div')
       .attr 'class', 'x-axis axis'
@@ -141,6 +134,18 @@ class window.HeatmapGraph extends BaseGraph
       .attr  'class', 'axis-item'
       .style 'top', (d) => @y(d)+'px'
       .html (d) => @getCountryName d
+    # draw cells
+    @container.append('div')
+      .attr  'class', 'cell-container'
+      .style 'height', @height+'px'
+    .selectAll('.cell')
+      .data(@cellsData)
+    .enter().append('div')
+      .attr  'class', 'cell'
+      .style 'background', (d) => @color(d.value)
+      .on    'mouseover', @onMouseOver
+      .on    'mouseout', @onMouseOut
+      .call  @setCellDimensions
     # draw year introduction mark
     @container.select('.cell-container')
       .selectAll('.marker')
@@ -166,6 +171,8 @@ class window.HeatmapGraph extends BaseGraph
       .style 'top', (d) => @y(d)+'px'
     @container.select('.cell-container').selectAll('.marker')
       .call @setMarkerDimensions
+    if @options.legend
+      @legend.call @setLegendPosition
     return @
 
   setCellDimensions: (selection) =>
@@ -184,8 +191,7 @@ class window.HeatmapGraph extends BaseGraph
   onMouseOver: (d) =>
     # Set tooltip content
     offset           = $(d3.event.target).offset()
-    cases_str        = if @lang == 'es' then 'casos' else 'cases'
-    cases_single_str = if @lang == 'es' then 'caso' else 'case'
+
     @$tooltip
       .find '.tooltip-inner .country'
       .html d.name
@@ -194,10 +200,10 @@ class window.HeatmapGraph extends BaseGraph
       .html d.year
     @$tooltip
       .find '.tooltip-inner .value'
-      .html @formatDecimal(d.value, @lang)
+      .html if d.value == 0 then 0 else @formatFloat(d.value)
     @$tooltip
       .find '.tooltip-inner .cases'
-      .html if d.cases != 1 then d.cases.toLocaleString(@lang) + ' ' + cases_str else d.cases.toLocaleString(@lang) + ' ' + cases_single_str
+      .html @formatInteger(d.cases)
     # Set tooltip position
     @$tooltip.css
       'left':    offset.left + @x.bandwidth() * 0.5 - (@$tooltip.width() * 0.5)
@@ -213,10 +219,29 @@ class window.HeatmapGraph extends BaseGraph
     country = @data.filter (d) -> d.code == code
     return if country[0] then country[0].name else ''
 
-  formatDecimal: (number, lang) ->
-    return if number < 0.001 then 0 else if number >= 0.1 then number.toFixed(1).toLocaleString(lang) else if number >= 0.01 then number.toFixed(2).toLocaleString(lang) else number.toFixed(3).toLocaleString(lang)
+  drawLegend: ->
+    legendData = [0,100,200,300,400]
+    @legend = @container.append('ul')
+      .attr 'class', 'legend'
+      .style 'margin-left', -25-(15*legendData.length)+'px'
+    # draw legend rects
+    @legend.selectAll('li')
+      .data legendData
+      .enter().append('li')
+        .style 'background', (d) => @color d
+        .html (d,i) -> if i != 0 then d else '&nbsp'
 
-
+    ###
+    legendData.shift()
+    # draw legend texts
+    @legend.selectAll('text')
+      .data legendData
+      .enter().append('text')
+        .attr 'x', (d,i) -> Math.round legenItemWidth*(i-0.5-(legendData.length/2))
+        .attr 'y', 20
+        .attr 'text-anchor', 'start'
+        .text (d) -> d
+    ###
 
 # VaccineDiseaseGraph = (_id) ->
 #   $ = jQuery.noConflict()

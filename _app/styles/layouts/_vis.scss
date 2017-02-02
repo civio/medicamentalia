@@ -206,64 +206,89 @@ Vaccines diseases
 .vaccines-disease-graph{
   $padding-left: 100px;
 
-  .heatmap-container{
+  .heatmap-graph{
     position: relative;
     width: 100%;
     padding-left: $padding-left;
-    margin-top: 1.5 * $grid-gutter-width;
-    margin-bottom: 1.5*$grid-gutter-width;
-  }
+    margin-bottom: 2*$grid-gutter-width;
 
-  .cell-container{
-    position: relative;
-    width: 100%;
-    background: $gray-lighter;
-  }
+    .legend{
+      padding: 0;
+      margin-bottom: $grid-gutter-width;
 
-  .cell{
-    position: absolute;
-    outline: 1px solid white;
-
-    &:hover{
-      outline-width: 2px;
-      z-index: 90;
+      li{
+        display: inline-block;
+        width: 30px;
+        height: 0;
+        padding-top: 8px;
+        overflow: visible;
+        font-size: 11px;
+        color: $gray-light;
+        text-align: left;
+        line-height: 16px;
+      } 
     }
-  }
 
-  .marker{
-    position: absolute;
-    width: 2px;
-    background: #222;
-    z-index: 99;
-  }
+    .cell-container{
+      position: relative;
+      top: $grid-gutter-width/2;
+      width: 100%;
+      background: $gray-lighter;
+    }
 
-  .axis{
-    position: absolute;
-    color: $gray-light;
-  }
+    .cell{
+      position: absolute;
+      outline: 1px solid white;
 
-  .axis-item{
-    position: absolute;
-    font-size: 11px;
-  }
+      &:hover{
+        outline-width: 2px;
+        z-index: 90;
+      }
+    }
 
-  .x-axis{
-    top: -20px;
-  }
+    .marker{
+      position: absolute;
+      width: 2px;
+      background: #222;
+      z-index: 99;
+    }
 
-  .y-axis{
-    top: 0;
-    left: 0;
+    .axis{
+      position: absolute;
+      color: $gray-light;
+    }
 
     .axis-item{
-      color: $brand-primary;
-      font-size: 0.875em;
-      line-height: 1.35em;
-      width: $padding-left - 10;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      text-align: right;
+      position: absolute;
+      font-size: 11px;
+    }
+
+    .x-axis{
+      position: relative;
+      top: 0;
+    }
+
+    .y-axis{
+      top: $grid-gutter-width/2;
+      left: 0;
+
+      .axis-item{
+        color: $brand-primary;
+        font-size: 0.875em;
+        width: $padding-left - 10;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: right;
+      }
+    }
+
+    &.has-legend{
+      margin-bottom: 4*$grid-gutter-width;
+
+      .y-axis{
+        top: 7*$grid-gutter-width/3;
+      }
     }
   }
 

@@ -83,11 +83,12 @@
         $(window).resize graph.onResize
 
   # Measles cases Heatmap Graph
-  setupHeatMapGraph = (id, data, countries) ->
+  setupHeatMapGraph = (id, data, countries, legend) ->
     data = data
       .filter (d) -> countries.indexOf(d.code) != -1 and d3.values(d.values).length > 0
       .sort (a,b) -> a.total - b.total
     graph = new window.HeatmapGraph(id,
+      legend: legend
       margin: 
         right: 0
         left: 0)
@@ -170,7 +171,7 @@
                 population = +populationItem[0][year]
                 if population != 0
                   d.cases[year] = +d[year]
-                  d.values[year] = 1000 * +d[year] / population
+                  d.values[year] = 100000 * +d[year] / population
                 else
                   #console.log('No hay datos de población para', d.name, 'en ', year, d[year]);
               else
@@ -182,8 +183,8 @@
           # Get total cases by country & disease
           d.total = d3.values(d.values).reduce(((a, b) -> a + b), 0)
         # Filter by selected countries & disease
-        setupHeatMapGraph 'vaccines-measles-graph-1', data_cases, ['FIN','HUN','PRT','URY','MEX','COL']
-        setupHeatMapGraph 'vaccines-measles-graph-2', data_cases, ['IRQ','BGR','MNG','ZAF','FRA','GEO']
+        setupHeatMapGraph 'vaccines-measles-graph-1', data_cases, ['FIN','HUN','PRT','URY','MEX','COL'], true
+        setupHeatMapGraph 'vaccines-measles-graph-2', data_cases, ['IRQ','BGR','MNG','ZAF','FRA','GEO'], false
 
 
   # Immunization Coverage Dynamic Line Graph (we can select diferente diseases & countries)
