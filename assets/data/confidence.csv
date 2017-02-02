@@ -1,65 +1,65 @@
-code,value,name_en,name_es,region
-FRA,40.97,France,Francia,Europe
-BIH,36.3,Bosnia and Herzegovina,Bosnia y Herzegovina,Europe
-RUS,27.4,Russia,Rusia,Europe
-MNG,26.8,Mongolia,Mongolia,Asia
-GRC,25.47,Greece,Grecia,Europe
-JPN,25.13,Japan,Japón,Asia
-UKR,25,Ukraine,Ucrania,Europe
-IRN,22.49,Iran,Irán,Asia
-SVN,22,Slovenia,Eslovenia,Europe
-ARM,21.56,Armenia,Armenia,Asia
-VNM,20.91,Vietnam,Vietnam,Asia
-ITA,20.64,Italy,Italia,Europe
-ROU,19.77,Romania,Rumania,Europe
-LVA,18.61,Latvia,Letonia,Europe
-HKG,18.51,Hong Kong,Hong Kong,Asia
-MKD,17.8,Macedonia,Macedonia,Europe
-TUR,17.04,Turkey,Turquía,Asia
-SRB,16.45,Serbia,Serbia,Europe
-CHN,15.83,China,China,Asia
-AUT,14.57,Austria,Austria,Europe
-MEX,14.38,Mexico,México,Americas
-BEL,13.99,Belgium,Bélgica,Europe
-COD,13.8,Democratic Republic of the Congo,República Democrática del Congo,Africa
-AZE,13.75,Azerbaijan,Azerbaiyán,Asia
-FJI,13.62,Fiji,Fiyi,Oceania
-USA,13.5,United States,Estados Unidos,Americas
-PNG,12.74,Papua New Guinea,Papúa Nueva Guinea,Oceania
-LBN,12.5,Lebanon,Líbano,Asia
-CAN,12.07,Canada,Canadá,Americas
-BGR,12.02,Bulgaria,Bulgaria,Europe
-POL,11.95,Poland,Polonia,Europe
-NLD,11.2,Netherlands,Países Bajos,Europe
-DEU,11.15,Germany,Alemania,Europe
-IRL,10.89,Ireland,Irlanda,Europe
-CZE,10.2,Czech Republic,República Checa,Europe
-ZAF,9.85,South Africa,Sudáfrica,Africa
-KOR,8.94,South Korea,Corea del Sur,Asia
-ESP,8.93,Spain,España,Europe
-COL,8.83,Colombia,Colombia,Americas
-IND,8.82,India,India,Asia
-GBR,8.69,United Kingdom,Reino Unido,Europe
-SWE,8.6,Sweden,Suecia,Europe
-AFG,8.42,Afghanistan,Afganistán,Asia
-PER,8.3,Peru,Perú,Americas
-TUN,7.56,Tunisia,Túnez,Africa
-PAN,7.34,Panama,Panamá,Americas
-PAK,7,Pakistan,Pakistán,Asia
-NGA,6.71,Nigeria,Nigeria,Africa
-DNK,6.33,Denmark,Dinamarca,Europe
-BRA,6,Brazil,Brasil,Americas
-MAR,5.7,Morocco,Marruecos,Africa
-ISL,5.59,Iceland,Islandia,Europe
-THA,5.54,Thailand,Tailandia,Asia
-AUS,5.37,Australia,Australia,Oceania
-GHA,5.12,Ghana,Ghana,Africa
-FIN,4.9,Finland,Finlandia,Europe
-DZA,4.78,Algeria,Argelia,Africa
-PRT,4.2,Portugal,Portugal,Europe
-ETH,4.19,Ethiopia,Etiopía,Africa
-IDN,3.41,Indonesia,Indonesia,Asia
-ECU,2.75,Ecuador,Ecuador,Americas
-PHL,1.9,Philippines,Filipinas,Asia
-ARG,1.23,Argentina,Argentina,Americas
-SAU,1.18,Saudi Arabia,Arabia Saudí,Asia
+code,value,name_en,name_es,code2
+FRA,40.97,France,Francia,FR
+BIH,36.3,Bosnia and Herzegovina,Bosnia y Herzegovina,BA
+RUS,27.4,Russia,Rusia,RU
+MNG,26.8,Mongolia,Mongolia,MN
+GRC,25.47,Greece,Grecia,GR
+JPN,25.13,Japan,Japón,JP
+UKR,25,Ukraine,Ucrania,UA
+IRN,22.49,Iran,Irán,IR
+SVN,22,Slovenia,Eslovenia,SI
+ARM,21.56,Armenia,Armenia,AM
+VNM,20.91,Vietnam,Vietnam,VN
+ITA,20.64,Italy,Italia,IT
+ROU,19.77,Romania,Rumania,RO
+LVA,18.61,Latvia,Letonia,LV
+HKG,18.51,Hong Kong,Hong Kong,HK
+MKD,17.8,Macedonia,Macedonia,MK
+TUR,17.04,Turkey,Turquía,TR
+SRB,16.45,Serbia,Serbia,RS
+CHN,15.83,China,China,CN
+AUT,14.57,Austria,Austria,AT
+MEX,14.38,Mexico,México,MX
+BEL,13.99,Belgium,Bélgica,BE
+COD,13.8,Democratic Republic of the Congo,República Democrática del Congo,CD
+AZE,13.75,Azerbaijan,Azerbaiyán,AZ
+FJI,13.62,Fiji,Fiyi,FJ
+USA,13.5,United States,Estados Unidos,US
+PNG,12.74,Papua New Guinea,Papúa Nueva Guinea,PG
+LBN,12.5,Lebanon,Líbano,LB
+CAN,12.07,Canada,Canadá,CA
+BGR,12.02,Bulgaria,Bulgaria,BG
+POL,11.95,Poland,Polonia,PL
+NLD,11.2,Netherlands,Países Bajos,NL
+DEU,11.15,Germany,Alemania,DE
+IRL,10.89,Ireland,Irlanda,IE
+CZE,10.2,Czech Republic,República Checa,CZ
+ZAF,9.85,South Africa,Sudáfrica,ZA
+KOR,8.94,South Korea,Corea del Sur,KR
+ESP,8.93,Spain,España,ES
+COL,8.83,Colombia,Colombia,CO
+IND,8.82,India,India,IN
+GBR,8.69,United Kingdom,Reino Unido,GB
+SWE,8.6,Sweden,Suecia,SE
+AFG,8.42,Afghanistan,Afganistán,AF
+PER,8.3,Peru,Perú,PE
+TUN,7.56,Tunisia,Túnez,TN
+PAN,7.34,Panama,Panamá,PA
+PAK,7,Pakistan,Pakistán,PK
+NGA,6.71,Nigeria,Nigeria,NG
+DNK,6.33,Denmark,Dinamarca,DK
+BRA,6,Brazil,Brasil,BR
+MAR,5.7,Morocco,Marruecos,MA
+ISL,5.59,Iceland,Islandia,IS
+THA,5.54,Thailand,Tailandia,TH
+AUS,5.37,Australia,Australia,AU
+GHA,5.12,Ghana,Ghana,GH
+FIN,4.9,Finland,Finlandia,FI
+DZA,4.78,Algeria,Argelia,DZ
+PRT,4.2,Portugal,Portugal,PT
+ETH,4.19,Ethiopia,Etiopía,ET
+IDN,3.41,Indonesia,Indonesia,ID
+ECU,2.75,Ecuador,Ecuador,EC
+PHL,1.9,Philippines,Filipinas,PH
+ARG,1.23,Argentina,Argentina,AR
+SAU,1.18,Saudi Arabia,Arabia Saudí,SA
