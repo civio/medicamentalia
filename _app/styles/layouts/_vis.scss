@@ -491,6 +491,12 @@ World diseases cases
 */
 
 #world-cases{
+  .graph-container-caption{
+    margin-bottom: $grid-gutter-width/3;
+  }
+  .row{
+    margin-top: $grid-gutter-width;
+  }
   .graph-container {
     .line{
       stroke: $color-orange;
@@ -501,9 +507,6 @@ World diseases cases
     }
     .area{
       fill: $color-orange;
-    }
-    .graph-container-caption{
-      margin-bottom: $grid-gutter-width/3;
     }
   }
 }
@@ -1357,6 +1360,7 @@ Infographic
 }
 
 #inventors{
+  clear: both;
   margin-left: -0.5*$grid-gutter-width;
   margin-right: -0.5*$grid-gutter-width;
   margin-bottom: 1.5*$grid-gutter-width;
@@ -1367,6 +1371,10 @@ Infographic
     display: block;
     float: none;
     clear: both;
+  }
+
+  h3{
+    margin: 1.5*$grid-gutter-width auto;
   }
 
   .inventor {

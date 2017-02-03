@@ -38,10 +38,6 @@ Con esa crisis sanitaria como contexto, **Jonas Salk creó la primera vacuna con
 
 Ellos dos son algunos de los muchos hombres y mujeres que han contribuido, desde las primeras inoculaciones, a levantar un escudo preventivo frente a decenas de enfermedades. Muchos de ellos las habían vivido de cerca, como Camille Guerin, que había visto como su padre y su mujer fallecían por culpa de la tuberculosos. Investigaban con una dosis de motivación extra.
 
-<div style="clear: both"></div>
-
-### Los pioneros
-
 {% include vaccines/inventors.es.html %}
 
 Los éxitos de las vacunas **no solo se cuentan a guerra vencida**, como con la viruela o, casi, como con la polio, sino a batalla ganada. Algunas enfermedades siguen presentes, pero **su impacto ha menguado de forma drástica** gracias a, entre otras mejoras sanitarias, la inmunización. 

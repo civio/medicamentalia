@@ -40,10 +40,6 @@ These are just two examples of the many men and women that have contributed, sin
 
 Ellos dos son algunos de los muchos hombres y mujeres que han contribuido, desde las primeras inoculaciones, a levantar un escudo preventivo frente a decenas de enfermedades. Muchos de ellos las habían vivido de cerca, como Camille Guerin, que había visto como su padre y su mujer fallecían por culpa de la tuberculosos. Investigaban con una dosis de motivación extra.
 
-
-<div style="clear: both"></div>
-
-### The pioneers
 {% include vaccines/inventors.en.html %}
 
 The success of vaccines **is not just measured in wars won**, such as smallpox or (nearly) polio, but also in terms of victorious battles. Certain diseases are still present, but **their impact has been greatly diminished due to immunization**, along with other improvements in healthcare. 
