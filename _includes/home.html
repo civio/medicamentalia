@@ -19,9 +19,9 @@
 </header>
 
 <!-- Home Main Menu -->
-<section class="no-padding" id="home">
+<section id="home">
   <div class="container-fluid">
-    <div class="row no-gutter">
+    <div class="row">
       {% for item in site.data.home %}
         {% assign articles=site.articles | where:"ref", item.ref %}
         {% for article in articles %}

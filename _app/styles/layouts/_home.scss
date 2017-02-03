@@ -2,6 +2,7 @@
 #home-header{
   margin-top: 0;
   min-height: 100%;
+  //border: $grid-gutter-width/2 solid white;
   //background: $color-green-dark;
 
   #home-bkg {
@@ -27,7 +28,7 @@
 
     .header-content-inner{
       padding: 0;
-      max-width: 640px;
+      max-width: 630px;
     }
 
     h1{
@@ -46,8 +47,7 @@
     h2{
       display: block;
       color: white;
-      font-size: 20px;
-      font-family: $font-family-serif;
+      font-size: 19px;
       line-height: 1.375em;
       letter-spacing: .03em;
       padding-left: 40px;
@@ -55,6 +55,7 @@
       margin: 0;
       text-align: center;
       text-transform: none;
+      font-weight: 300;
     }
   }
 
@@ -88,8 +89,8 @@
 
 .home #language-selector{
   position: absolute;
-  top: 8px;
-  right: 10px;
+  top: $grid-gutter-width;
+  right: 5*$grid-gutter-width/6;
   z-index: 90;
   font-size: 14px;
   background-color: transparent;
@@ -172,9 +173,7 @@
     }
 
     h2{
-      font-size: 22px;
-      padding-left: 174px;
-      text-align: left;
+      font-size: 21px;
     }
   }
 }
@@ -286,18 +285,28 @@ $btn-scroll-down-icon-size: 44px;
 
 
 #home {
-  //height: 200%;
+  background: white;
+  padding: $grid-gutter-width/2 $grid-gutter-width/2 0;
+  //margin-top: -$grid-gutter-width/2;
 
-  .container-fluid,
+  .container-fluid{
+    padding: 0;
+    margin: 0;
+  }
   .row {
-    height: 100%;
+    margin-left: -$grid-gutter-width/4;
+    margin-right: -$grid-gutter-width/4;
   }
 
   [class*=col-] {
-    height: 300px;
+    height: 320px;
+    margin-bottom: $grid-gutter-width/2;
+    padding-left: $grid-gutter-width/4;
+    padding-right: $grid-gutter-width/4;
   }
 }
 
+/*
 @media (min-width: $screen-sm) {
 
   #home {
@@ -317,6 +326,7 @@ $btn-scroll-down-icon-size: 44px;
     height: 100%;
   }
 }
+*/
 
 
 // Portfolio Styles
@@ -347,8 +357,8 @@ $btn-scroll-down-icon-size: 44px;
 
   .portfolio-box-overlay {
     background: $brand-primary;
-    opacity: 0.3;
-    @include transition(.5s ease-out opacity);
+    opacity: 0.4;
+    @include transition(.5s ease-out all);
   }
 
   .portfolio-box-caption {
@@ -408,68 +418,39 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
 
-  
-  &.portfolio-prices .portfolio-box-overlay{
-    background: $overlay-green;
-  }
-  &.portfolio-prices:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-    color: darken($overlay-green,10%);
-  }
-
-  &.portfolio-counterfeits .portfolio-box-overlay{
-    background: $overlay-blue;
-  }
-  &.portfolio-counterfeits:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-    color: darken($overlay-blue,10%);
-  }
-
-  &.portfolio-compulsory-license .portfolio-box-overlay{
-    background: $overlay-orange;
-  }
-  &.portfolio-compulsory-license:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-    color: darken($overlay-orange,10%);
-  }
-
-  &.portfolio-patents .portfolio-box-overlay{
-    background: $overlay-yellow;
-  }
-  &.portfolio-patents:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-    color: darken($overlay-yellow,20%);
-  }
-
-  &.portfolio-superbugs .portfolio-box-overlay,
-  &.portfolio-access-team .portfolio-box-overlay{
-    background: lighten($brand-primary,10%);
-  }
-  &.portfolio-superbugs:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn,
-  &.portfolio-access-team:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-    color: darken($brand-primary,5%);
-  }
-  
-
   // Categoy colors
 
-  // &.category-access{
+  &.category-access{
 
-  //   .portfolio-box-overlay{
-  //     background: $overlay-green;
-  //   }
+    .portfolio-box-overlay{
+      background: $overlay-orange;
+    }
 
-  //   &:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-  //     color: darken($overlay-green,10%);
-  //   }
-  // }
+    &:hover {
+      .portfolio-box-overlay{
+        background: darken($overlay-orange, 20%);
+      }
+      .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+        color: darken($overlay-orange,10%);
+      }
+    }
+  }
 
-  // &.category-vaccines{
+  &.category-vaccines{
   
-  //   .portfolio-box-overlay{
-  //     background: $overlay-orange;
-  //   }
+    .portfolio-box-overlay{
+      background: $overlay-blue;
+    }
 
-  //   &:hover .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-  //     color: darken($overlay-orange,10%);
-  //   }
-  // }
+    &:hover {
+      .portfolio-box-overlay{
+        background: darken($overlay-blue, 20%);
+      }
+      .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+        color: darken($overlay-blue,10%);
+      }
+    }
+  }
   
 
   @media (min-width: $screen-sm) {
@@ -482,18 +463,6 @@ $btn-scroll-down-icon-size: 44px;
           font-size: 22px;
         }
       }
-    }
-  }
-}
-
-.home{
-
-  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content{
-    text-align: left;
-
-    .portfolio-box-caption-description{
-      margin-left: 0;
-      margin-right: 0;
     }
   }
 }
