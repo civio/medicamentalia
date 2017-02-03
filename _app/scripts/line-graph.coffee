@@ -196,7 +196,6 @@ class window.LineGraph extends window.BaseGraph
 
   setLabel: (year) ->
     @currentYear = year
-    @xAxis.tickValues [year]
     @container.select('.x.axis')
       .selectAll('.tick')
       .style 'display', 'none'
