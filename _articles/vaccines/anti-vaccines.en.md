@@ -4,7 +4,7 @@ title:            Anti-vaccines
 subtitle:         When the problem is not just a question of resources
 description:      Some high-income countries have lowered their guard and their immunization rates have dropped. In certain countries, confidence in vaccines has begun to fall. 
 home_description: Some high-income countries have lowered their guard and their immunization rates have dropped. In certain countries, confidence in vaccines has begun to fall.
-img:              articles/home-vaccines-immunization.jpg
+img:              articles/home-vaccines-antivaccines.jpg
 order:            2
 author:           Eva Belmonte
 pub_date:         2016-02-09

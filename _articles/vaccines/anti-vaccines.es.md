@@ -4,7 +4,7 @@ title:            Antivacunas
 subtitle:         Cuando el problema no es solo de recursos
 description:      Países de renta alta han bajado la guardia y rebajado sus porcentajes de inmunización. En algunos, la confianza en las vacunas empieza a flojear   
 home_description: Países de renta alta han bajado la guardia y rebajado sus porcentajes de inmunización. En algunos, la confianza en las vacunas empieza a flojear 
-img:              articles/home-vaccines-immunization.jpg
+img:              articles/home-vaccines-antivaccines.jpg
 order:            2
 author:           Eva Belmonte
 pub_date:         2016-02-09

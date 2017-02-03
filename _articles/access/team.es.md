@@ -1,7 +1,7 @@
 ---
 category:   access
 title:      Equipo y metodología
-img:        pages/nosotros-1040x552.jpg
+img:        articles/home-access-team.jpg
 
 gallery:
   - image: pages/IMG_5230-1040x635.jpg
@@ -12,8 +12,8 @@ gallery:
     title: Eva, en plena entrevista en Rio de Janeiro. | Anne Vigna
   - image: pages/Antonio11-1040x694.jpg
     title: Antonio, atento, en el laboratoria CePAT. | Henry Nelson Souza
-  - image: pages/IMG_5223-1040x694.jpg
-    title: Cabezas echando humo. | Javier de Vega
+  - image: articles/los-premiados.jpg
+    title: El equipo con sus premios.
   - image: pages/IMG_20150619_191737-1040x780.jpg
     title: Miguel, desquiciado con la base de datos.
   - image: pages/Redecilla.jpg

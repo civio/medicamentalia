@@ -25,10 +25,10 @@ $color-orange:          #e2723b;
 $color-brown:           #653015;
 $color-yellow:          #bbd646;
 
-$overlay-green:         lighten( $color-green-light, 10% ); 
-$overlay-blue:          lighten( $color-blue, 10% );
-$overlay-orange:        lighten( $color-orange, 10% );
-$overlay-yellow:        lighten( $color-yellow, 10% );
+$overlay-green:         darken($color-green-light, 15%); 
+$overlay-blue:          darken($color-blue, 12%);
+$overlay-orange:        darken($color-orange, 15%);
+$overlay-yellow:        darken($color-yellow, 30%);
 
 $tooltip-arrow-color:   white;  //$color-orange;
 $tooltip-color:         $color-orange;

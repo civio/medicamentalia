@@ -50,8 +50,8 @@
       font-size: 19px;
       line-height: 1.375em;
       letter-spacing: .03em;
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: 80px;
+      padding-right: 80px;
       margin: 0;
       text-align: center;
       text-transform: none;
@@ -408,7 +408,7 @@ $btn-scroll-down-icon-size: 44px;
 
   &:hover {
     .portfolio-box-overlay {
-      opacity: 0.5;
+      opacity: 0.6;
     }
     .portfolio-box-caption-content {
       .read-more-btn{
@@ -428,10 +428,10 @@ $btn-scroll-down-icon-size: 44px;
 
     &:hover {
       .portfolio-box-overlay{
-        background: darken($overlay-orange, 20%);
+        background: darken($overlay-orange, 15%);
       }
       .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-        color: darken($overlay-orange,10%);
+        color: darken($overlay-orange, 15%);
       }
     }
   }
@@ -444,10 +444,26 @@ $btn-scroll-down-icon-size: 44px;
 
     &:hover {
       .portfolio-box-overlay{
-        background: darken($overlay-blue, 20%);
+        background: darken($overlay-blue, 10%);
       }
       .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-        color: darken($overlay-blue,10%);
+        color: darken($overlay-blue, 10%);
+      }
+    }
+  }
+
+  &.category-{
+  
+    .portfolio-box-overlay{
+      background: $overlay-yellow;
+    }
+
+    &:hover {
+      .portfolio-box-overlay{
+        background: darken($overlay-yellow, 15%);
+      }
+      .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+        color: darken($overlay-yellow, 15%);
       }
     }
   }

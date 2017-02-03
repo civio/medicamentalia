@@ -1,7 +1,7 @@
 ---
 category:   vaccines
 title:      Equipo y metodología
-img:        pages/nosotros-1040x552.jpg
+img:        articles/home-vaccines-team.jpg
 
 gallery:
   - image: articles/pizarra.jpg

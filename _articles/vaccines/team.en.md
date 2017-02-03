@@ -1,7 +1,7 @@
 ---
 category:   vaccines
 title:      Team and methodology
-img:        pages/nosotros-1040x552.jpg
+img:        articles/home-vaccines-team.jpg
 
 gallery:
   - image: pages/IMG_5230-1040x635.jpg
