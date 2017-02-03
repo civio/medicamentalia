@@ -6,6 +6,10 @@
   background: $color-green-dark;
   text-align: center;
 
+  p {
+    margin-bottom: $grid-gutter-width/2;
+  }
+
   .main-partners{
 
     > div{
@@ -54,7 +58,7 @@
     }
 
     img{
-      margin: 0 auto;
+      margin: $grid-gutter-width/2 auto 0;
     }
   }
 
@@ -147,7 +151,7 @@
 
 @media (min-width: $screen-md) {
 
-  .partners .media-partner{
+  .partners .media-partner-5{
     width: 20% !important;
     margin: 0;
   }
