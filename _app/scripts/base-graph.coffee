@@ -27,7 +27,7 @@ class window.BaseGraph
 
   constructor: (id, options) ->
     @id       = id
-    @options  = $.extend true, optionsDefault, options  # merge optionsDefault & options
+    @options  = $.extend true, {}, optionsDefault, options  # merge optionsDefault & options
     @$el      = $('#'+@id)
     @getDimensions()
     @setSVG()
@@ -188,7 +188,7 @@ class window.BaseGraph
         .call @xAxis
     if @yAxis
       @container.selectAll('.y.axis')
-        .attr @setYAxisPosition
+        .call @setYAxisPosition
         .call @yAxis
     # update markers
     @container.select('.marker')

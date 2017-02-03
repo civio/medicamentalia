@@ -78,7 +78,6 @@
             top: 60
             bottom: 0
           legend: true)
-        console.table countries
         graph.setData countries, map
         $(window).resize graph.onResize
 
