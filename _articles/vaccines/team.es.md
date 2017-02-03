@@ -6,7 +6,7 @@ img:        pages/nosotros-1040x552.jpg
 gallery:
   - image: articles/pizarra.jpg
     title: Raúl y Eva comentan la composición del proyecto y le dan vueltas a cómo será la web. 
-  - image: articles/Miguel.jpg
+  - image: articles/miguel.jpg
     title: "Miguel, en plena entrevista en Pretoria (atención al elefante falsete). | Foto: Serusha Govender"
   - image: articles/eva-asier.jpg
     title: "Eva y Asier, tras la entrevista al ginecólogo Gerson Eduardo Galvez, en Ciudad de Guatemala. | Foto: Manuel Penados"
