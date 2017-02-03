@@ -17,8 +17,8 @@ draft:            true
   <div class="page-content-container" markdown="1">
 
 En Coffee Bay, en la costa de Sudáfrica bañada por el océano Índico y a 250 kilómetros al sur de Durban, una madre acude a la clínica pública más cercana, en Mapuzi, para vacunar a su hijo. **Lo intenta hasta en tres ocasiones, pero nunca quedan vacunas**. Después de esos tres intentos, se da por vencida y no vuelve a la clínica. Su bebé solo había recibido las vacunas administradas al nacer.
-Cuando el pequeño enferma, su madre, escarmentada, decide tomar un taxi y visitar a un médico privado en Mqanduli, a 65 kilómetros de distancia. Le prescribe un tratamiento para la tos y les envía de vuelta a casa. Pero su estado de salud no mejora y la madre decide ir al hospital. Demasiado tarde: el bebé muere antes de llegar.
-"La madre no pudo describir claramente los síntomas, aunque sospecho que su hijo falleció por una neumonía", cuenta Karl le Roux, doctor e investigador del hospital público de Zithuele. En 2013, durante un estudio que analizó la inmunización y el impacto de la escasez de vacunas en la comunidad, le Roux entrevistó a esta madre en el *rondavel* –choza tradicional sudafricana–  donde vivían, cercano al estuario del río Mthatha.  "Podría haber sobrevivido" si se hubiesen acercado desde un primer momento al hospital, piensa el médico y añade que "es muy difícil saber si la neumonía pudo haberse evitado con una vacuna". **El desabastecimiento "hizo que perdiera la fe en el sistema de salud"**, según le Roux.
+Cuando el pequeño enferma, su madre, escarmentada, decide tomar un taxi y visitar a un médico privado en Mqanduli, a 65 kilómetros de distancia. Le prescribe un tratamiento para la tos y les envía de vuelta a casa. Pero su estado de salud no mejora y la madre decide ir al hospital. Demasiado tarde: el bebé muere antes de llegar.
+"La madre no pudo describir claramente los síntomas, aunque sospecho que su hijo falleció por una neumonía", cuenta Karl le Roux, doctor e investigador del hospital público de Zithuele. En 2013, durante un estudio que analizó la inmunización y el impacto de la escasez de vacunas en la comunidad, le Roux entrevistó a esta madre en el *rondavel* –choza tradicional sudafricana–  donde vivían, cercano al estuario del río Mthatha.  "Podría haber sobrevivido" si se hubiesen acercado desde un primer momento al hospital, piensa el médico y añade que "es muy difícil saber si la neumonía pudo haberse evitado con una vacuna". **El desabastecimiento "hizo que perdiera la fe en el sistema de salud"**, según le Roux.
 
 La falta de vacunas es uno de los grandes problemas de la inmunización en Sudáfrica. La escasez de antígenos está influenciada por problemas externos, como **incidencias en la producción de las farmacéuticas**, y problemas internos, como la **deficiente gestión del *stock*, la escasa formación o la falta de personal**. Se trata de un asunto complejo, en el que confluyen distintas causas pero en el que divergen las culpabilidades.
 
@@ -46,7 +46,7 @@ Bexsero, la única vacuna disponible en la [Unión Europea](http://www.ema.europ
 
 </div>
 
-##Falta de control en Sudáfrica
+## Falta de control en Sudáfrica
 
 En Sudáfrica, **los impagos de las provincias en los procesos de compra** de vacunas son otro de los eslabones que fallan en la cadena de suministro, según Shabir Madhi, director del Centro Nacional de Enfermedades Infecciosas (NICD, por sus siglas en inglés).
 
@@ -60,7 +60,7 @@ Además, **en el ámbito rural se acentúa la importancia del estado de las carr
 
 Para este médico rural "es frustante no poder ofrecer al paciente lo que sabes que necesita". En cuanto hay escasez de vacunas, los centros se saturan ya que los pacientes tienen que volver. En [su investigación](http://www.samj.org.za/index.php/samj/article/viewFile/11760/7908), Karl le Roux afirma que la falta de vacunas en las clínicas provocó que **el 56% de los niños estudiados no completaran el calendario de vacunación**, según sus madres.
 
-##A ciegas
+## A ciegas
 
 Johann Van der Heever, que dirigió durante 11 años el programa ampliado de inmunización (PAI) de Sudáfrica, responsabiliza de la falta de control al Departamento del Salud: "Tienes que dotar de personal de manera adecuada a la cadena, tienes que supervisar y monitorizar los equipos. **Esto es responsabilidad del Departamento Nacional**".
 

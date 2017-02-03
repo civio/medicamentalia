@@ -4,7 +4,7 @@ title:            Éxitos
 subtitle:         Plantando cara a las enfermedades desde el siglo XVIII
 description:      Han acabado con enfermedades y están a punto de aniquilar otras. Repasamos los logros de las vacunas y sus protagonistas
 home_description: Han acabado con enfermedades y están a punto de aniquilar otras. Repasamos los logros de las vacunas y sus protagonistas
-img:              articles/home-falsificaciones-1040x694.jpg
+img:              articles/home-vaccines-successes.jpg
 order:            3
 author:           Eva Belmonte y Miguel Ángel Gavilanes
 pub_date:         2016-02-09
