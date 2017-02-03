@@ -204,7 +204,7 @@ Vaccines diseases
 */
 
 .vaccines-disease-graph{
-  $padding-left: 100px;
+  $padding-left: 70px;
 
   .heatmap-graph{
     position: relative;
@@ -213,8 +213,9 @@ Vaccines diseases
     margin-bottom: 2*$grid-gutter-width;
 
     .legend{
+      height: 0;
       padding: 0;
-      margin-bottom: $grid-gutter-width;
+      margin-bottom: 0;
 
       li{
         display: inline-block;
@@ -275,7 +276,7 @@ Vaccines diseases
       .axis-item{
         color: $brand-primary;
         font-size: 0.875em;
-        width: $padding-left - 10;
+        width: $padding-left - 8;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -286,7 +287,11 @@ Vaccines diseases
     &.has-legend{
       margin-bottom: 4*$grid-gutter-width;
 
-      .y-axis{
+      .x-axis{
+        top: 11*$grid-gutter-width/6;
+      }
+      .y-axis,
+      .cell-container{
         top: 7*$grid-gutter-width/3;
       }
     }

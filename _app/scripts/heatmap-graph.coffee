@@ -104,7 +104,7 @@ class window.HeatmapGraph extends BaseGraph
     return @countries 
 
   getDimensions: ->
-    @width = @$el.width() - 100  # y axis width = 100
+    @width = @$el.width() - 70  # y axis width = 100
     if @years and @countries
       cellSize = Math.floor @width / @years.length
       @height = if cellSize < 20 then cellSize * @countries.length else 20 * @countries.length
@@ -223,7 +223,7 @@ class window.HeatmapGraph extends BaseGraph
     legendData = [0,100,200,300,400]
     @legend = @container.append('ul')
       .attr 'class', 'legend'
-      .style 'margin-left', -25-(15*legendData.length)+'px'
+      .style 'margin-left', -(15*legendData.length)+'px'
     # draw legend rects
     @legend.selectAll('li')
       .data legendData
