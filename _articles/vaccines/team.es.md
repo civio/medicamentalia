@@ -110,11 +110,8 @@ Para saber los casos registrados al año de cada enfermedad usamos la [tabla de 
 
 * Revisamos una fuente complementaria para los datos de sarampión los [reportes mensuales](http://www.who.int/immunization/monitoring_surveillance/burden/vpd/surveillance_type/active/measles_monthlydata/en/). Pero, puesto que se actualizan de forma mensual y no están consolidados (no todos los países envían a tiempo y algunos datos llegan mucho más tarde), no utilizamos estos datos en nuestras tablas, pero sí los analizamos para conocer tendencias más actuales. 
 
-<<<<<<< Updated upstream
-=======
 Como pasa con la cobertura de vacunación, los datos de casos [no son perfectos](http://apps.who.int/gho/indicatorregistry/App_Main/view_indicator.aspx?iid=57). Si tenemos en cuenta que se trata solo de aquellos casos que llegan a los servicios de salud y se registran, la conclusión es clara: **se producen más casos que aquellos que aparecen en los datos**. Como explican desde la OMS: "Algunos países enfrentan dificultades para identificar, diagnosticar y reportar enfermedades infecciosas en los lugares más remotos de sus comunidades, falta de infraestructuras de transporte y comunicaciones, y falta de trabajadores de la salud cualificados o laboratorios para asegurar un diagnóstico preciso". 
 
->>>>>>> Stashed changes
 Una muestra de que no son 100% exactos es que no coinciden con otras bases de datos. Por ejemplo, para recoger la información de países europeos también existe la [ECDC](http://atlas.ecdc.europa.eu/public/index.aspx?Instance=GeneralAtlas) (su metodología, [aquí](http://ecdc.europa.eu/en/activities/surveillance/Pages/index.aspx#sthash.Y3Namw3l.dpuf)). Hicimos varias pruebas y los datos no coinciden -aunque no por mucho margen- y esto muestra hasta qué punto no hay un sistema claro y consolidado de recogida de información. Los de la ECDC son más recientes y nos sirven para contextualizar, pero no los incluimos en nuestra base de datos porque solo incluyen algunas enfermedades y está acotado únicamente a Europa.
 
 Hemos descartado de los análisis y las visualizaciones países con muy pocos datos.
