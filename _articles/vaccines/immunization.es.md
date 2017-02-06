@@ -7,7 +7,7 @@ home_description: La mitad de los países del mundo no alcanza niveles de inmuni
 img:              articles/home-vaccines-immunization.jpg
 order:            1
 author:           Eva Belmonte
-pub_date:         2016-02-09
+pub_date:         2017-02-09
 slug:             inmunizacion
 ref:              immunization
 lang:             es

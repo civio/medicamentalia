@@ -7,7 +7,7 @@ home_description: Países de renta alta han bajado la guardia y rebajado sus por
 img:              articles/home-vaccines-antivaccines.jpg
 order:            2
 author:           Eva Belmonte
-pub_date:         2016-02-09
+pub_date:         2017-02-09
 slug:             antivacunas
 ref:              antivaccines
 lang:             es

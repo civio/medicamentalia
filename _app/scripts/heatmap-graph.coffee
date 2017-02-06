@@ -307,7 +307,7 @@ class window.HeatmapGraph extends BaseGraph
 #         d.year_introduction = +d.year_introduction.replace('prior to', '')
 #       d.cases = {}
 #       d.values = {}
-#       # set value es cases /1000 habitants
+#       # set value es cases /1000 inhabitants
 #       populationItem = population_csv.filter((country) ->
 #         country.code == d.code
 #       )

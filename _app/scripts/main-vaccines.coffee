@@ -161,7 +161,7 @@
           d.cases = {}
           d.values = {}
           d.name = getCountryName data_population, d.code, lang
-          # set values as cases/1000 habitants
+          # set values as cases/1000 inhabitants
           populationItem = data_population.filter (country) -> country.code == d.code
           if populationItem.length > 0
             year = 1980
