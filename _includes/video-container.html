@@ -1,5 +1,5 @@
 <div class="video-container">
-  <iframe src="https://www.youtube.com/embed/{{ include.videoid }}?rel=0&amp;controls=1&amp;showinfo=0&amp;cc_load_policy=1" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+  <iframe src="https://www.youtube.com/embed/{{ include.videoid }}?rel=0&amp;controls=1&amp;showinfo=0&amp;cc_lang_pref={{page.lang}}&amp;hl={{page.lang}}&amp;cc_load_policy=1" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 </div>
 {% if include.title %}
   {% if include.credit %}
