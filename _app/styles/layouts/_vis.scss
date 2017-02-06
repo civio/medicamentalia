@@ -135,6 +135,15 @@ Common
       fill: $gray-light;
     }
   }
+
+  .annotation{
+    display: none;
+    position: absolute;
+    top: 0;
+    font-size: 13px !important;
+    line-height: 1em !important;
+    color: $text-color;
+  }
 }
 
 #vaccine-confidence-graph{
@@ -284,6 +293,18 @@ Vaccines diseases
       }
     }
 
+    .annotation:after{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 55px;
+      height: 55px;
+      top: 14px;
+      left: 120px;
+      background: url(../images/arrow.png) no-repeat 0 0 transparent;
+      opacity: 0.85;
+    }
+
     &.has-legend{
       margin-bottom: 4*$grid-gutter-width;
 
@@ -343,6 +364,25 @@ Vaccines diseases
         font-size: 1.125em;
         font-weight: 600;   
       }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    .heatmap-graph.has-legend  .annotation{
+      display: block;
+      left: 58px;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    .heatmap-graph.has-legend .annotation{
+      left: $padding-left + 43;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    .heatmap-graph.has-legend .annotation{
+      left: $padding-left + 60;
     }
   }
 }

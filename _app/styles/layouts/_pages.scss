@@ -589,7 +589,7 @@ header {
 
 .next-article{
   font-family: $font-family-sans-serif;
-  padding: 0 1.5*$grid-gutter-width 1.5*$grid-gutter-width;
+  padding: 0 $grid-gutter-width/2 $grid-gutter-width/2;
   //margin-bottom: 2*$grid-gutter-width;
 
   .text-center{

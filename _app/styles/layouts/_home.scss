@@ -89,8 +89,8 @@
 
 .home #language-selector{
   position: absolute;
-  top: $grid-gutter-width;
-  right: 5*$grid-gutter-width/6;
+  top: $grid-gutter-width/2;
+  right: $grid-gutter-width/3;
   z-index: 90;
   font-size: 14px;
   background-color: transparent;

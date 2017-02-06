@@ -184,9 +184,9 @@ class window.HeatmapGraph extends BaseGraph
 
   setMarkerDimensions: (selection) =>
     selection
-      .style 'top',    (d) => @y(d.code)+'px'
+      .style 'top',    (d) => (@y(d.code)-1)+'px'
       .style 'left',   (d) => if d.year < @years[0] then @x(@years[0])-1 + 'px' else if d.year < @years[@years.length-1] then @x(d.year)-1+'px' else @x.bandwidth()+@x(@years[@years.length-1])+'px'
-      .style 'height', @y.bandwidth()+'px'
+      .style 'height', (@y.bandwidth()+1)+'px'
 
   onMouseOver: (d) =>
     # Set tooltip content
