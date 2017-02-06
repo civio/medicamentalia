@@ -134,6 +134,8 @@ Analizar toda esa información nos permitió extraer conclusiones muy interesant
 
 Combinamos el análisis de datos y los reportajes y las historias que nos contaron en esos viajes en esta página web, en inglés y español, que está desarrollada con [Jekyll](https://jekyllrb.com/) y utiliza  Javascript y [D3.js](https://d3js.org/) para las visualizaciones. Puedes encontrar el código de la web en nuestro [repositorio de Github](https://github.com/civio/medicamentalia).  
 
+Créditos de imágenes de portada (de Flickr): [Foto](https://www.flickr.com/photos/cdcglobal/8290661927/in/photolist-dCBNX2-dCBQ2c-52uTd-dCHeGE-eiT6xa-dEWfa-dCHfkC-gABM-7jLH9R-eiYPpE-eiYPnb-dCBPBT-dCBPQk-6oPUze-6nSmty-eiT6jc-dCBPjn-dQXoqh-dmePf9-dEWFJ-dEWao-dQXoS9-dCHdSQ-9KowR3-eiT5Ha-dCBNTV-eiT6sP-ajZMmH-eiYPkE-eiYP5W-gTo3iT-eiYPbb-dEWyh-dEWBC-dCHfo1-gv7c1Y-eiT5Vi-acADNK-2W2iXP-4Nu73F-a7RGBX-dtN6ax-fqnzxX-6Womu7-7gAbC-ci5bjd-p4CN5M-f9mfR6-gnacYF-c3urAm/) de CDC Global y [foto](https://www.flickr.com/photos/sanofi-pasteur/5594746841/) de Sanofi Pasteur.
+
 ## Colabora y republica
 
 Medicamentalia Vacunas no es un proyecto cerrado. Si tienes información relevante o **trabajas en un medio que quiere republicar todo o parte** del contenido, [escríbenos](mailto:contacto@civio.es) y te ayudamos a ponerlo en marcha. **Tanto la base de datos como todos los materiales del proyecto son Creative Commons (CC BY). Puedes usar lo que necesites o te interese con una única condición: que cites y enlaces a Medicamentalia**. Además, te pedimos un favor: avísanos, porque nos darás una alegría.
