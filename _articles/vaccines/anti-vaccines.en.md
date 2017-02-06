@@ -42,29 +42,7 @@ Italy had vaccinated 82% of children that were due their second dose of measles 
 
 The immunization rate in Denmark has fallen over recent years to the point of 80% for the second dose of the measles vaccine. The country is outperformed by over 100 countries, including Sri Lanka and Algeria, for instance. France did not provide 2015 data to the WHO, however in 2014 the country’s immunization rate was 74%. A low score, but better than previous years - the country recorded a rate of 67% in 2013.
 
-</div>
-<div id="immunization-coverage-graph" class="graph-container">
-  <p class="graph-container-caption">Measles immunization rates</p>
-  <div class="row">
-    <div class="col-xs-6 col-md-3 graph-container">
-      <p>Sri Lanka</p> 
-      <div id="immunization-coverage-lka-graph" class="line-graph"></div>
-    </div>
-    <div class="col-xs-6 col-md-3 graph-container">
-      <p>Algeria</p> 
-      <div id="immunization-coverage-dza-graph" class="line-graph"></div>
-    </div>
-    <div class="col-xs-6 col-md-3 graph-container">
-      <p>Denmark</p> 
-      <div id="immunization-coverage-dnk-graph" class="line-graph"></div>
-    </div>
-    <div class="col-xs-6 col-md-3 graph-container">
-      <p>France</p> 
-      <div id="immunization-coverage-fra-graph" class="line-graph"></div>
-    </div>
-  </div>
-</div>
-<div class="page-content-container" markdown="1">
+{% include vaccines/measles_immunization.en.html %}
 
 In fact, **France is the country with the lowest vaccine confidence level**, according to the project [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/), carried out by the London School of Hygiene and Tropical Medicine for which 65,819 people were interviewed in 67 countries. 40% of French respondents (vs. an average of 12% worldwide) responded that **they disagreed or strongly disagreed** with the following statement: “Vaccines are safe”. 
 

@@ -11,6 +11,10 @@ en:
   date:
     format: '%B %-d, %Y'
   description: A journalistic investigation into access to medicines around the world
+  donate:
+    title: Did you like this story?
+    description: Help us to continue making necessary investigations like this donating to Civio
+    action: Donate
   explore_data: Explore the data
   lang: English
   next_reading: Next story
@@ -56,6 +60,10 @@ es:
       - Noviembre
       - Diciembre
   description: Investigación periodística sobre el acceso a los medicamentos en el mundo
+  donate:
+    title: ¿Te ha gustado esta historia?
+    description: Ayúdanos a seguir haciendo investigaciones necesarias como esta donando a Civio
+    action: Dona
   explore_data: Explora los datos
   lang: Español
   next_reading: Sigue leyendo

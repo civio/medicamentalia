@@ -4,7 +4,7 @@ class window.HeatmapGraph extends BaseGraph
   # -----------
 
   constructor: (id, options) ->
-    console.log 'Heatmap Graph', id, options
+    #console.log 'Heatmap Graph', id, options
     super id, options
     @formatFloat   = d3.format(',.1f')
     @formatInteger = d3.format(',d')

@@ -489,9 +489,17 @@ Vaccines coverage
   .line{
     stroke-width: 2px;
   }
+
+  .marker-label{
+    fill: $color-orange;
+  }
 }
 
-
+@media (min-width: $screen-md) {
+  #immunization-coverage-fra-graph .marker-label{
+     display: none;
+  }
+}
 
 /*
 User country disease immunization coverage

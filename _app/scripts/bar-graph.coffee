@@ -5,7 +5,7 @@ class window.BarGraph extends window.BaseGraph
   # -----------
 
   constructor: (id, options) ->
-    console.log 'Bar Graph', id, options
+    #console.log 'Bar Graph', id, options
     super id, options
     return @
 

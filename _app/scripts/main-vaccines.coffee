@@ -214,7 +214,7 @@
 
   # Immunization Coverage Multiple Small Graph (width selected countries)
   setupImmunizationCoverageMultipleSmallGraph = ->
-    countries = ['LKA','DZA','DNK','FRA']
+    countries = ['LKA','DZA','DEU','DNK','FRA']
     graphs = []
     d3.csv baseurl+'/assets/data/immunization-coverage-mcv2.csv', (error, data) ->
       countries.forEach (country,i) ->
@@ -238,8 +238,16 @@
         graph.xAxis.tickValues [2003,2015]
         graph.addMarker
           value: 95
-          label: if i < 3 then '' else if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
-          align: 'right'
+          label: if i%2 != 0 then '' else if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
+          align: 'left'
+        # show last year label
+        graph.$el.on 'draw-complete', (e) ->
+          graph.setLabel 2015
+          graph.container.select('.x.axis')
+            .selectAll('.tick')
+            .style 'display', 'block'
+          graph.container.select('.tick-hover')
+            .style 'display', 'none'
         graph.setData country_data
         # listen to year changes & update each graph label
         graph.$el.on 'change-year', (e, year) ->

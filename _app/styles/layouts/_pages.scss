@@ -614,21 +614,44 @@ header {
 }
 
 .donate{
-  color: $brand-secondary;
+  //color: $brand-secondary;
+  //background: mix( $color-green-light, white, 20% );
+  color: white;
   background: $color-green;
-  padding: $grid-gutter-width $grid-gutter-width $grid-gutter-width/2;
+  padding: $grid-gutter-width;
   margin-bottom: 1.5*$grid-gutter-width;
-  font-weight: 300;
+  font-family: $font-family-sans-serif;
   text-align: center;
 
   p{
-    font-size: 17px;
-    line-height: 30px;
-    margin-bottom: $grid-gutter-width/2;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 3  00;
+    margin-bottom: 2*$grid-gutter-width/3;
+    font-weight: 300;   
   }
 
   strong{
+    color: $brand-secondary;
+    display: block;
+    font-size: 22px;
     font-weight: 400;
+    margin-bottom: $grid-gutter-width/2;
+  }
+
+  a.btn{
+    color: white;
+    background: $brand-primary;
+    width: 190px;
+    font-weight: 400;
+    border: 2px solid white;
+    padding: 8px 0;
+
+    &:hover{
+      color: $brand-primary;
+      background: $brand-secondary;
+      border-color: $brand-secondary;
+    }
   }
 }
 

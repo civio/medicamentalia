@@ -8,7 +8,7 @@ class window.LineGraph extends window.BaseGraph
   # -----------
 
   constructor: (id, options) ->
-    console.log 'Line Graph', id, options
+    #console.log 'Line Graph', id, options
     super id, options
     return @
 
