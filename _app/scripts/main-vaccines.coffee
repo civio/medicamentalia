@@ -214,51 +214,64 @@
 
   # Immunization Coverage Multiple Small Graph (width selected countries)
   setupImmunizationCoverageMultipleSmallGraph = ->
-    countries = ['LKA','DZA','DEU','DNK','FRA']
+    current_countries = ['LKA','DZA','DEU','DNK','FRA']
     graphs = []
-    d3.csv baseurl+'/assets/data/immunization-coverage-mcv2.csv', (error, data) ->
-      countries.forEach (country,i) ->
-        # get current disease data
-        country_data = data
-          .filter (d) -> d.code == country
-          .map    (d) -> $.extend({}, d)
-        country_data.forEach (d) ->
-          delete d['2001']
-          delete d['2002']
-        # setup line chart
-        graph = new window.LineGraph('immunization-coverage-'+country.toLowerCase()+'-graph',
-          isArea: true
-          key: 
-            x: 'name'
-            id: 'code')
-        graphs.push graph
-        graph.yFormat = (d) -> d+'%'
-        graph.getScaleYDomain = (d) -> [0, 100]
-        graph.yAxis.tickValues [50]
-        graph.xAxis.tickValues [2003,2015]
-        graph.addMarker
-          value: 95
-          label: if i%2 != 0 then '' else if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
-          align: 'left'
-        # show last year label
-        graph.$el.on 'draw-complete', (e) ->
-          graph.setLabel 2015
-          graph.container.select('.x.axis')
-            .selectAll('.tick')
-            .style 'display', 'block'
-          graph.container.select('.tick-hover')
-            .style 'display', 'none'
-        graph.setData country_data
-        # listen to year changes & update each graph label
-        graph.$el.on 'change-year', (e, year) ->
-          graphs.forEach (g) ->
-            unless g == graph
-              g.setLabel year
-        graph.$el.on 'mouseout', (e) ->
-          graphs.forEach (g) ->
-            unless g == graph
-              g.hideLabel()
-        $(window).resize graph.onResize
+    d3.queue()
+      .defer d3.csv, baseurl+'/assets/data/immunization-coverage-mcv2.csv'
+      .defer d3.csv, baseurl+'/assets/data/countries.csv'
+      .defer d3.json, 'http://freegeoip.net/json/'
+      .await (error, data, countries, location) ->
+        # Setup user country
+        if location
+          user_country = countries.filter (d) -> d.code2 == location.country_code
+          if user_country and user_country.length > 0 and user_country[0].code
+            current_countries[2] = user_country[0].code
+            el = $('#immunization-coverage-graph .graph-container').eq(2)
+            el.find('p').html user_country[0]['name_'+lang]
+            el.find('.line-graph').attr 'id', 'immunization-coverage-'+user_country[0].code.toLowerCase()+'-graph'
+        # loop through each selected country   
+        current_countries.forEach (country,i) ->
+          # get current disease data
+          country_data = data
+            .filter (d) -> d.code == country
+            .map    (d) -> $.extend({}, d)
+          country_data.forEach (d) ->
+            delete d['2001']
+            delete d['2002']
+          # setup line chart
+          graph = new window.LineGraph('immunization-coverage-'+country.toLowerCase()+'-graph',
+            isArea: true
+            key: 
+              x: 'name'
+              id: 'code')
+          graphs.push graph
+          graph.yFormat = (d) -> d+'%'
+          graph.getScaleYDomain = (d) -> [0, 100]
+          graph.yAxis.tickValues [50]
+          graph.xAxis.tickValues [2003,2015]
+          graph.addMarker
+            value: 95
+            label: if i%2 != 0 then '' else if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
+            align: 'left'
+          # show last year label
+          graph.$el.on 'draw-complete', (e) ->
+            graph.setLabel 2015
+            graph.container.select('.x.axis')
+              .selectAll('.tick')
+              .style 'display', 'block'
+            graph.container.select('.tick-hover')
+              .style 'display', 'none'
+          graph.setData country_data
+          # listen to year changes & update each graph label
+          graph.$el.on 'change-year', (e, year) ->
+            graphs.forEach (g) ->
+              unless g == graph
+                g.setLabel year
+          graph.$el.on 'mouseout', (e) ->
+            graphs.forEach (g) ->
+              unless g == graph
+                g.hideLabel()
+          $(window).resize graph.onResize
        
 
   # World Cases Multiple Small
