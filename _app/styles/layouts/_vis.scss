@@ -215,11 +215,16 @@ Vaccines diseases
 .vaccines-disease-graph{
   $padding-left: 70px;
 
+  .graph-container-caption{
+    margin-bottom: 0 !important;
+  }
+
   .heatmap-graph{
     position: relative;
     width: 100%;
     padding-left: $padding-left;
     margin-bottom: 2*$grid-gutter-width;
+    margin-top: 4*$grid-gutter-width/3;
 
     .legend{
       height: 0;
@@ -385,6 +390,10 @@ Vaccines diseases
       left: $padding-left + 60;
     }
   }
+}
+
+#vaccines-measles-graph-2 > p{
+  display: none;
 }
 
 /*
