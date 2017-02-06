@@ -40,10 +40,10 @@ header {
       padding-top: 30px;
 
       > p{
-        font-size: 21px;
+        font-size: 18px;
         max-width: 640px;
         margin: 0 auto 15px;
-        line-height: 28px;
+        line-height: 24px;
       }
     }
 
@@ -66,6 +66,13 @@ header {
 
     p{
       font-weight: 300;
+    }
+  }
+  
+  &.category-header{
+    .header-content .header-content-inner > p{
+      font-size: 21px;
+      line-height: 28px;
     }
   }
 }
