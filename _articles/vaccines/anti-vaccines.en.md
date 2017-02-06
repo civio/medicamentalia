@@ -78,7 +78,7 @@ A recent memory of the awfulness of an epidemic, along with a consciousness of t
 ### How do we deal with this?
 
 <div class="container-right">
-{% include video-container.html videoid="rlhljqMpTBQ" credit="Video: Manuel Penados" %}
+{% include video-container.html videoid="_hSgScxpsWE" credit="Video: Manuel Penados" %}
 </div>
 
 Every person interviewed for this article **repeated the same word: education**. But this is not straightforward. An [article](http://elpais.com/elpais/2015/06/03/ciencia/1433354194_756223.html) by journalist Javier Salas in El País compiled various studies showing that neither information overload, nor scare campaigns built around the potential consequences, nor enforcement of the vaccine was successful. In fact, these methods [can be counter-productive](http://pediatrics.aappublications.org/content/early/2014/02/25/peds.2013-2365).
