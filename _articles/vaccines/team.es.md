@@ -31,21 +31,21 @@ En esta segunda investigación que, como la primera, ha contado con una beca de 
 
 Para sacar adelante Medicamentalia Vacunas han trabajado los miembros de Civio, pero además hemos contado con valiosísimas colaboraciones provenientes de varias disciplinas y países. Ante todos ustedes, el equipo:
 
-*   **Eva Belmonte**. Periodista. Dirección de proyecto, investigación, creación y análisis de bases de datos, trabajo de campo en Centroamérica, reportajes y edición.
-*   **Raúl Díaz Poblete**. Desarrollador. Desarrollo web, diseño de interfaz, análisis y visualización de datos.
-*   **Miguel Ángel Gavilanes**. Periodista. Investigación, creación y análisis de bases de datos, trabajo de campo en Sudáfrica y reportajes.
-*   **Javier de Vega**. Periodista. Investigación, reportajes, edición y comunicación.
-*   **David Cabo**. Desarrollador. Extracción, creación y análisis de bases de datos.
-* **Amir Campos**. Gestión de proyecto.
-* **Manuel Penados**. Vídeo y foto en Guatemala y El Salvador.
-* **Denise Pimentel**. Edición de vídeos de Centroamérica.
-* **Serusha Govender** y **Anne Gonschorek**. Vídeo en Sudáfrica.
+- **Eva Belmonte**. Periodista. Dirección de proyecto, investigación, creación y análisis de bases de datos, trabajo de campo en Centroamérica, reportajes y edición.
+- **Raúl Díaz Poblete**. Desarrollador. Desarrollo web, diseño de interfaz, análisis y visualización de datos.
+- **Miguel Ángel Gavilanes**. Periodista. Investigación, creación y análisis de bases de datos, trabajo de campo en Sudáfrica y reportajes.
+- **Javier de Vega**. Periodista. Investigación, reportajes, edición y comunicación.
+- **David Cabo**. Desarrollador. Extracción, creación y análisis de bases de datos.
+- **Amir Campos**. Gestión de proyecto.
+- **Manuel Penados**. Vídeo y foto en Guatemala y El Salvador.
+- **Denise Pimentel**. Edición de vídeos de Centroamérica.
+- **Serusha Govender** y **Anne Gonschorek**. Vídeo en Sudáfrica.
 
 ### Colaboradores:
 
-*   **Phil Smart**. Traducción español-inglés.
-*   **Asier Andrés**. Apoyo a la investigación en Guatemala.
-*   **Julio Hernández**. Sonido en vídeos de El Salvador.
+- **Phil Smart**. Traducción español-inglés.
+- **Asier Andrés**. Apoyo a la investigación en Guatemala.
+- **Julio Hernández**. Sonido en vídeos de El Salvador.
 
 ### Agradecimientos
 Este proyecto no habría sido posible sin el apoyo inicial de una beca de **Journalism Grants**. Queremos agradecer al [European Journalism Center](http://ejc.net/) el patrocinio de esta investigación, del mismo modo que ya lo hicieron en la primera fase de Medicamentalia, y su infinita paciencia y comprensión con los problemas que han ido retrasando el lanzamiento; en especial a **Diana Lungu**. 
@@ -89,11 +89,11 @@ Aunque son datos bastante completos y muy útiles para nuestra investigación, t
 
 Por su parte, los estados tienen dos herramientas para estimar la cobertura de vacunación de la población:
 
-* Método administrativo: el porcentaje de vacunación se obtiene al dividir las vacunas administradas –el numerador– entre la población objetivo –el denominador–. Es el más común. Este método puede producir errores si existen fallos en algunos de los datos, como por ejemplo, en la población total, en los casos que existe una gran movilidad interior. Fuente: [OMS](http://www.who.int/immunization/monitoring_surveillance/routine/coverage/en/index1.html#), [PAHO](http://www.paho.org/immunization/toolkit/resources/reporting-monitoring/es/Modulo2-coberturas-administrativas.pdf?ua=1#page=19), [Ministerio de Sanidad](http://www.msssi.gob.es/profesionales/saludPublica/prevPromocion/vacunaciones/coberturas.htm)*
+- Método administrativo: el porcentaje de vacunación se obtiene al dividir las vacunas administradas –el numerador– entre la población objetivo –el denominador–. Es el más común. Este método puede producir errores si existen fallos en algunos de los datos, como por ejemplo, en la población total, en los casos que existe una gran movilidad interior. Fuente: [OMS](http://www.who.int/immunization/monitoring_surveillance/routine/coverage/en/index1.html#), [PAHO](http://www.paho.org/immunization/toolkit/resources/reporting-monitoring/es/Modulo2-coberturas-administrativas.pdf?ua=1#page=19), [Ministerio de Sanidad](http://www.msssi.gob.es/profesionales/saludPublica/prevPromocion/vacunaciones/coberturas.htm)*
 
 I.e., para calcular la cobertura de vacunación de los niños de 12 y 23 meses se divide el número de niños con edades entre 12 y 23 meses que han recibido todas las dosis que les corresponden, según el calendario de vacunación del país, entre el número total de niños entre 12 y 23 meses.
 
-* Encuestas: se deben realizar entre cada 3 y 5 años. Sirven para estudiar la fiabilidad del método administrativo, [o sustituirlo]((http://www.who.int/immunization/monitoring_surveillance/Vaccination_coverage_cluster_survey_with_annexes.pdf?ua=1#page=12)). Los datos se obtienen mediante la revisión de las cartillas de vacunación, el historial de vacunación de los centros o entrevistas a las familias. El cálculo de numeradores y denominadores es similar al que se realiza en el método administrativo, pero en grupos más pequeños. Fuente: [OMS](http://www.who.int/immunization/monitoring_surveillance/routine/coverage/en/index2.html)
+- Encuestas: se deben realizar entre cada 3 y 5 años. Sirven para estudiar la fiabilidad del método administrativo, [o sustituirlo]((http://www.who.int/immunization/monitoring_surveillance/Vaccination_coverage_cluster_survey_with_annexes.pdf?ua=1#page=12)). Los datos se obtienen mediante la revisión de las cartillas de vacunación, el historial de vacunación de los centros o entrevistas a las familias. El cálculo de numeradores y denominadores es similar al que se realiza en el método administrativo, pero en grupos más pequeños. Fuente: [OMS](http://www.who.int/immunization/monitoring_surveillance/routine/coverage/en/index2.html)
 
 En todos los casos tuvimos que tener en cuenta cómo tratábamos las dosis. En ocasiones era interesante comparar los resultados entre la primera y la última, pero para algunas investigaciones decidíamos qué dosis era la más representativa. En principio, en la mayoría de análisis utilizábamos la última, al considerar que es la que marca que se ha alcanzado la inmunización completa. Para asegurar esa postura, analizamos y encontramos muy pocos casos anómalos en los que el porcentaje de inmunización de la última dosis sea más elevado que los anteriores.
 
@@ -104,11 +104,9 @@ Para la **inmunización de rebaño** hemos usado un 95% para el sarampión -por 
 #### Casos y muertes por enfermedad
 Para saber los casos registrados al año de cada enfermedad usamos la [tabla de incidencia](http://www.who.int/immunization/monitoring_surveillance/data/en/) de la OMS, a la que hemos añadido algunos datos:
 
-* Para poder incluir los casos de polio de 2016 usamos la información disponible en [Polio Erradication](http://polioeradication.org/polio-today/polio-now/), que informa casi al día de cómo está esa enfermedad en el mundo. 
-
-* Para el vídeo sobre Guatemala añadimos la información de los últimos meses que se extrae del [sondeo](http://fundesa.org.gt/content/files/publicaciones/SegundoSondeoVacunacion.pdf) realizado por el Procurador de Derechos Humanos del país, Acción contra el Hambre, Alianmisar y la Alianza por la Nutrición.
-
-* Revisamos una fuente complementaria para los datos de sarampión los [reportes mensuales](http://www.who.int/immunization/monitoring_surveillance/burden/vpd/surveillance_type/active/measles_monthlydata/en/). Pero, puesto que se actualizan de forma mensual y no están consolidados (no todos los países envían a tiempo y algunos datos llegan mucho más tarde), no utilizamos estos datos en nuestras tablas, pero sí los analizamos para conocer tendencias más actuales. 
+- Para poder incluir los casos de polio de 2016 usamos la información disponible en [Polio Erradication](http://polioeradication.org/polio-today/polio-now/), que informa casi al día de cómo está esa enfermedad en el mundo. 
+- Para el vídeo sobre Guatemala añadimos la información de los últimos meses que se extrae del [sondeo](http://fundesa.org.gt/content/files/publicaciones/SegundoSondeoVacunacion.pdf) realizado por el Procurador de Derechos Humanos del país, Acción contra el Hambre, Alianmisar y la Alianza por la Nutrición.
+- Revisamos una fuente complementaria para los datos de sarampión los [reportes mensuales](http://www.who.int/immunization/monitoring_surveillance/burden/vpd/surveillance_type/active/measles_monthlydata/en/). Pero, puesto que se actualizan de forma mensual y no están consolidados (no todos los países envían a tiempo y algunos datos llegan mucho más tarde), no utilizamos estos datos en nuestras tablas, pero sí los analizamos para conocer tendencias más actuales. 
 
 Como pasa con la cobertura de vacunación, los datos de casos [no son perfectos](http://apps.who.int/gho/indicatorregistry/App_Main/view_indicator.aspx?iid=57). Si tenemos en cuenta que se trata solo de aquellos casos que llegan a los servicios de salud y se registran, la conclusión es clara: **se producen más casos que aquellos que aparecen en los datos**. Como explican desde la OMS: "Algunos países enfrentan dificultades para identificar, diagnosticar y reportar enfermedades infecciosas en los lugares más remotos de sus comunidades, falta de infraestructuras de transporte y comunicaciones, y falta de trabajadores de la salud cualificados o laboratorios para asegurar un diagnóstico preciso". 
 
@@ -118,15 +116,14 @@ Hemos descartado de los análisis y las visualizaciones países con muy pocos da
 
 También hemos utilizado datos de mortalidad, de dos fuentes: 
 
-* Mortalidad infantil por países y [por enfermedad](http://apps.who.int/gho/data/view.main.ghe100-AGO?lang=en). Con datos de 2000 a 2015. 
-
-* Datos de mortalidad general por enfermedad, [aquí](http://vizhub.healthdata.org/gbd-compare/)
+- Mortalidad infantil por países y [por enfermedad](http://apps.who.int/gho/data/view.main.ghe100-AGO?lang=en). Con datos de 2000 a 2015. 
+- Datos de mortalidad general por enfermedad, [aquí](http://vizhub.healthdata.org/gbd-compare/)
 
 #### Otros datos empleados y sus fuentes
 
-* Calendarios de vacunación de todo el mundo vía [OMS](http://apps.who.int/immunization_monitoring/globalsummary/schedules).
-* Año de introducción de la vacuna. En algunos casos, las fechas de introducción eran demasiado recientes y no concordaban con las informaciones de los países. Además, 28 países no tenían. Solicitamos esa información a ocho de ellos y solo respondió uno, Guatemala. 
-* Los datos de PIB son del Banco Mundial. También los de población. Nos han servido para calcular el número de casos por habitante y, en algunos casos, eliminar países de los gráficos para aligerarlos, porque eran demasiado grandes y no permitían hacer comparativas. En concreto, dejamos fuera del gráfico que compara los diferentes niveles de inmunización a los países con menos de 300.000 habitantes. 
+- Calendarios de vacunación de todo el mundo vía [OMS](http://apps.who.int/immunization_monitoring/globalsummary/schedules).
+- Año de introducción de la vacuna. En algunos casos, las fechas de introducción eran demasiado recientes y no concordaban con las informaciones de los países. Además, 28 países no tenían. Solicitamos esa información a ocho de ellos y solo respondió uno, Guatemala. 
+- Los datos de PIB son del Banco Mundial. También los de población. Nos han servido para calcular el número de casos por habitante y, en algunos casos, eliminar países de los gráficos para aligerarlos, porque eran demasiado grandes y no permitían hacer comparativas. En concreto, dejamos fuera del gráfico que compara los diferentes niveles de inmunización a los países con menos de 300.000 habitantes. 
 
 ### Reportajes y página web
 

@@ -4,20 +4,14 @@ title:      Team and methodology
 img:        articles/home-vaccines-team.jpg
 
 gallery:
-  - image: pages/IMG_5230-1040x635.jpg
-    title: Raúl, Miguel (escondido), David y Eva, puliendo la visualización. | Javier de Vega
-  - image: pages/Medicine-report-61-1040x602.jpg
-    title: Antonio, en una de las entrevistas que realizó en Acra. | Joseph Akwasi
-  - image: pages/IMG_2391-1040x624.jpg
-    title: Eva, en plena entrevista en Rio de Janeiro. | Anne Vigna
-  - image: pages/Antonio11-1040x694.jpg
-    title: Antonio, atento, en el laboratoria CePAT. | Henry Nelson Souza
-  - image: pages/IMG_5223-1040x694.jpg
-    title: Cabezas echando humo. | Javier de Vega
-  - image: pages/IMG_20150619_191737-1040x780.jpg
-    title: Miguel, desquiciado con la base de datos.
-  - image: pages/Redecilla.jpg
-    title: Eva, en el laboratorio público Farmanginhos, vestida para la ocasión.| Anne Vigna
+  - image: articles/pizarra.jpg
+    title: Raúl and Eva discuss the structure of the project and consider their plans for the finished website.
+  - image: articles/miguel.jpg
+    title: "Miguel, mid-interview in Pretoria (spot the false elephant). | Photo: Serusha Govender"
+  - image: articles/eva-asier.jpg
+    title: "Eva and Asier, during the interview with gynaecologist Gerson Eduardo Galvez, in Guatemala City. | Photo: Manuel Penados"
+  - image: articles/raul.jpg
+    title: Raúl, creating beautiful things to explain difficult concepts.
 
 order:      5
 slug:       team
@@ -30,102 +24,121 @@ lang:       en
 
 ## The team
 
-Medicamentalia is a project of [Civio](http://www.civio.es/en/) in which, in addition to members of the foundation, we have had valuable valuable partnerships. To all of you, the team:
+Medicamentalia Vaccines is a journalistic investigation by [Civio](http://www.civio.es/) into the current situation of vaccination worldwide, combining data analysis with field research in a range of countries. This is the sequel to our first investigation, focussed on [access to medicines](http://medicamentalia.org/access/) which was awarded Investigation of the Year (small newsroom) in the Data Journalism Awards and the Gabriel García Márquez Journalism Prize (Innovation category). 
 
-*   **Eva Belmonte**. Journalist. Original concept, project lead, research, data gathering and analysis, and fieldwork in Brazil.
-*   **Miguel Ángel Gavilanes**. Journalist. Research, data gathering and analysis. Video editing and coordination.
-*   **Raúl Díaz Poblete**. Developer. Web development, user interface design and data visualization.
-*   **Antonio Villarreal**. Journalist. Research, fieldwork in Ghana and editing.
-*   **David Cabo**. Developer. Data scraping, clearing and analysis.
-*   **Javier de Vega**. Journalist. Research, editing and communication.
-*   **Antonio Guzmán**. Designer. Web design and illustration.
-*   **Cristina Moreno**. Project management.
+This second investigation, like the first, has benefited from a grant from [Journalism Grants](https://journalismgrants.org/), funded by the Bill and Melinda Gates Foundation, which also funds big projects related to vaccination, such as GAVI. Neither Journalism Grants nor the Bill and Melinda Gates Foundation influenced the project or its journalistic investigation. In fact, like all the other readers, they did not have access to its contents until it was published.
 
-### Contributors
+It is the work of the members of Civio in conjunction with an array of valued collaborators, in a range of fields, from a variety of countries. We are pleased to introduce you to the team.
 
-*   **Anne Vigna**. Video and photography in Rio de Janeiro.
-*   **Elio Stamm**. Vídeo in Ghana.
-*   **Joseph Akwasi**. Photography in Ghana.
-*   **Henry Souza Nelson**. Photography in Ghana.
-*   **Marta Silvera**. English translations.
-*   **Jen Bramley**. English version editing.
-*   **Fabiola Czubaj (La Nación)** helped us understand Argentina's data.
-*   **Belinda Grasnik (Correctiv!)** gathered the data for Germany.
-*   **Kristof Clerix (Knack)** gathered the data for Belgium.
+- **Eva Belmonte**. Lead journalist, research, database creation and analysis, field research in Central America, reporting and editing.
+- **Raúl Díaz Poblete**. Developer. Web development, interface design, data analysis and visualization.
+- **Miguel Ángel Gavilanes**. Journalist. Research, database creation and analysis, field research in South Africa and reporting.
+- **Javier de Vega**. Journalist. Research, reporting, editing and communication.
+- **David Cabo**. Developer. Data mining, database creation and analysis.
+- **Amir Campos**. Project Management.
+- **Manuel Penados**. Filming and photography in Guatemala and El Salvador.
+- **Denise Pimentel**. Video editing in Central America.
+- **Serusha Govender** and **Anne Gonschorek**. Filming in South Africa.
+
+### Collaborators:
+
+- **Philip Smart**. Spanish-English translation
+- **Asier Andrés**. Research support in Guatemala.
+- **Julio Hernández**. Film sound in El Salvador.
 
 ### Acknowledgements
+This project would not have been possible without the initial help of a grant from **Journalism Grants**. We would like to thank the [European Journalism Center](http://ejc.net/) for sponsoring this research, as they did for the first part of the Medicamentalia project, and their infinite patience and understanding with the problems that delayed the launch; especially to **Diana Lungu** who was always ready to lend a hand. 
 
-We begin by thanking the support from our _media partners_ in this project ([20 Minutos](http://www.20minutos.es/), [Cadena Ser](http://cadenaser.com/), [Corriere della Sera](http://www.corriere.it/), [Correctiv!](https://correctiv.org/) and [La Nación](http://www.lanacion.com.ar/)), because they gave us the green light before even seeing a single database row nor a sentence in an article, showing a blind trust that we hope to have rewarded. And to Journalism Grants [Journalism Grants](http://journalismgrants.org/), which awarded us the grant that allowed us to create Medicamentalia.
+Our *media partners* also gave the green light to this project, before it became a reality. Thanks to [Correctiv](https://correctiv.org/en/), [El Mundo](http://www.elmundo.es/),[Euronews](http://www.euronews.com/), [La Sexta](http://www.lasexta.com/), [The Bureau of Investigative Journalism](https://www.thebureauinvestigates.com/), [Il Sole](http://www.ilsole24ore.com/) and [Sciencepod](https://sciencepod.net/#splash), for their faith and support. Without this support, we would reach a far smaller audience and much of this work would have been in vain. 
 
-The task of understanding something as complex as the international regulations and rules affecting the prices of medicines is colossal. So we want to thank those who helped us through some early conversations, either face to face or by telephone, email or videoconference, to know what and how to investigate. Thanks to Elisa Lopez Varela, doctor at the Medical Research Center in Infectious Diseases in Mozambique; Elisa Sicuri, health economist at IS Global in London; Carlos Miranda, from Farmamundi in Madrid; Judit Rius, US director of the Campaign for Access to Essential Medicines of Médicins Sans Frontières in New York; Fran Franco, International Affairs at Farmaindustria in Madrid; Margaret Ewen, responsible for the HAI database in the Netherlands; and Bernard Appiah and Barbara Gastel, professors from the Texas A&M University, for helping us improve the accuracy and depth of our journalism. Thanks also for their time to Javier Pardo, from Médicins du Monde; and Paola Ariza, Colombian journalist who lent us a hand with data of her country.
+To examine a subject as complex as immunization in greater depth, we needed to get seriously involved in the topic. We read dozens of scientific *papers* and hundreds of previous articles on the subject. Many of them are referenced in the study. Thanks to all the researchers and specialist journalists that led the way for us, such as Javi Salas, from El País, author of numerous articles on the subject. Thanks also to the friends that helped us along the way, such as Ximena Villagrán in Guatemala.
 
-We would also like to thank in a special way the patience of all the interviewees in Brazil and Ghana, who agreed to be filmed, be asked questions and share their knowledge.
-
-And we end up thanking Fernando Toledo and Jen Bramley, because they helped us complete and polish Medicamentalia when the final deadline was approaching. 
+Thanks to everyone that gave up their time and knowledge in the interviews, both those in the preliminary research and those that appear in the reports, for their generosity. During the process, we received important awards that gave us a powerful boost. We would like to thank the panel and the team at the Data Journalism Awards and the Gabriel García Márquez Journalism Prize for this recognition. 
 
 {% include gallery.html id="team" %}
 
 ## Methodology
 
-### Early research
+### Preliminary research
 
-Before starting the work we needed to study. We conducted interviews and reviewed dozens of _papers_ and reports on the measurement of prices. We didn't think even remotely that we were the first to face this issue and wanted to learn from those before us. In this sense, the experience of initiatives such as [Medicamentos Abiertos](http://www.revistazo.biz/medicamentosabiertos/), in Central America, or the [fantastic project](http://mpr.code4sa.org/) of Code for South Africa was very useful.
+As with all Civio projects, the first step forwards in the investigation implied a necessary step backwards - we had to take a plunge unto the subject. Whilst in the first part of the Medicamentalia project we focussed on researching access to medicines (prices, patent systems, etc.), in this second phase we wanted to investigate vaccines on an international level. This time, we wanted to go beyond the costs and focus on other elements such as immunization rates, the problems that exist with immunization, how pooled purchasing systems operate between different countries and supply issues, to name but a few. 
 
-For weeks, we looked for a common standard through which we could compare, in the most rigorous way possible, the accessibility to treatments in different countries. That's when we discovered the cornerstone of the project, the [database](http://www.haiweb.org/MedPriceDatabase/) developed by the not-for-profit Health Action International ([HAI](http://www.haiweb.org/)). Thanks to an [exhaustive and detailed methodology](http://www.haiweb.org/medicineprices/manual/documents.html), which we studied thoroughly to understand the complexity of the data, they've managed to collect information from dozens of countries worldwide on pricing, access, differences between brand name drugs and generics, cost composition ... of 14 essential medicines in specific compositions: diazepam, paracetamol, cotrimoxazole, atenolol, glibenclamide, diclofenac, ceftriaxone, captopril, amoxicillin, amitriptyline, ciprofloxacin, omeprazole, salbutamol and simvastatin.
+We read dozens of academic articles and thoroughly analysed documents from international organisations, as well as recent reports from the [Strategic Advisory Group of Experts (SAGE)](http://www.who.int/immunization/policy/sage/en/), a WHO group that analyses themes related to immunization. 
 
-### Database
+We were not the first to investigate such a topic and *we were inspired by the research of our peers*. The [analysis and visualisation](http://graphics.wsj.com/infectious-diseases-and-vaccines/) of the effects of the introduction of the measles vaccine in various US states, created by the Wall Street Journal is of particular note. It made us consider the possibility of creating a similar graphic on a wider scale, to cover all the countries in the world (or most of them, anyway). So, we created the graphic that you can see in the report on immunization levels. We were also inspired by the [study](http://www.economist.com/blogs/graphicdetail/2016/03/daily-chart-16?utm_content=31884172&utm_medium=social&utm_source=twitter) by The Economist about the surprising differences in immunization rates between developing countries and developed countries. This is a theme that caught our attention when we first studied the data and is reflected in the article about anti-vaccine sentiment. 
 
-The first obstacle to our research, aimed at comparing countries of different regions and income, was that studies of HAI were dated in different years. Although we considered updating all the figures to 2015 (taking into account inflation and currency rates' changes), we eventually decided that the comparisons would be inaccurate if we used absolute data. That's the reason you won't find prices in our [data visualization](/en/precios/#viz).
-{% include caption.html img="pages/Metodologia-460x355.jpg" caption="Analysing HAI's data" author="Javier De Vega" align="alignright" %}
-Thus, **we decided to use two relative indicators** part of HAI's reports: **MPR** (Median Price reference), the ratio of the drug price versus an [international reference value](http://www.msh.org/) set by the not-for-profit organisation MSH. We can compare the deviation across countries from this reference price, which is updated every year. The second indicator we analyse is **_affordability_**, i.e. the work time needed to pay for a full treatment in each country, using the net salary of the lowest-paid public servant (as specified by HAI's methodology in order to avoid more volatile figures in developing countries). In both cases, **we decided to do the analysis using the price of the cheapest generic and display both private (direct purchases in pharmacy counters or with prescription from private insurers) and public data (purchases subsidised partially or fully by public health systems)**.
+### The data
+For this research, we needed to cross check various databases: immunization rates, cases by disease, deaths by disease, immunization schedules, levels of *stockouts*, public budgets allocated to immunization campaigns, purchase prices of vaccines for countries and organisations, as well as the basic elements required to provide context such as GDP or population by country or region. The majority of data collected, although updated in December 2016, refers to information covering the period up to 2015.
 
-With our goals now clear, on March 11 we downloaded about 70 documents from HAI's website, and processed them automatically to build a working database. We then [filled the gaps, cleaned, restructured](https://github.com/civio/medicamentalia-theme/wiki/Extra-notes-about-the-methodology) and checked all the data, either automatically or manually. That way, we had set our base camp: we had data from 56 countries for 14 essential drugs. Having understood the methodology and cleared up some doubts thanks to Margaret Ewen (HAI), now came the second part: add data for developed countries to carry out the global comparison. We did it through official sources and after a study of the public health systems of each of the five included countries: Italy, Argentina, Spain, Belgium and Germany. In all these cases, we used data from 2015 and the latest available international reference price, 2013, just as is done in HAI's studies. In the German case, the team at Correctiv! collected the data and we fact-checked it to ensure everything was accurate, as was the case.
+We found some of the data in easily reusable databases, although it required some cleansing. Other information was obtained from websites where it required *scraping* to obtain a version of the data that we could work with. In more complicated instances, we had to draw upon a range of several data sources. 
 
-### Spain
+#### Which vaccines did we analyse?
+We began by considering the WHO [list of essential medicines](http://www.who.int/medicines/publications/essentialmedicines/en/). We studied the advice and immunization schedules for each one, in an attempt to cover the most common diseases worldwide, which would allow us to make comparisons between different countries. 
 
-The process of gathering the **price** data has varied depending on the contribution of the public administration in each country. In **Spain**, the Social Security, the national government-sponsored social insurance programme, provides health coverage to citizens. Regarding the **salary**, the lowest one is that of a class E official, with a level 1 complement, to which the "lowest specific supplement" for 2015 is added. The [source](http://www.sepg.pap.minhap.gob.es/sitios/sepg/es-ES/CostesPersonal/EstadisticasInformes/Documents/Retribuciones%20del%20personal%20Funcionario%202015.pdf) is the Secretary of State for Budget and Expenditures, part of the Ministry of Finance and Public Administration.
+We created a document for each vaccine to link them to the disease and better understand how they work (doses, advice, etc.) We had to exclude from some analysis the relationship between diseases and vaccines which have more than one origin, as is the case with meningitis (which has various vaccines depending on the type of the disease), for example. Although there is a long list, according to the analysis or the results we referred to particular vaccines by name in the research. This does not mean that the others are less important, we simply found less relevant information about them or only information that was not comparable. 
 
-As for prices, the Ministry of Health publishes on its _Nomenclator de Facturación_ the list of drugs subsidized by the national health system. We took the database for June 2015 from the [official website](http://www.msssi.gob.es/profesionales/nomenclator.do) and —for each of the 14 drugs- we searched for the cheapest generic with the closest dosage to those established by HAI methodology, according to their retail price including VAT. This is the **private price**: the cost of the drug over the counter, without public subsidies, with no prescription or with one from private insurers. 
+**This data is not perfect**, however it was sufficiently meaningful for us to be able to extract conclusions. In fact, [one of the concerns](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1) of the group of vaccine experts at the WHO is the poor data quality. “How can you conduct an investigation without all objective information available on the subject?” Immunization data is not collected from certain countries. Moreover, some of the figures gathered by the WHO and their statistics do not concur. An example of this problem is the statistics of cases of each disease from the WHO and those from the European Centre for Disease Prevention and Control (ECDC), which do not entirely concur. 
 
-The _Nomenclator_ includes also the beneficiary's contribution. These 14 medicines are subject to two categories of patient contribution: normal or special. The normal contribution varies depending on the patient's income level. We have chosen the lowest income level possible, which, according to the [current law](http://www.boe.es/diario_boe/txt.php?id=BOE-A-2012-5403) means that the patient pays 40% of the reference price. In the special contribution category, the percentage is 10%.
+#### Immunization data
+This is used in a great deal of our research and shows the percentage of people that have received a vaccine out of the number of people that should receive it. Data runs from as far back as 1980 for some diseases, to 2015. The [source](http://www.who.int/immunization/monitoring_surveillance/data/Coverage_survey_data.xls?ua=1) is the WHO. We also reviewed the WHO [interactive immunization atlas](http://gamapserver.who.int/gho/interactive_charts/immunization/polio/atlas.html), but this does not relate immunization rates with GDP and other variables - just the geographical location.
 
-### Italy
+Although this is fairly complete data and very useful for our research, we must take into account the fact that these are **estimates**. 
 
-The healthcare system in **Italy** is similar to that of Spain, with its National Health Service (SSN). The national government establishes three types of drugs, with different subsidies: Class A, for essential medicines and for chronic patients, which are paid for by the SSN; Class C, other medicines, which are charged to the patient; and class H, for hospital use.
+*What is the methodology of the WHO?*. Over [95% of countries provide annual estimates](http://www.who.int/bulletin/volumes/87/7/08-053819.pdf?ua=1#page=3) of their immunization rates to the World Health Organization (WHO), which subsequently revises the data. The WHO anticipate that these estimates have a [margin of error of ± 3%](http://www.who.int/bulletin/volumes/87/7/08-053819.pdf?ua=1#page=5) which may reach up to ± 20%.
 
-Twelve of the drugs, all but diazepam and paracetamol, are included in Class A, so are covered by the public health system. However, the SSN subsidizes only the reference price fixed in 2011, and the difference —if any— is covered by the patient. The Italian Drug Agency (AIFA) publishes a [list](http://www.agenziafarmaco.gov.it/it/content/dati-sulle-liste-dei-farmaci-open-data) with the **private prices**, the corresponding subsidies and the resulting gap. The latter will be our **public price**. We have not included the Class C drugs in the database, as there is no official document setting their prices.
+Countries themselves have two methods to establish immunization rates of their population.
 
-However, in Italy there is a fee per prescription, the _ticket_, set by each regional government, and which gets added to the difference mentioned in the previous paragraph. From 1€ in Trentino to 3.5€ in Campania, the prices of medicines vary according to the place of residence. Because of this regional disparity of public prices we decided to combine the results and use the median for the entire country.
+- By administration - vaccination rates are obtained by dividing the number of vaccines administered (the numerator) by the target population (the denominator). This is the most common. This method can produce errors if there are flaws in the data, for instance with the total population figure or in cases of high domestic mobility. Source: [WHO](http://www.who.int/immunization/monitoring_surveillance/routine/coverage/en/index1.html#), [PAHO](http://www.paho.org/immunization/toolkit/resources/reporting-monitoring/es/Modulo2-coberturas-administrativas.pdf?ua=1#page=19), [Ministry of Health](http://www.msssi.gob.es/profesionales/saludPublica/prevPromocion/vacunaciones/coberturas.htm)*
 
-Finally, the lowest **salary** for an Italian public servant is the one corresponding to group A. We took the average for 2013 published by the government ([here](https://www.aranagenzia.it/index.php/statistiche-e-pubblicazioni/dati-statistici)), as they remained unchanged in 2014 or 2015.
+For example, to calculate the immunization coverage in children aged between 12 to 23 months, the number of children aged between 12 and 23 months that have received all the doses that they were due, according to the immunization schedule of that country, is divided by the total number of children aged between 12 and 23 months in that country.
 
-### Argentina
+- By surveys - which should be carried out every 3 to 5 years. These are useful to study the reliability of the administration method, [or to substitute it]((http://www.who.int/immunization/monitoring_surveillance/Vaccination_coverage_cluster_survey_with_annexes.pdf?ua=1#page=12)). Data is obtained from immunization records and the vaccination history of medical centres or interviews with families. The calculation of the numerators and denominators is similar to that of the administration method, but in smaller groups. Source: [WHO](http://www.who.int/immunization/monitoring_surveillance/routine/coverage/en/index2.html)
 
-The healthcare system in **Argentina** differs from public health systems in Europe. The affiliation of workers to a health service is required by law. However, the national government is not responsible for organising, funding and providing the medical care. These functions are delegated to the Social Works, which are the main health insurance providers. On the other hand, there is _Medicina Prepaga_ (Prepaid Health), health care provided by private insurers.
+In both cases, we had to consider how to handle the issue of multiple dose vaccines. Sometimes it was interesting to compare the results between the first and the last dose, but for certain research we decided which dose was the most representative. In principle, for the majority of the analysis we used the final dose, on the basis that having reached this stage implies having received the full course of immunization required to be effective. In our analysis to test our stance, we found very few anomalies in which the immunization percentage of the last dose is greater than that of previous doses.
 
-However, the [Compulsory Medical Programme](http://www.sssalud.gov.ar/index/index.php?cat=beneficiarios&opc=pmoprincipal) (PMO) — establishes the basic basket of services that must be provided by the Social Works. It also provides coverage for the 14 medications.
+There are a few specific exceptions. For instance, for the second dose of the measles vaccine, France only submitted data for the period up to 2014. For our analysis, in the same way as the WHO does in their [country factsheets](http://www.who.int/immunization/monitoring_surveillance/data/fra.pdf), we prolong the 2014 figure into 2015, until the final data, which will be published over the course of 2017, becomes available.
 
-Most often, the minimum subsidy by the insurer is 40% of the reference price of the drug. But the government mandates [a reduction of 70% on the reference price](http://www.sssalud.gov.ar/index/index.php?opc=genericos70) for some generics. We have consulted this list first to determine the **private price** and the **public price** for those generics qualifying for such subsidies. The latest update of the database, on May 29 2015, contains four active ingredients: atenolol, simvastatin, salbutamol and glibenclamide.
+For **herd immunization** we have used a rate of 95% for measles (the figure which is agreed in most research). For the DPT vaccine line we used 80%, the minimum coverage level recommended by the WHO SAGE group. According to calculations of the necessary rate to achieve herd immunization, polio would require between 80% and 86%. We used 80%, the lowest rate within this range. Two sources ([here](http://www.who.int/bulletin/volumes/86/2/07-040089/en/) and [here](http://cid.oxfordjournals.org/content/52/7/911.full)) discuss the subject, although there are many more.
 
-For prices of other drugs we have followed two paths in parallel. First, we looked up the prices of the remaining 10 drugs (with the dose and packaging specified in the methodology) in [Kairos](http://www.ar.kairosweb.com), a scientific journal for pharmacies. We also downloaded manually (last update June 19 2015) data about the drugs from the [Vademécum Nacional de Medicamentos](http://anmatvademecum.servicios.pami.org.ar/index.html) (VNM) of the National Administration of Drugs, Food and Medical Technology (ANMAT), a regulatory agency under the Ministry of Health of Argentina. The VNM is an official source which includes all the drugs marketed in Argentina and is updated continuously. We then compared the lowest price for each of the compounds, keeping the ANMAT data whenever possible, as it is official source. The resulting figure is the **private price**, and after applying a reduction of 40% the **public price** (as it is the cheapest generic in the market).
+#### Cases and deaths by disease
+In order to determine the number of cases of each disease recorded every year, we used the WHO [table of incidences](http://www.who.int/immunization/monitoring_surveillance/data/en/), to which we have added certain data:
 
-Finally, the lowest **salary** for an Argentinian public servant in 2015 — applicable since August 2014 — is 5,777.95 Argentinian pesos (equivalent to 562.66€ using June 19 2015 exchange rates), according to the [_Oficina Nacional de Empleo Público_](http://www.sgp.gov.ar/contenidos/onep/salarios/docs/SINEP_agosto_2014.pdf) (ONEP) — National Public Employment Office — of Argentina.
+- In order to be able to include cases of polio in 2016, we used the information available in [Polio Eradication](http://polioeradication.org/polio-today/polio-now/), an extremely up to date report on the global state of polio. 
+- For the video about Guatemala, we added the information from recent months taken from the [survey](http://fundesa.org.gt/content/files/publicaciones/SegundoSondeoVacunacion.pdf) carried out by the Guatemalan Human Rights Council, Action Against Hunger, ALIANMISAR (National Alliance for Indigenous Women's Organisations for Reproductive Health, Nutrition and Education) and the Alliance for Nutrition.
+- We reviewed a complementary source for measles data from the [WHO’s monthly reports](http://www.who.int/immunization/monitoring_surveillance/burden/vpd/surveillance_type/active/measles_monthlydata/en/). However, since some countries send the data late and with different timing, we only used the monthly data to be aware of the most recent trends, and didn't include in the final content.
 
-### Belgium
+As is the case with vaccination coverage, the data on case numbers [is not perfect](http://apps.who.int/gho/indicatorregistry/App_Main/view_indicator.aspx?iid=57). Taking into account the fact that the data only includes cases which are treated under the healthcare systems and are therefore officially recorded, the conclusion is clear: **more cases occur than those which appear in the data**. As the WHO explain: “Many countries face challenges in accurately identifying, diagnosing and reporting infectious diseases due to the remoteness of communities, lack of transport and communication infrastructure, and a shortage of skilled health-care workers and laboratory facilities to ensure accurate diagnosis.” 
 
-The Belgium data, gathered by Kristof Klerik, come from two public bodies: NIHDI (National Institute for Health and Disability Insurance) and BCFI (Belgian Centre for Pharmacotherapeutical Information). The calculation of the Belgian co-payment applies to the ordinary Belgians insured, eighty percent of the population. The so-called "preferential insured" (the remaining twenty per cent: persons with disabilities, guaranteed income, widowers / widows, pensioners, the disabled, orphans ...) the co-payment is usually lower. More information, [here](http://www.knack.be/nieuws/wereld/geneesmiddelen-zijn-bijna-nergens-zo-betaalbaar-als-in-belgie/article-normal-654589.html).
+An indication that data is not 100% exact is lack of concurrence with other databases. For example, to gather the information from European countries there is also the [ECDC](http://atlas.ecdc.europa.eu/public/index.aspx?Instance=GeneralAtlas) (their methodology, [here](http://ecdc.europa.eu/en/activities/surveillance/Pages/index.aspx#sthash.Y3Namw3l.dpuf)). We carried out various tests to ascertain that the data did not concur (although by only a small margin of error) and this demonstrates the need for a clear and consolidated system of data collection. The ECDC data is more recent and was useful to contextualise the data, however we did not include this in our database because it only covers certain diseases and its scope is limited to Europe.
 
-The final database includes data from both HAI's reports and these four countries, and you can download it [here](https://docs.google.com/spreadsheets/d/1ksuDMT-B0Y0VwpmRlW4b94GUna9NWkFCph96LNVfgTA/edit?usp=sharing). We have visualized it (sorting the countries by name or [GDP](http://data.worldbank.org/indicator/NY.GDP.PCAP.CD)) using Javascript and D3.js. You can find the web source code [here](https://github.com/civio/medicamentalia-theme).
+We excluded countries with very little data from the analysis and presentations.
 
-### Reporting from the field
+We have also used mortality figures, from two sources: 
 
-In Civio we know well that data alone says absolutely nothing. Analysing the database allowed us to draw some interesting conclusions, but the background information and explanations or consequences of the problems of access to medicines were left out. From the beginning we knew we needed reports from the field. To this end we traveled to Ghana to cover the problem of malaria and counterfeit medicines. And to Brazil, to learn about compulsory licensing, an alternative to patents used in that country in 2007\. We also researched the patent system and its alternatives, since the 14 drugs considered essential by the WHO are available as generics, and we didn't want to leave aside one of the major debates on access to medicines worldwide.
+- Child mortality by country and [by disease](http://apps.who.int/gho/data/view.main.ghe100-AGO?lang=en). With data from 2000 to 2015.
+- General mortality data by disease, [here](http://vizhub.healthdata.org/gbd-compare/)
 
-## Help us
+#### Other used data and its sources
 
-Medicamentalia is not a finished project, it's a project in motion. We'd love to add more countries and more drugs to the site, always following the same rigorous criteria. If you want to help by providing information about your country, contact us and we'll tell you how. You can also support this and other projects by Civio through [periodic](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PECHBACVDZ3L) or [one-off](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=R5L232VBWWG62) donations.
+- Immunization schedules for all countries via [WHO](http://apps.who.int/immunization_monitoring/globalsummary/schedules).
+- The year of the introduction of the vaccine. In some cases, the dates of introduction were very recent and did not match with the information from the countries. Moreover, 28 countries did not have the information. We requested this information from eight countries and only one responded - Guatemala. 
+- GDP data is taken from the World Bank, as is population data. This data enabled us to calculate the number of cases per capita and, in some cases, omit certain countries from the charts in order to alleviate the design, as rates were too high and therefore not useful to make a comparison. Concretely, we omitted data from countries with a population of less than 300,000 from the graph that compares different immunization rates. 
 
-**Both the data and the content are licensed as Creative Commons (CC BY). You can use what you need or find interesting with just one condition: give Medicamentalia proper credit and link back to this site. Oh, and one favour: let us know, we'll be happy to hear about it**.
+### Reports and website
+
+Analysis of all this information allowed us to draw some very interesting conclusions, but we needed to examine it in even more detail. We were clear from the start that we needed first-hand reports. We focussed the research on two regions and prepared the interviews. We chose two destinations: 
+
+- **Central America**. The aim was to analyse what had happened in Guatemala, which had suffered a significant drop in immunization coverage for basic vaccines, and analyse the situation in Guatemala and El Salvador with regards to the Human Papilloma vaccine, as this was not included in the vaccination schedules but cervical cancer rates in these countries are sky-high. We also wanted to talk to the people in charge of pooled purchasing systems such as the PAHO revolving fund and the COMISCA group to understand how these work. 
+- **South Africa**. Although the initial idea was to go to India, various problems with the embassy delayed and finally prevented, the trip. We needed a plan B and we chose South Africa because we were very interested to see how the vaccination system worked in a country that did not receive external aid and had suffered important problems of *stockouts*.
+
+We combined the data analysis, the reporting and the stories that we were told on this trip into this website, in English and Spanish, which is which is developed with [Jekyll] (https://jekyllrb.com/), and uses Javascript and [D3.js](https://d3js.org/) for the data visualizations. You can find the code of the web in our [Github repository](https://github.com/civio/medicamentalia).
+Journalism Grants offered their support throughout the project, but this in no way influenced any editorial decisions.
+
+## Collaboration and reproduction
+
+Medicamentalia Vaccines is not a closed project. If you have relevant information or **you work for an organisation that wishes to reproduce all or part** of the content, [write to us](mailto:contacto@civio.es) and we will help you to make it happen. **The database and all materials in the project are Creative Commons (CC BY). You may use anything that you need or that interests you on one condition: you must quote and link to Medicamentalia**. We also ask that you tell us about it! We would love to hear from you.
+
+You can also support this and other Civio projects by [donating]( http://haztecomplice.civio.es/#hazte-complice) to the foundation.
 
 </div>
 </div>

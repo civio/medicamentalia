@@ -281,17 +281,17 @@ header {
   .page-content-container{
     width: 100%;
     margin: auto;
-
-    li{
-      font-size: 18px;
-      line-height: 29px;
-    }
   }
 
-  p{
+  p,
+  li{
     font-size: 19px;
     line-height: 34px;
-    margin-bottom: 30px;
+    margin-bottom: $grid-gutter-width;
+  }
+
+  li{
+    margin-bottom: $grid-gutter-width/2;
   }
 
   .author,
