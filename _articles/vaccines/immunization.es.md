@@ -91,7 +91,7 @@ En Mongolia, un [brote](http://www.wpro.who.int/mongolia/mediacentre/releases/20
 
 Las estimaciones que envió el país a la OMS aseguraban que los niveles de cobertura del país superaban los umbrales mínimos. Pero si los datos no son precisos o se producen bolsas de población sin alcanzar los niveles básicos, el escudo tampoco funciona.  
 
-{% include vaccines/measles_graph.es.html id="vaccines-measles-graph-2" title="Casos de sarampión" %}
+{% include vaccines/measles_graph.es.html id="vaccines-measles-graph-2" %}
 
 Aunque hay razones para ser [optimista](http://medicamentalia/vaccines/exitos/) en algunas zonas, la dificultad de vacunar a todos los niños en áreas en conflicto o con problemas de recursos e infraestructuras, y en mucha menor medida, [la oposición a las vacunas](enlace al otro tema), no permite erradicar enfermedades para las que, desde hace décadas, tenemos un escudo más que efectivo. [Según la propia OMS](http://www.who.int/topics/immunization/es/), 21,8 millones de lactantes no reciben las vacunas básicas.
 
