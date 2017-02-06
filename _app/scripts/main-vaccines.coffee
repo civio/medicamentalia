@@ -33,14 +33,15 @@
   # Video of map polio cases
   setVideoMapPolio = ->
     wrapper = Popcorn.HTMLYouTubeVideoElement('#video-map-polio')
-    wrapper.src = 'http://www.youtube.com/embed/l1F2Xd5FFlQ?controls=0&showinfo=0&hd=1'
+    wrapper.src = 'http://www.youtube.com/embed/fJehvqxC5GU?controls=0&showinfo=0&hd=1'
     popcorn = Popcorn(wrapper)
     notes = 2016 - 1980
+    yearDuration = 27/(notes+1) # video duration is 27seconds 
     i = 0
     while i <= notes
       popcorn.footnote
-        start:  1.6222 * i
-        end:    1.6222 * (i + 1)
+        start:  yearDuration * i
+        end:    yearDuration * (i + 1)
         text:   1980 + i
         target: 'video-map-polio-description'
       i++
@@ -276,6 +277,7 @@
 
   # World Cases Multiple Small
   setupWorldCasesMultipleSmallGraph = ->
+    console.log 'setupWorldCasesMultipleSmallGraph'
     diseases = ['diphteria', 'measles','pertussis','polio','tetanus']
     graphs = []
     # Load data
@@ -285,6 +287,7 @@
       maxValue2 = 100000 #d3.max data.filter((d) -> ['diphteria','polio','tetanus'].indexOf(d.disease) != -1), (d) -> d3.max(d3.values(d), (e) -> +e)
       # create a line graph for each disease
       diseases.forEach (disease) ->
+        console.log disease
         # get current disease data
         disease_data = data
           .filter (d) -> d.disease == disease
@@ -412,14 +415,13 @@
     setVideoMapPolio()
 
   ###
-  // Vaccine map
-  if ($('#vaccine-map').length > 0) {
-    var vaccine_map = new VaccineMap('vaccine-map');
-    //vaccine_map.getData = true; // Set true to download a polio cases csv
-    //vaccine_map.getPictureSequence = true; // Set true to download a map picture sequence
-    vaccine_map.init(baseurl+'/assets/data/diseases-polio-cases.csv', baseurl+'/assets/data/map-polio-cases.csv');
-    $(window).resize( vaccine_map.onResize );
-  }
+  ## Vaccine map
+  if $('#vaccine-map').length > 0
+    vaccine_map = new VaccineMap 'vaccine-map'
+    #vaccine_map.getData = true  #  Set true to download a polio cases csv
+    vaccine_map.getPictureSequence = true   # Set true to download a map picture sequence
+    vaccine_map.init baseurl+'/assets/data/diseases-polio-cases.csv', baseurl+'/assets/data/map-polio-cases.csv'
+    $(window).resize vaccine_map.onResize
   ###
 
   if $('.vaccines-disease-graph').length > 0

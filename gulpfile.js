@@ -51,6 +51,7 @@ var js_paths = {
     'node_modules/topojson-client/dist/topojson-client.js',
     '_app/scripts/vendor/selection-sharer.js',
     '_app/scripts/vendor/d3-bundle.js',
+    //'_app/scripts/vaccine-map.js',
     '_app/scripts/main.js'
   ],
   // access.js sources
@@ -72,7 +73,6 @@ var js_paths = {
     '_app/scripts/heatmap-graph.coffee',
     '_app/scripts/map-graph.coffee',
     '_app/scripts/scatterplot-graph.coffee',
-    //'_app/scripts/vaccine-map.js',
     '_app/scripts/main-vaccines.coffee'
   ],
   // other.js sources

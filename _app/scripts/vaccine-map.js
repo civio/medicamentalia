@@ -2,7 +2,7 @@ var VaccineMap = function( _id ) {
 
   var $ = jQuery.noConflict();
 
-  var YEAR_DURATION = 100,  // year animation duration in frames
+  var YEAR_DURATION = 75,  // year animation duration in frames
       MIN_YEAR = 1980,     // first year with data
       MAX_YEAR = 2016;     // last year with data
 
@@ -20,7 +20,7 @@ var VaccineMap = function( _id ) {
       timer,
       frame = 0,
       transitionInDuration = 6, // transition in duration in frames,
-      transitionOutDuration = 35, // transition out duration in frames,
+      transitionOutDuration = 30, // transition out duration in frames,
       $el;
 
 
@@ -249,7 +249,7 @@ var VaccineMap = function( _id ) {
         transition = (dt > transitionInDuration+transitionOutDuration) ? 0 // after transition in & out
           : (dt <= transitionInDuration) ? dt/transitionInDuration  // transition in
           : 1-((dt-transitionInDuration)/transitionOutDuration);        // transition out
-        context.fillStyle = 'rgba(220,0,0,'+(0.8*transition)+')';
+        context.fillStyle = 'rgba(233,96,15,'+(0.8*transition)+')';   // #E9600F 
         context.beginPath();
         context.arc(d.x, d.y, (2*dt/(transitionInDuration+transitionOutDuration))+1, 0, 2*Math.PI, true);
         context.fill();
