@@ -3,8 +3,8 @@ en:
   by: By
   categories:
     access: 
-      title: Access to medicines
-      description: A journalistic investigation into the issues limiting access to medicines around the world, country differences, the patent system and its alternatives.
+      title: Access
+      description: A journalistic investigation into access to medicines around the world
     vaccines: 
       title: Vaccines
       description: Journalistic investigation on immunization levels and vaccine prices
@@ -39,8 +39,8 @@ es:
   by: Por
   categories:
     access: 
-      title: Acceso a medicamentos
-      description: Investigación periodística sobre las dificultades para adquirir medicinas esenciales en todo el mundo, las diferencias entre países, el sistema de patentes y sus alternativas.
+      title: Acceso
+      description: Investigación periodística sobre el acceso a medicamentos en todo el mundo
     vaccines: 
       title: Vacunas
       description: Investigación periodística sobre las diferencias en niveles de inmunización y precios de vacunas
