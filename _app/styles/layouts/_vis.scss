@@ -412,27 +412,44 @@ Video Map Polio
     left: 0;
     bottom: 0;
     right: 0;
+  }
+
+  .video-map-polio-title{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -2*$grid-gutter-width;
 
     p{
-      position: absolute;
-      width: 100%;
-      top: 50%;
-      margin-top: - $grid-gutter-width;
+      display: inline;
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 24px;
+      padding: 0 0.5em;
       text-align: center;
       text-shadow: 0 1px 0px rgba(255,255,255,0.85);
       max-width: none;
+      background: rgba(255,255,255,0.7);
     }
 
     a{
       display: block;
-      width: 2*$grid-gutter-width;
-      height: 2*$grid-gutter-width;
-      margin: $grid-gutter-width/3 auto 0;
-      text-indent: -9999px;
-      overflow: hidden;
-      border-radius: $grid-gutter-width;
-      background: $color-orange;
-      opacity: 0.85;
+      color: white;
+      width: 120px;
+      font-size: 17px;
+      line-height: 1em;
+      padding: $grid-gutter-width/3 0;
+      margin: 2*$grid-gutter-width/3 auto 0;
+      border: 2px solid $brand-primary; 
+      background: $brand-primary;
+      text-transform: uppercase;
+      text-shadow: none;
+      font-weight: 400;
+
+      &:hover{
+        color: $brand-primary;
+        background: white;
+      }
     }
   }
 }
