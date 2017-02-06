@@ -7,10 +7,10 @@ en:
       description: A journalistic investigation into the issues limiting access to medicines around the world, country differences, the patent system and its alternatives.
     vaccines: 
       title: Vaccines
-      description: A journalistic investigation into access to vaccines around the world
+      description: Journalistic investigation on immunization levels and vaccine prices
   date:
     format: '%B %-d, %Y'
-  description: A journalistic investigation into access to medicines around the world
+  description: Journalistic investigation on the gap in global access to health
   donate:
     title: Did you like this story?
     description: Help us to continue making necessary investigations like this donating to Civio
@@ -43,7 +43,7 @@ es:
       description: Investigación periodística sobre las dificultades para adquirir medicinas esenciales en todo el mundo, las diferencias entre países, el sistema de patentes y sus alternativas.
     vaccines: 
       title: Vacunas
-      description: Investigación periodística sobre el acceso a las vacunas en el mundo
+      description: Investigación periodística sobre las diferencias en niveles de inmunización y precios de vacunas
   date:
     format: '%-d de %B de %Y'
     months:
@@ -59,7 +59,7 @@ es:
       - Octubre
       - Noviembre
       - Diciembre
-  description: Investigación periodística sobre el acceso a los medicamentos en el mundo
+  description: Investigación periodística sobre la brecha global en el acceso a la salud
   donate:
     title: ¿Te ha gustado esta historia?
     description: Ayúdanos a seguir haciendo investigaciones necesarias como esta donando a Civio
