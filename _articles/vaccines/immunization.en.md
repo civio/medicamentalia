@@ -68,7 +68,7 @@ This vaccine protects from diphtheria, tetanus and whooping cough, three illness
 Whooping cough, on the other hand, continues to cause large numbers of illness and death in children and figures have not improved in recent years. In some years, such as 2012 and 2014, the figures have actually increased. 142,412 cases were recorded in 2015. 56,696 of these cases were children that died from this disease, 15% of those from Nigeria. 
 
 <div class="panel" markdown="1">
-#### The slump in vaccinations in Guatemala
+### The slump in vaccinations in Guatemala
 
 {% include video-container.html videoid="kEPPYvFkWhs" title="Lorem ipsum" credit="Dolor sit amet" %}
 
