@@ -68,7 +68,7 @@ En una [entrevista](http://www.theatlantic.com/health/archive/2014/10/the-anti-v
 Sí lo están en regiones en las que las epidemias de males como el sarampión o los casos de polio son mucho más recientes. O en la memoria de los más mayores. 
 
 <div class="container-right">
-{% include video-container.html videoid="lX1upUATEe4" credit="Vídeo: Manuel Penados." %}
+{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Vídeo: Manuel Penados." %}
 </div>
 
 Que la memoria mantenga vivos los recuerdos de épocas peores y las dificultades de acceso a la salud hacen que, en ciertas regiones, como en Centroamérica, la desconfianza no florezca. El miedo inicial a las vacunas en zonas rurales -por temor a lo desconocido- **no ha evolucionado hasta transformarse en los movimientos antivacunas modernos**, que son anecdóticos. Esas comunidades han pasado "de esconder a sus niños" cuando llegaban los responsables de las campañas de vacunación a "hacer cola cuando se enteran de que llegó la vacuna al centro de salud", como narra Ademir Vásquez, del programa nacional de inmunizaciones del Ministerio de Salud de Guatemala.
@@ -76,7 +76,7 @@ Que la memoria mantenga vivos los recuerdos de épocas peores y las dificultades
 ### ¿Cómo se combate?
 
 <div class="container-right">
-{% include video-container.html videoid="kHLADRHFwfU" credit="Vídeo: Manuel Penados." %}
+{% include video-container.html videoid="kHLADRHFwfU" title="Mario Martínez, de la PAHO." credit="Vídeo: Manuel Penados." %}
 </div>
 
 Todas las personas entrevistadas para este reportaje repiten **la misma palabra: pedagogía**. Pero no es sencillo. Un [artículo](http://elpais.com/elpais/2015/06/03/ciencia/1433354194_756223.html) publicado por el periodista Javier Salas en El País recopiló varios estudios que demostraban que ni atiborrarles de datos, ni asustarles con las posibles consecuencias, ni corregirles ni imponerles la vacunación funciona. De hecho, esas medidas [pueden ser contraproducentes](http://pediatrics.aappublications.org/content/early/2014/02/25/peds.2013-2365).
@@ -86,7 +86,7 @@ Y ¿entonces? Un [estudio](http://www.ajpmonline.org/article/S0749-3797(11)00042
 El Salvador aprobó una ley que establece que todo niño debe presentar su carné de vacunas para entrar a la escuela. El director del programa de inmunizaciones del Ministerio de Salud admite que, en la práctica, no impiden que un niño sin vacunar se matricule, porque pondrían barreras a otro derecho básico: la educación. Lo que hacen es aprovechar ese momento para proponer a las familias poner su cartilla al día. 
 
 <div class="container-right">
-{% include video-container.html videoid="1X85AcBhpsM" credit="Vídeo: Manuel Penados." %}
+{% include video-container.html videoid="1X85AcBhpsM" title="Eduardo Suárez, director de inmunizaciones de El Salvador." credit="Vídeo: Manuel Penados." %}
 </div>
 
 Eduardo Suárez lo explica en un despacho lleno de mascarillas (por si alguien se pone enfermo), mientras defiende con entusiasmo la vacunación a lo largo del curso de vida, y no solo para los más pequeños. Admite que a veces tiene que agarrar de las orejas a algún empleado del ministerio para que se inmunice y critica que los medios latinoamericanos utilicen "vacunar" como **sinónimo de algo negativo**, de algo obligatorio y desagradable. Porque así, dice, es imposible hacer pedagogía. 

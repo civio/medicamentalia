@@ -70,7 +70,7 @@ the anti-vaccine movements** are threefold: concerns about living "naturally", l
 This is not the case in regions where epidemics of diseases such as measles or cases of polio are much more recent. Or in the memory of the elderly.
 
 <div class="container-right">
-{% include video-container.html videoid="4WkOA9vdlC0" credit="Video: Manuel Penados." %}
+{% include video-container.html videoid="4WkOA9vdlC0" title="Ademir Vásquez, Immunization Program of Guatemala." credit="Video: Manuel Penados." %}
 </div>
 
 A recent memory of the awfulness of an epidemic, along with a consciousness of the current difficulties in accessing healthcare mean that in certain regions, such as Central America, confidence in vaccines is far greater. The initial fear of vaccines in rural areas (a fear of the unknown) **has not transformed into true anti-vaccine sentiment**, it remains anecdotal. Such communities have moved from "hiding their children" when vaccination campaigns arrived in their towns to "pushing their children to the front of the queue” for vaccines, according to Ademir Vásquez, from the Ministry of Health of Guatemala's national immunization programme.
@@ -78,7 +78,7 @@ A recent memory of the awfulness of an epidemic, along with a consciousness of t
 ### How do we deal with this?
 
 <div class="container-right">
-{% include video-container.html videoid="_hSgScxpsWE" credit="Video: Manuel Penados." %}
+{% include video-container.html videoid="_hSgScxpsWE" title="Mario Martínez, from PAHO." credit="Video: Manuel Penados." %}
 </div>
 
 Every person interviewed for this article **repeated the same word: education**. But this is not straightforward. An [article](http://elpais.com/elpais/2015/06/03/ciencia/1433354194_756223.html) by journalist Javier Salas in El País compiled various studies showing that neither information overload, nor scare campaigns built around the potential consequences, nor enforcement of the vaccine was successful. In fact, these methods [can be counter-productive](http://pediatrics.aappublications.org/content/early/2014/02/25/peds.2013-2365).
@@ -88,7 +88,7 @@ So, what is the solution? A [study](http://www.ajpmonline.org/article/S0749-3797
 El Salvador passed a law ruling that all children must present their immunization records in order to begin school. The director of the Ministry of Health's immunization programme admits that, in practice, they would not deny an unvaccinated child their schooling, as this would create a barrier to another basic right - education. However, they can take advantage of this scheme to encourage families to ensure that children's immunization records are up to date.
 
 <div class="container-right">
-{% include video-container.html videoid="uz075xQ1w28" credit="Video: Manuel Penados." %}
+{% include video-container.html videoid="uz075xQ1w28" title="Eduardo Suárez, Immunization Director, El Salvador." credit="Video: Manuel Penados." %}
 </div>
 
 Eduardo Suárez explains his stance from an office filled with face masks (in case someone falls ill), whilst enthusiastically defending vaccination, not just in childhood, but throughout our lifetime. He admits that he sometimes has to force colleagues at the ministry to get vaccinated and condemns the Latin American media for using the term "vaccinate” as a **synonym of something negative**, compulsory and unpleasant. This makes it impossible to educate, says Suárez.
