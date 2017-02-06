@@ -594,9 +594,10 @@ header {
 
   .text-center{
     color: $brand-primary;
-    font-size: 1.375em;
+    font-size: 24px;
     margin-bottom: $grid-gutter-width/2;
     font-weight: 600;
+    text-transform: uppercase;
   }
 
   .portfolio-box{
@@ -616,41 +617,41 @@ header {
 .donate{
   //color: $brand-secondary;
   //background: mix( $color-green-light, white, 20% );
-  color: white;
-  background: $color-green;
-  padding: $grid-gutter-width;
-  margin-bottom: 1.5*$grid-gutter-width;
+  color: $brand-primary;
+  background: $brand-secondary;
+  padding: 2*$grid-gutter-width/3 $grid-gutter-width;
+  margin-bottom: 2*$grid-gutter-width;
   font-family: $font-family-sans-serif;
   text-align: center;
 
   p{
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 3  00;
+    font-size: 16px;
+    line-height: 20px;
     margin-bottom: 2*$grid-gutter-width/3;
-    font-weight: 300;   
+    font-weight: 400;   
   }
 
   strong{
-    color: $brand-secondary;
+    //color: $brand-secondary;
     display: block;
-    font-size: 22px;
-    font-weight: 400;
-    margin-bottom: $grid-gutter-width/2;
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: $grid-gutter-width/3;
   }
 
   a.btn{
-    color: white;
-    background: $brand-primary;
+    color: $brand-secondary;
+    background: $brand-primary; // $brand-primary;
     width: 190px;
     font-weight: 400;
-    border: 2px solid white;
+    border: 2px solid $brand-primary;
     padding: 8px 0;
 
     &:hover{
       color: $brand-primary;
       background: $brand-secondary;
-      border-color: $brand-secondary;
+      border-color: $brand-primary;
+      font-weight: 600;
     }
   }
 }
