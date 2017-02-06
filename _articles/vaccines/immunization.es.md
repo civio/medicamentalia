@@ -70,7 +70,7 @@ La tos ferina, en cambio, sigue provocando un número elevado de enfermos y muer
 <div class="panel" markdown="1">
 ### El desplome de la vacunación en Guatemala
 
-{% include video-container.html videoid="pAcmKOSHwVY" title="Lorem ipsum" credit="Dolor sit amet" %}
+{% include video-container.html videoid="pAcmKOSHwVY" credit="Vídeo y sonido: Manuel Penados. Edición: Denise Pimentel." %}
 
 La vacunación en Guatemala ha pasado de problema más que controlado, con coberturas superiores al 90%, a riesgo de epidemia. Y el desplome no ha sido gradual, sino de golpe. Según datos de la OMS, el país pasó de un 93 a un 67% de cobertura en la vacuna del sarampión de 2013 a 2014. Según un [sondeo](http://fundesa.org.gt/content/files/publicaciones/SegundoSondeoVacunacion.pdf) realizado en 2016 por el Procurador de Derechos Humanos del país, Acción contra el Hambre, Alianmisar y la Alianza por la Nutrición, la situación es aún peor y el problema se alarga en el tiempo. En abril de 2016, según esta encuesta, siete de cada diez menores de dos años no contaban con el esquema completo de vacunación. Desde el Gobierno actual se achaca el problema a la falta de coordinación y control y a los problemas financieros del ministerio, que acabaron con impagos a la Organización Panamericana de la Salud (OPS), a través de la cual adquieren las vacunas. Desde las organizaciones civiles se añaden también acusaciones de corrupción. 
 

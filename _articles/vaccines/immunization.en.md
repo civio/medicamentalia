@@ -70,7 +70,7 @@ Whooping cough, on the other hand, continues to cause large numbers of illness a
 <div class="panel" markdown="1">
 ### The slump in vaccinations in Guatemala
 
-{% include video-container.html videoid="kEPPYvFkWhs" title="Lorem ipsum" credit="Dolor sit amet" %}
+{% include video-container.html videoid="kEPPYvFkWhs" credit="Video and sound: Manuel Penados. Edition: Denise Pimentel." %}
 
 Guatemala has moved from a controlled situation of over 90% vaccination to risking an epidemic. The collapse has not been gradual either, it has happened very suddenly. According to WHO data, the vaccination rate in the country fell from 93% in 2013 to 67% in 2014. A [survey](http://fundesa.org.gt/content/files/publicaciones/SegundoSondeoVacunacion.pdf) carried out in 2016 by the Guatemalan Human Rights Council, Action Against Hunger, ALIANMISAR (National Alliance for Indigenous Women's Organisations for Reproductive Health, Nutrition and Education) and the Alliance for Nutrition showed that the current situation is even worse. In April 2016, according to this survey, seven in ten children under the age of two had not received their basic quota of vaccinations. The current government attributes the problem to a lack of coordination and control and financial problems, having defaulted on payments to the Pan American Health Organization (PAHO), through which they acquire the vaccines. Civil organisations also add claims of corruption to the argument. 
 

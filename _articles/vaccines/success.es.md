@@ -19,7 +19,7 @@ lang:             es
 Mario Martínez trabaja en el Fondo Rotatorio de la Organización Panamericana de la Salud (OPS), un sistema de compra conjunta de vacunas entre países latinoamericanos. Lleva años en este "negocio", como él lo llama, y recuerda bien cómo **enfermedades casi erradicadas hoy arrasaban generaciones hace unos años**. Está preocupado -y mucho- por la [pérdida de confianza](vaccines/antivacunas) en las vacunas de una parte de la población. "Cometer un error en este terreno puede destruir los últimos 100 años de éxitos". Y lo cierto es que desde que Edward Jenner, a finales del siglo XVIII, utilizó la viruela bovina que contenían las ampollas de las ubres de las vacas para crear una vacuna para la enfermedad humana y ayudó a ponerle nombre al invento, los logros son muchos. 
 
 <div class="container-right">
-{% include video-container.html videoid="YA4ruLg_-FA" credit="Vídeo: Manuel Penados" %}
+{% include video-container.html videoid="YA4ruLg_-FA" credit="Vídeo: Manuel Penados." %}
 </div>
 
 En 1980, casi dos siglos después de los experimentos de Jenner, **la viruela fue erradicada del planeta de forma oficial**. Y ahí acabó la historia de este mal, una infección grave que provocaba fiebre, erupciones y bultos por todo el cuerpo y con una tasa elevada de mortalidad. 
