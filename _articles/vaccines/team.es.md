@@ -41,12 +41,14 @@ Para sacar adelante Medicamentalia Vacunas han trabajado los miembros de Civio, 
 - **Denise Pimentel**. Edición de vídeos de Centroamérica.
 - **Serusha Govender** y **Anne Gonschorek**. Vídeo en Sudáfrica.
 
-### Colaboradores:
+{: #colaboradores}
+### Colaboradores: 
 
 - **Phil Smart**. Traducción español-inglés.
 - **Asier Andrés**. Apoyo a la investigación en Guatemala.
 - **Julio Hernández**. Sonido en vídeos de El Salvador.
 
+{: #agradecimientos}
 ### Agradecimientos
 Este proyecto no habría sido posible sin el apoyo inicial de una beca de **Journalism Grants**. Queremos agradecer al [European Journalism Center](http://ejc.net/) el patrocinio de esta investigación, del mismo modo que ya lo hicieron en la primera fase de Medicamentalia, y su infinita paciencia y comprensión con los problemas que han ido retrasando el lanzamiento; en especial a **Diana Lungu**. 
 
@@ -60,6 +62,7 @@ Gracias a todas las personas que cedieron su tiempo y su sabiduría en las entre
 
 ## Metodología
 
+{: #investigacion-previa}
 ### Investigación previa
 
 Como en todos los proyectos de Civio, antes de dar el prpimer paso hacia adelante tuvimos que dar dos hacia atrás: tocaba zambullirse a fondo en el tema. Mientras en la primera fase de Medicamentalia nos dedicamos a investigar acceso a medicamentos -precios, sistema de patentes...- en esta segunda fase queríamos tratar el tema de las vacunas de forma internacional y, esta vez, ir más allá de los precios y fijarnos en otros elementos como los niveles de inmunización, qué problemas existían, cómo funcionaban los sistemas de compra conjunta y los problemas de abastecimiento, entre otros asuntos. 
@@ -68,6 +71,7 @@ Leímos decenas de *papers* y artículos y analizamos a fondo documentos de orga
 
 No éramos los primeros en tratar un tema así, y *nos inspiraron investigaciones de otros colegas*. Destacan, entre muchos otros: el [análisis y visualización](http://graphics.wsj.com/infectious-diseases-and-vaccines/) del efecto de la introducción de la vacuna del sarampión en los diferentes estados de Estados Unidos realizado por el Wall Street Journal, que nos hizo plantearnos si sería posible realizar algo similar pero ampliado a todos -o casi todos- los países del mundo. Así lo hicimos en el gráfico que podéis ver en el reportaje sobre niveles de vacunación. También nos inpiró el [enfoque](http://www.economist.com/blogs/graphicdetail/2016/03/daily-chart-16?utm_content=31884172&utm_medium=social&utm_source=twitter) de The Economist sobre las diferencias sorprendentes en niveles de cobertura entre países en desarrollo y países desarrollados, justo algo que ya nos había llamado la atención cuando atacamos por primera vez los datos y que se refleja en el artículo sobre antivacunas. 
 
+{: #los-datos}
 ### Los datos
 Para esta investigación necesitábamos cruzar distintas bases de datos: niveles de inmunización, casos por enfermedad, muertes por enfermedad, calendarios de vacunación, niveles de *stockouts*, presupuestos públicos destinados a las campañas de inmunización, precios de compra de vacunas por parte de estados y organizaciones, además de elementos básicos necesarios para poner en contexto como población o Producto Interior Bruto por país. La mayoría de los datos recogidos, aunque están actualizados a diciembre de 2016, se refieren a información que abarca hasta 2015.
 
@@ -125,6 +129,7 @@ También hemos utilizado datos de mortalidad, de dos fuentes:
 - Año de introducción de la vacuna. En algunos casos, las fechas de introducción eran demasiado recientes y no concordaban con las informaciones de los países. Además, 28 países no tenían. Solicitamos esa información a ocho de ellos y solo respondió uno, Guatemala. 
 - Los datos de PIB son del Banco Mundial. También los de población. Nos han servido para calcular el número de casos por habitante y, en algunos casos, eliminar países de los gráficos para aligerarlos, porque eran demasiado grandes y no permitían hacer comparativas. En concreto, dejamos fuera del gráfico que compara los diferentes niveles de inmunización a los países con menos de 300.000 habitantes. 
 
+{: #reportajes-y-pagina-web}
 ### Reportajes y página web
 
 Analizar toda esa información nos permitió extraer conclusiones muy interesantes, pero necesitábamos ir más allá. Por eso desde el principio tuvimos claro que necesitábamos reportajes sobre el terreno. Centramos la investigación en dos lugares y preparamos las entrevistas. Elegimos dos destinos: 

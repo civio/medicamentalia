@@ -40,12 +40,14 @@ Medicamentalia is the work of the members of Civio in conjunction with an array 
 - **Denise Pimentel**. Video editing in Central America.
 - **Serusha Govender** and **Anne Gonschorek**. Filming in South Africa.
 
+{: #collaborators}
 ### Collaborators:
 
 - **Philip Smart**. Spanish-English translation
 - **Asier Andrés**. Research support in Guatemala.
 - **Julio Hernández**. Film sound in El Salvador.
 
+{: #acknowledgements}
 ### Acknowledgements
 This project would not have been possible without the initial grant from **Journalism Grants**. We would like to thank the [European Journalism Center](http://ejc.net/) for sponsoring this research, as they did for the first part of the Medicamentalia project, and their infinite patience and understanding with the problems that delayed the launch; especially to **Diana Lungu** who was always ready to lend a hand. 
 
@@ -59,6 +61,7 @@ Thanks to everyone that gave up their time and knowledge in the interviews, both
 
 ## Methodology
 
+{: #preliminary-research}
 ### Preliminary research
 
 As with all Civio projects, the first step forwards in the investigation implied a necessary step backwards - we had to take a plunge unto the subject. Whilst in the first part of the Medicamentalia project we focused on researching access to medicines (prices, patent systems, etc.), in this second phase we wanted to investigate vaccines on an international level. This time, we wanted to go beyond the costs and focus on other elements such as immunization rates, the problems that exist with immunization, how pooled purchasing systems operate between different countries and supply issues, to name but a few. 
@@ -67,6 +70,7 @@ We read dozens of academic articles and thoroughly analysed documents from inter
 
 We were not the first to investigate such a topic and *we were inspired by the research of our peers*. The [analysis and visualisation](http://graphics.wsj.com/infectious-diseases-and-vaccines/) of the effects of the introduction of the measles vaccine in various US states, created by the Wall Street Journal is of particular note. It made us consider the possibility of creating a similar graphic on a wider scale, to cover all the countries in the world (or most of them, anyway). So, we created the graphic that you can see in the report on immunization levels. We were also inspired by the [study](http://www.economist.com/blogs/graphicdetail/2016/03/daily-chart-16?utm_content=31884172&utm_medium=social&utm_source=twitter) by The Economist about the surprising differences in immunization rates between developing countries and developed countries. This is a theme that caught our attention when we first studied the data and is reflected in the article about anti-vaccine sentiment. 
 
+{: #the-data}
 ### The data
 For this research, we needed to cross check various databases: immunization rates, cases by disease, deaths by disease, immunization schedules, levels of *stockouts*, public budgets allocated to immunization campaigns, purchase prices of vaccines for countries and organisations, as well as the basic elements required to provide context such as GDP or population by country or region. The majority of data collected, although updated in December 2016, refers to information covering the period up to 2015.
 
@@ -124,6 +128,7 @@ We have also used mortality figures, from two sources:
 - The years of vaccine introductions. In some cases, the dates of introduction were very recent and did not match the information from the countries. Moreover, 28 countries did not have the information. We requested this information from eight countries and only one responded - Guatemala. 
 - GDP data is taken from the World Bank, as is population data. This enabled us to calculate the number of cases per capita and, in some cases, omit certain countries from the charts in order to simplify the visualizations: concretely, we omitted data from countries with a population of less than 300,000 from the graph that compares different immunization rates. 
 
+{: #reports-and-website}
 ### Reports and website
 
 Analysis of all this information allowed us to draw some very interesting conclusions, but we needed to examine it in even more detail. We were clear from the start that we needed first-hand reports. We focused the research on two regions and prepared the interviews. We chose two destinations: 
