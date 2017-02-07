@@ -3,12 +3,12 @@
 
   {% include head.html %}
 
-  <body class="iframe article {{ page.url | replace:'/',' ' | strip }}" data-baseurl="{{ site.url }}{{ site.baseurl }}" data-lang="{{ page.lang }}">
+  <body class="iframe article {{ page.url | replace:'/',' ' | strip }}" data-baseurl="{{ site.assetsurl }}" data-lang="{{ page.lang }}">
 
     {{ content }}
 
-    <script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/infographics.js'></script>
-    <script type='text/javascript' src='{{ site.baseurl }}/assets/scripts/main.js'></script>
+    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/infographics.js'></script>
+    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/main.js'></script>
 
   </body>
 

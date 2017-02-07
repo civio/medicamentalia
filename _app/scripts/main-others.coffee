@@ -26,9 +26,9 @@
         label: if $('body').data('lang') == 'es' then 'Media' else 'Average'
 
     d3.queue()
-      .defer d3.csv, baseurl+'/assets/data/antibiotics.csv'
-      .defer d3.csv, baseurl+'/assets/data/antibiotics-animals.csv'
-      .defer d3.csv, baseurl+'/assets/data/countries.csv'
+      .defer d3.csv, baseurl+'/data/antibiotics.csv'
+      .defer d3.csv, baseurl+'/data/antibiotics-animals.csv'
+      .defer d3.csv, baseurl+'/data/countries.csv'
       .await (error, data_antibiotics, data_antibiotics_animals, countries) ->
         # add country names to data
         data_antibiotics.forEach (d) ->

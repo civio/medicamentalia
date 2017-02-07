@@ -5,7 +5,7 @@
     {% for img in page.gallery %}
 
     <div class="item{% if forloop.index == 1 %} active{% endif %}">
-      <div class="fill" style="background-image:url({{ site.baseurl }}/assets/images/{{ img.image }});"></div>
+      <div class="fill" style="background-image:url({{ site.assetsurl }}/images/{{ img.image }});"></div>
       <div class="carousel-caption">{{ img.title }}</div>
     </div>
     {% endfor %}

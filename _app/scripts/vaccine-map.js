@@ -44,7 +44,7 @@ var VaccineMap = function( _id ) {
     d3.queue()
       .defer(d3.csv, data_file)
       .defer(d3.csv, map_data_file)
-      .defer(d3.json, $('body').data('baseurl')+'/assets/data/map-world-'+(that.getData ? '50' : '110')+'.json')
+      .defer(d3.json, $('body').data('baseurl')+'/data/map-world-'+(that.getData ? '50' : '110')+'.json')
       .await( onDataReady );
 
     return that;

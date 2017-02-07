@@ -1,4 +1,5 @@
 # This config file overrides _config.yml for developmnet environment
 
-baseurl: "/elmundo/2016/datos/medicamentalia" # the subpath of your site, e.g. /blog
-url: "http://www.elmundo.es"                  # the base hostname & protocol for your site
+baseurl: /elmundo/2017/datos/especiales/medicamentalia/ # the subpath of your site, e.g. /blog
+url: http://www.elmundo.es                  # the base hostname & protocol for your site
+assetsurl: http://estaticos.elmundo.es/elmundo/2017/datos/especiales/medicamentalia/

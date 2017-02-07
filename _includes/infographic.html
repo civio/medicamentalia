@@ -10,7 +10,7 @@
         {% for step in site.data.infographics[include.id].steps %}
         <li>
           {{ step.title[page.lang] }}
-          <img src="{{ site.baseurl }}/assets/images/{{ step.img }}" alt="{{ id }} {{ forloop.index }}" class="alignnone size-full" />
+          <img src="{{ site.assetsurl }}/images/{{ step.img }}" alt="{{ id }} {{ forloop.index }}" class="alignnone size-full" />
         </li>
         {% endfor %}
       </ul>

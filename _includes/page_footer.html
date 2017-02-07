@@ -9,7 +9,7 @@
         <p class="text-center">{{ site.data.locales[page.lang].next_reading }}</p>
         <a class="portfolio-box portfolio-{{ article.ref }} category-{{ article.category }}" href="{{ article.url | prepend: site.baseurl }}" title="{{ article.title }}">
           {% if article.img %}
-            <div class="portfolio-box-background" style="background-image: url('{{ site.baseurl }}/assets/images/{{ article.img }}')"></div>
+            <div class="portfolio-box-background" style="background-image: url('{{ site.assetsurl }}/images/{{ article.img }}')"></div>
           {% else %}
             <div class="portfolio-box-background"></div>
           {% endif %}

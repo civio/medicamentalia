@@ -61,9 +61,9 @@
   # Measles World Map Graph
   setupMeaslesWorldMapGraph = ->
     d3.queue()
-      .defer d3.csv,  baseurl+'/assets/data/measles-cases-who-regions.csv'
-      .defer d3.csv,  baseurl+'/assets/data/countries-who-regions.csv'
-      .defer d3.json, baseurl+'/assets/data/map-world-110.json'
+      .defer d3.csv,  baseurl+'/data/measles-cases-who-regions.csv'
+      .defer d3.csv,  baseurl+'/data/countries-who-regions.csv'
+      .defer d3.json, baseurl+'/data/map-world-110.json'
       .await (error, data, countries, map) ->
         # add cases to each country
         countries.forEach (country) ->
@@ -105,7 +105,7 @@
 
   setupVaccineConfidenceBarGraph = ->
     d3.queue()
-      .defer d3.csv, baseurl+'/assets/data/confidence.csv'
+      .defer d3.csv, baseurl+'/data/confidence.csv'
       .defer d3.json, 'http://freegeoip.net/json/'
       .await (error, data, location) ->
         data.forEach (d) =>
@@ -131,8 +131,8 @@
   ###
   setupVaccineConfidenceScatterplotGraph = ->
     d3.queue()
-      .defer d3.csv, baseurl+'/assets/data/confidence.csv'
-      .defer d3.csv, baseurl+'/assets/data/countries.csv'
+      .defer d3.csv, baseurl+'/data/confidence.csv'
+      .defer d3.csv, baseurl+'/data/countries.csv'
       .await (error, data, countries) ->
         graph = new window.ScatterplotGraph('vaccine-confidence-graph',
           aspectRatio: 0.5
@@ -152,8 +152,8 @@
 
   setupVaccineDiseaseHeatmapGraph = ->
     d3.queue()
-      .defer d3.csv, baseurl+'/assets/data/diseases-cases-measles.csv'
-      .defer d3.csv, baseurl+'/assets/data/population.csv'
+      .defer d3.csv, baseurl+'/data/diseases-cases-measles.csv'
+      .defer d3.csv, baseurl+'/data/population.csv'
       .await (error, data_cases, data_population) ->
         delete data_cases.columns  # we don't need the columns attribute
         data_cases.forEach (d) ->
@@ -197,7 +197,7 @@
       margin: top: 20)
     graph.getScaleYDomain = (d) -> [0, 100]
     graph.yAxis.tickValues [0, 25, 50, 75, 100]
-    d3.csv baseurl+'/assets/data/immunization-coverage.csv', (error, data) ->
+    d3.csv baseurl+'/data/immunization-coverage.csv', (error, data) ->
       graph.setData data.filter((d) -> d.vaccine == $('#immunization-coverage-vaccine-selector').val())
       # Update data based on selected vaccine
       $('#immunization-coverage-vaccine-selector').change (e) ->
@@ -218,8 +218,8 @@
     current_countries = ['LKA','DZA','DEU','DNK','FRA']
     graphs = []
     d3.queue()
-      .defer d3.csv, baseurl+'/assets/data/immunization-coverage-mcv2.csv'
-      .defer d3.csv, baseurl+'/assets/data/countries.csv'
+      .defer d3.csv, baseurl+'/data/immunization-coverage-mcv2.csv'
+      .defer d3.csv, baseurl+'/data/countries.csv'
       .defer d3.json, 'http://freegeoip.net/json/'
       .await (error, data, countries, location) ->
         # Setup user country
@@ -281,7 +281,7 @@
     diseases = ['diphteria', 'measles','pertussis','polio','tetanus']
     graphs = []
     # Load data
-    d3.csv baseurl+'/assets/data/diseases-cases-world.csv', (error, data) ->
+    d3.csv baseurl+'/data/diseases-cases-world.csv', (error, data) ->
       # Get max value to create a common y scale
       maxValue1 = d3.max data, (d) -> d3.max(d3.values(d), (e) -> +e)
       maxValue2 = 100000 #d3.max data.filter((d) -> ['diphteria','polio','tetanus'].indexOf(d.disease) != -1), (d) -> d3.max(d3.values(d), (e) -> +e)
@@ -319,8 +319,8 @@
   setupImmunizationDiseaseBarGraph = ->
     # Load data
     d3.queue()
-      .defer d3.csv, baseurl+'/assets/data/immunization-coverage.csv'
-      .defer d3.csv, baseurl+'/assets/data/countries.csv'
+      .defer d3.csv, baseurl+'/data/immunization-coverage.csv'
+      .defer d3.csv, baseurl+'/data/countries.csv'
       .defer d3.json, 'http://freegeoip.net/json/'
       .await (error, data, countries, location) ->
         # Setup user country
@@ -393,7 +393,7 @@
     graph.yAxis
       .tickValues [0, 25, 50, 75, 100]
       .tickFormat (d) -> d+'%'
-    graph.loadData baseurl+'/assets/data/guatemala-coverage-mmr.csv'
+    graph.loadData baseurl+'/data/guatemala-coverage-mmr.csv'
     graph.$el.on 'draw-complete', (e) ->
       line = graph.container.select('.line')
       console.log line.node()
@@ -420,7 +420,7 @@
     vaccine_map = new VaccineMap 'vaccine-map'
     #vaccine_map.getData = true  #  Set true to download a polio cases csv
     vaccine_map.getPictureSequence = true   # Set true to download a map picture sequence
-    vaccine_map.init baseurl+'/assets/data/diseases-polio-cases.csv', baseurl+'/assets/data/map-polio-cases.csv'
+    vaccine_map.init baseurl+'/data/diseases-polio-cases.csv', baseurl+'/data/map-polio-cases.csv'
     $(window).resize vaccine_map.onResize
   ###
 
