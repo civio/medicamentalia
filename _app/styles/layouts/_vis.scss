@@ -414,6 +414,7 @@ Video Map Polio
   position: relative;
   width: 100%;
   margin-bottom: $grid-gutter-width;
+  z-index: 60;
 
   .video-map-polio-cover{
     position: absolute;
@@ -468,13 +469,26 @@ Video Map Polio
 }
 
 #video-map-polio-description{
+  position: relative;
+  height: 0;
+  overflow: visible;
   text-align: center;
+  z-index: 90;
+  color: $color-orange;
+  font-size: 1.25em;
+  font-weight: 600;
   opacity: 0;
 
-  p{
-    margin-bottom: 0;
+  .value{
+    display: inline;
+    color: $brand-primary;
+    font-size: 0.813em;
+    font-weight: 400;
+    padding: 0 0.25em;
+    background: rgba(255,255,255,0.7);
   }
 }
+
 
 /*
 Vaccines coverage

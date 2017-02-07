@@ -32,30 +32,37 @@
 
   # Video of map polio cases
   setVideoMapPolio = ->
-    wrapper = Popcorn.HTMLYouTubeVideoElement('#video-map-polio')
-    wrapper.src = 'http://www.youtube.com/embed/fJehvqxC5GU?controls=0&showinfo=0&hd=1'
-    popcorn = Popcorn(wrapper)
-    notes = 2016 - 1980
-    yearDuration = 27/(notes+1) # video duration is 27seconds 
-    i = 0
-    while i <= notes
-      popcorn.footnote
-        start:  yearDuration * i
-        end:    yearDuration * (i + 1)
-        text:   1980 + i
-        target: 'video-map-polio-description'
-      i++
-    # Show cover when video ended
-    wrapper.addEventListener 'ended', (e) ->
-      $('.video-map-polio-cover').fadeIn()
-      $('#video-map-polio-description').fadeTo 300, 0
-      popcorn.currentTime 0
-    # Show video when play btn clicked
-    $('#video-map-polio-play-btn').click (e) ->
-      e.preventDefault()
-      popcorn.play()
-      $('.video-map-polio-cover').fadeOut()
-      $('#video-map-polio-description').fadeTo 300, 1
+    d3.csv baseurl+'/data/diseases-polio-cases-total.csv', (error, data) ->
+      cases = {}
+      casesStr = if lang == 'es' then 'casos' else 'cases'
+      data.forEach (d) ->
+        cases[d.year] = d.value
+      # Add youtube video
+      wrapper = Popcorn.HTMLYouTubeVideoElement('#video-map-polio')
+      wrapper.src = 'http://www.youtube.com/embed/o-EzVOjnc6Q?controls=0&showinfo=0&hd=1'
+      popcorn = Popcorn(wrapper)
+      notes = 2016 - 1980
+      yearDuration = 27/(notes+1) # video duration is 27seconds 
+      i = 0
+      while i <= notes
+        year = ''+(1980+i)
+        popcorn.footnote
+          start:  yearDuration * i
+          end:    if i < notes then yearDuration*(i+1) else (yearDuration*(i+1))+1
+          text:   year + '<br><span class="value">' + formatInteger(cases[year]) + ' ' + casesStr + '</span>'
+          target: 'video-map-polio-description'
+        i++
+      # Show cover when video ended
+      wrapper.addEventListener 'ended', (e) ->
+        $('.video-map-polio-cover').show()
+        $('#video-map-polio-description').fadeTo 0, 0
+        popcorn.currentTime 0
+      # Show video when play btn clicked
+      $('#video-map-polio-play-btn').click (e) ->
+        e.preventDefault()
+        popcorn.play()
+        $('.video-map-polio-cover').fadeOut()
+        $('#video-map-polio-description').fadeTo 300, 1
 
 
   # Measles World Map Graph
@@ -287,7 +294,6 @@
       maxValue2 = 100000 #d3.max data.filter((d) -> ['diphteria','polio','tetanus'].indexOf(d.disease) != -1), (d) -> d3.max(d3.values(d), (e) -> +e)
       # create a line graph for each disease
       diseases.forEach (disease) ->
-        console.log disease
         # get current disease data
         disease_data = data
           .filter (d) -> d.disease == disease
