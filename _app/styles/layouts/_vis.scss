@@ -533,6 +533,14 @@ Vaccines coverage
   .marker-label{
     fill: $color-orange;
   }
+
+  > p {
+    margin-bottom: $grid-gutter-width;
+  }
+
+  .graph-container-caption{
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: $screen-md) {
