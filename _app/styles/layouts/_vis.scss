@@ -466,6 +466,10 @@ Video Map Polio
 
 #video-map-polio{
   margin-top: 0;
+
+  iframe{
+    opacity: 0;
+  }
 }
 
 #video-map-polio-description{

@@ -41,28 +41,28 @@
       wrapper = Popcorn.HTMLYouTubeVideoElement('#video-map-polio')
       wrapper.src = 'http://www.youtube.com/embed/o-EzVOjnc6Q?controls=0&showinfo=0&hd=1'
       popcorn = Popcorn(wrapper)
-      notes = 2016 - 1980
+      notes = 2017 - 1980
       yearDuration = 27/(notes+1) # video duration is 27seconds 
       i = 0
-      while i <= notes
+      while i < notes
         year = ''+(1980+i)
         popcorn.footnote
           start:  yearDuration * i
-          end:    if i < notes then yearDuration*(i+1) else (yearDuration*(i+1))+1
+          end:    if i < notes-1 then yearDuration*(i+1) else (yearDuration*(i+1))+1
           text:   year + '<br><span class="value">' + formatInteger(cases[year]) + ' ' + casesStr + '</span>'
           target: 'video-map-polio-description'
         i++
       # Show cover when video ended
       wrapper.addEventListener 'ended', (e) ->
         $('.video-map-polio-cover').show()
-        $('#video-map-polio-description').fadeTo 0, 0
+        $('#video-map-polio-description, #video-map-polio iframe').fadeTo 0, 0
         popcorn.currentTime 0
       # Show video when play btn clicked
       $('#video-map-polio-play-btn').click (e) ->
         e.preventDefault()
         popcorn.play()
         $('.video-map-polio-cover').fadeOut()
-        $('#video-map-polio-description').fadeTo 300, 1
+        $('#video-map-polio-description, #video-map-polio iframe').fadeTo 300, 1
 
 
   # Measles World Map Graph
@@ -284,7 +284,6 @@
 
   # World Cases Multiple Small
   setupWorldCasesMultipleSmallGraph = ->
-    console.log 'setupWorldCasesMultipleSmallGraph'
     diseases = ['diphteria', 'measles','pertussis','polio','tetanus']
     graphs = []
     # Load data
