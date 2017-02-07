@@ -17,7 +17,8 @@ var gulp          = require('gulp'),
     gutil         = require('gulp-util'),
     browserSync   = require('browser-sync'),
     reload        = browserSync.reload,
-    cp            = require('child_process');
+    cp            = require('child_process'),
+    version       = require('gulp-version-append');
 
 var uglifyOptions = {
   mangle: true,
@@ -253,6 +254,7 @@ gulp.task('watch', function() {
 // Minify HTML Files
 gulp.task('html', ['css', 'js', 'jekyll-build-production'], function() {
   return gulp.src('_site/**/*.html')
+    .pipe(version(['html','js','css']))
     .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
     .pipe(gulp.dest('_site'));
 });

@@ -1,6 +1,6 @@
 {
   "name": "medicamentalia",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "scripts": {
     "prepublish": "rollup -c -o _app/scripts/vendor/d3-bundle.js"
   },
@@ -39,6 +39,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-uncss": "^1.0.6",
     "gulp-util": "^3.0.7",
+    "gulp-version-append": "^0.2.0",
     "jquery": "^3.1.1",
     "rollup": "^0.26.3",
     "rollup-plugin-node-resolve": "^1.5.0",

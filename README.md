@@ -33,3 +33,5 @@ Serve & watch site:
 Publish site in `gh-pages` branch
 
     $ gulp publish --env=production
+
+Update package.json version when deploy to avoid caching
