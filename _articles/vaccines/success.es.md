@@ -36,7 +36,7 @@ Así, la humanidad está a un empujón -si no baja la guardia- de eliminar de la
 
 Con esa crisis sanitaria como contexto, **Jonas Salk creó la primera vacuna contra la enfermedad y renunció a su patente**. Hace poco más de 60 años que se empezó a utilizar. Poco después, Albert Bruce Sabin desarrolló la versión oral, clave para alcanzar a millones de niños en todo el mundo, gracias a su facilidad de administración. 
 
-Ellos dos son algunos de los muchos hombres y mujeres que han contribuido, desde las primeras inoculaciones, a levantar un escudo preventivo frente a decenas de enfermedades. Muchos de ellos las habían vivido de cerca, como Camille Guerin, que había visto como su padre y su mujer fallecían por culpa de la tuberculosos. Investigaban con una dosis de motivación extra.
+Ellos dos son algunos de los muchos hombres y mujeres que han contribuido, desde las primeras inoculaciones, a levantar un escudo preventivo frente a decenas de enfermedades. Muchos de ellos las habían vivido de cerca, como Camille Guerin, que había visto como su padre y su mujer fallecían por culpa de la tuberculosis. Investigaban con una dosis de motivación extra.
 
 {% include vaccines/inventors.es.html %}
 

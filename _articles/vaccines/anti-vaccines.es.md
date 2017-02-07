@@ -18,7 +18,7 @@ lang:             es
 
 **"Europa nos está mandando el sarampión"**, afirma el doctor Eduardo Suárez, director del programa de inmunizaciones del Ministerio de Salud de El Salvador. Y no le falta razón. Mientras la Región de las Américas [se declaraba libre](http://www.paho.org/hq/index.php?option=com_content&view=article&id=12528%3Aregion-americas-declared-free-measles&Itemid=1926&lang=es) de esta enfermedad, **se multiplicaban los brotes en países con rentas mucho más altas**. Si Europa registró casi 26.000 casos en 2015, en toda América sumaron muchos menos, 611, y la mayoría de ellos en Canadá y Estados Unidos. 
 
-Mientras el problema en [otras zonas del planeta](/vaccines/inmunizacion) está en la falta de recursos, en las áreas más ricas el origen no hay que buscarlo en la escasez de medios, sino en su alcance -que deja fuera a algunas comunidades aisladas- y la falta de [confianza](http://elpais.com/elpais/2016/03/15/ciencia/1458038627_317563.html) en las vacunas. Así, a veces el problema no tiene nada que ver con la disponibilidad: **son padres que deciden no vacunar a sus hijos pese a la [evidencia científica](http://www.who.int/features/qa/84/es/)**.
+Mientras el problema en [otras zonas del planeta](/vaccines/inmunizacion) está en la falta de recursos, en las áreas más ricas el origen no hay que buscarlo en la escasez de medios, sino en su alcance -que deja fuera a algunas comunidades aisladas- y la falta de [confianza](http://elpais.com/elpais/2016/03/15/ciencia/1458038627_317563.html) en las vacunas. Así, a veces el problema no tiene nada que ver con la disponibilidad: **son padres que deciden no vacunar a sus hijos pese a las [recomendaciones de la OMS](http://www.who.int/features/qa/84/es/)**.
 
 </div>
 <div class="graph-container">
@@ -35,7 +35,7 @@ Mientras el problema en [otras zonas del planeta](/vaccines/inmunizacion) está 
 </div>
 <div class="page-content-container" markdown="1">
 
-Alemania alzancó los 2.464 casos de sarampión en 2015, solo superada en Europa por Kirguistán. [En Sillicon Valley](https://www.wired.com/2016/03/silicon-valley-daycares-still-big-vaccination-problems/) se registran nuevos brotes y tasas de vacunación por debajo de los mínimos necesarios, mientras el nuevo presidente de Estados Unidos, **Donald Trump**, se reúne con líderes de los [movimientos antivacunas](http://www.chicagotribune.com/news/opinion/commentary/ct-donald-trump-anti-vaxxer-20170116-story.html). En España, en 2015 y después de tres décadas sin casos, un niño sin vacunar [murió de difteria](http://ccaa.elpais.com/ccaa/2015/06/27/catalunya/1435393852_158995.html).
+Alemania alcanzó los 2.464 casos de sarampión en 2015, solo superada en Europa por Kirguistán. [En Sillicon Valley](https://www.wired.com/2016/03/silicon-valley-daycares-still-big-vaccination-problems/) se registran nuevos brotes y tasas de vacunación por debajo de los mínimos necesarios, mientras el nuevo presidente de Estados Unidos, **Donald Trump**, se reúne con líderes de los [movimientos antivacunas](http://www.chicagotribune.com/news/opinion/commentary/ct-donald-trump-anti-vaxxer-20170116-story.html). En España, en 2015 y después de tres décadas sin casos, un niño sin vacunar [murió de difteria](http://ccaa.elpais.com/ccaa/2015/06/27/catalunya/1435393852_158995.html).
 
 Italia ha vacunado al 82% de los niños a los que les tocaba la segunda dosis del sarampión, muy por debajo del mínimo para alcanzar inmunización de rebaño. Y, en la primera dosis, tampoco están para tirar cohetes: su cobertura es del 85%. San Marino apenas supera el 50%.
 
@@ -45,7 +45,7 @@ Dinamarca, por su parte, ha ido perdiendo cuota de vacunados en los últimos añ
 
 De hecho, **Francia es el país donde más se desconfía de la seguridad de las vacunas**, según el projecto [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/), realizado por la London School of Hygiene and Tropical Medicine y para el que entrevistaron a 65.819 personas en 67 países. Un 40% de los franceses encuestados (frente a una media del 12% en los datos mundiales) respondieron que estaban **en desacuerdo o totalmente en desacuerdo** con la siguiente afirmación: "Las vacunas son seguras". 
 
-**Siete de los diez países con menor confianza en las vacunas son europeos**, lo que [preocupa](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1) al grupo de expertos en vacunación de la OMS. Y eso, pese a que los efectos secundarios graves [son extremadamente raros](https://www.science.org.au/learning/general-audience/science-booklets/science-immunisation/4-are-vaccines-safe). 
+**Siete de los diez países con menor confianza en las vacunas son europeos**, lo que [preocupa](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1) al grupo de expertos en vacunación de la OMS. Y eso, pese a que los efectos secundarios graves son extremadamente raros, [según la mayoría de las investigaciones](https://www.science.org.au/learning/general-audience/science-booklets/science-immunisation/4-are-vaccines-safe). 
 
 </div>
 <div class="graph-container">
@@ -63,7 +63,7 @@ Poco a poco se **fue desvelando [el fraude](http://www.elmundo.es/elmundosalud/2
 
 En 1953, un jovencísimo Peter L. Salk sonríe a cámara mientras su padre, Jonas Salk, le pone la vacuna para la polio que él mismo ha inventado. Peter siguió sus pasos y se dedica a la investigación en vacunas, además de presidir la [fundación](http://jonassalklegacyfoundation.org/) que lleva el nombre, y el legado, de su progenitor, fallecido en 1995. 
 
-En una [entrevista](http://www.theatlantic.com/health/archive/2014/10/the-anti-vaccine-movement-is-forgetting-the-polio-epidemic/381986/) en The Atlantic, asegura que **los problemas de falta de información** que acompañan a los movimientos antivacunas tienen tres patas: la preocupación de vivir "de forma natural", la descondianza en las instituciones y en las farmacéuticas, y el hecho de que muchas de esas enfermedades ya no están presentes en nuestro día a día. 
+En una [entrevista](http://www.theatlantic.com/health/archive/2014/10/the-anti-vaccine-movement-is-forgetting-the-polio-epidemic/381986/) en The Atlantic, asegura que **los problemas de falta de información** que acompañan a los movimientos antivacunas tienen tres patas: la preocupación de vivir "de forma natural", la desconfianza en las instituciones y en las farmacéuticas, y el hecho de que muchas de esas enfermedades ya no están presentes en nuestro día a día. 
 
 Sí lo están en regiones en las que las epidemias de males como el sarampión o los casos de polio son mucho más recientes. O en la memoria de los más mayores. 
 
@@ -81,7 +81,7 @@ Que la memoria mantenga vivos los recuerdos de épocas peores y las dificultades
 
 Todas las personas entrevistadas para este reportaje repiten **la misma palabra: pedagogía**. Pero no es sencillo. Un [artículo](http://elpais.com/elpais/2015/06/03/ciencia/1433354194_756223.html) publicado por el periodista Javier Salas en El País recopiló varios estudios que demostraban que ni atiborrarles de datos, ni asustarles con las posibles consecuencias, ni corregirles ni imponerles la vacunación funciona. De hecho, esas medidas [pueden ser contraproducentes](http://pediatrics.aappublications.org/content/early/2014/02/25/peds.2013-2365).
 
-Y ¿entonces? Un [estudio](http://www.ajpmonline.org/article/S0749-3797(11)00042-0/abstract) publicado en 2011 por la pediatra Allison Kempe probó que **el mejor camino pasa por el médico de familia**. Sus consejos, basados en experiencias personales -¿qué haría yo si fuera mi hijo?-, funcionan.  
+¿Entonces? Un [estudio](http://www.ajpmonline.org/article/S0749-3797(11)00042-0/abstract) publicado en 2011 por la pediatra Allison Kempe probó que **el mejor camino pasa por el médico de familia**. Sus consejos, basados en experiencias personales -¿qué haría yo si fuera mi hijo?-, funcionan.  
 
 El Salvador aprobó una ley que establece que todo niño debe presentar su carné de vacunas para entrar a la escuela. El director del programa de inmunizaciones del Ministerio de Salud admite que, en la práctica, no impiden que un niño sin vacunar se matricule, porque pondrían barreras a otro derecho básico: la educación. Lo que hacen es aprovechar ese momento para proponer a las familias poner su cartilla al día. 
 
