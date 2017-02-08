@@ -127,9 +127,9 @@ function Prices_Infographic( _id ) {
 
     // Load CSVs
     d3.queue()
-      .defer(d3.csv, $('body').data('baseurl')+'/data/prices.csv')
-      .defer(d3.csv, $('body').data('baseurl')+'/data/affordability.csv')
-      .defer(d3.csv, $('body').data('baseurl')+'/data/prices-countries.csv')
+      .defer(d3.csv, $('#article-content').data('baseurl')+'/data/prices.csv')
+      .defer(d3.csv, $('#article-content').data('baseurl')+'/data/affordability.csv')
+      .defer(d3.csv, $('#article-content').data('baseurl')+'/data/prices-countries.csv')
       .await( onDataReady );
 
     return that;

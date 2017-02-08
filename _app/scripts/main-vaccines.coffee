@@ -3,8 +3,8 @@
 (($) ->
 
   # Get current article lang & base url
-  lang    = $('body').data('lang')
-  baseurl = $('body').data('baseurl')
+  lang    = $('#article-content').data('lang')
+  baseurl = $('#article-content').data('baseurl')
 
   # setup format numbers
   if lang == 'es'
@@ -135,26 +135,65 @@
         graph.setData data
         $(window).resize graph.onResize
 
-  ###
-  setupVaccineConfidenceScatterplotGraph = ->
+  setupVaccineBcgCasesBarGraph = ->
     d3.queue()
-      .defer d3.csv, baseurl+'/data/confidence.csv'
+      .defer d3.csv, baseurl+'/data/tuberculosis-cases.csv'
       .defer d3.csv, baseurl+'/data/countries.csv'
       .await (error, data, countries) ->
-        graph = new window.ScatterplotGraph('vaccine-confidence-graph',
-          aspectRatio: 0.5
-          margin:
-            top: 0
-            right: 0
-            left: 50
-            bottom: 20
+        data.forEach (d) =>
+          d.value = +d.value
+          d.name = getCountryName countries, d.code, lang
+          # set South Africa active
+          if d.code == 'ZAF'
+            d.active = true
+        data.sort (a,b) -> return b.value - a.value
+        graph = new window.BarGraph('vaccine-bcg-cases-graph',
+          aspectRatio: 0.3
+          label: 
+            format: (d) ->  formatInteger(d)
+          margin: top: 0
           key:
-            x: 'gdp'
-            y: 'confidence'
-            id: 'country')
-        graph.xAxis.tickValues [5000, 20000, 40000, 60000]
+            x: 'name'
+            y: 'value'
+            id: 'code')
         graph.setData data
         $(window).resize graph.onResize
+
+  ###
+  setupVaccineBcgStockoutHeatmapGraph = ->
+    d3.queue()
+      .defer d3.csv, baseurl+'/data/diseases-cases-measles.csv'
+      .defer d3.csv, baseurl+'/data/population.csv'
+      .await (error, data_cases, data_population) ->
+        delete data_cases.columns  # we don't need the columns attribute
+        data_cases.forEach (d) ->
+          if d.year_introduction
+            d.year_introduction = +d.year_introduction.replace('prior to', '')
+          d.cases = {}
+          d.values = {}
+          d.name = getCountryName data_population, d.code, lang
+          # set values as cases/1000 inhabitants
+          populationItem = data_population.filter (country) -> country.code == d.code
+          if populationItem.length > 0
+            year = 1980
+            while year < 2016
+              if d[year]
+                population = +populationItem[0][year]
+                if population != 0
+                  d.cases[year] = +d[year]
+                  d.values[year] = 100000 * +d[year] / population
+                else
+                  #console.log('No hay datos de población para', d.name, 'en ', year, d[year]);
+              else
+                #console.log('No hay datos de casos de ' + d.disease + ' para', d.name, 'en ', year, ':', d[year], typeof d[year]);
+              delete d[year]
+              year++
+          else
+            console.log 'No hay datos de población para', d.name
+          # Get total cases by country & disease
+          d.total = d3.values(d.values).reduce(((a, b) -> a + b), 0)
+        # Filter by selected countries & disease
+        setupHeatMapGraph 'vaccines-bcg-stockout', data_cases, ['FIN','HUN','PRT','URY','MEX','COL','IRQ','BGR','MNG','ZAF','FRA','GEO'], true
   ###
 
   setupVaccineDiseaseHeatmapGraph = ->
@@ -466,5 +505,13 @@
 
   if $('#vaccine-confidence-graph').length > 0
     setupVaccineConfidenceBarGraph()
+
+  if $('#vaccine-bcg-cases-graph').length > 0
+    setupVaccineBcgCasesBarGraph()
+
+  ###
+  if $('#vaccines-bcg-stockout').length > 0
+    setupVaccineBcgStockoutHeatmapGraph()
+  ###
 
 ) jQuery

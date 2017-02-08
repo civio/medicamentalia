@@ -17,7 +17,9 @@ draft:            true
   <div class="page-content-container" markdown="1">
 
 En Coffee Bay, en la costa de Sudáfrica bañada por el océano Índico y a 250 kilómetros al sur de Durban, una madre acude a la clínica pública más cercana, en Mapuzi, para vacunar a su hijo. **Lo intenta hasta en tres ocasiones, pero nunca quedan vacunas**. Después de esos tres intentos, se da por vencida y no vuelve a la clínica. Su bebé solo había recibido las vacunas administradas al nacer.
+
 Cuando el pequeño enferma, su madre, escarmentada, decide tomar un taxi y visitar a un médico privado en Mqanduli, a 65 kilómetros de distancia. Le prescribe un tratamiento para la tos y les envía de vuelta a casa. Pero su estado de salud no mejora y la madre decide ir al hospital. Demasiado tarde: el bebé muere antes de llegar.
+
 "La madre no pudo describir claramente los síntomas, aunque sospecho que su hijo falleció por una neumonía", cuenta Karl le Roux, doctor e investigador del hospital público de Zithuele. En 2013, durante un estudio que analizó la inmunización y el impacto de la escasez de vacunas en la comunidad, le Roux entrevistó a esta madre en el *rondavel* –choza tradicional sudafricana–  donde vivían, cercano al estuario del río Mthatha.  "Podría haber sobrevivido" si se hubiesen acercado desde un primer momento al hospital, piensa el médico y añade que "es muy difícil saber si la neumonía pudo haberse evitado con una vacuna". **El desabastecimiento "hizo que perdiera la fe en el sistema de salud"**, según le Roux.
 
 La falta de vacunas es uno de los grandes problemas de la inmunización en Sudáfrica. La escasez de antígenos está influenciada por problemas externos, como **incidencias en la producción de las farmacéuticas**, y problemas internos, como la **deficiente gestión del *stock*, la escasa formación o la falta de personal**. Se trata de un asunto complejo, en el que confluyen distintas causas pero en el que divergen las culpabilidades.
@@ -29,11 +31,36 @@ A nivel global, según [datos de la Organización Mundial de la Salud](http://ap
 ## Sin 'stock' contra la tuberculosis
 Destaca el caso de la vacuna BCG contra la tuberculosis. Debido al desabastecimiento global de 2015, [54 estados reportaron falta de *stock* ese año](http://apps.who.int/immunization_monitoring/globalsummary/indicators?ir%5Br%5D%5B%5D=AFRO&ir%5Br%5D%5B%5D=AMRO&ir%5Br%5D%5B%5D=EMRO&ir%5Br%5D%5B%5D=EURO&ir%5Br%5D%5B%5D=SEARO&ir%5Br%5D%5B%5D=WPRO&ir%5Bi%5D%5B%5D=VSRS_BCG&ir%5Bi%5D%5B%5D=VSRS_BCG_ANYDIST&commit=Ok+with+the+selection). La mayoría, concentrados en los continentes africano (21) y europeo (14). Además, Unicef, que suministra esta vacuna a países en los que la tuberculosis es endémica, reportó que [le faltaron 16,5 millones de dosis](https://www.unicef.org/supply/index_90306.html). Al margen de la crisis de ese año, **el BCG es el antígeno que más países han echado en falta desde hace más de una década**. 
 
+</div>
+<div id="vaccines-bcg-stockout" class="vaccines-disease-graph graph-container">
+  <p class="graph-container-caption">Desabastecimiento de BCG</p>
+  <div class="tooltip top" role="tooltip">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+      <p class="title"><span class="country"></span> <span class="year"></span></p>
+      <p class="description"><strong class="value"></strong> casos por 100.000 habitantes (<span class="cases"></span> casos)</p>
+    </div>
+  </div>
+</div>
+<div class="page-content-container" markdown="1">
+
 En la actualidad, continúan los problemas de *stock* de esta vacuna contra la tuberculosis, **también en países que nunca han notificado la falta de este antígeno a la OMS**, como [España](https://cima.aemps.es/cima/fichasTecnicas.do?metodo=detalleDesabastecido&codNacional=758854), [Australia](http://apps.tga.gov.au/PROD/MSI/Search/Details/mycobacterium-bovis-bacillus-calmette-and-guerin-bcg-strain) o Francia. En el caso francés, donde no es obligatoria [desde 2007](https://www.legifrance.gouv.fr/affichTexte.do;?cidTexte=LEGITEXT000006056619), Sanofi Pasteur –farmacéutica centrada en vacunas– ha desviado al país galo su producción destinada al mercado polaco para poder satisfacer su demanda doméstica. Un desvío que está en marcha como ["medida temporal y transitoria"](http://ansm.sante.fr/S-informer/Informations-de-securite-Ruptures-de-stock-des-medicaments/VACCIN-BCG-SSI-poudre-et-solvant-pour-suspension-injectable-Rupture-de-stock) desde marzo de 2016.
 
 En Sudáfrica, esta vacuna es de especial relevancia y su escasez, "un auténtico problema", según el doctor Anban Pillay, director general adjunto del Departamento de Salud. Aunque [su eficacia es limitada](http://www.who.int/immunization/wer7904BCG_Jan04_position_paper_SP.pdf) contra la tuberculosis pulmonar, su manifestación más común, la [OMS recomienda su administración](http://www.who.int/immunization/wer7904BCG_Jan04_position_paper_SP.pdf#page=2) a los recién nacidos en países donde la proporción de personas que enferman (morbilidad) de tuberculosis es alta. Y en el país austral, **la morbilidad es enorme**: con 834 enfermos por cada 100.000 habitantes es el país con mayor incidencia de esta enfermedad, que se ve agravada por el impacto del VIH.
 
+</div>
+<div class="graph-container">
+  <p class="graph-container-caption" style="margin-bottom: 0">Casos de BCG</p>
+  <p>Casos en 2015 por cada 100.000 habitantes</p>
+  <div id="vaccine-bcg-cases-graph" class="bar-graph"></div>
+</div>
+<div class="page-content-container" markdown="1">
+
 "Nosotros **solos nunca podremos resolver el problema** con la BCG", reconoce el director general adjunto del Departamento de Salud. Para atajar el problema, la última Asamblea Mundial de la Salud aprobó [una resolución para afrontar la escasez de medicamentos y vacunas](http://apps.who.int/medicinedocs/documents/s22423es/s22423es.pdf). El documento propugna entre las principales medidas desarrollar un nuevo "**repositorio centralizado de datos de desabastecimiento** con el que la OMS pueda acudir a las farmacéuticas e indicarles dónde tienen negocio".
+
+<div class="container-right">
+{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Vídeo: Manuel Penados." %}
+</div>
 
 La crisis de desabastecimiento de BCG se ve agravada por **la concentración de la producción en unas pocas empresas**. "La vacuna BCG es muy barata y los márgenes no son muy altos, por lo que no atrae a otros laboratorios que pueden tener la capacidad de fabricarla", afirma Pillay. El oligopolio de la industria de las vacunas es aún más concentrado: Sanofi Pasteur, Merck, Pfizer y GlaxoSmithKline absorben [alrededor del 80% de la recaudación](http://www.who.int/immunization/research/forums_and_initiatives/1_ABatson_Global_Vaccine_Market_gvirf16.pdf#page=8) global de la venta de estos productos. 
 

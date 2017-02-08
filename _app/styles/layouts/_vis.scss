@@ -146,6 +146,21 @@ Common
   }
 }
 
+/*
+Patents
+*/
+
+#patents-graph-svg{
+  .bar{
+    //fill: $brand-primary
+  }
+  .bar-label{
+    font-size: 12px;
+    text-anchor: middle;
+  }
+}
+
+
 #vaccine-confidence-graph{
   margin-bottom: 1.5*$grid-gutter-width;
 
@@ -170,6 +185,18 @@ Common
     display: block;
   }
 }
+
+#vaccine-bcg-cases-graph{
+  .bar-label-x,
+  .bar-label-y{
+    display: none;
+    &.active{
+      display: block;
+      fill: $brand-primary;
+    }
+  }
+}
+
 
 /*
 Superbugs bar graph

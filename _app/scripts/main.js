@@ -60,7 +60,7 @@
 
       var footerOffset = $('.page-footer').length > 0 ? $('.page-footer').offset().top : $('.partners').offset().top;
 
-      if ($(this).scrollTop() > $('body > header').height()+50 && $(this).scrollTop() < footerOffset-44) {
+      if ($(this).scrollTop() > $('#article-content > header').height()+50 && $(this).scrollTop() < footerOffset-44) {
         $navPage.addClass("fixed");
       } else {
         $navPage.removeClass("fixed");

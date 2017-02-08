@@ -1,35 +1,38 @@
 ---
 layout: default
 ---
-{% include page_header.html %}
+<section id="article-content" data-baseurl="{{ site.assetsurl }}" data-lang="{{ page.lang }}">
 
-{% include page_menu.html %}
+  {% include page_header.html %}
 
-<div class="container page-content">
-  <p class="author">
-    {% if page.author %}
-    {{ site.data.locales[page.lang].by }} <span>{{ page.author }}</span>
-    {% endif %}
-  </p>
-  <p class="date">
-    {% if page.pub_date %}
-      {% assign date_format = site.data.locales[page.lang].date.format %}
-      {% assign m = page.pub_date | date: "%-m" | minus: 1 %}
-      {% if site.data.locales[page.lang].date.months[m] %}
-        {% assign date_format = date_format | replace: "%B", site.data.locales[page.lang].date.months[m] %}
+  {% include page_menu.html %}
+
+  <div class="container page-content">
+    <p class="author">
+      {% if page.author %}
+      {{ site.data.locales[page.lang].by }} <span>{{ page.author }}</span>
       {% endif %}
-      {{ page.pub_date | date: date_format }}
-    {% endif %}
-  </p>
-</div>
+    </p>
+    <p class="date">
+      {% if page.pub_date %}
+        {% assign date_format = site.data.locales[page.lang].date.format %}
+        {% assign m = page.pub_date | date: "%-m" | minus: 1 %}
+        {% if site.data.locales[page.lang].date.months[m] %}
+          {% assign date_format = date_format | replace: "%B", site.data.locales[page.lang].date.months[m] %}
+        {% endif %}
+        {{ page.pub_date | date: date_format }}
+      {% endif %}
+    </p>
+  </div>
 
-{{ page.content | add_anchor_links }}
+  {{ page.content | add_anchor_links }}
 
-<div class="container page-content">
-  {% include donate.html %}
-  {% include social_share.html %}
-</div>
+  <div class="container page-content">
+    {% include donate.html %}
+    {% include social_share.html %}
+  </div>
 
-{% if page.category %}
-{% include page_footer.html %}
-{% endif %}
+  {% if page.category %}
+  {% include page_footer.html %}
+  {% endif %}
+</section>

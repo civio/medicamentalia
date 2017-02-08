@@ -3,8 +3,8 @@
 (($) ->
 
   # Get current article lang & base url
-  lang    = $('body').data('lang')
-  baseurl = $('body').data('baseurl')
+  lang    = $('#article-content').data('lang')
+  baseurl = $('#article-content').data('baseurl')
 
   # get country name auxiliar method
   getCountryName = (countries, code, lang) ->
@@ -20,10 +20,10 @@
     markers =
       'antibiotics-graph':
         value: 36
-        label: if $('body').data('lang') == 'es' then 'Media EU28' else 'EU28 Average'
+        label: if lang == 'es' then 'Media EU28' else 'EU28 Average'
       'antibiotics-animals-graph':
         value: 107.8
-        label: if $('body').data('lang') == 'es' then 'Media' else 'Average'
+        label: if lang == 'es' then 'Media' else 'Average'
 
     d3.queue()
       .defer d3.csv, baseurl+'/data/antibiotics.csv'
