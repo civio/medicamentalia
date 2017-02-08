@@ -43,7 +43,7 @@ class window.MapGraph extends window.BaseGraph
 
   drawLegend: ->
     legenItemWidth = 30
-    legendData = d3.range 0, @color.domain()[1]
+    legendData = @getLegendData()
     @legend = @container.append('g')
       .attr 'class', 'legend'
       .call @setLegendPosition
@@ -51,7 +51,7 @@ class window.MapGraph extends window.BaseGraph
     @legend.selectAll('rect')
       .data legendData
       .enter().append('rect')
-        .attr 'x', (d,i) -> Math.round legenItemWidth*(i-1-(legendData.length/2))
+        .attr 'x', (d,i) -> Math.round legenItemWidth*(i-(legendData.length/2))
         .attr 'width', legenItemWidth
         .attr 'height', 8
         .attr 'fill', (d) => @color d
@@ -60,7 +60,7 @@ class window.MapGraph extends window.BaseGraph
     @legend.selectAll('text')
       .data legendData
       .enter().append('text')
-        .attr 'x', (d,i) -> Math.round legenItemWidth*(i-0.5-(legendData.length/2))
+        .attr 'x', (d,i) -> Math.round legenItemWidth*(i+0.5-(legendData.length/2))
         .attr 'y', 20
         .attr 'text-anchor', 'start'
         .text (d) -> d
@@ -114,6 +114,9 @@ class window.MapGraph extends window.BaseGraph
 
   setLegendPosition: (element) =>
     element.attr 'transform', 'translate('+Math.round(@width*0.5)+','+(-@options.margin.top)+')'
+
+  getLegendData: =>
+    return d3.range 0, @color.domain()[1]
 
   onMouseOver: (d) =>
     value = @data.filter (e) -> e.code_num == d.id

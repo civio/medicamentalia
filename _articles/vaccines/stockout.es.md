@@ -70,7 +70,15 @@ En Sudáfrica, esta vacuna es de especial relevancia y su escasez, "un auténtic
 <div class="graph-container">
   <p class="graph-container-caption" style="margin-bottom: 0">Casos de BCG</p>
   <p>Casos en 2015 por cada 100.000 habitantes</p>
-  <div id="vaccine-bcg-cases-graph" class="bar-graph"></div>
+  <div id="vaccine-bcg-cases-graph" class="map-graph">
+    <div class="tooltip top" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">
+        <p class="title"></p>
+        <p class="description"><strong class="value"></strong> casos <br>por 100.000 habitantes <br>(<span class="cases"></span> casos)</p>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="page-content-container" markdown="1">
 

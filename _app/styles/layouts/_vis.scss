@@ -144,6 +144,40 @@ Common
     line-height: 1em !important;
     color: $text-color;
   }
+
+  .map-graph{
+    position: relative;
+    margin: $grid-gutter-width 0;
+
+    .tooltip{
+      pointer-events: none;
+      width: 190px;
+
+      p{
+        font-size: 1em;
+        line-height: 1.375em;
+        margin-bottom: $grid-gutter-width/6;
+      }
+
+      .title{
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      .description{
+        color: $brand-primary;
+        
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 400;
+
+        strong{
+          font-size: 1.125em;
+          font-weight: 600;   
+        }
+      }
+    }
+  }
 }
 
 /*
@@ -638,43 +672,6 @@ World diseases cases
   }
 }
 
-/*
-Measles world map
-*/
-
-#measles-world-map-graph{
-  position: relative;
-  margin: $grid-gutter-width 0;
-
-  .tooltip{
-    pointer-events: none;
-    width: 190px;
-
-    p{
-      font-size: 1em;
-      line-height: 1.375em;
-      margin-bottom: $grid-gutter-width/6;
-    }
-
-    .title{
-      font-weight: 400;
-      text-transform: uppercase;
-    }
-
-    .description{
-      color: $brand-primary;
-      
-      margin-top: 0;
-      margin-bottom: 0;
-      font-weight: 400;
-
-      strong{
-        font-size: 1.125em;
-        font-weight: 600;   
-      }
-    }
-  }
-}
 
 /*
 Infographic

@@ -32,7 +32,6 @@
     else
       console.error 'No country name for code', code
 
-
   # Video of map polio cases
   setVideoMapPolio = ->
     d3.csv baseurl+'/data/diseases-polio-cases-total.csv', (error, data) ->
@@ -112,7 +111,7 @@
 #         b.total - (a.total)
     $(window).resize graph.onResize
 
-  ###
+
   setupVaccineConfidenceBarGraph = ->
     d3.queue()
       .defer d3.csv, baseurl+'/data/confidence.csv'
@@ -138,31 +137,33 @@
         graph.setData data
         $(window).resize graph.onResize
 
-  setupVaccineBcgCasesBarGraph = ->
+  setupVaccineBcgCasesMap = ->
     d3.queue()
-      .defer d3.csv, baseurl+'/data/tuberculosis-cases.csv'
-      .defer d3.csv, baseurl+'/data/countries.csv'
-      .await (error, data, countries) ->
-        data.forEach (d) =>
-          d.value = +d.value
-          d.name = getCountryName countries, d.code, lang
-          # set South Africa active
-          if d.code == 'ZAF'
-            d.active = true
-        data.sort (a,b) -> b.value - a.value
-        data = data.filter (d) -> d.value >= 30
-        graph = new window.BarGraph('vaccine-bcg-cases-graph',
-          aspectRatio: 0.3
-          label: 
-            format: (d) ->  formatInteger(d)
-          margin: top: 0
-          key:
-            x: 'name'
-            y: 'value'
-            id: 'code')
-        graph.setData data
+      .defer d3.csv,  baseurl+'/data/tuberculosis-cases.csv'
+      .defer d3.csv,  baseurl+'/data/countries.csv'
+      .defer d3.json, baseurl+'/data/map-world-110.json'
+      .await (error, data, countries, map) ->
+        # add cases to each country
+        data.forEach (d) ->
+          item = countries.filter (country) -> country.code == d.code
+          d.value = +d.cases_population
+          d.cases = +d.cases
+          if item
+            d.name = item[0]['name_'+lang]
+            d.code_num = item[0]['code_num']
+        # set graph
+        graph = new window.MapGraph('vaccine-bcg-cases-graph',
+          aspectRatio: 0.5625
+          margin: 
+            top: 60
+            bottom: 0
+          legend: true)
+        graph.getLegendData = -> [0,200,400,600,800]
+        graph.setData data, map
         $(window).resize graph.onResize
 
+
+  ###
   setupVaccineBcgStockoutHeatmapGraph = ->
     d3.queue()
       .defer d3.csv, baseurl+'/data/bcg-stockout.csv'
@@ -505,10 +506,10 @@
   if $('#vaccine-confidence-graph').length > 0
     setupVaccineConfidenceBarGraph()
 
-  ###
   if $('#vaccine-bcg-cases-graph').length > 0
-    setupVaccineBcgCasesBarGraph()
+    setupVaccineBcgCasesMap()
 
+  ###
   if $('#vaccines-bcg-stockout').length > 0
     setupVaccineBcgStockoutHeatmapGraph()
   ###
