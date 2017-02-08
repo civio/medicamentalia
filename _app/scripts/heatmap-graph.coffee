@@ -4,7 +4,6 @@ class window.HeatmapGraph extends BaseGraph
   # -----------
 
   constructor: (id, options) ->
-    console.log 'Heatmap Graph', id, options
     super id, options
     @formatFloat   = d3.format(',.1f')
     @formatInteger = d3.format(',d')
@@ -22,7 +21,6 @@ class window.HeatmapGraph extends BaseGraph
     @$tooltip  = @$el.find '.tooltip'
 
   setData: (data) ->
-    console.log 'set data', data
     # Get years (x scale)
     @years = @getYears(data)
     # Get countries (y scale)
@@ -89,7 +87,7 @@ class window.HeatmapGraph extends BaseGraph
 
   drawScales: ->
     super()
-    @color.domain [0, 400]
+    @color.domain @getColorDomain()
     return @
 
   getScaleXRange: =>
@@ -102,7 +100,10 @@ class window.HeatmapGraph extends BaseGraph
     return @years 
 
   getScaleYDomain: =>
-    return @countries 
+    return @countries
+
+  getColorDomain: =>
+    return [0, 400]
 
   getDimensions: ->
     @width = @$el.width() - 70  # y axis width = 100

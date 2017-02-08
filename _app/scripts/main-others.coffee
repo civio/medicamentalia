@@ -3,8 +3,8 @@
 (($) ->
 
   # Get current article lang & base url
-  lang    = $('#article-content').data('lang')
-  baseurl = $('#article-content').data('baseurl')
+  lang    = $('body').data('lang')
+  baseurl = $('body').data('baseurl')
 
   # get country name auxiliar method
   getCountryName = (countries, code, lang) ->

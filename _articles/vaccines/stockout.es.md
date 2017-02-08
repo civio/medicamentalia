@@ -31,9 +31,27 @@ A nivel global, según [datos de la Organización Mundial de la Salud](http://ap
 ## Sin 'stock' contra la tuberculosis
 Destaca el caso de la vacuna BCG contra la tuberculosis. Debido al desabastecimiento global de 2015, [54 estados reportaron falta de *stock* ese año](http://apps.who.int/immunization_monitoring/globalsummary/indicators?ir%5Br%5D%5B%5D=AFRO&ir%5Br%5D%5B%5D=AMRO&ir%5Br%5D%5B%5D=EMRO&ir%5Br%5D%5B%5D=EURO&ir%5Br%5D%5B%5D=SEARO&ir%5Br%5D%5B%5D=WPRO&ir%5Bi%5D%5B%5D=VSRS_BCG&ir%5Bi%5D%5B%5D=VSRS_BCG_ANYDIST&commit=Ok+with+the+selection). La mayoría, concentrados en los continentes africano (21) y europeo (14). Además, Unicef, que suministra esta vacuna a países en los que la tuberculosis es endémica, reportó que [le faltaron 16,5 millones de dosis](https://www.unicef.org/supply/index_90306.html). Al margen de la crisis de ese año, **el BCG es el antígeno que más países han echado en falta desde hace más de una década**. 
 
+<!--
 </div>
 <div id="vaccines-bcg-stockout" class="vaccines-disease-graph graph-container">
   <p class="graph-container-caption">Desabastecimiento de BCG</p>
+  <div class="tooltip top" role="tooltip">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+      <p class="title"><span class="country"></span> <span class="year"></span></p>
+      <p class="description"><strong class="value"></strong> casos por 100.000 habitantes (<span class="cases"></span> casos)</p>
+    </div>
+  </div>
+</div>
+<div class="page-content-container" markdown="1">
+-->
+
+</div>
+<div id="vaccines-bcg-stockout" class="vaccines-disease-graph graph-container">
+  <p class="graph-container-caption">Desabastecimiento de BCG</p>
+  <div class="heatmap-graph">
+    <p class="annotation">Año de introducción de la vacuna</p>
+  </div>
   <div class="tooltip top" role="tooltip">
     <div class="tooltip-arrow"></div>
     <div class="tooltip-inner">
