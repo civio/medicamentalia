@@ -93,7 +93,7 @@ Estimates sent by the country to the WHO claimed that the country's coverage lev
 
 {% include vaccines/measles_graph.en.html id="vaccines-measles-graph-2" title="Measles cases" %}
 
-Whilst there are reasons to be [optimistic](http://medicamentalia.org/vaccines/successes) in some areas, the difficulty of vaccinating all children in conflict zones or areas with a lack of resources or infrastructure, and to a much lesser extent, [opposition to vaccines]( http://medicamentalia.org/vaccines/antivaccines), does not allow for total eradication of diseases for which we have had a more than effective shield for decades. [According to the WHO](http://www.who.int/topics/immunization/), 21.8 million babies do not receive the basic vaccinations.
+Whilst there are reasons to be [optimistic](http://medicamentalia.org/vaccines/successes) in some areas, the difficulty of vaccinating all children in conflict zones or areas with a lack of resources or infrastructure, and to a much lesser extent, [opposition to vaccines](/vaccines/antivaccines), does not allow for total eradication of diseases for which we have had a more than effective shield for decades. [According to the WHO](http://www.who.int/topics/immunization/), 21.8 million babies do not receive the basic vaccinations.
 
 The latest [report](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1) from the WHO Strategic Advisory Group of Experts is categorical. It warns that the group remains "very concerned " that " progress toward the goals to eradicate polio, eliminate measles and rubella, and eliminate maternal and neonatal tetanus is too slow”. **Global average immunization coverage has increased by only 1% since 2010**.
 
