@@ -87,6 +87,11 @@
   }
 }
 
+
+.vaccines #home-header.category-header{
+  background-image: url("../images/vaccine-pattern.jpg");
+}
+
 .home #language-selector{
   position: absolute;
   top: $grid-gutter-width/2;
