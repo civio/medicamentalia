@@ -220,6 +220,14 @@ gulp.task('jekyll-build-production', function(done) {
     .on('close', done);
 });
 
+gulp.task('jekyll-build-elmundo', function(done) {
+  return cp.spawn('jekyll', ['build', '--config', '_config.yml,_config-elmundo.yml'], {stdio: 'inherit'})
+    .on('error', function(error){
+      gutil.log(gutil.colors.red(error.message));
+    })
+    .on('close', done);
+});
+
 // Special tasks for building and then reloading BrowserSync
 gulp.task('jekyll-rebuild', ['jekyll-build'], function(cb) {
   reload();
@@ -253,6 +261,14 @@ gulp.task('watch', function() {
 
 // Minify HTML Files
 gulp.task('html', ['css', 'js', 'jekyll-build-production'], function() {
+  return gulp.src('_site/**/*.html')
+    .pipe(version(['html','js','css']))
+    .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
+    .pipe(gulp.dest('_site'));
+});
+
+// Minify HTML Files
+gulp.task('publish-elmundo', ['css', 'js', 'jekyll-build-elmundo'], function() {
   return gulp.src('_site/**/*.html')
     .pipe(version(['html','js','css']))
     .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
