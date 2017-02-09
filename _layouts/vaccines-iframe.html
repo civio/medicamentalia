@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="iframe article {{ page.url | replace:'/',' ' | strip }}" data-baseurl="{{ site.assetsurl }}" data-lang="{{ page.lang }}">
+
+    {{ content }}
+
+    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/main.js?v=@version@'></script>
+    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/vaccines.js?v=@version@'></script>
+
+    {% include analytics.html %}
+
+  </body>
+
+</html>
