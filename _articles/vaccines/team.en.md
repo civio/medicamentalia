@@ -139,6 +139,8 @@ Analysis of all this information allowed us to draw some very interesting conclu
 We combined the data analysis, the reporting and the stories that we were told on this trip into this website, in English and Spanish, which is developed with [Jekyll](https://jekyllrb.com/), and uses Javascript and [D3.js](https://d3js.org/) for the data visualizations. You can find the code of the web in our [Github repository](https://github.com/civio/medicamentalia).
 Journalism Grants offered their support throughout the project, but this in no way influenced any editorial decisions.
 
+Most of the data visualizations are **customized, displaying information depending on the country from which the reader is connected**. This is the case for the three visualizations on measles, DTP and polio immunization levels in the article about [vaccination](/vaccines/immunization/), and in the two charts (on measles vaccination and vaccine mistrust) in the article about the [anti-vaccine movement](/vaccines/antivacunas).
+
 Home pictures credits (from Flickr): [Image](https://www.flickr.com/photos/cdcglobal/8290661927/in/photolist-dCBNX2-dCBQ2c-52uTd-dCHeGE-eiT6xa-dEWfa-dCHfkC-gABM-7jLH9R-eiYPpE-eiYPnb-dCBPBT-dCBPQk-6oPUze-6nSmty-eiT6jc-dCBPjn-dQXoqh-dmePf9-dEWFJ-dEWao-dQXoS9-dCHdSQ-9KowR3-eiT5Ha-dCBNTV-eiT6sP-ajZMmH-eiYPkE-eiYP5W-gTo3iT-eiYPbb-dEWyh-dEWBC-dCHfo1-gv7c1Y-eiT5Vi-acADNK-2W2iXP-4Nu73F-a7RGBX-dtN6ax-fqnzxX-6Womu7-7gAbC-ci5bjd-p4CN5M-f9mfR6-gnacYF-c3urAm/) from CDC Global and [image](https://www.flickr.com/photos/sanofi-pasteur/5594746841/) from Sanofi Pasteur.
 
 ## Collaboration and reproduction
