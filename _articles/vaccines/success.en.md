@@ -3,7 +3,7 @@ category:         vaccines
 title:            Successes
 subtitle:         Facing diseases since the 18th Century
 description:      Vaccines have helped to eradicate some diseases and are about to annihilate others. We review the successes and their protagonists
-home_description: VVaccines have helped to eradicate some diseases and are about to annihilate others. We review the successes and their protagonists
+home_description: Vaccines have helped to eradicate some diseases and are about to annihilate others. We review the successes and their protagonists
 img:              articles/home-vaccines-successes.jpg
 order:            3
 author:           Eva Belmonte & Miguel Ángel Gavilanes
