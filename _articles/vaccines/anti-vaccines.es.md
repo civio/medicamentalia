@@ -21,18 +21,7 @@ lang:             es
 Mientras el problema en [otras zonas del planeta](/vaccines/inmunizacion) está en la falta de recursos, en las áreas más ricas el origen no hay que buscarlo en la escasez de medios, sino en su alcance -que deja fuera a algunas comunidades aisladas- y la falta de [confianza](http://elpais.com/elpais/2016/03/15/ciencia/1458038627_317563.html) en las vacunas. Así, a veces el problema no tiene nada que ver con la disponibilidad: **son padres que deciden no vacunar a sus hijos pese a las [recomendaciones de la OMS](http://www.who.int/features/qa/84/es/)**.
 
 </div>
-<div class="graph-container">
-  <p class="graph-container-caption">Casos de sarampión por cada 100.000 habitantes en 2015</p>
-  <div id="measles-world-map-graph" class="map-graph">
-    <div class="tooltip top" role="tooltip">
-      <div class="tooltip-arrow"></div>
-      <div class="tooltip-inner">
-        <p class="title"></p>
-        <p class="description"><strong class="value"></strong> casos <br>por 100.000 habitantes <br>(<span class="cases"></span> casos)</p>
-      </div>
-    </div>
-  </div>
-</div>
+{% include vaccines/measles_cases_map.es.html %}
 <div class="page-content-container" markdown="1">
 
 Alemania alcanzó los 2.464 casos de sarampión en 2015, solo superada en Europa por Kirguistán. [En Sillicon Valley](https://www.wired.com/2016/03/silicon-valley-daycares-still-big-vaccination-problems/) se registran nuevos brotes y tasas de vacunación por debajo de los mínimos necesarios, mientras el nuevo presidente de Estados Unidos, **Donald Trump**, se reúne con líderes de los [movimientos antivacunas](http://www.chicagotribune.com/news/opinion/commentary/ct-donald-trump-anti-vaxxer-20170116-story.html). En España, en 2015 y después de tres décadas sin casos, un niño sin vacunar [murió de difteria](http://ccaa.elpais.com/ccaa/2015/06/27/catalunya/1435393852_158995.html).
@@ -41,7 +30,9 @@ Italia ha vacunado al 82% de los niños a los que les tocaba la segunda dosis de
 
 Dinamarca, por su parte, ha ido perdiendo cuota de vacunados en los últimos años hasta quedarse en un 80% en la segunda toma del sarampión, por debajo de unos 100 países, entre los que se encuentran Sri Lanka o Argelia, por poner solo dos ejemplos. Francia no ha enviado a la OMS datos de 2015, pero en 2014 tenía un 74% de inmunización. Una cifra baja que, al menos, ha ido a mejor: era de un 67% en 2013.
 
+</div>
 {% include vaccines/measles_immunization.es.html %}
+<div class="page-content-container" markdown="1">
 
 De hecho, **Francia es el país donde más se desconfía de la seguridad de las vacunas**, según el projecto [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/), realizado por la London School of Hygiene and Tropical Medicine y para el que entrevistaron a 65.819 personas en 67 países. Un 40% de los franceses encuestados (frente a una media del 12% en los datos mundiales) respondieron que estaban **en desacuerdo o totalmente en desacuerdo** con la siguiente afirmación: "Las vacunas son seguras". 
 

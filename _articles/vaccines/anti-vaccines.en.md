@@ -19,21 +19,9 @@ lang:             en
 **"Europe is sending us measles"**, says Doctor Eduardo Suárez, director of the immunization programme at the Department of Health of El Salvador. And with good reason. Whilst the Americas [declared itself to be free](http://www.paho.org/hq/index.php?option=com_content&view=article&id=12528%3Aregion-americas-declared-free-measles&Itemid=1926&lang=en) of this disease, **outbreaks multiplied in significantly higher-income countries**. Almost 26,000 cases were registered in Europe in 2015, far more than the 611 registered across the American continent, the majority of which were in Canada and the United States.
 
 Whilst in [other areas of the planet](/vaccines/immunization) the problem is due to lack of resources, in the richest zones of the planet the origin is not to be found in the lack of means but in its scope (which leaves out certain isolated communities) and a lack of [confidence](http://elpais.com/elpais/2016/03/15/ciencia/1458038627_317563.html) in vaccines. The resurgence of certain diseases that had been practically forgotten occurs, in the majority of cases, in marginalised communities that are not covered by basic services. Occasionally, the problem has nothing to do with the resources available: **certain parents simply choose not to vaccinate their children despite the [WHO recommendations](http://www.who.int/features/qa/84/es/)**.
-</div>
 
-<div class="graph-container">
-  <p class="graph-container-caption">Measles cases per 100,000 inhabitants in 2015</p>
-  <div id="measles-world-map-graph" class="map-graph">
-    <div class="tooltip top" role="tooltip">
-      <div class="tooltip-arrow"></div>
-      <div class="tooltip-inner">
-        <p class="title"></p>
-        <p class="description"><strong class="value"></strong> cases <br>per 100,000 inhabitants <br>(<span class="cases"></span> cases)</p>
-      </div>
-    </div>
-  </div>
 </div>
-
+{% include vaccines/measles_cases_map.en.html %}
 <div class="page-content-container" markdown="1">
 
 Germany registered 2,464 measles cases in 2015, only exceeded in Europe by Kyrgyzstan. [In Silicon Valley](https://www.wired.com/2016/03/silicon-valley-daycares-still-big-vaccination-problems/) new outbreaks are being recorded, along with vaccination rates below the required minimum, whilst the new President of the United States, **Donald Trump**, has met with leaders of [anti-vaccine movements](http://www.chicagotribune.com/news/opinion/commentary/ct-donald-trump-anti-vaxxer-20170116-story.html). In Spain, in 2015, following three decades with no recorded cases, an unvaccinated child [died of diphtheria](http://ccaa.elpais.com/ccaa/2015/06/27/catalunya/1435393852_158995.html).
@@ -42,7 +30,9 @@ Italy had vaccinated 82% of children that were due their second dose of measles 
 
 The immunization rate in Denmark has fallen over recent years to 80% for the second dose of the measles vaccine. The country is outperformed by over 100 countries, including Sri Lanka and Algeria for instance. France did not provide 2015 data to the WHO, however in 2014 the country’s immunization rate was 74%. A low score, but better than previous years - the country recorded 67% in 2013.
 
+</div>
 {% include vaccines/measles_immunization.en.html %}
+<div class="page-content-container" markdown="1">
 
 In fact, **France is the country with the lowest vaccine confidence level**, according to the project [The Vaccine Confidence 2016](http://www.vaccineconfidence.org/research/the-state-of-vaccine-confidence-2016/), carried out by the London School of Hygiene and Tropical Medicine for which 65,819 people were interviewed in 67 countries. 40% of French respondents (vs. an average of 12% worldwide) responded that **they disagreed or strongly disagreed** with the following statement: “Vaccines are safe”. 
 
