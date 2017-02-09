@@ -24,7 +24,7 @@ lang:       en
 
 ## The team
 
-Medicamentalia Vaccines is a journalistic investigation by [Civio](http://www.civio.es/) into the current situation of vaccination worldwide, combining data analysis with field research in a range of countries. This is the sequel to our first investigation, focused on [access to medicines](http://medicamentalia.org/access/), which was awarded Investigation of the Year (small newsroom) in the Data Journalism Awards and the Gabriel García Márquez Journalism Prize (Innovation category). 
+Medicamentalia Vaccines is a journalistic investigation by [Civio](http://www.civio.es/) into the current situation of vaccination worldwide, combining data analysis with field research in a range of countries. This is the sequel to our first investigation, focused on [access to medicines](/access/), which was awarded Investigation of the Year (small newsroom) in the Data Journalism Awards and the Gabriel García Márquez Journalism Prize (Innovation category). 
 
 This second investigation, like the first, has benefited from a grant from [Journalism Grants](https://journalismgrants.org/), funded by the Bill and Melinda Gates Foundation, which also funds big projects related to vaccination, such as GAVI. Neither Journalism Grants nor the Bill and Melinda Gates Foundation influenced the project or its journalistic investigation. In fact, like all the other readers, they did not have access to its contents until it was published.
 

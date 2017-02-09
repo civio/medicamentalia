@@ -25,7 +25,7 @@ lang:       es
 
 ## Nosotros
 
-Medicamentalia-Vacunas es un trabajo periodístico de [Civio](http://www.civio.es/) sobre la situación de la vacunación en el mundo y que combina análisis de datos con trabajo de campo en varios países. Es una continuación de nuestra primera investigación, centrada en el [acceso a medicinas esenciales](http://medicamentalia.org/access/) y que fue galardonada con el premio a la Mejor Investigación del año (redacción pequeña) de los Data Journalism Awards y el Premio Gabriel García Márquez en su categoría de Innovación. 
+Medicamentalia-Vacunas es un trabajo periodístico de [Civio](http://www.civio.es/) sobre la situación de la vacunación en el mundo y que combina análisis de datos con trabajo de campo en varios países. Es una continuación de nuestra primera investigación, centrada en el [acceso a medicinas esenciales](/access/) y que fue galardonada con el premio a la Mejor Investigación del año (redacción pequeña) de los Data Journalism Awards y el Premio Gabriel García Márquez en su categoría de Innovación. 
 
 En esta segunda investigación que, como la primera, ha contado con una beca de [Journalism Grants](https://journalismgrants.org/), financiado por la Fundación Bill y Melinda Gates. Esta fundación también trabaja en proyectos vinculados a vacunación, como GAVI. Pero ni Journalism Grants ni la Fundación Bill y Melinda Gates influenciaron en el proyecto ni en la investigación periodística. De hecho, como el resto de lectores, no tuvieron acceso al mismo hasta que se publicó.
 
