@@ -5,6 +5,7 @@ title:            Porcentaje vacunados de sarampión
 slug:             inmunizacion-sarampion
 ref:              measles-immunization
 lang:             en
+draft:            true
 ---
 
 <div class="container page-content" markdown="1">

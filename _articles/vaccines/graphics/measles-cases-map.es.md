@@ -5,6 +5,7 @@ title:            Casos sarampión
 slug:             mapa-casos-sarampion
 ref:              measles-cases-map
 lang:             es
+draft:            true
 ---
 
 <div class="container page-content" markdown="1">

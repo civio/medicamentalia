@@ -5,6 +5,7 @@ title:            Measles cases
 slug:             measles-cases-map
 ref:              measles-cases-map
 lang:             en
+draft:            true
 ---
 
 <div class="container page-content" markdown="1">
