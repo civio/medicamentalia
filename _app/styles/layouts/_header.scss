@@ -71,6 +71,15 @@
         color: $brand-secondary;
       }
     }
+
+    @media (max-width: 480px) {
+      float: none;
+      clear: both;
+      display: block;
+      position: relative;
+      top: -18px;
+      margin-left: $grid-gutter-width;
+    }
   }
 }
 
