@@ -40,7 +40,8 @@ In fact, **France is the country with the lowest vaccine confidence level**, acc
 
 </div>
 <div class="graph-container">
-  <p class="graph-container-caption">Level of distrust in vaccine safety</p>
+  <p class="graph-container-caption" style="margin-bottom: 0">Level of distrust in vaccine safety</p>
+  <p>2016 data</p>
   <div id="vaccine-confidence-graph" class="scatterplot-graph"></div>
 </div>
 <div class="page-content-container" markdown="1">

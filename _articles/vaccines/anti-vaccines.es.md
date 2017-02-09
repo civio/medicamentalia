@@ -40,7 +40,8 @@ De hecho, **Francia es el país donde más se desconfía de la seguridad de las 
 
 </div>
 <div class="graph-container">
-  <p class="graph-container-caption">Nivel de desconfianza en la seguridad de las vacunas</p>
+  <p class="graph-container-caption" style="margin-bottom: 0">Nivel de desconfianza en la seguridad de las vacunas</p>
+  <p>Datos de 2016</p>
   <div id="vaccine-confidence-graph" class="scatterplot-graph"></div>
 </div>
 <div class="page-content-container" markdown="1">
