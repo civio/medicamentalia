@@ -65,7 +65,7 @@ Gracias a todas las personas que cedieron su tiempo y su sabiduría en las entre
 {: #investigacion-previa}
 ### Investigación previa
 
-Como en todos los proyectos de Civio, antes de dar el prpimer paso hacia adelante tuvimos que dar dos hacia atrás: tocaba zambullirse a fondo en el tema. Mientras en la primera fase de Medicamentalia nos dedicamos a investigar acceso a medicamentos -precios, sistema de patentes...- en esta segunda fase queríamos tratar el tema de las vacunas de forma internacional y, esta vez, ir más allá de los precios y fijarnos en otros elementos como los niveles de inmunización, qué problemas existían, cómo funcionaban los sistemas de compra conjunta y los problemas de abastecimiento, entre otros asuntos. 
+Como en todos los proyectos de Civio, antes de dar el primer paso hacia adelante tuvimos que dar dos hacia atrás: tocaba zambullirse a fondo en el tema. Mientras en la primera fase de Medicamentalia nos dedicamos a investigar acceso a medicamentos -precios, sistema de patentes...- en esta segunda fase queríamos tratar el tema de las vacunas de forma internacional y, esta vez, ir más allá de los precios y fijarnos en otros elementos como los niveles de inmunización, qué problemas existían, cómo funcionaban los sistemas de compra conjunta y los problemas de abastecimiento, entre otros asuntos. 
 
 Leímos decenas de *papers* y artículos y analizamos a fondo documentos de organizaciones internacionales, así como los informes de los últimos años de [SAGE](http://www.who.int/immunization/policy/sage/en/){:target="_blank"}, el grupo de expertos que analiza los asuntos vinculados a inmunización el seno de la OMS. 
 
