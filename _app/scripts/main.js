@@ -25,6 +25,11 @@
     animateLink( $($(this).attr('href')), -50 );
   });
 
+  $('#home-header .btn-scroll-down').click(function(e) {
+    e.preventDefault();
+    animateLink( $($(this).attr('href')), 0 );
+  });
+  
   // Set Suscribe Input Text
   var suscribe = null;
   $('#mc-embedded-subscribe-form .email').focus(function(){

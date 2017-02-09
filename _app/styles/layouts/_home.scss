@@ -283,8 +283,9 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
 
-  &:focus{
-    background: none;
+  &:focus,
+  &:active{
+    background: none !important;
   }
 }
 
