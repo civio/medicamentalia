@@ -273,10 +273,11 @@
         if location
           user_country = countries.filter (d) -> d.code2 == location.country_code
           if user_country and user_country.length > 0 and user_country[0].code
-            current_countries[2] = user_country[0].code
-            el = $('#immunization-coverage-graph .graph-container').eq(2)
-            el.find('p').html user_country[0]['name_'+lang]
-            el.find('.line-graph').attr 'id', 'immunization-coverage-'+user_country[0].code.toLowerCase()+'-graph'
+            if current_countries.indexOf(user_country[0].code) == -1
+              current_countries[2] = user_country[0].code
+              el = $('#immunization-coverage-graph .graph-container').eq(2)
+              el.find('p').html user_country[0]['name_'+lang]
+              el.find('.line-graph').attr 'id', 'immunization-coverage-'+user_country[0].code.toLowerCase()+'-graph'
         # loop through each selected country   
         current_countries.forEach (country,i) ->
           # get current disease data
