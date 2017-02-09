@@ -109,6 +109,10 @@ class window.HeatmapGraph extends BaseGraph
     @width = @$el.width() - 70  # y axis width = 100
     if @years and @countries
       cellSize = Math.floor @width / @years.length
+      # set minimum cell dimensions
+      if cellSize < 15
+        cellSize = 15
+        @width = (cellSize * @years.length) + 70
       @height = if cellSize < 20 then cellSize * @countries.length else 20 * @countries.length
     return @
 
@@ -173,8 +177,6 @@ class window.HeatmapGraph extends BaseGraph
       .style 'top', (d) => @y(d)+'px'
     @container.select('.cell-container').selectAll('.marker')
       .call @setMarkerDimensions
-    if @options.legend
-      @legend.call @setLegendPosition
     return @
 
   setCellDimensions: (selection) =>
