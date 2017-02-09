@@ -8,9 +8,9 @@
 # Site settings
 title: Medicamentalia
 email: raul@civio.es
-baseurl: /medicamentalia/medicamentalia   # the subpath of your site, e.g. /blog
-url: http://resources.civio.es  # http://medicamentalia.org # the base hostname & protocol for your site
-assetsurl: http://resources.civio.es/medicamentalia/medicamentalia/assets   # http://medicamentalia.org/assets
+baseurl: '' #/medicamentalia/medicamentalia   # the subpath of your site, e.g. /blog
+url: http://medicamentalia.org # the base hostname & protocol for your site
+assetsurl: http://medicamentalia.org/assets
 
 index:
   en: index.html
