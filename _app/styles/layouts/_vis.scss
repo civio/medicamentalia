@@ -181,6 +181,43 @@ Common
 
   #vaccine-bcg-stockouts.map-graph .tooltip{
     width: 200px;
+
+    .years-cells{
+      display: block;
+      padding: 0;
+      margin: $grid-gutter-width/3 12px $grid-gutter-width/3;
+      width: 160px;
+      height: 15px;
+
+      li{
+        float: left;
+        list-style: none;
+        width: 16px;
+        height: 15px;
+        background: $gray-lighter;
+        outline: 0.5px solid white;
+
+        &.active{
+          background: $color-orange;  // mix( #FB8D3D, #D54B04, 50% );
+        }
+
+        &:first-child:after,
+        &:last-child:after{
+          content: "2015";
+          display: block;
+          color: $gray-light;
+          font-size: 9px;
+          font-weight: 600;
+          margin-top: $grid-gutter-width/6;
+          text-align: left;
+        }
+
+        &:last-child:after{
+          content: "2006";
+          text-align: right;
+        }
+      }
+    }
   }
 }
 

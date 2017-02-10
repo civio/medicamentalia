@@ -45,8 +45,20 @@ Destaca el caso de la vacuna BCG contra la tuberculosis. Debido al desabastecimi
       <div class="tooltip-inner">
         <p class="title"></p>
         <p class="description description-multiple">Ha reportado falta de BCG en <br><strong><span class="value"></span> años</strong> distintos</p>
-        <p class="description description-one">Ha reportado falta de BCG <strong>un año</strong></p>
+        <p class="description description-one">Solo ha reportado falta de BCG en <strong class="value"></strong></p>
         <p class="description description-zero">No ha reportado falta de BCG en la última década</p>
+        <ul class="years-cells">
+          <li data-year="2015"></li>
+          <li data-year="2014"></li>
+          <li data-year="2013"></li>
+          <li data-year="2012"></li>
+          <li data-year="2011"></li>
+          <li data-year="2010"></li>
+          <li data-year="2009"></li>
+          <li data-year="2008"></li>
+          <li data-year="2007"></li>
+          <li data-year="2006"></li>
+        </ul>
       </div>
     </div>
   </div>

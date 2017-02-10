@@ -169,10 +169,17 @@
       .defer d3.csv,  baseurl+'/data/countries.csv'
       .defer d3.json, baseurl+'/data/map-world-110.json'
       .await (error, data, countries, map) ->
+        years = d3.range 2006, 2016   # set years array
         # add cases to each country
         data.forEach (d) ->
           item = countries.filter (country) -> country.code == d.code
           d.value = +d.value
+          d.years = ''
+          # get list of years with stockouts
+          years.forEach (year) ->
+            if d[year] == '2' || d[year] == '3'  # check values 2 or 3 (national stockouts code)
+              d.years += year+','
+            delete d[year]
           if item
             d.name = item[0]['name_'+lang]
             d.code_num = item[0]['code_num']
@@ -190,13 +197,16 @@
             .find '.tooltip-inner .title'
             .html d.name
           graph.$tooltip
-            .find '.description'
+            .find '.description, .years-cells'
             .hide()
           if d.value == 0
             graph.$tooltip
               .find '.description-zero'
               .show()
           else if d.value == 1
+            graph.$tooltip
+              .find '.description-one .value'
+              .html d.years.split(',')[0]
             graph.$tooltip
               .find '.description-one'
               .show()
@@ -205,7 +215,14 @@
               .find '.description-multiple .value'
               .html graph.formatInteger(d.value)
             graph.$tooltip
-              .find '.description-multiple'
+              .find '.years-cells li'
+              .toggleClass 'active', false
+            d.years.split(',').forEach (year) ->
+              graph.$tooltip
+                .find '.years-cells li[data-year="'+year+'"]'
+                .toggleClass 'active', true
+            graph.$tooltip
+              .find '.description-multiple, .years-cells'
               .show()
         graph.setData data, map
         $(window).resize graph.onResize
