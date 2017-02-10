@@ -5,7 +5,7 @@ class window.MapGraph extends window.BaseGraph
   # -----------
 
   constructor: (id, options) ->
-    console.log 'Map Graph', id, options
+    #console.log 'Map Graph', id, options
     super id, options
     @formatFloat   = d3.format(',.1f')
     @formatInteger = d3.format(',d')
@@ -85,9 +85,12 @@ class window.MapGraph extends window.BaseGraph
       .attr 'stroke-width', 1
       .attr 'stroke', @setCountryColor
       .attr 'd', @path
-      .on   'mouseover', @onMouseOver
-      .on   'mousemove', @onMouseMove
-      .on   'mouseout', @onMouseOut
+    # add mouse events listeners if there's a tooltip
+    if @$tooltip
+      @container.selectAll('.country')
+        .on 'mouseover', @onMouseOver
+        .on 'mousemove', @onMouseMove
+        .on 'mouseout', @onMouseOut
     # trigger draw-complete event
     @$el.trigger 'draw-complete'
     return @
@@ -123,17 +126,9 @@ class window.MapGraph extends window.BaseGraph
     if value.length > 0
       position = d3.mouse(d3.event.target)
       # Set tooltip content
-      offset = $(d3.event.target).offset()
-      @$tooltip
-        .find '.tooltip-inner .title'
-        .html value[0].name
-      @$tooltip
-        .find '.tooltip-inner .value'
-        .html @formatFloat(value[0].value)
-      @$tooltip
-        .find '.tooltip-inner .cases'
-        .html @formatInteger(value[0].cases)
+      @setTooltipData value[0]
       # Set tooltip position
+      offset = $(d3.event.target).offset()
       @$tooltip.css
         'left':    position[0] - (@$tooltip.width() * 0.5)
         'top':     position[1] - (@$tooltip.height() * 0.5)
@@ -147,3 +142,15 @@ class window.MapGraph extends window.BaseGraph
 
   onMouseOut: (d) =>
     @$tooltip.css 'opacity', '0'
+
+  setTooltipData: (d) =>
+    @$tooltip
+      .find '.tooltip-inner .title'
+      .html d.name
+    @$tooltip
+      .find '.tooltip-inner .value'
+      .html @formatFloat(d.value)
+    if d.cases
+      @$tooltip
+        .find '.tooltip-inner .cases'
+        .html @formatInteger(d.cases) 

@@ -24,39 +24,30 @@ Cuando el pequeño enferma, su madre, escarmentada, decide tomar un taxi y visit
 
 La falta de vacunas es uno de los grandes problemas de la inmunización en Sudáfrica. La escasez de antígenos está influenciada por problemas externos, como **incidencias en la producción de las farmacéuticas**, y problemas internos, como la **deficiente gestión del *stock*, la escasa formación o la falta de personal**. Se trata de un asunto complejo, en el que confluyen distintas causas pero en el que divergen las culpabilidades.
 
+<div class="container-right">
+{% include video-container.html videoid="VT7wyTqLw8g" title="Anban Pillay, director general adjunto del Departamento de Salud de Sudáfrica" credit="Video: Serusha Govender" %}
+</div>
+
 Todos coinciden en que la escasez es un problema global, debido a que solo unos pocos laboratorios, con la suficiente capacidad humana y financiera, desarrollan las vacunas. **En cuanto una farmacéutica tiene algún fallo, los estados tienen pocas alternativas para sustituir al proveedor.** Ante la demanda, el mercado se satura y es incapaz de satisfacer a todos los países. En la práctica, esta excusa, aunque es cierta, delimita la responsabilidad a factores externos, incontrolables. Los factores internos no se frenan y solo son denunciados por el personal de los servicios de salud.
 
 A nivel global, según [datos de la Organización Mundial de la Salud](http://apps.who.int/immunization_monitoring/globalsummary/indicators) (OMS), **97 países** declararon haberse quedado sin al menos una de las vacunas esenciales en 2015 –el último año del que se disponen datos– ya sea a nivel estatal o en alguno de sus distritos. En África, el 66% de sus estados **reconocieron cortes en el suministro**. En América y Europa uno de cada dos países admitieron haber sufrido ese problema. Si tenemos en cuenta que **no todos ellos comunican esta información a la OMS**, la cifra real de países que se quedaron sin vacunas en algún momento podría ser superior.
 
 ## Sin 'stock' contra la tuberculosis
-Destaca el caso de la vacuna BCG contra la tuberculosis. Debido al desabastecimiento global de 2015, [54 estados reportaron falta de *stock* ese año](http://apps.who.int/immunization_monitoring/globalsummary/indicators?ir%5Br%5D%5B%5D=AFRO&ir%5Br%5D%5B%5D=AMRO&ir%5Br%5D%5B%5D=EMRO&ir%5Br%5D%5B%5D=EURO&ir%5Br%5D%5B%5D=SEARO&ir%5Br%5D%5B%5D=WPRO&ir%5Bi%5D%5B%5D=VSRS_BCG&ir%5Bi%5D%5B%5D=VSRS_BCG_ANYDIST&commit=Ok+with+the+selection). La mayoría, concentrados en los continentes africano (21) y europeo (14). Además, Unicef, que suministra esta vacuna a países en los que la tuberculosis es endémica, reportó que [le faltaron 16,5 millones de dosis](https://www.unicef.org/supply/index_90306.html). Al margen de la crisis de ese año, **el BCG es el antígeno que más países han echado en falta desde hace más de una década**. 
-
-<!--
-</div>
-<div id="vaccines-bcg-stockout" class="vaccines-disease-graph graph-container">
-  <p class="graph-container-caption">Desabastecimiento de BCG</p>
-  <div class="tooltip top" role="tooltip">
-    <div class="tooltip-arrow"></div>
-    <div class="tooltip-inner">
-      <p class="title"><span class="country"></span> <span class="year"></span></p>
-      <p class="description"><strong class="value"></strong> casos por 100.000 habitantes (<span class="cases"></span> casos)</p>
-    </div>
-  </div>
-</div>
-<div class="page-content-container" markdown="1">
--->
+Destaca el caso de la vacuna BCG contra la tuberculosis. Debido al desabastecimiento global de 2015, [54 estados reportaron falta de *stock* ese año](http://apps.who.int/immunization_monitoring/globalsummary/indicators?ir%5Br%5D%5B%5D=AFRO&ir%5Br%5D%5B%5D=AMRO&ir%5Br%5D%5B%5D=EMRO&ir%5Br%5D%5B%5D=EURO&ir%5Br%5D%5B%5D=SEARO&ir%5Br%5D%5B%5D=WPRO&ir%5Bi%5D%5B%5D=VSRS_BCG&ir%5Bi%5D%5B%5D=VSRS_BCG_ANYDIST&commit=Ok+with+the+selection). La mayoría, concentrados en los continentes africano (21) y europeo (14). Además, Unicef, que suministra esta vacuna a países en los que la tuberculosis es endémica, reportó que [le faltaron 16,5 millones de dosis](https://www.unicef.org/supply/index_90306.html). Al margen de la crisis de ese año, **el BCG es el antígeno que más países han echado en falta desde hace más de una década**.
 
 </div>
-<div id="vaccines-bcg-stockout" class="vaccines-disease-graph graph-container">
-  <p class="graph-container-caption">Desabastecimiento de BCG</p>
-  <div class="heatmap-graph">
-    <p class="annotation">Año de introducción de la vacuna</p>
-  </div>
-  <div class="tooltip top" role="tooltip">
-    <div class="tooltip-arrow"></div>
-    <div class="tooltip-inner">
-      <p class="title"><span class="country"></span> <span class="year"></span></p>
-      <p class="description"><strong class="value"></strong> casos por 100.000 habitantes (<span class="cases"></span> casos)</p>
+<div class="graph-container">
+  <p class="graph-container-caption" style="margin-bottom: 0">Desabastecimiento de BCG</p>
+  <p>Numero de años en los que se ha reportado desabastecimiento en la última década</p>
+  <div id="vaccine-bcg-stockouts" class="map-graph">
+    <div class="tooltip top" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">
+        <p class="title"></p>
+        <p class="description description-multiple">Ha reportado falta de BCG en <br><strong><span class="value"></span> años</strong> distintos</p>
+        <p class="description description-one">Ha reportado falta de BCG <strong>un año</strong></p>
+        <p class="description description-zero">No ha reportado falta de BCG en la última década</p>
+      </div>
     </div>
   </div>
 </div>
@@ -103,6 +94,10 @@ Bexsero, la única vacuna disponible en la [Unión Europea](http://www.ema.europ
 
 En Sudáfrica, **los impagos de las provincias en los procesos de compra** de vacunas son otro de los eslabones que fallan en la cadena de suministro, según Shabir Madhi, director del Centro Nacional de Enfermedades Infecciosas (NICD, por sus siglas en inglés).
 
+<div class="container-right">
+{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Vídeo: Manuel Penados." %}
+</div>
+
 El gobierno sudafricano negocia los precios y es [Biovac](http://www.biovac.co.za/), una empresa público-privada, quien recibe de las farmacéuticas las materias primas. En su planta en Ciudad del Cabo rellenan los viales y distribuyen los pedidos que reciben de las distintas zonas. Tanto Madhi como Pillay aseguran que Biovac **ha congelado el suministro** a algunas provincias que no han pagado.
 
 Una vez que las vacunas se distribuyen en las clínicas de Sudáfrica **aparecen los problemas de gestión del *stock***. Karl le Roux, médico e investigador del hospital de Zithuele, [analizó](http://sahivsoc2014.co.za/wp-content/uploads/2014/10/Fri_Karl_leRouw-The-reasons-for-and-impact-of-stock-outs.pdf) las causas y el impacto del desabastecimiento de las vacunas en el distrito O.R. Tambo, en la provincia de Eastern Cape.
@@ -116,6 +111,10 @@ Para este médico rural "es frustante no poder ofrecer al paciente lo que sabes 
 ## A ciegas
 
 Johann Van der Heever, que dirigió durante 11 años el programa ampliado de inmunización (PAI) de Sudáfrica, responsabiliza de la falta de control al Departamento del Salud: "Tienes que dotar de personal de manera adecuada a la cadena, tienes que supervisar y monitorizar los equipos. **Esto es responsabilidad del Departamento Nacional**".
+
+<div class="container-right">
+{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Vídeo: Manuel Penados." %}
+</div>
 
 En [un artículo](http://www.samj.org.za/index.php/samj/article/view/10765/7200) en la revista *South African Medical Journal*, que recoge las críticas de Van der Heever al PAI y denuncia el abandono del gobierno, el supervisor nacional de la cadena de frío –imprescindible para la conservación de los antígenos–, reconocía que solo eran capaces de inspeccionar **entre el 5 y el 10% de las instalaciones**. Van der Heever lamenta que, pese a que el control del deterioro de las vacunas era una de sus prioridades, **se desconoce el gasto perdido por dosis en mal estado**, ya que "requiere una gran supervisión y soporte" con los que no contaba. 
 

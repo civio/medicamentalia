@@ -163,39 +163,52 @@
         $(window).resize graph.onResize
 
 
-  ###
-  setupVaccineBcgStockoutHeatmapGraph = ->
+  setupVaccineBcgStockoutsMap = ->
     d3.queue()
-      .defer d3.csv, baseurl+'/data/bcg-stockout.csv'
-      .defer d3.csv, baseurl+'/data/countries.csv'
-      .await (error, data, countries) ->
-        data = data.filter (d) -> excludedCountries.indexOf(d.code) == -1
+      .defer d3.csv,  baseurl+'/data/bcg-stockouts.csv'
+      .defer d3.csv,  baseurl+'/data/countries.csv'
+      .defer d3.json, baseurl+'/data/map-world-110.json'
+      .await (error, data, countries, map) ->
+        # add cases to each country
         data.forEach (d) ->
-          d.cases = {}
-          d.values = {}
-          d.name = getCountryName countries, d.code, lang
-          year = 2003
-          while year < 2016
-            if d[year]
-              d.cases[year] = d.values[year] = +d[year]
-            else
-              console.log('No hay datos de casos de ' + d.disease + ' para', d.name, 'en ', year, ':', d[year], typeof d[year]);
-            delete d[year]
-            year++
-          # Get total cases by country & disease
-          d.total = d3.values(d.values).reduce(((a, b) -> a + b), 0)
-        data.sort (a,b) -> b.total - a.total
-        #data = data.filter (d) -> d.total > 0
-        console.table data
-        graph = new window.HeatmapGraph('vaccines-bcg-stockout',
-          legend: true
+          item = countries.filter (country) -> country.code == d.code
+          d.value = +d.value
+          if item
+            d.name = item[0]['name_'+lang]
+            d.code_num = item[0]['code_num']
+        # set graph
+        graph = new window.MapGraph('vaccine-bcg-stockouts',
+          aspectRatio: 0.5625
           margin: 
-            right: 0
-            left: 0)
-        graph.getColorDomain = -> return [0,3]
-        graph.setData data
+            top: 60
+            bottom: 0
+          legend: true)
+        graph.formatFloat = graph.formatInteger
+        graph.getLegendData = -> [0,2,4,6,8]
+        graph.setTooltipData = (d) ->
+          graph.$tooltip
+            .find '.tooltip-inner .title'
+            .html d.name
+          graph.$tooltip
+            .find '.description'
+            .hide()
+          if d.value == 0
+            graph.$tooltip
+              .find '.description-zero'
+              .show()
+          else if d.value == 1
+            graph.$tooltip
+              .find '.description-one'
+              .show()
+          else
+            graph.$tooltip 
+              .find '.description-multiple .value'
+              .html graph.formatInteger(d.value)
+            graph.$tooltip
+              .find '.description-multiple'
+              .show()
+        graph.setData data, map
         $(window).resize graph.onResize
-  ###
 
   setupVaccineDiseaseHeatmapGraph = ->
     d3.queue()
@@ -510,9 +523,7 @@
   if $('#vaccine-bcg-cases-graph').length > 0
     setupVaccineBcgCasesMap()
 
-  ###
-  if $('#vaccines-bcg-stockout').length > 0
-    setupVaccineBcgStockoutHeatmapGraph()
-  ###
+  if $('#vaccine-bcg-stockouts').length > 0
+    setupVaccineBcgStockoutsMap()
 
 ) jQuery
