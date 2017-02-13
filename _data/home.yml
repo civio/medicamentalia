@@ -1,9 +1,11 @@
 - ref: immunization
-  size: 12
+  size: 4
 - ref: antivaccines
-  size: 6
+  size: 4
 - ref: success
-  size: 6
+  size: 4
+- ref: stockout
+  size: 12
 - ref: prices
   size: 12
 - ref: patents

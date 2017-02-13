@@ -4,9 +4,10 @@ title:            Stockout
 subtitle:         Vaccines that don't arrive
 description:      The vaccine market is an oligopoly centred on four large companies. If a laboratory has production problems, countries have few alternatives to satisfy demand.
 home_description: The vaccine market is an oligopoly centred on four large pharmaceutical companies. If one of these has production problems, countries have few alternatives to satisfy demand.
-img:              articles/home-brasil-1040x694.jpg
-order:            2
+img:              articles/home-stockout.jpg
+order:            4
 author:           Miguel Ángel Gavilanes
+pub_date:         2017-02-16
 slug:             stockout
 ref:              stockout
 lang:             en
@@ -101,11 +102,11 @@ Bexsero, the only vaccine available in the [European Union](http://www.ema.europ
 
 In South Africa, **provinces that default on their payments** for vaccines are another of the missing links in the supply chain, according to Shabir Madhi, director of the National Institute for Communicable Diseases (NICD).
 
+The South African government negotiates the prices and [Biovac](http://www.biovac.co.za/){:target="_blank"}, a public-private partnership, receive the raw materials from the pharmacists. In their premises in Ciudad del Cabo, they fill vials and distribute the orders that they receive from provinces. Both Madhi and Pillay claim that Biovac **has frozen supply** to certain provinces which have not paid.
+
 <div class="container-right">
 {% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Video: Serusha Govender." %}
 </div>
-
-The South African government negotiates the prices and [Biovac](http://www.biovac.co.za/){:target="_blank"}, a public-private partnership, receive the raw materials from the pharmacists. In their premises in Ciudad del Cabo, they fill vials and distribute the orders that they receive from provinces. Both Madhi and Pillay claim that Biovac **has frozen supply** to certain provinces which have not paid.
 
 Once the vaccines have been distributed to the South African clinics **the stock management problems begin to arise**. Karl le Roux, doctor and researcher from Zithuele hospital, [analysed](http://sahivsoc2014.co.za/wp-content/uploads/2014/10/Fri_Karl_leRouw-The-reasons-for-and-impact-of-stock-outs.pdf){:target="_blank"} the causes and effects of vaccines stockouts in the OR Tambo district, in the Eastern Cape province. According to his research, the shortages are due to a lack of space in the clinics, inadequate stock management systems, overworked staff and poorly trained nurses (that make orders for inadequate quantities), lack of responsibility in the provincial storage and [theft](http://samj.org.za/index.php/samj/article/view/7332/5356){:target="_blank"}.
 
@@ -113,7 +114,7 @@ Moreover, **the state of the roads and the distance from storage facilities to h
 
 For this rural doctor "it is frustrating not being able to offer a patient what you know they need". As soon as there is a shortage of vaccines, the centres are swamped as patients have to return. In [his research](http://www.samj.org.za/index.php/samj/article/viewFile/11760/7908){:target="_blank"}, Karl le Roux shows that the lack of vaccines in clinics meant that **56% of children surveyed did not complete their courses of immunization**, according to their mothers.
 
-## Managing in the dark
+## Unreliable data
 
 Johann Van der Heever, who managed the South African immunization programme for 11 years, blames the lack of control squarely on the Department of Health: "You have to staff adequately to the chain, you have to provide equip supervision and monitoring which **is a function of the National Department**".
 
@@ -122,7 +123,14 @@ Johann Van der Heever, who managed the South African immunization programme for 
 </div>
 
 In [an article](http://www.samj.org.za/index.php/samj/article/view/10765/7200){:target="_blank"} in the *South African Medical Journal* magazine, which cites Van der Heever's criticisms of the national immunization programme and condemns the government's neglect of the situation, the national cold-chain manager (imperative system for the conservation of the antigens), admits that they were only able to inspect **between 5% and 10% of facilities**. Van der Heever regrets that, despite the fact that controlling the deterioration of vaccines was one of his priorities, **the wastage is unknown**, as it "requires very good supervision and support".
+
+<div class="panel" markdown="1">
+### South Africa: managing in the dark
+
+{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Video: Serusha Govender." %}
+
 Data was a headache for Van der Heever when he was in charge of the immunization program. And not only those related to stock levels, the most basic, immunization rates, **are not reliable**. "We don't know what the true measles coverage is", regrets Shabir Madhi, executive director of the NICD. The [WHO use to lessen 20 points](https://data.unicef.org/wp-content/uploads/country_profiles/South%20Africa/Immunization_zaf.pdf){:target="_blank"} the estimations of South Africa. Madhi calculates that the real rate is somewhere between South African and the WHO figures.
+</div>
 
 "One of the big problems that we have is manufacturers have been aware that they have a shortage but they have not been willing to share that information, unlike in the [United States](http://www.fda.gov/BiologicsBloodVaccines/SafetyAvailability/Shortages/ucm351921.htm){:target="_blank"} or in Europe, where they are obliged by law", alleged the Deputy Director of the Department of Health, Anban Pillay. Given the time required to produce each vaccine, both internal and external information is imperative in order to avoid stockouts. "You can only be foresighted if you have the information", stated the healthcare manager. 
 

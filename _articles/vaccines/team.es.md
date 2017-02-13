@@ -141,7 +141,8 @@ Combinamos el análisis de datos y los reportajes y las historias que nos contar
 
 La mayoría de los gráficos están **personalizados** y **muestran la información según el país desde dónde se conecte el lector**. Así pasa en las tres visualizaciones sobre inmunización de sarampión, DTP y polio del artículo de [niveles de vacunación](/vaccines/inmunizacion/) y en los dos gráficos (vacunación de sarampión y nivel de desconfianza en las vacunas) del artículo sobre [antivacunas](/vaccines/antivacunas). 
 
-Créditos de imágenes de portada (de Flickr): [Foto](https://www.flickr.com/photos/cdcglobal/8290661927/in/photolist-dCBNX2-dCBQ2c-52uTd-dCHeGE-eiT6xa-dEWfa-dCHfkC-gABM-7jLH9R-eiYPpE-eiYPnb-dCBPBT-dCBPQk-6oPUze-6nSmty-eiT6jc-dCBPjn-dQXoqh-dmePf9-dEWFJ-dEWao-dQXoS9-dCHdSQ-9KowR3-eiT5Ha-dCBNTV-eiT6sP-ajZMmH-eiYPkE-eiYP5W-gTo3iT-eiYPbb-dEWyh-dEWBC-dCHfo1-gv7c1Y-eiT5Vi-acADNK-2W2iXP-4Nu73F-a7RGBX-dtN6ax-fqnzxX-6Womu7-7gAbC-ci5bjd-p4CN5M-f9mfR6-gnacYF-c3urAm/){:target="_blank"} de CDC Global y [foto](https://www.flickr.com/photos/sanofi-pasteur/5594746841/){:target="_blank"} de Sanofi Pasteur.
+Créditos de imágenes de portada (de Flickr): _[Untitled](https://www.flickr.com/photos/cdcglobal/8290661927/in/photolist-dCBNX2-dCBQ2c-52uTd-dCHeGE-eiT6xa-dEWfa-dCHfkC-gABM-7jLH9R-eiYPpE-eiYPnb-dCBPBT-dCBPQk-6oPUze-6nSmty-eiT6jc-dCBPjn-dQXoqh-dmePf9-dEWFJ-dEWao-dQXoS9-dCHdSQ-9KowR3-eiT5Ha-dCBNTV-eiT6sP-ajZMmH-eiYPkE-eiYP5W-gTo3iT-eiYPbb-dEWyh-dEWBC-dCHfo1-gv7c1Y-eiT5Vi-acADNK-2W2iXP-4Nu73F-a7RGBX-dtN6ax-fqnzxX-6Womu7-7gAbC-ci5bjd-p4CN5M-f9mfR6-gnacYF-c3urAm/){:target="_blank"}_ de CDC Global, _[Packaging vials](https://www.flickr.com/photos/sanofi-pasteur/5594746841/){:target="_blank"}_ y _[Filling machine](https://www.flickr.com/photos/sanofi-pasteur/10475652385/){:target="_blank"}_ de Sanofi Pasteur.
+
 
 ## Colabora y republica
 

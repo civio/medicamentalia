@@ -16,5 +16,7 @@ vaccines:
     type: article
   - ref: success
     type: article
+  - ref: stockout
+    type: article
   - ref: vaccines-team
     type: article

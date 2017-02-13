@@ -4,9 +4,10 @@ title:            Desabastecimiento
 subtitle:         Vacunas que no llegan
 description:      El mercado de las vacunas es un oligopolio concentrado en cuatro grandes empresas. Cuando un laboratorio tiene problemas de producción, los estados tienen pocas alternativas para satisfacer la demanda
 home_description: El mercado de vacunas es un oligopolio de cuatro grandes laboratorios. Si uno presenta problemas de producción, los estados tienen pocas alternativas para satisfacer la demanda
-img:              articles/home-brasil-1040x694.jpg
-order:            2
+img:              articles/home-stockout.jpg
+order:            4
 author:           Miguel Ángel Gavilanes
+pub_date:         2017-02-16
 slug:             desabastecimiento
 ref:              stockout
 lang:             es
@@ -18,15 +19,11 @@ draft:            true
 
 En Coffee Bay, en la costa de Sudáfrica bañada por el océano Índico y a 250 kilómetros al sur de Durban, una madre acude a la clínica pública más cercana, en Mapuzi, para vacunar a su hijo. **Lo intenta hasta en tres ocasiones, pero nunca quedan vacunas**. Después de esos tres intentos, se da por vencida y no vuelve a la clínica. Su bebé solo había recibido las vacunas administradas al nacer.
 
-
 Cuando el pequeño enferma, su madre, escarmentada, decide tomar un taxi y visitar a un médico privado en Mqanduli, a 65 kilómetros de distancia. Le prescribe un tratamiento para la tos y les envía de vuelta a casa. Pero su estado de salud no mejora y la madre decide ir al hospital. Demasiado tarde: el bebé muere antes de llegar.
-
 
 "La madre no pudo describir claramente los síntomas, aunque sospecho que su hijo falleció por una neumonía", cuenta Karl le Roux, doctor e investigador del hospital público de Zithuele. En 2013, durante un estudio que analizó la inmunización y el impacto de la escasez de vacunas en la comunidad, le Roux entrevistó a esta madre en el *rondavel* –choza tradicional sudafricana–  donde vivían, cercano al estuario del río Mthatha.  "Podría haber sobrevivido" si se hubiesen acercado desde un primer momento al hospital, piensa el médico, y añade que "es muy difícil saber si la neumonía pudo haberse evitado con una vacuna". **El desabastecimiento "hizo que perdiera la fe en el sistema de salud"**, según le Roux.
 
-
 La falta de vacunas es uno de los grandes problemas de la inmunización en Sudáfrica. La escasez de antígenos está influenciada por problemas externos, como **incidencias en la producción de las farmacéuticas**, y problemas internos, como la **deficiente gestión del *stock*, la escasa formación o la falta de personal**. Se trata de un asunto complejo, en el que confluyen distintas causas pero en el que divergen las culpabilidades.
-
 
 Todos coinciden en que la escasez es un problema global, debido a que solo unos pocos laboratorios, con la suficiente capacidad humana y financiera, desarrollan las vacunas. **En cuanto una farmacéutica tiene algún fallo, los estados tienen pocas alternativas para sustituir al proveedor.** Ante la demanda, el mercado se satura y es incapaz de satisfacer a todos los países. En la práctica, esta excusa, aunque es cierta, delimita la responsabilidad a factores externos, incontrolables. Los factores internos no se frenan y solo son denunciados por el personal de los servicios de salud.
 
@@ -106,11 +103,11 @@ Bexsero, la única vacuna disponible en la [Unión Europea](http://www.ema.europ
 
 En Sudáfrica, **los impagos de las provincias en los procesos de compra** de vacunas son otro de los eslabones que fallan en la cadena de suministro, según Shabir Madhi, director del Centro Nacional de Enfermedades Infecciosas (NICD, por sus siglas en inglés).
 
+El gobierno sudafricano negocia los precios y es [Biovac](http://www.biovac.co.za/){:target="_blank"}, una empresa público-privada, quien recibe de las farmacéuticas las materias primas. En su planta en Ciudad del Cabo rellenan los viales y distribuyen los pedidos que reciben de las distintas zonas. Tanto Madhi como Pillay aseguran que Biovac **ha congelado el suministro** a algunas provincias que no han pagado.
+
 <div class="container-right">
 {% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Vídeo: Manuel Penados." %}
 </div>
-
-El gobierno sudafricano negocia los precios y es [Biovac](http://www.biovac.co.za/){:target="_blank"}, una empresa público-privada, quien recibe de las farmacéuticas las materias primas. En su planta en Ciudad del Cabo rellenan los viales y distribuyen los pedidos que reciben de las distintas zonas. Tanto Madhi como Pillay aseguran que Biovac **ha congelado el suministro** a algunas provincias que no han pagado.
 
 Una vez que las vacunas se distribuyen en las clínicas de Sudáfrica **aparecen los problemas de gestión del *stock***. Karl le Roux, médico e investigador del hospital de Zithuele, [analizó](http://sahivsoc2014.co.za/wp-content/uploads/2014/10/Fri_Karl_leRouw-The-reasons-for-and-impact-of-stock-outs.pdf){:target="_blank"} las causas y el impacto del desabastecimiento de las vacunas en el distrito O.R. Tambo, en la provincia de Eastern Cape. Según su investigación, la escasez viene propiciada por el poco espacio en las clínicas, los deficientes sistemas de gestión, la sobrecarga de trabajo y la falta de formación de las enfermeras (que realizan pedidos inferiores a la necesidades reales), la falta de responsabilidad en los depósitos provinciales de medicamentos o los [robos](http://samj.org.za/index.php/samj/article/view/7332/5356){:target="_blank"}.
 
@@ -118,7 +115,7 @@ Además, **en el ámbito rural se acentúa la importancia del estado de las carr
 
 Para este médico rural "es frustante no poder ofrecer al paciente lo que sabes que necesita". En cuanto hay escasez de vacunas, los centros se saturan, ya que los pacientes tienen que volver. En [su investigación](http://www.samj.org.za/index.php/samj/article/viewFile/11760/7908){:target="_blank"}, Karl le Roux afirma que la falta de vacunas en las clínicas provocó que **el 56% de los niños estudiados no completaran el calendario de vacunación**, según sus madres.
 
-## A ciegas
+## Sin datos
 
 Johann Van der Heever, que dirigió durante 11 años el programa de inmunización de Sudáfrica, responsabiliza de la falta de control al Departamento del Salud: "Tienes que dotar de personal de manera adecuada a la cadena, tienes que supervisar y monitorizar los equipos. **Esto es responsabilidad del Departamento Nacional**".
 
@@ -128,7 +125,13 @@ Johann Van der Heever, que dirigió durante 11 años el programa de inmunizació
 
 En [un artículo](http://www.samj.org.za/index.php/samj/article/view/10765/7200){:target="_blank"} en la revista *South African Medical Journal*, que recoge las críticas de Van der Heever al PAI y denuncia el abandono del gobierno, el supervisor nacional de la cadena de frío –sistema imprescindible para la conservación de los antígenos–, reconocía que solo eran capaces de inspeccionar **entre el 5 y el 10% de las instalaciones**. Van der Heever lamenta que, pese a que el control del deterioro de las vacunas era una de sus prioridades, **se desconoce el gasto ocasionado por dosis en mal estado**, ya que "requiere una gran supervisión y soporte" con los que no contaba. 
 
+<div class="panel" markdown="1">
+### Sudáfrica: a ciegas
+
+{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Vídeo: Manuel Penados." %}
+
 Los datos fueron un quebradero de cabeza para Van der Heever cuando este era el responsable del programa de inmunización. Y no solo respecto a los niveles de *stock*: los datos más básicos, como los porcentajes de inmunización, en su opinión **no son fiables**. "No sabemos cuál es la cobertura real contra el sarampión", lamenta Shabir Madhi, responsable de NICD. La [OMS rebaja en hasta más de 20 puntos](https://data.unicef.org/wp-content/uploads/country_profiles/South%20Africa/Immunization_zaf.pdf){:target="_blank"} los niveles de cobertura que Sudáfrica les presenta. Madhi  calcula que la cifra real debe estar entre ambos valores.
+</div>
 
 "Uno de los problemas que tenemos con las compañías es que no comparten con el gobierno información sobre su escasez de vacunas o los posibles problemas de producción, a diferencia de lo que sucede en [Estados Unidos](http://www.fda.gov/BiologicsBloodVaccines/SafetyAvailability/Shortages/ucm351921.htm){:target="_blank"} o en Europa", alega el director general adjunto del Departamento de Salud, Anban Pillay. Dado el tiempo necesario para producir cada vacuna, la información, tanto interna –de los depósitos y clínicas– como externa –de la capacidad de producción de los fabricantes–, es imprescindible para evitar que se agoten las existencias. "Solo puedes ser previsor si tienes la información", sentencia este alto cargo de Sanidad. 
 
