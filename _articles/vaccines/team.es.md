@@ -1,6 +1,6 @@
 ---
 category:   vaccines
-title:      Equipo y metodología
+title:      Metodología
 img:        articles/home-vaccines-team.jpg
 
 gallery:

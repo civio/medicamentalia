@@ -1,6 +1,6 @@
 ---
 category:   access
-title:      Team and methodology
+title:      Methodology
 img:        articles/home-access-team.jpg
 
 gallery:

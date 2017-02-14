@@ -11,7 +11,6 @@ pub_date:         2017-02-16
 slug:             desabastecimiento
 ref:              stockout
 lang:             es
-draft:            true
 ---
 
 <div class="container page-content" markdown="1">
@@ -85,7 +84,7 @@ En Sudáfrica, esta vacuna es de especial relevancia y su escasez, "un auténtic
 "Nosotros **solos nunca podremos resolver el problema** con la BCG", reconoce el director general adjunto del Departamento de Salud. Para atajarlo, la última Asamblea Mundial de la Salud aprobó [una resolución para afrontar la escasez de medicamentos y vacunas](http://apps.who.int/medicinedocs/documents/s22423es/s22423es.pdf){:target="_blank"}. El documento propugna entre las principales medidas desarrollar un nuevo "**repositorio centralizado de datos de desabastecimiento** con el que la OMS pueda acudir a las farmacéuticas e indicarles cuándo producir para no perder negocio", según narra Pillay.
 
 <div class="container-right">
-{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Vídeo: Serusha Govender." %}
+{% include video-container.html videoid="Fzhi5zuwxmg" title="Anban Pillay, del Departamento Nacional de Salud de Sudáfrica." credit="Vídeo: Serusha Govender." %}
 </div>
 
 La crisis de desabastecimiento de BCG se ve agravada por **la concentración de la producción en unas pocas empresas**. Y su escaso margen de beneficio no atrae a nuevos laboratorios, afirma Pillay. El oligopolio de la industria de las vacunas es aún más concentrado: Sanofi Pasteur, Merck, Pfizer y GlaxoSmithKline absorben [alrededor del 80% de la recaudación](http://www.who.int/immunization/research/forums_and_initiatives/1_ABatson_Global_Vaccine_Market_gvirf16.pdf#page=8){:target="_blank"} global de la venta de estos productos. 
@@ -106,7 +105,7 @@ En Sudáfrica, **los impagos de las provincias en los procesos de compra** de va
 El gobierno sudafricano negocia los precios y es [Biovac](http://www.biovac.co.za/){:target="_blank"}, una empresa público-privada, quien recibe de las farmacéuticas las materias primas. En su planta en Ciudad del Cabo rellenan los viales y distribuyen los pedidos que reciben de las distintas zonas. Tanto Madhi como Pillay aseguran que Biovac **ha congelado el suministro** a algunas provincias que no han pagado.
 
 <div class="container-right">
-{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Vídeo: Manuel Penados." %}
+{% include video-container.html videoid="oYe2Z-rzqhw" title="Morena Makhona, presidente de The Biovac Institute." credit="Vídeo: Serusha Govender." %}
 </div>
 
 Una vez que las vacunas se distribuyen en las clínicas de Sudáfrica **aparecen los problemas de gestión del *stock***. Karl le Roux, médico e investigador del hospital de Zithuele, [analizó](http://sahivsoc2014.co.za/wp-content/uploads/2014/10/Fri_Karl_leRouw-The-reasons-for-and-impact-of-stock-outs.pdf){:target="_blank"} las causas y el impacto del desabastecimiento de las vacunas en el distrito O.R. Tambo, en la provincia de Eastern Cape. Según su investigación, la escasez viene propiciada por el poco espacio en las clínicas, los deficientes sistemas de gestión, la sobrecarga de trabajo y la falta de formación de las enfermeras (que realizan pedidos inferiores a la necesidades reales), la falta de responsabilidad en los depósitos provinciales de medicamentos o los [robos](http://samj.org.za/index.php/samj/article/view/7332/5356){:target="_blank"}.
@@ -120,7 +119,7 @@ Para este médico rural "es frustante no poder ofrecer al paciente lo que sabes 
 Johann Van der Heever, que dirigió durante 11 años el programa de inmunización de Sudáfrica, responsabiliza de la falta de control al Departamento del Salud: "Tienes que dotar de personal de manera adecuada a la cadena, tienes que supervisar y monitorizar los equipos. **Esto es responsabilidad del Departamento Nacional**".
 
 <div class="container-right">
-{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Vídeo: Manuel Penados." %}
+{% include video-container.html videoid="JyeVPKuLrlg" title="Johann van der Heever, excoordinador nacional del programa de inmunización de Sudáfrica." credit="Vídeo: Serusha Govender." %}
 </div>
 
 En [un artículo](http://www.samj.org.za/index.php/samj/article/view/10765/7200){:target="_blank"} en la revista *South African Medical Journal*, que recoge las críticas de Van der Heever al PAI y denuncia el abandono del gobierno, el supervisor nacional de la cadena de frío –sistema imprescindible para la conservación de los antígenos–, reconocía que solo eran capaces de inspeccionar **entre el 5 y el 10% de las instalaciones**. Van der Heever lamenta que, pese a que el control del deterioro de las vacunas era una de sus prioridades, **se desconoce el gasto ocasionado por dosis en mal estado**, ya que "requiere una gran supervisión y soporte" con los que no contaba. 
@@ -128,7 +127,7 @@ En [un artículo](http://www.samj.org.za/index.php/samj/article/view/10765/7200)
 <div class="panel" markdown="1">
 ### Sudáfrica: a ciegas
 
-{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Vídeo: Manuel Penados." %}
+{% include video-container.html videoid="zS3r31gWUGU" title="Shabir Madhi, del Centro Nacional de Enfermedades Infecciosas." credit="Vídeo: Serusha Govender. Edición: M.Á. Gavilanes." %}
 
 Los datos fueron un quebradero de cabeza para Van der Heever cuando este era el responsable del programa de inmunización. Y no solo respecto a los niveles de *stock*: los datos más básicos, como los porcentajes de inmunización, en su opinión **no son fiables**. "No sabemos cuál es la cobertura real contra el sarampión", lamenta Shabir Madhi, responsable de NICD. La [OMS rebaja en hasta más de 20 puntos](https://data.unicef.org/wp-content/uploads/country_profiles/South%20Africa/Immunization_zaf.pdf){:target="_blank"} los niveles de cobertura que Sudáfrica les presenta. Madhi  calcula que la cifra real debe estar entre ambos valores.
 </div>

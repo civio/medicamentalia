@@ -11,7 +11,6 @@ pub_date:         2017-02-16
 slug:             stockout
 ref:              stockout
 lang:             en
-draft:            true
 ---
 
 <div class="container page-content" markdown="1">
@@ -84,7 +83,7 @@ In South Africa, this vaccine is especially relevant and its shortage is "a real
 "**By ourselves we could never solve the BCG problem**", acknowledged the Deputy Director of the Department of Health. To tackle it, the last World Health Assembly passed [a resolution to deal with the lack of medicines and vaccines](http://apps.who.int/medicinedocs/documents/s22423es/s22423es.pdf){:target="_blank"}. The document advocates the development of a new **centralised repository of stockout data**. With that, "the WHO is suppossed to go to manufacturers and say 'here is the entire volume of the world, can you please start producing to be sure that you get the business?'", explains Anban Pillay.
 
 <div class="container-right">
-{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Vídeo: Serusha Govender." %}
+{% include video-container.html videoid="bzhf3NQE2II" title="Anban Pillay, from the National Department of Health of South Africa." credit="Video: Serusha Govender." %}
 </div>
 
 The BCG vaccine supply crisis is worsened by **the concentration of production in few companies**. And low profit margins makes it an unattractive venture for other laboratories which have the capacity to produce it, appoints Pillay. The oligopoly of the vaccines industry is even more concentrated: Sanofi Pasteur, Merck, Pfizer and GlaxoSmithKline take [around 80% of the proceeds](http://www.who.int/immunization/research/forums_and_initiatives/1_ABatson_Global_Vaccine_Market_gvirf16.pdf#page=8){:target="_blank"} globally from the sales of these products. 
@@ -105,7 +104,7 @@ In South Africa, **provinces that default on their payments** for vaccines are a
 The South African government negotiates the prices and [Biovac](http://www.biovac.co.za/){:target="_blank"}, a public-private partnership, receive the raw materials from the pharmacists. In their premises in Ciudad del Cabo, they fill vials and distribute the orders that they receive from provinces. Both Madhi and Pillay claim that Biovac **has frozen supply** to certain provinces which have not paid.
 
 <div class="container-right">
-{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Video: Serusha Govender." %}
+{% include video-container.html videoid="5UqhW64tNUU" title="Morena Makhoana, CEO of The Biovac Institute." credit="Vídeo: Serusha Govender." %}
 </div>
 
 Once the vaccines have been distributed to the South African clinics **the stock management problems begin to arise**. Karl le Roux, doctor and researcher from Zithuele hospital, [analysed](http://sahivsoc2014.co.za/wp-content/uploads/2014/10/Fri_Karl_leRouw-The-reasons-for-and-impact-of-stock-outs.pdf){:target="_blank"} the causes and effects of vaccines stockouts in the OR Tambo district, in the Eastern Cape province. According to his research, the shortages are due to a lack of space in the clinics, inadequate stock management systems, overworked staff and poorly trained nurses (that make orders for inadequate quantities), lack of responsibility in the provincial storage and [theft](http://samj.org.za/index.php/samj/article/view/7332/5356){:target="_blank"}.
@@ -119,7 +118,7 @@ For this rural doctor "it is frustrating not being able to offer a patient what 
 Johann Van der Heever, who managed the South African immunization programme for 11 years, blames the lack of control squarely on the Department of Health: "You have to staff adequately to the chain, you have to provide equip supervision and monitoring which **is a function of the National Department**".
 
 <div class="container-right">
-{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Video: Serusha Govender." %}
+{% include video-container.html videoid="xokOlqOyljE" title="Johann van der Heever, former Manager of the immunization program of South Africa." credit="Video: Serusha Govender." %}
 </div>
 
 In [an article](http://www.samj.org.za/index.php/samj/article/view/10765/7200){:target="_blank"} in the *South African Medical Journal* magazine, which cites Van der Heever's criticisms of the national immunization programme and condemns the government's neglect of the situation, the national cold-chain manager (imperative system for the conservation of the antigens), admits that they were only able to inspect **between 5% and 10% of facilities**. Van der Heever regrets that, despite the fact that controlling the deterioration of vaccines was one of his priorities, **the wastage is unknown**, as it "requires very good supervision and support".
@@ -127,7 +126,7 @@ In [an article](http://www.samj.org.za/index.php/samj/article/view/10765/7200){:
 <div class="panel" markdown="1">
 ### South Africa: managing in the dark
 
-{% include video-container.html videoid="lX1upUATEe4" title="Ademir Vásquez, del programa de inmunizaciones de Guatemala." credit="Video: Serusha Govender." %}
+{% include video-container.html videoid="Q6elgS8YiSM" title="Shabir Madhi, Executive Director of the National Institute of Contagious Diseases." credit="Video: Serusha Govender. Edition: M.Á. Gavilanes." %}
 
 Data was a headache for Van der Heever when he was in charge of the immunization program. And not only those related to stock levels, the most basic, immunization rates, **are not reliable**. "We don't know what the true measles coverage is", regrets Shabir Madhi, executive director of the NICD. The [WHO use to lessen 20 points](https://data.unicef.org/wp-content/uploads/country_profiles/South%20Africa/Immunization_zaf.pdf){:target="_blank"} the estimations of South Africa. Madhi calculates that the real rate is somewhere between South African and the WHO figures.
 </div>
