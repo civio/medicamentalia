@@ -105,7 +105,7 @@ En Sudáfrica, **los impagos de las provincias en los procesos de compra** de va
 El gobierno sudafricano negocia los precios y es [Biovac](http://www.biovac.co.za/){:target="_blank"}, una empresa público-privada, quien recibe de las farmacéuticas las materias primas. En su planta en Ciudad del Cabo rellenan los viales y distribuyen los pedidos que reciben de las distintas zonas. Tanto Madhi como Pillay aseguran que Biovac **ha congelado el suministro** a algunas provincias que no han pagado.
 
 <div class="container-right">
-{% include video-container.html videoid="oYe2Z-rzqhw" title="Morena Makhona, presidente de The Biovac Institute." credit="Vídeo: Serusha Govender." %}
+{% include video-container.html videoid="oYe2Z-rzqhw" title="Morena Makhona, presidente de The Biovac Institute." credit="Vídeo: Anne Gonschorek." %}
 </div>
 
 Una vez que las vacunas se distribuyen en las clínicas de Sudáfrica **aparecen los problemas de gestión del *stock***. Karl le Roux, médico e investigador del hospital de Zithuele, [analizó](http://sahivsoc2014.co.za/wp-content/uploads/2014/10/Fri_Karl_leRouw-The-reasons-for-and-impact-of-stock-outs.pdf){:target="_blank"} las causas y el impacto del desabastecimiento de las vacunas en el distrito O.R. Tambo, en la provincia de Eastern Cape. Según su investigación, la escasez viene propiciada por el poco espacio en las clínicas, los deficientes sistemas de gestión, la sobrecarga de trabajo y la falta de formación de las enfermeras (que realizan pedidos inferiores a la necesidades reales), la falta de responsabilidad en los depósitos provinciales de medicamentos o los [robos](http://samj.org.za/index.php/samj/article/view/7332/5356){:target="_blank"}.
@@ -124,14 +124,6 @@ Johann Van der Heever, que dirigió durante 11 años el programa de inmunizació
 
 En [un artículo](http://www.samj.org.za/index.php/samj/article/view/10765/7200){:target="_blank"} en la revista *South African Medical Journal*, que recoge las críticas de Van der Heever al PAI y denuncia el abandono del gobierno, el supervisor nacional de la cadena de frío –sistema imprescindible para la conservación de los antígenos–, reconocía que solo eran capaces de inspeccionar **entre el 5 y el 10% de las instalaciones**. Van der Heever lamenta que, pese a que el control del deterioro de las vacunas era una de sus prioridades, **se desconoce el gasto ocasionado por dosis en mal estado**, ya que "requiere una gran supervisión y soporte" con los que no contaba. 
 
-<div class="panel" markdown="1">
-### Sudáfrica: a ciegas
-
-{% include video-container.html videoid="zS3r31gWUGU" title="Shabir Madhi, del Centro Nacional de Enfermedades Infecciosas." credit="Vídeo: Serusha Govender. Edición: M.Á. Gavilanes." %}
-
-Los datos fueron un quebradero de cabeza para Van der Heever cuando este era el responsable del programa de inmunización. Y no solo respecto a los niveles de *stock*: los datos más básicos, como los porcentajes de inmunización, en su opinión **no son fiables**. "No sabemos cuál es la cobertura real contra el sarampión", lamenta Shabir Madhi, responsable de NICD. La [OMS rebaja en hasta más de 20 puntos](https://data.unicef.org/wp-content/uploads/country_profiles/South%20Africa/Immunization_zaf.pdf){:target="_blank"} los niveles de cobertura que Sudáfrica les presenta. Madhi  calcula que la cifra real debe estar entre ambos valores.
-</div>
-
 "Uno de los problemas que tenemos con las compañías es que no comparten con el gobierno información sobre su escasez de vacunas o los posibles problemas de producción, a diferencia de lo que sucede en [Estados Unidos](http://www.fda.gov/BiologicsBloodVaccines/SafetyAvailability/Shortages/ucm351921.htm){:target="_blank"} o en Europa", alega el director general adjunto del Departamento de Salud, Anban Pillay. Dado el tiempo necesario para producir cada vacuna, la información, tanto interna –de los depósitos y clínicas– como externa –de la capacidad de producción de los fabricantes–, es imprescindible para evitar que se agoten las existencias. "Solo puedes ser previsor si tienes la información", sentencia este alto cargo de Sanidad. 
 
 La única forma de aproximarse a la situación real es a través de [Stop Stock outs Project](http://stockouts.org/){:target="_blank"} (SSP), una plataforma que monitoriza la falta de medicamentos y vacunas en el país austral. Detrás están organizaciones como [Médicos sin Fronteras](https://www.msf.org.za/){:target="_blank"}, [Treatment Action Campaign](http://www.tac.org.za/){:target="_blank"} o [Rural Health Advocacy Project](http://www.rhap.org.za/){:target="_blank"}, que la impulsaron ante la persistente carencia de antirretrovirales en un país que cuenta con el mayor número de enfermos de VIH del mundo: [uno de cada cinco adultos](https://www.cia.gov/library/publications/the-world-factbook/fields/2155.html#sf){:target="_blank"} (más de [6,9 millones de personas](https://www.cia.gov/library/publications/the-world-factbook/fields/2156.html#sf){:target="_blank"}) es seropositivo. 
@@ -139,6 +131,14 @@ La única forma de aproximarse a la situación real es a través de [Stop Stock 
 En los últimos meses de cada año, SSP lleva a cabo una encuesta telefónica sobre rupturas de *stock*, también de vacunas, a más de 2.400 centros de salud de los 3.547 que han identificado en todo el territorio nacional. Mientras que el Gobierno de Jacob Zuma solo reconoció en 2015 a la OMS problemas con las dosis de BCG, [Stop Stock outs registró](http://stockouts.org/uploads/3/3/1/1/3311088/2015_stock_outs_national_survey.pdf#page=42){:target="_blank"} que **el 9% de los centros de salud contactados** no disponía de la vacuna hexavalente (compuesta por las vacunas contra la difteria, el tétanos, la tos ferina, la polio, el Hib y la hepatitis B); el 4% no contaba con el antígeno del rotavirus y el 3% carecía de dosis para proteger ante el sarampión.
 
 Los datos son imprescindibles: para controlar las existencias de vacunas en los depósitos, para saber cuándo realizar un pedido eficiente para una clínica y para diseñar campañas de vacunación efectivas que eviten posibles brotes en comunidades con baja inmunización. La coordinación en la administración y la asunción de responsabilidades es vital para evitar, al menos en casa, la escasez y el desabastecimiento de vacunas.  Pero, ante todo, Sudáfrica no puede permitirse que sus ciudadanos **pierdan la confianza** en su sistema de salud.
+
+<div class="panel" markdown="1">
+### Sudáfrica: a ciegas
+
+{% include video-container.html videoid="zS3r31gWUGU" title="Shabir Madhi, del Centro Nacional de Enfermedades Infecciosas." credit="Vídeo: Serusha Govender. Edición: Miguel Ángel Gavilanes." %}
+
+Los problemas con los datos en Sudáfrica no afectan solo a los niveles de *stock*; los datos más básicos, como los porcentajes de inmunización, no son fiables. La falta de una encuesta actualizada y detallada sobre la cobertura de vacunación impide controlar y evitar los posibles brotes, según Shabir Madhi, del Instituto Nacional de Enfermedades Contagiosas de Sudáfrica, puesto que se desconoce en qué zonas la inmunización es inferior a la recomendada. “No sabemos cuál es la cobertura real contra el sarampión”, lamenta Madhi. Además, [la OMS rebaja en hasta más de 20 puntos](https://data.unicef.org/wp-content/uploads/country_profiles/South%20Africa/Immunization_zaf.pdf){:target="_blank"} los niveles de cobertura que Sudáfrica les presenta. Madhi, que calcula que la cifra real debe estar entre ambos valores, urge a realizar una nueva encuesta para solucionar esta situación.
+</div>
 
   </div>
 </div>

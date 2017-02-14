@@ -104,7 +104,7 @@ In South Africa, **provinces that default on their payments** for vaccines are a
 The South African government negotiates the prices and [Biovac](http://www.biovac.co.za/){:target="_blank"}, a public-private partnership, receive the raw materials from the pharmacists. In their premises in Ciudad del Cabo, they fill vials and distribute the orders that they receive from provinces. Both Madhi and Pillay claim that Biovac **has frozen supply** to certain provinces which have not paid.
 
 <div class="container-right">
-{% include video-container.html videoid="5UqhW64tNUU" title="Morena Makhoana, CEO of The Biovac Institute." credit="Vídeo: Serusha Govender." %}
+{% include video-container.html videoid="5UqhW64tNUU" title="Morena Makhoana, CEO of The Biovac Institute." credit="Vídeo: Anne Gonschorek." %}
 </div>
 
 Once the vaccines have been distributed to the South African clinics **the stock management problems begin to arise**. Karl le Roux, doctor and researcher from Zithuele hospital, [analysed](http://sahivsoc2014.co.za/wp-content/uploads/2014/10/Fri_Karl_leRouw-The-reasons-for-and-impact-of-stock-outs.pdf){:target="_blank"} the causes and effects of vaccines stockouts in the OR Tambo district, in the Eastern Cape province. According to his research, the shortages are due to a lack of space in the clinics, inadequate stock management systems, overworked staff and poorly trained nurses (that make orders for inadequate quantities), lack of responsibility in the provincial storage and [theft](http://samj.org.za/index.php/samj/article/view/7332/5356){:target="_blank"}.
@@ -123,14 +123,6 @@ Johann Van der Heever, who managed the South African immunization programme for 
 
 In [an article](http://www.samj.org.za/index.php/samj/article/view/10765/7200){:target="_blank"} in the *South African Medical Journal* magazine, which cites Van der Heever's criticisms of the national immunization programme and condemns the government's neglect of the situation, the national cold-chain manager (imperative system for the conservation of the antigens), admits that they were only able to inspect **between 5% and 10% of facilities**. Van der Heever regrets that, despite the fact that controlling the deterioration of vaccines was one of his priorities, **the wastage is unknown**, as it "requires very good supervision and support".
 
-<div class="panel" markdown="1">
-### South Africa: managing in the dark
-
-{% include video-container.html videoid="Q6elgS8YiSM" title="Shabir Madhi, Executive Director of the National Institute of Contagious Diseases." credit="Video: Serusha Govender. Edition: M.Á. Gavilanes." %}
-
-Data was a headache for Van der Heever when he was in charge of the immunization program. And not only those related to stock levels, the most basic, immunization rates, **are not reliable**. "We don't know what the true measles coverage is", regrets Shabir Madhi, executive director of the NICD. The [WHO use to lessen 20 points](https://data.unicef.org/wp-content/uploads/country_profiles/South%20Africa/Immunization_zaf.pdf){:target="_blank"} the estimations of South Africa. Madhi calculates that the real rate is somewhere between South African and the WHO figures.
-</div>
-
 "One of the big problems that we have is manufacturers have been aware that they have a shortage but they have not been willing to share that information, unlike in the [United States](http://www.fda.gov/BiologicsBloodVaccines/SafetyAvailability/Shortages/ucm351921.htm){:target="_blank"} or in Europe, where they are obliged by law", alleged the Deputy Director of the Department of Health, Anban Pillay. Given the time required to produce each vaccine, both internal and external information is imperative in order to avoid stockouts. "You can only be foresighted if you have the information", stated the healthcare manager. 
 
 The only way to approach to the real situation is through the [Stop Stockouts Project](http://stockouts.org/){:target="_blank"} (SSP), a platform that monitors the lack of medicines and vaccines in South Africa. Behind the project are organisations such as [Médecins Sans Frontières](https://www.msf.org.za/){:target="_blank"}, the [Treatment Action Campaign](http://www.tac.org.za/){:target="_blank"} and the [Rural Health Advocacy Project](http://www.rhap.org.za/){:target="_blank"}, which created the campaign in light of the persistent lack of antiretroviral drugs in the country which has the highest number of HIV cases in the world (over [6.9 million people](https://www.cia.gov/library/publications/the-world-factbook/fields/2156.html#sf){:target="_blank"}): [one in five adults](https://www.cia.gov/library/publications/the-world-factbook/fields/2155.html#sf){:target="_blank"} is seropositive.
@@ -138,6 +130,14 @@ The only way to approach to the real situation is through the [Stop Stockouts Pr
 At the end of each year, SSP conducts a telephone interview about vaccines and stockouts with over 2,400 of the 3,547 healthcare centres that they have identified across the country. Whilst Jacob Zuma’s government only reported its stock issues with the BCG vaccine to the WHO in 2015, [Stop Stockouts recorded](http://stockouts.org/uploads/3/3/1/1/3311088/2015_stock_outs_national_survey.pdf#page=42){:target="_blank"} that **9% of healthcare centres contacted** did not have the combined vaccine (composed of the DPT vaccine and the vaccines against Polio, Hib and Hepatitis B) available; 4% did not have the rotavirus vaccine available and 3% had a shortage of measles vaccines.
 
 The data is indispensable: to control the existence of vaccines in stores, to know when to make an efficient order for a clinic and to design effective vaccination campaigns that avoid possible outbreaks in communities with low immunization rates. Coordinated administration and the shouldering of responsibilities is vital to avoid shortages and stockouts of vaccines nationwide.  But above all, South Africa cannot allow its people to **lose faith** in its healthcare system.
+
+<div class="panel" markdown="1">
+### South Africa: managing in the dark
+
+{% include video-container.html videoid="Q6elgS8YiSM" title="Shabir Madhi, Executive Director of the National Institute of Contagious Diseases." credit="Video: Serusha Govender. Edition: Miguel Ángel Gavilanes." %}
+
+Problems with data in South Africa do not only affect stock levels; the most basic data, such as immunization rates, are not reliable. The lack of an up-to-date and detailed survey on vaccination coverage makes it impossible to control and avoid possible outbreaks, according to Shabir Madhi of the National Institute of Contagious Diseases in South Africa, as it is not known in which areas immunization is lower than recommended. "We do not know the actual coverage against measles," laments Madhi. In addition, [the WHO reduces by more than 20 points](https://data.unicef.org/wp-content/uploads/country_profiles/South%20Africa/Immunization_zaf.pdf){:target="_blank"} the levels of coverage that South Africa presents to them. Madhi, who estimates that the real figure must be between both values, urges to carry out a new survey to solve this situation.
+</div>
 
   </div>
 </div>

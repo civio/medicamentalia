@@ -110,6 +110,7 @@ In order to determine the number of cases of each disease recorded every year, w
 - In order to be able to include cases of polio in 2016 in the successes article video, we used the information available in [Polio Eradication](http://polioeradication.org/polio-today/polio-now/){:target="_blank"}, an extremely up to date report on the global state of polio. The dots are ubicated by country, but inside a country they are randomly distributed.  
 - For the video about Guatemala, we added the information from recent months taken from the [survey](http://fundesa.org.gt/content/files/publicaciones/SegundoSondeoVacunacion.pdf){:target="_blank"} carried out by the Guatemalan Human Rights Council, Action Against Hunger, ALIANMISAR (National Alliance for Indigenous Women's Organisations for Reproductive Health, Nutrition and Education) and the Alliance for Nutrition.
 - We reviewed a complementary source for measles data from the [WHO’s monthly reports](http://www.who.int/immunization/monitoring_surveillance/burden/vpd/surveillance_type/active/measles_monthlydata/en/){:target="_blank"}. However, since some countries send the data late and with different timing, we only used the monthly data to be aware of the most recent trends, and didn't rely on it for the final content.
+- Data on the incidence of tuberculosis in the report on [shortages](/vaccines/stockout) are WHO estimates from its World Health Observatory ([here](http://apps.who.int/gho/data/node.main.1320?lang=en){:target="_blank"}).
 
 As is the case with vaccination coverage, the data on numbers of cases [is not perfect](http://apps.who.int/gho/indicatorregistry/App_Main/view_indicator.aspx?iid=57){:target="_blank"}. Taking into account the fact that the data only includes cases which are treated under the healthcare systems and are therefore officially recorded, the conclusion is clear: **more cases occur than those which appear in the data**. As the WHO explain: “Many countries face challenges in accurately identifying, diagnosing and reporting infectious diseases due to the remoteness of communities, lack of transport and communication infrastructure, and a shortage of skilled health-care workers and laboratory facilities to ensure accurate diagnosis.” 
 
@@ -121,6 +122,13 @@ We have also used mortality figures, from two sources:
 
 - Child mortality by country and [by disease](http://apps.who.int/gho/data/view.main.ghe100-AGO?lang=en){:target="_blank"}. With data from 2000 to 2015.
 - General mortality data by disease, [here](http://vizhub.healthdata.org/gbd-compare/){:target="_blank"}.
+
+
+#### Stockouts data
+
+Data on vaccine stockouts come from the WHO monitoring system of vaccine-preventable diseases (available [here](http://apps.who.int/immunization_monitoring/globalsummary/indicators?ir%5Br%5D%5B%5D=AFRO&ir%5Br%5D%5B%5D=AMRO&ir%5Br%5D%5B%5D=EMRO&ir%5Br%5D%5B%5D=EURO&ir%5Br%5D%5B%5D=SEARO&ir%5Br%5D%5B%5D=WPRO&ir%5Bi%5D%5B%5D=VSRS_BCG&ir%5Bi%5D%5B%5D=VSRS_BCG_ANYDIST&commit=Ok+with+the+selection){:target="_blank"}). The information extracted from this repository was last updated by the WHO in December of 2016, and only has data until 2015.
+
+Countries notify WHO if they have experienced stockouts, either at national level or in some of the health districts where each country is divided. The global figure of 97 states that suffered a shortage in 2015 of some of the essential vaccines includes both those produced at the regional and national level. However, to make the map of stockouts of the vaccine against tuberculosis simpler, only the problems at national level have been taken into account, because of their greater relevance.
 
 #### Other data sources
 

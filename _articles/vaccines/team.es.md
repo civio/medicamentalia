@@ -111,6 +111,7 @@ Para saber los casos registrados al año de cada enfermedad usamos la [tabla de 
 - Para poder incluir los casos de polio de 2016 en el vídeo del artículo de éxitos usamos la información disponible en [Polio Erradication](http://polioeradication.org/polio-today/polio-now/){:target="_blank"}, que informa casi al día de cómo está esa enfermedad en el mundo. Los puntos del mapa están ubicados por país, pero se colocan dentro de cada país de forma aleatoria. 
 - Para el vídeo sobre Guatemala añadimos la información de los últimos meses que se extrae del [sondeo](http://fundesa.org.gt/content/files/publicaciones/SegundoSondeoVacunacion.pdf){:target="_blank"} realizado por el Procurador de Derechos Humanos del país, Acción contra el Hambre, Alianmisar y la Alianza por la Nutrición.
 - Revisamos una fuente complementaria para los datos de sarampión los [reportes mensuales](http://www.who.int/immunization/monitoring_surveillance/burden/vpd/surveillance_type/active/measles_monthlydata/en/){:target="_blank"}. Pero, puesto que se actualizan de forma mensual y no están consolidados (no todos los países envían a tiempo y algunos datos llegan mucho más tarde), no utilizamos estos datos en nuestras tablas, pero sí los analizamos para conocer tendencias más actuales. 
+- Los datos de la incidencia de la tuberculosis en el artículo sobre [desabastecimientos](/vaccines/desabastecimiento) son estimaciones de la OMS extraídas de su Observatorio Mundial de la Salud ([aquí](http://apps.who.int/gho/data/node.main.1320?lang=en){:target="_blank"}).
 
 Como pasa con la cobertura de vacunación, los datos de casos [no son perfectos](http://apps.who.int/gho/indicatorregistry/App_Main/view_indicator.aspx?iid=57){:target="_blank"}. Si tenemos en cuenta que se trata solo de aquellos casos que llegan a los servicios de salud y se registran, la conclusión es clara: **se producen más casos que aquellos que aparecen en los datos**. Como explican desde la OMS: "Algunos países enfrentan dificultades para identificar, diagnosticar y reportar enfermedades infecciosas en los lugares más remotos de sus comunidades, falta de infraestructuras de transporte y comunicaciones, y falta de trabajadores de la salud cualificados o laboratorios para asegurar un diagnóstico preciso". 
 
@@ -122,6 +123,14 @@ También hemos utilizado datos de mortalidad, de dos fuentes:
 
 - Mortalidad infantil por países y [por enfermedad](http://apps.who.int/gho/data/view.main.ghe100-AGO?lang=en){:target="_blank"}. Con datos de 2000 a 2015. 
 - Datos de mortalidad general por enfermedad, [aquí](http://vizhub.healthdata.org/gbd-compare/){:target="_blank"}.
+
+
+#### Datos sobre desabastecimiento
+
+Los datos relativos a desabastecimiento de vacunas provienen del repositorio de la OMS que monitoriza las estadísticas mundiales sobre enfermedades contagiosas evitables (disponible [aquí](http://apps.who.int/immunization_monitoring/globalsummary/indicators?ir%5Br%5D%5B%5D=AFRO&ir%5Br%5D%5B%5D=AMRO&ir%5Br%5D%5B%5D=EMRO&ir%5Br%5D%5B%5D=EURO&ir%5Br%5D%5B%5D=SEARO&ir%5Br%5D%5B%5D=WPRO&ir%5Bi%5D%5B%5D=VSRS_BCG&ir%5Bi%5D%5B%5D=VSRS_BCG_ANYDIST&commit=Ok+with+the+selection){:target="_blank"}). La información extraída de este repositorio fue actualizada por última vez por la OMS en diciembre de 2016, y solo cuenta con datos hasta 2015. 
+
+Los países notifican a la OMS si les han faltado vacunas, tanto a nivel nacional como en alguno de los distritos sanitarios en los que se divida cada país. La cifra global de 97 estados que sufrieron desabastecimiento en 2015 de alguna de las vacunas esenciales incluye tanto los producidos a nivel regional como nacional. Sin embargo, para que el gráfico sobre desabastecimiento de la vacuna contra la tuberculosis fuera más sencillo, solo se han tenido en cuenta, por su mayor relevancia, los problemas a nivel nacional. 
+
 
 #### Otros datos empleados y sus fuentes
 
