@@ -601,35 +601,4 @@
   if $('#vaccine-prices-graph').length > 0
     setupVaccinePricesGraph()
 
-  if $('#vaccine-scatterplot-graph').length > 0
-    graph = new window.ScatterplotGraph('vaccine-scatterplot-graph',
-      aspectRatio: 0.5
-      margin:
-        top: 0
-        right: 0
-        left: 0
-        bottom: 0
-      key:
-        x: 'confidence'
-        y: 'gdp'
-        id: 'country')
-    graph.setData [
-      {
-       country: 'AFG'
-       confidence: 34
-       gdp: 8777
-      },
-      {
-       country: 'NHG'
-       confidence: 27
-       gdp: 12777
-      },
-      {
-       country: 'XFG'
-       confidence: 54
-       gdp: 45777
-      },
-    ]
-    $(window).resize graph.onResize
-
 ) jQuery

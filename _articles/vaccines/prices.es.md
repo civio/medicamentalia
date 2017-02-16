@@ -42,19 +42,6 @@ En la actualidad, continúan los problemas de *stock* de esta vacuna contra la t
 
 En Sudáfrica, esta vacuna es de especial relevancia y su escasez, "un auténtico problema", según el doctor Anban Pillay, director general adjunto del Departamento de Salud. Aunque [su eficacia es limitada](http://www.who.int/immunization/wer7904BCG_Jan04_position_paper_SP.pdf){:target="_blank"} contra la tuberculosis pulmonar, su manifestación más común, la [OMS recomienda su administración](http://www.who.int/immunization/wer7904BCG_Jan04_position_paper_SP.pdf#page=2){:target="_blank"} a los recién nacidos en países donde la proporción de personas que enferman (morbilidad) de tuberculosis es alta. Y en el país austral, **la morbilidad es enorme**: con 834 enfermos por cada 100.000 habitantes es el país con mayor incidencia de esta enfermedad, que se ve agravada por el impacto del VIH.
 
-</div>
-<div class="graph-container">
-  <div id="vaccine-scatterplot-graph" class="scatterplot-graph">
-    <div class="tooltip top" role="tooltip">
-      <div class="tooltip-arrow"></div>
-      <div class="tooltip-inner">
-        <p class="title"></p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="page-content-container" markdown="1">
-
 En Sudáfrica, esta vacuna es de especial relevancia y su escasez, "un auténtico problema", según el doctor Anban Pillay, director general adjunto del Departamento de Salud. Aunque [su eficacia es limitada](http://www.who.int/immunization/wer7904BCG_Jan04_position_paper_SP.pdf){:target="_blank"} contra la tuberculosis pulmonar, su manifestación más común, la [OMS recomienda su administración](http://www.who.int/immunization/wer7904BCG_Jan04_position_paper_SP.pdf#page=2){:target="_blank"} a los recién nacidos en países donde la proporción de personas que enferman (morbilidad) de tuberculosis es alta. Y en el país austral, **la morbilidad es enorme**: con 834 enfermos por cada 100.000 habitantes es el país con mayor incidencia de esta enfermedad, que se ve agravada por el impacto del VIH.
 
   </div>

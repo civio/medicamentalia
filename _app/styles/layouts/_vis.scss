@@ -135,10 +135,22 @@ Common
 
     .dot{
       fill: $brand-primary;
+      opacity: 0.7;
+      &.active{
+        opacity: 1;
+      }
+      &.inactive{
+        opacity: 0.6;
+        fill: mix($gray-light, $gray-lighter, 50%) !important;
+      }
     }
     .dot-label{
       font-size: 11px;
       fill: $gray-light;
+    }
+    .dot-line,
+    .dot-label{
+      pointer-events: none;
     }
   }
 
@@ -1606,7 +1618,6 @@ Infographic
 // Prices Vaccines
 #vaccine-prices-graph{
   .dot{
-    opacity: 0.7;
     cursor: pointer;
   }
   .x.axis .tick text{
