@@ -34,6 +34,10 @@ class window.ScatterplotGraph extends window.BaseGraph
     if @options.key.color
       @color = d3.scaleOrdinal()
         .range @getColorRange()
+    # set size scale if options.key.size is defined
+    if @options.key.size
+      @size = d3.scaleLinear()
+        .range @getSizeRange()
     # setup axis
     @xAxis = d3.axisBottom(@x)
       .tickSize @height
@@ -53,21 +57,31 @@ class window.ScatterplotGraph extends window.BaseGraph
   getColorDomain: =>
     return d3.extent @data, (d) => d[@options.key.color]
 
+  getSizeRange: =>
+    return [6, 12]
+
+  getSizeDomain: =>
+    return [0, d3.max(@data, (d) => d[@options.key.size])]
+
   drawScales: ->
     super()
     # set color domain
     if @color
       @color.domain @getColorDomain()
+    # set size domain
+    if @size
+      @size.domain @getSizeDomain()
     return @
 
   drawGraph: ->
+    console.table @data
     # draw points
     @container.selectAll('.dot')
       .data(@data)
     .enter().append('circle')
       .attr 'class', 'dot'
       .attr 'id', @getDotId
-      .attr 'r', 6
+      .attr 'r', @getDotSize
       .style 'fill', @getDotFill
       .call @setDotsDimensions
     # draw labels
@@ -102,6 +116,12 @@ class window.ScatterplotGraph extends window.BaseGraph
   getDotLabelText: (d) =>
     return d[@options.key.id]
 
+  getDotSize: (d) =>
+    if @size
+      return @size d[@options.key.size]
+    else
+      return 6
+
   getDotFill: (d) =>
     if @color
       return @color d[@options.key.color]
@@ -129,9 +149,9 @@ class window.ScatterplotGraph extends window.BaseGraph
     @setTooltipData d
     # Set tooltip position
     @$tooltip.css
-      'left':    +element.attr('cx') + @options.margin.left - (@$tooltip.width() * 0.5)
-      'top':     +element.attr('cy') + @options.margin.top - @$tooltip.height() - 15
-      'opacity': '1'
+      left:    +element.attr('cx') + @options.margin.left - (@$tooltip.width() * 0.5)
+      top:     +element.attr('cy') + @options.margin.top - @$tooltip.height() - 15
+      opacity: 1
 
   onMouseOut: (d) =>
     @$tooltip.css 'opacity', '0'

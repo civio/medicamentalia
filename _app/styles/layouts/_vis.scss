@@ -1609,8 +1609,11 @@ Infographic
     opacity: 0.7;
     cursor: pointer;
   }
-  .y.axis .tick:first-child line{
-    stroke: $gray;
+  .x.axis .tick text{
+    font-size: 12px;
+  }
+  .y.axis .tick:nth-child(2) line{
+    stroke: $gray-light;
   }
 
   .tooltip{

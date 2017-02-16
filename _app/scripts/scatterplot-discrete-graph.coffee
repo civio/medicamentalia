@@ -29,6 +29,10 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
     if @options.key.color
       @color = d3.scaleOrdinal()
         .range @getColorRange()
+    # set size scale if options.key.size is defined
+    if @options.key.size
+      @size = d3.scaleLinear()
+        .range @getSizeRange()
     # setup axis
     @xAxis = d3.axisBottom(@x)
       .tickSize @height

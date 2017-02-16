@@ -471,6 +471,7 @@
           x: 'country'
           y: 'price'
           id: 'country'
+          #size: 'doses'
           color: 'vaccine')
       # update get id methods
       graph.getDotId = (d) ->
@@ -483,6 +484,11 @@
         .ticks 5
         .tickPadding 15
         .tickFormat (d) -> '$'+d
+      graph.dataParser = (data) ->
+        data.forEach (d) =>
+          d[@options.key.y] = +d[@options.key.y]
+          d[@options.key.size] = +d[@options.key.size]
+        return data
       graph.setTooltipData = (d) ->
         dosesFormat = d3.format('.0s')
         @$tooltip
@@ -494,14 +500,12 @@
         @$tooltip
           .find '.tooltip-inner .price'
           .html d.price
-        if d.doses
-          @$tooltip
-            .find '.tooltip-inner .dosis'
-            .html dosesFormat(d.doses)+' dosis '
-        if d.company
-          @$tooltip
-            .find '.tooltip-inner .company'
-            .html '('+d.company+')'
+        @$tooltip
+          .find '.tooltip-inner .dosis'
+          .html if d.doses then dosesFormat(d.doses)+' dosis ' else ''
+        @$tooltip
+          .find '.tooltip-inner .company'
+          .html if d.company then '('+d.company+')' else ''
       # set data
       graph.setData data
       $(window).resize graph.onResize
