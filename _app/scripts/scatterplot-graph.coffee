@@ -5,7 +5,7 @@ class window.ScatterplotGraph extends window.BaseGraph
   # -----------
 
   constructor: (id, options) ->
-    console.log 'Scatterplot Graph', id, options
+    #console.log 'Scatterplot Graph', id, options
     super id, options
     return @
 
@@ -21,12 +21,15 @@ class window.ScatterplotGraph extends window.BaseGraph
 
   setScales: ->
     # set x scale
-    @x = d3.scalePow()
-      .exponent 0.5
+    @x = d3.scaleLinear()
       .range @getScaleXRange()
     # set y scale
     @y = d3.scaleLinear()
       .range @getScaleYRange()
+    # set color scale if options.key.color is defined
+    if @options.key.color
+      @color = d3.scaleOrdinal()
+        .range @getColorRange()
     # setup axis
     @xAxis = d3.axisBottom(@x)
       .tickSize @height
@@ -35,32 +38,43 @@ class window.ScatterplotGraph extends window.BaseGraph
     return @
 
   getScaleXDomain: =>
-    console.log 'getScaleXDomain', d3.max(@data, (d) => d[@options.key.x])
     return [0, d3.max(@data, (d) => d[@options.key.x])]
 
   getScaleYDomain: =>
-    console.log 'getScaleYDomain', d3.max(@data, (d) => d[@options.key.y])
     return [0, d3.max(@data, (d) => d[@options.key.y])]
 
+  getColorRange: =>
+    return ['#C9AD4B', '#BBD646', '#63BA2D', '#34A893', '#3D91AD', '#5B8ACB', '#BA7DAF', '#BF6B80', '#F49D9D', '#E25453', '#B56631', '#E2773B', '#FFA951', '#F4CA00']
+
+  getColorDomain: =>
+    return d3.extent @data, (d) => d[@options.key.color]
+
+  drawScales: ->
+    super()
+    # set color domain
+    if @color
+      @color.domain @getColorDomain()
+    return @
+
   drawGraph: ->
-    console.log @data
     # draw points
     @container.selectAll('.dot')
       .data(@data)
     .enter().append('circle')
       .attr 'class', 'dot'
-      .attr 'id', (d) => 'dot-'+d[@options.key.id]
+      .attr 'id', @getDotId
       .attr 'r', 6
+      .style 'fill', @getDotFill
       .call @setDotsDimensions
-
+    # draw labels
     @container.selectAll('.dot-label')
       .data(@data)
     .enter().append('text')
       .attr 'class', 'dot-label'
-      .attr 'id', (d) => 'dot-'+d[@options.key.id]
+      .attr 'id', @getDotLabelId
       .attr 'dx', '0.75em'
       .attr 'dy', '0.375em'
-      .text (d) => d[@options.key.id]
+      .text @getDotLabelText
       .call @setDotLabelsDimensions
     return @
 
@@ -69,6 +83,21 @@ class window.ScatterplotGraph extends window.BaseGraph
     @container.selectAll('.dot')
       .call @setDotsDimensions
     return @
+
+  getDotId: (d) =>
+    return 'dot-'+d[@options.key.id]
+
+  getDotLabelId: (d) =>
+    return 'dot-label-'+d[@options.key.id]
+
+  getDotLabelText: (d) =>
+    return d[@options.key.id]
+
+  getDotFill: (d) =>
+    if @color
+      return @color d[@options.key.color]
+    else
+      return null
 
   setDotsDimensions: (element) =>
     element
