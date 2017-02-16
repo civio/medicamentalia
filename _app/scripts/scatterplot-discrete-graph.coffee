@@ -37,6 +37,5 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
     return @
 
   getScaleXDomain: =>
-    console.log 'getScaleXDomain', @data.map (d) => d[@options.key.x]
     return @data.map (d) => d[@options.key.x]
     

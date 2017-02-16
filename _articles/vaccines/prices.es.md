@@ -24,12 +24,14 @@ Cuando el pequeño enferma, su madre, escarmentada, decide tomar un taxi y visit
 </div>
 <div class="graph-container">
   <p class="graph-container-caption">Precios</p>
-  <div id="vaccine-prices" class="scatterplot-graph">
+  <div id="vaccine-prices-graph" class="scatterplot-graph">
     <div class="tooltip top" role="tooltip">
       <div class="tooltip-arrow"></div>
       <div class="tooltip-inner">
-        <p class="title">Título</p>
-        <p class="description"></p>
+        <p class="title"></p>
+        <p class="description"><span class="vaccine"></span></p>
+        <p class="description"><strong>$<span class="price"></span></strong></p>
+        <p class="description"><span class="dosis"></span><span class="company"></span></p>
       </div>
     </div>
   </div>
@@ -37,6 +39,21 @@ Cuando el pequeño enferma, su madre, escarmentada, decide tomar un taxi y visit
 <div class="page-content-container" markdown="1">
 
 En la actualidad, continúan los problemas de *stock* de esta vacuna contra la tuberculosis, **también en países que nunca antes habían notificado la falta de este antígeno a la OMS**, como [España](https://cima.aemps.es/cima/fichasTecnicas.do?metodo=detalleDesabastecido&codNacional=758854){:target="_blank"}, [Australia](http://apps.tga.gov.au/PROD/MSI/Search/Details/mycobacterium-bovis-bacillus-calmette-and-guerin-bcg-strain){:target="_blank"} o Francia. En el caso francés, donde no es obligatoria [desde 2007](https://www.legifrance.gouv.fr/affichTexte.do;?cidTexte=LEGITEXT000006056619){:target="_blank"}, Sanofi Pasteur –farmacéutica centrada en vacunas– ha desviado al país galo su producción destinada al mercado polaco para poder satisfacer su demanda doméstica. Un desvío que está en marcha como ["medida temporal y transitoria"](http://ansm.sante.fr/S-informer/Informations-de-securite-Ruptures-de-stock-des-medicaments/VACCIN-BCG-SSI-poudre-et-solvant-pour-suspension-injectable-Rupture-de-stock){:target="_blank"} desde marzo de 2016.
+
+En Sudáfrica, esta vacuna es de especial relevancia y su escasez, "un auténtico problema", según el doctor Anban Pillay, director general adjunto del Departamento de Salud. Aunque [su eficacia es limitada](http://www.who.int/immunization/wer7904BCG_Jan04_position_paper_SP.pdf){:target="_blank"} contra la tuberculosis pulmonar, su manifestación más común, la [OMS recomienda su administración](http://www.who.int/immunization/wer7904BCG_Jan04_position_paper_SP.pdf#page=2){:target="_blank"} a los recién nacidos en países donde la proporción de personas que enferman (morbilidad) de tuberculosis es alta. Y en el país austral, **la morbilidad es enorme**: con 834 enfermos por cada 100.000 habitantes es el país con mayor incidencia de esta enfermedad, que se ve agravada por el impacto del VIH.
+
+</div>
+<div class="graph-container">
+  <div id="vaccine-scatterplot-graph" class="scatterplot-graph">
+    <div class="tooltip top" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">
+        <p class="title"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-content-container" markdown="1">
 
 En Sudáfrica, esta vacuna es de especial relevancia y su escasez, "un auténtico problema", según el doctor Anban Pillay, director general adjunto del Departamento de Salud. Aunque [su eficacia es limitada](http://www.who.int/immunization/wer7904BCG_Jan04_position_paper_SP.pdf){:target="_blank"} contra la tuberculosis pulmonar, su manifestación más común, la [OMS recomienda su administración](http://www.who.int/immunization/wer7904BCG_Jan04_position_paper_SP.pdf#page=2){:target="_blank"} a los recién nacidos en países donde la proporción de personas que enferman (morbilidad) de tuberculosis es alta. Y en el país austral, **la morbilidad es enorme**: con 834 enfermos por cada 100.000 habitantes es el país con mayor incidencia de esta enfermedad, que se ve agravada por el impacto del VIH.
 

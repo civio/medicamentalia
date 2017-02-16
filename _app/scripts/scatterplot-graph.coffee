@@ -19,6 +19,10 @@ class window.ScatterplotGraph extends window.BaseGraph
       d[@options.key.y] = +d[@options.key.y]
     return data
 
+  setSVG: ->
+    super()
+    @$tooltip = @$el.find '.tooltip'
+
   setScales: ->
     # set x scale
     @x = d3.scaleLinear()
@@ -76,6 +80,11 @@ class window.ScatterplotGraph extends window.BaseGraph
       .attr 'dy', '0.375em'
       .text @getDotLabelText
       .call @setDotLabelsDimensions
+    # add mouse events listeners if there's a tooltip
+    if @$tooltip
+      @container.selectAll('.dot')
+        .on 'mouseover', @onMouseOver
+        .on 'mouseout', @onMouseOut
     return @
 
   updateGraphDimensions: ->
@@ -112,4 +121,30 @@ class window.ScatterplotGraph extends window.BaseGraph
   # overrid x axis positioning
   setXAxisPosition: (selection) =>
     selection.attr 'transform', 'translate(0,0)'
+
+  # mouse events
+  onMouseOver: (d) =>
+    element = d3.select(d3.event.target)
+    # Set tooltip content
+    @setTooltipData d
+    # Set tooltip position
+    @$tooltip.css
+      'left':    +element.attr('cx') + @options.margin.left - (@$tooltip.width() * 0.5)
+      'top':     +element.attr('cy') + @options.margin.top - @$tooltip.height() - 15
+      'opacity': '1'
+
+  onMouseOut: (d) =>
+    @$tooltip.css 'opacity', '0'
+
+  setTooltipData: (d) =>
+    @$tooltip
+      .find '.tooltip-inner .title'
+      .html d[@options.key.id]
+    @$tooltip
+      .find '.tooltip-inner .value-x'
+      .html d[@options.key.x]
+    @$tooltip
+      .find '.tooltip-inner .value-y'
+      .html d[@options.key.y]
+
     

@@ -96,6 +96,10 @@ Common
     stroke: $color-orange;
   }
 
+  .tooltip{
+    pointer-events: none;
+  }
+
   .legend{
     text{
       font-size: 11px;
@@ -127,6 +131,8 @@ Common
   }
 
   .scatterplot-graph{
+    position: relative;
+
     .dot{
       fill: $brand-primary;
     }
@@ -150,7 +156,6 @@ Common
     margin: $grid-gutter-width 0;
 
     .tooltip{
-      pointer-events: none;
       width: 190px;
 
       p{
@@ -1599,10 +1604,29 @@ Infographic
 }
 
 // Prices Vaccines
-#vaccine-prices{
+#vaccine-prices-graph{
   .dot{
     opacity: 0.7;
     cursor: pointer;
+  }
+  .y.axis .tick:first-child line{
+    stroke: $gray;
+  }
+
+  .tooltip{
+    min-width: 100px;
+    .tooltip-inner{
+      text-align: left;
+    }
+    .title{
+      color: $brand-primary;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: $grid-gutter-width/6;
+    }
+    .description{
+      margin-bottom: $grid-gutter-width/6;
+    }
   }
 }
 
