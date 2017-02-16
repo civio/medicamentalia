@@ -74,7 +74,6 @@ class window.ScatterplotGraph extends window.BaseGraph
     return @
 
   drawGraph: ->
-    console.table @data
     # draw points
     @container.selectAll('.dot')
       .data(@data)
@@ -103,8 +102,14 @@ class window.ScatterplotGraph extends window.BaseGraph
 
   updateGraphDimensions: ->
     super()
+    # update axis size
+    @xAxis.tickSize @height
+    @yAxis.tickSize @width
+    # update dots positions
     @container.selectAll('.dot')
       .call @setDotsDimensions
+    @container.selectAll('.dot-label')
+      .call @setDotLabelsDimensions
     return @
 
   getDotId: (d) =>
