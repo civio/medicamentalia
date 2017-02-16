@@ -519,6 +519,37 @@
       graph_vaccine_all_diseases.init $('#disease-selector .active a').attr('href').substring(1), $(this).val()
   ###
 
+  if $('#vaccine-prices').length > 0
+    vaccines = ['pneumo13','BCG','IPV','MMR','HepB-pediátrica','VPH','DTPa-IPV-HIB','DTaP','Tdap','DTP']
+    d3.csv baseurl+'/data/prices-vaccines.csv', (error, data) ->
+      # filter data to get only selected vaccines
+      data = data.filter (d) -> return vaccines.indexOf(d.vaccine) != -1
+      graph = new window.ScatterplotDiscreteGraph('vaccine-prices',
+        aspectRatio: 0.5
+        margin:
+          right: 25
+          left: 25
+          bottom: 20
+        key:
+          x: 'country'
+          y: 'price'
+          id: 'country'
+          color: 'vaccine')
+      # update get id methods
+      graph.getDotId = (d) ->
+        return 'dot-'+d.country+'-'+d.vaccine
+      graph.getDotLabelId = (d) ->
+        return 'dot-label-'+d.country+'-'+d.vaccine
+      graph.getDotLabelText = (d) -> return ''
+      graph.xAxis.tickPadding 10
+      graph.yAxis
+        .ticks 5
+        .tickPadding 15
+        .tickFormat (d) -> '$'+d
+      # set data
+      graph.setData data
+      $(window).resize graph.onResize
+
   if $('#immunization-coverage-graph-all').length > 0
     setupImmunizationCoverageDynamicLineGraph()
 
