@@ -458,58 +458,122 @@
 
   setupVaccinePricesGraph = ->
     vaccines = ['pneumo13','BCG','IPV','MMR','HepB-pediátrica','VPH','DTPa-IPV-HIB','DTaP','Tdap','DTP']
-    d3.csv baseurl+'/data/prices-vaccines.csv', (error, data) ->
-      # filter data to get only selected vaccines
-      data = data.filter (d) -> return vaccines.indexOf(d.vaccine) != -1
-      graph = new window.ScatterplotDiscreteGraph('vaccine-prices-graph',
-        aspectRatio: 0.5
-        margin:
-          right: 25
-          left: 25
-          bottom: 20
-        key:
-          x: 'country'
-          y: 'price'
-          id: 'country'
-          #size: 'doses'
-          color: 'vaccine')
-      # update get id methods
-      graph.getDotId = (d) ->
-        return 'dot-'+d.country+'-'+d.vaccine
-      graph.getDotLabelId = (d) ->
-        return 'dot-label-'+d.country+'-'+d.vaccine
-      graph.getDotLabelText = (d) -> return ''
-      graph.xAxis.tickPadding 10
-      graph.yAxis
-        .ticks 5
-        .tickPadding 15
-        .tickFormat (d) -> '$'+d
-      graph.dataParser = (data) ->
-        data.forEach (d) =>
-          d[@options.key.y] = +d[@options.key.y]
-          d[@options.key.size] = +d[@options.key.size]
-        return data
-      graph.setTooltipData = (d) ->
-        dosesFormat = d3.format('.0s')
-        @$tooltip
-          .find '.tooltip-inner .title'
-          .html d.country
-        @$tooltip
-          .find '.tooltip-inner .vaccine'
-          .html d.vaccine
-        @$tooltip
-          .find '.tooltip-inner .price'
-          .html d.price
-        @$tooltip
-          .find '.tooltip-inner .dosis'
-          .html if d.doses then dosesFormat(d.doses)+' dosis ' else ''
-        @$tooltip
-          .find '.tooltip-inner .company'
-          .html if d.company then '('+d.company+')' else ''
-      # set data
-      graph.setData data
-      $(window).resize graph.onResize
-
+    vaccines2 = ['BCG','IPV','MMR','HepB-pediátrica','DTPa-IPV-HIB','DTaP','Tdap','DTP']
+    # load data
+    d3.queue()
+      .defer d3.csv, baseurl+'/data/prices-vaccines.csv'
+      .defer d3.csv, baseurl+'/data/gdp.csv'
+      #.defer d3.json, 'http://freegeoip.net/json/'
+      .await (error, data, countries) ->
+        # filter data to get only selected vaccines
+        data = data.filter (d) -> vaccines.indexOf(d.vaccine) != -1
+        # join data & countries gdp 
+        data.forEach (d) ->
+          country = countries.filter (e) -> e.code == d.country
+          d.price = +d.price
+          if country[0]
+            d.name = country[0]['name_'+lang]
+            d.gdp = country[0].value
+          else
+            d.name = d.country
+            d.gdp = 0
+        # sort data by gdp
+        data.sort (a,b) -> a.gdp - b.gdp
+        # setup prices graph
+        graph = new window.ScatterplotDiscreteGraph('vaccine-prices-graph',
+          aspectRatio: 0.5
+          margin:
+            top: 5
+            right: 5
+            left: 60
+            bottom: 20
+          key:
+            x: 'price'
+            y: 'name'
+            id: 'country'
+            #size: 'doses'
+            color: 'vaccine')
+        # update get id methods
+        graph.getDotId = (d) ->
+          return 'dot-'+d.country+'-'+d.vaccine
+        graph.getDotLabelId = (d) ->
+          return 'dot-label-'+d.country+'-'+d.vaccine
+        graph.getDotLabelText = (d) -> return ''
+        graph.yAxis.tickPadding 12
+        graph.xAxis
+          .ticks 5
+          .tickPadding 10
+          .tickFormat (d) -> '$'+d
+        graph.dataParser = (data) -> return data
+        graph.setTooltipData = (d) ->
+          dosesFormat = d3.format('.0s')
+          @$tooltip
+            .find '.tooltip-inner .title'
+            .html d.country
+          @$tooltip
+            .find '.tooltip-inner .vaccine'
+            .html d.vaccine
+          @$tooltip
+            .find '.tooltip-inner .price'
+            .html d.price
+          company = ''
+          if d.company
+            company = '('+d.company
+            if d.company2
+              company += ','+d.company2
+            if d.company3
+              company += ','+d.company3
+            company += ')'
+          @$tooltip
+            .find '.tooltip-inner .company'
+            .html company
+        # set data
+        graph.setData data
+        $(window).resize graph.onResize
+        # setup scatterplot prices/gdp graph
+        graph2 = new window.ScatterplotGraph('vaccine-prices-gdp-graph',
+          aspectRatio: 0.5
+          key:
+            x: 'price'
+            y: 'gdp'
+            id: 'name'
+            color: 'vaccine')
+        # update get id methods
+        graph2.getDotId = (d) ->
+          return 'dot-'+d.country+'-'+d.vaccine
+        graph2.getDotLabelId = (d) ->
+          return 'dot-label-'+d.country+'-'+d.vaccine
+        graph2.getDotLabelText = (d) -> return ''
+        graph2.xAxis
+          .ticks 5
+          .tickPadding 10
+          .tickFormat (d) -> '$'+d
+        graph2.dataParser = (data) -> return data
+        graph2.setTooltipData = (d) ->
+          dosesFormat = d3.format('.0s')
+          @$tooltip
+            .find '.tooltip-inner .title'
+            .html d.country
+          @$tooltip
+            .find '.tooltip-inner .vaccine'
+            .html d.vaccine
+          @$tooltip
+            .find '.tooltip-inner .price'
+            .html d.price
+          company = ''
+          if d.company
+            company = '('+d.company
+            if d.company2
+              company += ','+d.company2
+            if d.company3
+              company += ','+d.company3
+            company += ')'
+          @$tooltip
+            .find '.tooltip-inner .company'
+            .html company
+        # set data
+        graph2.setData data.filter (d) -> d.gdp != 0 and vaccines2.indexOf(d.vaccine) != -1
+        $(window).resize graph2.onResize
   
   ###
   setupGuatemalaCoverageLineGraph = ->

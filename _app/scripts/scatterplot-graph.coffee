@@ -1,12 +1,16 @@
 class window.ScatterplotGraph extends window.BaseGraph
 
 
+
   # Constructor
   # -----------
 
   constructor: (id, options) ->
     #console.log 'Scatterplot Graph', id, options
     super id, options
+    @options.dotSize = 7
+    @options.dotMinSize = 7
+    @options.dotMaxSize = 12
     return @
 
 
@@ -58,7 +62,7 @@ class window.ScatterplotGraph extends window.BaseGraph
     return d3.extent @data, (d) => d[@options.key.color]
 
   getSizeRange: =>
-    return [6, 12]
+    return [@options.dotMinSize, @options.dotMaxSize]
 
   getSizeDomain: =>
     return [0, d3.max(@data, (d) => d[@options.key.size])]
@@ -125,7 +129,7 @@ class window.ScatterplotGraph extends window.BaseGraph
     if @size
       return @size d[@options.key.size]
     else
-      return 6
+      return @options.dotSize
 
   getDotFill: (d) =>
     if @color
