@@ -28,7 +28,7 @@ Common
     }
     .tick line {
       display: block;
-      stroke: mix( $gray-light, $gray-lighter, 50% );
+      stroke: mix( $gray-light, $gray-lighter, 25% );
     }
   }
 
@@ -96,6 +96,10 @@ Common
     stroke: $color-orange;
   }
 
+  .tooltip{
+    pointer-events: none;
+  }
+
   .legend{
     text{
       font-size: 11px;
@@ -127,12 +131,31 @@ Common
   }
 
   .scatterplot-graph{
+    position: relative;
+
     .dot{
       fill: $brand-primary;
+      stroke: transparent;
+      stroke-width: 2px;
+      opacity: 0.7;
+      &.active{
+        opacity: 1;
+      }
+      &.inactive{
+        opacity: 0.6;
+        fill: mix($gray-light, $gray-lighter, 50%) !important;
+      }
     }
     .dot-label{
       font-size: 11px;
       fill: $gray-light;
+    }
+    .dot-line,
+    .dot-label{
+      pointer-events: none;
+    }
+    .dot-line{
+      stroke-width: 2px;
     }
   }
 
@@ -150,7 +173,6 @@ Common
     margin: $grid-gutter-width 0;
 
     .tooltip{
-      pointer-events: none;
       width: 190px;
 
       p{
@@ -1524,6 +1546,7 @@ Infographic
   }
 }
 
+// Inventors
 #inventors{
   clear: both;
   margin-left: -0.5*$grid-gutter-width;
@@ -1597,6 +1620,41 @@ Infographic
   }
 }
 
+// Prices Vaccines
+#vaccine-prices-graph{
+  .dot{
+    cursor: pointer;
+  }
+  .y.axis .tick text{
+    font-size: 14px;
+    fill: $brand-primary;
+  }
+  
+}
+
+
+#vaccine-prices-graph,
+#vaccine-prices-gdp-graph{
+  .x.axis line{
+    display: block;
+    stroke: mix($gray-light, $gray-lighter, 30%);
+  }
+  .tooltip{
+    min-width: 100px;
+    .tooltip-inner{
+      text-align: left;
+    }
+    .title{
+      color: $brand-primary;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: $grid-gutter-width/6;
+    }
+    .description{
+      margin-bottom: $grid-gutter-width/6;
+    }
+  }
+}
 
 
 // Iframe
