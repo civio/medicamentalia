@@ -14,7 +14,9 @@ lang:             es
 draft:            true
 ---
 
-
+<div class="container page-content" markdown="1">
+  <div class="page-content-container" markdown="1">
+    
 Hay dos premisas que, aplicadas a la compra de vacunas, se tambalean. La primera, que la contratación pública es transparente; la segunda, que cuanto más rico es un país, más paga a las farmacéuticas por la adquisición de cada dosis. Ni una ni otra se cumplen del todo cuando hablamos de la relación entre laboratorios y gobiernos. 
 
 La opacidad del sector llega hasta la OMS, que publica una [base de datos](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/) de precios a los que compran sus vacunas varios gobiernos del mundo en la que los nombres se anonimizan por petición de los propios estados miembros. Nadie quiere ser señalado si paga menos o más que el de al lado ni incumplir los acuerdos de confidencialidad firmados con las farmacéuticas. 
