@@ -72,8 +72,6 @@ We were not the first to investigate such a topic and *we were inspired by the r
 
 We also studied thoroughly existing analysis on price differences across countries and the importance of transparency in state-pharmaceutical negotiations, as well as all information on ongoing trends accompanying the WHO's [V3P project](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/). In parallel, we analyzed the positions from industry actors and the different organizations involved, e.g. GAVI, Médecins Sans Frontières and the WHO itself.
 
-Además, estudiamos a fondo los análisis sobre precios y comparativa entre países, así como del peso de la transparencia en las negociaciones entre estados y farmacéuticas, realizados hasta el momento, así como toda la información sobre tendencias del que acompaña al proyecto [V3P](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/), de la Organización Mundial de la Salud (OMS). En paralelo, analizamos el posicionamiento de la industria y las distintas organizaciones implicadas, como GAVI, Médicos Sin Fronteras y la propia OMS.
-
 {: #the-data}
 ### The data
 For this research, we needed to cross check various databases: immunization rates, cases by disease, deaths by disease, immunization schedules, levels of *stockouts*, public budgets allocated to immunization campaigns, purchase prices of vaccines for countries and organisations, as well as the basic elements required to provide context such as GDP or population by country or region. The majority of data collected, although updated in December 2016, refers to information covering the period up to 2015.
