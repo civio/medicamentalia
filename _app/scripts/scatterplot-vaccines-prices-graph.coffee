@@ -6,7 +6,6 @@ class window.ScatterplotVaccinesPricesGraph extends window.ScatterplotGraph
   constructor: (id, options) ->
     #console.log 'Scatterplot Discrete Graph', id, options
     super id, options
-    @vaccines = ['IPV','MMR','HepB-pediátrica','DTaP','Tdap']
     return @
 
 
@@ -19,17 +18,16 @@ class window.ScatterplotVaccinesPricesGraph extends window.ScatterplotGraph
   drawScales: ->
     super() 
     @line = d3.line()
-      #.curve d3.curveCatmullRom
+      .curve d3.curveCatmullRom
       .x (d) => @x d[@options.key.x]
       .y (d) => @y d[@options.key.y]
     return @
 
   drawGraph: ->
-    # draw lines
+    # draw lines between dots
     lineData = d3.nest()
       .key (d) -> d.vaccine
-      .entries @data.filter (d) => @vaccines.indexOf(d.vaccine) != -1
-    console.log lineData
+      .entries @data
     @container.selectAll('.dot-line')
       .data lineData
     .enter().append('path')
@@ -55,12 +53,6 @@ class window.ScatterplotVaccinesPricesGraph extends window.ScatterplotGraph
 
   getDotLabelText: (d) -> 
     return ''
-
-  getDotFill: (d) ->
-    if @vaccines.indexOf(d.vaccine) != -1
-      return @color d[@options.key.color]
-    else
-      return '#ddd'
   
   setTooltipData: (d) ->
     dosesFormat = d3.format('.0s')

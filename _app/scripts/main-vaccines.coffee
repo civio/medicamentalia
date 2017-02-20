@@ -458,7 +458,6 @@
 
   setupVaccinePricesGraph = ->
     vaccines = ['pneumo13','BCG','IPV','MMR','HepB-pediátrica','VPH','DTPa-IPV-HIB','DTaP','Tdap','DTP']
-    vaccines2 = ['BCG','IPV','MMR','HepB-pediátrica','DTPa-IPV-HIB','DTaP','Tdap','DTP']
     # load data
     d3.queue()
       .defer d3.csv, baseurl+'/data/prices-vaccines.csv'
@@ -493,40 +492,12 @@
             id: 'country'
             #size: 'doses'
             color: 'vaccine')
-        # update get id methods
-        graph.getDotId = (d) ->
-          return 'dot-'+d.country+'-'+d.vaccine
-        graph.getDotLabelId = (d) ->
-          return 'dot-label-'+d.country+'-'+d.vaccine
-        graph.getDotLabelText = (d) -> return ''
         graph.yAxis.tickPadding 12
         graph.xAxis
           .ticks 5
           .tickPadding 10
-          .tickFormat (d) -> '$'+d
-        graph.dataParser = (data) -> return data
-        graph.setTooltipData = (d) ->
-          dosesFormat = d3.format('.0s')
-          @$tooltip
-            .find '.tooltip-inner .title'
-            .html d.country
-          @$tooltip
-            .find '.tooltip-inner .vaccine'
-            .html d.vaccine
-          @$tooltip
-            .find '.tooltip-inner .price'
-            .html d.price
-          company = ''
-          if d.company
-            company = '('+d.company
-            if d.company2
-              company += ','+d.company2
-            if d.company3
-              company += ','+d.company3
-            company += ')'
-          @$tooltip
-            .find '.tooltip-inner .company'
-            .html company
+          .tickFormat (d) -> d+'€'
+        console.table data
         # set data
         graph.setData data
         $(window).resize graph.onResize
@@ -541,9 +512,13 @@
         graph2.xAxis
           .ticks 5
           .tickPadding 10
-          .tickFormat (d) -> '$'+d
+          .tickFormat (d) -> d+'€'
+        graph2.yAxis
+          .tickValues [0, 10000, 20000, 30000, 40000, 50000, 60000]
+          .tickFormat (d) -> d+'€'
+        graph2.getScaleYDomain = -> [0, 60000]
         # set data
-        graph2.setData data.filter (d) -> d.gdp != 0 and vaccines2.indexOf(d.vaccine) != -1
+        graph2.setData data.filter (d) -> d.gdp != 0 and ['IPV','MMR','HepB-pediátrica','DTPa-IPV-HIB','DTaP','Tdap','DTP'].indexOf(d.vaccine) != -1
         $(window).resize graph2.onResize
   
   ###

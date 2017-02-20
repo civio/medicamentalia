@@ -1629,7 +1629,28 @@ Infographic
     font-size: 14px;
     fill: $brand-primary;
   }
-  
+}
+#vaccine-prices-graph-legend{
+  ul{
+    padding: 0;
+    margin-bottom: $grid-gutter-width;
+  }
+  li{
+    display: inline-block;
+    list-style: none;
+    color: #000;
+    font-size: 0.875em;
+    line-height: 1.25em;
+    padding: $grid-gutter-width/6 $grid-gutter-width/3;
+    margin: 0;
+    border: $grid-gutter-width/6 solid white;
+    opacity: 0.85;
+    cursor: pointer;
+
+    &.inactive{
+      background: $gray-lighter !important;
+    }
+  }
 }
 
 

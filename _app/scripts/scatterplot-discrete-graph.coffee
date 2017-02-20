@@ -14,8 +14,6 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
   # ------------
 
   dataParser: (data) ->
-    data.forEach (d) =>
-      d[@options.key.y] = +d[@options.key.y]
     return data
 
   setScales: ->
@@ -28,7 +26,6 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
     return @
 
   drawScales: ->
-    console.log 'drawScales'
     # set y scale domain
     @y.domain @getScaleYDomain()
     # get dimensions
@@ -63,17 +60,29 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
       .style 'stroke', @getDotFill
       .style 'opacity', 0
       .call @setDotLinesDimensions
+    @drawLegend()
     return @
 
+  drawLegend: ->
+    vaccines = d3.nest()
+      .key (d) -> d.vaccine
+      .entries @data
+    d3.select('#vaccine-prices-graph-legend ul').selectAll('li')
+      .data(vaccines)
+    .enter().append('li')
+      .attr 'id', (d) -> 'legend-item-'+d.key
+      .style 'background', (d) => @color d.key
+      .html (d) -> d.key
+      .on 'mouseover', (d) => @highlightVaccines d.key
+      .on 'mouseout', @onMouseOut
+
   getDimensions: ->
-    console.log 'getDimensions'
     if @$el
       @containerWidth  = @$el.width()
       @width           = @containerWidth - @options.margin.left - @options.margin.right
       if @y
         @containerHeight = @y.domain().length * 30
         @height          = @containerHeight - @options.margin.top - @options.margin.bottom
-        console.log @y.domain(), @height
     return @
 
   updateGraphDimensions: ->
@@ -86,8 +95,17 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
   setXAxisPosition: (selection) =>
     selection.attr 'transform', 'translate(0,0)'
 
+  getDotId: (d) =>
+    return 'dot-'+d[@options.key.id]+'-'+d[@options.key.color]
+  
+  getDotLabelId: (d) =>
+    return 'dot-label-'+d[@options.key.id]+'-'+d[@options.key.color]
+
   getDotLineId: (d) =>
     return 'dot-line-'+d[@options.key.id]
+
+  getDotLabelText: (d) -> 
+    return ''
 
   getScaleYDomain: =>
     return @data.map (d) => d[@options.key.y]
@@ -102,19 +120,7 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
   # mouse events
   onMouseOver: (d) =>
     super(d)
-    key = d3.select(d3.event.target).data()[0][@options.key.color]
-    @container.selectAll('.dot')
-      .classed 'inactive', true
-    @container.selectAll('.dot')
-      .filter (d) => return d[@options.key.color] == key
-      .classed 'inactive', false
-      .classed 'active', true
-    @container.selectAll('.dot-line')
-      .filter (d) => return d[@options.key.color] == key
-      .style 'opacity', 1
-    # set selected dots on top
-    @container.selectAll('.dot')
-      .sort (a,b) => if a[@options.key.color] == key then 1 else -1
+    @highlightVaccines d3.select(d3.event.target).data()[0][@options.key.color]
 
   onMouseOut: (d) =>
     super(d)
@@ -123,4 +129,49 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
       .classed 'active', false
     @container.selectAll('.dot-line')
       .style 'opacity', 0
+    d3.selectAll('#vaccine-prices-graph-legend li')
+      .classed 'inactive', false
+
+  highlightVaccines: (vaccine) ->
+    @container.selectAll('.dot')
+      .classed 'inactive', true
+    @container.selectAll('.dot')
+      .filter (d) => return d[@options.key.color] == vaccine
+      .classed 'inactive', false
+      .classed 'active', true
+    @container.selectAll('.dot-line')
+      .filter (d) => return d[@options.key.color] == vaccine
+      .style 'opacity', 1
+    # set selected dots on top
+    @container.selectAll('.dot')
+      .sort (a,b) => if a[@options.key.color] == vaccine then 1 else -1
+    # set legend
+    d3.selectAll('#vaccine-prices-graph-legend li')
+      .classed 'inactive', true
+    d3.select('#vaccine-prices-graph-legend #legend-item-'+vaccine)
+      .classed 'inactive', false
+
+
+  setTooltipData: (d) ->
+    dosesFormat = d3.format('.0s')
+    @$tooltip
+      .find '.tooltip-inner .title'
+      .html d.name
+    @$tooltip
+      .find '.tooltip-inner .vaccine'
+      .html d.vaccine
+    @$tooltip
+      .find '.tooltip-inner .price'
+      .html d.price
+    company = ''
+    if d.company
+      company = '('+d.company
+      if d.company2
+        company += ','+d.company2
+      if d.company3
+        company += ','+d.company3
+      company += ')'
+    @$tooltip
+      .find '.tooltip-inner .company'
+      .html company
     
