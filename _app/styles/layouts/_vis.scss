@@ -12,6 +12,7 @@ Common
     line,
     path {
       display: none;
+      shape-rendering: crispEdges;
     }
     .tick text {
       font-size: 11px;
@@ -978,7 +979,6 @@ Infographic
     .axis line {
       fill: none;
       stroke: $gray-light;
-      shape-rendering: crispEdges;
     }
 
     .axis text{
@@ -1630,13 +1630,22 @@ Infographic
 .scatterplot-discrete-graph{
   margin-bottom: 2*$grid-gutter-width;
 
-  .dot{
-    cursor: pointer;
+  .x.axis line{
+    display: block;
+    stroke: mix($gray-light, $gray-lighter, 50%);
   }
+  .y.axis line{
+    opacity: 0.7;
+  }
+
 
   .y.axis .tick text{
     font-size: 14px;
     fill: $brand-primary;
+  }
+
+  .dot{
+    cursor: pointer;
   }
 
   .graph-legend{
@@ -1665,16 +1674,6 @@ Infographic
       }
     }
   }
-}
-
-
-.scatterplot-discrete-graph,
-#vaccine-prices-gdp-graph{
-
-  .x.axis line{
-    display: block;
-    stroke: mix($gray-light, $gray-lighter, 30%);
-  }
   
   .tooltip{
     min-width: 100px;
@@ -1695,6 +1694,9 @@ Infographic
 
 #vaccine-prices-tdap-graph,
 #vaccine-prices-ipv-graph{
+  .y.axis .tick line{
+    display: none;
+  }
   .dot,
   .dot-line{
     opacity: 1;
