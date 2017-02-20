@@ -135,7 +135,7 @@ Countries notify WHO if they have experienced stockouts, either at national leve
 {: #prices}
 #### Price data
 
-Trying to shed light on the market turned out to be much more difficult in this second phase, where we focused on prices paid by countries for vaccines, than in the first, when we investigated [the price of certain essential drugs](http://medicamentalia.org/access/prices/). There is very little information available, and what is there is partial. And comparisons, because of the multiple variables involved, are complex and force us to take the results with caution. The [WHO prince database](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1100) includes about 50 countries, but their names are anonymised.
+Trying to shed light on the market turned out to be much more difficult in this second phase, where we focused on prices paid by countries for vaccines, than in the first, when we investigated [the price of certain essential drugs](http://medicamentalia.org/access/prices/). There is very little information available, and what is there is partial. And comparisons, because of the multiple variables involved, are complex and force us to take the results with caution. The [WHO price database](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1100) includes about 50 countries, but their names are anonymised.
 
 We started with information from seven countries and three organizations about ten vaccines, those for which we had the most information available -although our database collects many more data points. Our goal, if we're able to find enough resources, is to keep growing the database, including additional countries and vaccines. [Do you want to collaborate?](#collaboration-and-reproduction). In all cases we have compared prices **without taxes**.
 
@@ -196,9 +196,9 @@ Home pictures credits (from Flickr): _[Untitled](https://www.flickr.com/photos/c
 
 Medicamentalia Vaccines is not a closed project. If you have relevant information or **you work for an organisation that wishes to reproduce all or part** of the content, [write to us](mailto:contacto@civio.es) and we will help you to make it happen.
 
-You can help, for example, by helping us find the information about the prices that your country pays for vaccines. We will include them in our database but, if you are a journalist, we'll give you time to write your own articles before publishing the new infomation.
+You can collaborate, for example, by helping us find the information about the prices that your country pays for vaccines. We will include them in our database but, if you are a journalist, we'll give you time to write your own articles before publishing the new infomation.
 
-**The database and all materials in the project are Creative Commons (CC BY). You may use anything that you need or that interests you on one condition: you must attribute and link to Medicamentalia**. We also ask that you tell us about it! We would love to hear from you.
+**The database and all materials produced by the project (i.e. not including photographies provided by third parties) are Creative Commons (CC BY). You may use anything that you need or that interests you on one condition: you must attribute and link to Medicamentalia**. We also ask that you tell us about it! We would love to hear from you.
 
 </div>
 </div>
