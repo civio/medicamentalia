@@ -58,9 +58,9 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
       .attr 'class', 'dot-line'
       .attr 'id', @getDotLineId
       .style 'stroke', @getDotFill
-      .style 'opacity', 0
       .call @setDotLinesDimensions
-    @drawLegend()
+    if @options.legend
+      @drawLegend()
     return @
 
   drawLegend: ->
@@ -124,9 +124,10 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
     # Set tooltip content
     @setTooltipData d
     # Set tooltip position (add legend height)
+    offsetTop = if @options.legend then $('#'+@id+' .graph-legend').height() else 0
     @$tooltip.css
       left:    +element.attr('cx') + @options.margin.left - (@$tooltip.width() * 0.5)
-      top:     +element.attr('cy') + $('#'+@id+' .graph-legend').height() + @options.margin.top - @$tooltip.height() - 15
+      top:     +element.attr('cy') + offsetTop + @options.margin.top - @$tooltip.height() - 15
       opacity: 1
     # hightlight selected vaccine
     @highlightVaccines d3.select(d3.event.target).data()[0][@options.key.color]
@@ -137,10 +138,11 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
       .classed 'inactive', false
       .classed 'active', false
     @container.selectAll('.dot-line')
-      .style 'opacity', 0
-    d3.selectAll('#'+@id+' .graph-legend li')
-      .classed 'inactive', false
       .classed 'active', false
+    if @options.legend
+      d3.selectAll('#'+@id+' .graph-legend li')
+        .classed 'inactive', false
+        .classed 'active', false
 
   highlightVaccines: (vaccine) ->
     @container.selectAll('.dot')
@@ -151,16 +153,17 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
       .classed 'active', true
     @container.selectAll('.dot-line')
       .filter (d) => return d[@options.key.color] == vaccine
-      .style 'opacity', 1
+      .classed 'active', true
     # set selected dots on top
     @container.selectAll('.dot')
       .sort (a,b) => if a[@options.key.color] == vaccine then 1 else -1
     # set legend
-    d3.selectAll('#'+@id+' .graph-legend li')
-      .classed 'inactive', true
-    d3.selectAll('#'+@id+' #legend-item-'+vaccine)
-      .classed 'inactive', false
-      .classed 'active', true
+    if @options.legend
+      d3.selectAll('#'+@id+' .graph-legend li')
+        .classed 'inactive', true
+      d3.selectAll('#'+@id+' #legend-item-'+vaccine)
+        .classed 'inactive', false
+        .classed 'active', true
 
 
   setTooltipData: (d) ->
