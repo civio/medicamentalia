@@ -7,7 +7,7 @@ home_description: Algunos países pagan más por sus vacunas que otros con renta
 img:              articles/home-stockout.jpg
 order:            4
 author:           Eva Belmonte
-pub_date:         2017-02-16
+pub_date:         2017-02-24
 slug:             precios
 ref:              prices
 lang:             es
@@ -16,7 +16,7 @@ draft:            true
 
 <div class="container page-content" markdown="1">
   <div class="page-content-container" markdown="1">
-    
+
 Hay dos premisas que, aplicadas a la compra de vacunas, se tambalean. La primera, que la contratación pública es transparente; la segunda, que cuanto más rico es un país, más paga a las farmacéuticas por la adquisición de cada dosis. Ni una ni otra se cumplen del todo cuando hablamos de la relación entre laboratorios y gobiernos. 
 
 La opacidad del sector llega hasta la OMS, que publica una [base de datos](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/) de precios a los que compran sus vacunas varios gobiernos del mundo en la que los nombres se anonimizan por petición de los propios estados miembros. Nadie quiere ser señalado si paga menos o más que el de al lado ni incumplir los acuerdos de confidencialidad firmados con las farmacéuticas. 
@@ -26,7 +26,9 @@ La opacidad del sector llega hasta la OMS, que publica una [base de datos](http:
 
 ## Nuevas y caras
 
-{% include vaccines/prices-scatterplot.es.html %}
+</div>
+{% include vaccines/prices-scatterplot.es.html id="all" title="Precios" legend=true %}
+<div class="page-content-container" markdown="1">
 
 Como ocurre con los medicamentos, los nuevos productos y sus [patentes](http://medicamentalia.org/access/patents/) disparan los [precios](http://medicamentalia.org/access/prices/). **"Con solo dos fabricantes para cada una de las nuevas y mucho más caras vacunas -contra el neumococo, el rotavirus y el Virus del Papiloma Humano (VPH)- y la imposibilidad de usar los dos productos disponibles de forma intercambiable, las compañías están disfrutando de casi monopolios"**, denuncia MSF en su informe.  
 
@@ -53,19 +55,25 @@ Por culpa de estas nuevas, y más caras, vacunas, el coste de inmunizar a un ni�
 
 Podemos ver cómo funciona esta dinámica en los precios de vacunas como la triple vírica -contra sarampión, paperas o rubeola- o contra la Hepatitis B, que suben según lo hacen los ingresos del país. Pero lo cierto es que esa teoría no siempre funciona. Aunque múltiples variables pueden justificar algunas diferencias, como el volumen de compra o los tipos de presentación, podemos encontrar tendencias en los datos que no parecen encajar con eso de que el más rico paga más.
 
-{% include vaccines/prices-pib-scatterplot.es.html %}
-
-La DTP es una de las cásicas del calendario de vacunación en todo el mundo. Protege contra la difteria, el tétanos y la tos ferina, y cuenta con varias versiones. La que incluye el tipo acelular de la tos ferina (DTaP) es más avanzada y cara que la DTP original. Pese a las enormes diferencias de riqueza entre Estados Unidos y España -el país norteamericano supera el doble del PIB per cápita español-, ambos compran la dosis a GSK a un precio muy similar: 13,28 en España y 13,86 en Estados Unidos.
-
-La tercera versión de esta vacuna es la Tdap, de contenido reducido y también acelular, que se suele utilizar en adultos y en adolescentes, a veces como dosis de refuerzo. En este caso, las cuentas tampoco encajan. Polonia paga más (14,8) que Portugal (13,25) y España (9,41), pese a que los tres países compran a GSK y a que el orden de sus niveles de riqueza es justo el opuesto. 
-
 <div class="container-right">
 {% include vaccines/pib-countries.es.html %}
 </div>
 
-En la IPV, la vacuna que protege contra la polio, Hungría paga más que España y España paga más que Estados Unidos. En Italia, el precio por dosis es diferente según se compre en una época u otra del año, aunque ambas compras sean a Sanofi y en un mismo año, 2016. 
+La DTP es una de las cásicas del calendario de vacunación en todo el mundo. Protege contra la difteria, el tétanos y la tos ferina, y cuenta con varias versiones. La que incluye el tipo acelular de la tos ferina (DTaP) es más avanzada y cara que la DTP original. Pese a las enormes diferencias de riqueza entre Estados Unidos y España -el país norteamericano supera el doble del PIB per cápita español-, ambos compran la dosis a GSK a un precio muy similar: 13,28 en España y 13,86 en Estados Unidos.
 
-La vacuna DTP se une a veces a otras vacunas para intentar, de una sola vez, cubrir el máximo de inmunizaciones posible. Un ejemplo es la pentavalente, que protege, además de contra difteria, tétanos y tos ferina, contra Hepatitis B e Hib (anti-Haemophilus influenzae tipo b, una bacteria que causa neumonía, problemas respiratorios, infecciones y puede llevar a la muerte). Ukrania (de nivel medio-bajo) paga a Sanofi casi el mismo precio que España (de nivel alto): más de 22 euros por dosis. Si a esa combinación añadimos la vacuna contra la Hepatitis B, tenemos la vacuna hexavalente. Tanto Portugal como España la compran a GSK, pero el gobierno luso paga diez euros más por dosis. 
+<div class="container-right">
+{% include vaccines/prices-scatterplot.es.html id="tdap" title="Precio Tdap" %}
+</div>
+
+La tercera versión de esta vacuna es la Tdap, de contenido reducido y también acelular, que se suele utilizar en adultos y en adolescentes, a veces como dosis de refuerzo. En este caso, las cuentas tampoco encajan. Polonia paga más (14,8) que Portugal (13,25) y España (9,41), pese a que los tres países compran a GSK y a que el orden de sus niveles de riqueza es justo el opuesto. 
+
+La vacuna DTP se une a veces a otras vacunas para intentar, de una sola vez, cubrir el máximo de inmunizaciones posible. Un ejemplo es la pentavalente, que protege, además de contra difteria, tétanos y tos ferina, contra Hepatitis B e Hib (anti-Haemophilus influenzae tipo b, una bacteria que causa neumonía, problemas respiratorios, infecciones y puede llevar a la muerte). Ukrania (de nivel medio-bajo) paga a Sanofi casi el mismo precio que España (de nivel alto): más de 22 euros por dosis. Si a esa combinación añadimos la vacuna contra la Hepatitis B, tenemos la vacuna hexavalente. Tanto Portugal como España la compran a GSK, pero el gobierno luso paga diez euros más por dosis.
+
+<div class="container-right">
+{% include vaccines/prices-scatterplot.es.html id="ipv" title="Precio IPV" %}
+</div>
+
+En la IPV, la vacuna que protege contra la polio, Hungría paga más que España y España paga más que Estados Unidos. En Italia, el precio por dosis es diferente según se compre en una época u otra del año, aunque ambas compras sean a Sanofi y en un mismo año, 2016.  
 
 Portugal [ha llegado a pagar](http://www.base.gov.pt/Base/pt/Pesquisa/Contrato?a=2934885), a principios de 2017, 25 euros por dosis de vacuna contra la tuberculosis, la BCG, que ha venido sufriendo problemas de [desabastecimiento](http://medicamentalia.org/vaccines/desabastecimiento/#sin-stock-contra-la-tuberculosis) en los últimos años. En 2016, poco antes, había pagado la dosis a 8,90 euros, un precio inferior pero muy por encima de lo que pagan el resto de países analizados, debido en parte a que los portugueses adquieren un volumen menor. 
 
@@ -87,7 +95,7 @@ Ambos sistemas están relacionados, puesto que ambos incluyen en sus negociacion
 
 En otras ocasiones, lo que hacen las empresas es ofrecer distintas presentaciones a GAVI y al Fondo, y así evitan tener que rebajar los precios para toda Latinoamérica. Por ejemplo: Sanofi vende a GAVI un paquete de diez dosis de vacuna contra la polio a 0,75 euros, el precio más bajo del mundo. El Fondo no recibe esa presentación, sino las de una y cinco dosis, en las que los precios son de 2,63 y 1,90 euros por dosis, los mismos que Unicef consigue en esas presentaciones.
 
-{% include vaccines/prices-organizations-scatterplot.es.html %}
+{% include vaccines/prices-scatterplot.es.html id="organizations" title="Precio organizaciones" legend=true %}
 
 Para los países participantes del Fondo Rotatorio existe un beneficio extra más allá de la rebaja de precios: una vez acordado el pedido anual, con antelación, es la OPS quien se encarga de comprar las vacunas y asegurar su calidad. El Gobierno no participa en ese proceso y evitan así casos de corrupción estatales.
 

@@ -1,8 +1,12 @@
-</div>
 <div class="graph-container">
-  <p class="graph-container-caption">Precios</p>
-  <div id="vaccine-prices-graph" class="scatterplot-graph scatterplot-discrete-graph">
+  <p class="graph-container-caption">{{ include.title }}</p>
+  {% if include.description %}
+    {{ include.description }}
+  {% endif %}
+  <div id="vaccine-prices-{{ include.id }}-graph" class="scatterplot-graph scatterplot-discrete-graph">
+    {% if include.legend %}
     <div class="graph-legend"><ul></ul></div>
+    {% endif %}
     <div class="tooltip top" role="tooltip">
       <div class="tooltip-arrow"></div>
       <div class="tooltip-inner">
@@ -14,4 +18,3 @@
     </div>
   </div>
 </div>
-<div class="page-content-container" markdown="1">
