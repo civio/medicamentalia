@@ -66,9 +66,13 @@ Thanks to everyone that gave up their time and knowledge in the interviews, both
 
 As with all Civio projects, the first step forwards in the investigation implied a necessary step backwards - we had to take a plunge unto the subject. Whilst in the first part of the Medicamentalia project we focused on researching access to medicines (prices, patent systems, etc.), in this second phase we wanted to investigate vaccines on an international level. This time, we wanted to go beyond the costs and focus on other elements such as immunization rates, the problems that exist with immunization, how pooled purchasing systems operate between different countries and supply issues, to name but a few. 
 
-We read dozens of academic articles and thoroughly analysed documents from international organisations, as well as recent reports from the [Strategic Advisory Group of Experts (SAGE)](http://www.who.int/immunization/policy/sage/en/){:target="_blank"}, a WHO group that analyses themes related to immunization. 
+We read dozens of academic articles and thoroughly analysed documents from international organisations, as well as recent reports from the [Strategic Advisory Group of Experts (SAGE)](http://www.who.int/immunization/policy/sage/en/){:target="_blank"}, a World Health Organization (WHO) group that analyses themes related to immunization. 
 
-We were not the first to investigate such a topic and *we were inspired by the research of our peers*. The [analysis and visualisation](http://graphics.wsj.com/infectious-diseases-and-vaccines/){:target="_blank"} of the effects of the introduction of the measles vaccine in various US states, created by the Wall Street Journal is of particular note. It made us consider the possibility of creating a similar graphic on a wider scale, to cover all the countries in the world (or most of them, anyway). So, we created the graphic that you can see in the report on immunization levels. We were also inspired by the [study](http://www.economist.com/blogs/graphicdetail/2016/03/daily-chart-16?utm_content=31884172&utm_medium=social&utm_source=twitter){:target="_blank"} by The Economist about the surprising differences in immunization rates between developing countries and developed countries. This is a theme that caught our attention when we first studied the data and is reflected in the article about anti-vaccine sentiment. 
+We were not the first to investigate such a topic and *we were inspired by the research of our peers*. The [analysis and visualisation](http://graphics.wsj.com/infectious-diseases-and-vaccines/){:target="_blank"} of the effects of the introduction of the measles vaccine in various US states, created by the Wall Street Journal is of particular note. It made us consider the possibility of creating a similar graphic on a wider scale, to cover all the countries in the world (or most of them, anyway). So, we created the graphic that you can see in the report on immunization levels. We were also inspired by the [study](http://www.economist.com/blogs/graphicdetail/2016/03/daily-chart-16){:target="_blank"} by The Economist about the surprising differences in immunization rates between developing countries and developed countries. This is a theme that caught our attention when we first studied the data and is reflected in the article about anti-vaccine sentiment. 
+
+We also studied thoroughly existing analysis on price differences across countries and the importance of transparency in state-pharmaceutical negotiations, as well as all information on ongoing trends accompanying the WHO's [V3P project](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/). In parallel, we analyzed the positions from industry actors and the different organizations involved, e.g. GAVI, Médecins Sans Frontières and the WHO itself.
+
+Además, estudiamos a fondo los análisis sobre precios y comparativa entre países, así como del peso de la transparencia en las negociaciones entre estados y farmacéuticas, realizados hasta el momento, así como toda la información sobre tendencias del que acompaña al proyecto [V3P](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/), de la Organización Mundial de la Salud (OMS). En paralelo, analizamos el posicionamiento de la industria y las distintas organizaciones implicadas, como GAVI, Médicos Sin Fronteras y la propia OMS.
 
 {: #the-data}
 ### The data
@@ -130,6 +134,45 @@ Data on vaccine stockouts come from the WHO monitoring system of vaccine-prevent
 
 Countries notify WHO if they have experienced stockouts, either at national level or in some of the health districts where each country is divided. The global figure of 97 states that suffered a shortage in 2015 of some of the essential vaccines includes both those produced at the regional and national level. However, to make the map of stockouts of the vaccine against tuberculosis simpler, only the problems at national level have been taken into account, because of their greater relevance.
 
+{: #prices}
+#### Price data
+
+Trying to shed light on the market turned out to be much more difficult in this second phase, where we focused on prices paid by countries for vaccines, than in the first, when we investigated [the price of certain essential drugs](http://medicamentalia.org/access/prices/). There is very little information available, and what is there is partial. And comparisons, because of the multiple variables involved, are complex and force us to take the results with caution. The [WHO prince database](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1100) includes about 50 countries, but their names are anonymised.
+
+We started with information from seven countries and three organizations about ten vaccines, those for which we had the most information available -although our database collects many more data points. Our goal, if we're able to find enough resources, is to keep growing the database, including additional countries and vaccines. [Do you want to collaborate?](#collaboration-and-reproduction). In all cases we have compared prices **without taxes**.
+
+The sources of the prices paid by the organizations are the following:
+
+* [PAHO Revolving Fund](http://www.paho.org/hq/index.php?option=com_docman&task=doc_download&gid=34168&Itemid=270&lang=en), with data from 2016. A PDF that we converted into structured data. The main issue with it is that the information is not broken down by manufacturer and only a weighted average is published.
+* **Unicef** published its price data in 2011 for the first time, and does [break down prices per manufacturer](https://www.unicef.org/supply/index_57476.html). The information published includes data from 2001 to 2016, so we used the latest year.
+* MSF sent us a database containing the prices paid when purchasing their vaccines.
+
+For countries, the search for information is much more complicated. We reviewed public procurement sites, government transparency portals and official purchasing documents from more than 30 countries, trying to cover all types of regions and income levels. In most cases, the information is not public or can't be found without deeper local knowledge. In others, it's just hidden. In the end, unfortunately, we could only find a country outside the high income range, but we continue to work on improving the representativeness of the data.
+
+* **Spain**. We use the national level procurement site, *Contratación del Estado*, and the Official Gazette, BOE. The price information comes from the [framework agreement](http://boe.es/buscar/doc.php?id=BOE-B-2015-8168) signed for 2015 and 2016, which covers 15 of the 17 regional governments (Andalusia and the Basque Country are left out), the cities of Ceuta and Melilla and purchases made by the central government through the Ministries of Defense and Finance. As of the time of this investigation being published, the Government is evaluating the award of the [next framework agreement](https://www.boe.es/diario_boe/txt.php?id=BOE-B-2016-65952), which will regulate prices between 2017 and 2020. We've also reviewed purchases made during 2015 in Catalonia, Basque Country and Andalusia, since they publish -in their procurement information sites- data about prices per dose, although often hidden in the bid formalization paperwork. Although some of these regions are outside the national joint purchasing system, they've purchased at the same prices in most cases. Hence, if the price of a vaccine was not available from the framework agreement (because it wasn't awarded to any bidder in the first round), such as for the pneumococcus vaccine, we've used the price of adjudication in the regions.
+
+* **United States**. The CDC (Center for Disease Control & Prevention) publishes [current prices](https://www.cdc.gov/vaccines/programs/vfc/awardees/vaccine-management/price-list/index.html) in a easy to understand list. We collected the data in February 2, 2017 and subtracted taxes.
+
+* **Portugal**. Prices extracted from the official public contracts database [BASE](http://www.base.gov.pt/Base/en/Homepage), by IMPIC (Institute of the Public Markets of Real Estate and Construction). Prices refer to purchases made in 2016.
+
+* **Italy**. The Directorate-General for Prevention publishes a [list](http://www.salute.gov.it/portale/ministro/p4_10_0.jsp?lingua=italiano&label=trasparenza10&id=1088&menu=trasparenza) of contracts, which includes vaccine prices for 2015. At the moment there is no more recent information.
+
+* **Hungary**. We use public procurement data from the [Department of Health](https://www.antsz.hu/).
+
+* **Ukraine**. We used [Prozorro](https://prozorro.gov.ua/en/tender/search/?query=33651600), a public procurement information platform.
+
+* **Poland**. We use the [webpage](http://www.zzpprzymz.pl/index.php) from the Department of Public Contracts of the Ministry of Health. We were able to extract information from only some of the adjudications shown, since in many of them there was no price per dose or it was impossible to calculate.
+
+In all cases, currency conversions to euros for the years 2015 and 2016 were made using the US Internal Revenue Service [average exchange rates](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates). For 2017, we used exchange rates [as of December 31, 2016](https://www.fiscal.treasury.gov/fsreports/rpt/treasRptRateExch/currentRates.htm).
+
+##Comparing prices
+
+We needed to cluster all the purchases into basic groups of vaccines, which we then differentiated more finely according to their target users (i.e. children or adults), whether they were conjugated or not... We decided to analyze only those vaccines for which more data points were available or were more relevant from a journalistic point of view (e.g. because they are more expensive). Each of the vaccines has its own casuistry and, as the [WHO itself admits](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module2/v3p_factors_to_consider.pdf?ua=1), it's challenging to perform a 100% rigorous comparison.
+
+We used some lists like [the one from the WHO](https://extranet.who.int/gavi/PQ_Web/), as well as manufacturers' web pages, some vademecum and technical specifications, to understand which subtypes existed globally for each vaccine.
+
+We have included in our articles all the prices, as a range, paid by a country or organization in the analyzed time, in order to represent all the the different options (e.g. brand, packaging). We've tried to compare only those data points that, because of their composition and other characteristics, were actually comparable, but in some cases the information was not enough. If you find any errors, please [let us know](mailto: contacto@civio.es).
+
 #### Other data sources
 
 - Immunization schedules for all countries via [WHO](http://apps.who.int/immunization_monitoring/globalsummary/schedules){:target="_blank"}.
@@ -153,7 +196,11 @@ Home pictures credits (from Flickr): _[Untitled](https://www.flickr.com/photos/c
 
 ## Collaboration and reproduction
 
-Medicamentalia Vaccines is not a closed project. If you have relevant information or **you work for an organisation that wishes to reproduce all or part** of the content, [write to us](mailto:contacto@civio.es) and we will help you to make it happen. **The database and all materials in the project are Creative Commons (CC BY). You may use anything that you need or that interests you on one condition: you must attribute and link to Medicamentalia**. We also ask that you tell us about it! We would love to hear from you.
+Medicamentalia Vaccines is not a closed project. If you have relevant information or **you work for an organisation that wishes to reproduce all or part** of the content, [write to us](mailto:contacto@civio.es) and we will help you to make it happen.
+
+You can help, for example, by helping us find the information about the prices that your country pays for vaccines. We will include them in our database but, if you are a journalist, we'll give you time to write your own articles before publishing the new infomation.
+
+**The database and all materials in the project are Creative Commons (CC BY). You may use anything that you need or that interests you on one condition: you must attribute and link to Medicamentalia**. We also ask that you tell us about it! We would love to hear from you.
 
 </div>
 </div>
