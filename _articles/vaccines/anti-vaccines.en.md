@@ -39,11 +39,7 @@ In fact, **France is the country with the lowest vaccine confidence level**, acc
 **Seven of the ten countries with the lowest vaccine confidence level were European**. This is despite the fact that serious side effects are extremely rare, [acording most investigations](https://www.science.org.au/learning/general-audience/science-booklets/science-immunisation/4-are-vaccines-safe){:target="_blank"}. This question [worries](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1){:target="_blank"} the experts on immunization from the WHO.
 
 </div>
-<div class="graph-container">
-  <p class="graph-container-caption" style="margin-bottom: 0">Level of distrust in vaccine safety</p>
-  <p>2016 data</p>
-  <div id="vaccine-confidence-graph" class="scatterplot-graph"></div>
-</div>
+{% include vaccines/vaccine_confidence.en.html %}
 <div class="page-content-container" markdown="1">
 
 One of the arguments of certain anti-vaccine movements is based on **the false relationship between the MMR vaccine and autism**. In 1998, Andrew Wakefield published a study in The Lancet in which he claimed to prove this link. In 2010, after many colleagues refuted these claims, the magazine [retracted the article](http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(97)11096-0/abstract){:target="_blank"}. 

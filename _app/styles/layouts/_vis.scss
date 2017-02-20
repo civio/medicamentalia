@@ -1635,8 +1635,8 @@ Infographic
 
   .graph-legend{
     ul{
-      padding: 0;
-      margin-bottom: $grid-gutter-width;
+      padding: 0 0 $grid-gutter-width;
+      margin-bottom: 0;
     }
     li{
       display: inline-block;

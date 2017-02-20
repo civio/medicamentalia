@@ -455,93 +455,6 @@
             $el.find('.immunization-description').show()
           # On resize
           $(window).resize -> graph.onResize()
-
-  setupVaccinePricesGraph = ->
-    vaccines = ['pneumo13','BCG','IPV','MMR','HepB-pediátrica','VPH','DTPa-IPV-HIB','DTaP','Tdap','DTP']
-    # load data
-    d3.queue()
-      .defer d3.csv, baseurl+'/data/prices-vaccines.csv'
-      .defer d3.csv, baseurl+'/data/gdp.csv'
-      #.defer d3.json, 'http://freegeoip.net/json/'
-      .await (error, data, countries) ->
-        # filter data to get only selected vaccines
-        data = data.filter (d) -> vaccines.indexOf(d.vaccine) != -1
-        # join data & countries gdp 
-        data.forEach (d) ->
-          country = countries.filter (e) -> e.code == d.country
-          d.price = +d.price
-          if country[0]
-            d.name = country[0]['name_'+lang]
-            d.gdp = country[0].value
-          else
-            d.name = d.country
-            d.gdp = 0
-        # sort data by gdp
-        data.sort (a,b) -> a.gdp - b.gdp
-        # setup prices graph
-        graph = new window.ScatterplotDiscreteGraph('vaccine-prices-graph',
-          aspectRatio: 0.5
-          margin:
-            top: 5
-            right: 5
-            left: 60
-            bottom: 20
-          key:
-            x: 'price'
-            y: 'name'
-            id: 'country'
-            #size: 'doses'
-            color: 'vaccine')
-        graph.yAxis.tickPadding 12
-        graph.xAxis
-          .ticks 5
-          .tickPadding 10
-          .tickFormat (d) -> d+'€'
-        console.table data
-        # set data
-        graph.setData data
-        $(window).resize graph.onResize
-        # setup prices organizations
-        graph2 = new window.ScatterplotDiscreteGraph('vaccine-prices-organizations-graph',
-          aspectRatio: 0.5
-          margin:
-            top: 5
-            right: 5
-            left: 60
-            bottom: 20
-          key:
-            x: 'price'
-            y: 'name'
-            id: 'country'
-            #size: 'doses'
-            color: 'vaccine')
-        graph2.yAxis.tickPadding 12
-        graph2.xAxis
-          .ticks 5
-          .tickPadding 10
-          .tickFormat (d) -> d+'€'
-        # set data
-        graph2.setData data.filter (d) -> d.country == 'MSF' || d.country == 'PAHO' || d.country == 'UNICEF'
-        $(window).resize graph2.onResize
-        # setup scatterplot prices/gdp graph
-        graph3 = new window.ScatterplotVaccinesPricesGraph('vaccine-prices-gdp-graph',
-          aspectRatio: 0.5
-          key:
-            x: 'price'
-            y: 'gdp'
-            id: 'name'
-            color: 'vaccine')
-        graph3.xAxis
-          .ticks 5
-          .tickPadding 10
-          .tickFormat (d) -> d+'€'
-        graph3.yAxis
-          .tickValues [0, 10000, 20000, 30000, 40000, 50000, 60000]
-          .tickFormat (d) -> d+'€'
-        graph3.getScaleYDomain = -> [0, 60000]
-        # set data
-        graph3.setData data.filter (d) -> d.gdp != 0 and ['IPV','MMR','HepB-pediátrica','DTPa-IPV-HIB','DTaP','Tdap','DTP'].indexOf(d.vaccine) != -1
-        $(window).resize graph3.onResize
   
   ###
   setupGuatemalaCoverageLineGraph = ->
@@ -632,5 +545,9 @@
 
   if $('#vaccine-prices-graph').length > 0
     setupVaccinePricesGraph()
+
+  # Setup vaccines prices
+  if $('body').hasClass('prices') ||  $('body').hasClass('precios')
+    new VaccinesPrices lang, baseurl
 
 ) jQuery

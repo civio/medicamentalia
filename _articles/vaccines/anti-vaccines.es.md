@@ -39,11 +39,7 @@ De hecho, **Francia es el país donde más se desconfía de la seguridad de las 
 **Siete de los diez países con menor confianza en las vacunas son europeos**, lo que [preocupa](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1){:target="_blank"} al grupo de expertos en vacunación de la OMS. Y eso, pese a que los efectos secundarios graves son extremadamente raros, [según la mayoría de las investigaciones](https://www.science.org.au/learning/general-audience/science-booklets/science-immunisation/4-are-vaccines-safe){:target="_blank"}. 
 
 </div>
-<div class="graph-container">
-  <p class="graph-container-caption" style="margin-bottom: 0">Nivel de desconfianza en la seguridad de las vacunas</p>
-  <p>Datos de 2016</p>
-  <div id="vaccine-confidence-graph" class="scatterplot-graph"></div>
-</div>
+{% include vaccines/vaccine_confidence.es.html %}
 <div class="page-content-container" markdown="1">
 
 Uno de los argumentos de algunos movimientos antivacunas está basado en **la falsa relación entre la triple vírica y el autismo**. En 1998, Andrew Wakefield divulgó a través de The Lancet un estudio en el que afirmaba demostrar ese vínculo. En 2010, después de que varios colegas lo refutaran, la revista lo [retiró y se retractó de lo publicado](http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(97)11096-0/abstract){:target="_blank"}. 
