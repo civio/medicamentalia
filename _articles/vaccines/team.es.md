@@ -135,7 +135,7 @@ Los países notifican a la OMS si les han faltado vacunas, tanto a nivel naciona
 
 {: #precios}
 #### Datos sobre precios
-Intentar poner luz sobre el mercado ha sido mucho más difícil en esta segunda fase, en la que nos centramos en el precio que pagan los estados por las vacunas, que en la primera, cuando investigamos [el precio en farmacia de ciertos medicamentos esenciales](http://medicamentalia.org/access/precios/). Hay poquísima información, la que hay es parcial y la comparación, por culpa de las múltiples variables que intervienen, es compleja y sus resultados deben ser tomados con cautela. La [base de datos de la OMS](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1100). Con datos anonimizados. ) incluye unos 50 países, pero están anonimizados.
+Intentar poner luz sobre el mercado ha sido mucho más difícil en esta segunda fase, en la que nos centramos en el precio que pagan los estados por las vacunas, que en la primera, cuando investigamos [el precio en farmacia de ciertos medicamentos esenciales](http://medicamentalia.org/access/precios/). Hay poquísima información, la que hay es parcial y la comparación, por culpa de las múltiples variables que intervienen, es compleja y sus resultados deben ser tomados con cautela. La [base de datos de la OMS](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1100) incluye unos 50 países, pero están anonimizados.
 
 Arrancamos con información de siete países y tres organizaciones, y con diez vacunas, aquellas de las que tenemos más información para poder comparar -aunque nuestra base de datos recoge muchísimas más. El objetivo, si las fuerzas y los medios nos acompañan, es hacer crecer esta información con más países y más vacunas [[¿quieres colaborar?](http://medicamentalia.org/vaccines/nosotros/#colabora-y-republica)]. En todos los casos hemos comparado precios **sin impuestos**. 
 
@@ -147,11 +147,11 @@ Las fuentes de los precios que pagan las organizaciones son las siguientes:
 
 Por países, la búsqueda de información es mucho más complicada. Revisamos los perfiles del contratante, páginas de transparencia y otros documentos oficiales sobre compra pública de más de 30 países, intentando abarcar todo tipo de regiones e ingresos. En la mayoría de casos, la información no es pública o es imposible acceder a ella sin un conocimiento más profundo. En otros, directamente, la ocultan. Al final, por desgracia, solo conseguimos un país que no fuera del rango de ingresos altos, pero seguimos trabajando en mejorar la representatividad de los datos. 
 
-* **España**. Utilizamos Contratación del Estado y BOE. La información de precios sale del [acuerdo marco](http://boe.es/buscar/doc.php?id=BOE-B-2015-8168) que se firmó para 2015 y 2016 y que incluye a 15 de las 17 comunidades autónomas -Andalucía y País Vasco quedan fuera), a las ciudades de Ceuta y Melilla y las compras que realice el gobierno central a través de los ministerios de Defensa y de Hacienda. En la fecha de publicación de la investigación, el Gobierno está evaluando la adjudicación del [siguiente acuerdo marco](https://www.boe.es/diario_boe/txt.php?id=BOE-B-2016-65952), que regirá los precios entre 2017 y 2020. Además, hemos revisado compras durante 2015 de perfiles del contratante de Catalunya, País Vasco y Andalucía, que publican datos de precios por dosis, en la mayoría de casos escondidos en las actas de adjudicación. Aunque algunas de esas comunidades estén fuera del sistema de compra conjunta, compran a los mismos precios en la mayoría de casos analizados. Por esa razón, si el precio de una vacuna no estaba en el acuerdo marco (porque quedó desierto ese lote en primera ronda), hemos usado el precio de adjudicación en una o varias comunidades autónomas, como con la del vacuna el neumococo. 
+* **España**. Utilizamos Contratación del Estado y BOE. La información de precios sale del [acuerdo marco](http://boe.es/buscar/doc.php?id=BOE-B-2015-8168) que se firmó para 2015 y 2016 y que incluye a 15 de las 17 comunidades autónomas (Andalucía y País Vasco quedan fuera), a las ciudades de Ceuta y Melilla y las compras que realice el gobierno central a través de los ministerios de Defensa y de Hacienda. En la fecha de publicación de la investigación, el Gobierno está evaluando la adjudicación del [siguiente acuerdo marco](https://www.boe.es/diario_boe/txt.php?id=BOE-B-2016-65952), que regirá los precios entre 2017 y 2020. Además, hemos revisado compras durante 2015 de perfiles del contratante de Catalunya, País Vasco y Andalucía, que publican datos de precios por dosis, en la mayoría de casos escondidos en las actas de adjudicación. Aunque algunas de esas comunidades estén fuera del sistema de compra conjunta, compran a los mismos precios en la mayoría de casos analizados. Por esa razón, si el precio de una vacuna no estaba en el acuerdo marco (porque quedó desierto ese lote en primera ronda), hemos usado el precio de adjudicación en una o varias comunidades autónomas, como con la del vacuna el neumococo. 
 
 * **Estados Unidos**. El CDC (Centers for Disease Control & Prevention) publica los [precios](https://www.cdc.gov/vaccines/programs/vfc/awardees/vaccine-management/price-list/index.html) en un listado sencillo y fácil de entender y analizar. Hemos recogido datos actualizados a 2 de febrero de 2017, y hemos restado las tasas. 
 
-* **Portugal**. La información está extraída de la base de contratos públicos [BASE](http://www.base.gov.pt/Base/pt/Homepage), de IMPIC (Institutos dos Mercados Públicos do Inmobiliario e da ConstruÇao). Los precios se refieren a compras realizadas en 2016. 
+* **Portugal**. La información está extraída de la base de contratos públicos [BASE](http://www.base.gov.pt/Base/pt/Homepage), de IMPIC (Institutos dos Mercados Públicos do Inmobiliario e da Construçao). Los precios se refieren a compras realizadas en 2016. 
 
 * **Italia**. La Dirección General de Prevención publica un [listado](http://www.salute.gov.it/portale/ministro/p4_10_0.jsp?lingua=italiano&label=trasparenza10&id=1088&menu=trasparenza) de contratos, que incluye las vacunas, de 2015. Por el momento, no hay datos más actualizados. 
 
@@ -163,12 +163,11 @@ Por países, la búsqueda de información es mucho más complicada. Revisamos lo
 
 En todos los casos, las conversiones de moneda a euros para los años 2015 y 2016 se realizaron usando las ratios de cambio medias del [US Internal Revenue Service](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates). Para 2017, hemos usado las tasas de cambio [a 31 de diciembre de 2016](https://www.fiscal.treasury.gov/fsreports/rpt/treasRptRateExch/currentRates.htm).
 
-##Comparando
 A la hora de comparar necesitábamos agrupar todas las compras en grupos básicos de vacunas, que luego desglosábamos según si eran infantiles o para adultos, si eran conjugadas o no... Decidimos analizar las que tienen más fuentes de datos o son más relevantes periodísticamente, porque son más caras, por ejemplo. Cada una de ellas tiene su casuística y, como admite la propia [OMS](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module2/v3p_factors_to_consider.pdf?ua=1), comparar siendo 100% rigurosos es muy complicado. 
 
 Usamos algunas listas como [la de la OMS](https://extranet.who.int/gavi/PQ_Web/) y páginas web de fabricantes y algún vademecum para intentar tener una idea global de qué subtipos existían dentro de cada vacuna, además de las páginas de especificaciones técnicas.  
 
-Hemos incluído en nuestra información todos los precios, como rango, que ha pagado un país u organización en el tiempo analizado, así nos aseguramos de que están representadas las distintas opciones -marca, presentación. Hemos intentado comparar solo aquellas que, por su composición, son comparables, pero en algunos casos la información no era suficiente. Si encuentras algún error, por favor, [comunicanoslo](mailto:contacto@civio.es).
+Hemos incluído en nuestra información todos los precios, como rango, que ha pagado un país u organización en el tiempo analizado, así nos aseguramos de que están representadas las distintas opciones (marca, presentación...). Hemos intentado comparar solo aquellas que, por su composición, son comparables, pero en algunos casos la información no era suficiente. Si encuentras algún error, por favor, [comunícanoslo](mailto:contacto@civio.es).
 
 #### Otros datos empleados y sus fuentes
 
@@ -193,11 +192,11 @@ Créditos de imágenes de portada (de Flickr): _[Untitled](https://www.flickr.co
 
 ## Colabora y republica
 
-Medicamentalia Vacunas no es un proyecto cerrado. Si tienes información relevante o **trabajas en un medio que quiere republicar todo o parte** del contenido, [escríbenos](mailto:contacto@civio.es) y te ayudamos a ponerlo en marcha. 
+Medicamentalia-Vacunas no es un proyecto cerrado. Si tienes información relevante o **trabajas en un medio que quiere republicar todo o parte** del contenido, [escríbenos](mailto:contacto@civio.es) y te ayudamos a ponerlo en marcha. 
 
 Puedes colaborar, por ejemplo, ayudándonos a buscar la información sobre los precios a los que compra tu país las vacunas. Los incluiremos a la base de datos y te lo pasaremos antes de publicar para que puedas sacar tus propios temas. 
 
-**Tanto la base de datos como todos los materiales del proyecto son Creative Commons (CC BY). Puedes usar lo que necesites o te interese con una única condición: que cites y enlaces a Medicamentalia**. Si tienes cualquier duda sobre la licencia o los datos, escríbenos y te contamos. 
+**Tanto la base de datos como todos los materiales propios del proyecto son Creative Commons (CC BY) -con la excepción de alguna imagen externa. Puedes usar lo que necesites o te interese con una única condición: que cites y enlaces a Medicamentalia**. Si tienes cualquier duda sobre la licencia o los datos, escríbenos y te contamos. 
 
 </div>
 </div>
