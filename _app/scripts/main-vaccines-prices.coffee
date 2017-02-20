@@ -29,6 +29,28 @@ class window.VaccinesPrices
     if $('#vaccine-prices-ipv-graph').length > 0
       dataIPV = @data.filter (d) -> d.vaccine == 'IPV' and d.country != 'MSF' and d.country != 'PAHO' and d.country != 'UNICEF'
       @setupScatterplot 'vaccine-prices-ipv-graph', dataIPV, false
+    # PIB countries
+    if $('#pib-countries-graph').length > 0
+      pibData = d3.nest()
+        .key (d) -> d.country
+        .entries @data
+      pibData = pibData.map (d) ->
+        return {
+          id: d.key
+          name: d.values[0].name
+          gdp: d.values[0].gdp
+        }
+      pibData = pibData
+        .filter (d) -> d.gdp > 0
+        .sort (a,b) -> b.gdp - a.gdp
+      graph = new window.BarGraph('pib-countries-graph',
+        key:
+          x: 'name'
+          y: 'gdp'
+          id: 'id')
+      graph.setData pibData
+      $(window).resize graph.onResize
+
 
   parseData: ->
     vaccines = ['pneumo13','BCG','IPV','MMR','HepB-pediátrica','VPH','DTPa-IPV-HIB','DTaP','Tdap','DTP']
