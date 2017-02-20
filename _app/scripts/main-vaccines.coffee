@@ -531,46 +531,17 @@
         graph.setData data
         $(window).resize graph.onResize
         # setup scatterplot prices/gdp graph
-        graph2 = new window.ScatterplotGraph('vaccine-prices-gdp-graph',
+        graph2 = new window.ScatterplotVaccinesPricesGraph('vaccine-prices-gdp-graph',
           aspectRatio: 0.5
           key:
             x: 'price'
             y: 'gdp'
             id: 'name'
             color: 'vaccine')
-        # update get id methods
-        graph2.getDotId = (d) ->
-          return 'dot-'+d.country+'-'+d.vaccine
-        graph2.getDotLabelId = (d) ->
-          return 'dot-label-'+d.country+'-'+d.vaccine
-        graph2.getDotLabelText = (d) -> return ''
         graph2.xAxis
           .ticks 5
           .tickPadding 10
           .tickFormat (d) -> '$'+d
-        graph2.dataParser = (data) -> return data
-        graph2.setTooltipData = (d) ->
-          dosesFormat = d3.format('.0s')
-          @$tooltip
-            .find '.tooltip-inner .title'
-            .html d.country
-          @$tooltip
-            .find '.tooltip-inner .vaccine'
-            .html d.vaccine
-          @$tooltip
-            .find '.tooltip-inner .price'
-            .html d.price
-          company = ''
-          if d.company
-            company = '('+d.company
-            if d.company2
-              company += ','+d.company2
-            if d.company3
-              company += ','+d.company3
-            company += ')'
-          @$tooltip
-            .find '.tooltip-inner .company'
-            .html company
         # set data
         graph2.setData data.filter (d) -> d.gdp != 0 and vaccines2.indexOf(d.vaccine) != -1
         $(window).resize graph2.onResize
