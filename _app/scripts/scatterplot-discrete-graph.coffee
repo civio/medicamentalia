@@ -67,7 +67,8 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
     vaccines = d3.nest()
       .key (d) -> d.vaccine
       .entries @data
-    d3.select('#vaccine-prices-graph-legend ul').selectAll('li')
+    vaccines.sort (a,b) -> if a.key > b.key then 1 else -1
+    d3.select('#'+@id+' .graph-legend ul').selectAll('li')
       .data(vaccines)
     .enter().append('li')
       .attr 'id', (d) -> 'legend-item-'+d.key
@@ -119,7 +120,15 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
 
   # mouse events
   onMouseOver: (d) =>
-    super(d)
+    element = d3.select(d3.event.target)
+    # Set tooltip content
+    @setTooltipData d
+    # Set tooltip position (add legend height)
+    @$tooltip.css
+      left:    +element.attr('cx') + @options.margin.left - (@$tooltip.width() * 0.5)
+      top:     +element.attr('cy') + $('#'+@id+' .graph-legend').height() + @options.margin.top - @$tooltip.height() - 15
+      opacity: 1
+    # hightlight selected vaccine
     @highlightVaccines d3.select(d3.event.target).data()[0][@options.key.color]
 
   onMouseOut: (d) =>
@@ -129,8 +138,9 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
       .classed 'active', false
     @container.selectAll('.dot-line')
       .style 'opacity', 0
-    d3.selectAll('#vaccine-prices-graph-legend li')
+    d3.selectAll('#'+@id+' .graph-legend li')
       .classed 'inactive', false
+      .classed 'active', false
 
   highlightVaccines: (vaccine) ->
     @container.selectAll('.dot')
@@ -146,10 +156,11 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
     @container.selectAll('.dot')
       .sort (a,b) => if a[@options.key.color] == vaccine then 1 else -1
     # set legend
-    d3.selectAll('#vaccine-prices-graph-legend li')
+    d3.selectAll('#'+@id+' .graph-legend li')
       .classed 'inactive', true
-    d3.select('#vaccine-prices-graph-legend #legend-item-'+vaccine)
+    d3.selectAll('#'+@id+' #legend-item-'+vaccine)
       .classed 'inactive', false
+      .classed 'active', true
 
 
   setTooltipData: (d) ->

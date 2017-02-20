@@ -501,25 +501,47 @@
         # set data
         graph.setData data
         $(window).resize graph.onResize
+        # setup prices organizations
+        graph2 = new window.ScatterplotDiscreteGraph('vaccine-prices-organizations-graph',
+          aspectRatio: 0.5
+          margin:
+            top: 5
+            right: 5
+            left: 60
+            bottom: 20
+          key:
+            x: 'price'
+            y: 'name'
+            id: 'country'
+            #size: 'doses'
+            color: 'vaccine')
+        graph2.yAxis.tickPadding 12
+        graph2.xAxis
+          .ticks 5
+          .tickPadding 10
+          .tickFormat (d) -> d+'€'
+        # set data
+        graph2.setData data.filter (d) -> d.country == 'MSF' || d.country == 'PAHO' || d.country == 'UNICEF'
+        $(window).resize graph2.onResize
         # setup scatterplot prices/gdp graph
-        graph2 = new window.ScatterplotVaccinesPricesGraph('vaccine-prices-gdp-graph',
+        graph3 = new window.ScatterplotVaccinesPricesGraph('vaccine-prices-gdp-graph',
           aspectRatio: 0.5
           key:
             x: 'price'
             y: 'gdp'
             id: 'name'
             color: 'vaccine')
-        graph2.xAxis
+        graph3.xAxis
           .ticks 5
           .tickPadding 10
           .tickFormat (d) -> d+'€'
-        graph2.yAxis
+        graph3.yAxis
           .tickValues [0, 10000, 20000, 30000, 40000, 50000, 60000]
           .tickFormat (d) -> d+'€'
-        graph2.getScaleYDomain = -> [0, 60000]
+        graph3.getScaleYDomain = -> [0, 60000]
         # set data
-        graph2.setData data.filter (d) -> d.gdp != 0 and ['IPV','MMR','HepB-pediátrica','DTPa-IPV-HIB','DTaP','Tdap','DTP'].indexOf(d.vaccine) != -1
-        $(window).resize graph2.onResize
+        graph3.setData data.filter (d) -> d.gdp != 0 and ['IPV','MMR','HepB-pediátrica','DTPa-IPV-HIB','DTaP','Tdap','DTP'].indexOf(d.vaccine) != -1
+        $(window).resize graph3.onResize
   
   ###
   setupGuatemalaCoverageLineGraph = ->

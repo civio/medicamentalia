@@ -1621,45 +1621,55 @@ Infographic
 }
 
 // Prices Vaccines
-#vaccine-prices-graph{
+.scatterplot-discrete-graph{
+  margin-bottom: 2*$grid-gutter-width;
+
   .dot{
     cursor: pointer;
   }
+
   .y.axis .tick text{
     font-size: 14px;
     fill: $brand-primary;
   }
-}
-#vaccine-prices-graph-legend{
-  ul{
-    padding: 0;
-    margin-bottom: $grid-gutter-width;
-  }
-  li{
-    display: inline-block;
-    list-style: none;
-    color: #000;
-    font-size: 0.875em;
-    line-height: 1.25em;
-    padding: $grid-gutter-width/6 $grid-gutter-width/3;
-    margin: 0;
-    border: $grid-gutter-width/6 solid white;
-    opacity: 0.85;
-    cursor: pointer;
 
-    &.inactive{
-      background: $gray-lighter !important;
+  .graph-legend{
+    ul{
+      padding: 0;
+      margin-bottom: $grid-gutter-width;
+    }
+    li{
+      display: inline-block;
+      list-style: none;
+      color: #000;
+      font-size: 0.875em;
+      line-height: 1.25em;
+      padding: $grid-gutter-width/6 $grid-gutter-width/3;
+      margin: 0;
+      border: $grid-gutter-width/6 solid white;
+      opacity: 0.85;
+      cursor: pointer;
+
+      &.inactive{
+        background: mix( $gray-light, $gray-lighter, 40%) !important;
+        opacity: 0.7;
+      }
+      &.active{
+        opacity: 1;
+      }
     }
   }
 }
 
 
-#vaccine-prices-graph,
+.scatterplot-discrete-graph,
 #vaccine-prices-gdp-graph{
+
   .x.axis line{
     display: block;
     stroke: mix($gray-light, $gray-lighter, 30%);
   }
+  
   .tooltip{
     min-width: 100px;
     .tooltip-inner{
