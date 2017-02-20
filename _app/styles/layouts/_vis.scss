@@ -138,6 +138,7 @@ Common
       stroke: transparent;
       stroke-width: 2px;
       opacity: 0.7;
+      @include transition( 0.2s ease-in-out all );
       &.active{
         opacity: 1;
       }
@@ -156,6 +157,11 @@ Common
     }
     .dot-line{
       stroke-width: 2px;
+      opacity: 0;
+      @include transition( 0.2s ease-in-out opacity );
+      &.active{
+        opacity: 1;
+      }
     }
   }
 
@@ -1684,6 +1690,14 @@ Infographic
     .description{
       margin-bottom: $grid-gutter-width/6;
     }
+  }
+}
+
+#vaccine-prices-tdap-graph,
+#vaccine-prices-ipv-graph{
+  .dot,
+  .dot-line{
+    opacity: 1;
   }
 }
 
