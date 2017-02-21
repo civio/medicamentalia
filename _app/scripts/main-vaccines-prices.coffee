@@ -74,14 +74,19 @@ class window.VaccinesPrices
         return {
           id: d.key
           name: d.values[0].name
-          gdp: d.values[0].gdp
+          gdp: d.values[0].gdp*0.937
         }
       pibData = pibData
         .filter (d) -> d.gdp > 0
         .sort (a,b) -> b.gdp - a.gdp
       graph = new window.BarGraph('pib-countries-graph',
         label:
-          format: d3.format('$,d')
+          format: (d) ->
+            f = d3.format(',d')
+            return f(d)+'€'
+        margin:
+          right: 10
+          left: 10
         key:
           x: 'name'
           y: 'gdp'
