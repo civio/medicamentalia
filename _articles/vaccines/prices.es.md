@@ -14,6 +14,8 @@ lang:             es
 draft:            true
 ---
 
+div class="container page-content" markdown="1">
+<div class="page-content-container" markdown="1">
 
 Hay dos premisas que, aplicadas a la compra de vacunas, se tambalean. La primera, que la contratación pública es transparente; la segunda, que cuanto más rico es un país, más paga a las farmacéuticas por la adquisición de cada dosis. **Ni una ni otra se cumplen del todo** cuando hablamos de la relación entre laboratorios y gobiernos. 
 
@@ -71,7 +73,7 @@ La DTP se une a veces a otras vacunas para intentar, de una sola vez, cubrir el 
 {% include vaccines/prices-scatterplot.es.html id="ipv" title="Precio por dosis de IPV" %}
 </div>
 
-En la IPV, la vacuna que protege contra la polio, Hungría paga más que España y España paga más que Estados Unidos. En Italia, el precio por dosis es diferente según se compre en una época u otra del año, aunque ambos contratos sean con Sanofi y en un mismo año, 2016.  
+En la IPV, la vacuna inyectable que protege contra la polio (IPV), Hungría paga más que España y España paga más que Estados Unidos. En Italia, el precio por dosis es diferente según se compre en una época u otra del año, aunque ambos contratos sean con Sanofi y en un mismo año, 2016.  
 
 Portugal [ha llegado a pagar](http://www.base.gov.pt/Base/pt/Pesquisa/Contrato?a=2934885), a principios de 2017, 25 euros por dosis de vacuna contra la tuberculosis, la BCG, que ha venido sufriendo problemas de [desabastecimiento](http://medicamentalia.org/vaccines/desabastecimiento/#sin-stock-contra-la-tuberculosis) en los últimos años. En 2016, poco antes, había pagado la dosis a 8,90 euros, un precio inferior pero muy por encima de lo que pagan el resto de países analizados, debido en parte a que los portugueses adquirieron un volumen menor. 
 

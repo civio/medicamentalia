@@ -23,12 +23,12 @@ The opacity of the sector permeates even the World Health Organization (WHO), wh
 
 That is why many countries prefer not to publish such data. But, despite the general opacity, there are **exceptions**. Nations in which their official procurement web sites offer, most often hidden in bid specifications and scanned contracts, information on the purchase price of each dose. For this investigation, we analyze this exceptional data from seven countries *[why only seven? How have they been chosen?]*, together with three international organizations: Médecins Sans Frontières (MSF); Unicef, which serves as a central purchasing point for initiatives such as GAVI, an alliance to provide vaccines to the world's poorest countries; and the Revolving Fund of the Pan American Health Organization (PAHO), a joint purchasing system used by 41 countries in Latin America and the Caribbean. 
 
+</div>
+{% include vaccines/prices-scatterplot.es.html id="all" title="Per dose prices paid per governments" footer="There can be price differences due to brand, packaging (vial or syringe), strains or volume, among others. PAHO data is made of weighted averages, i.e. it’s not broken down by manufacturer. For the rest, we include all the data found. <a href=\"/vaccines/team/#prices\">Methodology</a>" legend=true %}
+<div class="page-content-container" markdown="1">
+
 
 ## Brand new and expensive
-
-</div>
-{% include vaccines/prices-scatterplot.es.html id="all" title="Precios" footer="There can be price differences due to brand, packaging (vial or syringe), strains or volume, among others. PAHO data is made of weighted averages, i.e. it’s not broken down by manufacturer. For the rest, we include all the data found. <a href=\"/vaccines/team/#prices\">Methodology</a>" legend=true %}
-<div class="page-content-container" markdown="1">
 
 As with drugs, new products and their [patents](http://medicamentalia.org/access/patents/) drive [prices up](http://medicamentalia.org/access/prices/). "With only two manufacturers for each of the new and much more expensive vaccines –PCV [pneumococcus], rotavirus, HPV [Human Papilloma Virus]– and the inability to use the two available products interchangeably, **companies are enjoying near monopolies**," denounces MSF in a [report](https://www.msfaccess.org/content/right-shot-bringing-down-barriers-affordable-and-adapted-vaccines) focusing entirely on the global vaccine market.
 
@@ -51,7 +51,7 @@ Pneumococcus is a microorganism that causes pneumonia and meningitis. The 13-val
 
 Because of these new and more expensive vaccines, the cost of immunizing a child has multiplied by 68 between 2001 and 2014, according to the organization.
 
-**How are vaccine prices set?** There are two ways. The first is based on costs, that is, the vaccine is priced according to how expensive it was to produce. As with other medicines, pharmaceutical companies and organizations [disagree](http://medicamentalia.org/access/patentes/#cunto-cuesta-crear-un-frmaco) about the real cost of developing a new vaccine. The second, and most common, is linked to how much buyers can or are willing to pay. This is *tiered pricing*, which means that the richer a country is, the more it pays, and is the system advocated by manufacturers, [according](http://www.efpia.eu/topics/industry-economy/access-to-medicines) to the European Federation of Pharmaceutical Industries.
+**How are vaccine prices set?** There are two ways. The first is based on costs, that is, the vaccine is priced according to how expensive it was to produce. As with other medicines, pharmaceutical companies and organizations [disagree](http://medicamentalia.org/access/patents/#the-cost-of-developing-a-new-drug) about the real cost of developing a new vaccine. The second, and most common, is linked to how much buyers can or are willing to pay. This is *tiered pricing*, which means that the richer a country is, the more it pays, and is the system advocated by manufacturers, [according](http://www.efpia.eu/topics/industry-economy/access-to-medicines) to the European Federation of Pharmaceutical Industries.
 
 We can see how tiered pricing works for the MMR -against measles, mumps and rubella- or Hepatitis B vaccine, whose prices rise together with a country's income. But the theory does not always match reality. While several variables -such as purchase volume or packaging type- may justify some differences, we can find trends in the data that don't seem to fit the idea of richer buyers paying more.
 
@@ -62,7 +62,7 @@ We can see how tiered pricing works for the MMR -against measles, mumps and rube
 The DTP vaccine has been part of vaccination schedules across the world for a long time. It protects against diphtheria, tetanus and whooping cough, and has several versions. The one including the acellular type of pertussis (DTaP) is more advanced and expensive than the original DTP. Despite huge differences in wealth between the United States and Spain -the former more than doubling the per capita GDP of Spain- both buy doses from GSK at **a very similar price**: €13.28 for Spain, €13.86 for the United States.
 
 <div class="container-right">
-{% include vaccines/prices-scatterplot.es.html id="tdap" title="Precio Tdap" %}
+{% include vaccines/prices-scatterplot.es.html id="tdap" title="Per dose prices for Tdap vaccine" %}
 </div>
 
 A third version is Tdap, a low dosage and also acellular vaccine, normally used for adults. In this case, the figures don't make sense either. Poland pays more (€14.82) than Portugal (€13.21) and Spain (€8.85), despite the fact the three countries buy from the same provider, GSK, and that the order of their income levels is just the opposite.
@@ -70,12 +70,12 @@ A third version is Tdap, a low dosage and also acellular vaccine, normally used 
 The DTP vaccine is sometimes combined with others to try to provide as many immunizations as possible in one go. An example is the pentavalent vaccine which protects -on top diphtheria, tetanus and pertussis,- against Hepatitis B and Hib (anti-Haemophilus influenzae type b, a bacterium that causes pneumonia, respiratory problems, infections and can lead to death). Ukrania (lower-middle income) paid Sanofi almost the same price as Spain (high income): more than €22 per dose. If we add the Hepatitis B vaccine to the previous combination we get the hexavalent vaccine. Both Portugal and Spain buy it from GSK, but the Portuguese government pays **ten euros more per dose**.
 
 <div class="container-right">
-{% include vaccines/prices-scatterplot.es.html id="ipv" title="Precio IPV" %}
+{% include vaccines/prices-scatterplot.es.html id="ipv" title="Per dose prices for IPV vaccine" %}
 </div>
 
-For IPV, the vaccine that protects against polio, Hungary pays more than Spain and Spain pays more than the United States. In Italy, the price per dose is different for two purchases, even though both bids are awarded to Sanofi and in the same year, 2016.
+For IPV, the vaccine that protects against polio (IPV), Hungary pays more than Spain and Spain pays more than the United States. In Italy, the price per dose is different for two purchases, even though both bids are awarded to Sanofi and in the same year, 2016.
 
-Portugal went as far as to [pay](http://www.base.gov.pt/Base/pt/Pesquisa/Contrato?a=2934885), in early 2017, 25 euros per dose of the vaccine against tuberculosis, BCG, which has suffered from [stockouts](http://medicamentalia.org/vaccines/desabastecimiento/#sin-stock-contra-la-tuberculosis) in recent years. Shortly before that, in 2016, the price had been just €8.90, even though, due partly to smaller volumes being purchased, Portugal's price was much higher than those of the rest of the countries analyzed.
+Portugal went as far as to [pay](http://www.base.gov.pt/Base/pt/Pesquisa/Contrato?a=2934885), in early 2017, 25 euros per dose of the vaccine against tuberculosis, BCG, which has suffered from [stockouts](http://medicamentalia.org/vaccines/stockout/#out-of-stock-against-tuberculosis) in recent years. Shortly before that, in 2016, the price had been just €8.90, even though, due partly to smaller volumes being purchased, Portugal's price was much higher than those of the rest of the countries analyzed.
 
 The number of variables that can affect the final price -fees, associated insurance, whether transportation costs are included, packaging, volume, differences of elaboration or composition...,- and the little or no information provided about them, makes exposing the ultimate causes of price differences challenging. But, even despite all these nuances, shedding light on how much each of these seven countries and three organizations is paying for each vaccine helps visualize the playing field and better understand its rules. 
 
@@ -84,11 +84,9 @@ The number of variables that can affect the final price -fees, associated insura
 
 In most cases, the lowest market prices are those offered to Unicef, which runs a [joint purchasing mechanism](https://www.unicef.org/supply/index_62330.html) for developing countries. The organization consolidates purchases and charges [a handling fee](https://www.unicef.org/supply/index_62330.html) of between 3 and 4.5%, depending on the vaccine and the income level of the country (i.e. the 43 classified as [least developed](http://unohrlls.org/about-ldcs/) pay the lowest percentage).
 
-The Global Alliance for Vaccines and Immunization (GAVI), the result of a [public-private partnership](http://www.gavi.org/) which finances vaccines for poor countries globally, buy its vaccines [through Unicef](https://www.unicef.org/spanish/supply/index_gavi.html). ([Disclosure](http://medicamentalia.org/vaccines/nosotros/): The Bill and Melinda Gates Foundation has funded Medicamentalia via the European Journalism Center's Journalism Grant programme.) Its weight is very important in the market: in 2015 they acquired more than [2,770 million doses](https://www.unicef.org/supply/files/Table_of_Vaccine_Procurement_1996__2015_Volume.pdf) for almost [1,721 million dollars](https: //www.unicef.org/supply/files/Table_of_Vaccine_Procurement_1996_-2015_Value.pdf). At the moment, [78 countries](http://www.gavi.org/country/) purchase their vaccines via GAVI. Countries with a per capita Gross National Income below a threshold predetermined by the organization, [established at $1,500 in 2011](http://www.gavi.org/library/gavi-documents/policies/gavi-eligibility -and-transition-policy /) and updated since then according to inflation, are accepted. Those that fail to meet the requirements go through a [transition period](http://www.gavi.org/about/governance/programme-policies/eligibility-and-transition/), during which their contribution to the purchase of vaccines goes up while the percentage that GAVI finances decreases gradually, until they become independent in five years.
+The Global Alliance for Vaccines and Immunization (GAVI), the result of a [public-private partnership](http://www.gavi.org/) which finances vaccines for poor countries globally, buy its vaccines [through Unicef](https://www.unicef.org/spanish/supply/index_gavi.html). ([Disclosure](http://medicamentalia.org/vaccines/team/)) Its weight is very important in the market: in 2015 they acquired more than [2,770 million doses](https://www.unicef.org/supply/files/Table_of_Vaccine_Procurement_1996__2015_Volume.pdf) for almost [1,721 million dollars](https: //www.unicef.org/supply/files/Table_of_Vaccine_Procurement_1996_-2015_Value.pdf). At the moment, [78 countries](http://www.gavi.org/country/) purchase their vaccines via GAVI. Countries with a per capita Gross National Income below a threshold predetermined by the organization, [established at $1,500 in 2011](http://www.gavi.org/library/gavi-documents/policies/gavi-eligibility -and-transition-policy /) and updated since then according to inflation, are accepted. Those that fail to meet the requirements go through a [transition period](http://www.gavi.org/about/governance/programme-policies/eligibility-and-transition/), during which their contribution to the purchase of vaccines goes up while the percentage that GAVI finances decreases gradually, until they become independent in five years.
 
 Some of the lowest prices that UNICEF negotiates are only valid for countries part of GAVI or for those still transitioning, as is the case for the papilloma vaccine, available at between €4.23 and €4.32 per dose. In fact, these amounts are sometimes used as the lowest reference worldwide. Médecins Sans Frontières has criticized this system, since it leaves out middle-income countries that cannot afford newer and more expensive vaccines, and because [humanitarian aid organizations](https://www.msf.es/actualidad/msf-exige-que-las-nuevas-vacunas-sean-mucho-mas-baratas) can't access these same discounts. For example, MSF buys the DTP at twice the price of what Unicef gets.
-
-> Map: GAVI and PAHO countries (if info is made available by PAHO)
 
 In contrast to the GAVI model (targeted at the poorest countries), an alternative joint model has nothing to do with the capacity of states to acquire vaccines: the Revolving Fund of the Pan American Health Organization (PAHO). 41 countries and regions of Latin America and the Caribbean acquire their vaccines through this 40-year old system, which relies on economies of scale or, in more earthly terms, *union make force*. "The Hepatitis B vaccine began costing $50, and now costs much less than a dollar. That is what is achieved with economies of scale," explains Mario Martínez, who works in the Fund's Guatemala office.
 
@@ -96,7 +94,7 @@ Both systems are related. Both include clauses in their negotiations that establ
 
 In some other instances, manufacturers offer **different packaging** to GAVI and the Fund, thus avoiding having to lower prices for all of Latin America. As an example, Sanofi sells GAVI a box of ten polio vaccine doses for €0.75 a dose, the lowest price in the world. But the PAHO Fund is not offered this presentation, only the one- and five-doses packages, where prices per dose are higher, and matching what Unicef would pay.
 
-{% include vaccines/prices-scatterplot.es.html id="organizations" title="Precio organizaciones" legend=true %}
+{% include vaccines/prices-scatterplot.es.html id="organizations" title="Per dose prices paid by organisations" legend=true %}
 
 For the countries participating in the Revolving Fund there is an extra benefit, beyond the price reduction: "I don't have to handle money. The Government pays PAHO, and they bring me the vaccines. In terms of corruption, I feel I'm bullet-proof," celebrates Eduardo Suárez, director of the immunization program of the Ministry of Health of El Salvador, which adds: "This positive experience that Latin America has had should be transmitted to other regions." Although there have been other attempts to set up joint purchasing systems across the world, none has been as fruitful and has had the weight of the Fund or GAVI. In 2014, the European Commission [approved](http://europa.eu/rapid/press-release_IP-14-418_en.htm) an agreement for the joint purchase of vaccines and other medical products. **It has never been used**.
 
@@ -105,7 +103,7 @@ For the countries participating in the Revolving Fund there is an extra benefit,
 
 ## Trading blindly
 
-> Foto pantallazo UK
+{% include caption.html img="articles/UK-contract.jpg" caption="Detail of a contract for vaccine purchases in UK." align="alignright" %}
 
 The UK government procurement website **hides the prices** at which the British government acquires vaccines. If we access a [contract](https://www.contractsfinder.service.gov.uk/Notice/602ed96d-bbaa-4c59-af62-bae287c9a521?p=@=UFQxUlRRPT0=NjJNT08) for the purchase of the rotavirus one, for example, we can know what's being bought and from whom, but not the amount. The [bid details](https://www.contractsfinder.service.gov.uk/Notice/Attachment/B21E7005-7634-44DB-B965-89B58409A8F4) include a note where the total price and the price per dose should be displayed: "Redacted under section 43(2), commercial interests". The English government applies one of the exceptions of its [Freedom of Information Act](http://www.legislation.gov.uk/ukpga/2000/36/section/43), which excludes information whose publication "would, or would be likely to, prejudice the commercial interests of any person (including the public authority holding it)." The exemption applies to the purchase of vaccines, but not to many other sectors: e.g. we can easily see how much the government spent [buying software for hospitals](https://www.contractsfinder.service.gov.uk/Notice/49c5b3fa-b9c5-4ed6-a6dc-8c55043eb4b0?p=@RPT0=NjJNT08=UFQxUlR).
 
@@ -136,7 +134,7 @@ In addition, she argues that "having information about the location of the count
 
 But **in fact it does**, since the price ranges within each income level category are very large. And one can't just compare Poland with Greece, Germany or the United States (all of them in the same income category: high), the same way one can't ignore the differences between Brazil, China, Bosnia and Iraq, all upper middle income countries. 
 
-> detalle OMS diferencia entre países [BCG](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1096)
+{% include caption.html img="articles/V3P.jpg" caption="Prices pid by governments for BCG vaccine in the WHO project." align="alignright" %}
 
 Proof of this are the **large differences between countries in the same income level purchasing**, for example, the [tuberculosis vaccine](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1096) sold by the Statens Serum Institute. The V3P data for seven high income countries shows prices going from as little as $0.33 (equivalent to €0.31 at the time, in 2015) to up to $13.95 (€13.07). How does this help a buyer demand a fair price when negotiating with pharmaceutical companies?
 
