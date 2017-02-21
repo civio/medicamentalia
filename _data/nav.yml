@@ -10,6 +10,8 @@ access:
   - ref: access-team
     type: article
 vaccines:
+  - ref: vaccines-prices
+    type: article
   - ref: immunization
     type: article
   - ref: antivaccines

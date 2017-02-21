@@ -1,3 +1,5 @@
+- ref: vaccines-prices
+  size: 12
 - ref: immunization
   size: 4
 - ref: antivaccines
