@@ -4,14 +4,13 @@ title:            Prices
 subtitle:         Numbers that don't fit
 description:      Some countries pay for their vaccines more than others with higher incomes. The opacity in the sector hides the cost for governments and prevents them from demanding better prices
 home_description: Some countries pay for their vaccines more than others with higher incomes. The opacity in the sector hides the cost for governments and prevents them from demanding better prices
-img:              articles/home-stockout.jpg
-order:            4
+img:              articles/home-vaccines-prices.jpg
+order:            0
 author:           Eva Belmonte
 pub_date:         2017-02-24
 slug:             prices
 ref:              vaccines-prices
 lang:             en
-draft:            true
 ---
 
 <div class="container page-content" markdown="1">

@@ -4,14 +4,13 @@ title:            Precios
 subtitle:         Cifras que no cuadran
 description:      Algunos países pagan más por sus vacunas que otros con rentas más altas. La opacidad en el sector oculta la cuantía a la que los gobiernos las adquieren e impide exigir mejores precios
 home_description: Algunos países pagan más por sus vacunas que otros con rentas más altas. La opacidad en el sector oculta la cuantía a la que los gobiernos las adquieren e impide exigir mejores precios
-img:              articles/home-stockout.jpg
-order:            4
+img:              articles/home-vaccines-prices.jpg
+order:            0
 author:           Eva Belmonte
 pub_date:         2017-02-24
 slug:             precios
-ref:              prices
+ref:              vaccines-prices
 lang:             es
-draft:            true
 ---
 
 <div class="container page-content" markdown="1">
