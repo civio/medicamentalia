@@ -2,8 +2,8 @@
 category:         vaccines
 title:            Precios
 subtitle:         Cifras que no cuadran
-description:      Algunos países pagan más por sus vacunas que otros con rentas más altas. La opacidad en el sector oculta la cuantía a la que los gobiernos las adquieren e impide exigir mejores precios
-home_description: Algunos países pagan más por sus vacunas que otros con rentas más altas. La opacidad en el sector oculta la cuantía a la que los gobiernos las adquieren e impide exigir mejores precios
+description:      Algunos países pagan más por sus vacunas que otros con rentas más altas. La opacidad del sector oculta la cuantía a la que los gobiernos las adquieren e impide exigir mejores precios
+home_description: Algunos países pagan más por sus vacunas que otros con rentas más altas. La opacidad del sector oculta la cuantía a la que los gobiernos las adquieren e impide exigir mejores precios
 img:              articles/home-vaccines-prices.jpg
 order:            0
 author:           Eva Belmonte
@@ -20,7 +20,7 @@ Hay dos premisas que, aplicadas a la compra de vacunas, se tambalean. La primera
 
 La opacidad del sector impregna hasta la Organización Mundial de la Salud (OMS), que publica una [base de datos](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/) de precios a los que compran sus vacunas varios gobiernos del mundo y en la que sus nombres se ocultan por petición de los propios estados miembros. Nadie quiere ser señalado si paga menos o más que el de al lado ni **incumplir los acuerdos de confidencialidad** firmados con las farmacéuticas. 
 
-Por eso muchos países prefieren no publicar esos datos. Pero, pese a la opacidad general, hay **excepciones**: naciones en las que sus páginas oficiales de contratación ofrecen información, la mayoría de veces escondida entre pliegos y documentos escaneados, del precio al que están comprando cada dosis. Para realizar este reportaje analizamos esos datos excepcionales de siete países [[¿por qué solo siete? ¿cómo se han elegido?](/vaccines/nosotros/#precios)], además de los de tres organizaciones internacionales: Médicos sin Fronteras (MSF); Unicef, encargada de servir de punto central de compra para iniciativas como GAVI, una alianza para proveer de vacunas a los países más pobres del mundo; y el Fondo Rotatorio de la Organización Panamericana de la Salud (OPS), un sistema de compra conjunta que utilizan 41 países de Latinoamérica y El Caribe. 
+Por eso muchos países prefieren no publicar esos datos. Pero, pese a la opacidad general, hay **excepciones**: naciones en las que sus páginas oficiales de contratación ofrecen información, la mayoría de veces escondida entre pliegos y documentos escaneados, del precio al que están comprando cada dosis. Para realizar este reportaje analizamos esos datos excepcionales de siete países [[¿Por qué solo siete? ¿Cómo se han elegido?](/vaccines/nosotros/#precios)], además de los de tres organizaciones internacionales: Médicos sin Fronteras (MSF); Unicef, encargada de servir de punto central de compra para iniciativas como GAVI, una alianza para proveer de vacunas a los países más pobres del mundo; y el Fondo Rotatorio de la Organización Panamericana de la Salud (OPS), un sistema de compra conjunta que utilizan 41 países de Latinoamérica y El Caribe. 
 
 </div>
 {% include vaccines/prices-scatterplot.es.html id="all" title="Precio que pagan los gobiernos por dosis" footer="Puede haber diferencias de precio por marca, presentación (vial o jeringa), cepas o cantidades, entre otros. Los datos de OPS son medias ponderadas, puesto que no publican a cuánto compran a cada laboratorio; para el resto, incluímos todos los datos encontrados. <a href=\"/vaccines/nosotros/#precios\">Metodología</a>" legend=true %}
@@ -31,7 +31,7 @@ Por eso muchos países prefieren no publicar esos datos. Pero, pese a la opacida
 
 Como ocurre con los medicamentos, los nuevos productos y sus [patentes](http://medicamentalia.org/access/patents/) disparan los [precios](http://medicamentalia.org/access/prices/). "Con solo dos fabricantes para cada una de las nuevas y mucho más caras vacunas -contra el neumococo, el rotavirus y el Virus del Papiloma Humano (VPH)- y la imposibilidad de usar los dos productos disponibles de forma intercambiable, **las compañías están disfrutando de casi monopolios"**, denuncia MSF en un [informe](https://www.msfaccess.org/content/right-shot-bringing-down-barriers-affordable-and-adapted-vaccines) dedicado íntegramente a analizar el mercado global de vacunas  
 
-Dos laboratorios producen la vacuna contra el VPH, causante del cáncer de cuello de útero, entre otros: Merck (Gardasil) y GSK (Cervarix). Estados Unidos compra la versión más avanzada del Gardasil, la que protege contra nueve tipos del virus, a entre 109,58 y 125,65 euros la dosis, según si se trata de la de niños o adultos. Merck vende la versión de cuatro tipos a 22 euros a Portugal y 14,5 a MSF. GSK, por su parte, vende el Cervarix, que protege contra dos tipos de este virus, al Fondo Rotatorio de la OPS por unos ocho euros y medio, un precio que, aunque es mucho menor que el que conseguirían los países miembros por separado, impide a muchos de ellos incluir esta vacuna en sus programas. 
+Dos laboratorios producen la vacuna contra el VPH, causante del cáncer de cuello de útero, entre otros: Merck (Gardasil) y GSK (Cervarix). Estados Unidos compra la versión más avanzada del Gardasil, la que protege contra nueve tipos del virus, a entre 109,58 y 125,65 euros la dosis, según si se trata de la de niños o de adultos. Merck vende la versión de cuatro tipos a 22 euros a Portugal y 14,5 a MSF. GSK, por su parte, vende el Cervarix, que protege contra dos tipos de este virus, al Fondo Rotatorio de la OPS por unos ocho euros y medio, un precio que, aunque es mucho menor que el que conseguirían los países miembros por separado, impide a muchos de ellos incluir esta vacuna en sus programas. 
 
 <div class="container-right" markdown="1">
 <div class="panel" markdown="1">
@@ -45,7 +45,7 @@ El neumococo es un microorganismo que provoca neumonía y meningitis. La vacuna 
 <div class="panel" markdown="1">
 ### ¿Por qué MSF no acepta donaciones?
 
-"Gratis no es siempre mejor". Así condensa Médicos Sin Fronteras un [artículo](https://medium.com/@MSF_access/there-is-no-such-thing-as-free-vaccines-why-we-rejected-pfizers-donation-offer-of-pneumonia-6a79c9d9f32f#.lr1f61oz8) en el que explica por qué **rechaza las donaciones de vacunas**. Dan cuatro razones: 1) las donaciones suelen ir acompañadas de restricciones, por ejemplo sobre en qué areas o poblaciones se pueden usar, lo que puede retrasar la vacunación en campañas de emergencia; 2) las donaciones pueden acabar con los esfuerzos por incrementar el acceso a vacunas asequibles, al eliminar incentivos a competidores para entrar en un mercado en el que ya hay vacunas gratis; 3) las donaciones se usan como justificación para imponer precios altos en otros países, incluyendo organizaciones humanitarias o países en desarrollo; y, por último, 4) las donaciones pueden desaparecer tan rápido como llegaron. 
+"Gratis no es siempre mejor". Así condensa Médicos Sin Fronteras un [artículo](https://medium.com/@MSF_access/there-is-no-such-thing-as-free-vaccines-why-we-rejected-pfizers-donation-offer-of-pneumonia-6a79c9d9f32f#.lr1f61oz8) en el que explica por qué **rechaza las donaciones de vacunas**. Da cuatro razones: 1) las donaciones suelen ir acompañadas de restricciones, por ejemplo sobre en qué areas o poblaciones se pueden usar, lo que puede retrasar la vacunación en campañas de emergencia; 2) las donaciones pueden acabar con los esfuerzos por incrementar el acceso a vacunas asequibles, al eliminar incentivos a competidores para entrar en un mercado en el que ya hay vacunas gratis; 3) las donaciones se usan como justificación para imponer precios altos en otros países, incluyendo organizaciones humanitarias o países en desarrollo; y, por último, 4) las donaciones pueden desaparecer tan rápido como llegaron. 
 </div>
 
 Por culpa de estas nuevas, y más caras, vacunas, el coste de inmunizar a un niño se ha multiplicado por 68 entre 2001 y 2014, según la organización. 
@@ -131,7 +131,7 @@ Prueba de ello son las **grandes diferencias entre países de un mismo nivel de 
 
 Junto a esos siete países aparece la información de un país anónimo que, aunque es más pobre -está clasificado como medio alto- paga más por dosis que uno de los países del nivel superior. Aunque sigamos a ciegas y no sepamos de qué estados estamos hablando, esta diferencia prueba, una vez más, que **no siempre los más pobres pagan menos**. 
 
-*Javier de Vega, Miguel Ángel Gavilanes y David Cabo han colaborado en la minería y revisión de datos de este reportajes. Los gráficos son de Raúl Díaz Poblete.*
+*Javier de Vega, Miguel Ángel Gavilanes y David Cabo han colaborado en la minería y revisión de datos de este reportajes. Los gráficos son de Raúl Díaz Poblete. Más información, [aquí](vaccines/nosotros/).*
 
 
 

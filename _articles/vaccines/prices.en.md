@@ -4,13 +4,14 @@ title:            Prices
 subtitle:         Numbers that don't fit
 description:      Some countries pay for their vaccines more than others with higher incomes. The opacity in the sector hides the cost for governments and prevents them from demanding better prices
 home_description: Some countries pay for their vaccines more than others with higher incomes. The opacity in the sector hides the cost for governments and prevents them from demanding better prices
-img:              articles/home-vaccines-prices.jpg
-order:            0
+img:              articles/home-stockout.jpg
+order:            4
 author:           Eva Belmonte
 pub_date:         2017-02-24
 slug:             prices
 ref:              vaccines-prices
 lang:             en
+draft:            true
 ---
 
 <div class="container page-content" markdown="1">
@@ -18,9 +19,9 @@ lang:             en
 
 Two commonly held premises fail when applied to the purchase of vaccines. First, that public procurement is transparent; second, that the richer a country is, the more it pays pharmaceutical companies for each dose. **Neither of them are wholly fulfilled** when we talk about the relationship between sellers and governments.
 
-The opacity of the sector permeates even the World Health Organization (WHO), which publishes a [database](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/) of vaccine prices paid by various governments, but keeps their names hidden at the request of the member states themselves. No one wants to be singled out if they obtain a different price than their neighbour, nor **fail to comply with the confidentiality agreements** signed with the pharmaceutical companies.
+The opacity of the sector permeates even the World Health Organization (WHO), which publishes a [database](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/) of vaccine prices paid by various governments, but keeps their names hidden at the request of the member states themselves. No one wants to be singled out if they obtain better of worst prices than their neighbour, nor **fail to comply with the confidentiality agreements** signed with the pharmaceutical companies.
 
-That is why many countries prefer not to publish such data. But, despite the general opacity, there are **exceptions**. Nations in which their official procurement web sites offer, most often hidden in bid specifications and scanned contracts, information on the purchase price of each dose. For this investigation, we analyze this exceptional data from seven countries *[why only seven? How have they been chosen?]*, together with three international organizations: Médecins Sans Frontières (MSF); Unicef, which serves as a central purchasing point for initiatives such as GAVI, an alliance to provide vaccines to the world's poorest countries; and the Revolving Fund of the Pan American Health Organization (PAHO), a joint purchasing system used by 41 countries in Latin America and the Caribbean.
+That is why many countries prefer not to publish such data. But, despite the general opacity, there are **exceptions**. Nations in which their official procurement web sites offer, most often hidden in bid specifications and scanned contracts, information on the purchase price of each dose. For this investigation, we analyze this exceptional data from seven countries *[Why only seven? How have they been chosen?]*, together with three international organizations: Médecins Sans Frontières (MSF); Unicef, which serves as a central purchasing point for initiatives such as GAVI, an alliance to provide vaccines to the world's poorest countries; and the Revolving Fund of the Pan American Health Organization (PAHO), a joint purchasing system used by 41 countries in Latin America and the Caribbean.
 
 </div>
 {% include vaccines/prices-scatterplot.es.html id="all" title="Per dose prices paid per governments" footer="There can be price differences due to brand, packaging (vial or syringe), strains or volume, among others. PAHO data is made of weighted averages, i.e. it’s not broken down by manufacturer. For the rest, we include all the data found. <a href=\"/vaccines/team/#prices\">Methodology</a>" legend=true %}
@@ -29,9 +30,9 @@ That is why many countries prefer not to publish such data. But, despite the gen
 
 ## Brand new and expensive
 
-As with drugs, new products and their [patents](http://medicamentalia.org/access/patents/) drive [prices up](http://medicamentalia.org/access/prices/). "With only two manufacturers for each of the new and much more expensive vaccines –PCV [pneumococcus], rotavirus, HPV [Human Papilloma Virus]– and the inability to use the two available products interchangeably, **companies are enjoying near monopolies**," denounces MSF in a [report](https://www.msfaccess.org/content/right-shot-bringing-down-barriers-affordable-and-adapted-vaccines) focusing entirely on the global vaccine market.
+As with drugs, new products and their [patents](http://medicamentalia.org/access/patents/) drive [prices up](http://medicamentalia.org/access/prices/). "With only two manufacturers for each of the new and much more expensive vaccines –PCV [pneumococcal], rotavirus and HPV [Human Papilloma Virus]– and the inability to use the two available products interchangeably, **companies are enjoying near monopolies**," denounces MSF in a [report](https://www.msfaccess.org/content/right-shot-bringing-down-barriers-affordable-and-adapted-vaccines) focusing entirely on the global vaccine market.
 
-Two laboratories produce the vaccine against the Human Papilloma Virus (HPV), which causes cervical cancer, among other types: Merck (with Gardasil) and GSK (with Cervarix). The United States government purchases the most advanced version of Gardasil, which protects against nine types of virus, at a price of between €109.58 and €125.65 each dose. Merck sells its version against four HPV types at €22 to Portugal and €14.5 to MSF. While GSK sells Cervarix, which protects against two types, to the PAHO Revolving Fund for about eight euros, a price that, although much lower than that obtained by the member countries on their own, prevents many of them from including the vaccine in their immunization programs.
+Two laboratories produce the vaccine against the Human Papilloma Virus (HPV), which causes cervical cancer, among other: Merck (with Gardasil) and GSK (with Cervarix). The United States government purchases the most advanced version of Gardasil, which protects against nine types of virus, at a price of between €109.58 (adults) and €125.65 (preteens) each dose. Merck sells its version against four HPV types at €22 to Portugal and €14.5 to MSF. While GSK sells Cervarix, which protects against two types, to the PAHO Revolving Fund for about eight euros and a half, a price that, although much lower than that obtained by the member countries on their own, prevents many of them from including the vaccine in their immunization programs.
 
 <div class="container-right" markdown="1">
 <div class="panel" markdown="1">
@@ -40,7 +41,7 @@ Spain tendered the purchase of the HPV vaccine with a requirement: it should pro
 </div>
 </div>
 
-Pneumococcus is a microorganism that causes pneumonia and meningitis. The 13-valent vaccine, produced by Pfizer and GSK, is one of the most expensive. Pfizer's version ranges from €113.5 in the United States to €42.85 and €45.73 in Spain and Portugal, very similar prices for two countries separated by more than $6,000 in per capita GDP. And these figures must be multiplied by three, the number of doses needed to immunize each child. If prices don't fall, **Spain will [spend]((https://contrataciondelestado.es/wps/wcm/connect/aaa92768-c028-42e7-8315-5d53cd1f5499/DOC20161212125449PPT201604AM0001.pdf?MOD=AJPERES)) more than ten million euros each year in the vaccine**. GAVI countries can access it at a lower cost, seven euros per dose, but organizations like Médecins Sans Frontières and many middle-income countries are left out. In fact, in Idomeni (Greece) MSF had to pay around €60 per dose to vaccinate refugees. Due to its hight price, this is the only vaccine for which MSF made an exception to its policy of not accepting donations.
+Pneumococcus is a microorganism that causes pneumonia and meningitis. The 13-valent vaccine, produced by Pfizer and GSK, is one of the most expensive. Pfizer's version ranges from €113.54 in the United States to €42.85 and €45.73 in Spain and Portugal, very similar prices for two countries separated by more than 6,000 euros in per capita GDP. And these figures must be multiplied by three, the number of doses needed to immunize each child. If prices don't fall, **Spain will [spend](https://contrataciondelestado.es/wps/wcm/connect/aaa92768-c028-42e7-8315-5d53cd1f5499/DOC20161212125449PPT201604AM0001.pdf?MOD=AJPERES) more than ten million euros each year in the vaccine**. GAVI countries can access it at a lower cost, €6,58 euros per dose, but organizations like Médecins Sans Frontières and many middle-income countries are left out. In fact, in Idomeni (Greece) MSF had to pay around €60 per dose to vaccinate refugees. Due to its hight price, this is the only vaccine for which MSF made an exception to its policy of not accepting donations.
 
 <div class="panel" markdown="1">
 ### Why doesn't MSF accept donations?
@@ -50,7 +51,7 @@ Pneumococcus is a microorganism that causes pneumonia and meningitis. The 13-val
 
 Because of these new and more expensive vaccines, the cost of immunizing a child has multiplied by 68 between 2001 and 2014, according to the organization.
 
-**How are vaccine prices set?** There are two ways. The first is based on costs, that is, the vaccine is priced according to how expensive it was to produce. As with other medicines, pharmaceutical companies and organizations [disagree](http://medicamentalia.org/access/patents/#the-cost-of-developing-a-new-drug) about the real cost of developing a new vaccine. The second, and most common, is linked to how much buyers can or are willing to pay. This is *tiered pricing*, which means that the richer a country is, the more it pays, and is the system advocated by manufacturers, [according](http://www.efpia.eu/topics/industry-economy/access-to-medicines) to the European Federation of Pharmaceutical Industries.
+**How are vaccine prices set?** There are two ways. The first is based on costs, that is, the vaccine is priced according to how expensive it was to produce. As with other medicines, pharmaceutical companies and organizations [disagree](http://medicamentalia.org/access/patents/#the-cost-of-developing-a-new-drug) about the real cost of developing a new vaccine. The second, and most common, is linked to how much buyers can or are willing to pay. This is tiered pricing, which means that the richer a country is, the more it pays, and is the system advocated by manufacturers, [according](http://www.efpia.eu/topics/industry-economy/access-to-medicines) to the European Federation of Pharmaceutical Industries.
 
 We can see how tiered pricing works for the MMR -against measles, mumps and rubella- or Hepatitis B vaccine, whose prices rise together with a country's income. But the theory does not always match reality. While several variables -such as purchase volume or packaging type- may justify some differences, we can find trends in the data that don't seem to fit the idea of richer buyers paying more.
 
@@ -132,6 +133,8 @@ But **in fact it does**, since the price ranges within each income level categor
 Proof of this are the **large differences between countries in the same income level purchasing**, for example, the [tuberculosis vaccine](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1096) sold by the Statens Serum Institute. The V3P data for seven high income countries shows prices going from as little as $0.33 to up to $13.95. How does this help a buyer demand a fair price when negotiating with pharmaceutical companies?
 
 Alongside these seven countries, V3P data shows an anonymous country which, although poorer -it's classified as upper middle income,- pays more per vaccine dose than one of the high income ones. Even if we're still in the dark, and can't know which countries the data refers to, this difference shows, once again, that **not always the poorest buyers pay less**. 
+
+*Javier de Vega, Miguel Ángel Gavilanes and David Cabo collaborated in the data mining and review of this investigation. The data visualizations are by Raúl Díaz Poblete. More information, [here](/vaccines/team/).*
 
   </div>
 </div>
