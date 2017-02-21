@@ -72,7 +72,7 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
       .data(vaccines)
     .enter().append('li')
       .attr 'id', (d) -> 'legend-item-'+d.key
-      .style 'background', (d) => @color d.key
+      .style 'background', (d) -> d.values[0].vaccine_color #@color d.key
       .html (d) -> d.values[0].vaccine_name
       .on 'mouseover', (d) => @highlightVaccines d.key
       .on 'mouseout', @onMouseOut

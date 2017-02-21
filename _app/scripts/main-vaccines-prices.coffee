@@ -6,7 +6,7 @@ class window.VaccinesPrices
       'BCG': 'Tuberculosis (BCG)'
       'DTaP': 'Difteria, tétanos y tos ferina acelular (DTaP)'
       'DTP': 'Difteria, tétanos y tos ferina (DTP)'
-      'DTPa-IPV-HIB': 'Pentavalente contra difteria, tétanos, tos ferina, polio e Hib'
+      'DTPa-IPV-Hib': 'Pentavalente contra difteria, tétanos, tos ferina, polio e Hib'
       'HepB-pediátrica': 'Hepatitis B pediátrica'
       'IPV': 'Polio (IPV)'
       'MMR': 'Triple vírica contra sarampión, paperas y rubeola'
@@ -17,13 +17,25 @@ class window.VaccinesPrices
       'BCG': 'Tuberculosis (BCG)'
       'DTaP': 'Diphteria, tetanus and acellular pertussis (DTaP)'
       'DTP': 'Diphteria, tetanus and pertussis (DTP)'
-      'DTPa-IPV-HIB': 'Pentavalent against diphteria, tetanus, pertussis, polio and Hib'
+      'DTPa-IPV-Hib': 'Pentavalent against diphteria, tetanus, pertussis, polio and Hib'
       'HepB-pediátrica': 'Hepatitis B pediatric'
       'IPV': 'Polio (IPV)'
       'MMR': 'Measles, mumps and rubella'
       'pneumo13': 'Pneumococcus (13)'
       'Tdap': 'Tetanus, reduced diphtheria and reduced acellular pertussis (Tdap)'
       'VPH': 'Human papilomavirus (HPV)'
+
+  vaccines_colors:
+    'BCG': '#C9AD4B'
+    'DTaP': '#63BA2D'
+    'DTP': '#34A893'
+    'DTPa-IPV-Hib': '#BBD646'
+    'HepB-pediátrica': '#3D91AD'
+    'IPV': '#5B8ACB'
+    'MMR': '#E2773B'
+    'pneumo13': '#BA7DAF'
+    'Tdap': '#F49D9D'
+    'VPH': '#E25453'
 
   constructor: (_lang, _baseurl) ->
     @lang = _lang
@@ -75,24 +87,22 @@ class window.VaccinesPrices
       graph.setData pibData
       $(window).resize graph.onResize
 
-
   parseData: ->
-    vaccines = ['pneumo13','BCG','IPV','MMR','HepB-pediátrica','VPH','DTPa-IPV-HIB','DTaP','Tdap','DTP']
+    vaccines = ['pneumo13','BCG','IPV','MMR','HepB-pediátrica','VPH','DTPa-IPV-Hib','DTaP','Tdap','DTP']
     # filter data to get only selected vaccines
     @data = @data.filter (d) -> vaccines.indexOf(d.vaccine) != -1
-    console.table @data
     # join data & countries gdp 
     @data.forEach (d) =>
       country = @countries.filter (e) -> e.code == d.country
       d.price = +d.price
       d.vaccine_name = @vaccines_names[@lang][d.vaccine]
+      d.vaccine_color = @vaccines_colors[d.vaccine]
       if country[0]
         d.name = country[0]['name_'+@lang]
         d.gdp = country[0].value
       else
         d.name = d.country
         d.gdp = 0
-    console.table @data
     # sort data by gdp
     @data.sort (a,b) -> a.gdp - b.gdp
 
@@ -114,6 +124,8 @@ class window.VaccinesPrices
       .ticks 5
       .tickPadding 10
       .tickFormat (d) -> d+'€'
+    # overdrive color fill method
+    graph.getDotFill = (d) -> d.vaccine_color
     # set data
     graph.setData _data
     $(window).resize graph.onResize
