@@ -12,6 +12,7 @@
   # setup format numbers
   if lang == 'es'
     d3.formatDefaultLocale {
+      "currency": ["$",""]
       "decimal": ","
       "thousands": "."
       "grouping": [3]

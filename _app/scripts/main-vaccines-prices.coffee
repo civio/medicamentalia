@@ -6,10 +6,10 @@ class window.VaccinesPrices
       'BCG': 'Tuberculosis (BCG)'
       'DTaP': 'Difteria, tétanos y tos ferina acelular (DTaP)'
       'DTP': 'Difteria, tétanos y tos ferina (DTP)'
-      'DTPa-IPV-Hib': 'Pentavalente contra difteria, tétanos, tos ferina, polio e Hib'
+      'DTPa-IPV-Hib': 'Pentavalente (DTP, polio e Hib)'
       'HepB-pediátrica': 'Hepatitis B pediátrica'
       'IPV': 'Polio (IPV)'
-      'MMR': 'Triple vírica contra sarampión, paperas y rubeola'
+      'MMR': 'Sarampión, paperas y rubeola'
       'pneumo13': 'Neumococo (13)'
       'Tdap': 'Tétanos, difteria y tos ferina acelular reducida (Tdap)'
       'VPH': 'Virus del papiloma humano (VPH)'
@@ -17,7 +17,7 @@ class window.VaccinesPrices
       'BCG': 'Tuberculosis (BCG)'
       'DTaP': 'Diphteria, tetanus and acellular pertussis (DTaP)'
       'DTP': 'Diphteria, tetanus and pertussis (DTP)'
-      'DTPa-IPV-Hib': 'Pentavalent against diphteria, tetanus, pertussis, polio and Hib'
+      'DTPa-IPV-Hib': 'Pentavalent (DTP, polio and Hib)'
       'HepB-pediátrica': 'Hepatitis B pediatric'
       'IPV': 'Polio (IPV)'
       'MMR': 'Measles, mumps and rubella'
@@ -80,6 +80,8 @@ class window.VaccinesPrices
         .filter (d) -> d.gdp > 0
         .sort (a,b) -> b.gdp - a.gdp
       graph = new window.BarGraph('pib-countries-graph',
+        label:
+          format: d3.format('$,d')
         key:
           x: 'name'
           y: 'gdp'
@@ -98,10 +100,10 @@ class window.VaccinesPrices
       d.vaccine_name = @vaccines_names[@lang][d.vaccine]
       d.vaccine_color = @vaccines_colors[d.vaccine]
       if country[0]
-        d.name = country[0]['name_'+@lang]
+        d.name = d['name_'+@lang]
         d.gdp = country[0].value
       else
-        d.name = d.country
+        d.name = d['name_'+@lang]
         d.gdp = 0
     # sort data by gdp
     @data.sort (a,b) -> a.gdp - b.gdp
