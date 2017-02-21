@@ -73,7 +73,7 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
     .enter().append('li')
       .attr 'id', (d) -> 'legend-item-'+d.key
       .style 'background', (d) => @color d.key
-      .html (d) -> d.key
+      .html (d) -> d.values[0].vaccine_name
       .on 'mouseover', (d) => @highlightVaccines d.key
       .on 'mouseout', @onMouseOut
 
@@ -173,7 +173,7 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
       .html d.name
     @$tooltip
       .find '.tooltip-inner .vaccine'
-      .html d.vaccine
+      .html d.vaccine_name
     @$tooltip
       .find '.tooltip-inner .price'
       .html d.price

@@ -1,6 +1,30 @@
 # Main script for vaccines prices article
 class window.VaccinesPrices
 
+  vaccines_names: 
+    es:
+      'BCG': 'Tuberculosis (BCG)'
+      'DTaP': 'Difteria, tétanos y tos ferina acelular (DTaP)'
+      'DTP': 'Difteria, tétanos y tos ferina (DTP)'
+      'DTPa-IPV-HIB': 'Pentavalente contra difteria, tétanos, tos ferina, polio e Hib'
+      'HepB-pediátrica': 'Hepatitis B pediátrica'
+      'IPV': 'Polio (IPV)'
+      'MMR': 'Triple vírica contra sarampión, paperas y rubeola'
+      'pneumo13': 'Neumococo (13)'
+      'Tdap': 'Tétanos, difteria y tos ferina acelular reducida (Tdap)'
+      'VPH': 'Virus del papiloma humano (VPH)'
+    en:
+      'BCG': 'Tuberculosis (BCG)'
+      'DTaP': 'Diphteria, tetanus and acellular pertussis (DTaP)'
+      'DTP': 'Diphteria, tetanus and pertussis (DTP)'
+      'DTPa-IPV-HIB': 'Pentavalent against diphteria, tetanus, pertussis, polio and Hib'
+      'HepB-pediátrica': 'Hepatitis B pediatric'
+      'IPV': 'Polio (IPV)'
+      'MMR': 'Measles, mumps and rubella'
+      'pneumo13': 'Pneumococcus (13)'
+      'Tdap': 'Tetanus, reduced diphtheria and reduced acellular pertussis (Tdap)'
+      'VPH': 'Human papilomavirus (HPV)'
+
   constructor: (_lang, _baseurl) ->
     @lang = _lang
     # load data
@@ -61,12 +85,14 @@ class window.VaccinesPrices
     @data.forEach (d) =>
       country = @countries.filter (e) -> e.code == d.country
       d.price = +d.price
+      d.vaccine_name = @vaccines_names[@lang][d.vaccine]
       if country[0]
         d.name = country[0]['name_'+@lang]
         d.gdp = country[0].value
       else
         d.name = d.country
         d.gdp = 0
+    console.table @data
     # sort data by gdp
     @data.sort (a,b) -> a.gdp - b.gdp
 
