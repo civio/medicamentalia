@@ -131,6 +131,7 @@ POL,Varicela,2016,18000,34.23,GSK,,,Poland,Polonia
 POL,tetanus,2016,300000,1.59,IBSS BIOMED,,,Poland,Polonia
 POL,tetanus,2016,300000,0.45,IBSS BIOMED,,,Poland,Polonia
 POL,Tdap,2016,65670,14.83,GSK,,,Poland,Polonia
+POL,Tdap,2016,,12.13,Sanofi,,,Poland,Polonia
 POL,pneumo13,2016,1200000,19.45,GSK,,,Poland,Polonia
 POL,MMR,2017,100000,5,GSK,,,Poland,Polonia
 POL,MenC,2016,15000,24.49,PGF Urtica,,,Poland,Polonia
@@ -157,10 +158,9 @@ PRT,gripe,2016,350000,2.58,BGP Produts,,,Portugal,Portugal
 PRT,DTPa-IPV-Hib,2016,26600,18.99,GSK,,,Portugal,Portugal
 PRT,DTPa-IPV,2016,270,13.29,GSK,,,Portugal,Portugal
 PRT,DTPa-IPV,2016,3405,15,Sanofi,,,Portugal,Portugal
-PRT,DTP-IPV,2016,12974,13.29,Sanofi,,,Portugal,Portugal
+PRT,DTP-IPV,2016,33374,13.29,Sanofi,,,Portugal,Portugal
 PRT,DTP-Hib-IPV-HEpB,2017,1293,39.37,GSK,,,Portugal,Portugal
 PRT,DTP-Hib,2016,241,14.84,GSK,,,Portugal,Portugal
-PRT,DTP,2016,20400,13.29,Sanofi,,,Portugal,Portugal
 PRT,DTaP,2016,200,8.6,GSK,,,Portugal,Portugal
 PRT,DT,2016,4300,2.9,GSK,,,Portugal,Portugal
 PRT,BCG,2016,30,8.9,GSK,,,Portugal,Portugal
@@ -241,21 +241,20 @@ USA,VPH,2017,,125.65,Merck,,,USA,EE.UU.
 USA,VPH,2017,,109.58,Merck,,,USA,EE.UU.
 USA,Varicela,2017,,83.12,Merck,,,USA,EE.UU.
 USA,Varicela,2017,,62.26,Merck,,,USA,EE.UU.
-USA,Tdap,2017,,28.35,GSK,,,USA,EE.UU.
 USA,Tdap,2017,,27.63,GSK,,,USA,EE.UU.
 USA,Tdap,2017,,20.98,GSK,,,USA,EE.UU.
 USA,Tdap,2017,,21.43,GSK,,,USA,EE.UU.
-USA,Tdap,2017,,21.09,Sanofi,,,USA,EE.UU.
+USA,Tdap,2017,,20.38,Sanofi,,,USA,EE.UU.
 USA,rotavirus,2017,,81.61,GSK,,,USA,EE.UU.
 USA,rotavirus,2017,,62.39,Merck,,,USA,EE.UU.
 USA,pneumo23,2017,,43.32,Merck,,,USA,EE.UU.
 USA,pneumo23,2017,,24.1,Merck,,,USA,EE.UU.
 USA,pneumo13adult,2017,,90.92,Pfizer,,,USA,EE.UU.
 USA,pneumo13,2017,,113.54,Pfizer,,,USA,EE.UU.
-USA,MMRadult,2017,,37.25,Merck,,,USA,EE.UU.
-USA,MMR + varicella,2017,,107.71,Merck,,,USA,EE.UU.
-USA,MMR,2017,,18.37,Merck,,,USA,EE.UU.
-USA,MenCYHibT,2017,,9.28,GSK,,,USA,EE.UU.
+USA,MMRadult,2017,,35.82,Merck,,,USA,EE.UU.
+USA,MMR + varicella,2017,,105.58,Merck,,,USA,EE.UU.
+USA,MMR,2017,,16.95,Merck,,,USA,EE.UU.
+USA,MenCYHibT,2017,,8.57,GSK,,,USA,EE.UU.
 USA,MenB,2017,,92.77,GSK,,,USA,EE.UU.
 USA,MenB,2017,,99.95,GSK,,,USA,EE.UU.
 USA,MenB,2017,,100.15,GSK,,,USA,EE.UU.
@@ -265,16 +264,15 @@ USA,MenACYW,2017,,65.47,GSK,,,USA,EE.UU.
 USA,MenACYW,2017,,64.12,GSK,,,USA,EE.UU.
 USA,MenACYW,2017,,69.83,Sanofi,,,USA,EE.UU.
 USA,MenACYW,2017,,83.9,Sanofi,,,USA,EE.UU.
-USA,IPV,2017,,8.51,Sanofi,,,USA,EE.UU.
+USA,IPV,2017,,11.36,Sanofi,,,USA,EE.UU.
 USA,Hib,2017,,8.27,GSK,,,USA,EE.UU.
 USA,Hib,2017,,11.13,Merck,,,USA,EE.UU.
 USA,Hib,2017,,8.35,Sanofi,,,USA,EE.UU.
-USA,HepB-pediátrica,2017,,9.58,GSK,,,USA,EE.UU.
 USA,HepB-pediátrica,2017,,10.3,GSK,,,USA,EE.UU.
 USA,HepB-pediátrica,2017,,10.96,Merck,,,USA,EE.UU.
 USA,HepB-adulto,2017,,23.33,GSK,,,USA,EE.UU.
 USA,HepB-adulto,2017,,26.38,GSK,,,USA,EE.UU.
-USA,HepB-adulto,2017,,21.14,Merck,,,USA,EE.UU.
+USA,HepB-adulto,2017,,21.86,Merck,,,USA,EE.UU.
 USA,HepB-adulto,2017,,25.6,Merck,,,USA,EE.UU.
 USA,HepAinfantil,2017,,16.21,GSK,,,USA,EE.UU.
 USA,HepAadult,2017,,23.71,GSK,,,USA,EE.UU.
@@ -282,7 +280,6 @@ USA,HepAadult,2017,,25.56,GSK,,,USA,EE.UU.
 USA,HepAadult,2017,,50.45,GSK,,,USA,EE.UU.
 USA,HepA,2017,,16.21,GSK,,,USA,EE.UU.
 USA,HepA,2017,,51.1,GSK,,,USA,EE.UU.
-USA,HepA,2017,,13.74,Merck,,,USA,EE.UU.
 USA,HepA,2017,,16.59,Merck,,,USA,EE.UU.
 USA,HepA,2017,,25.56,Merck,,,USA,EE.UU.
 USA,HepA,2017,,23.71,Merck,,,USA,EE.UU.
@@ -312,5 +309,4 @@ USA,DT,2017,,11.1,Grifols,,,USA,EE.UU.
 USA,DT,2017,,10.45,Grifols,,,USA,EE.UU.
 USA,DT,2017,,10.22,Sanofi,,,USA,EE.UU.
 USA,DT,2017,,10.4,Sanofi,,,USA,EE.UU.
-USA,DT,2017,,17.97,Sanofi,,,USA,EE.UU.
 USA,DT,2017,,17.26,Sanofi,,,USA,EE.UU.
