@@ -131,6 +131,7 @@ POL,Varicela,2016,18000,34.23,GSK,,,Poland,Polonia
 POL,tetanus,2016,300000,1.59,IBSS BIOMED,,,Poland,Polonia
 POL,tetanus,2016,300000,0.45,IBSS BIOMED,,,Poland,Polonia
 POL,Tdap,2016,65670,14.83,GSK,,,Poland,Polonia
+POL,Tdap,2016,,12.13,Sanofi,,,Poland,Polonia
 POL,pneumo13,2016,1200000,19.45,GSK,,,Poland,Polonia
 POL,MMR,2017,100000,5,GSK,,,Poland,Polonia
 POL,MenC,2016,15000,24.49,PGF Urtica,,,Poland,Polonia
@@ -157,10 +158,9 @@ PRT,gripe,2016,350000,2.58,BGP Produts,,,Portugal,Portugal
 PRT,DTPa-IPV-Hib,2016,26600,18.99,GSK,,,Portugal,Portugal
 PRT,DTPa-IPV,2016,270,13.29,GSK,,,Portugal,Portugal
 PRT,DTPa-IPV,2016,3405,15,Sanofi,,,Portugal,Portugal
-PRT,DTP-IPV,2016,12974,13.29,Sanofi,,,Portugal,Portugal
+PRT,DTP-IPV,2016,33374,13.29,Sanofi,,,Portugal,Portugal
 PRT,DTP-Hib-IPV-HEpB,2017,1293,39.37,GSK,,,Portugal,Portugal
 PRT,DTP-Hib,2016,241,14.84,GSK,,,Portugal,Portugal
-PRT,DTP,2016,20400,13.29,Sanofi,,,Portugal,Portugal
 PRT,DTaP,2016,200,8.6,GSK,,,Portugal,Portugal
 PRT,DT,2016,4300,2.9,GSK,,,Portugal,Portugal
 PRT,BCG,2016,30,8.9,GSK,,,Portugal,Portugal
