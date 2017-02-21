@@ -18,7 +18,7 @@ lang:             es
 
 Hay dos premisas que, aplicadas a la compra de vacunas, se tambalean. La primera, que la contratación pública es transparente; la segunda, que cuanto más rico es un país, más paga a las farmacéuticas por la adquisición de cada dosis. **Ni una ni otra se cumplen del todo** cuando hablamos de la relación entre laboratorios y gobiernos. 
 
-La opacidad del sector impregna hasta la OMS, que publica una [base de datos](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/) de precios a los que compran sus vacunas varios gobiernos del mundo y en la que sus nombres se ocultan por petición de los propios estados miembros. Nadie quiere ser señalado si paga menos o más que el de al lado ni **incumplir los acuerdos de confidencialidad** firmados con las farmacéuticas. 
+La opacidad del sector impregna hasta la Organización Mundial de la Salud (OMS), que publica una [base de datos](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/) de precios a los que compran sus vacunas varios gobiernos del mundo y en la que sus nombres se ocultan por petición de los propios estados miembros. Nadie quiere ser señalado si paga menos o más que el de al lado ni **incumplir los acuerdos de confidencialidad** firmados con las farmacéuticas. 
 
 Por eso muchos países prefieren no publicar esos datos. Pero, pese a la opacidad general, hay **excepciones**: naciones en las que sus páginas oficiales de contratación ofrecen información, la mayoría de veces escondida entre pliegos y documentos escaneados, del precio al que están comprando cada dosis. Para realizar este reportaje analizamos esos datos excepcionales de siete países [[¿por qué solo siete? ¿cómo se han elegido?](/vaccines/nosotros/#precios)], además de los de tres organizaciones internacionales: Médicos sin Fronteras (MSF); Unicef, encargada de servir de punto central de compra para iniciativas como GAVI, una alianza para proveer de vacunas a los países más pobres del mundo; y el Fondo Rotatorio de la Organización Panamericana de la Salud (OPS), un sistema de compra conjunta que utilizan 41 países de Latinoamérica y El Caribe. 
 
@@ -125,11 +125,15 @@ En paralelo, argumenta que "tener información sobre la ubicación del país (re
 
 Pero **la realidad es que sí lo hace**, puesto que los rangos dentro de cada nivel de ingresos son amplísimos. Y es que no es lo mismo compararse con Polonia, que con Grecia, Alemania o Estados Unidos (todos ellos del mismo nivel: altos ingresos), como no es lo mismo meter en el mismo saco a Brasil, China, Bosnia o Iraq (medio-alto). 
 
-{% include caption.html img="articles/V3P.png" caption="Diferencias en precios de BCG en la página de la OMS" align="alignright" %}
+{% include caption.html img="articles/V3P.png" caption="Diferencias en precios de BCG en la página de la OMS. En sus informes, se oculta los nombres de los países remplanzándolos por códigos anonimizados." align="alignright" %}
 
 Prueba de ello son las **grandes diferencias entre países de un mismo nivel de ingresos** para, por ejemplo, la [vacuna contra la tuberculosis](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1096) que vende el laboratorio Statens Serum Institute. El V3P recoge datos de siete estados de ingresos altos y la horquilla es amplísima: va desde el que paga 0,33 dólares al que llega a 13,95. ¿Cómo ayuda esa información tan amplia a saber qué reclamar en las negociaciones con las farmacéuticas? 
 
 Junto a esos siete países aparece la información de un país anónimo que, aunque es más pobre -está clasificado como medio alto- paga más por dosis que uno de los países del nivel superior. Aunque sigamos a ciegas y no sepamos de qué estados estamos hablando, esta diferencia prueba, una vez más, que **no siempre los más pobres pagan menos**. 
+
+*Javier de Vega, Miguel Ángel Gavilanes y David Cabo han colaborado en la minería y revisión de datos de este reportajes. Los gráficos son de Raúl Díaz Poblete.*
+
+
 
   </div>
 </div>

@@ -127,7 +127,7 @@ In addition, she argues that "having information about the location of the count
 
 But **in fact it does**, since the price ranges within each income level category are very large. And one can't just compare Poland with Greece, Germany or the United States (all of them in the same income category: high), the same way one can't ignore the differences between Brazil, China, Bosnia and Iraq, all upper middle income countries. 
 
-{% include caption.html img="articles/V3P.png" caption="Prices paid by governments for BCG vaccine in the WHO project." align="alignright" %}
+{% include caption.html img="articles/V3P.png" caption="Prices paid by governments for BCG vaccine in the WHO project. In these reports the names of the countries are hidden and replaced by anonymised codes." align="alignright" %}
 
 Proof of this are the **large differences between countries in the same income level purchasing**, for example, the [tuberculosis vaccine](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1096) sold by the Statens Serum Institute. The V3P data for seven high income countries shows prices going from as little as $0.33 to up to $13.95. How does this help a buyer demand a fair price when negotiating with pharmaceutical companies?
 
