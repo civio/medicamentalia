@@ -1688,6 +1688,16 @@ Infographic
     }
     .description{
       margin-bottom: $grid-gutter-width/6;
+      .price{
+        font-size: 1.125em;
+      }
+      .vaccine{
+        font-weight: 400;
+      }
+      .vaccine,
+      .company{
+        color: $brand-primary;
+      }
     }
   }
 }

@@ -179,12 +179,11 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
       .html d.price
     company = ''
     if d.company
-      company = '('+d.company
+      company = d.company
       if d.company2
-        company += ','+d.company2
+        company += ', '+d.company2
       if d.company3
-        company += ','+d.company3
-      company += ')'
+        company += ', '+d.company3
     @$tooltip
       .find '.tooltip-inner .company'
       .html company
