@@ -168,6 +168,7 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
 
   setTooltipData: (d) ->
     dosesFormat = d3.format('.0s')
+    pricesFormat = d3.format(',.1f')
     @$tooltip
       .find '.tooltip-inner .title'
       .html d.name
@@ -176,7 +177,7 @@ class window.ScatterplotDiscreteGraph extends window.ScatterplotGraph
       .html d.vaccine_name
     @$tooltip
       .find '.tooltip-inner .price'
-      .html d.price
+      .html pricesFormat(d.price)
     company = ''
     if d.company
       company = d.company
