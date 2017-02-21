@@ -142,10 +142,12 @@ We started with information from seven countries and three organizations about t
 The sources of the prices paid by the organizations are the following:
 
 * [PAHO Revolving Fund](http://www.paho.org/hq/index.php?option=com_docman&task=doc_download&gid=34168&Itemid=270&lang=en), with data from 2016. A PDF that we converted into structured data. The main issue with it is that the information is not broken down by manufacturer and only a weighted average is published.
+
 * **Unicef** published its price data in 2011 for the first time, and does [break down prices per manufacturer](https://www.unicef.org/supply/index_57476.html). The information published includes data from 2001 to 2016, so we used the latest year.
+
 * MSF sent us a database containing the prices paid when purchasing their vaccines.
 
-For countries, the search for information is much more complicated. We reviewed public procurement sites, government transparency portals and official purchasing documents from more than 30 countries, trying to cover all types of regions and income levels. In most cases, the information is not public or can't be found without deeper local knowledge. In others, it's just hidden. In the end, unfortunately, we could only find a country outside the high income range, but we continue to work on improving the representativeness of the data.
+For countries, the search for information is much more complicated. We reviewed public procurement sites, government transparency portals and official purchasing documents from more than 30 countries, trying to cover all types of regions and income levels. But we didn't manage to do it. In most cases, the information is not public or can't be found without deeper local knowledge. In others, it's just hidden. In the end, unfortunately, we could only find a country outside the high income range, but we continue to work on improving the representativeness of the data.
 
 * **Spain**. We use the national level procurement site, *Contratación del Estado*, and the Official Gazette, BOE. The price information comes from the [framework agreement](http://boe.es/buscar/doc.php?id=BOE-B-2015-8168) signed for 2015 and 2016, which covers 15 of the 17 regional governments (Andalusia and the Basque Country are left out), the cities of Ceuta and Melilla and purchases made by the central government through the Ministries of Defense and Finance. As of the time of this investigation being published, the Government is evaluating the award of the [next framework agreement](https://www.boe.es/diario_boe/txt.php?id=BOE-B-2016-65952), which will regulate prices between 2017 and 2020. We've also reviewed purchases made during 2015 in Catalonia, Basque Country and Andalusia, since they publish -in their procurement information sites- data about prices per dose, although often hidden in the bid formalization paperwork. Although some of these regions are outside the national joint purchasing system, they've purchased at the same prices in most cases. Hence, if the price of a vaccine was not available from the framework agreement (because it wasn't awarded to any bidder in the first round), such as for the pneumococcus vaccine, we've used the price of adjudication in the regions.
 
@@ -163,13 +165,11 @@ For countries, the search for information is much more complicated. We reviewed 
 
 In all cases, currency conversions to euros for the years 2015 and 2016 were made using the US Internal Revenue Service [average exchange rates](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates). For 2017, we used exchange rates [as of December 31, 2016](https://www.fiscal.treasury.gov/fsreports/rpt/treasRptRateExch/currentRates.htm).
 
-##Comparing prices
-
 We needed to cluster all the purchases into basic groups of vaccines, which we then differentiated more finely according to their target users (i.e. children or adults), whether they were conjugated or not... We decided to analyze only those vaccines for which more data points were available or were more relevant from a journalistic point of view (e.g. because they are more expensive). Each of the vaccines has its own casuistry and, as the [WHO itself admits](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module2/v3p_factors_to_consider.pdf?ua=1), it's challenging to perform a 100% rigorous comparison.
 
 We used some lists like [the one from the WHO](https://extranet.who.int/gavi/PQ_Web/), as well as manufacturers' web pages, some vademecum and technical specifications, to understand which subtypes existed globally for each vaccine.
 
-We have included in our articles all the prices, as a range, paid by a country or organization in the analyzed time, in order to represent all the the different options (e.g. brand, packaging). We've tried to compare only those data points that, because of their composition and other characteristics, were actually comparable, but in some cases the information was not enough. If you find any errors, please [let us know](mailto: contacto@civio.es).
+We have included in our articles all the prices, as a range, paid by a country or organization in the analyzed time, in order to represent all the the different options (e.g. brand, packaging). We've tried to compare in the articles only those data points that, because of their composition and other characteristics, were actually comparable, but in some cases the information was not enough. If you find any errors, please [let us know](mailto: contacto@civio.es).
 
 #### Other data sources
 

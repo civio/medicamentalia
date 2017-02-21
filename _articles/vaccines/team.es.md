@@ -167,7 +167,7 @@ A la hora de comparar necesitábamos agrupar todas las compras en grupos básico
 
 Usamos algunas listas como [la de la OMS](https://extranet.who.int/gavi/PQ_Web/) y páginas web de fabricantes y algún vademecum para intentar tener una idea global de qué subtipos existían dentro de cada vacuna, además de las páginas de especificaciones técnicas.  
 
-Hemos incluído en nuestra información todos los precios, como rango, que ha pagado un país u organización en el tiempo analizado, así nos aseguramos de que están representadas las distintas opciones (marca, presentación...). Hemos intentado comparar solo aquellas que, por su composición, son comparables, pero en algunos casos la información no era suficiente. Si encuentras algún error, por favor, [comunícanoslo](mailto:contacto@civio.es).
+Hemos incluído en nuestra información todos los precios, como rango, que ha pagado un país u organización en el tiempo analizado, así nos aseguramos de que están representadas las distintas opciones (marca, presentación...). Hemos intentado comparar en los artículos solo aquellas que, por su composición, son comparables, pero en algunos casos la información no era suficiente. Si encuentras algún error, por favor, [comunícanoslo](mailto:contacto@civio.es).
 
 #### Otros datos empleados y sus fuentes
 
