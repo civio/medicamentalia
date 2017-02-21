@@ -9,7 +9,7 @@ order:            4
 author:           Eva Belmonte
 pub_date:         2017-02-24
 slug:             precios
-ref:              prices
+ref:              vaccines-prices
 lang:             es
 draft:            true
 ---
