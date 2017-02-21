@@ -21,7 +21,7 @@ Two commonly held premises fail when applied to the purchase of vaccines. First,
 
 The opacity of the sector permeates even the World Health Organization (WHO), which publishes a [database](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/) of vaccine prices paid by various governments, but keeps their names hidden at the request of the member states themselves. No one wants to be singled out if they obtain a different price than their neighbour, nor **fail to comply with the confidentiality agreements** signed with the pharmaceutical companies.
 
-That is why many countries prefer not to publish such data. But, despite the general opacity, there are **exceptions**. Nations in which their official procurement web sites offer, most often hidden in bid specifications and scanned contracts, information on the purchase price of each dose. For this investigation, we analyze this exceptional data from seven countries *[why only seven? How have they been chosen?]*, together with three international organizations: Médecins Sans Frontières (MSF); Unicef, which serves as a central purchasing point for initiatives such as GAVI, an alliance to provide vaccines to the world's poorest countries; and the Revolving Fund of the Pan American Health Organization (PAHO), a joint purchasing system used by 41 countries in Latin America and the Caribbean. 
+That is why many countries prefer not to publish such data. But, despite the general opacity, there are **exceptions**. Nations in which their official procurement web sites offer, most often hidden in bid specifications and scanned contracts, information on the purchase price of each dose. For this investigation, we analyze this exceptional data from seven countries *[why only seven? How have they been chosen?]*, together with three international organizations: Médecins Sans Frontières (MSF); Unicef, which serves as a central purchasing point for initiatives such as GAVI, an alliance to provide vaccines to the world's poorest countries; and the Revolving Fund of the Pan American Health Organization (PAHO), a joint purchasing system used by 41 countries in Latin America and the Caribbean.
 
 </div>
 {% include vaccines/prices-scatterplot.es.html id="all" title="Per dose prices paid per governments" footer="There can be price differences due to brand, packaging (vial or syringe), strains or volume, among others. PAHO data is made of weighted averages, i.e. it’s not broken down by manufacturer. For the rest, we include all the data found. <a href=\"/vaccines/team/#prices\">Methodology</a>" legend=true %}
@@ -62,7 +62,7 @@ We can see how tiered pricing works for the MMR -against measles, mumps and rube
 The DTP vaccine has been part of vaccination schedules across the world for a long time. It protects against diphtheria, tetanus and whooping cough, and has several versions. The one including the acellular type of pertussis (DTaP) is more advanced and expensive than the original DTP. Despite huge differences in wealth between the United States and Spain -the former more than doubling the per capita GDP of Spain- both buy doses from GSK at **a very similar price**: €13.28 for Spain, €13.86 for the United States.
 
 <div class="container-right">
-{% include vaccines/prices-scatterplot.es.html id="tdap" title="Per dose prices for Tdap vaccine" %}
+{% include vaccines/prices-scatterplot.es.html id="tdap" title="Per dose prices for Tdap vaccine" footer="<a href=\"/vaccines/team/#prices\">Methodology</a>" %}
 </div>
 
 A third version is Tdap, a low dosage and also acellular vaccine, normally used for adults. In this case, the figures don't make sense either. Poland pays more (€14.82) than Portugal (€13.21) and Spain (€8.85), despite the fact the three countries buy from the same provider, GSK, and that the order of their income levels is just the opposite.
@@ -70,7 +70,7 @@ A third version is Tdap, a low dosage and also acellular vaccine, normally used 
 The DTP vaccine is sometimes combined with others to try to provide as many immunizations as possible in one go. An example is the pentavalent vaccine which protects -on top diphtheria, tetanus and pertussis,- against Hepatitis B and Hib (anti-Haemophilus influenzae type b, a bacterium that causes pneumonia, respiratory problems, infections and can lead to death). Ukrania (lower-middle income) paid Sanofi almost the same price as Spain (high income): more than €22 per dose. If we add the Hepatitis B vaccine to the previous combination we get the hexavalent vaccine. Both Portugal and Spain buy it from GSK, but the Portuguese government pays **ten euros more per dose**.
 
 <div class="container-right">
-{% include vaccines/prices-scatterplot.es.html id="ipv" title="Per dose prices for IPV vaccine" %}
+{% include vaccines/prices-scatterplot.es.html id="ipv" title="Per dose prices for IPV vaccine" footer="<a href=\"/vaccines/team/#prices\">Methodology</a>" %}
 </div>
 
 For IPV, the vaccine that protects against polio (IPV), Hungary pays more than Spain and Spain pays more than the United States. In Italy, the price per dose is different for two purchases, even though both bids are awarded to Sanofi and in the same year, 2016.
@@ -103,7 +103,7 @@ For the countries participating in the Revolving Fund there is an extra benefit,
 
 ## Trading blindly
 
-{% include caption.html img="articles/UK-contract.jpg" caption="Detail of a contract for vaccine purchases in UK." align="alignright" %}
+{% include caption.html img="articles/Contract_CM_PHV_13_5409_Rotavirus.png" caption="Detail of a contract for vaccine purchases in UK." align="alignright" %}
 
 The UK government procurement website **hides the prices** at which the British government acquires vaccines. If we access a [contract](https://www.contractsfinder.service.gov.uk/Notice/602ed96d-bbaa-4c59-af62-bae287c9a521?p=@=UFQxUlRRPT0=NjJNT08) for the purchase of the rotavirus one, for example, we can know what's being bought and from whom, but not the amount. The [bid details](https://www.contractsfinder.service.gov.uk/Notice/Attachment/B21E7005-7634-44DB-B965-89B58409A8F4) include a note where the total price and the price per dose should be displayed: "Redacted under section 43(2), commercial interests". The English government applies one of the exceptions of its [Freedom of Information Act](http://www.legislation.gov.uk/ukpga/2000/36/section/43), which excludes information whose publication "would, or would be likely to, prejudice the commercial interests of any person (including the public authority holding it)." The exemption applies to the purchase of vaccines, but not to many other sectors: e.g. we can easily see how much the government spent [buying software for hospitals](https://www.contractsfinder.service.gov.uk/Notice/49c5b3fa-b9c5-4ed6-a6dc-8c55043eb4b0?p=@RPT0=NjJNT08=UFQxUlR).
 
@@ -128,7 +128,7 @@ In addition, she argues that "having information about the location of the count
 
 But **in fact it does**, since the price ranges within each income level category are very large. And one can't just compare Poland with Greece, Germany or the United States (all of them in the same income category: high), the same way one can't ignore the differences between Brazil, China, Bosnia and Iraq, all upper middle income countries. 
 
-{% include caption.html img="articles/V3P.jpg" caption="Prices paid by governments for BCG vaccine in the WHO project." align="alignright" %}
+{% include caption.html img="articles/V3P.png" caption="Prices paid by governments for BCG vaccine in the WHO project." align="alignright" %}
 
 Proof of this are the **large differences between countries in the same income level purchasing**, for example, the [tuberculosis vaccine](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1096) sold by the Statens Serum Institute. The V3P data for seven high income countries shows prices going from as little as $0.33 to up to $13.95. How does this help a buyer demand a fair price when negotiating with pharmaceutical companies?
 

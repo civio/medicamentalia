@@ -62,7 +62,7 @@ Podemos ver cómo funciona esta dinámica en los precios analizados de vacunas c
 La DTP es una de las clásicas del calendario de vacunación en todo el mundo. Protege contra la difteria, el tétanos y la tos ferina, y cuenta con varias versiones. La que incluye el tipo acelular de la tos ferina (DTaP) es más avanzada y cara que la DTP original. Pese a las enormes diferencias de riqueza entre Estados Unidos y España -el país norteamericano supera el doble del PIB per cápita español-, ambos compran la dosis a GSK **a un precio muy similar**: 13,28 euros en España y 13,86 en Estados Unidos.
 
 <div class="container-right">
-{% include vaccines/prices-scatterplot.es.html id="tdap" title="Precio por dosis de Tdap" %}
+{% include vaccines/prices-scatterplot.es.html id="tdap" title="Precio por dosis de Tdap" footer="<a href=\"/vaccines/nosotros/#precios\">Metodología</a>" %}
 </div>
 
 La tercera versión de esta vacuna es la Tdap, de contenido reducido y también acelular, que se suele utilizar en adultos. En este caso, las cuentas tampoco cuadran. Polonia paga más (14,82 euros) que Portugal (13,21) y España (8,85), pese a que los tres países compran a GSK y a que el orden de sus niveles de riqueza es justo el opuesto. 
@@ -70,7 +70,7 @@ La tercera versión de esta vacuna es la Tdap, de contenido reducido y también 
 La DTP se une a veces a otras vacunas para intentar, de una sola vez, cubrir el máximo de inmunizaciones posible. Un ejemplo es la pentavalente, que protege, además de contra difteria, tétanos y tos ferina, contra Hepatitis B e Hib (anti-Haemophilus influenzae tipo b, una bacteria que causa neumonía, problemas respiratorios e infecciones). Ucrania (de nivel de riqueza medio-bajo) paga a Sanofi casi el mismo precio que España (nivel alto): más de 22 euros por dosis. Si a esa combinación añadimos la vacuna contra la Hepatitis B, tenemos la hexavalente. Tanto Portugal como España la compran a GSK, pero el gobierno luso paga **diez euros más por dosis**.
 
 <div class="container-right">
-{% include vaccines/prices-scatterplot.es.html id="ipv" title="Precio por dosis de IPV" %}
+{% include vaccines/prices-scatterplot.es.html id="ipv" title="Precio por dosis de IPV" footer="<a href=\"/vaccines/nosotros/#precios\">Metodología</a>" %}
 </div>
 
 En la IPV, la vacuna inyectable que protege contra la polio (IPV), Hungría paga más que España y España paga más que Estados Unidos. En Italia, el precio por dosis es diferente según se compre en una época u otra del año, aunque ambos contratos sean con Sanofi y en un mismo año, 2016.  
@@ -101,7 +101,7 @@ Para los países participantes del Fondo Rotatorio existe un beneficio extra má
 
 ## Negociando a ciegas
 
-{% include caption.html img="articles/UK-contract.jpg" caption="Detalle de un contrato de compra de vacunas" align="alignright" %}
+{% include caption.html img="articles/Contract_CM_PHV_13_5409_Rotavirus.png" caption="Detalle de un contrato de compra de vacunas" align="alignright" %}
 
 La página web que recoge las contrataciones públicas de Reino Unido **oculta los precios** a los que el gobierno inglés adquiere las vacunas. Si accedemos a un [contrato](https://www.contractsfinder.service.gov.uk/Notice/602ed96d-bbaa-4c59-af62-bae287c9a521?p=@=UFQxUlRRPT0=NjJNT08) para la compra de la del rotavirus, por ejemplo, podremos saber qué se compra y a quién se compra, pero no por cuánto dinero. El [detalle del expediente](https://www.contractsfinder.service.gov.uk/Notice/Attachment/B21E7005-7634-44DB-B965-89B58409A8F4) incluye una nota allí donde deberíamos ver el precio total y el precio por dosis: "redactado bajo sección 43(2), intereses comerciales". Así aplica el gobierno inglés una de las excepciones de su [Ley de Acceso a la Información](http://www.legislation.gov.uk/ukpga/2000/36/section/43), la que excluye aquellos datos cuya publicación "perjudica, o podría perjudicar, intereses comerciales de cualquier persona (incluída la autoridad pública que la posee)". Este veto se aplica a la compra de vacunas, pero no a muchos otros sectores. Un ejemplo: podemos leer sin problemas cuánto ha gastado el gobierno inglés en la [compra de un software para hospitales](https://www.contractsfinder.service.gov.uk/Notice/49c5b3fa-b9c5-4ed6-a6dc-8c55043eb4b0?p=@RPT0=NjJNT08=UFQxUlR).  
 
@@ -126,7 +126,7 @@ En paralelo, argumenta que "tener información sobre la ubicación del país (re
 
 Pero **la realidad es que sí lo hace**, puesto que los rangos dentro de cada nivel de ingresos son amplísimos. Y es que no es lo mismo compararse con Polonia, que con Grecia, Alemania o Estados Unidos (todos ellos del mismo nivel: altos ingresos), como no es lo mismo meter en el mismo saco a Brasil, China, Bosnia o Iraq (medio-alto). 
 
-{% include caption.html img="articles/V3P.jpg" caption="Diferencias en precios de BCG en la página de la OMS" align="alignright" %}
+{% include caption.html img="articles/V3P.png" caption="Diferencias en precios de BCG en la página de la OMS" align="alignright" %}
 
 Prueba de ello son las **grandes diferencias entre países de un mismo nivel de ingresos** para, por ejemplo, la [vacuna contra la tuberculosis](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1096) que vende el laboratorio Statens Serum Institute. El V3P recoge datos de siete estados de ingresos altos y la horquilla es amplísima: va desde el que paga 0,33 dólares al que llega a 13,95. ¿Cómo ayuda esa información tan amplia a saber qué reclamar en las negociaciones con las farmacéuticas? 
 
