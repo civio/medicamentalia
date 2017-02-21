@@ -1,7 +1,7 @@
 <div class="graph-container">
   <p class="graph-container-caption" style="text-align:center;margin-top:0;">{{ include.title }}</p>
   {% if include.description %}
-    {{ include.description }}
+  <p>{{ include.description }}</p>
   {% endif %}
   <div id="vaccine-prices-{{ include.id }}-graph" class="scatterplot-graph scatterplot-discrete-graph">
     {% if include.legend %}
@@ -17,4 +17,7 @@
       </div>
     </div>
   </div>
+  {% if include.footer %}
+  <p>{{ include.footer }}</p>
+  {% endif %}
 </div>

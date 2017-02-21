@@ -27,7 +27,7 @@ Por eso muchos países prefieren no publicar esos datos. Pero, pese a la opacida
 ## Nuevas y caras
 
 </div>
-{% include vaccines/prices-scatterplot.es.html id="all" title="Precios" legend=true %}
+{% include vaccines/prices-scatterplot.es.html id="all" title="Precios" footer="Puede haber diferencias de precio por marca, presentación (vial o jeringa), cepas o cantidades, entre otros. Los datos de OPS son medias ponderadas, puesto que no publican a cuánto compran a cada laboratorio; para el resto, incluímos todos los datos encontrados. <a href=\"/vaccines/nosotros/#precios\">Metodología</a>" legend=true %}
 <div class="page-content-container" markdown="1">
 
 Como ocurre con los medicamentos, los nuevos productos y sus [patentes](http://medicamentalia.org/access/patents/) disparan los [precios](http://medicamentalia.org/access/prices/). **"Con solo dos fabricantes para cada una de las nuevas y mucho más caras vacunas -contra el neumococo, el rotavirus y el Virus del Papiloma Humano (VPH)- y la imposibilidad de usar los dos productos disponibles de forma intercambiable, las compañías están disfrutando de casi monopolios"**, denuncia MSF en un [informe](https://www.msfaccess.org/content/right-shot-bringing-down-barriers-affordable-and-adapted-vaccines) dedicado íntegramente a analizar el mercado global de vacunas  

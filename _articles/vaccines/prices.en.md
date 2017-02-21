@@ -27,7 +27,7 @@ That is why many countries prefer not to publish such data. But, despite the gen
 ## Brand new and expensive
 
 </div>
-{% include vaccines/prices-scatterplot.es.html id="all" title="Precios" legend=true %}
+{% include vaccines/prices-scatterplot.es.html id="all" title="Precios" footer="There can be price differences due to brand, packaging (vial or syringe), strains or volume, among others. PAHO data is made of weighted averages, i.e. it’s not broken down by manufacturer. For the rest, we include all the data found. <a href=\"/vaccines/team/#prices\">Methodology</a>" legend=true %}
 <div class="page-content-container" markdown="1">
 
 As with drugs, new products and their [patents](http://medicamentalia.org/access/patents/) drive [prices up](http://medicamentalia.org/access/prices/). "With only two manufacturers for each of the new and much more expensive vaccines –PCV [pneumococcus], rotavirus, HPV [Human Papilloma Virus]– and the inability to use the two available products interchangeably, companies are enjoying near monopolies," denounces MSF in a [report](https://www.msfaccess.org/content/right-shot-bringing-down-barriers-affordable-and-adapted-vaccines) focusing entirely on the global vaccine market.
