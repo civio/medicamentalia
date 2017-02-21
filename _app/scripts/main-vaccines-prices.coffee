@@ -103,7 +103,7 @@ class window.VaccinesPrices
         d.name = d['name_'+@lang]
         d.gdp = country[0].value
       else
-        d.name = d.country
+        d.name = d['name_'+@lang]
         d.gdp = 0
     # sort data by gdp
     @data.sort (a,b) -> a.gdp - b.gdp
