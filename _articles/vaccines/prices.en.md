@@ -56,7 +56,7 @@ Because of these new and more expensive vaccines, the cost of immunizing a child
 We can see how tiered pricing works for the MMR -against measles, mumps and rubella- or Hepatitis B vaccine, whose prices rise together with a country's income. But the theory does not always match reality. While several variables -such as purchase volume or packaging type- may justify some differences, we can find trends in the data that don't seem to fit the idea of richer buyers paying more.
 
 <div class="container-right">
-{% include vaccines/pib-countries.es.html %}
+{% include vaccines/pib-countries.en.html %}
 </div>
 
 The DTP vaccine has been part of vaccination schedules across the world for a long time. It protects against diphtheria, tetanus and whooping cough, and has several versions. The one including the acellular type of pertussis (DTaP) is more advanced and expensive than the original DTP. Despite huge differences in wealth between the United States and Spain -the former more than doubling the per capita GDP of Spain- both buy doses from GSK at **a very similar price**: €13.28 for Spain, €13.86 for the United States.
@@ -110,6 +110,7 @@ The UK government procurement website **hides the prices** at which the British 
 This case is no exception and neither is the limited application of transparency laws to public contracting. And so happens in many more countries. In the previous cases, the price is not published. In some others instances, **the number of doses purchased** is hidden, making it impossible to calculate the item cost and find out the conditions agreed with pharmaceutical companies. In most cases, **no information at all** is published about these contracts. They fall through the cracks that are the exemptions in national transparency regulations. They may as well not exist.
 
 > The vaccine market dodges the rules of transparency and publicity of public procurement that do affect other sectors
+{: .no-quotes}
 
 "Most pharmaceutical companies do not disclose their prices, and many force buyers to sign confidentiality clauses that prohibit the release of such information," criticizes Médecins Sans Frontières in its report. And that opacity is a problem because, he continues, "without price comparison mechanisms, countries do not fully understand the vaccine market and can not know if they are paying an affordable price for their vaccines."
 
@@ -125,18 +126,11 @@ If the number of countries contributing data continues to grow, this could be th
 
 In addition, she argues that "having information about the location of the country (region), volumes, indication of income level and GAVI-eligibility (all being factors that can influence prices) brought enough information to a country to compare itself and use information coming from similar/peer countries". She adds: "The name of the country does not bring more information when looking at the factors that influence prices."
 
-> tabla petita qué es low-medium-high
-> <= 1,025
-1,026-4,035
-4,036-12,475
-> 12,475
-> [source](http://databank.worldbank.org/data/download/site-content/OGHIST.xls)
-
 But **in fact it does**, since the price ranges within each income level category are very large. And one can't just compare Poland with Greece, Germany or the United States (all of them in the same income category: high), the same way one can't ignore the differences between Brazil, China, Bosnia and Iraq, all upper middle income countries. 
 
-{% include caption.html img="articles/V3P.jpg" caption="Prices pid by governments for BCG vaccine in the WHO project." align="alignright" %}
+{% include caption.html img="articles/V3P.jpg" caption="Prices paid by governments for BCG vaccine in the WHO project." align="alignright" %}
 
-Proof of this are the **large differences between countries in the same income level purchasing**, for example, the [tuberculosis vaccine](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1096) sold by the Statens Serum Institute. The V3P data for seven high income countries shows prices going from as little as $0.33 (equivalent to €0.31 at the time, in 2015) to up to $13.95 (€13.07). How does this help a buyer demand a fair price when negotiating with pharmaceutical companies?
+Proof of this are the **large differences between countries in the same income level purchasing**, for example, the [tuberculosis vaccine](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1096) sold by the Statens Serum Institute. The V3P data for seven high income countries shows prices going from as little as $0.33 to up to $13.95. How does this help a buyer demand a fair price when negotiating with pharmaceutical companies?
 
 Alongside these seven countries, V3P data shows an anonymous country which, although poorer -it's classified as upper middle income,- pays more per vaccine dose than one of the high income ones. Even if we're still in the dark, and can't know which countries the data refers to, this difference shows, once again, that **not always the poorest buyers pay less**. 
 

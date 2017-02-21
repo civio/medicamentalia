@@ -14,7 +14,7 @@ lang:             es
 draft:            true
 ---
 
-div class="container page-content" markdown="1">
+<div class="container page-content" markdown="1">
 <div class="page-content-container" markdown="1">
 
 Hay dos premisas que, aplicadas a la compra de vacunas, se tambalean. La primera, que la contratación pública es transparente; la segunda, que cuanto más rico es un país, más paga a las farmacéuticas por la adquisición de cada dosis. **Ni una ni otra se cumplen del todo** cuando hablamos de la relación entre laboratorios y gobiernos. 
@@ -108,6 +108,7 @@ La página web que recoge las contrataciones públicas de Reino Unido **oculta l
 Este caso no es una excepción y esta aplicación parcial de las leyes que regulan la transparencia en la contratación pública tampoco lo es. En algunos no se publica el precio. En otros sí, pero se oculta **cuántas dosis** se compran para que sea imposible hacer el cálculo por unidad y averiguar así qué condiciones han pactado con las farmacéuticas. En otros, los más, no se publica **ningún tipo de información** sobre estos contratos. Se cuelan en las rendijas de las excepciones de las obligaciones de publicidad y transparencia de las normas estatales. No existen. 
 
 > El mercado de vacunas esquiva las normas de transparencia y publicidad de la contratación pública que sí afectan a otros sectores
+{: .no-quotes}
 
 "La mayoría de las compañías farmacéuticas no revelan sus precios y muchas exigen a los compradores que firmen cláusulas de confidencialidad que prohíben publicar esa información", critica Médicos Sin Fronteras en su informe. Y esa opacidad constituye un problema porque, continúa, "sin mecanismos de comparación de precios, los países no entienden del todo el mercado de las vacunas y no pueden saber si si están pagando un precio asequible por ellas".
 
@@ -123,18 +124,11 @@ Si sigue creciendo el número de países que aportan datos, esta debería ser la
 
 En paralelo, argumenta que "tener información sobre la ubicación del país (región), los volúmenes, la indicación del nivel de ingresos y la elegibilidad de GAVI (todos factores que pueden influir en los precios) aportan suficiente información a un país para comparar y usar información proveniente de países similares". Y añade: "El nombre del país no aporta más información cuando se examinan los factores que influyen en los precios".
 
-> tabla petita qué es low-medium-high
-> <= 1,025
-1,026-4,035
-4,036-12,475
-> 12,475
-> [source](http://databank.worldbank.org/data/download/site-content/OGHIST.xls)
-
 Pero **la realidad es que sí lo hace**, puesto que los rangos dentro de cada nivel de ingresos son amplísimos. Y es que no es lo mismo compararse con Polonia, que con Grecia, Alemania o Estados Unidos (todos ellos del mismo nivel: altos ingresos), como no es lo mismo meter en el mismo saco a Brasil, China, Bosnia o Iraq (medio-alto). 
 
 {% include caption.html img="articles/V3P.jpg" caption="Diferencias en precios de BCG en la página de la OMS" align="alignright" %}
 
-Prueba de ello son las **grandes diferencias entre países de un mismo nivel de ingresos** para, por ejemplo, la [vacuna contra la tuberculosis](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1096) que vende el laboratorio Statens Serum Institute. El V3P recoge datos de siete estados de ingresos altos y la horquilla es amplísima: va desde el que paga 0,33 dólares (0,31 euros al cambio del año de los datos, 2015) al que llega a 13,95 (13,07 euros). ¿Cómo ayuda esa información tan amplia a saber qué reclamar en las negociaciones con las farmacéuticas? 
+Prueba de ello son las **grandes diferencias entre países de un mismo nivel de ingresos** para, por ejemplo, la [vacuna contra la tuberculosis](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1096) que vende el laboratorio Statens Serum Institute. El V3P recoge datos de siete estados de ingresos altos y la horquilla es amplísima: va desde el que paga 0,33 dólares al que llega a 13,95. ¿Cómo ayuda esa información tan amplia a saber qué reclamar en las negociaciones con las farmacéuticas? 
 
 Junto a esos siete países aparece la información de un país anónimo que, aunque es más pobre -está clasificado como medio alto- paga más por dosis que uno de los países del nivel superior. Aunque sigamos a ciegas y no sepamos de qué estados estamos hablando, esta diferencia prueba, una vez más, que **no siempre los más pobres pagan menos**. 
 

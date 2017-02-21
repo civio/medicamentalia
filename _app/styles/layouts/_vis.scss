@@ -1628,7 +1628,7 @@ Infographic
 
 // Prices Vaccines
 .scatterplot-discrete-graph{
-  margin-bottom: $grid-gutter-width;
+  margin-bottom: $grid-gutter-width/2;
 
   .x.axis line{
     display: block;
