@@ -13,8 +13,9 @@ ref:              prices
 lang:             es
 draft:            true
 ---
-div class="container page-content" markdown="1">
-<div class="page-content-container" markdown="1">
+
+<div class="container page-content" markdown="1">
+  <div class="page-content-container" markdown="1">
 
 Hay dos premisas que, aplicadas a la compra de vacunas, se tambalean. La primera, que la contratación pública es transparente; la segunda, que cuanto más rico es un país, más paga a las farmacéuticas por la adquisición de cada dosis. Ni una ni otra se cumplen del todo cuando hablamos de la relación entre laboratorios y gobiernos. 
 
