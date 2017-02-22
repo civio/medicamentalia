@@ -16,7 +16,7 @@ lang:             en
 <div class="container page-content" markdown="1">
   <div class="page-content-container" markdown="1">
 
-Two commonly held premises fail when applied to the purchase of vaccines. First, that public procurement is transparent; second, that the richer a country is, the more it pays pharmaceutical companies for each dose. **Neither of them are wholly fulfilled** when we talk about the relationship between sellers and governments.
+Two commonly held premises fail when applied to the purchase of vaccines. First, that public procurement is transparent; second, that the richer a country is, the more it pays pharmaceutical companies for each dose. **Neither of them is wholly fulfilled** when we talk about the relationship between sellers and governments.
 
 The opacity of the sector permeates even the World Health Organization (WHO), which publishes a [database](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/) of vaccine prices paid by various governments, but keeps their names hidden at the request of the member states themselves. No one wants to be singled out if they obtain better of worst prices than their neighbour, nor **fail to comply with the confidentiality agreements** signed with the pharmaceutical companies.
 
