@@ -389,8 +389,8 @@ $btn-scroll-down-icon-size: 44px;
       position: absolute;
       top: 50%;
       //padding: 0 30px;
-      left: 30px;
-      right: 30px;
+      left: $grid-gutter-width/2;
+      right: $grid-gutter-width/2;
       -webkit-transform: translate3d(0,-50%,0);
       transform: translateY(-50%);
 
@@ -411,6 +411,13 @@ $btn-scroll-down-icon-size: 44px;
         margin: 0 auto 30px;
         font-weight: 300;
       }
+    }  
+  }
+
+  @media (min-width: $screen-lg) {
+    .portfolio-box-caption .portfolio-box-caption-content {
+      left: $grid-gutter-width;
+      right: $grid-gutter-width;
     }
   }
 
