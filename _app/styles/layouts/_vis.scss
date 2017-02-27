@@ -175,6 +175,28 @@ Common
     color: $text-color;
   }
 
+  .ring-note .annotation{
+    display: block;
+
+    circle {
+      fill: none;
+      stroke: mix( $gray-light, $gray-lighter, 50% );
+    }
+
+    path {
+      fill: none;
+      stroke: mix( $gray-light, $gray-lighter, 50% );
+      shape-rendering: crispEdges;
+    }
+  
+    text {
+      font-family: $font-family-sans-serif;
+      fill: $brand-primary;
+      text-shadow: 1 1px 0px rgba(255,255,255,0.85),
+                   -1px -1px 0px rgba(255,255,255,0.85);
+    }
+  }
+
   .map-graph{
     position: relative;
     margin: $grid-gutter-width 0;
@@ -1713,6 +1735,78 @@ Infographic
   }
 }
 
+
+// VPH Graph
+#vaccine-vph-graph{
+  .dot-label{
+    display: none;
+  }
+
+  .tooltip{
+    width: 190px;
+
+    p{
+      font-size: 1em;
+      line-height: 1.375em;
+      margin-bottom: $grid-gutter-width/6;
+    }
+
+    .title{
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .description{
+      color: $brand-primary;
+      
+      margin-top: 0;
+      margin-bottom: 0;
+      font-weight: 400;
+
+      strong{
+        font-size: 1.125em;
+        font-weight: 600;   
+      }
+    }
+  }
+
+  .x-legend{
+    position: absolute;
+    bottom: -15px;
+    left: 20px;
+    right: 0;
+    padding: 0;
+    margin: 0;
+
+    li{
+      float: left;
+      width: 25%;
+      list-style: none;
+      text-transform: uppercase;
+      color: white;
+      margin: 0;
+      font-size: .75em;
+      //letter-spacing: .02em;
+      font-weight: 300;
+      height: 18px;
+      line-height: 18px;
+      background: $gray-light;
+      border-right: 1px solid white;
+    }
+  }
+}
+#vaccine-vph-container-graph{
+  position: relative;
+
+  .label-y{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+    max-width: 200px;
+  }
+}
 
 // Iframe
 

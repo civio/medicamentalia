@@ -456,7 +456,45 @@
             $el.find('.immunization-description').show()
           # On resize
           $(window).resize -> graph.onResize()
-  
+
+
+  setupVaccineVPHGraph = ->
+    # Load data
+    d3.queue()
+      .defer d3.csv, baseurl+'/data/vph.csv'
+      .defer d3.csv, baseurl+'/data/gdp.csv'
+      .defer d3.csv, baseurl+'/data/population.csv'
+      .await (error, data, countries, population) ->
+        data = data.filter (d) -> excludedCountries.indexOf(d.country) == -1
+        data.forEach (d) ->
+          country = countries.filter (e) -> e.code == d.country
+          country_population = population.filter (e) -> e.code == d.country
+          if country[0]
+            d.name = country[0]['name_'+lang]
+            d.gdp = +country[0].value
+          else
+            console.error 'No country name for code', d.country
+          if country_population[0]
+            d.population = +country_population[0]['2015']
+          else
+            console.error 'No country population for code', d.country
+          d.value = +d.deaths
+        data = data.filter (d) -> d.gdp
+        console.table data
+        graph = new window.ScatterplotVPHGraph('vaccine-vph-graph',
+          margin:
+            left: 20
+            bottom: 0
+          key:
+            x: 'gdp'
+            y: 'value'
+            id: 'name'
+            size: 'population'
+            color: 'vaccine')
+        # set data
+        graph.setData data
+        $(window).resize graph.onResize
+
   ###
   setupGuatemalaCoverageLineGraph = ->
     graph = new window.LineGraph('guatemala-coverage-mmr',
@@ -546,6 +584,9 @@
 
   if $('#vaccine-prices-graph').length > 0
     setupVaccinePricesGraph()
+
+  if $('#vaccine-vph-graph').length > 0
+    setupVaccineVPHGraph()
 
   # Setup vaccines prices
   if $('body').hasClass('prices') ||  $('body').hasClass('precios')
