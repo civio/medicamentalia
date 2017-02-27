@@ -52,6 +52,7 @@ var js_paths = {
     'node_modules/topojson-client/dist/topojson-client.js',
     '_app/scripts/vendor/selection-sharer.js',
     '_app/scripts/vendor/d3-bundle.js',
+    '_app/scripts/vendor/d3-ring-note.js',
     //'_app/scripts/vaccine-map.js',
     '_app/scripts/main.js'
   ],
@@ -75,6 +76,7 @@ var js_paths = {
     '_app/scripts/map-graph.coffee',
     '_app/scripts/scatterplot-graph.coffee',
     '_app/scripts/scatterplot-discrete-graph.coffee',
+    '_app/scripts/scatterplot-vph-graph.coffee',
     '_app/scripts/main-vaccines-prices.coffee',
     '_app/scripts/main-vaccines.coffee'
   ],

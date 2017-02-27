@@ -96,6 +96,10 @@ export {
   geoKavrayskiy7
 } from "d3-geo-projection";
 
+export {
+  drag
+} from "d3-drag";
+
 //Modules for Vaccine Map
 
 /*
