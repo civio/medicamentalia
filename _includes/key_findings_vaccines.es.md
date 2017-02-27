@@ -9,5 +9,5 @@
 * [Europa registró 26.000 casos de sarampión en 2015 -frente a los 611 en toda América- y concentra los países con menos confianza en la vacunación.](/vaccines/antivacunas/ "Antivacunas - Medicamentalia")
 * [La polio puede ser erradicada como lo fue la viruela. En 2016 se registraron 42 casos en todo el mundo, localizados en cuatro países: Pakistán, Afganistán, Laos y Nigeria.](/vaccines/exitos/ "Exitos - Medicamentalia")
 * [En 2015, 97 países notificaron a la OMS desabastecimientos de vacunas esenciales. El fallo de uno de los pocos fabricantes del antígeno contra la tuberculosis disparó esa cifra.](/vaccines/desabastecimiento/ "Desabastecimiento - Medicamentalia")
-* [Los países con mayor incidencia y mortalidad por cáncer de cérvix son los más pobres, pero la vacuna contra el VPH no está incluída en la mayoría de sus programas de inmunización por su elevado coste. Su precio privado es imposible de asumir por las rentas bajas y medias de países como Guatemala.](/vaccines/papiloma/ "VPH - Medicamentalia") 
+* [Los países con mayor incidencia y mortalidad por cáncer de cérvix son los más pobres, pero la vacuna contra el VPH no está incluída en la mayoría de sus programas de inmunización por su elevado coste.](/vaccines/papiloma/ "VPH - Medicamentalia") 
 
