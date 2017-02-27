@@ -21,7 +21,7 @@ Hay dos premisas que, aplicadas a la compra de vacunas, se tambalean. La primera
 La opacidad del sector impregna hasta la Organización Mundial de la Salud (OMS), que publica una [base de datos](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/) de precios a los que compran sus vacunas varios gobiernos del mundo y en la que sus nombres se ocultan por petición de los propios estados miembros. Nadie quiere ser señalado si paga menos o más que el de al lado ni **incumplir los acuerdos de confidencialidad** firmados con las farmacéuticas.
 
 </div>
-{% include vaccines/vph_scatterplot_graph.es.html title="Muertes por VPH en 2015" %}
+{% include vaccines/vph_scatterplot_graph.es.html title="Muertes estimadas por cáncer de cérvix en 2015" %}
 <div class="page-content-container" markdown="1">
 
 Por eso muchos países prefieren no publicar esos datos. Pero, pese a la opacidad general, hay **excepciones**: naciones en las que sus páginas oficiales de contratación ofrecen información, la mayoría de veces escondida entre pliegos y documentos escaneados, del precio al que están comprando cada dosis. Para realizar este reportaje analizamos esos datos excepcionales de siete países ([¿Por qué solo siete? ¿Cómo se han elegido?](/vaccines/nosotros/#precios)), además de los de tres organizaciones internacionales: Médicos sin Fronteras (MSF); Unicef, encargada de servir de punto central de compra para iniciativas como GAVI, una alianza para proveer de vacunas a los países más pobres del mundo; y el Fondo Rotatorio de la Organización Panamericana de la Salud (OPS), un sistema de compra conjunta que utilizan 41 países de Latinoamérica y El Caribe. 
