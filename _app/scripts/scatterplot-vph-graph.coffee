@@ -77,6 +77,14 @@ class window.ScatterplotVPHGraph extends window.ScatterplotGraph
         "textOffset": [0.25*@height, 0]
       },
       {
+        "cx": 0.315*@height
+        "cy": 0.46*@height
+        "r": 0.083*@height
+        "text": "Sólo unos pocos países de rentas bajas cuentan con vacunas gracias al programa de ayudas de Gavi"
+        "textWidth": 0.35*@width
+        "textOffset": [0.2*@height, 0]
+      },
+      {
         "cx": @width - 0.4*@height
         "cy": @height - 0.1*@height
         "r": 0.18*@height

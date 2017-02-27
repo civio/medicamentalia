@@ -193,8 +193,7 @@ Common
       font-family: $font-family-sans-serif;
       font-size: 14px;
       fill: $brand-primary;
-      text-shadow: 1 1px 0px rgba(255,255,255,0.85),
-                   -1px -1px 0px rgba(255,255,255,0.85);
+      text-shadow: 0px -3px 6px white, 0px 3px 6px white;
     }
   }
 
