@@ -19,7 +19,7 @@ class window.ScatterplotVPHGraph extends window.ScatterplotGraph
   setScales: ->
     # set x scale
     @x = d3.scalePow()
-      .exponent(0.25)
+      .exponent(0.125)
       .range @getScaleXRange()
     # set y scale
     @y = d3.scaleLinear()
@@ -36,17 +36,17 @@ class window.ScatterplotVPHGraph extends window.ScatterplotGraph
     # setup axis
     @xAxis = d3.axisBottom(@x)
       .tickSize @height
-      .tickValues [1025, 4035, 12475]
+      .tickValues [1024, 4034, 12474]
     @yAxis = d3.axisLeft(@y)
       .tickSize @width
-      .tickValues [0, 15, 30, 45, 60, 75, 90]
+      .tickValues [15, 30, 45, 60, 75, 90]
     return @
 
   getScaleXDomain: =>
-    return [200, 101000]
+    return [250, 102000]
 
   getScaleYDomain: =>
-    return [0, 100]
+    return [0, 90]
 
   getDotFill: (d) =>
     return if d[@options.key.color] == '1' then '#00797D' else if d[@options.key.color] == '0' then '#D64B05' else '#aaa'       
@@ -60,48 +60,18 @@ class window.ScatterplotVPHGraph extends window.ScatterplotGraph
     return @
 
   setXLegend: ->
-    incomeGroups = [
-      {
-        min: @x.domain()[0]
-        max: 1025
-        label: 'Low income'
-      },
-      {
-        min: 1026
-        max: 4035
-        label: 'Lower-middle income'
-      },
-      {
-        min: 4036
-        max: 12475
-        label: 'Upper-middle income'
-      },
-      {
-        min: 12476
-        max: @x.domain()[1]
-        label: 'High income'
-      },
-    ]
-    ###
-    @container.selectAll('.lenged-x')
+    incomeGroups = [@x.domain()[0], 1026, 4036, 12476, @x.domain()[1]]
+    @$el.find('.x-legend li').each (i, el) =>
+      val = 100 * (@x(incomeGroups[i+1]) - @x(incomeGroups[i])) / @width
+      $(el).width val+'%'
 
-    @container.selectAll('.dot-label')
-      .data incomeGroups
-    .enter().append('text')
-      .attr 'class', 'dot-label'
-      .attr 'id', @getDotLabelId
-      .attr 'dx', '0.75em'
-      .attr 'dy', '0.375em'
-      .text @getDotLabelText
-      .call @setDotLabelsDimensions
-    ###
 
   setAnnotations: ->
     annotations = [
       {
-        "cx": 0.2*@height
-        "cy": 0.25*@height
-        "r": 0.2*@height
+        "cx": 0.22*@height
+        "cy": 0.165*@height
+        "r": 0.22*@height
         "text": "Los países con más muertes por VPH son también los más pobres y no disponen de vacuna"
         "textWidth": 0.35*@width
         "textOffset": [0.25*@height, 0]
@@ -109,10 +79,10 @@ class window.ScatterplotVPHGraph extends window.ScatterplotGraph
       {
         "cx": @width - 0.4*@height
         "cy": @height - 0.1*@height
-        "r": 0.16*@height
+        "r": 0.18*@height
         "text": "Gran parte de los países que disponen de vacuna son países ricos con una baja incidencia de VPH"
         "textWidth": 0.35*@width
-        "textOffset": [0, -0.2*@height]
+        "textOffset": [0, -0.24*@height]
       }
     ]
     @container.call @ringNote, annotations

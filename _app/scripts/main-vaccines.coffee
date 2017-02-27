@@ -482,8 +482,10 @@
         data = data.filter (d) -> d.gdp
         console.table data
         graph = new window.ScatterplotVPHGraph('vaccine-vph-graph',
+          aspectRatio: 0.5
           margin:
             left: 20
+            top: 30
             bottom: 0
           key:
             x: 'gdp'

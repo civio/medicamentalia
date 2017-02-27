@@ -11,7 +11,6 @@ class window.ScatterplotGraph extends window.BaseGraph
     options.dotMinSize = options.dotMinSize || 7
     options.dotMaxSize = options.dotMaxSize || 12
     super id, options
-    console.log @options
     return @
 
 
@@ -68,7 +67,6 @@ class window.ScatterplotGraph extends window.BaseGraph
     return [@options.dotMinSize, @options.dotMaxSize]
 
   getSizeDomain: =>
-    console.log 'size domain', 0, d3.max(@data, (d) => d[@options.key.size])
     return [0, d3.max(@data, (d) => d[@options.key.size])]
 
   drawScales: ->
@@ -131,7 +129,6 @@ class window.ScatterplotGraph extends window.BaseGraph
 
   getDotSize: (d) =>
     if @size
-      console.log d, d[@options.key.size], @options, @size.range(), @size.domain(), @size(d[@options.key.size])
       return @size d[@options.key.size]
     else
       return @options.dotSize

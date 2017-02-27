@@ -34,12 +34,13 @@ La opacidad del sector impregna hasta la Organización Mundial de la Salud (OMS)
       <div class="tooltip-arrow"></div>
       <div class="tooltip-inner">
         <p class="title"></p>
-        <p class="description"><strong><span class="value-y"></span></strong> muertes <br/><small>por cada 100.000 mujeres mayores de 30 años</small></p>
         <p class="description vaccine">
           <span class="vaccine-1">Dispone de vacuna</span>
           <span class="vaccine-0">No dispone de vacuna</span>
           <span class="vaccine-">Sin datos sobre disponibilidad de la vacuna</span>
         </p>
+        <p class="description"><strong><span class="value-y"></span></strong> muertes</p>
+        <small>por cada 100.000 mujeres mayores de 30 años</small>
       </div>
     </div>
   </div>
