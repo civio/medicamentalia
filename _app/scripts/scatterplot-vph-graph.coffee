@@ -49,7 +49,7 @@ class window.ScatterplotVPHGraph extends window.ScatterplotGraph
     return [0, 90]
 
   getDotFill: (d) =>
-    return if d[@options.key.color] == '1' then '#00797D' else if d[@options.key.color] == '0' then '#D64B05' else '#aaa'       
+    return if d[@options.key.color] == '1' then '#00797d' else if d[@options.key.color] == '0' then '#D64B05' else '#aaa'       
 
   drawGraph: ->
     # draw points

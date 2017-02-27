@@ -1741,6 +1741,10 @@ Infographic
 #vaccine-vph-graph{
   margin-bottom: 2*$grid-gutter-width;
 
+  .dot:hover{
+    opacity: 1;
+  }
+
   .dot-label{
     display: none;
   }
@@ -1819,6 +1823,39 @@ Infographic
     left: 0;
     text-align: left;
     max-width: 200px;
+  }
+
+  .legend{
+    padding: 0;
+    margin: $grid-gutter-width/2 0 $grid-gutter-width/3;
+    text-align: center;
+
+    li{
+      color: $gray;
+      display: inline-block;
+      list-style: none;
+      font-size: 0.875em;
+      line-height: 1em;
+      margin: 0 $grid-gutter-width/3;
+
+      &:before{
+        content: "";
+        float: left;
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+        border-radius: 7px;
+        background: #aaa;
+        opacity: 0.7;
+      }
+
+      &.vaccine-yes:before{
+        background: $brand-primary;
+      }
+      &.vaccine-no:before{
+        background: #D64B05;
+      }
+    }
   }
 }
 
