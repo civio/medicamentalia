@@ -15,7 +15,7 @@ gallery:
   - image: articles/mireia.png
     title: "Interviewing Mireia Díaz, researcher at the Catalan Institut of Oncology. | Foto: Santi Cogolludo"
 
-order:      5
+order:      6
 slug:       team
 ref:        vaccines-team
 lang:       en

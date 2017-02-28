@@ -20,5 +20,7 @@ vaccines:
     type: article
   - ref: stockout
     type: article
+  - ref: papilloma
+    type: article
   - ref: vaccines-team
     type: article

@@ -4,11 +4,11 @@ title:            VPH
 subtitle:         Vacunas contra el cáncer
 description:      "La inmunización contra el virus del papiloma humano, junto al cribado y el tratamiento precáncer, puede eliminar por completo el cáncer de cérvix. En contra: el elevado coste de la vacuna y las reticencias culturales y sociales"
 home_description: "La inmunización contra el virus del papiloma humano, junto al cribado y el tratamiento precáncer, puede eliminar por completo el cáncer de cérvix. En contra: el elevado coste de la vacuna y las reticencias culturales y sociales"
-img:              articles/home-vaccines-prices.jpg
-order:            0
+img:              articles/home-vaccines-vph.jpg
+order:            5
 author:           Eva Belmonte
 pub_date:         2017-03-02
-slug:             papiloma
+slug:             vph
 ref:              papilloma
 lang:             es
 ---
@@ -32,7 +32,7 @@ Mauricio Maza es director médico en [Basic Health International](http://www.bas
 Los datos le dan la razón. Los países con mayor mortalidad estimada por esta causa son los más pobres. De los 194 estados analizados por la Organización Mundial de la Salud (OMS), **66 habían introducido la vacuna en sus calendarios de vacunación a 31 de diciembre de 2015**. No son aquellos en los que el problema es más grave. Y es que, sin ayuda externa, si no tienes medios para revisar a las mujeres de un país, tampoco los tienes para pagar una vacuna nueva y, por el momento, con un precio bastante elevado. 
 
 </div>
-{% include vaccines/vph_scatterplot_graph.es.html title="Muertes estimadas por cáncer de cérvix en 2015" description="Muertes en cada país por cada 100.000 mujeres mayores de 30 años respecto al PIB del país" %}
+{% include vaccines/vph_scatterplot_graph.es.html title="Muertes estimadas por cáncer de cérvix en 2015" description="Muertes por cada 100.000 mujeres mayores de 30 años respecto al PIB del país" %}
 <div class="page-content-container" markdown="1">
 
 Hay otra manera de leer los datos: la vacuna se está introduciendo donde es menos necesaria, en países en los que hay menos incidencia y mortalidad por esta enfermedad. "A veces la gente critica que se esté implementando en países que lo necesitan menos. Sí, pero es que a veces es necesario que se haga allí donde tienen las cosas mucho más organizadas, donde si detectan un caso grave tienen medios para analizarlo..., para que luego los demás se vayan convenciendo", responde Mireia Díaz, investigadora del Instituto Catalán de Oncología, especializada en estudios sobre prevención de cáncer de cérvix, su impacto y su coste. 
