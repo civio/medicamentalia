@@ -2,8 +2,8 @@
 category:         vaccines
 title:            VPH
 subtitle:         Vacunas contra el cáncer
-description:      La inmunización contra el virus del papiloma humano, junto al cribado y el tratamiento precáncer, puede eliminar por completo esta enfermedad. En contra: el elevado coste de la vacuna y las reticencias culturales y sociales
-home_description: La inmunización contra el virus del papiloma humano, junto al cribado y el tratamiento precáncer, puede eliminar por completo esta enfermedad. En contra: el elevado coste de la vacuna y las reticencias culturales y sociales
+description:      "La inmunización contra el virus del papiloma humano, junto al cribado y el tratamiento precáncer, puede eliminar por completo esta enfermedad. En contra: el elevado coste de la vacuna y las reticencias culturales y sociales"
+home_description: "La inmunización contra el virus del papiloma humano, junto al cribado y el tratamiento precáncer, puede eliminar por completo esta enfermedad. En contra: el elevado coste de la vacuna y las reticencias culturales y sociales"
 img:              articles/home-vaccines-prices.jpg
 order:            0
 author:           Eva Belmonte
