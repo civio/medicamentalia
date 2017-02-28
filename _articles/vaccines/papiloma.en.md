@@ -32,7 +32,7 @@ Mauricio Maza is medical director at [Basic Health International](http://www.bas
 The data fits his view. The countries with the highest estimated mortality for cervical cancer are the poorest. Of the 194 states reviewed by the World Health Organization (WHO), 66 had introduced the vaccine into their vaccination schedules by 31 December 2015. They are not those in which the problem is more serious. Without foreign aid, if one doesn't have the means to inspect the women in your country, neither does to pay for a new vaccine with a, at least for now, very high price.
 
 </div>
-{% include vaccines/vph_scatterplot_graph.en.html title="Estimated deathers due to cervical cancer in 2015" description="Deaths per 100,000 women ages 30 and over versus GDP of the country" %}
+{% include vaccines/vph_scatterplot_graph.en.html title="Deaths due to cervical cancer in 2015" description="Estimated deaths per 100,000 women ages 30 and over versus GDP of the country" %}
 <div class="page-content-container" markdown="1">
 
 There is another way to read the data: the vaccine is being introduced where it's least necessary, in countries where there is less incidence and mortality from the disease. "Sometimes people criticize that it's being implemented in countries that need it less. Yes, but sometimes you need to do it where things are better organised, where a serious case detected can be analyzed... so that the others will grow convinced," answers Mireia Díaz, researcher at the Catalan Institute of Oncology, specialized in studies on prevention of cervical cancer, its impact and its cost.
