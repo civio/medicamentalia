@@ -49,6 +49,7 @@ Para sacar adelante Medicamentalia Vacunas han trabajado los miembros de Civio, 
 - **Phil Smart**. Traducción español-inglés.
 - **Asier Andrés**. Apoyo a la investigación en Guatemala.
 - **Julio Hernández**. Sonido en vídeos de El Salvador.
+- **Santi Cogolludo**. Fotos entrevista Mireia Díaz en Barcelona.
 
 {: #agradecimientos}
 ### Agradecimientos

@@ -48,6 +48,8 @@ Medicamentalia is the work of the members of Civio in conjunction with an array 
 - **Philip Smart**. Spanish-English translation
 - **Asier Andrés**. Research support in Guatemala.
 - **Julio Hernández**. Film sound in El Salvador.
+- **Santi Cogolludo**. Photos in Barcelona.
+
 
 {: #acknowledgements}
 ### Acknowledgements
