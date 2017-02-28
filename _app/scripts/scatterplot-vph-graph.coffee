@@ -4,11 +4,12 @@ class window.ScatterplotVPHGraph extends window.ScatterplotGraph
   # Constructor
   # -----------
 
-  constructor: (id, options) ->
+  constructor: (id, lang, options) ->
     #console.log 'Scatterplot Graph', id, options
     options.dotSize = 7
     options.dotMinSize = 3
     options.dotMaxSize = 18
+    @lang = lang
     super id, options
     return @
 
@@ -69,28 +70,28 @@ class window.ScatterplotVPHGraph extends window.ScatterplotGraph
   setAnnotations: ->
     annotations = [
       {
-        "cx": 0.22*@height
-        "cy": 0.165*@height
-        "r": 0.22*@height
-        "text": "Los países con más muertes por VPH son también los más pobres y no disponen de vacuna"
-        "textWidth": 0.35*@width
-        "textOffset": [0.25*@height, 0]
+        'cx': 0.23*@height
+        'cy': 0.17*@height
+        'r': 0.22*@height
+        'text': if @lang == 'es' then 'Los países con más muertes por cáncer de cérvix son también los más pobres y no habían incluido la vacuna en 2015' else 'Los países con más muertes por cáncer de cérvix son también los más pobres y no habían incluido la vacuna en 2015'
+        'textWidth': 0.38*@width
+        'textOffset': [0.25*@height, 0]
       },
       {
-        "cx": 0.315*@height
-        "cy": 0.46*@height
-        "r": 0.083*@height
-        "text": "Sólo unos pocos países de rentas bajas cuentan con vacunas gracias al programa de ayudas de Gavi"
-        "textWidth": 0.35*@width
-        "textOffset": [0.2*@height, 0]
+        'cx': 0.28*@height
+        'cy': 0.46*@height
+        'r': 0.072*@height
+        'text': if @lang == 'es' then 'Sólo unos pocos países de rentas bajas incluyeron la vacuna en sus programas, gracias a la ayuda externa de GAVI' else 'Sólo unos pocos países de rentas bajas incluyeron la vacuna en sus programas, gracias a la ayuda externa de GAVI'
+        'textWidth': 0.36*@width
+        'textOffset': [0.18*@height, 0]
       },
       {
-        "cx": @width - 0.4*@height
-        "cy": @height - 0.1*@height
-        "r": 0.18*@height
-        "text": "Gran parte de los países que disponen de vacuna son países ricos con una baja incidencia de VPH"
-        "textWidth": 0.35*@width
-        "textOffset": [0, -0.24*@height]
+        'cx': @width - 0.36*@height
+        'cy': @height - 0.11*@height
+        'r': 0.16*@height
+        'text': if @lang == 'es' then 'Gran parte de los países que cuentan con la vacuna en sus programas son países ricos con una baja mortalidad por cáncer de cérvix' else 'Gran parte de los países que cuentan con la vacuna en sus programas son países ricos con una baja mortalidad por cáncer de cérvix'
+        'textWidth': 0.38*@width
+        'textOffset': [0, -0.2*@height]
       }
     ]
     @container.call @ringNote, annotations

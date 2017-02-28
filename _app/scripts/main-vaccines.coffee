@@ -481,8 +481,7 @@
           d.value = +d.deaths
         # skip data lines without gdp data
         data = data.filter (d) -> d.gdp
-        graph = new window.ScatterplotVPHGraph('vaccine-vph-graph',
-          aspectRatio: 0.5
+        graph = new window.ScatterplotVPHGraph('vaccine-vph-graph', lang,
           margin:
             left: 20
             top: 30
