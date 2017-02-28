@@ -473,14 +473,14 @@
             d.name = country[0]['name_'+lang]
             d.gdp = +country[0].value
           else
-            console.error 'No country name for code', d.country
+            #console.error 'No country name for code', d.country
           if country_population[0]
             d.population = +country_population[0]['2015']
           else
-            console.error 'No country population for code', d.country
+            #console.error 'No country population for code', d.country
           d.value = +d.deaths
+        # skip data lines without gdp data
         data = data.filter (d) -> d.gdp
-        console.table data
         graph = new window.ScatterplotVPHGraph('vaccine-vph-graph',
           aspectRatio: 0.5
           margin:
@@ -584,14 +584,15 @@
   if $('#vaccine-bcg-stockouts').length > 0
     setupVaccineBcgStockoutsMap()
 
-  if $('#vaccine-prices-graph').length > 0
-    setupVaccinePricesGraph()
-
   if $('#vaccine-vph-graph').length > 0
     setupVaccineVPHGraph()
 
   # Setup vaccines prices
   if $('body').hasClass('prices') ||  $('body').hasClass('precios')
-    new VaccinesPrices lang, baseurl
+    new VaccinesPrices lang, baseurl, '/data/prices-vaccines.csv'
+
+  # Setup vaccine vph prices
+  if $('#vaccine-prices-vph-graph').length > 0
+    new VaccinesPrices lang, baseurl, '/data/prices-vaccines-vph.csv'
 
 ) jQuery

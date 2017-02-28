@@ -1,0 +1,10 @@
+country,vaccine,year,doses,price,company,name_en,name_es
+ESP,VPH-Gardasil4,2015-2016,,29.16,Sanofi,Spain,España
+ESP,VPH-Cervarix2,2015-2016,,29.16,GSK,Spain,España
+PRT,VPH-Gardasil4,2016,64000,22.00,Sanofi,Portugal,Portugal
+USA,VPH-Gardasil9,2017,,125.65,Merck,USA,EE.UU.
+USA,VPH-Gardasil9,2017,,109.58,Merck,USA,EE.UU.
+MSF,VPH-Gardasil4,2016,,14.53,,MSF,MSF
+UNICEF,VPH-Cervarix2,2016,20000000,4.32,GSK,UNICEF,UNICEF
+UNICEF,VPH-Gardasil4,2016,9000000,4.23,Merck,UNICEF,UNICEF
+PAHO,VPH-Cervarix2,2016,,7.99,,PAHO,OPS

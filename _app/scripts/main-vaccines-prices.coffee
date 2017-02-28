@@ -13,6 +13,9 @@ class window.VaccinesPrices
       'pneumo13': 'Neumococo (13)'
       'Tdap': 'Tétanos, difteria y tos ferina acelular reducida (Tdap)'
       'VPH': 'Virus del papiloma humano (VPH)'
+      'VPH-Cervarix2': 'VPH Cervarix2'
+      'VPH-Gardasil4': 'VPH Gardasil4'
+      'VPH-Gardasil9': 'VPH Gardasil9'
     en:
       'BCG': 'Tuberculosis (BCG)'
       'DTaP': 'Diphteria, tetanus and acellular pertussis (DTaP)'
@@ -24,6 +27,9 @@ class window.VaccinesPrices
       'pneumo13': 'Pneumococcus (13)'
       'Tdap': 'Tetanus, reduced diphtheria and reduced acellular pertussis (Tdap)'
       'VPH': 'Human papilomavirus (HPV)'
+      'VPH-Cervarix2': 'VPH Cervarix2'
+      'VPH-Gardasil4': 'VPH Gardasil4'
+      'VPH-Gardasil9': 'VPH Gardasil9'
 
   vaccines_colors:
     'BCG': '#C9AD4B'
@@ -35,13 +41,15 @@ class window.VaccinesPrices
     'MMR': '#E2773B'
     'pneumo13': '#BA7DAF'
     'Tdap': '#F49D9D'
-    'VPH': '#E25453'
+    'VPH-Cervarix2': '#FFA951'
+    'VPH-Gardasil4': '#B56631'
+    'VPH-Gardasil9': '#E25453'
 
-  constructor: (_lang, _baseurl) ->
+  constructor: (_lang, _baseurl, _dataurl) ->
     @lang = _lang
     # load data
     d3.queue()
-      .defer d3.csv, _baseurl+'/data/prices-vaccines.csv'
+      .defer d3.csv, _baseurl+_dataurl
       .defer d3.csv, _baseurl+'/data/gdp.csv'
       #.defer d3.json, 'http://freegeoip.net/json/'
       .await @onDataLoaded
@@ -65,6 +73,9 @@ class window.VaccinesPrices
     if $('#vaccine-prices-ipv-graph').length > 0
       dataIPV = @data.filter (d) -> d.vaccine == 'IPV' and d.country != 'MSF' and d.country != 'PAHO' and d.country != 'UNICEF'
       @setupScatterplot 'vaccine-prices-ipv-graph', dataIPV, false
+    # VPH prices
+    if $('#vaccine-prices-vph-graph').length > 0
+      @setupScatterplot 'vaccine-prices-vph-graph', @data, true
     # PIB countries
     if $('#pib-countries-graph').length > 0
       pibData = d3.nest()
@@ -95,14 +106,14 @@ class window.VaccinesPrices
       $(window).resize graph.onResize
 
   parseData: ->
-    vaccines = ['pneumo13','BCG','IPV','MMR','HepB-pediátrica','VPH','DTPa-IPV-Hib','DTaP','Tdap','DTP']
+    vaccines = ['pneumo13','BCG','IPV','MMR','HepB-pediátrica','VPH-Cervarix2','VPH-Gardasil4','VPH-Gardasil9','DTPa-IPV-Hib','DTaP','Tdap','DTP']
     # filter data to get only selected vaccines
     @data = @data.filter (d) -> vaccines.indexOf(d.vaccine) != -1
     # join data & countries gdp 
     @data.forEach (d) =>
       country = @countries.filter (e) -> e.code == d.country
       d.price = +d.price
-      d.vaccine_name = @vaccines_names[@lang][d.vaccine]
+      d.vaccine_name = if @vaccines_names[@lang][d.vaccine] then @vaccines_names[@lang][d.vaccine] else d.vaccine
       d.vaccine_color = @vaccines_colors[d.vaccine]
       if country[0]
         d.name = d['name_'+@lang]

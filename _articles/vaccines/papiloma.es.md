@@ -76,7 +76,7 @@ No todas las clínicas en Guatemala ofrecen esta vacuna. En muchos casos, hay qu
 
 Y por el momento esta es la única vía. Ni Guatemala ni El Salvador han incluido esta vacuna en sus programas nacionales de inmunización. "No hay presupuesto para lo básico, y menos para esto que es una proyección a futuro", se resigna Gálvez. Para Rodolfo Zea, viceministro de salud de Guatemala, "la población objetivo es muy grande y la vacuna es muy cara". Por eso, aunque está en sus planes, por el momento no la han incluido. Lo mismo pasa en El Salvador. Eduardo Suárez, director de su programa de inmunización, asegura que necesitarían una inversión de "alrededor de cinco millones de dólares", lo que supondría un 30% del presupuesto que tienen en el país ahora mismo para todas las vacunas. "Sabemos que es necesaria la vacuna, pero existen otras actividades que son prioritarias", admite.
 
-> Gráfico precios VPH
+{% include vaccines/prices-scatterplot.es.html id="vph" title="Precio por dosis de VPH" footer="<a href=\"/vaccines/nosotros/#vph\">Metodología</a>" legend=true %}
 
 Ambos países podrían adquirir Cervarix a través del Fondo Rotatorio de la Organización Panamericana de la Salud (OPS) por unos ocho euros. Aunque es un precio inferior al que se suele ofrecer a los países que negocian y compran en solitario, no es lo suficientemente bajo para ellos y casi dobla lo que consiguen aquellos que adquieren sus vacunas a través de la alianza [Gavi](vaccines/precios/#sistemas-de-compra-conjunta), destinada a proveer a los más pobres: 4,3 euros por el Cervarix y 4,2 por el Gardasil tetravalente. 
 
