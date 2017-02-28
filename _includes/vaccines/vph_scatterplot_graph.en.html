@@ -1,0 +1,33 @@
+<div id="vaccine-vph-container-graph" class="graph-container">
+  <p class="graph-container-caption" style="margin-bottom: 0">{{ include.title }}</p>
+  {% if include.description %}
+  <p>{{ include.description }}</p>
+  {% endif %}
+  <ul class="legend">
+    <li class="vaccine-yes">Países que vacunan (a 31/12/2015)</li>
+    <li class="vaccine-no">Países que no vacunan (a 31/12/2015)</li>
+    <li>Países sin datos de vacuna</li>
+  </ul>
+  <div id="vaccine-vph-graph" class="scatterplot-graph">
+    <ul class="x-legend">
+      <li>Ingreso bajo</li>
+      <li>Ingreso medio bajo</li>
+      <li>Ingreso medio alto</li>
+      <li>Ingreso alto</li>
+    </ul>
+    <div class="tooltip top" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">
+        <p class="title"></p>
+        <p class="description vaccine">
+          <span class="vaccine-1">Vacuna incluida en su programa público (a 31/12/2015)</span>
+          <span class="vaccine-0">Vacuna no incluida en su programa público (a 31/12/2015)</span>
+          <span class="vaccine-">Sin datos sobre inclusión de la vacuna</span>
+        </p>
+        <p class="description"><strong><span class="value-y"></span></strong> muertes</p>
+        <small>por cada 100.000 mujeres mayores de 30 años</small>
+      </div>
+    </div>
+  </div>
+  <div class="label-y">Muertes <br/><small>por cada 100.000 mujeres mayores de 30 años</small></div>
+</div>
