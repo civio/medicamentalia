@@ -73,7 +73,7 @@ class window.ScatterplotVPHGraph extends window.ScatterplotGraph
         'cx': 0.23*@height
         'cy': 0.17*@height
         'r': 0.22*@height
-        'text': if @lang == 'es' then 'Los países con más muertes por cáncer de cérvix son también los más pobres y no habían incluido la vacuna en 2015' else 'Los países con más muertes por cáncer de cérvix son también los más pobres y no habían incluido la vacuna en 2015'
+        'text': if @lang == 'es' then 'Los países con más muertes por cáncer de cérvix son también los más pobres y no habían incluido la vacuna en 2015' else 'Countries with highest mortality from cervical cancer are also the poorest and had not introduced the vaccine by 2015'
         'textWidth': 0.38*@width
         'textOffset': [0.25*@height, 0]
       },
@@ -81,7 +81,7 @@ class window.ScatterplotVPHGraph extends window.ScatterplotGraph
         'cx': 0.28*@height
         'cy': 0.46*@height
         'r': 0.072*@height
-        'text': if @lang == 'es' then 'Sólo unos pocos países de rentas bajas incluyeron la vacuna en sus programas, gracias a la ayuda externa de GAVI' else 'Sólo unos pocos países de rentas bajas incluyeron la vacuna en sus programas, gracias a la ayuda externa de GAVI'
+        'text': if @lang == 'es' then 'Sólo unos pocos países de rentas bajas incluyeron la vacuna en sus programas, gracias a la ayuda externa de GAVI' else 'Only a few low-income countries had introduced the vaccine in their programmes, thanks to GAVI\'s external assistance'
         'textWidth': 0.36*@width
         'textOffset': [0.18*@height, 0]
       },
@@ -89,7 +89,7 @@ class window.ScatterplotVPHGraph extends window.ScatterplotGraph
         'cx': @width - 0.36*@height
         'cy': @height - 0.11*@height
         'r': 0.16*@height
-        'text': if @lang == 'es' then 'Gran parte de los países que cuentan con la vacuna en sus programas son países ricos con una baja mortalidad por cáncer de cérvix' else 'Gran parte de los países que cuentan con la vacuna en sus programas son países ricos con una baja mortalidad por cáncer de cérvix'
+        'text': if @lang == 'es' then 'Gran parte de los países que cuentan con la vacuna en sus programas son países ricos con una baja mortalidad por cáncer de cérvix' else 'Most countries that have the vaccine in their programmes are rich countries with low mortality from cervical cancer'
         'textWidth': 0.38*@width
         'textOffset': [0, -0.2*@height]
       }

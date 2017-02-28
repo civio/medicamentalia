@@ -32,7 +32,7 @@ Mauricio Maza is medical director at [Basic Health International](http://www.bas
 The data fits his view. The countries with the highest estimated mortality for cervical cancer are the poorest. Of the 194 states reviewed by the World Health Organization (WHO), 66 had introduced the vaccine into their vaccination schedules by 31 December 2015. They are not those in which the problem is more serious. Without foreign aid, if one doesn't have the means to inspect the women in your country, neither does to pay for a new vaccine with a, at least for now, very high price.
 
 </div>
-{% include vaccines/vph_scatterplot_graph.es.html title="Estimated deathers due to cervical cancer in 2015" %}
+{% include vaccines/vph_scatterplot_graph.en.html title="Estimated deathers due to cervical cancer in 2015" %}
 <div class="page-content-container" markdown="1">
 
 There is another way to read the data: the vaccine is being introduced where it's least necessary, in countries where there is less incidence and mortality from the disease. "Sometimes people criticize that it's being implemented in countries that need it less. Yes, but sometimes you need to do it where things are better organised, where a serious case detected can be analyzed... so that the others will grow convinced," answers Mireia Diaz, researcher at the Catalan Institute of Oncology, specialized in studies on prevention of cervical cancer, its impact and its cost.
@@ -76,7 +76,7 @@ Not all clinics in Guatemala offer the vaccine. In many cases, you have to ask f
 
 And for the moment this is the only way. Neither Guatemala nor El Salvador have included the vaccine in their national immunization programs. "There is no budget for the basic stuff, much less for this which is a projection into the future," says Gálvez, resigned. According to Rodolfo Zea, deputy minister of health of Guatemala, "the target population is very large and the vaccine is very expensive." That is why, although they plan to, they haven't included it for now. The same is true in El Salvador. Eduardo Suarez, director of their immunization program, says they would need an investment of "about five million dollars," which would mean 30% of the current national budget for all vaccines. "We know that the vaccine is necessary, but there are other activities that are a priority," he admits.
 
-> Gráfico precios VPH
+{% include vaccines/prices-scatterplot.es.html id="vph" title="Price per dose of HPV" footer="<a href=\"/vaccines/team/#vph\">Methodology</a>" legend=true %}
 
 Both countries could acquire Cervarix through the Revolving Fund of the Pan American Health Organization (PAHO) for about eight euros. Although it is a lower price than is usually offered to the countries that negotiate and buy alone, it's not low enough for them and almost doubles what's available to those who acquire their vaccines through the [Gavi](/vaccines/prices/#joint-purchasing-systems) alliance, designed to provide for the poorest: €4.3 for Cervarix and €4.2 for tetravalent Gardasil.
 
