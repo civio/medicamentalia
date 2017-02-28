@@ -86,9 +86,9 @@ class window.ScatterplotVPHGraph extends window.ScatterplotGraph
         'textOffset': [0.18*@height, 0]
       },
       {
-        'cx': @width - 0.36*@height
-        'cy': @height - 0.11*@height
-        'r': 0.16*@height
+        'cx': @width - 0.35*@height
+        'cy': @height - 0.12*@height
+        'r': 0.15*@height
         'text': if @lang == 'es' then 'Gran parte de los países que cuentan con la vacuna en sus programas son países ricos con una baja mortalidad por cáncer de cérvix' else 'Most countries that have the vaccine in their programmes are rich countries with low mortality from cervical cancer'
         'textWidth': 0.38*@width
         'textOffset': [0, -0.2*@height]
@@ -108,7 +108,7 @@ class window.ScatterplotVPHGraph extends window.ScatterplotGraph
       .css 'display', 'none'
     @$tooltip
       .find '.vaccine-'+d[@options.key.color]
-      .css 'display', 'block'
+      .css 'display', 'inline'
     @$tooltip
       .find '.tooltip-inner .title'
       .html d[@options.key.id]

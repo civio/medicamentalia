@@ -32,7 +32,7 @@ Mauricio Maza es director médico en [Basic Health International](http://www.bas
 Los datos le dan la razón. Los países con mayor mortalidad estimada por esta causa son los más pobres. De los 194 estados analizados por la Organización Mundial de la Salud (OMS), **66 habían introducido la vacuna en sus calendarios de vacunación a 31 de diciembre de 2015**. No son aquellos en los que el problema es más grave. Y es que, sin ayuda externa, si no tienes medios para revisar a las mujeres de un país, tampoco los tienes para pagar una vacuna nueva y, por el momento, con un precio bastante elevado. 
 
 </div>
-{% include vaccines/vph_scatterplot_graph.es.html title="Muertes estimadas por cáncer de cérvix en 2015" %}
+{% include vaccines/vph_scatterplot_graph.es.html title="Muertes estimadas por cáncer de cérvix en 2015" description="Muertes en cada país por cada 100.000 mujeres mayores de 30 años respecto al PIB del país" %}
 <div class="page-content-container" markdown="1">
 
 Hay otra manera de leer los datos: la vacuna se está introduciendo donde es menos necesaria, en países en los que hay menos incidencia y mortalidad por esta enfermedad. "A veces la gente critica que se esté implementando en países que lo necesitan menos. Sí, pero es que a veces es necesario que se haga allí donde tienen las cosas mucho más organizadas, donde si detectan un caso grave tienen medios para analizarlo..., para que luego los demás se vayan convenciendo", responde Mireia Díaz, investigadora del Instituto Catalán de Oncología, especializada en estudios sobre prevención de cáncer de cérvix, su impacto y su coste. 
@@ -49,7 +49,7 @@ Y es que esta no es una vacuna cualquiera. Es una vacuna nueva, que además est�
 <div class="panel" markdown="1">
 ### Machismo y pobreza frenan las revisiones y disparan la incidencia
 
-{% include video-container.html videoid="pAcmKOSHwVY" credit="Vídeo: Manuel Penados." %}
+{% include video-container.html videoid="N_EZXJ49fTk" credit="Vídeo: Manuel Penados." %}
 </div>
 
 La organización Instancia por la Salud y el Desarrollo de las Mujeres lleva a cabo un programa de cribado en varios municipios de Guatemala, en el que intentan esquivar estas barreras culturales a través de pruebas que las mujeres se hacen a sí mismas. Trabajan, por ejemplo, en Tecpán, un municipio con un 90% de población indígena a unas dos horas en coche de la capital del país. La mayoría acepta hacerse la prueba, pero "a veces tienen miedo de lastimarse", explica Julia, una de las enfermeras que trabaja en el centro de salud. Y es que muchas mujeres apenas conocen su cuerpo. **En algunos lenguajes indígenas la palabra vagina no existe**. "Si siente que lo nota y no se lastima, pues ahí es", les explica Celeste, que también trabaja en el programa. La mayoría de las mujeres que pasan por el cribado no se había hecho ninguna prueba antes. Y son mujeres mayores de 30 años.

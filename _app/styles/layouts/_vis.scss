@@ -177,6 +177,7 @@ Common
 
   .ring-note .annotation{
     display: block;
+    pointer-events: none;
 
     circle {
       fill: none;
@@ -1740,8 +1741,14 @@ Infographic
 #vaccine-vph-graph{
   margin-bottom: 2*$grid-gutter-width;
 
-  .dot:hover{
-    opacity: 1;
+  .dot{
+    stroke: transparent;
+    stroke-width: 2px;
+    cursor: pointer;
+
+    &:hover{
+      opacity: 1;
+    }
   }
 
   .dot-label{
@@ -1754,7 +1761,7 @@ Infographic
   }
 
   .tooltip{
-    width: 190px;
+    width: 220px;
 
     p{
       font-size: 1em;
@@ -1775,9 +1782,25 @@ Infographic
       font-weight: 400;
 
       strong{
-        font-size: 1.125em;
+        font-size: 1.25em;
         line-height: 1.5em;
         font-weight: 600;   
+      }
+
+      &.vaccine{
+        color: white;
+        margin-top: $grid-gutter-width/3;
+        font-size: 0.913em;
+        font-weight: 300;
+
+        .vaccine-1{
+          padding: 0 4px;
+          background: $brand-primary;
+        }
+        .vaccine-0{
+          padding: 0 4px;
+          background: $color-orange;
+        }
       }
     }
 
@@ -1826,7 +1849,7 @@ Infographic
 
   .legend{
     padding: 0;
-    margin: $grid-gutter-width/2 0 $grid-gutter-width/3;
+    margin: 2*$grid-gutter-width/3 0 $grid-gutter-width/3;
     text-align: center;
 
     li{

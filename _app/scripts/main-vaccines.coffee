@@ -463,21 +463,15 @@
     d3.queue()
       .defer d3.csv, baseurl+'/data/vph.csv'
       .defer d3.csv, baseurl+'/data/gdp.csv'
-      .defer d3.csv, baseurl+'/data/population.csv'
-      .await (error, data, countries, population) ->
+      .await (error, data, countries) ->
         data = data.filter (d) -> excludedCountries.indexOf(d.country) == -1
         data.forEach (d) ->
           country = countries.filter (e) -> e.code == d.country
-          country_population = population.filter (e) -> e.code == d.country
           if country[0]
             d.name = country[0]['name_'+lang]
             d.gdp = +country[0].value
           else
             #console.error 'No country name for code', d.country
-          if country_population[0]
-            d.population = +country_population[0]['2015']
-          else
-            #console.error 'No country population for code', d.country
           d.value = +d.deaths
         # skip data lines without gdp data
         data = data.filter (d) -> d.gdp
@@ -490,7 +484,6 @@
             x: 'gdp'
             y: 'value'
             id: 'name'
-            size: 'population'
             color: 'vaccine')
         # set data
         graph.setData data
