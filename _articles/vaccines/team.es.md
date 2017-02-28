@@ -11,7 +11,9 @@ gallery:
   - image: articles/eva-asier.jpg
     title: "Eva y Asier, tras la entrevista al ginecólogo Gerson Eduardo Galvez, en Ciudad de Guatemala. | Foto: Manuel Penados"
   - image: articles/raul.jpg
-    title: Raúl, creando cosas bonitas para explicar conceptos difíciles. 
+    title: "Raúl, creando cosas bonitas para explicar conceptos difíciles." 
+  - image: articles/mireia.png
+    title: "Entrevista con Mireia Díaz, investigadora en el Institut Català d'Oncologia. | Foto: Santi Cogolludo" 
  
 
 order:      5

@@ -12,6 +12,8 @@ gallery:
     title: "Eva and Asier, during the interview with gynaecologist Gerson Eduardo Galvez, in Guatemala City. | Photo: Manuel Penados"
   - image: articles/raul.jpg
     title: Raúl, creating beautiful things to explain difficult concepts.
+  - image: articles/mireia.png
+    title: "Interviewing Mireia Díaz, researcher at the Catalan Institut of Oncology. | Foto: Santi Cogolludo"
 
 order:      5
 slug:       team
