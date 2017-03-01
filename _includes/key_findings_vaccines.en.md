@@ -9,4 +9,4 @@
 * [Europe registered 26,000 measles cases in 2015 -far more than the 611 reported across the American continent- and seven of the ten countries with the lowest confidence level in vaccine are European.](/vaccines/antivacunas/ "Antivaccines - Medicamentalia")
 * [Polio can be eradicated like smallpox was. In 2016, just 42 cases were registered worldwide, across only four countries: Pakistan, Afghanistan, Laos and Nigeria.](/vaccines/successes/ "Successes - Medicamentalia")
 * [In 2015, 97 countries notified WHO shortages of essential vaccines. The failure of one of the few manufacturers of the antigen against tuberculosis shot that number up.](/vaccines/stockout/ "Stockout - Medicamentalia")
-* [The countries with the highest incidence and mortality from cervical cancer are the poorest, but the HPV vaccine is not included in most of their immunization programs due to its high cost.]()
+* [The countries with the highest incidence and mortality from cervical cancer are the poorest, but the HPV vaccine is not included in most of their immunization programs due to its high cost.](/vaccines/hpv/ "HPV - Medicamentalia")
