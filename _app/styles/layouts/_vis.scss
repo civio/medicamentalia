@@ -1879,6 +1879,26 @@ Infographic
       }
     }
   }
+
+  .mobile-pictures{
+    display: none;
+
+    p{
+      margin: 2*$grid-gutter-width/3 auto 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .mobile-pictures{
+      display: block;
+    }
+    .x-legend, svg{
+      display: none;
+    }
+    #vaccine-vph-graph{
+      margin-bottom: $grid-gutter-width;
+    }
+  }
 }
 
 // Iframe
