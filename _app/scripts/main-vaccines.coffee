@@ -114,10 +114,8 @@
 
 
   setupVaccineConfidenceBarGraph = ->
-    d3.queue()
-      .defer d3.csv, baseurl+'/data/confidence.csv'
-      .defer d3.json, 'http://freegeoip.net/json/'
-      .await (error, data, location) ->
+    d3.csv baseurl+'/data/confidence.csv', (error, data) ->
+      d3.json 'http://freegeoip.net/json/', (error, location) ->
         data.forEach (d) =>
           d.value = +d.value
           d.name = d['name_'+lang]
@@ -298,60 +296,60 @@
     d3.queue()
       .defer d3.csv, baseurl+'/data/immunization-coverage-mcv2.csv'
       .defer d3.csv, baseurl+'/data/countries.csv'
-      .defer d3.json, 'http://freegeoip.net/json/'
-      .await (error, data, countries, location) ->
-        # Setup user country
-        if location
-          user_country = countries.filter (d) -> d.code2 == location.country_code
-          if user_country and user_country.length > 0 and user_country[0].code
-            if current_countries.indexOf(user_country[0].code) == -1
-              current_countries[2] = user_country[0].code
-              el = $('#immunization-coverage-graph .graph-container').eq(2)
-              el.find('p').html user_country[0]['name_'+lang]
-              el.find('.line-graph').attr 'id', 'immunization-coverage-'+user_country[0].code.toLowerCase()+'-graph'
-        # loop through each selected country   
-        current_countries.forEach (country,i) ->
-          # get current disease data
-          country_data = data
-            .filter (d) -> d.code == country
-            .map    (d) -> $.extend({}, d)
-          country_data.forEach (d) ->
-            delete d['2001']
-            delete d['2002']
-          # setup line chart
-          graph = new window.LineGraph('immunization-coverage-'+country.toLowerCase()+'-graph',
-            isArea: true
-            key: 
-              x: 'name'
-              id: 'code')
-          graphs.push graph
-          graph.yFormat = (d) -> d+'%'
-          graph.getScaleYDomain = (d) -> [0, 100]
-          graph.yAxis.tickValues [50]
-          graph.xAxis.tickValues [2003,2015]
-          graph.addMarker
-            value: 95
-            label: if i%2 != 0 then '' else if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
-            align: 'left'
-          # show last year label
-          graph.$el.on 'draw-complete', (e) ->
-            graph.setLabel 2015
-            graph.container.select('.x.axis')
-              .selectAll('.tick')
-              .style 'display', 'block'
-            graph.container.select('.tick-hover')
-              .style 'display', 'none'
-          graph.setData country_data
-          # listen to year changes & update each graph label
-          graph.$el.on 'change-year', (e, year) ->
-            graphs.forEach (g) ->
-              unless g == graph
-                g.setLabel year
-          graph.$el.on 'mouseout', (e) ->
-            graphs.forEach (g) ->
-              unless g == graph
-                g.hideLabel()
-          $(window).resize graph.onResize
+      .await (error, data, countries) ->
+        d3.json 'http://freegeoip.net/json/', (error, location) ->
+          # Setup user country
+          if location
+            user_country = countries.filter (d) -> d.code2 == location.country_code
+            if user_country and user_country.length > 0 and user_country[0].code
+              if current_countries.indexOf(user_country[0].code) == -1
+                current_countries[2] = user_country[0].code
+                el = $('#immunization-coverage-graph .graph-container').eq(2)
+                el.find('p').html user_country[0]['name_'+lang]
+                el.find('.line-graph').attr 'id', 'immunization-coverage-'+user_country[0].code.toLowerCase()+'-graph'
+          # loop through each selected country   
+          current_countries.forEach (country,i) ->
+            # get current disease data
+            country_data = data
+              .filter (d) -> d.code == country
+              .map    (d) -> $.extend({}, d)
+            country_data.forEach (d) ->
+              delete d['2001']
+              delete d['2002']
+            # setup line chart
+            graph = new window.LineGraph('immunization-coverage-'+country.toLowerCase()+'-graph',
+              isArea: true
+              key: 
+                x: 'name'
+                id: 'code')
+            graphs.push graph
+            graph.yFormat = (d) -> d+'%'
+            graph.getScaleYDomain = (d) -> [0, 100]
+            graph.yAxis.tickValues [50]
+            graph.xAxis.tickValues [2003,2015]
+            graph.addMarker
+              value: 95
+              label: if i%2 != 0 then '' else if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
+              align: 'left'
+            # show last year label
+            graph.$el.on 'draw-complete', (e) ->
+              graph.setLabel 2015
+              graph.container.select('.x.axis')
+                .selectAll('.tick')
+                .style 'display', 'block'
+              graph.container.select('.tick-hover')
+                .style 'display', 'none'
+            graph.setData country_data
+            # listen to year changes & update each graph label
+            graph.$el.on 'change-year', (e, year) ->
+              graphs.forEach (g) ->
+                unless g == graph
+                  g.setLabel year
+            graph.$el.on 'mouseout', (e) ->
+              graphs.forEach (g) ->
+                unless g == graph
+                  g.hideLabel()
+            $(window).resize graph.onResize
        
 
   # World Cases Multiple Small
@@ -398,64 +396,68 @@
     d3.queue()
       .defer d3.csv, baseurl+'/data/immunization-coverage.csv'
       .defer d3.csv, baseurl+'/data/countries.csv'
-      .defer d3.json, 'http://freegeoip.net/json/'
-      .await (error, data, countries, location) ->
-        # Setup user country
-        if location
-          user_country = countries.filter (d) -> d.code2 == location.country_code
-          location.code = user_country[0].code
-          location.name = user_country[0]['name_'+lang]
-        # Filter data
-        herdImmunity = 
-          'MCV1': 95
-          'Pol3': 80
-          'DTP3': 80
-        data = data.filter (d) -> excludedCountries.indexOf(d.code) == -1
-        # Data parse & sorting funtions
-        data_parser = (d) ->
-          obj = 
-            key:   d.code
-            name:  getCountryName(countries, d.code, lang)
-            value: +d['2015']
-          if location and d.code == location.code
-            obj.active = true
-          return obj
-        data_sort = (a,b) -> b.value-a.value
-        # loop through each graph
-        $('.immunization-coverage-disease-graph').each ->
-          $el     = $(this)
-          disease = $el.data('disease')
-          vaccine = $el.data('vaccine')
-          # Get graph data & value
-          graph_data = data
-            .filter((d) -> d.vaccine == vaccine and d['2015'] != '')
-            .map(data_parser)
-            .sort(data_sort)
+      .await (error, data, countries) ->
+        d3.json 'http://freegeoip.net/json/', (error, location) ->
+          # Setup user country
           if location
-            graph_value = graph_data.filter (d) -> d.key == location.code
-          # Setup graph
-          graph = new window.BarGraph(disease+'-immunization-bar-graph',
-            aspectRatio: 0.25
-            label:
-              format: (d) -> +d+'%'
-            key: x: 'name'
-            margin:
-              top: 20)
-          marker = 
-            value: herdImmunity[vaccine]
-            label: if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
-          if vaccine == 'DTP3'
-            marker.label = if lang == 'es' then 'Recomendación OMS' else 'WHO recommendation'
-          graph
-            .addMarker marker
-            .setData graph_data
-          # Setup graph value
-          if graph_value and graph_value.length > 0
-            $el.find('.immunization-country').html location.name
-            $el.find('.immunization-data').html '<strong>' + graph_value[0].value + '%</strong>'
-            $el.find('.immunization-description').show()
-          # On resize
-          $(window).resize -> graph.onResize()
+            user_country = countries.filter (d) -> d.code2 == location.country_code
+            location.code = user_country[0].code
+            location.name = user_country[0]['name_'+lang]
+          else
+            location = {}
+            location.code = 'ESP'
+            location.name = if lang == 'es' then 'España' else 'Spain'
+          # Filter data
+          herdImmunity = 
+            'MCV1': 95
+            'Pol3': 80
+            'DTP3': 80
+          data = data.filter (d) -> excludedCountries.indexOf(d.code) == -1
+          # Data parse & sorting funtions
+          data_parser = (d) ->
+            obj = 
+              key:   d.code
+              name:  getCountryName(countries, d.code, lang)
+              value: +d['2015']
+            if location and d.code == location.code
+              obj.active = true
+            return obj
+          data_sort = (a,b) -> b.value-a.value
+          # loop through each graph
+          $('.immunization-coverage-disease-graph').each ->
+            $el     = $(this)
+            disease = $el.data('disease')
+            vaccine = $el.data('vaccine')
+            # Get graph data & value
+            graph_data = data
+              .filter((d) -> d.vaccine == vaccine and d['2015'] != '')
+              .map(data_parser)
+              .sort(data_sort)
+            if location
+              graph_value = graph_data.filter (d) -> d.key == location.code
+            # Setup graph
+            graph = new window.BarGraph(disease+'-immunization-bar-graph',
+              aspectRatio: 0.25
+              label:
+                format: (d) -> +d+'%'
+              key: x: 'name'
+              margin:
+                top: 20)
+            marker = 
+              value: herdImmunity[vaccine]
+              label: if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
+            if vaccine == 'DTP3'
+              marker.label = if lang == 'es' then 'Recomendación OMS' else 'WHO recommendation'
+            graph
+              .addMarker marker
+              .setData graph_data
+            # Setup graph value
+            if graph_value and graph_value.length > 0
+              $el.find('.immunization-country').html location.name
+              $el.find('.immunization-data').html '<strong>' + graph_value[0].value + '%</strong>'
+              $el.find('.immunization-description').show()
+            # On resize
+            $(window).resize -> graph.onResize()
 
 
   setupVaccineVPHGraph = ->

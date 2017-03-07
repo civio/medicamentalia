@@ -1,6 +1,6 @@
 {
   "name": "medicamentalia",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "scripts": {
     "prepublish": "rollup -c -o _app/scripts/vendor/d3-bundle.js"
   },
