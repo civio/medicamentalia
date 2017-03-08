@@ -1,7 +1,7 @@
 # Main script for vaccines prices article
 class window.VaccinesPrices
 
-  vaccines_names: 
+  vaccines_names:
     es:
       'BCG': 'Tuberculosis (BCG)'
       'DTaP': 'Difteria, tétanos y tos ferina acelular (DTaP)'
@@ -51,7 +51,7 @@ class window.VaccinesPrices
     d3.queue()
       .defer d3.csv, _baseurl+_dataurl
       .defer d3.csv, _baseurl+'/data/gdp.csv'
-      #.defer d3.json, 'http://freegeoip.net/json/'
+      #.defer d3.json, 'https://freegeoip.net/json/'
       .await @onDataLoaded
 
   onDataLoaded: (error, _data, _countries) =>
@@ -109,7 +109,7 @@ class window.VaccinesPrices
     vaccines = ['pneumo13','BCG','IPV','MMR','HepB-pediátrica','VPH-Cervarix2','VPH-Gardasil4','VPH-Gardasil9','DTPa-IPV-Hib','DTaP','Tdap','DTP']
     # filter data to get only selected vaccines
     @data = @data.filter (d) -> vaccines.indexOf(d.vaccine) != -1
-    # join data & countries gdp 
+    # join data & countries gdp
     @data.forEach (d) =>
       country = @countries.filter (e) -> e.code == d.country
       d.price = +d.price

@@ -7,7 +7,7 @@
   baseurl = $('body').data('baseurl')
 
   # list of excluded countries codes (countries with less than 300.000 inhabitants in 2015)
-  excludedCountries = ['NIU','COK','TUV','NRU','PLW','VGB','MAF','SMR','GIB','TCA','LIE','MCO','SXM','FRO','MHL','MNP','ASM','KNA','GRL','CY','BMU','AND','DMA','IMN','ATG','SYC','VIR','ABW','FSM','TON','GRD','VCT','KIR','CUW','CHI','GUM','LCA','STP','WSM','VUT','NCL','PYF','BRB']      
+  excludedCountries = ['NIU','COK','TUV','NRU','PLW','VGB','MAF','SMR','GIB','TCA','LIE','MCO','SXM','FRO','MHL','MNP','ASM','KNA','GRL','CY','BMU','AND','DMA','IMN','ATG','SYC','VIR','ABW','FSM','TON','GRD','VCT','KIR','CUW','CHI','GUM','LCA','STP','WSM','VUT','NCL','PYF','BRB']
 
   # setup format numbers
   if lang == 'es'
@@ -42,10 +42,10 @@
         cases[d.year] = d.value
       # Add youtube video
       wrapper = Popcorn.HTMLYouTubeVideoElement('#video-map-polio')
-      wrapper.src = 'http://www.youtube.com/embed/o-EzVOjnc6Q?controls=0&showinfo=0&hd=1'
+      wrapper.src = 'https://www.youtube.com/embed/o-EzVOjnc6Q?controls=0&showinfo=0&hd=1'
       popcorn = Popcorn(wrapper)
       notes = 2017 - 1980
-      yearDuration = 27/(notes+1) # video duration is 27seconds 
+      yearDuration = 27/(notes+1) # video duration is 27seconds
       i = 0
       while i < notes
         year = ''+(1980+i)
@@ -85,7 +85,7 @@
         # set graph
         graph = new window.MapGraph('measles-world-map-graph',
           aspectRatio: 0.5625
-          margin: 
+          margin:
             top: 60
             bottom: 0
           legend: true)
@@ -99,7 +99,7 @@
       .sort (a,b) -> a.total - b.total
     graph = new window.HeatmapGraph(id,
       legend: legend
-      margin: 
+      margin:
         right: 0
         left: 0)
     graph.setData data
@@ -115,7 +115,7 @@
 
   setupVaccineConfidenceBarGraph = ->
     d3.csv baseurl+'/data/confidence.csv', (error, data) ->
-      d3.json 'http://freegeoip.net/json/', (error, location) ->
+      d3.json 'https://freegeoip.net/json/', (error, location) ->
         data.forEach (d) =>
           d.value = +d.value
           d.name = d['name_'+lang]
@@ -126,7 +126,7 @@
             d.active = true
         graph = new window.BarGraph('vaccine-confidence-graph',
           aspectRatio: 0.3
-          label: 
+          label:
             format: (d) ->  formatFloat(d)+'%'
           margin: top: 0
           key:
@@ -153,7 +153,7 @@
         # set graph
         graph = new window.MapGraph('vaccine-bcg-cases-graph',
           aspectRatio: 0.5625
-          margin: 
+          margin:
             top: 60
             bottom: 0
           legend: true)
@@ -185,7 +185,7 @@
         # set graph
         graph = new window.MapGraph('vaccine-bcg-stockouts',
           aspectRatio: 0.5625
-          margin: 
+          margin:
             top: 60
             bottom: 0
           legend: true)
@@ -210,7 +210,7 @@
               .find '.description-one'
               .show()
           else
-            graph.$tooltip 
+            graph.$tooltip
               .find '.description-multiple .value'
               .html graph.formatInteger(d.value)
             graph.$tooltip
@@ -266,7 +266,7 @@
   # Immunization Coverage Dynamic Line Graph (we can select diferente diseases & countries)
   setupImmunizationCoverageDynamicLineGraph = ->
     graph = new window.LineGraph('immunization-coverage-graph-all',
-      key: 
+      key:
         id: 'code'
         x: 'name'
       label: true
@@ -297,7 +297,7 @@
       .defer d3.csv, baseurl+'/data/immunization-coverage-mcv2.csv'
       .defer d3.csv, baseurl+'/data/countries.csv'
       .await (error, data, countries) ->
-        d3.json 'http://freegeoip.net/json/', (error, location) ->
+        d3.json 'https://freegeoip.net/json/', (error, location) ->
           # Setup user country
           if location
             user_country = countries.filter (d) -> d.code2 == location.country_code
@@ -307,7 +307,7 @@
                 el = $('#immunization-coverage-graph .graph-container').eq(2)
                 el.find('p').html user_country[0]['name_'+lang]
                 el.find('.line-graph').attr 'id', 'immunization-coverage-'+user_country[0].code.toLowerCase()+'-graph'
-          # loop through each selected country   
+          # loop through each selected country
           current_countries.forEach (country,i) ->
             # get current disease data
             country_data = data
@@ -319,7 +319,7 @@
             # setup line chart
             graph = new window.LineGraph('immunization-coverage-'+country.toLowerCase()+'-graph',
               isArea: true
-              key: 
+              key:
                 x: 'name'
                 id: 'code')
             graphs.push graph
@@ -350,7 +350,7 @@
                 unless g == graph
                   g.hideLabel()
             $(window).resize graph.onResize
-       
+
 
   # World Cases Multiple Small
   setupWorldCasesMultipleSmallGraph = ->
@@ -371,7 +371,7 @@
         graph = new window.LineGraph(disease+'-world-graph',
           isArea: true
           margin: left: 20
-          key: 
+          key:
             x: 'disease'
             id: 'disease')
         graphs.push graph
@@ -397,7 +397,7 @@
       .defer d3.csv, baseurl+'/data/immunization-coverage.csv'
       .defer d3.csv, baseurl+'/data/countries.csv'
       .await (error, data, countries) ->
-        d3.json 'http://freegeoip.net/json/', (error, location) ->
+        d3.json 'https://freegeoip.net/json/', (error, location) ->
           # Setup user country
           if location
             user_country = countries.filter (d) -> d.code2 == location.country_code
@@ -408,14 +408,14 @@
             location.code = 'ESP'
             location.name = if lang == 'es' then 'España' else 'Spain'
           # Filter data
-          herdImmunity = 
+          herdImmunity =
             'MCV1': 95
             'Pol3': 80
             'DTP3': 80
           data = data.filter (d) -> excludedCountries.indexOf(d.code) == -1
           # Data parse & sorting funtions
           data_parser = (d) ->
-            obj = 
+            obj =
               key:   d.code
               name:  getCountryName(countries, d.code, lang)
               value: +d['2015']
@@ -443,7 +443,7 @@
               key: x: 'name'
               margin:
                 top: 20)
-            marker = 
+            marker =
               value: herdImmunity[vaccine]
               label: if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
             if vaccine == 'DTP3'
@@ -495,7 +495,7 @@
   setupGuatemalaCoverageLineGraph = ->
     graph = new window.LineGraph('guatemala-coverage-mmr',
       #isArea: true
-      margin: 
+      margin:
         left: 0
         right: 0
         bottom: 20)
@@ -562,7 +562,7 @@
 
   if $('#world-cases').length > 0
     setupWorldCasesMultipleSmallGraph()
-  
+
   if $('.immunization-coverage-disease-graph').length > 0
     setupImmunizationDiseaseBarGraph()
 
