@@ -3,8 +3,8 @@ layout:           vaccines-iframe
 category:         vaccines
 title:            Immunisierungsabdeckung
 slug:             immunisierungs-abdeckung-graphic
-ref:              immunisierungs-abdeckung-graphic
-lang:             en
+ref:              immunization-coverage-graphic
+lang:             de
 draft:            true
 ---
 

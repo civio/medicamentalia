@@ -29,7 +29,10 @@
   getCountryName = (countries, code, lang) ->
     item = countries.filter (d) -> d.code == code
     if item
-      item[0]['name_'+lang]
+      if lang == 'es'
+        item[0]['name_es']
+      else
+        item[0]['name_en']
     else
       console.error 'No country name for code', code
 
@@ -116,13 +119,22 @@
   setupVaccineConfidenceBarGraph = ->
     d3.csv baseurl+'/data/confidence.csv', (error, data) ->
       d3.json 'http://freegeoip.net/json/', (error, location) ->
+        unless location
+          location = {}
+          if lang == 'de'
+            location.code = 'DEU'
+          else
+            location.code = 'ESP'
         data.forEach (d) =>
           d.value = +d.value
-          d.name = d['name_'+lang]
+          if lang == 'de'
+            d.name = d['name_en']
+          else
+            d.name = d['name_'+lang]
           delete d.name_es
           delete d.name_en
           # set user country active
-          if location and d.code2 == location.country_code
+          if location and d.code == location.code
             d.active = true
         graph = new window.BarGraph('vaccine-confidence-graph',
           aspectRatio: 0.3
@@ -329,7 +341,7 @@
             graph.xAxis.tickValues [2003,2015]
             graph.addMarker
               value: 95
-              label: if i%2 != 0 then '' else if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
+              label: if i%2 != 0 then '' else if lang == 'es' then 'Nivel de rebaño' else if lang == 'de' then 'Herdenimmunität' else 'Herd immunity'
               align: 'left'
             # show last year label
             graph.$el.on 'draw-complete', (e) ->
@@ -405,8 +417,12 @@
             location.name = user_country[0]['name_'+lang]
           else
             location = {}
-            location.code = 'ESP'
-            location.name = if lang == 'es' then 'España' else 'Spain'
+            if lang == 'de'
+              location.code = 'DEU'
+              location.name = 'Germany'
+            else
+              location.code = 'ESP'
+              location.name = if lang == 'es' then 'España' else 'Spain'
           # Filter data
           herdImmunity = 
             'MCV1': 95
@@ -445,7 +461,7 @@
                 top: 20)
             marker = 
               value: herdImmunity[vaccine]
-              label: if lang == 'es' then 'Nivel de rebaño' else 'Herd immunity'
+              label: if lang == 'es' then 'Nivel de rebaño' else if lang == 'de' then 'Herdenimmunität' else 'Herd immunity'
             if vaccine == 'DTP3'
               marker.label = if lang == 'es' then 'Recomendación OMS' else 'WHO recommendation'
             graph

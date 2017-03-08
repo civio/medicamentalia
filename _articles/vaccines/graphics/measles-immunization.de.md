@@ -3,8 +3,8 @@ layout:           vaccines-iframe
 category:         vaccines
 title:            Masern-Immunisierungsraten
 slug:             masern-immunisierung
-ref:              masern-immunisierung
-lang:             en
+ref:              measles-immunization
+lang:             de
 draft:            true
 ---
 

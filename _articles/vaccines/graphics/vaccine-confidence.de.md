@@ -3,8 +3,8 @@ layout:           vaccines-iframe
 category:         vaccines
 title:            Misstrauen in Impfungssicherheit
 slug:             impfungs-misstrauen
-ref:              impfungs-misstrauen
-lang:             en
+ref:              vaccine-confidence
+lang:             de
 draft:            true
 ---
 
