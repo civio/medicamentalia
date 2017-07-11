@@ -3,9 +3,7 @@ category:         farma
 title:            Farma
 subtitle:         Los médicos menos transparentes reciben más dinero
 description:      Quienes recibieron, de media, mayores cantidades de cada laboratorio prefieren ocultar sus relaciones con la industria
-home_description: Quienes recibieron, de media, mayores cantidades de cada laboratorio prefieren ocultar sus relaciones con la industria
-img:              articles/home-superbugs.jpg
-order:            2
+img:              articles/home-farma-2.jpg
 author:           Eva Belmonte, Miguel Ángel Gavilanes y María Álvarez del Vayo
 slug:             los-medicos-menos-transparentes-reciben-mas-dinero
 ref:              farma-2

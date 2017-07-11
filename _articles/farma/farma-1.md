@@ -3,9 +3,7 @@ category:         farma
 title:            Farma
 subtitle:         Ocho de cada diez euros que las farmacéuticas gastan en médicos son opacos
 description:      143 millones de euros, entre entradas a congresos, viajes y honorarios, se publican sin especificar qué medico los recibe
-home_description: 143 millones de euros, entre entradas a congresos, viajes y honorarios, se publican sin especificar qué medico los recibe
-img:              articles/home-superbugs.jpg
-order:            2
+img:              articles/home-farma-1.jpg
 author:           Eva Belmonte, Miguel Ángel Gavilanes y María Álvarez del Vayo
 slug:             ocho-de-cada-diez-euros-que-las-farmaceuticas-gastan-en-medicos-son-opacos
 ref:              farma-1

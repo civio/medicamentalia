@@ -8,6 +8,8 @@ en:
     vaccines: 
       title: Vaccines
       description: Journalistic investigation on immunization levels and vaccine prices
+    farma:
+      title: Pharma
   date:
     format: '%B %-d, %Y'
   description: Journalistic investigation on the gap in global access to health
@@ -44,6 +46,8 @@ es:
     vaccines: 
       title: Vacunas
       description: Investigación periodística sobre las diferencias en niveles de inmunización y precios de vacunas
+    farma:
+      title: Farma
   date:
     format: '%-d de %B de %Y'
     months:

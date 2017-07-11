@@ -11,6 +11,10 @@ header {
   background-position: center center;
   @include background-size( cover );
 
+  &.page-farma-1{
+    background-position: center top;
+  }
+
   .header-overlay{
     display: block;
     position: absolute;

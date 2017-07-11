@@ -401,6 +401,10 @@ $btn-scroll-down-icon-size: 44px;
         font-weight: 600;
         letter-spacing: .075em;
         margin: 20px 0;
+
+        &.no-uppercase{
+          text-transform: none;
+        }
       }
 
       .portfolio-box-caption-description{
@@ -467,7 +471,8 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
 
-  &.category-{
+  &.category-,
+  &.category-farma{
   
     .portfolio-box-overlay{
       background: $overlay-yellow;
