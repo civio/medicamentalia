@@ -81,12 +81,19 @@ var js_paths = {
     '_app/scripts/main-vaccines.coffee'
   ],
   // other.js sources
-  others: [
+  superbugs: [
     '_app/scripts/base-graph.coffee',
     '_app/scripts/bar-graph.coffee',
+    '_app/scripts/main-superbugs.coffee'
+  ],
+  // other.js sources
+  pharma_payments: [
+    '_app/scripts/base-graph.coffee',
+    '_app/scripts/bar-graph.coffee',
+    '_app/scripts/bar-horizontal-pharma-graph.coffee',
     '_app/scripts/iceberg-graph.coffee',
     '_app/scripts/beeswarm-graph.coffee',
-    '_app/scripts/main-others.coffee'
+    '_app/scripts/main-pharma-payments.coffee'
   ]
 };
 
@@ -187,16 +194,34 @@ gulp.task('js-vaccines', function() {
     .on('error', gutil.log);
 });
 
-gulp.task('js-others', function() {
+gulp.task('js-superbugs', function() {
   var c = coffee();
   c.on('error',function(e){
     gutil.log(e);
     c.end();
   });
-  return gulp.src(js_paths.others)
+  return gulp.src(js_paths.superbugs)
     .pipe(sourcemaps.init())
     .pipe(c)
-    .pipe(concat('others.js'))
+    .pipe(concat('superbugs.js'))
+    .pipe(sourcemaps.write())
+    .pipe(production(uglify(uglifyOptions)))
+    .pipe(gulp.dest('_site/assets/scripts'))
+    .pipe(reload({stream:true}))
+    .pipe(gulp.dest('assets/scripts'))
+    .on('error', gutil.log);
+});
+
+gulp.task('js-pharma-payments', function() {
+  var c = coffee();
+  c.on('error',function(e){
+    gutil.log(e);
+    c.end();
+  });
+  return gulp.src(js_paths.pharma_payments)
+    .pipe(sourcemaps.init())
+    .pipe(c)
+    .pipe(concat('pharma-payments.js'))
     .pipe(sourcemaps.write())
     .pipe(production(uglify(uglifyOptions)))
     .pipe(gulp.dest('_site/assets/scripts'))
@@ -206,7 +231,7 @@ gulp.task('js-others', function() {
 });
 
 // Create a js task wich call all js task dynamically defined
-gulp.task('js', ['popcorn', 'js-main', 'js-access', 'js-vaccines', 'js-others']);
+gulp.task('js', ['popcorn', 'js-main', 'js-access', 'js-vaccines', 'js-superbugs', 'js-pharma-payments']);
 
 // Jekyll build
 gulp.task('jekyll-build', function(done) {

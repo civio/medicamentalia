@@ -6,55 +6,12 @@
   lang    = $('body').data('lang')
   baseurl = $('body').data('baseurl')
 
-  # get country name auxiliar method
-  getCountryName = (countries, code, lang) ->
-    item = countries.filter (d) -> d.code2 == code
-    if item.length
-      item[0]['name_'+lang]
-    else
-      console.error 'No country name for code', code
-  
-  # Setup bar graphs
-  if $('.bar-graph').length > 0
-    # markers object
-    markers =
-      'antibiotics-graph':
-        value: 36
-        label: if lang == 'es' then 'Media EU28' else 'EU28 Average'
-      'antibiotics-animals-graph':
-        value: 107.8
-        label: if lang == 'es' then 'Media' else 'Average'
-
-    d3.queue()
-      .defer d3.csv, baseurl+'/data/antibiotics.csv'
-      .defer d3.csv, baseurl+'/data/antibiotics-animals.csv'
-      .defer d3.csv, baseurl+'/data/countries.csv'
-      .await (error, data_antibiotics, data_antibiotics_animals, countries) ->
-        # add country names to data
-        data_antibiotics.forEach (d) ->
-          d.name = getCountryName(countries, d.label, lang)
-        data_antibiotics_animals.forEach (d) ->
-          d.name = getCountryName(countries, d.label, lang)
-        # loop through each bar graph
-        $('.bar-graph').each ->
-          id = $(this).attr('id')
-          graph = new window.BarGraph(id,
-            aspectRatio: 0.4
-            label: true
-            key: 
-              id: 'label'
-              x: 'name')
-          graph
-            .addMarker markers[id]
-            .setData if id == 'antibiotics-graph' then data_antibiotics else data_antibiotics_animals
-          $(window).resize graph.onResize
-
   # Setup iceberg graph
   if $('#pharma-categories-amounts').length > 0
     d3.csv baseurl+'/data/pharma-categories-amounts.csv', (error, data) ->
       # setup graph
       graph = new window.IcebergGraph('pharma-categories-amounts',
-        aspectRatio: 0.5
+        aspectRatio: 0.6
         margin: 
           top: 20
           bottom: 0
@@ -73,6 +30,9 @@
   if $('#pharma-doctors-average').length > 0
     d3.csv baseurl+'/data/pharma-doctors-average.csv', (error, data) ->
       console.table data
+      # setup graph
+      graph = new window.BarHorizontalPharmaGraph('pharma-doctors-average', data)
+      
 
   # Setup beeswarm graph
   if $('.pharma-transfers').length > 0

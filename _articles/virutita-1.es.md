@@ -7,7 +7,7 @@ img:              articles/home-superbugs.jpg
 order:            2
 author:           Eva Belmonte, Miguel Ángel Gavilanes y María Álvarez del Vayo
 slug:             virutita-1
-ref:              virutita-1
+ref:              pharma-payments-1
 lang:             es
 ---
 

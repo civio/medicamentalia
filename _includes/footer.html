@@ -137,8 +137,10 @@
   {% elsif page.category  == 'vaccines' %}
     <script type='text/javascript' src='{{ site.assetsurl }}/scripts/popcorn.js'></script>
     <script type='text/javascript' src='{{ site.assetsurl }}/scripts/vaccines.js?v=@version@'></script>
-  {% else %}
-    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/others.js?v=@version@'></script>
+  {% elsif page.ref  == 'superbugs' %}  
+    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/superbugs.js?v=@version@'></script>
+  {% elsif page.ref  == 'pharma-payments-1' or page.ref  == 'pharma-payments-2' %}
+    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/pharma-payments.js?v=@version@'></script>
   {% endif %}
 {% endif %}
 

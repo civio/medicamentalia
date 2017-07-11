@@ -7,7 +7,7 @@ img:              articles/home-superbugs.jpg
 order:            2
 author:           Eva Belmonte, Miguel Ángel Gavilanes y María Álvarez del Vayo
 slug:             virutita-2
-ref:              virutita-2
+ref:              pharma-payments-2
 lang:             es
 ---
 
@@ -17,7 +17,11 @@ La mayor parte de los 181 millones que las farmacéuticas españolas destinaron 
 
 <div class="container-right">
   <div class="graph-container">
-    <p class="graph-container-caption">Pagos medios a médicos por categoría</p>
+    <p class="graph-container-caption" style="margin-bottom: 15px">Pagos medios a médicos por categoría</p>
+    <ul class="pharma-doctors-average-legend">
+      <li class="payment-declared"><span></span> Pagos declarados</li>
+      <li class="payment-hidden"><span></span> Pagos ocultos</li>
+    </ul>
     <div id="pharma-doctors-average" class="bar-graph"></div>
   </div>
 </div>

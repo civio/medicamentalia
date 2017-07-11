@@ -2189,3 +2189,64 @@ body.guatemala-graph {
     stroke: none;
   }
 }
+
+#pharma-doctors-average{
+  .bar-title{
+    margin-top: 10px;
+    text-align: left;
+  }
+  .bar{
+    height: 22px;
+    margin: 2px 0; 
+    text-align: right;
+
+    span{
+      color: #222;
+      font-size: 13px;
+      padding-right: 6px;
+    }
+  }
+  .bar-hidden{
+    background: $color-green-dark;
+    span{
+      color: white;
+      font-weight: 300;
+    }
+  }
+  .bar-declared{
+    background: mix( $color-green-light, white, 80% );
+  }
+}
+
+.pharma-doctors-average-legend{
+  padding: 0;
+  text-align: left;
+
+  li{
+    display: inline-block;
+    font-size: 13px;
+    list-style: none;
+    margin: 0 10px 0 0;
+
+    span{
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: red;
+      margin-right: 2px;
+    }
+
+    &.payment-declared{
+      color: mix( $color-green-light, white, 80% );
+      span{
+        background: mix( $color-green-light, white, 80% );
+      }
+    }
+    &.payment-hidden{
+      color: $color-green-dark;
+      span{
+        background: $color-green-dark;
+      }
+    }
+  }
+}
