@@ -1,13 +1,14 @@
 ---
-title:            Virutita
+category:         farma
+title:            Farma
 subtitle:         Ocho de cada diez euros que las farmacéuticas gastan en médicos son opacos
 description:      143 millones de euros, entre entradas a congresos, viajes y honorarios, se publican sin especificar qué medico los recibe
 home_description: 143 millones de euros, entre entradas a congresos, viajes y honorarios, se publican sin especificar qué medico los recibe
 img:              articles/home-superbugs.jpg
 order:            2
 author:           Eva Belmonte, Miguel Ángel Gavilanes y María Álvarez del Vayo
-slug:             virutita-1
-ref:              pharma-payments-1
+slug:             ocho-de-cada-diez-euros-que-las-farmaceuticas-gastan-en-medicos-son-opacos
+ref:              farma-1
 lang:             es
 ---
 
@@ -70,6 +71,10 @@ Sea como sea, en 2018 se publicarán, si nada lo impide, todos los nombres de lo
 ### ¿De dónde sale el 35% de transparencia que da Farmaindustria?
 
 En la [nota de prensa](http://www.farmaindustria.es/web/prensa/notas-de-prensa/2017/06/29/id-formacion-siguen-siendo-las-bases-la-colaboracion-la-industria-farmaceutica-los-profesionales-sanitarios/) que Farmaindustria envió a finales de junio, fecha límite de las compañías para publicar su lista de relaciones económicas con médicos y organizaciones sanitarias, la entidad, que engloba a la industria española, se felicitó porque "el porcentaje de transferencias de valor publicadas de forma individualizada ya ha crecido de forma significativa, del 20% **al 35%**, entre 2015 y 2016". Pero, **¿de dónde sale esta cifra?** ¿Por qué no coincide con el titular de este artículo? Cada laboratorio, por cada categoría, publica el número de médicos que prefieren ocultar su nombre y el porcentaje que suponen sobre el total. Son cifras que no se pueden sumar entre categorías ni tampoco entre laboratorios, porque hay médicos que aparecen en varias listas y estaríamos inflando la cifra. Para esquivar ese problema y dar una cifra global, Farmaindustria utiliza una media ponderada -**según valor de mercado** de cada farmacéutica- del número de transferencias de valor que se ocultan (y, por lo tanto, de ese 35% restante, que sí se muestran). Nosotros, en cambio, **sumamos cifras en euros** (que sí se pueden sumar sin crear duplicidades) y solo hablamos de porcentajes **en cada categoría y por cada laboratorio**, para evitar contar varias veces a un mismo médico. *[Metodología]*  
+</div>
+
+<div id="metodologia" class="panel" markdown="1">
+### Metodología
 </div>
 
 <p class="credits" markdown="1">Este artículo forma parte de una investigación en marcha de Civio sobre la relación entre farmacéuticas, médicos, asociaciones y entidades públicas.</p>

@@ -1,13 +1,14 @@
 ---
-title:            Virutita
+category:         farma
+title:            Farma
 subtitle:         Los médicos menos transparentes reciben más dinero
 description:      Quienes recibieron, de media, mayores cantidades de cada laboratorio prefieren ocultar sus relaciones con la industria
 home_description: Quienes recibieron, de media, mayores cantidades de cada laboratorio prefieren ocultar sus relaciones con la industria
 img:              articles/home-superbugs.jpg
 order:            2
 author:           Eva Belmonte, Miguel Ángel Gavilanes y María Álvarez del Vayo
-slug:             virutita-2
-ref:              pharma-payments-2
+slug:             los-medicos-menos-transparentes-reciben-mas-dinero
+ref:              farma-2
 lang:             es
 ---
 
@@ -107,6 +108,10 @@ El código que regula esta publicación es un ejercicio de **autorregulación de
 
 El [artículo 76](https://www.boe.es/buscar/act.php?id=BOE-A-2006-13554#a76
 ) de la Ley de garantías y uso racional de los medicamentos y productos sanitarios, aprobada en 2006, ya establecía por entonces que "las ofertas de premios, becas, contribuciones y subvenciones a reuniones, congresos, viajes de estudio y actos similares por cualquier persona, física o jurídica, relacionada con la fabricación, elaboración, distribución, prescripción y dispensación de medicamentos y productos sanitarios **se harán públicas en la forma que se determine reglamentariamente**". Aunque solo se refería a una parte de las cuatro categorías (entradas a congresos y viajes, pero no honorarios), la norma que debía establecer cómo se tenía que publicar esta información nunca se desarrolló.
+
+<div id="metodologia" class="panel" markdown="1">
+### Metodología
+</div>
 
 <p class="credits" markdown="1">Este artículo forma parte de una investigación en marcha de Civio sobre la relación entre farmacéuticas, médicos, asociaciones y entidades públicas.</p>
 
