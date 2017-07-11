@@ -69,6 +69,11 @@
       graph.setData data
       $(window).resize graph.onResize
 
+  # Setup doctors average
+  if $('#pharma-doctors-average').length > 0
+    d3.csv baseurl+'/data/pharma-doctors-average.csv', (error, data) ->
+      console.table data
+
   # Setup beeswarm graph
   if $('.pharma-transfers').length > 0
     d3.csv baseurl+'/data/pharma-transfers.csv', (error, data) ->

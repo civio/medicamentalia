@@ -15,6 +15,13 @@ lang:             es
   <div class="page-content-container" markdown="1">
 La mayor parte de los 181 millones que las farmacéuticas españolas destinaron en 2016 a pagar entradas a congresos, viajes y honorarios de médicos va a parar, ya sea de forma directa o indirecta, a aquellos médicos que han preferido ocultar su nombre. Además, la cuantía media que reciben es mayor que la de aquellos que han aceptado las nuevas reglas de transparencia en el sector. Los opacos reciben, de media, más de cada laboratorio. 
 
+<div class="container-right">
+  <div class="graph-container">
+    <p class="graph-container-caption">Pagos medios a médicos por categoría</p>
+    <div id="pharma-doctors-average" class="bar-graph"></div>
+  </div>
+</div>
+
 Si los honorarios medios que pagó una farmacéutica a un médico durante 2016 (por uno o más servicios) son de algo más de 800 euros entre quienes sí publican su nombre, esta cifra sube hasta más de 1.000 en el caso de la información agregada. 
 
 Estas diferencias también son destacables en cuotas de inscripción a congresos: para los opacos, de media, 484 euros; 342 para los transparentes. Y, sobre todo, en viajes: los médicos que han preferido ocultar su nombre recibieron de media 600 euros por laboratorio para transporte y alojamiento; los transparentes, 446.
