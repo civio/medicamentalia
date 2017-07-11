@@ -14,7 +14,7 @@ lang:             es
 
 <div class="container page-content" markdown="1">
   <div class="page-content-container" markdown="1">
-La mayor parte de los 181 millones que las farmacéuticas españolas destinaron en 2016 a pagar entradas a congresos, viajes y honorarios de médicos va a parar, ya sea de forma directa o indirecta, a aquellos médicos que han preferido ocultar su nombre. Además, la cuantía media que reciben es mayor que la de aquellos que han aceptado las nuevas reglas de transparencia en el sector, según la investigación realizada por Civio de los datos publicados por cada farmacéutica. **Los que más reciben son menos transparentes**.
+La mayor parte de los [181 millones](/farma/ocho-de-cada-diez-euros-que-las-farmaceuticas-gastan-en-medicos-son-opacos) que las farmacéuticas españolas destinaron en 2016 a pagar entradas a congresos, viajes y honorarios de médicos va a parar, ya sea de forma directa o indirecta, a aquellos médicos que han preferido ocultar su nombre. Además, la cuantía media que reciben es mayor que la de aquellos que han aceptado las nuevas reglas de transparencia en el sector, según la investigación realizada por Civio de los datos publicados por cada farmacéutica. **Los que más reciben son menos transparentes**.
 
 <div class="container-right">
   <div class="graph-container">
@@ -46,7 +46,7 @@ Lo importante, para el presidente de las asociaciones científicas, es ir más a
 
 ### Las diferencias entre laboratorios
 
-Aunque en general la preferencia por permanecer en el anonimato es mayoritaria, también es cierto que **el grado de transparencia no es igual** en todas las compañías. Ya sea porque han hecho un esfuerzo diferente a la hora de comunicar y convencer a los médicos de que aparecieran sus nombres o porque algunas han tenido mejor suerte que otras, el caso es que hay farmacéuticas que publican **casi la totalidad** de los nombres de quienes reciben sus "transferencias de valor" y que otras no han publicado **ni uno solo**, como es el caso de Boiron, que pagó cuotas de inscripción a congresos a 772 profesionales sanitarios y no consiguió -si lo intentó- publicar ni uno de esos nombres. [Metodología]
+Aunque en general la preferencia por permanecer en el anonimato es mayoritaria, también es cierto que **el grado de transparencia no es igual** en todas las compañías. Ya sea porque han hecho un esfuerzo diferente a la hora de comunicar y convencer a los médicos de que aparecieran sus nombres o porque algunas han tenido mejor suerte que otras, el caso es que hay farmacéuticas que publican **casi la totalidad** de los nombres de quienes reciben sus "transferencias de valor" y que otras no han publicado **ni uno solo**, como es el caso de Boiron, que pagó cuotas de inscripción a congresos a 772 profesionales sanitarios pero ha decidido publicar todos los pagos en agregado, sin dar nombres, hasta que entre en vigor la obligación de publicar las transferencias de valor de forma individualizada, según informa la propia empresa. [Metodología](/farma/los-medicos-menos-transparentes-reciben-mas-dinero/#metodologia)
 
 </div>
 
@@ -118,6 +118,13 @@ El [artículo 76](https://www.boe.es/buscar/act.php?id=BOE-A-2006-13554#a76
 
 <div id="metodologia" class="panel" markdown="1">
 ### Metodología
+De los listados publicados por los laboratorios, además del **importe agregado** de transferencias de valor cuyos beneficiarios no han querido ser identificados (dato extraído para el [primer artículo de esta serie](/farma/ocho-de-cada-diez-euros-que-las-farmaceuticas-gastan-en-medicos-son-opacos); su metodología, [aquí](/farma/ocho-de-cada-diez-euros-que-las-farmaceuticas-gastan-en-medicos-son-opacos/#metodologia),  hemos extraído el **número de estos profesionales sanitarios opacos** y el **porcentaje** que representan sobre el total en cada farmacéutica y por cada categoría.
+
+Para obtener los **pagos medios** del artículo, hemos calculado el total de número de pagos a profesionales sanitarios, el total de los importes publicados de forma agregada (los ocultos) y el total de los importes publicados de forma individualizada (obtenidos al restar a las cifras dadas por Farmaindustria la suma de los importes ocultos).
+
+No damos datos del número de médicos transparentes u opacos del total porque si sumáramos los datos de los laboratorios contaríamos varias veces a aquellos que reciban transferencias de varios de ellos.
+
+No ha habido cruce de datos personales. Hemos usado solo la información agregada. Los datos se han obtenido uno a uno de los listados publicados por las farmacéuticas: desde archivos [XLS](http://www.norgine.com/wp-content/uploads/2017/06/SPAIN-Spain-Transparency-Disclosure-2016-data.xlsx) (los que menos) o documentos [PDF](https://www.sandozfarma.es/sites/www.sandozfarma.es/files/2016-pagos-y-transferencias-de-valor-sandoz-espa%C3%B1a.pdf) e [imágenes pixeladas](https://www.daiichi-sankyo.es/fileadmin/daiichi-sankyo-contents/DS_ES/Downloads/Report_DS_Espana_2016_002.pdf), solo a la altura de los mejores criptógrafos, (los que más). Rizando el rizo de la publicación, [Pfizer](https://www.pfizer.es/transparencia/transparencia.html) te obliga a superar una *gymkhana* informativa y de términos y condiciones legales para poder acceder al listado de transferencias de valor.
 </div>
 
 <p class="credits" markdown="1">Este artículo forma parte de una investigación en marcha de Civio sobre la relación entre farmacéuticas, médicos, asociaciones y entidades públicas.</p>
