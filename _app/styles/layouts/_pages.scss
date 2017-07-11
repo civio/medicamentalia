@@ -746,3 +746,34 @@ header {
     }
   }
 }
+
+#metodologia{
+  color: white;
+  font-weight: 300;
+  background: $brand-primary;
+
+  h3, a{
+    color: white;
+  }
+
+  strong, a{
+    font-weight: 400;
+  }
+}
+
+.panel.link{
+  background: none;
+  text-align: center;
+  font-size: 1.375em;
+  border: none;
+  border: 2px solid $brand-primary;
+  background: mix( $color-green-light, white, 15%);
+
+  p{
+    line-height: 22px;
+  }
+
+  a{
+    font-weight: 600;
+  }
+}

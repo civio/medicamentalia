@@ -12,6 +12,9 @@ lang:             es
 
 <div class="container page-content" markdown="1">
   <div class="page-content-container" markdown="1">
+
+<p class="credits" markdown="1">Este artículo forma parte de una investigación en marcha de Civio sobre la relación entre farmacéuticas, médicos, asociaciones y entidades públicas.</p>
+
 En 2016, las farmacéuticas españolas gastaron en total 181 millones de euros entre pagos directos a médicos (honorarios por servicios) e indirectos (compra de entradas a congresos, viajes...). Pero los laboratorios solo han publicado nombres y apellidos de los profesionales sanitarios que reciben 38 de esos millones. Del resto, al menos 143 millones, **no conocemos su destinatario**, según la investigación realizada por Civio de los datos publicados por cada farmacéutica. Las compañías publican esa información, que supone **el 80% del total**, de forma agregada. Y la transparencia en las relaciones entre ambos sectores, clave para evitar y controlar posibles conflictos de interés, se queda **a medio cambio**.
 
 La decisión, por el momento, **depende de los propios médicos**. Este es el segundo año que los laboratorios asociados a Farmaindustria publican esta información. Y, como ocurrió en 2016, solo se han publicado los nombres de aquellos profesionales sanitarios que han dado **su consentimiento**. Las cuantías de quienes no lo hacen se publican como una suma total. Pero en 2018 (en referencia a los datos que ya se están recopilando de 2017) la cosa cambiará. La Agencia Española de Protección de Datos (AEPD) ha establecido que, si se toman medidas para evitar el tratamiento posterior de esos datos, las farmacéuticas podrán publicar nombre y apellidos **de todos ellos**, consientan o no. 
@@ -77,6 +80,10 @@ Sea como sea, en 2018 se publicarán, si nada lo impide, todos los nombres de lo
 En la [nota de prensa](http://www.farmaindustria.es/web/prensa/notas-de-prensa/2017/06/29/id-formacion-siguen-siendo-las-bases-la-colaboracion-la-industria-farmaceutica-los-profesionales-sanitarios/) que Farmaindustria envió a finales de junio, fecha límite de las compañías para publicar su lista de relaciones económicas con médicos y organizaciones sanitarias, la entidad, que engloba a la industria española, se felicitó porque "el porcentaje de transferencias de valor publicadas de forma individualizada ya ha crecido de forma significativa, del 20% **al 35%**, entre 2015 y 2016". Pero, **¿de dónde sale esta cifra?** ¿Por qué no coincide con el titular de este artículo? Cada laboratorio, por cada categoría, publica el número de médicos que prefieren ocultar su nombre y el porcentaje que suponen sobre el total. Son cifras que no se pueden sumar entre categorías ni tampoco entre laboratorios, porque hay médicos que aparecen en varias listas y estaríamos inflando la cifra. Para esquivar ese problema y dar una cifra global, Farmaindustria utiliza una media ponderada -**según valor de mercado** de cada farmacéutica- del número de transferencias de valor que se ocultan (y, por lo tanto, de ese 35% restante, que sí se muestran). Nosotros, en cambio, **sumamos cifras en euros** (que sí se pueden sumar sin crear duplicidades) y solo hablamos de porcentajes **en cada categoría y por cada laboratorio**, para evitar contar varias veces a un mismo médico.   
 </div>
 
+<div class="panel link" markdown="1">
+Sigue leyendo: [Los médicos menos transparentes reciben más dinero](/farma/los-medicos-menos-transparentes-reciben-mas-dinero/)
+</div>
+
 <div id="metodologia" class="panel" markdown="1">
 ### Metodología
 Para este artículo se han analizado las transferencias de valor de las [189 empresas asociadas y adheridas](http://www.codigofarmaindustria.org/servlet/sarfi/empresas.html) al sistema de autorregulación de Farmaindustria. Solo han publicado estos datos 151 empresas. Según la Unidad de Supervisión Deontólogica de la asociación farmacéutica, las 38 que no han publicado estos datos no están obligadas a hacerlo de acuerdo con su [Código de Buenas Prácticas](http://www.codigofarmaindustria.org/servlet/sarfi/elcodigo.html), que excluye a las empresas que **no invierten en profesionales u organizaciones sanitarias** o que no comercializan medicamentos o productos **de prescripción**. Este es el caso de la industria de la homeopatía, con empresas como Hal Allergy, Labo Life o Heel. Solo Boiron publica estos datos de forma voluntaria.
@@ -85,8 +92,6 @@ Las transferencias de valor destinadas a profesionales sanitarios se reparten en
 
 Las cifras de **gasto total de cada partida** han sido facilitadas por Farmaindustria, que ha recibido todos los documentos de sus empresas asociadas. A partir de estos totales y de la suma de los importes agregados, hemos obtenido el **importe total de las transferencias individualizadas** y los porcentajes utilizados en el artículo. En el caso de la inversión en I+D, que no distingue entre sus beneficiarios a médicos y organizaciones sanitarias, se ha sumado la única cifra que publica cada laboratorio.
 </div>
-
-<p class="credits" markdown="1">Este artículo forma parte de una investigación en marcha de Civio sobre la relación entre farmacéuticas, médicos, asociaciones y entidades públicas.</p>
 
 </div>
 </div>
