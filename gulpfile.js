@@ -84,6 +84,8 @@ var js_paths = {
   others: [
     '_app/scripts/base-graph.coffee',
     '_app/scripts/bar-graph.coffee',
+    '_app/scripts/iceberg-graph.coffee',
+    '_app/scripts/beeswarm-graph.coffee',
     '_app/scripts/main-others.coffee'
   ]
 };

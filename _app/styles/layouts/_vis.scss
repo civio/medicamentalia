@@ -2019,3 +2019,173 @@ Infographic
 body.guatemala-graph {
   background: $color-green-dark;
 }
+
+// Pharma transfers
+.page-content .pharma-transfers-container .graph-container-title{
+  font-weight: 400;
+  text-align: left;
+  margin: 0;
+  max-width: 100%;
+  position: relative;
+  top: 15px;
+}
+
+.page-content .pharma-transfers-container .subsidiaries-cont{
+  font-size: .875em;
+}
+
+.pharma-transfers-container{
+
+  .pharma-transfers-footer{
+    font-size: 0.875em;
+  }
+
+  #pharma-selector{
+    text-align: left;
+    margin: 0 0 30px;
+    max-width: 180px;
+
+    label{
+      font-weight: 400;
+    }
+
+    select{
+      font-size: 0.875em;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 0;
+    }
+  }
+  .legend{
+    width: 100%;
+    height: 0;
+    padding: 0;
+    padding-right: 20px;
+
+    li{
+      display: inline-block;
+      width: 25%;
+      height: 0;
+      padding-top: 6px;
+      overflow: visible;
+      font-size: 11px;
+      color: $gray-light;
+      text-align: right;
+      line-height: 16px;
+    } 
+  }
+
+  .size-legend{
+    p{
+      margin: 0; 
+    }
+    ul{
+      padding: 0;
+    }
+    li{
+      display: inline-block;
+      font-size: 1em;
+      list-style: none;
+      line-height: 30px;
+    }
+    .circle{
+      position: relative;
+      display: inline-block;
+      border-radius: 50%;
+      background: #999;
+      margin: 0 2px 0 5px;
+      border: 1px solid mix(black, white, 30%);
+    }
+    .sm {
+      .circle{
+        width: 7px;
+        height: 7px;
+        top: -1px;
+      }
+    }
+    .m {
+      .circle{
+        width: 12px;
+        height: 12px;
+        top: 2px;
+      }
+    }
+    .l {
+      .circle{
+        top: 10px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .tooltip {
+    .tooltip-inner{
+      font-weight: 400;
+      p{
+        margin: 10px auto 5px;
+      }
+    }
+    .description{
+      color: $brand-primary;
+    }
+    .value, .total{
+      font-weight: 600;
+    }
+    .title,
+    .value{
+      font-size: 1.125em;
+    }
+    
+  }
+}
+
+.pharma-transfers{
+  .axis path{
+    display: block;
+    opacity: .2;
+  }
+  .cells path {
+    fill: gray;
+    stroke: white;
+    opacity: 0;
+    pointer-events: all;
+  }
+  .cell circle {
+    //fill: $brand-primary;
+    stroke: black;
+    stroke-width: 1px;
+    stroke-opacity: .3;
+    @include transition( stroke-opacity 0.2s ease-in-out );
+  }
+  .cell.active circle,
+  .cell:hover circle {
+    stroke-width: 1.5px;
+    stroke-opacity: 1;
+  }
+  .cell.desactive circle {
+    opacity: .3;
+  }
+}
+
+.iceberg-graph{
+  .bar-up,
+  #bar-label-y-up{
+    fill: mix( $color-green-light, white, 80% ); //#85cb67;
+  }
+  .bar-down,
+  #bar-label-y-down{
+    fill: $color-green-dark; //#a50026;
+  }
+  .bar-label-x{
+    text-anchor: middle;
+  }
+  .bar-label-y{
+    text-anchor: start;
+    text-transform: uppercase;
+  }
+  .middle-line{
+    fill: $color-green-dark;
+    stroke: none;
+  }
+}

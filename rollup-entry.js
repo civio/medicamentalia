@@ -25,6 +25,13 @@ export {
   easeSinInOut,
 } from "d3-ease";
 
+export {
+  forceCollide,
+  forceSimulation,
+  forceX,
+  forceY
+} from "d3-force";
+
 export * from "d3-format";
 
 export {
@@ -49,6 +56,7 @@ export {
   scalePoint,
   scaleLinear,
   scaleOrdinal,
+  scaleQuantize,
   scalePow,
   scaleSequential,
   interpolateMagma
@@ -56,7 +64,8 @@ export {
 
 export {
   schemeOranges,
-  interpolateOranges
+  interpolateOranges,
+  interpolateRdYlGn
 } from "d3-scale-chromatic";
 
 export {
@@ -99,6 +108,8 @@ export {
 export {
   drag
 } from "d3-drag";
+
+export * from "d3-voronoi";
 
 //Modules for Vaccine Map
 
