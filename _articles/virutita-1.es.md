@@ -5,7 +5,7 @@ description:      143 millones de euros, entre entradas a congresos, viajes y ho
 home_description: 143 millones de euros, entre entradas a congresos, viajes y honorarios, se publican sin especificar qué medico los recibe
 img:              articles/home-superbugs.jpg
 order:            2
-author:           Eva Belmonte, Miguel Ángel Gavilanes y María Álvarez del Vayo.
+author:           Eva Belmonte, Miguel Ángel Gavilanes y María Álvarez del Vayo
 slug:             virutita-1
 ref:              virutita-1
 lang:             es
