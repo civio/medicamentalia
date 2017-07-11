@@ -5,7 +5,7 @@ class window.BeeswarmGraph extends window.BaseGraph
   # -----------
 
   constructor: (id, options) ->
-    console.log 'BeeswarmGraph', id
+    # console.log 'BeeswarmGraph', id
     options.dotSize = options.dotSize || 5
     options.dotMinSize = options.dotMinSize || 2
     options.dotMaxSize = options.dotMaxSize || 15
@@ -19,8 +19,6 @@ class window.BeeswarmGraph extends window.BaseGraph
   drawGraph: ->
 
     @setSize()
-
-    #console.table @data
 
     # set & run simulation
     @setSimulation()
@@ -115,8 +113,10 @@ class window.BeeswarmGraph extends window.BaseGraph
       .range @getScaleXRange()
     # set size scale if options.key.size is defined
     if @options.key.size
+      # Equivalent to d3.scaleSqrt()
+      # https://bl.ocks.org/d3indepth/775cf431e64b6718481c06fc45dc34f9
       @size = d3.scalePow()
-        .exponent(0.5)
+        .exponent 0.5
         .range @getSizeRange()
     # set color scale if options.key.color is defined
     if @options.key.color

@@ -23,7 +23,18 @@ Todas estas cantidades se engloban en lo que la industria denomina "transferenci
 
 <div class="graph-container">
   <p class="graph-container-caption">Nivel de opacidad por categoría</p>
-  <div id="pharma-categories-amounts" class="iceberg-graph"></div>
+  <div id="pharma-categories-amounts" class="iceberg-graph">
+    <div class="tooltip top" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">
+        <p class="title"></p>
+        <div class="description">
+          <p class="declared-cont"><span class="declared"></span> millones de euros <strong>declarados</strong></p>
+          <p class="hidden-cont"><span class="hidden"></span> millones de euros <strong>ocultos</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 Los médicos pueden cobrar **honorarios** por prestar servicios de asesoramiento o consultoría a las farmacéuticas, ya sea participando en ponencias o en reuniones como conferenciantes o moderadores o en reuniones de expertos, por ejemplo. De los 64 millones que pagaron a profesionales sanitarios por sus servicios **solo conocemos el destino del 18%**. El resto, más de 52 millones, se publica en agregado, escondido tras una cifra total. Es decir: la gran mayoría de los médicos que han cobrado honorarios de los laboratorios prefieren ocultarlo. 

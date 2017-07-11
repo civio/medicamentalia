@@ -2021,17 +2021,21 @@ body.guatemala-graph {
 }
 
 // Pharma transfers
-.page-content .pharma-transfers-container .graph-container-title{
-  font-weight: 400;
-  text-align: left;
-  margin: 0;
-  max-width: 100%;
-  position: relative;
-  top: 15px;
-}
+.page-content .pharma-transfers-container {
+   margin-bottom: 45px; 
 
-.page-content .pharma-transfers-container .subsidiaries-cont{
-  font-size: .875em;
+  .graph-container-title{
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+    max-width: 100%;
+    position: relative;
+    top: 15px;
+  }
+
+  .subsidiaries-cont{
+    font-size: .875em;
+  }
 }
 
 .pharma-transfers-container{
@@ -2136,11 +2140,12 @@ body.guatemala-graph {
     .value{
       font-size: 1.125em;
     }
-    
   }
 }
 
 .pharma-transfers{
+  min-height: 140px;
+
   .axis path{
     display: block;
     opacity: .2;
@@ -2170,10 +2175,12 @@ body.guatemala-graph {
 
 .iceberg-graph{
   .bar-up,
+  .bar-up:hover,
   #bar-label-y-up{
     fill: mix( $color-green-light, white, 80% ); //#85cb67;
   }
   .bar-down,
+  .bar-down:hover,
   #bar-label-y-down{
     fill: $color-green-dark; //#a50026;
   }
@@ -2187,12 +2194,45 @@ body.guatemala-graph {
   .middle-line{
     fill: $color-green-dark;
     stroke: none;
+    pointer-events: none;
+  }
+}
+
+#pharma-categories-amounts{
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .tooltip .tooltip-inner{
+    font-weight: 400;
+    .title{
+      text-transform: uppercase;
+    }
+    p{
+      margin: 10px auto 5px;
+    }
+    .title,
+    .declared, 
+    .hidden{
+      font-size: 1.125em;
+      font-weight: 600;
+    }
+    .hidden{
+      display: inline !important;
+    }
+    .declared-cont{
+      color: mix( $color-green-light, white, 80% );
+    }
+    .hidden-cont{
+      color: $color-green-dark;
+    }
   }
 }
 
 #pharma-doctors-average{
   .bar-title{
     margin-top: 10px;
+    margin-bottom: 5px;
     text-align: left;
   }
   .bar{

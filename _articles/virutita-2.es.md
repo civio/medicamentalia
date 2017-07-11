@@ -51,7 +51,7 @@ Aunque en general la preferencia por permanecer en el anonimato es mayoritaria, 
   <p>Porcentaje de médicos que ocultan su relación con cada laboratorio</p>
   <ul class="legend"></ul>
   
-  <p class="graph-container-title">Cuotas</p>
+  <p class="graph-container-title">Cuotas de inscripción</p>
   <div id="pharma-transfers-charges" class="pharma-transfers beeswarm-graph"></div>
 
   <p class="graph-container-title">Viajes</p>
@@ -60,7 +60,7 @@ Aunque en general la preferencia por permanecer en el anonimato es mayoritaria, 
   <p class="graph-container-title">Honorarios</p>
   <div id="pharma-transfers-fees" class="pharma-transfers beeswarm-graph"></div>
 
-  <p class="graph-container-title">Gastos relacionados con los servicios</p>
+  <p class="graph-container-title">Gastos relacionados</p>
   <div id="pharma-transfers-relateds" class="pharma-transfers beeswarm-graph"></div>
 
   <div class="row pharma-transfers-footer">

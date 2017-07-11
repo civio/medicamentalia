@@ -29,7 +29,6 @@
   # Setup doctors average
   if $('#pharma-doctors-average').length > 0
     d3.csv baseurl+'/data/pharma-doctors-average.csv', (error, data) ->
-      console.table data
       # setup graph
       graph = new window.BarHorizontalPharmaGraph('pharma-doctors-average', data)
       

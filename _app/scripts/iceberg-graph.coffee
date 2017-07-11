@@ -5,13 +5,17 @@ class window.IcebergGraph extends window.BarGraph
   # -----------
 
   constructor: (id, options) ->
-    console.log 'Iceberg Graph', id, options
+    #console.log 'Iceberg Graph', id, options
     super id, options
     return @
 
 
   # Main methods
   # ------------
+
+  setSVG: ->
+    super()
+    @$tooltip = @$el.find '.tooltip'
 
   dataParser: (data) ->
     data.forEach (d) => 
@@ -24,12 +28,10 @@ class window.IcebergGraph extends window.BarGraph
     return [0, @height]
 
   getScaleYDomain: =>
-    console.log [0, d3.max(@data, (d) => d.total)]
     return [0, d3.max(@data, (d) => d.total)]
 
   drawGraph: ->
-    console.table @data
-
+    # Get max up value
     @upMax = d3.max @data, (d) => d[@options.key.up]
 
     # add containers up & down
@@ -54,10 +56,11 @@ class window.IcebergGraph extends window.BarGraph
       #.attr 'id',    (d) => d[@options.key.id]
       .call @setBarDownDimensions
 
-    # if @options.mouseEvents
-    #   @container.selectAll('.bar')
-    #     .on   'mouseover', @onMouseOver
-    #     .on   'mouseout', @onMouseOut
+    if @$tooltip
+      @container.selectAll('.bar')
+        .on 'mouseover', @onMouseOver
+        .on 'mousemove', @onMouseMove
+        .on 'mouseout',  @onMouseOut
 
     if @options.label
       # draw labels x
@@ -131,15 +134,28 @@ class window.IcebergGraph extends window.BarGraph
       .attr 'width',  @width+@options.margin.left+@options.margin.right
 
   onMouseOver: (d) =>
-    @container.select('#bar-label-x-'+d[@options.key.id])
-      .classed 'active', true
-    @container.select('#bar-label-y-'+d[@options.key.id])
-      .classed 'active', true
+    # Set tooltip content
+    @setTooltipData d
+    # Set tooltip position
+    @onMouseMove(d)
+    @$tooltip.css 'opacity', 1
+
+  onMouseMove: (d) =>
+    position = d3.mouse(d3.event.target)
+    @$tooltip.css
+      left:    @$el.offset().left + position[0] + @options.margin.left - @$tooltip.width()*0.5
+      top:     @$el.offset().top + position[1] - @$tooltip.height()
 
   onMouseOut: (d) =>
-    unless d.active
-      @container.select('#bar-label-x-'+d[@options.key.id])
-        .classed 'active', false
-      @container.select('#bar-label-y-'+d[@options.key.id])
-        .classed 'active', false
-    
+    @$tooltip.css 'opacity', 0
+
+  setTooltipData: (d) =>
+    @$tooltip
+      .find '.tooltip-inner .title'
+      .html d.category
+    @$tooltip
+      .find '.tooltip-inner .declared'
+      .html (d.declared*.000001).toFixed(1)
+    @$tooltip
+      .find '.tooltip-inner .hidden'
+      .html (d.hidden*.000001).toFixed(1)

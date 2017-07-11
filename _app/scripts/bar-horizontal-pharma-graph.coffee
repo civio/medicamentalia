@@ -4,7 +4,7 @@ class window.BarHorizontalPharmaGraph
   # -----------
 
   constructor: (id, data) ->
-    console.log 'Bar Horizontal Pharma Graph', id
+    #console.log 'Bar Horizontal Pharma Graph', id
     @id       = id
     @setData data
     @drawGraph()
@@ -19,7 +19,6 @@ class window.BarHorizontalPharmaGraph
     maxDeclared = d3.max @data, (d) -> d.declared
     maxHidden   = d3.max @data, (d) -> d.hidden
     @maxValue   = d3.max [maxDeclared, maxHidden]
-    console.log @maxValue
     return @
 
   dataParser: (data) ->
