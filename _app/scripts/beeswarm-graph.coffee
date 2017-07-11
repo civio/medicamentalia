@@ -1,14 +1,14 @@
 class window.BeeswarmGraph extends window.BaseGraph
 
-
   # Constructor
   # -----------
 
   constructor: (id, options) ->
-    # console.log 'BeeswarmGraph', id
+    #console.log 'BeeswarmGraph', id
     options.dotSize = options.dotSize || 5
     options.dotMinSize = options.dotMinSize || 2
     options.dotMaxSize = options.dotMaxSize || 15
+    @annotations = []
     super id, options
     return @
 
@@ -34,6 +34,8 @@ class window.BeeswarmGraph extends window.BaseGraph
 
     @drawCells()
 
+    if @annotations.length > 0
+      @setAnnotations()
 
   drawCells: ->
     @container.select('.cells')
@@ -95,6 +97,8 @@ class window.BeeswarmGraph extends window.BaseGraph
     @voronoi.extent @getVoronoiExtent()
     @container.selectAll('.cell').remove()
     @drawCells()
+    if @annotations.length > 0
+      @setAnnotations()
     return @
 
   drawLegend: ->
@@ -103,6 +107,15 @@ class window.BeeswarmGraph extends window.BaseGraph
       .enter().append('li')
         .style 'background', (d) => @color d
         .html (d) -> d+'%'
+
+  addAnnotation: (annotation) ->
+    @annotations.push annotation
+
+  setAnnotations: ->
+    @annotations.forEach (d) =>
+      d.cx = d.cx_ratio * @width
+    ringNote = d3.ringNote()
+    @container.call ringNote, @annotations
 
   # Scale methods
   # ------------

@@ -35,6 +35,9 @@ El origen de la publicación de los vínculos económicos entre farmacéuticas y
 
 Para Fernando Carballo, presidente de la Federación de Asociaciones Científico Médicas Españolas (FACME), la publicación de esta información, "en un país que no ha alcanzado los niveles de transparencia global, puede ser un elemento folclórico". Además, añade, la polémica por **cómo cotizan estas cantidades** "ha contaminado el proceso".
 
+> Las organizaciones médicas han logrado que, que la próxima legislación sobre IRPF, los gastos para eventos no tributen
+{: .no-quotes}
+
 Si estas relaciones se hacen públicas, están accesibles para todos, **incluido Hacienda**. Las transferencias relacionadas con eventos (cuotas de inscripción, desplazamiento y alojamiento) se entendían hasta el momento como formación del personal sanitario y, por tanto, estaban **exentas de IRPF**. En abril de 2017, el Tribunal Económico de la Administración Central (TEA) [argumentaba](http://serviciostelematicos.minhap.gob.es/DYCteac/criterio.aspx?id=00/03645/2013/00/0/1&q=s%3d1%26rn%3d%26ra%3d%26fd%3d%26fh%3d%26u%3d01%26n%3d%26p%3d%26c1%3d%26c2%3d%26c3%3d%26tc%3d1%26tr%3d%26tp%3dprofesionales+sanitarios%26tf%3d%26c%3d0%26pg%3d) que estas cuantías **tenían que ser tributadas** y tratadas como pagos en especie. Un mes después, la Agencia Tributaria [respaldaba](https://www.documentcloud.org/documents/3892128-Consulta-Aeat.html) la decisión.
 
 Esta posición **no ha durado mucho**. Las organizaciones médicas [han llegado a un acuerdo](http://www.minhafp.gob.es/Documentacion/Publico/GabineteMinistro/Notas%20Prensa/2017/MINISTRO/29-05-17%20NP%20REUNI%C3%93N%20MONTORO%20OMC.pdf) con el Ministerio de Hacienda para que la próxima legislación sobre IRPF **no incluya los gastos para eventos** como parte sujeta a tributación. Carballo lo defiende: "Para el profesional, malo era que tuviera que ir a un congreso en fin de semana, malo era que no se lo pague el hospital, malo que tenga que dejar que se lo pague la industria. Pero que encima tenga que pagar él...".
@@ -44,12 +47,13 @@ Lo importante, para el presidente de las asociaciones científicas, es ir más a
 ### Las diferencias entre laboratorios
 
 Aunque en general la preferencia por permanecer en el anonimato es mayoritaria, también es cierto que **el grado de transparencia no es igual** en todas las compañías. Ya sea porque han hecho un esfuerzo diferente a la hora de comunicar y convencer a los médicos de que aparecieran sus nombres o porque algunas han tenido mejor suerte que otras, el caso es que hay farmacéuticas que publican **casi la totalidad** de los nombres de quienes reciben sus "transferencias de valor" y que otras no han publicado **ni uno solo**, como es el caso de Boiron, que pagó cuotas de inscripción a congresos a 772 profesionales sanitarios y no consiguió -si lo intentó- publicar ni uno de esos nombres. [Metodología]
+
 </div>
 
 <div class="graph-container pharma-transfers-container">
-  <p class="graph-container-caption">Nivel de opacidad por laboratorio</p>
+  <p class="graph-container-caption">Nivel de opacidad por farmaceútica</p>
 
-  <p>Porcentaje de médicos que ocultan su relación con cada laboratorio</p>
+  <p class="legend-title">Porcentaje de médicos que ocultan su relación con cada laboratorio</p>
   <ul class="legend"></ul>
   
   <p class="graph-container-title">Cuotas de inscripción</p>
@@ -98,7 +102,10 @@ Aunque en general la preferencia por permanecer en el anonimato es mayoritaria, 
 <div class="page-content-container" markdown="1">
 La mayoría de las compañías está **por encima del 80% de opacidad**. Es decir, solo publican los nombres de entre el 10 y el 20% de los médicos con los que tienen relaciones económicas en cada uno de los cuatro apartados. Pfizer, por ejemplo, publica menos del 10% en las cuatro categorías.
 
-Pasando por laboratorios más equilibrados, como Novartis, que ha publicado algo más de la mitad de los nombres, llegamos al pequeño grupo de empresas con unos porcentajes de publicación individual muy elevados. Es el caso de Glaxo Smithkline, que** solo oculta el 3% de los nombres** de los médicos a los que paga honorarios. 
+> Glaxo Smithkline ha publicado el 97% de los nombres de los médicos a los que paga honorarios; Pfizer, por contra, publica menos del 10%.
+{: .no-quotes}
+
+Pasando por laboratorios más equilibrados, como Novartis, que ha publicado algo más de la mitad de los nombres, llegamos al pequeño grupo de empresas con unos porcentajes de publicación individual muy elevados. Es el caso de Glaxo Smithkline, que **solo oculta el 3% de los nombres** de los médicos a los que paga honorarios. 
 
 Otra de las grandes firmas, Janssen, por su parte, ha conseguido publicar más del 80% de las transferencias de forma individualizada.
 

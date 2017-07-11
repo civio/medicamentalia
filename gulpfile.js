@@ -80,20 +80,20 @@ var js_paths = {
     '_app/scripts/main-vaccines-prices.coffee',
     '_app/scripts/main-vaccines.coffee'
   ],
-  // other.js sources
-  superbugs: [
-    '_app/scripts/base-graph.coffee',
-    '_app/scripts/bar-graph.coffee',
-    '_app/scripts/main-superbugs.coffee'
-  ],
-  // other.js sources
-  pharma_payments: [
+  // farma.js sources
+  farma: [
     '_app/scripts/base-graph.coffee',
     '_app/scripts/bar-graph.coffee',
     '_app/scripts/bar-horizontal-pharma-graph.coffee',
     '_app/scripts/iceberg-graph.coffee',
     '_app/scripts/beeswarm-graph.coffee',
-    '_app/scripts/main-pharma-payments.coffee'
+    '_app/scripts/main-farma.coffee'
+  ],
+  // superbugs.js sources
+  superbugs: [
+    '_app/scripts/base-graph.coffee',
+    '_app/scripts/bar-graph.coffee',
+    '_app/scripts/main-superbugs.coffee'
   ]
 };
 
@@ -212,16 +212,16 @@ gulp.task('js-superbugs', function() {
     .on('error', gutil.log);
 });
 
-gulp.task('js-pharma-payments', function() {
+gulp.task('js-farma', function() {
   var c = coffee();
   c.on('error',function(e){
     gutil.log(e);
     c.end();
   });
-  return gulp.src(js_paths.pharma_payments)
+  return gulp.src(js_paths.farma)
     .pipe(sourcemaps.init())
     .pipe(c)
-    .pipe(concat('pharma-payments.js'))
+    .pipe(concat('farma.js'))
     .pipe(sourcemaps.write())
     .pipe(production(uglify(uglifyOptions)))
     .pipe(gulp.dest('_site/assets/scripts'))
@@ -231,7 +231,7 @@ gulp.task('js-pharma-payments', function() {
 });
 
 // Create a js task wich call all js task dynamically defined
-gulp.task('js', ['popcorn', 'js-main', 'js-access', 'js-vaccines', 'js-superbugs', 'js-pharma-payments']);
+gulp.task('js', ['popcorn', 'js-main', 'js-access', 'js-vaccines', 'js-farma', 'js-superbugs']);
 
 // Jekyll build
 gulp.task('jekyll-build', function(done) {

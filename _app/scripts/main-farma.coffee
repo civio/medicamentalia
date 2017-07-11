@@ -37,6 +37,22 @@
   if $('.pharma-transfers').length > 0
     d3.csv baseurl+'/data/pharma-transfers.csv', (error, data) ->
       categories = ['charges', 'travels', 'fees', 'relateds']
+      # set annotations
+      annotations =
+        travels:
+          cx_ratio: 0.88
+          cy: 70
+          r: 80
+          textWidth: 220
+          textOffset: [-85, -80]
+          text: 'Las principales firmas se encuentran en la zona de mayor opacidad'
+        fees:
+          cx_ratio: 0.032
+          cy: 70
+          r: 22
+          textWidth: 200
+          textOffset: [60, 55]
+          text: 'GSK es el laboratorio que más nombres de médicos publica'
       # get maximum number of doctors per pharma
       totals = []
       categories.forEach (category) ->
@@ -72,6 +88,8 @@
           legend: i == 0)
         graph.$tooltip = $('#pharma-transfers-tooltip')
         graph.getSizeDomain = -> return [0, totalsMax]
+        if annotations[category]
+          graph.addAnnotation annotations[category]
         graph.setData data_category
         $(window).resize graph.onResize
       # filter pharma

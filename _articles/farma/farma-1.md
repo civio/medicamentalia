@@ -40,6 +40,9 @@ Todas estas cantidades se engloban en lo que la industria denomina "transferenci
 
 Los médicos pueden cobrar **honorarios** por prestar servicios de asesoramiento o consultoría a las farmacéuticas, ya sea participando en ponencias o en reuniones como conferenciantes o moderadores o en reuniones de expertos, por ejemplo. De los 64 millones que pagaron a profesionales sanitarios por sus servicios **solo conocemos el destino del 18%**. El resto, más de 52 millones, se publica en agregado, escondido tras una cifra total. Es decir: la gran mayoría de los médicos que han cobrado honorarios de los laboratorios prefieren ocultarlo. 
 
+> De 71 millones en viajes, se desconoce qué médicos han disfrutado billetes y noches de hotel por valor de 55.
+{: .no-quotes}
+
 Otras dos grandes categorías son las **cuotas de inscripción** y **viajes para acudir a congresos**. En este caso, el médico no recibe este dinero, sino que hace uso de los billetes y noches de hotel que adquiera la compañía farmacéutica, que es quien lo gestiona. Ambas categorías suman 112 millones de euros y en ambas el porcentaje de opacidad ronda el **77-78%**. 
 
 De las cuatro, la partida **más cuantiosa** es la destinada a viajes: 71 millones. Más de 55 millones de esta categoría se han repartido sin transparencia: no sabemos qué médicos han viajado a costa de las compañías. Para Fernando Carballo, presidente de Federación de Asociaciones Científico Médicas Españolas (FACME), si esos viajes a congresos los pagara el propio médico, su institución o las sociedades médicas "los gastos serían más modestos". "Y las cantidades, no habiendo sido gestionadas por el profesional, pueden parecer desproporcionadas", añade. 
@@ -61,7 +64,10 @@ La Agencia Española de Protección de Datos respondió a una consulta de Farmai
 
 Así, en junio de 2018 (con datos de 2017) los laboratorios publicarán todos los nombres. Se podrá ver, **pero no tocar**. La AEPD prohíbe de forma expresa su tratamiento posterior. Así, proyectos como [Dollars for docs](https://projects.propublica.org/docdollars/) o [Euros for docs](https://correctiv.org/en/investigations/euros-doctors/), que permiten conocer cuánto ha recibido cada médico en total y por laboratorio en Estados Unidos y en Alemania, respectivamente, están vetados en España.
 
-Tanto el presidente de las asociaciones médicas como el director de supervisión deontológica de Farmaindustria ponen reparos a ese tipo de cruce de datos. Ambos hablan de la necesidad de evitar "usos inadecuados" pero se refieren a situaciones distintas. "Esa información la tenemos que utilizar en su justo término, a efectos de transparencia pero **no a efectos de folclore**", insiste el presidente de Facme. Aunque no especifica de forma clara cuál es el "término justo", propone, por ejemplo, obligar a quien quiera acceder a esa información a registrarse y explicar para qué la quiere, unas barreras opuestas al acceso abierto que marcan normas como la Ley de Transparencia. 
+Tanto el presidente de las asociaciones médicas como el director de supervisión deontológica de Farmaindustria ponen reparos a ese tipo de cruce de datos. Ambos hablan de la necesidad de evitar "usos inadecuados" pero se refieren a situaciones distintas. "Esa información la tenemos que utilizar en su justo término, a efectos de transparencia pero **no a efectos de folclore**", insiste el presidente de Facme. Aunque no especifica de forma clara cuál es el "término justo", propone, por ejemplo, obligar a quien quiera acceder a esa información a registrarse y explicar para qué la quiere, unas barreras opuestas al acceso abierto que marcan normas como la Ley de Transparencia.
+
+> Para Farmaindustria, el propio médico debe decidir sobre la oferta de los laboratorios: si considera que le perjudica, que no la acepte.
+{: .no-quotes}
 
 A Zamarriego, en cambio, le preocupa el uso "inadecuado" de esa información por problemas de competencia -empresas creando bases de datos de médicos para vender a farmacéuticas, por ejemplo- y opina que el dato individual por médico **no aporta nada a la transparencia**. En paralelo, aunque suene contradictorio, asegura que si un profesional sanitario recibe transferencias de muchos laboratorios debería verse como un signo de prestigio, de valor profesional, y no tratarle como un "vendido" a la industria.
 
