@@ -1,4 +1,8 @@
+{% if page.img %}
 <header class="page-{{ page.ref }}" style="background-image: url('{{ site.assetsurl }}/images/{{ page.img }}')">
+{% else %}
+<header class="page-{{ page.ref }}">
+{% endif %}
   <div class="header-overlay"></div>
   <div class="header-content">
     <div class="header-content-inner">

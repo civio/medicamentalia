@@ -11,10 +11,6 @@ header {
   background-position: center center;
   @include background-size( cover );
 
-  &.page-farma-1{
-    background-position: center top;
-  }
-
   .header-overlay{
     display: block;
     position: absolute;
@@ -86,6 +82,10 @@ header {
 }
 .access header .header-overlay{
   background: darken( $overlay-orange, 10% );
+}
+.farma header .header-overlay{
+  background: $overlay-farma;
+  opacity: 1;
 }
 
 
@@ -756,7 +756,7 @@ header {
     color: white;
   }
 
-  strong, a{
+  strong, h3, a{
     font-weight: 400;
   }
 }

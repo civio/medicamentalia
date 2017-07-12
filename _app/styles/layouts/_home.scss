@@ -404,6 +404,8 @@ $btn-scroll-down-icon-size: 44px;
 
         &.no-uppercase{
           text-transform: none;
+          letter-spacing: .03em;
+          margin-bottom: 30px;
         }
       }
 
@@ -471,9 +473,8 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
 
-  &.category-,
-  &.category-farma{
-  
+  &.category-{
+
     .portfolio-box-overlay{
       background: $overlay-yellow;
     }
@@ -484,6 +485,23 @@ $btn-scroll-down-icon-size: 44px;
       }
       .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
         color: darken($overlay-yellow, 15%);
+      }
+    }
+  }
+
+  &.category-farma{
+  
+    .portfolio-box-overlay,
+    .portfolio-box-background{
+      background: $overlay-farma;
+    }
+
+    &:hover {
+      .portfolio-box-overlay{
+        background: darken($overlay-farma, 10%);
+      }
+      .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
+        color: darken($overlay-farma, 10%);
       }
     }
   }
