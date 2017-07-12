@@ -108,8 +108,6 @@ La mayoría de las compañías está **por encima del 80% de opacidad**. Es deci
 Pasando por laboratorios más equilibrados, como Novartis, que ha publicado algo más de la mitad de los nombres, llegamos al pequeño grupo de empresas con unos porcentajes de publicación individual muy elevados. Es el caso de GlaxoSmithkline (GSK), que solo oculta el 3% de los nombres de los médicos a los que paga honorarios. Según la compañía, sus normas establecen que los profesionales sanitarios acepten su divulgación para poder trabajar con ellos. "Si no hay autorización, no hay contrato". De hecho, la baja tasa de opacidad de GSK responde a aquellos médicos que revocaron su autorización.
 Otra de las grandes firmas, Janssen, por su parte, ha conseguido publicar más del 80% de las transferencias de forma individualizada.
 
-Otra de las grandes firmas, Janssen, por su parte, ha conseguido publicar más del 80% de las transferencias de forma individualizada.
-
 ### Sin reglas públicas
 
 El código que regula esta publicación es un ejercicio de **autorregulación de la industria** y no una norma emanada desde las administraciones públicas. Es un modelo "impuesto unilateralmente", según Carballo, "parcial y de parte". José Zamarriego es director de la Unidad de Supervisión de Conducta de Farmaindustria. Coincide con el presidente de las asociaciones cientificas en la **falta de cultura de la transparencia** en España pero afirma que, si se aprueba un reglamento que lo regule, tiene que ir más allá de lo que ellos han creado y no dar pasos atrás.
