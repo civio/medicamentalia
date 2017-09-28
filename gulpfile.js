@@ -80,15 +80,6 @@ var js_paths = {
     '_app/scripts/main-vaccines-prices.coffee',
     '_app/scripts/main-vaccines.coffee'
   ],
-  // farma.js sources
-  farma: [
-    '_app/scripts/base-graph.coffee',
-    '_app/scripts/bar-graph.coffee',
-    '_app/scripts/bar-horizontal-pharma-graph.coffee',
-    '_app/scripts/iceberg-graph.coffee',
-    '_app/scripts/beeswarm-graph.coffee',
-    '_app/scripts/main-farma.coffee'
-  ],
   // superbugs.js sources
   superbugs: [
     '_app/scripts/base-graph.coffee',
@@ -231,7 +222,7 @@ gulp.task('js-farma', function() {
 });
 
 // Create a js task wich call all js task dynamically defined
-gulp.task('js', ['popcorn', 'js-main', 'js-access', 'js-vaccines', 'js-farma', 'js-superbugs']);
+gulp.task('js', ['popcorn', 'js-main', 'js-access', 'js-vaccines', 'js-superbugs']);
 
 // Jekyll build
 gulp.task('jekyll-build', function(done) {
