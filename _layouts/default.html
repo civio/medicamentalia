@@ -5,6 +5,8 @@
 
   <body class="{{ page.url | replace:'/',' ' | strip }} lang-{{ page.lang }}{% if page.layout == 'article' %} article{% endif %}" data-baseurl="{{ site.assetsurl }}" data-lang="{{ page.lang }}">
 
+    {% include civio-topbar.html %}
+
     {% include header.html %}
 
     {{ content }}
