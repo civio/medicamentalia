@@ -39,19 +39,22 @@ La misma pastilla ronda los 880 euros en Estados Unidos, los 280 si quien lo com
 <div class="scroll-text">
   <div class="step" data-step="0"></div>
   <div class="step" data-step="1">
-    <p>Lo de la <strong>Pill</strong> que tal y cual</p>
+    <p>Lo de la <strong>Pill</strong></p>
   </div>
   <div class="step" data-step="2">
-    <p>Lo del <strong>Condom</strong> y toa la pesca</p>
+    <p>Lo del <strong>Condom</strong></p>
   </div>
   <div class="step" data-step="3">
-    <p>Que si la <strong>Female sterilization</strong> ya tal</p>
+    <p>Lo del <strong>Injectable</strong></p>
   </div>
   <div class="step" data-step="4">
-    <p>No veas tu lo del <strong>IUD</strong></p>
+    <p>Lo de la <strong>Female sterilization</strong></p>
   </div>
   <div class="step" data-step="5">
-    <p>Y con los <strong>Traditional method</strong> qué pasa?</p>
+    <p>Lo del <strong>IUD</strong></p>
+  </div>
+  <div class="step" data-step="6">
+    <p>Los <strong>Traditional method</strong></p>
   </div>
 </div>
 </div>

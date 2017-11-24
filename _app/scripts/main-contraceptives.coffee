@@ -159,6 +159,10 @@
             top: 60
             bottom: 0
           legend: false)
+        # override color domain
+        graph.setColorDomain = ->
+          graph.color.domain [0, 80]
+          return graph
         ###
         # override color scale
         graph.color = d3.scaleOrdinal d3.schemeCategory20
@@ -190,10 +194,12 @@
     else if state == 2
       data.forEach (d) -> d.value = +d['Male condom']
     else if state == 3
-      data.forEach (d) -> d.value = +d['Female sterilization']
+      data.forEach (d) -> d.value = +d['Injectable']
     else if state == 4
-      data.forEach (d) -> d.value = +d['IUD']
+      data.forEach (d) -> d.value = +d['Female sterilization']
     else if state == 5
+      data.forEach (d) -> d.value = +d['IUD']
+    else if state == 6
       data.forEach (d) -> d.value = +d['Any traditional method']
     if state > 0
       graph.updateGraph data
