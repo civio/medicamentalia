@@ -1,5 +1,6 @@
 export {
   ascending,
+  descending,
   extent,
   max,
   min,
@@ -59,7 +60,8 @@ export {
   scaleQuantize,
   scalePow,
   scaleSequential,
-  interpolateMagma
+  interpolateMagma,
+  schemeCategory20
 } from "d3-scale";
 
 export {

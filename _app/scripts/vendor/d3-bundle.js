@@ -43,6 +43,10 @@
   var ascendingBisect = bisector(ascending);
   var bisectRight = ascendingBisect.right;
 
+  function descending(a, b) {
+    return b < a ? -1 : b > a ? 1 : b >= a ? 0 : NaN;
+  }
+
   function extent(array, f) {
     var i = -1,
         n = array.length,
@@ -5290,7 +5294,7 @@
 
   colors("3182bd6baed69ecae1c6dbefe6550dfd8d3cfdae6bfdd0a231a35474c476a1d99bc7e9c0756bb19e9ac8bcbddcdadaeb636363969696bdbdbdd9d9d9");
 
-  colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b0d58c564bc49c94e377c2f7b6d27f7f7fc7c7c7bcbd22dbdb8d17becf9edae5");
+  var category20 = colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b0d58c564bc49c94e377c2f7b6d27f7f7fc7c7c7bcbd22dbdb8d17becf9edae5");
 
   interpolateCubehelixLong(cubehelix(300, 0.5, 0.0), cubehelix(-240, 0.5, 1.0));
 
@@ -10958,6 +10962,7 @@
   }
 
   exports.ascending = ascending;
+  exports.descending = descending;
   exports.extent = extent;
   exports.max = max;
   exports.min = min;
@@ -10995,6 +11000,7 @@
   exports.scalePow = pow;
   exports.scaleSequential = sequential;
   exports.interpolateMagma = magma;
+  exports.schemeCategory20 = category20;
   exports.schemeOranges = scheme$26;
   exports.interpolateOranges = Oranges;
   exports.interpolateRdYlGn = RdYlGn;

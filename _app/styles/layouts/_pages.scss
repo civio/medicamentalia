@@ -777,3 +777,52 @@ header {
     font-weight: 600;
   }
 }
+
+// Scroll items
+.scroll-container {
+  position: relative;
+}
+
+.scroll-graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  width: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 60;
+
+  &.is-fixed {
+    position: fixed;
+  }
+
+  &.is-bottom {
+    bottom: 0;
+    top: auto;
+  }
+
+  .graph-container {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+
+.scroll-text {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+  pointer-events: none;
+  z-index: 99;
+
+  .step p{
+    background: white;
+    background: rgba(255,255,255,.85);
+  }
+}

@@ -35,10 +35,14 @@ class window.MapGraph extends window.BaseGraph
 
   setData: (data, map) ->
     @data = @dataParser(data)
-    @color.domain [0, d3.max(@data, (d) -> d.value)]
+    @setColorDomain()
     if @options.legend
       @drawLegend()
     @drawGraph map
+    return @
+
+  setColorDomain: ->
+    @color.domain [0, d3.max(@data, (d) -> d.value)]
     return @
 
   drawLegend: ->
@@ -94,6 +98,14 @@ class window.MapGraph extends window.BaseGraph
     # trigger draw-complete event
     @$el.trigger 'draw-complete'
     return @
+
+  updateGraph: (data) ->
+    @data = @dataParser(data)
+    @setColorDomain()
+    @container.selectAll('.country')
+      .transition()
+        .attr 'fill', @setCountryColor
+        .attr 'stroke', @setCountryColor
 
   updateGraphDimensions: ->
     super()
