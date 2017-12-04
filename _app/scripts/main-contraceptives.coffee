@@ -7,8 +7,9 @@
   baseurl = $('body').data('baseurl')
   data    = null
   graph   = null
+  currentState = 0
 
-  console.log 'contraceptives', lang, baseurl
+  #console.log 'contraceptives', lang, baseurl
 
   # setup format numbers
   if lang == 'es'
@@ -43,8 +44,6 @@
   # ---------------
 
   setupScrollama = ->
-    console.log 'setupScrollama!'
-
     container = d3.select('#contraceptives-use-container')
     graphic   = container.select('.scroll-graphic')
     chart     = graphic.select('.graph-container')
@@ -153,12 +152,29 @@
           else
             console.log 'no country', d.code
         # set graph
-        graph = new window.MapGraph('map-contraceptives-use',
+        graph = new window.MapGraph 'map-contraceptives-use',
           aspectRatio: 0.5625
           margin:
-            top: 60
+            top: 0
             bottom: 0
-          legend: false)
+          legend: false
+        # override getDimensions
+        graph.getDimensions = ->
+          if graph.$el
+            bodyHeight = $('body').height()
+            graph.containerWidth  = graph.$el.width()
+            graph.containerHeight = graph.containerWidth * graph.options.aspectRatio
+            # avoid graph height overflow browser height 
+            if graph.containerHeight > bodyHeight
+              graph.containerHeight = bodyHeight
+              graph.containerWidth = graph.containerHeight / graph.options.aspectRatio
+              graph.$el.css 'top', 0
+            # vertical center graph
+            else
+              graph.$el.css 'top', (bodyHeight-graph.containerHeight) / 2
+            graph.width  = graph.containerWidth - graph.options.margin.left - graph.options.margin.right
+            graph.height = graph.containerHeight - graph.options.margin.top - graph.options.margin.bottom
+          return graph
         # override color domain
         graph.setColorDomain = ->
           graph.color.domain [0, 80]
@@ -175,7 +191,6 @@
           return if value[0] then graph.color(value[0].values[0].id) else '#eee'
         #graph.formatFloat = graph.formatInteger
         #graph.getLegendData = -> [0,2,4,6,8]
-        ###
         graph.setTooltipData = (d) ->
           graph.$tooltip
             .find '.tooltip-inner .title'
@@ -184,24 +199,27 @@
             .find '.description'
             #.html d.values[0].name+' ('+d.values[0].value+'%)'
             .html d.value+'%'
+        ###
         graph.setData data, map
+        graph.onResize()
         $(window).resize graph.onResize
 
   setMapState = (state) ->
-    console.log 'set state '+state
-    if state == 1
-      data.forEach (d) -> d.value = +d['Pill']
-    else if state == 2
-      data.forEach (d) -> d.value = +d['Male condom']
-    else if state == 3
-      data.forEach (d) -> d.value = +d['Injectable']
-    else if state == 4
-      data.forEach (d) -> d.value = +d['Female sterilization']
-    else if state == 5
-      data.forEach (d) -> d.value = +d['IUD']
-    else if state == 6
-      data.forEach (d) -> d.value = +d['Any traditional method']
-    if state > 0
+    if state != currentState
+      #console.log 'set state '+state
+      currentState = state
+      if state == 1
+        data.forEach (d) -> d.value = +d['Female sterilization']
+      else if state == 2
+        data.forEach (d) -> d.value = +d['IUD']
+      else if state == 3
+        data.forEach (d) -> d.value = +d['Pill']
+      else if state == 4
+        data.forEach (d) -> d.value = +d['Male condom']
+      else if state == 5
+        data.forEach (d) -> d.value = +d['Injectable']
+      else if state == 6
+        data.forEach (d) -> d.value = +d['Any traditional method']
       graph.updateGraph data
 
 

@@ -39,22 +39,22 @@ La misma pastilla ronda los 880 euros en Estados Unidos, los 280 si quien lo com
 <div class="scroll-text">
   <div class="step" data-step="0"></div>
   <div class="step" data-step="1">
-    <p>Lo de la <strong>Pill</strong></p>
+    <p>La <strong>esterilización femenina</strong> es el método más popular del mundo y destaca en países como X, X y X. La masculina, en cambio, solo es el método prioritario en X, X y X.</p>
   </div>
   <div class="step" data-step="2">
-    <p>Lo del <strong>Condom</strong></p>
+    <p>El <strong>DIU</strong> es el segundo, tal y pascual.</p>
   </div>
   <div class="step" data-step="3">
-    <p>Lo del <strong>Injectable</strong></p>
+    <p><strong>Píldora</strong> tercero, blablabla. Países más desarrollados.</p>
   </div>
   <div class="step" data-step="4">
-    <p>Lo de la <strong>Female sterilization</strong></p>
+    <p><strong>Condón</strong> en blablabla, y mira España, que en medio de todos es su favorito.</p>
   </div>
   <div class="step" data-step="5">
-    <p>Lo del <strong>IUD</strong></p>
+    <p>Los <strong>inyectables</strong> son muy populares sobre todo en África, blabla</p>
   </div>
   <div class="step" data-step="6">
-    <p>Los <strong>Traditional method</strong></p>
+    <p>Los <strong>métodos tradicionales</strong> -explicar cuáles son- destacan en países del arco mediterráneo y blablabla.</p>
   </div>
 </div>
 </div>
