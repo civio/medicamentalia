@@ -69,3 +69,8 @@ La misma pastilla ronda los 880 euros en Estados Unidos, los 280 si quien lo com
 Los informes realizados siguiendo la [metodología HAI](http://www.who.int/medicines/areas/access/OMS_Medicine_prices.pdf), fruto cada uno de ellos de meses de riguroso trabajo, incluyen el desglose del coste total (qué parte es para el fabricante, para pagar impuestos o tasas, para costear el transporte y la distribución...), su disponibilidad en las farmacias (porque a veces el problema de acceso no es solo el precio) y el precio de medicamentos de marca y genéricos. De esta valiosa información hemos extraído datos de 56 países que nos permiten realizar comparaciones entre diferentes estudios, aún habiendo sido realizados en distintos años. Hemos tenido en cuenta **dos valores relativos**: la relación del coste con un precio de referencia internacional y, aún más importante, las horas de trabajo necesarias por los ciudadanos de cada país para comprar el tratamiento completo. Todos los cálculos están basados en **el genérico más barato**.
 </div>
 </div>
+
+<div id="unmet-needs-gdp-container-graph" class="graph-container">
+  <div id="unmet-needs-gdp-graph" class="scatterplot-graph">
+  </div>
+</div>

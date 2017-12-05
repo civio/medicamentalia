@@ -91,6 +91,8 @@ var js_paths = {
   contraceptives: [
     '_app/scripts/base-graph.coffee',
     '_app/scripts/map-graph.coffee',
+    '_app/scripts/contraceptives-use-map-graph.coffee',
+    '_app/scripts/scatterplot-graph.coffee',
     '_app/scripts/main-contraceptives.coffee'
   ]
 };
