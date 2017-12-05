@@ -47,6 +47,9 @@ class window.ScatterplotUnmetNeedsGraph extends window.ScatterplotGraph
   getScaleXDomain: =>
     return [600, 35000]
 
+  #getDotLabelText: (d) =>
+  #  return if d.population > 10000000 then d[@options.key.id] else ''
+
   #getDotFill: (d) =>
   #  return if d[@options.key.color] == '1' then '#00797d' else if d[@options.key.color] == '0' then '#D64B05' else '#aaa'       
 

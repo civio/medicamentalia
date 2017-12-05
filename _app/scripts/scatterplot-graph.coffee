@@ -153,6 +153,11 @@ class window.ScatterplotGraph extends window.BaseGraph
   setXAxisPosition: (selection) =>
     selection.attr 'transform', 'translate(0,0)'
 
+  onResize: =>
+    if @$el and @containerWidth != @$el.width()
+      super()
+    return @
+
   # mouse events
   onMouseOver: (d) =>
     element = d3.select(d3.event.target)
