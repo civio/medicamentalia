@@ -168,12 +168,24 @@
   setupUnmetNeedsGdpGraph = ->
     d3.csv baseurl+'/data/unmet-needs-gdp-'+lang+'.csv', (error, data) ->
       console.log data
-      graph2 = new window.ScatterplotGraph 'map-contraceptives-use',
+      # clear items without unmet-needs values
+      data = data.filter (d) -> d.gdp and d['unmet-needs'] 
+      unmetNeedsGdpGraph = new window.ScatterplotUnmetNeedsGraph 'unmet-needs-gdp-graph',
         aspectRatio: 0.5625
         margin:
-          top: 0
+          left:   0
+          rigth:  0
+          top:    0
           bottom: 0
-        legend: false
+        key:
+          x: 'gdp'
+          y: 'unmet-needs'
+          id: 'name'
+          size: 'population'
+          color: 'region'
+      # set data
+      unmetNeedsGdpGraph.setData data
+      $(window).resize unmetNeedsGdpGraph.onResize
 
   # Setup
   # ---------------
@@ -183,7 +195,7 @@
 
   setupScrollama()
 
-  #if $('#unmet-needs-gdp-graph').length > 0
-  #  setupUnmetNeedsGdpGraph()
+  if $('#unmet-needs-gdp-graph').length > 0
+    setupUnmetNeedsGdpGraph()
 
 ) jQuery

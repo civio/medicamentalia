@@ -93,6 +93,7 @@ var js_paths = {
     '_app/scripts/map-graph.coffee',
     '_app/scripts/contraceptives-use-map-graph.coffee',
     '_app/scripts/scatterplot-graph.coffee',
+    '_app/scripts/scatterplot-unmet-needs-graph.coffee',
     '_app/scripts/main-contraceptives.coffee'
   ]
 };
