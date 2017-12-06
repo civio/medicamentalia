@@ -107,10 +107,11 @@ class window.ScatterplotGraph extends window.BaseGraph
     return @
 
   updateGraphDimensions: ->
-    super()
     # update axis size
     @xAxis.tickSize @height
     @yAxis.tickSize @width
+    # call Basegraph.updateGraphDimensions
+    super()
     # update dots positions
     @container.selectAll('.dot')
       .call @setDotsDimensions
