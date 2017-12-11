@@ -70,7 +70,8 @@
     # scrollama event handlers
     handleStepEnter = (e) ->
       # update map based on step 
-      useMap.setMapState e.index
+      if useMap
+        useMap.setMapState e.index
 
     handleContainerEnter = (e) ->
       # sticky the graphic
@@ -106,62 +107,6 @@
     window.addEventListener 'resize', handleResize
 
 
-  # Contraceptives Map Setup
-  # ------------------------
-
-  setupConstraceptivesUseMap = ->
-    d3.queue()
-      .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
-      .defer d3.csv,  baseurl+'/data/countries.csv'
-      .defer d3.json, baseurl+'/data/map-world-110.json'
-      .await (error, _data, countries, map) ->
-        #console.table data
-        #console.table countries
-        # add cases to each country
-        data = _data
-        data.forEach (d) ->
-          item = countries.filter (country) -> country.code == d.code
-          ###
-          d['Rhythm']                    = +d['Rhythm']
-          d['Withdrawal']                = +d['Withdrawal']
-          d['Other traditional methods'] = +d['Other traditional methods']
-          d['Traditional methods'] = d['Rhythm']+d['Withdrawal']+d['Other traditional methods']
-          console.log d.code, d['Rhythm'], d['Withdrawal'], d['Other traditional methods'], d['Traditional methods']
-          delete d['Rhythm']
-          delete d['Withdrawal']
-          delete d['Other traditional methods']
-          ###
-          d.values = [] # +d['Any method']
-          #d.value = +d['Male sterilization']
-          d.value = 0
-          # get main method in each country
-          keys.forEach (key,i) ->
-            d.values.push
-              id: i
-              name: key
-              value: if d[key] != '' then +d[key] else null
-            #delete d[key]
-          # sort descending values
-          d.values.sort (a,b) -> d3.descending(a.value, b.value)
-          #console.log d.values
-          #d.value = d.values[0].value
-          if item and item[0]
-            d.name = item[0]['name_'+lang]
-            d.code_num = item[0]['code_num']
-          else
-            console.log 'no country', d.code
-        # set graph
-        useMap = new window.ContraceptivesUseMapGraph 'map-contraceptives-use',
-          aspectRatio: 0.5625
-          margin:
-            top: 0
-            bottom: 0
-          legend: false
-        useMap.setData data, map
-        useMap.onResize()
-        $(window).resize useMap.onResize
-
-
   # Unmeet Needs vs GDP graph
   # --------------------------
 
@@ -187,13 +132,159 @@
       unmetNeedsGdpGraph.setData data
       $(window).resize unmetNeedsGdpGraph.onResize
 
+
+  # Use & Reasons maps
+  # -------------------
+
+  setupConstraceptivesMaps = ->
+
+    parseDataUse = (d, countries) ->
+      item = countries.filter (country) -> country.code == d.code
+      ###
+      d['Rhythm']                    = +d['Rhythm']
+      d['Withdrawal']                = +d['Withdrawal']
+      d['Other traditional methods'] = +d['Other traditional methods']
+      d['Traditional methods'] = d['Rhythm']+d['Withdrawal']+d['Other traditional methods']
+      console.log d.code, d['Rhythm'], d['Withdrawal'], d['Other traditional methods'], d['Traditional methods']
+      delete d['Rhythm']
+      delete d['Withdrawal']
+      delete d['Other traditional methods']
+      ###
+      d.values = [] # +d['Any method']
+      d.value = 0  # +d['Male sterilization']
+      # get main method in each country
+      keys.forEach (key,i) ->
+        d.values.push
+          id: i
+          name: key
+          value: if d[key] != '' then +d[key] else null
+        #delete d[key]
+      # sort descending values
+      d.values.sort (a,b) -> d3.descending(a.value, b.value)
+      #console.log d.values
+      #d.value = d.values[0].value
+      if item and item[0]
+        d.name = item[0]['name_'+lang]
+        d.code_num = item[0]['code_num']
+      else
+        console.log 'no country', d.code
+
+    parseDataReasons = (d, countries) ->
+      delete d['survey-year']
+      delete d['Reason 6: Wants more children']
+      d.code_num = d.code
+      # prepend zeros to codes less than 100
+      if d.code_num.length < 3
+        d.code_num = ('00'+d.code_num).slice(-3)
+      # populate values array with reasons
+      d.values = []
+
+      entries = d3.entries(d).filter (entry) -> entry.key.indexOf('Reason') != -1
+      entries.forEach (entry) ->
+        delete d[entry.key]
+        entry.key = entry.key.replace(/Reason \d+: /g, '')
+        entry.value = +entry.value
+        d.values.push entry
+      # sort descending values
+      d.values.sort (a,b) -> d3.descending(a.value, b.value)
+      #d.value = d.values[0].value
+      d.value = d.values[0].key
+      # setup country name & iso-3 code
+      item = countries.filter (country) -> country.code_num == d.code_num
+      if item and item[0]
+        d.name = item[0]['name_'+lang]
+        d.code = item[0]['code']
+      else
+        console.log 'no country', d.code
+
+    setupMaps = (error, data_use, data_reasons, countries, map) ->
+      # parse data use
+      data_use.forEach (d) -> parseDataUse(d, countries)
+
+      # parse data reasons
+      data_reasons.forEach (d) -> parseDataReasons(d, countries)
+
+      # Get data reasons keys
+      reasons = d3.nest()
+        .key (d) -> d.value
+        .entries data_reasons
+        .sort (a,b) -> d3.descending(a.values.length, b.values.length)
+
+      console.log reasons
+
+      reasons = reasons.map (d) -> d.key
+       
+      # Set use map
+      useMap = new window.ContraceptivesUseMapGraph 'map-contraceptives-use',
+        aspectRatio: 0.5625
+        margin:
+          top: 0
+          bottom: 0
+        legend: false
+      useMap.setData data_use, map
+      useMap.onResize()
+
+      # Setup reasons map legend
+      legend = d3.select('#map-contraceptives-reasons').append('ul')
+        .attr 'id', 'map-contraceptives-reasons-legend'
+        .selectAll('li')
+        .data reasons
+        .enter().append('li')
+          .style 'list-style', 'none'
+          .style 'display', 'inline-block'
+          .style 'font-size', '1.25rem'
+          .style 'margin', '0 .5rem'
+
+      legend.append('span')
+        .attr 'class', 'legend-item'
+
+      legend.append('span').html (d) -> d
+
+      # Set reasons map
+      reasonsMap = new window.MapGraph 'map-contraceptives-reasons',
+        aspectRatio: 0.5625
+        margin:
+          top: 0
+          bottom: 0
+        legend: false
+      reasonsMap.color = d3.scaleOrdinal d3.schemeCategory20
+      reasonsMap.setColorDomain = ->
+        reasonsMap.color.domain reasons
+      console.log data_reasons
+      reasonsMap.setData data_reasons, map
+      reasonsMap.onResize()
+
+      # Set legend color
+      legend.selectAll('.legend-item')
+        .style 'display', 'inline-block'
+        .style 'width', '10px'
+        .style 'height', '10px'
+        .style 'margin-right', '5px'
+        .style 'background', (d) -> reasonsMap.color d
+
+      # setup resize
+      $(window).resize ->
+        useMap.onResize()
+        reasonsMap.onResize()
+  
+
+    # Setup Scrollama
+    setupScrollama()
+
+    # Load csvs & setup maps
+    d3.queue()
+      .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
+      .defer d3.csv,  baseurl+'/data/contraceptives-barriers-reasons.csv'
+      .defer d3.csv,  baseurl+'/data/countries.csv'
+      .defer d3.json, baseurl+'/data/map-world-110.json'
+      .await setupMaps
+
+
   # Setup
   # ---------------
 
-  if $('#map-contraceptives-use').length > 0
-    setupConstraceptivesUseMap()
-
-  setupScrollama()
+  if $('#map-contraceptives-use').length > 0 or $('#map-contraceptives-reasons').length > 0
+    setupConstraceptivesMaps()
 
   if $('#unmet-needs-gdp-graph').length > 0
     setupUnmetNeedsGdpGraph()

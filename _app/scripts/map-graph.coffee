@@ -43,6 +43,7 @@ class window.MapGraph extends window.BaseGraph
 
   setColorDomain: ->
     @color.domain [0, d3.max(@data, (d) -> d.value)]
+    console.log @color.domain()
     return @
 
   drawLegend: ->
