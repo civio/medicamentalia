@@ -66,7 +66,7 @@ Common
 
   .bar {
     fill: mix( $gray-light, $gray-lighter, 40);
-    @include transition(.3s ease--out fill);
+    @include transition(.3s ease-out fill);
 
     &:hover,
     &.active {
@@ -2306,4 +2306,31 @@ body.guatemala-graph {
 #map-contraceptives-use{
   margin: 0;
   text-align: center;
+}
+
+#contraceptives-use-graph{
+  ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  li{
+    display: inline-block;
+    list-style: none;
+    margin: 5px 0;
+    outline: 1px solid white;
+    background: url(../images/woman-icon.png) no-repeat center center $gray-light;;
+    background-size: 100% 100%;
+    @include transition(.3s ease-out background-color);
+
+    &.fill-1{
+      background-color: $color-blue;
+    }
+    &.fill-2{
+      background-color: $color-yellow;
+    }
+    &.fill-3{
+      background-color: $color-orange;
+    }
+  }
 }

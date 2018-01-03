@@ -3,6 +3,9 @@
 (($) ->
 
   useMap = null
+  useGraph = null
+
+  scrollamaInitialized = false
 
   # Get current article lang & base url
   lang    = $('body').data('lang')
@@ -42,8 +45,8 @@
   # Scrollama Setup
   # ---------------
 
-  setupScrollama = ->
-    container = d3.select('#contraceptives-use-container')
+  setupScrollama = (id) ->
+    container = d3.select('#'+id)
     graphic   = container.select('.scroll-graphic')
     chart     = graphic.select('.graph-container')
     text      = container.select('.scroll-text')
@@ -67,12 +70,6 @@
       # 4. tell scrollama to update new element dimensions
       scroller.resize()
 
-    # scrollama event handlers
-    handleStepEnter = (e) ->
-      # update map based on step 
-      if useMap
-        useMap.setMapState e.index
-
     handleContainerEnter = (e) ->
       # sticky the graphic
       graphic
@@ -85,6 +82,26 @@
         .classed 'is-fixed', false
         .classed 'is-bottom', e.direction == 'down'
 
+    handleStepEnter = (e) ->
+      console.log e
+      $step = $(e.element)
+      instance = $step.data('instance')
+      step = $step.data('step')
+      if instance == 0 
+        if useMap
+          console.log 'scrollama 1', step
+          useMap.setMapState step # update map based on step 
+      else if instance == 1
+        if useGraph and step > 0
+          data = [64, 88, 100]
+          from = if step > 1 then data[step-2] else 0
+          to = data[step-1]
+          console.log $step.data('step'), 'from', from, 'to', to
+          useGraph.selectAll('li')
+            .filter (d) -> d >= from and d < to
+            .classed 'fill-'+step, e.direction == 'down'
+          console.log 'scrollama 2', $step.data('step')
+
     # start it up
     # 1. call a resize on load to update width/height/position of elements
     handleResize()
@@ -93,18 +110,50 @@
     # 3. bind scrollama event handlers (this can be chained like below)
     scroller
       .setup
-        container:  '#contraceptives-use-container' # our outermost scrollytelling element
-        graphic:    '.scroll-graphic'               # the graphic
-        text:       '.scroll-text'                  # the step container
-        step:       '.scroll-text .step'            # the step elements
-        offset:     0.8                             # set the trigger to be 1/2 way down screen
-        #debug:      true                            # display the trigger offset for testing
-      .onStepEnter      handleStepEnter 
+        container:  '#'+id                # our outermost scrollytelling element
+        graphic:    '.scroll-graphic'     # the graphic
+        text:       '.scroll-text'        # the step container
+        step:       '.scroll-text .step'  # the step elements
+        offset:     0.8                   # set the trigger to be 1/2 way down screen
+        #debug:      true                 # display the trigger offset for testing
       .onContainerEnter handleContainerEnter 
       .onContainerExit  handleContainerExit 
 
+    # Ensure to setup onStepEnter handler only once
+    unless scrollamaInitialized
+      scrollamaInitialized = true
+      scroller.onStepEnter  handleStepEnter 
+      
     # setup resize event
     window.addEventListener 'resize', handleResize
+
+
+  # Contraceptives Use Graph 
+  # -------------------------
+
+  setupConstraceptivesUseGraph = ->
+    # Setup Scrollama
+    setupScrollama 'contraceptives-use-graph-container'
+    # Setup Graph
+    graphWidth = 0
+    useGraph = d3.select('#contraceptives-use-graph')
+    dataIndex = [0..99]
+    useGraph.append('ul')
+      .selectAll('li')
+        .data(dataIndex)
+      .enter().append('li')
+    # Resize handler
+    resizeHandler = ->
+      if graphWidth != useGraph.node().offsetWidth
+        graphWidth = useGraph.node().offsetWidth
+        itemsWidth = if graphWidth < 480 then '10%' else '5%'
+        itemsHeight = if graphWidth < 480 then graphWidth * 0.1 / 0.75 else graphWidth * 0.05 / 0.75
+        useGraph.selectAll('li')
+          .style 'width', itemsWidth
+          .style 'height', itemsHeight+'px'
+      useGraph.style 'margin-top', (($('body').height()-useGraph.node().offsetHeight)*.5)+'px'
+    window.addEventListener 'resize', resizeHandler
+    resizeHandler()
 
 
   # Unmeet Needs vs GDP graph
@@ -269,7 +318,7 @@
   
 
     # Setup Scrollama
-    setupScrollama()
+    setupScrollama 'contraceptives-use-container'
 
     # Load csvs & setup maps
     d3.queue()
@@ -285,6 +334,9 @@
 
   if $('#map-contraceptives-use').length > 0 or $('#map-contraceptives-reasons').length > 0
     setupConstraceptivesMaps()
+
+  if $('#contraceptives-use-graph').length > 0
+    setupConstraceptivesUseGraph()
 
   if $('#unmet-needs-gdp-graph').length > 0
     setupUnmetNeedsGdpGraph()

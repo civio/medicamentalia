@@ -37,23 +37,23 @@ La misma pastilla ronda los 880 euros en Estados Unidos, los 280 si quien lo com
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-step="0"></div>
-  <div class="step" data-step="1">
+  <div class="step" data-instance="0" data-step="0"></div>
+  <div class="step" data-instance="0" data-step="1">
     <p>La <strong>esterilización femenina</strong> es el método más popular del mundo y destaca en países como X, X y X. La masculina, en cambio, solo es el método prioritario en X, X y X.</p>
   </div>
-  <div class="step" data-step="2">
+  <div class="step" data-instance="0" data-step="2">
     <p>El <strong>DIU</strong> es el segundo, tal y pascual.</p>
   </div>
-  <div class="step" data-step="3">
+  <div class="step" data-instance="0" data-step="3">
     <p><strong>Píldora</strong> tercero, blablabla. Países más desarrollados.</p>
   </div>
-  <div class="step" data-step="4">
+  <div class="step" data-instance="0" data-step="4">
     <p><strong>Condón</strong> en blablabla, y mira España, que en medio de todos es su favorito.</p>
   </div>
-  <div class="step" data-step="5">
+  <div class="step" data-instance="0" data-step="5">
     <p>Los <strong>inyectables</strong> son muy populares sobre todo en África, blabla</p>
   </div>
-  <div class="step" data-step="6">
+  <div class="step" data-instance="0" data-step="6">
     <p>Los <strong>métodos tradicionales</strong> -explicar cuáles son- destacan en países del arco mediterráneo y blablabla.</p>
   </div>
 </div>
@@ -62,6 +62,37 @@ La misma pastilla ronda los 880 euros en Estados Unidos, los 280 si quien lo com
 <!--
 
 -->
+
+<div class="container page-content">
+<div class="page-content-container" markdown="1">
+
+Los informes realizados siguiendo la [metodología HAI](http://www.who.int/medicines/areas/access/OMS_Medicine_prices.pdf), fruto cada uno de ellos de meses de riguroso trabajo, incluyen el desglose del coste total (qué parte es para el fabricante, para pagar impuestos o tasas, para costear el transporte y la distribución...), su disponibilidad en las farmacias (porque a veces el problema de acceso no es solo el precio) y el precio de medicamentos de marca y genéricos. De esta valiosa información hemos extraído datos de 56 países que nos permiten realizar comparaciones entre diferentes estudios, aún habiendo sido realizados en distintos años. Hemos tenido en cuenta **dos valores relativos**: la relación del coste con un precio de referencia internacional y, aún más importante, las horas de trabajo necesarias por los ciudadanos de cada país para comprar el tratamiento completo. Todos los cálculos están basados en **el genérico más barato**.
+</div>
+</div>
+
+<div id="contraceptives-use-graph-container" class="scroll-container">
+<!--  graphic container  -->
+<div class="scroll-graphic">
+  <div class="graph-container">
+    <div class="container page-content">
+      <div id="contraceptives-use-graph"></div>
+    </div>
+  </div>
+</div>
+<!--  step/text container  -->
+<div class="scroll-text">
+  <div class="step" data-instance="1" data-step="0"></div>
+  <div class="step" data-instance="1" data-step="1">
+    <p>Todo esto es sobre mujeres que USAN algún método anticonceptivo. De las mujeres casadas o sexualmente activas de 15 a 49 años, <strong>el 63,6% usa algún tipo de método.</strong></p>
+  </div>
+  <div class="step" data-instance="1" data-step="2">
+    <p>Otro <strong>24,5% quiere seguir teniendo niños</strong> y, por lo tanto, decide no usar ningún método. </p>
+  </div>
+  <div class="step" data-instance="1" data-step="3">
+    <p>Pero el <strong>11,9%</strong> restante son aquellas mujeres que <strong>quieren retrasar o frenar su maternidad pero no usan ningún método anticonceptivo</strong>. Son las mujeres con sus necesidades NO CUBIERTAS. Y ahí está el problema. </p>
+  </div>
+</div>
+</div>
 
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
