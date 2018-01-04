@@ -59,9 +59,6 @@ La misma pastilla ronda los 880 euros en Estados Unidos, los 280 si quien lo com
 </div>
 </div>
 
-<!--
-
--->
 
 <div class="container page-content">
 <div class="page-content-container" markdown="1">

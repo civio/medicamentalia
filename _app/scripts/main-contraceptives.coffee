@@ -329,6 +329,13 @@
       .await setupMaps
 
 
+  # Contraceptives App
+  # -------------------
+
+  setupContraceptivesApp = ->
+    setupScrollama 'contraceptives-app-container'
+
+
   # Setup
   # ---------------
 
@@ -340,5 +347,8 @@
 
   if $('#unmet-needs-gdp-graph').length > 0
     setupUnmetNeedsGdpGraph()
+
+  if $('#contraceptives-app').length > 0
+    setupContraceptivesApp()
 
 ) jQuery

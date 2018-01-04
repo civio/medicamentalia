@@ -2334,3 +2334,19 @@ body.guatemala-graph {
     }
   }
 }
+
+#contraceptives-app-container{
+  .scroll-text{
+    max-width: 560px;
+
+    .step p{
+      background: none;
+    }
+
+    .step > div{
+      background: white;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 15px;
+    }
+  }
+}
