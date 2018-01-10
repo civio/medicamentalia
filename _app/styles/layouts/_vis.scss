@@ -2317,20 +2317,21 @@ body.guatemala-graph {
   li{
     display: inline-block;
     list-style: none;
-    margin: 5px 0;
-    outline: 1px solid white;
-    background: url(../images/woman-icon.png) no-repeat center center $gray-light;;
-    background-size: 100% 100%;
-    @include transition(.3s ease-out background-color);
+    margin: 5px 5px;
 
-    &.fill-1{
-      background-color: $color-blue;
+    svg{
+      fill: $gray-light;
+      @include transition(.3s ease-out fill);   
     }
-    &.fill-2{
-      background-color: $color-yellow;
+
+    &.fill-1 svg{
+      fill: $color-blue;
     }
-    &.fill-3{
-      background-color: $color-orange;
+    &.fill-2 svg{
+      fill: $color-yellow;
+    }
+    &.fill-3 svg{
+      fill: $color-orange;
     }
   }
 }

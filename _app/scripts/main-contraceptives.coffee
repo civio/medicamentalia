@@ -93,7 +93,7 @@
           useMap.setMapState step # update map based on step 
       else if instance == 1
         if useGraph and step > 0
-          data = [64, 88, 100]
+          data = [63, 88, 100] # 63, 63+25, 63+25+12
           from = if step > 1 then data[step-2] else 0
           to = data[step-1]
           console.log $step.data('step'), 'from', from, 'to', to
@@ -142,15 +142,24 @@
       .selectAll('li')
         .data(dataIndex)
       .enter().append('li')
+        .append('svg')
+          .append('use')
+            .attr('xlink:href', '#icon-woman')
+            .attr('viewBox', '0 0 193 450')
     # Resize handler
     resizeHandler = ->
       if graphWidth != useGraph.node().offsetWidth
         graphWidth = useGraph.node().offsetWidth
-        itemsWidth = if graphWidth < 480 then '10%' else '5%'
-        itemsHeight = if graphWidth < 480 then graphWidth * 0.1 / 0.75 else graphWidth * 0.05 / 0.75
+        itemsWidth = (graphWidth / 20) - 10
+        itemsHeight = 2.33*itemsWidth
+        #itemsWidth = if graphWidth < 480 then '10%' else '5%'
+        #itemsHeight = if graphWidth < 480 then graphWidth * 0.1 / 0.75 else graphWidth * 0.05 / 0.75
         useGraph.selectAll('li')
-          .style 'width', itemsWidth
+          .style 'width', itemsWidth+'px'
           .style 'height', itemsHeight+'px'
+        useGraph.selectAll('svg')
+          .attr 'width', itemsWidth
+          .attr 'height', itemsHeight
       useGraph.style 'margin-top', (($('body').height()-useGraph.node().offsetHeight)*.5)+'px'
     window.addEventListener 'resize', resizeHandler
     resizeHandler()
