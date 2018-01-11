@@ -60,6 +60,7 @@ export {
   scaleQuantize,
   scalePow,
   scaleSequential,
+  scaleThreshold,
   interpolateMagma,
   schemeCategory20
 } from "d3-scale";

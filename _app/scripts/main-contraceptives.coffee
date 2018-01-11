@@ -169,26 +169,44 @@
   # --------------------------
 
   setupUnmetNeedsGdpGraph = ->
-    d3.csv baseurl+'/data/unmet-needs-gdp-'+lang+'.csv', (error, data) ->
-      console.log data
-      # clear items without unmet-needs values
-      data = data.filter (d) -> d.gdp and d['unmet-needs'] 
-      unmetNeedsGdpGraph = new window.ScatterplotUnmetNeedsGraph 'unmet-needs-gdp-graph',
-        aspectRatio: 0.5625
-        margin:
-          left:   0
-          rigth:  0
-          top:    0
-          bottom: 0
-        key:
-          x: 'gdp'
-          y: 'unmet-needs'
-          id: 'name'
-          size: 'population'
-          color: 'region'
-      # set data
-      unmetNeedsGdpGraph.setData data
-      $(window).resize unmetNeedsGdpGraph.onResize
+    d3.queue()
+      .defer d3.csv,  baseurl+'/data/countries-gni-'+lang+'.csv'
+      .defer d3.csv,  baseurl+'/data/countries-population-'+lang+'.csv'
+      .defer d3.csv,  baseurl+'/data/unmet-needs.csv'
+      .await (error, gni, population, unmet) ->
+        # parse data
+        data = []
+        unmet.forEach (d) ->
+          country_gni = gni.filter (e) -> e.code == d.code
+          country_pop = population.filter (e) -> e.code == d.code
+          if country_gni[0] and country_gni[0]['2016']
+              data.push
+                value: d['2016']
+                name: country_gni[0].name
+                region: country_gni[0].region
+                population: country_pop[0]['2015']
+                gni: country_gni[0]['2016']
+              console.log country_pop[0]['2015']
+          else
+            console.log 'No GNI or Population data for this country', d.code, country_gni[0]
+        # clear items without unmet-needs values
+        #data = data.filter (d) -> d.gdp and d['unmet-needs'] 
+        unmetNeedsGdpGraph = new window.ScatterplotUnmetNeedsGraph 'unmet-needs-gdp-graph',
+          aspectRatio: 0.5625
+          margin:
+            left:   0
+            rigth:  0
+            top:    0
+            bottom: 0
+          key:
+            x: 'gni'
+            y: 'value'
+            id: 'name'
+            color: 'gni' #'region'
+            size: 'population'
+        # set data
+        unmetNeedsGdpGraph.setData data
+        $(window).resize unmetNeedsGdpGraph.onResize
 
 
   # Use & Reasons maps
@@ -298,6 +316,7 @@
 
       legend.append('span').html (d) -> d
 
+      ###
       # Set reasons map
       reasonsMap = new window.MapGraph 'map-contraceptives-reasons',
         aspectRatio: 0.5625
@@ -319,6 +338,7 @@
         .style 'height', '10px'
         .style 'margin-right', '5px'
         .style 'background', (d) -> reasonsMap.color d
+      ###
 
       # setup resize
       $(window).resize ->
@@ -348,7 +368,7 @@
   # Setup
   # ---------------
 
-  if $('#map-contraceptives-use').length > 0 or $('#map-contraceptives-reasons').length > 0
+  if $('#map-contraceptives-use').length > 0
     setupConstraceptivesMaps()
 
   if $('#contraceptives-use-graph').length > 0

@@ -1,5 +1,6 @@
 class window.ScatterplotUnmetNeedsGraph extends window.ScatterplotGraph
 
+  gni_values = [1005, 3955, 12235]
 
   # Constructor
   # -----------
@@ -7,8 +8,8 @@ class window.ScatterplotUnmetNeedsGraph extends window.ScatterplotGraph
   constructor: (id, options) ->
     #console.log 'Scatterplot Graph', id, options
     options.dotSize = 7
-    options.dotMinSize = 2
-    options.dotMaxSize = 18
+    options.dotMinSize = 1
+    options.dotMaxSize = 12
     #@lang = lang
     super id, options
     return @
@@ -20,15 +21,17 @@ class window.ScatterplotUnmetNeedsGraph extends window.ScatterplotGraph
   setScales: ->
     # set x scale
     @x = d3.scalePow()
-      .exponent(0.25)
+      .exponent(.125)
       .range @getScaleXRange()
     # set y scale
     @y = d3.scaleLinear()
       .range @getScaleYRange()
     # set color scale if options.key.color is defined
     if @options.key.color
-      @color = d3.scaleOrdinal()
-        .range @getColorRange()
+      @color = d3.scaleThreshold()
+        .range d3.schemeOranges[5].reverse()
+      #@color = d3.scaleOrdinal()
+      #  .range @getColorRange()
     # set size scale if options.key.size is defined
     if @options.key.size
       @size = d3.scalePow()
@@ -37,7 +40,7 @@ class window.ScatterplotUnmetNeedsGraph extends window.ScatterplotGraph
     # setup axis
     @xAxis = d3.axisBottom(@x)
       .tickSize @height
-      .tickValues [1000, 2000, 4000, 8000, 16000, 32000]
+      .tickValues gni_values
     @yAxis = d3.axisLeft(@y)
       .tickSize @width
       .tickValues [0, 10, 20, 30, 40]
@@ -45,13 +48,19 @@ class window.ScatterplotUnmetNeedsGraph extends window.ScatterplotGraph
     return @
 
   getScaleXDomain: =>
-    return [600, 35000]
+    return [200, 85000]
 
-  #getDotLabelText: (d) =>
-  #  return if d.population > 10000000 then d[@options.key.id] else ''
+  getColorDomain: =>
+    return [1005, 3955, 12235, 100000]
+  
+  getDotLabelText: (d) =>
+    return if d.population > 10000000 then d[@options.key.id] else ''
 
-  #getDotFill: (d) =>
-  #  return if d[@options.key.color] == '1' then '#00797d' else if d[@options.key.color] == '0' then '#D64B05' else '#aaa'       
+  getDotFill: (d) =>
+    
+    #console.log value, @color value
+    # return if d[@options.key.color] == '1' then '#00797d' else if d[@options.key.color] == '0' then '#D64B05' else '#aaa'       
+    return @color d[@options.key.color]
 
   ###
   drawGraph: ->

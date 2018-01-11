@@ -2028,16 +2028,14 @@
       // Is this arc empty? We’re done.
       if (!r) return;
 
-      // Does the angle go the wrong way? Flip the direction.
-      if (da < 0) da = da % tau$1 + tau$1;
-
       // Is this a complete circle? Draw two arcs to complete the circle.
       if (da > tauEpsilon) {
         this._ += "A" + r + "," + r + ",0,1," + cw + "," + (x - dx) + "," + (y - dy) + "A" + r + "," + r + ",0,1," + cw + "," + (this._x1 = x0) + "," + (this._y1 = y0);
       }
 
-      // Is this arc non-empty? Draw an arc!
-      else if (da > epsilon) {
+      // Otherwise, draw an arc!
+      else {
+        if (da < 0) da = da % tau$1 + tau$1;
         this._ += "A" + r + "," + r + ",0," + (+(da >= pi$1)) + "," + cw + "," + (this._x1 = x + r * Math.cos(a1)) + "," + (this._y1 = y + r * Math.sin(a1));
       }
     },
@@ -3040,7 +3038,7 @@
   }
 
   function dsv(delimiter) {
-    var reFormat = new RegExp("[\"" + delimiter + "\n\r]"),
+    var reFormat = new RegExp("[\"" + delimiter + "\n]"),
         delimiterCode = delimiter.charCodeAt(0);
 
     function parse(text, f) {
@@ -4455,6 +4453,37 @@
     };
 
     return linearish(scale);
+  }
+
+  function threshold$1() {
+    var domain = [0.5],
+        range = [0, 1],
+        n = 1;
+
+    function scale(x) {
+      if (x <= x) return range[bisectRight(domain, x, 0, n)];
+    }
+
+    scale.domain = function(_) {
+      return arguments.length ? (domain = slice$3.call(_), n = Math.min(domain.length, range.length - 1), scale) : domain.slice();
+    };
+
+    scale.range = function(_) {
+      return arguments.length ? (range = slice$3.call(_), n = Math.min(domain.length, range.length - 1), scale) : range.slice();
+    };
+
+    scale.invertExtent = function(y) {
+      var i = range.indexOf(y);
+      return [domain[i - 1], domain[i]];
+    };
+
+    scale.copy = function() {
+      return threshold$1()
+          .domain(domain)
+          .range(range);
+    };
+
+    return scale;
   }
 
   var t0$1 = new Date;
@@ -7681,8 +7710,8 @@
   }
 
   var streamObjectType = {
-    Feature: function(object, stream) {
-      streamGeometry(object.geometry, stream);
+    Feature: function(feature, stream) {
+      streamGeometry(feature.geometry, stream);
     },
     FeatureCollection: function(object, stream) {
       var features = object.features, i = -1, n = features.length;
@@ -7921,10 +7950,8 @@
         }
       }
     } else {
-      ranges.push(range$1 = [lambda0$1 = lambda, lambda1 = lambda]);
+      boundsPoint(lambda, phi);
     }
-    if (phi < phi0) phi0 = phi;
-    if (phi > phi1) phi1 = phi;
     p0 = p, lambda2 = lambda;
   }
 
@@ -8079,8 +8106,9 @@
         cy = z0 * x - x0 * z,
         cz = x0 * y - y0 * x,
         m = sqrt$1(cx * cx + cy * cy + cz * cz),
-        w = asin$1(m), // line weight = angle
-        v = m && -w / m; // area weight multiplier
+        u = x0 * x + y0 * y + z0 * z,
+        v = m && -acos(u) / m, // area weight
+        w = atan2(m, u); // line weight
     X2 += v * cx;
     Y2 += v * cy;
     Z2 += v * cz;
@@ -8540,71 +8568,6 @@
     };
   }
 
-  var sum$2 = adder();
-
-  function polygonContains(polygon, point) {
-    var lambda = point[0],
-        phi = point[1],
-        normal = [sin(lambda), -cos(lambda), 0],
-        angle = 0,
-        winding = 0;
-
-    sum$2.reset();
-
-    for (var i = 0, n = polygon.length; i < n; ++i) {
-      if (!(m = (ring = polygon[i]).length)) continue;
-      var ring,
-          m,
-          point0 = ring[m - 1],
-          lambda0 = point0[0],
-          phi0 = point0[1] / 2 + quarterPi,
-          sinPhi0 = sin(phi0),
-          cosPhi0 = cos(phi0);
-
-      for (var j = 0; j < m; ++j, lambda0 = lambda1, sinPhi0 = sinPhi1, cosPhi0 = cosPhi1, point0 = point1) {
-        var point1 = ring[j],
-            lambda1 = point1[0],
-            phi1 = point1[1] / 2 + quarterPi,
-            sinPhi1 = sin(phi1),
-            cosPhi1 = cos(phi1),
-            delta = lambda1 - lambda0,
-            sign = delta >= 0 ? 1 : -1,
-            absDelta = sign * delta,
-            antimeridian = absDelta > pi$3,
-            k = sinPhi0 * sinPhi1;
-
-        sum$2.add(atan2(k * sign * sin(absDelta), cosPhi0 * cosPhi1 + k * cos(absDelta)));
-        angle += antimeridian ? delta + sign * tau$3 : delta;
-
-        // Are the longitudes either side of the point’s meridian (lambda),
-        // and are the latitudes smaller than the parallel (phi)?
-        if (antimeridian ^ lambda0 >= lambda ^ lambda1 >= lambda) {
-          var arc = cartesianCross(cartesian(point0), cartesian(point1));
-          cartesianNormalizeInPlace(arc);
-          var intersection = cartesianCross(normal, arc);
-          cartesianNormalizeInPlace(intersection);
-          var phiArc = (antimeridian ^ delta >= 0 ? -1 : 1) * asin$1(intersection[2]);
-          if (phi > phiArc || phi === phiArc && (arc[0] || arc[1])) {
-            winding += antimeridian ^ delta >= 0 ? 1 : -1;
-          }
-        }
-      }
-    }
-
-    // First, determine whether the South pole is inside or outside:
-    //
-    // It is inside if:
-    // * the polygon winds around it in a clockwise direction.
-    // * the polygon does not (cumulatively) wind around it, but has a negative
-    //   (counter-clockwise) area.
-    //
-    // Second, count the (signed) number of times a segment crosses a lambda
-    // from the point to the South pole.  If it is zero, then the point is the
-    // same side as the South pole.
-
-    return (angle < -epsilon$3 || angle < epsilon$3 && sum$2 < -epsilon$3) ^ (winding & 1);
-  }
-
   var lengthSum = adder();
   var lambda0$2;
   var sinPhi0$1;
@@ -8856,45 +8819,6 @@
     result: noop$2
   };
 
-  var lengthSum$1 = adder();
-  var lengthRing;
-  var x00$2;
-  var y00$2;
-  var x0$4;
-  var y0$4;
-  var lengthStream$1 = {
-    point: noop$2,
-    lineStart: function() {
-      lengthStream$1.point = lengthPointFirst$1;
-    },
-    lineEnd: function() {
-      if (lengthRing) lengthPoint$1(x00$2, y00$2);
-      lengthStream$1.point = noop$2;
-    },
-    polygonStart: function() {
-      lengthRing = true;
-    },
-    polygonEnd: function() {
-      lengthRing = null;
-    },
-    result: function() {
-      var length = +lengthSum$1;
-      lengthSum$1.reset();
-      return length;
-    }
-  };
-
-  function lengthPointFirst$1(x, y) {
-    lengthStream$1.point = lengthPoint$1;
-    x00$2 = x0$4 = x, y00$2 = y0$4 = y;
-  }
-
-  function lengthPoint$1(x, y) {
-    x0$4 -= x, y0$4 -= y;
-    lengthSum$1.add(sqrt$1(x0$4 * x0$4 + y0$4 * y0$4));
-    x0$4 = x, y0$4 = y;
-  }
-
   function PathString() {
     this._string = [];
   }
@@ -8968,11 +8892,6 @@
       return areaStream$1.result();
     };
 
-    path.measure = function(object) {
-      geoStream(object, projectionStream(lengthStream$1));
-      return lengthStream$1.result();
-    };
-
     path.bounds = function(object) {
       geoStream(object, projectionStream(boundsStream$1));
       return boundsStream$1.result();
@@ -9001,6 +8920,71 @@
     };
 
     return path.projection(projection).context(context);
+  }
+
+  var sum$2 = adder();
+
+  function polygonContains(polygon, point) {
+    var lambda = point[0],
+        phi = point[1],
+        normal = [sin(lambda), -cos(lambda), 0],
+        angle = 0,
+        winding = 0;
+
+    sum$2.reset();
+
+    for (var i = 0, n = polygon.length; i < n; ++i) {
+      if (!(m = (ring = polygon[i]).length)) continue;
+      var ring,
+          m,
+          point0 = ring[m - 1],
+          lambda0 = point0[0],
+          phi0 = point0[1] / 2 + quarterPi,
+          sinPhi0 = sin(phi0),
+          cosPhi0 = cos(phi0);
+
+      for (var j = 0; j < m; ++j, lambda0 = lambda1, sinPhi0 = sinPhi1, cosPhi0 = cosPhi1, point0 = point1) {
+        var point1 = ring[j],
+            lambda1 = point1[0],
+            phi1 = point1[1] / 2 + quarterPi,
+            sinPhi1 = sin(phi1),
+            cosPhi1 = cos(phi1),
+            delta = lambda1 - lambda0,
+            sign = delta >= 0 ? 1 : -1,
+            absDelta = sign * delta,
+            antimeridian = absDelta > pi$3,
+            k = sinPhi0 * sinPhi1;
+
+        sum$2.add(atan2(k * sign * sin(absDelta), cosPhi0 * cosPhi1 + k * cos(absDelta)));
+        angle += antimeridian ? delta + sign * tau$3 : delta;
+
+        // Are the longitudes either side of the point’s meridian (lambda),
+        // and are the latitudes smaller than the parallel (phi)?
+        if (antimeridian ^ lambda0 >= lambda ^ lambda1 >= lambda) {
+          var arc = cartesianCross(cartesian(point0), cartesian(point1));
+          cartesianNormalizeInPlace(arc);
+          var intersection = cartesianCross(normal, arc);
+          cartesianNormalizeInPlace(intersection);
+          var phiArc = (antimeridian ^ delta >= 0 ? -1 : 1) * asin$1(intersection[2]);
+          if (phi > phiArc || phi === phiArc && (arc[0] || arc[1])) {
+            winding += antimeridian ^ delta >= 0 ? 1 : -1;
+          }
+        }
+      }
+    }
+
+    // First, determine whether the South pole is inside or outside:
+    //
+    // It is inside if:
+    // * the polygon winds around it in a clockwise direction.
+    // * the polygon does not (cumulatively) wind around it, but has a negative
+    //   (counter-clockwise) area.
+    //
+    // Second, count the (signed) number of times a segment crosses a lambda
+    // from the point to the South pole.  If it is zero, then the point is the
+    // same side as the South pole.
+
+    return (angle < -epsilon$3 || angle < epsilon$3 && sum$2 < -epsilon$3) ^ (winding & 1);
   }
 
   function clip(pointVisible, clipLine, interpolate, start) {
@@ -11046,6 +11030,7 @@
   exports.scaleQuantize = quantize$1;
   exports.scalePow = pow;
   exports.scaleSequential = sequential;
+  exports.scaleThreshold = threshold$1;
   exports.interpolateMagma = magma;
   exports.schemeCategory20 = category20;
   exports.schemeOranges = scheme$26;
