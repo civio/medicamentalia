@@ -343,8 +343,7 @@
       # setup resize
       $(window).resize ->
         useMap.onResize()
-        reasonsMap.onResize()
-  
+        #reasonsMap.onResize()
 
     # Setup Scrollama
     setupScrollama 'contraceptives-use-container'
