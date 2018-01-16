@@ -192,6 +192,32 @@ Common
     }
   }
 
+  .treemap-graph{
+    .nodes-container{
+      position: relative;
+    }
+    .node{
+      position: absolute;
+      overflow: hidden;
+      outline: 1.5px solid white;
+    }
+    .node-label{
+      display: table;
+      width: 100%;
+      height: 96%;
+
+      p{
+        display: table-cell;
+        margin: 0;
+        font-size: 1em;
+        line-height: 1.1em;
+        color: #fff;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+  }
+
   .annotation{
     display: none;
     position: absolute;

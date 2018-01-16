@@ -22,7 +22,7 @@
       "grouping": [3]
     }
 
-  keys = [
+  methods_keys = [
     "Female sterilization"
     "Male sterilization"
     "IUD"
@@ -168,51 +168,45 @@
   # Unmeet Needs vs GDP graph
   # --------------------------
 
-  setupUnmetNeedsGdpGraph = ->
-    d3.queue()
-      .defer d3.csv,  baseurl+'/data/countries-gni-'+lang+'.csv'
-      .defer d3.csv,  baseurl+'/data/countries-population-'+lang+'.csv'
-      .defer d3.csv,  baseurl+'/data/unmet-needs.csv'
-      .await (error, gni, population, unmet) ->
-        # parse data
-        data = []
-        unmet.forEach (d) ->
-          country_gni = gni.filter (e) -> e.code == d.code
-          country_pop = population.filter (e) -> e.code == d.code
-          if country_gni[0] and country_gni[0]['2016']
-              data.push
-                value: d['2016']
-                name: country_gni[0].name
-                region: country_gni[0].region
-                population: country_pop[0]['2015']
-                gni: country_gni[0]['2016']
-              console.log country_pop[0]['2015']
-          else
-            console.log 'No GNI or Population data for this country', d.code, country_gni[0]
-        # clear items without unmet-needs values
-        #data = data.filter (d) -> d.gdp and d['unmet-needs'] 
-        unmetNeedsGdpGraph = new window.ScatterplotUnmetNeedsGraph 'unmet-needs-gdp-graph',
-          aspectRatio: 0.5625
-          margin:
-            left:   0
-            rigth:  0
-            top:    0
-            bottom: 0
-          key:
-            x: 'gni'
-            y: 'value'
-            id: 'name'
-            color: 'gni' #'region'
-            size: 'population'
-        # set data
-        unmetNeedsGdpGraph.setData data
-        $(window).resize unmetNeedsGdpGraph.onResize
+  setupUnmetNeedsGdpGraph = (data_unmetneeds, countries_gni, countries_population) ->
+    # parse data
+    data = []
+    data_unmetneeds.forEach (d) ->
+      country_gni = countries_gni.filter (e) -> e.code == d.code
+      country_pop = countries_population.filter (e) -> e.code == d.code
+      if country_gni[0] and country_gni[0]['2016']
+          data.push
+            value: d['2016']
+            name: country_gni[0].name
+            region: country_gni[0].region
+            population: country_pop[0]['2015']
+            gni: country_gni[0]['2016']
+      else
+        console.log 'No GNI or Population data for this country', d.code, country_gni[0]
+    # clear items without unmet-needs values
+    #data = data.filter (d) -> d.gdp and d['unmet-needs'] 
+    unmetNeedsGdpGraph = new window.ScatterplotUnmetNeedsGraph 'unmet-needs-gdp-graph',
+      aspectRatio: 0.5625
+      margin:
+        left:   0
+        rigth:  0
+        top:    0
+        bottom: 0
+      key:
+        x: 'gni'
+        y: 'value'
+        id: 'name'
+        color: 'gni' #'region'
+        size: 'population'
+    # set data
+    unmetNeedsGdpGraph.setData data
+    $(window).resize unmetNeedsGdpGraph.onResize
 
 
   # Use & Reasons maps
   # -------------------
 
-  setupConstraceptivesMaps = ->
+  setupConstraceptivesMaps = (data_use, data_reasons, countries, map) ->
 
     parseDataUse = (d, countries) ->
       item = countries.filter (country) -> country.code == d.code
@@ -229,7 +223,7 @@
       d.values = [] # +d['Any method']
       d.value = 0  # +d['Male sterilization']
       # get main method in each country
-      keys.forEach (key,i) ->
+      methods_keys.forEach (key,i) ->
         d.values.push
           id: i
           name: key
@@ -273,7 +267,7 @@
       else
         console.log 'no country', d.code
 
-    setupMaps = (error, data_use, data_reasons, countries, map) ->
+    setupMaps = ->
       # parse data use
       data_use.forEach (d) -> parseDataUse(d, countries)
 
@@ -349,13 +343,43 @@
     setupScrollama 'contraceptives-use-container'
 
     # Load csvs & setup maps
-    d3.queue()
-      .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
-      .defer d3.csv,  baseurl+'/data/contraceptives-barriers-reasons.csv'
-      .defer d3.csv,  baseurl+'/data/countries.csv'
-      .defer d3.json, baseurl+'/data/map-world-110.json'
-      .await setupMaps
+    setupMaps data_use, data_reasons, countries, map
 
+  
+  # Contraceptives App
+  # -------------------
+
+  setupConstraceptivesUseTreemap = (data_use, countries) ->
+
+    # TODO!!! Get current country & add select in order to change it
+    country = 'GBR'
+    data_country = data_use.filter (d) -> d.code == country
+
+    # parse data
+    data = [{id: 'r'}] # add treemap root
+    methods_keys.forEach (key) ->
+      if data_country[0][key]
+        data.push
+          id: key.toLowerCase().replace(' ', '-')
+          name: '<strong>' + key + '</strong> (' + Math.round(data_country[0][key]) + '%)'
+          value: data_country[0][key]
+          parent: 'r'
+      else
+        console.log "There's no data for " + key
+    # setup treemap
+    constraceptivesUseTreemap = new window.TreemapGraph 'treemap-contraceptives-use',
+      aspectRatio: 0.5625
+      margin:
+        left:   0
+        rigth:  0
+        top:    0
+        bottom: 0
+      key:
+        value: 'value'
+        id: 'name'
+    # set data
+    constraceptivesUseTreemap.setData data
+    $(window).resize constraceptivesUseTreemap.onResize
 
   # Contraceptives App
   # -------------------
@@ -367,16 +391,31 @@
   # Setup
   # ---------------
 
-  if $('#map-contraceptives-use').length > 0
-    setupConstraceptivesMaps()
-
   if $('#contraceptives-use-graph').length > 0
     setupConstraceptivesUseGraph()
 
-  if $('#unmet-needs-gdp-graph').length > 0
-    setupUnmetNeedsGdpGraph()
+  # Load csvs & setup maps
+  # !!! TODO -> Use a single countries file with gni & population info 
+  d3.queue()
+    .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
+    .defer d3.csv,  baseurl+'/data/unmet-needs.csv'
+    .defer d3.csv,  baseurl+'/data/contraceptives-barriers-reasons.csv'
+    .defer d3.csv,  baseurl+'/data/countries.csv'
+    .defer d3.csv,  baseurl+'/data/countries-gni-'+lang+'.csv'
+    .defer d3.csv,  baseurl+'/data/countries-population-'+lang+'.csv'
+    .defer d3.json, baseurl+'/data/map-world-110.json'
+    .await (error, data_use, data_unmetneeds, data_reasons, countries, countries_gni, countries_population, map) ->
 
-  if $('#contraceptives-app').length > 0
-    setupContraceptivesApp()
+      if $('#treemap-contraceptives-use').length > 0
+        setupConstraceptivesUseTreemap data_use, countries
+
+      if $('#map-contraceptives-use').length > 0
+        setupConstraceptivesMaps data_use, data_reasons, countries, map
+
+      if $('#unmet-needs-gdp-graph').length > 0
+        setupUnmetNeedsGdpGraph data_unmetneeds, countries_gni, countries_population
+
+      if $('#contraceptives-app').length > 0
+        setupContraceptivesApp()
 
 ) jQuery
