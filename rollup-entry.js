@@ -36,6 +36,13 @@ export {
 export * from "d3-format";
 
 export {
+  stratify,
+  treemap,
+  treemapSlice,
+  treemapSquarify
+} from "d3-hierarchy";
+
+export {
   queue
 } from "d3-queue";
 
