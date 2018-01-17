@@ -5,6 +5,8 @@
   useMap = null
   useGraph = null
 
+  userCountry = null
+
   scrollamaInitialized = false
 
   # Get current article lang & base url
@@ -36,10 +38,22 @@
     "Emergency contraception"
     "Other modern methods"
     "Any traditional method"
-    #"Rhythm"
-    #"Withdrawal"
-    #"Other traditional methods"
   ]
+
+  methods_icons = 
+    "Female sterilization": 'sterilization'
+    "Male sterilization": 'sterilization'
+    "IUD": 'diu'
+    "Implant": null
+    "Injectable": 'injectable'
+    "Pill": 'pill'
+    "Male condom": 'condom'
+    "Female condom": null
+    "Vaginal barrier methods": null
+    "Lactational amenorrhea method (LAM)": null
+    "Emergency contraception": null
+    "Other modern methods": null
+    "Any traditional method": 'traditional'
 
 
   # Scrollama Setup
@@ -349,11 +363,13 @@
   # Contraceptives App
   # -------------------
 
-  setupConstraceptivesUseTreemap = (data_use, countries) ->
+  setupConstraceptivesUseTreemap = (data_use, countries, location) ->
 
     # TODO!!! Get current country & add select in order to change it
-    country = 'GBR'
-    data_country = data_use.filter (d) -> d.code == country
+    data_country = data_use.filter (d) -> d.code == location.code
+
+    caption = $('#treemap-contraceptives-use-caption').show()
+    caption.find('.country').html location.name
 
     # parse data
     data = [{id: 'r'}] # add treemap root
@@ -363,6 +379,7 @@
           id: key.toLowerCase().replace(' ', '-')
           name: '<strong>' + key + '</strong> (' + Math.round(data_country[0][key]) + '%)'
           value: data_country[0][key]
+          icon: methods_icons[key]
           parent: 'r'
       else
         console.log "There's no data for " + key
@@ -377,6 +394,7 @@
       key:
         value: 'value'
         id: 'name'
+    console.log 'treemap', data
     # set data
     constraceptivesUseTreemap.setData data
     $(window).resize constraceptivesUseTreemap.onResize
@@ -404,10 +422,25 @@
     .defer d3.csv,  baseurl+'/data/countries-gni-'+lang+'.csv'
     .defer d3.csv,  baseurl+'/data/countries-population-'+lang+'.csv'
     .defer d3.json, baseurl+'/data/map-world-110.json'
-    .await (error, data_use, data_unmetneeds, data_reasons, countries, countries_gni, countries_population, map) ->
+    .defer d3.json, 'https://freegeoip.net/json/'
+    .await (error, data_use, data_unmetneeds, data_reasons, countries, countries_gni, countries_population, map, location) ->
+
+      if location
+        user_country = countries.filter (d) -> d.code2 == location.country_code
+        if user_country[0]
+          location.code = user_country[0].code
+          location.name = user_country[0]['name_'+lang]
+          console.log location
+
+      unless location.code
+        location.code = 'ESP'
+        location.name = if lang == 'es' then 'España' else 'Spain'
+
+      #if userCountry == null
+      #  userCountry
 
       if $('#treemap-contraceptives-use').length > 0
-        setupConstraceptivesUseTreemap data_use, countries
+        setupConstraceptivesUseTreemap data_use, countries, location
 
       if $('#map-contraceptives-use').length > 0
         setupConstraceptivesMaps data_use, data_reasons, countries, map

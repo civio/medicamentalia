@@ -57,8 +57,7 @@ class window.TreemapGraph extends window.BaseGraph
     @nodes.append('div')
       .attr 'class', 'node-label'
       .style 'visibility', 'hidden'  # Hide labels by default (setNodeLabel will show if node is bigger enought)
-      .append 'p'
-        .html (d) => d.data[@options.key.id]
+      .call @setNodeLabel
 
     # filter nodes with labels visibles (based on options.minSize)
     @nodes.filter @isNodeLabelVisible
@@ -101,10 +100,20 @@ class window.TreemapGraph extends window.BaseGraph
     selection
       .style 'padding',    (d) => if (d.x1-d.x0 > 2*@options.nodesPadding && d.y1-d.y0 > 2*@options.nodesPadding) then @options.nodesPadding+'px' else 0
       #.style 'background', (d) -> while (d.depth > 1) d = d.parent; return colorScale(getParentId(d)); })
-      .style 'background', 'olive'
       .style 'visibility', (d) -> if (d.x1-d.x0 == 0) || (d.y1-d.y0 == 0) then 'hidden' else ''
       .select '.node-label'
         .style 'visibility', 'hidden'
+
+  setNodeLabel: (selection) =>
+    label = selection.append 'p'
+    label.append 'svg'
+      .attr 'viewBox', '0 0 20 20'
+      .attr 'width', 20
+      .attr 'height', 20
+      .append 'use'
+        .attr 'xlink:href', (d) -> '#icon-'+d.data.icon
+    label.append 'span'
+      .html (d) => d.data[@options.key.id]
 
   setNodeDimension: (selection) ->
     selection

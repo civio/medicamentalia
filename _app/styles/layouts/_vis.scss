@@ -200,6 +200,7 @@ Common
       position: absolute;
       overflow: hidden;
       outline: 1.5px solid white;
+      background: $brand-primary;
     }
     .node-label{
       display: table;
@@ -214,6 +215,13 @@ Common
         color: #fff;
         text-align: center;
         vertical-align: middle;
+      }
+      
+      svg{
+        top: 4px;
+        position: relative;
+        margin-right: 5px;
+        //fill: white;
       }
     }
   }
