@@ -206,23 +206,34 @@ Common
       display: table;
       width: 100%;
       height: 96%;
+    }
+
+    .node-label-content{
+      display: table-cell;
+      margin: 0;
+      font-size: 1em;
+      line-height: 1.1em;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+      //text-indent: -25px;
 
       p{
-        display: table-cell;
-        margin: 0;
-        font-size: 1em;
-        line-height: 1.1em;
-        color: #fff;
-        text-align: center;
-        vertical-align: middle;
+        font-weight: 300;
       }
+
+      strong{
+        font-weight: 400;
+      }
+    }
       
-      svg{
-        top: 4px;
-        position: relative;
-        margin-right: 5px;
-        //fill: white;
-      }
+    svg{
+      top: 4px;
+      position: relative;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      fill: white;
+      stroke: white;
     }
   }
 

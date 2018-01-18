@@ -377,7 +377,7 @@
       if data_country[0][key]
         data.push
           id: key.toLowerCase().replace(' ', '-')
-          name: '<strong>' + key + '</strong> (' + Math.round(data_country[0][key]) + '%)'
+          name: '<strong>' + key + '</strong><br/>' + Math.round(data_country[0][key]) + '%'
           value: data_country[0][key]
           icon: methods_icons[key]
           parent: 'r'
@@ -431,13 +431,14 @@
           location.code = user_country[0].code
           location.name = user_country[0]['name_'+lang]
           console.log location
+      else
+        location = {}
 
       unless location.code
         location.code = 'ESP'
         location.name = if lang == 'es' then 'España' else 'Spain'
 
-      #if userCountry == null
-      #  userCountry
+      console.log location
 
       if $('#treemap-contraceptives-use').length > 0
         setupConstraceptivesUseTreemap data_use, countries, location

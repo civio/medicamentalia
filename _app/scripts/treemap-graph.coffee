@@ -105,14 +105,15 @@ class window.TreemapGraph extends window.BaseGraph
         .style 'visibility', 'hidden'
 
   setNodeLabel: (selection) =>
-    label = selection.append 'p'
+    label = selection.append 'div'
+      .attr 'class', 'node-label-content'
     label.append 'svg'
       .attr 'viewBox', '0 0 20 20'
       .attr 'width', 20
       .attr 'height', 20
       .append 'use'
         .attr 'xlink:href', (d) -> '#icon-'+d.data.icon
-    label.append 'span'
+    label.append 'p'
       .html (d) => d.data[@options.key.id]
 
   setNodeDimension: (selection) ->
