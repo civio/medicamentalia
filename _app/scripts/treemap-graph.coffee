@@ -66,6 +66,13 @@ class window.TreemapGraph extends window.BaseGraph
 
     return @
 
+  getDimensions: ->
+    console.log 'getDimensions', @width, @options.mobileBreakpoint
+    super()
+    if @width <= @options.mobileBreakpoint
+      @containerHeight = @containerWidth
+      @height          = @containerHeight - @options.margin.top - @options.margin.bottom
+    return @
 
   updateGraphDimensions: ->
     super()
@@ -107,13 +114,16 @@ class window.TreemapGraph extends window.BaseGraph
   setNodeLabel: (selection) =>
     label = selection.append 'div'
       .attr 'class', 'node-label-content'
+    ###
     label.append 'svg'
-      .attr 'viewBox', '0 0 20 20'
-      .attr 'width', 20
-      .attr 'height', 20
+      .attr 'viewBox', '0 0 24 24'
+      .attr 'width', 24
+      .attr 'height', 24
       .append 'use'
         .attr 'xlink:href', (d) -> '#icon-'+d.data.icon
+    ###
     label.append 'p'
+      .attr 'class', (d) -> return if d.value > 25 then 'size-l' else if d.value < 10 then 'size-s' else ''
       .html (d) => d.data[@options.key.id]
 
   setNodeDimension: (selection) ->

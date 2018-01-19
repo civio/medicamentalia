@@ -40,6 +40,38 @@
     "Any traditional method"
   ]
 
+  methods_names = 
+    'es': [
+      "Esterilización femenina"
+      "Esterilización masculina"
+      "DIU"
+      "Implante"
+      "Inyectable"
+      "Píldora"
+      "Condón masculino"
+      "Condón femenino"
+      "Métodos de barrera vaginal"
+      "Método de la amenorrea de la lactancia (MELA)"
+      "Anticonceptivos de emergencia"
+      "Otros métodos modernos"
+      "Métodos tradicionales"
+    ]
+    'en': [
+      "Female sterilization"
+      "Male sterilization"
+      "IUD"
+      "Implant"
+      "Injectable"
+      "Pill"
+      "Male condom"
+      "Female condom"
+      "Vaginal barrier methods"
+      "Lactational amenorrhea method (LAM)"
+      "Emergency contraception"
+      "Other modern methods"
+      "Traditional methods"
+    ]
+
   methods_icons = 
     "Female sterilization": 'sterilization'
     "Male sterilization": 'sterilization'
@@ -240,7 +272,7 @@
       methods_keys.forEach (key,i) ->
         d.values.push
           id: i
-          name: key
+          name: methods_names[lang][i]
           value: if d[key] != '' then +d[key] else null
         #delete d[key]
       # sort descending values
@@ -373,11 +405,11 @@
 
     # parse data
     data = [{id: 'r'}] # add treemap root
-    methods_keys.forEach (key) ->
+    methods_keys.forEach (key,i) ->
       if data_country[0][key]
         data.push
           id: key.toLowerCase().replace(' ', '-')
-          name: '<strong>' + key + '</strong><br/>' + Math.round(data_country[0][key]) + '%'
+          name: '<strong>' + methods_names[lang][i] + '</strong><br/>' + Math.round(data_country[0][key]) + '%'
           value: data_country[0][key]
           icon: methods_icons[key]
           parent: 'r'

@@ -216,10 +216,22 @@ Common
       color: #fff;
       text-align: center;
       vertical-align: middle;
-      //text-indent: -25px;
+     
+      @media (max-width: $screen-sm) {
+        font-size: 0.875em;
+      }
 
       p{
         font-weight: 300;
+        letter-spacing: .02em;
+        margin: 5px 0 0;
+
+        &.size-l{
+          font-size: 1.25em;
+        }
+        &.size-s{
+          font-size: .875em;
+        }
       }
 
       strong{
@@ -227,6 +239,7 @@ Common
       }
     }
       
+    /*
     svg{
       top: 4px;
       position: relative;
@@ -235,6 +248,7 @@ Common
       fill: white;
       stroke: white;
     }
+    */
   }
 
   .annotation{
