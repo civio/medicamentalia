@@ -3,7 +3,7 @@ $civio-brand-secondary: #56FFA9;  // Civio light green
 $civio-brand-terciary:  #FFED6A;  // Civio light yellow
 
 #civio-navbar{
-  position: relative;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,7 +15,7 @@ $civio-brand-terciary:  #FFED6A;  // Civio light yellow
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: $civio-brand-primary;
-  z-index: 9999;
+  z-index: 98;
 }
 
 #civio-navbar-brand-cont{
@@ -66,7 +66,7 @@ $civio-brand-terciary:  #FFED6A;  // Civio light yellow
   letter-spacing: .02em;
   line-height: 45px;
   padding: 0 24px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   color: $civio-brand-primary;

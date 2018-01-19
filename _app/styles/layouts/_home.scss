@@ -94,10 +94,10 @@
 }
 
 .home #language-selector{
-  position: absolute;
-  top: $grid-gutter-width/2;
-  right: $grid-gutter-width/3;
-  z-index: 90;
+  position: fixed;
+  top: 0;
+  left: $grid-gutter-width/3;
+  z-index: 99;
   font-size: 14px;
   background-color: transparent;
   text-transform: uppercase;
@@ -106,6 +106,7 @@
     color: $brand-secondary;
     font-family: $font-family-sans-serif;
     font-weight: 300;
+    line-height: 45px;
     background-color: transparent;
     border: none;
     padding: 0 6px;
@@ -136,7 +137,7 @@
     display: none;
     border: none;
     margin: 0;
-    padding: 4px 0 0;
+    padding: 0;
 
     li{
       border: none;
