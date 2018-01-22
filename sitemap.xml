@@ -1,174 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:4000/access/compulsory-license</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/access/compulsory-license</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/access/licencia-obligatoria</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/access/licencia-obligatoria</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/access/counterfeits</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/access/counterfeits</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/access/falsificaciones</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/access/falsificaciones</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/access/patents</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/access/patents</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/access/patentes</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/access/patentes</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/prices-iframe</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/prices-iframe</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/precios-iframe</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/precios-iframe</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/access/prices</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/access/prices</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/access/precios</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/access/precios</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/access/team</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/access/team</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/access/nosotros</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/access/nosotros</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/superbugs</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/superbugs</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/antivaccines</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/antivaccines</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/antivacunas</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/antivacunas</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/immunization</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/immunization</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/inmunizacion</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/inmunizacion</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/hpv</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/hpv</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/vph</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/vph</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/prices</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/prices</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/precios</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/precios</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/stockout</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/stockout</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/desabastecimiento</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/desabastecimiento</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/successes</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/successes</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/exitos</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/exitos</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/team</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/team</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/nosotros</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/nosotros</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:4000/access/</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/access/</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/es/access/</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/es/access/</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/es/</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/es/</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/vaccines/</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/vaccines/</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/es/vaccines/</loc>
-    <lastmod>2018-01-19T18:12:48+01:00</lastmod>
+    <loc>https://medicamentalia.org/es/vaccines/</loc>
+    <lastmod>2018-01-22T13:03:18+01:00</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
