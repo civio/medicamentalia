@@ -137,9 +137,9 @@
       if instance == 0 
         console.log 'scrollama 0', step
         if useTreemap
-          if step == 2
+          if step == 1
             useTreemap.updateData 'world', 'Mundo'
-          else if step == 1 and e.direction == 'up'
+          else if step == 0 and e.direction == 'up'
             useTreemap.updateData userCountry.code, userCountry.name
       if instance == 1 
         if useMap
@@ -150,11 +150,10 @@
           data = [63, 88, 100] # 63, 63+25, 63+25+12
           from = if step > 1 then data[step-2] else 0
           to = data[step-1]
-          console.log $step.data('step'), 'from', from, 'to', to
           useGraph.selectAll('li')
             .filter (d) -> d >= from and d < to
             .classed 'fill-'+step, e.direction == 'down'
-          console.log 'scrollama 2', $step.data('step')
+          console.log 'scrollama 2', step
 
     # start it up
     # 1. call a resize on load to update width/height/position of elements

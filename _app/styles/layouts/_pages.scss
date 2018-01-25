@@ -823,14 +823,17 @@ header {
 
 .scroll-text {
   position: relative;
-  max-width: 480px;
+  max-width: 520px;
   margin: 0 auto;
   text-align: center;
   //pointer-events: none;
   z-index: 99;
 
   .step p{
+    position: relative;
+    top: 50%;
+    padding: 15px;
     background: white;
     background: rgba(255,255,255,.85);
-  }
+  } 
 }

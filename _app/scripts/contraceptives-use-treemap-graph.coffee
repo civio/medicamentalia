@@ -5,8 +5,7 @@ class window.ContraceptivesUseTreemapGraph extends window.TreemapGraph
     # TODO!!! Get current country & add select in order to change it
     data_country = data.filter (d) -> d.code == country_code
     # set caption country name
-    caption = $('#treemap-contraceptives-use-caption').show()
-    caption.find('.country').html country_name
+    $('#treemap-contraceptives-use-country').html country_name
     # parse data
     parsedData = [{id: 'r'}] # add treemap root
     @options.methodsKeys.forEach (key,i) =>
@@ -41,8 +40,4 @@ class window.ContraceptivesUseTreemapGraph extends window.TreemapGraph
     return @
 
   setContainerOffset: ->
-    $scrollCont = $('#treemap-contraceptives-use-container .scroll-graphic')
-    offset = (($(window).height()-$('#treemap-contraceptives-use-container .page-content').height())*0.5)-30
-    $scrollCont
-      .css('margin-top', offset)
-      .height($scrollCont.height()-offset)
+    @$el.css('top', ($(window).height()-@$el.height())*0.5)

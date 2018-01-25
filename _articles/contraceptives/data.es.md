@@ -16,7 +16,9 @@ lang:             es
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-La misma pastilla ronda los 880 euros en Estados Unidos, los 280 si quien lo compra es el Gobierno de España y los 490 para el francés. Las diferencias de precio son mucho más llamativas entre medicamentos patentados como el famoso Sovaldi, el nuevo tratamiento contra la Hepatitis C. Pero incluso en los medicamentos genéricos, cuyas [patentes](/patentes) caducaron hace años, la disparidad de costes por países son más que notables.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 </div>
 </div>
 
@@ -26,20 +28,19 @@ La misma pastilla ronda los 880 euros en Estados Unidos, los 280 si quien lo com
 <div class="scroll-graphic">
   <div class="graph-container">
     <div class="container page-content">
-      <p id="treemap-contraceptives-use-caption" class="graph-container-caption" style="display: none">Uso de anticonceptivos en <span class="country"></span></p>
       <div id="treemap-contraceptives-use" class="treemap-graph"></div>
     </div>
   </div>
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="0" data-step="0"></div>
+  <div class="step" data-instance="0" data-step="0">
+    <p><strong>Uso de anticonceptivos en <span id="treemap-contraceptives-use-country"></span></strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
   <div class="step" data-instance="0" data-step="1">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p><strong>Uso de anticonceptivos en el mundo</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
   </div>
-  <div class="step" data-instance="0" data-step="2">
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
+  <div class="step" data-instance="0" data-step="2"></div>
 </div>
 </div>
 
@@ -47,7 +48,7 @@ La misma pastilla ronda los 880 euros en Estados Unidos, los 280 si quien lo com
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Y conocer esas diferencias es imprescindible para desarrollar **políticas basadas en la evidencia** (Indonesia, Líbano, Nigeria y Tayikistán ya [lo han hecho](http://www.who.int/medicines/areas/access/OMS_Medicine_prices.pdf)) y ofrecer datos y argumentos a gobiernos y organizaciones en sus negociaciones con las farmacéuticas. Por esa razón, la organización Health Action International ([HAI](http://www.haiweb.org/)) y la OMS trabajan desde 2003 en una metodología común que permite recopilar y comparar **precios, accesibilidad y estructura de costes de 14 medicamentos esenciales**. Ninguno de ellos está registrado bajo patente, pero eso no impide que la diferencia entre lo que cuesta adquirirlos en unos países y otros (sobre todo si tenemos en cuenta la relación del precio con los ingresos de los ciudadanos de cada país) sea espectacular.
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 </div>
 </div>
 
@@ -56,15 +57,7 @@ Y conocer esas diferencias es imprescindible para desarrollar **políticas basad
 <!--  graphic container  -->
 <div class="scroll-graphic">
   <div class="graph-container">
-    <div id="map-contraceptives-use" class="map-graph">
-      <div class="tooltip top" role="tooltip">
-        <div class="tooltip-arrow"></div>
-        <div class="tooltip-inner">
-          <p class="title"></p>
-          <p class="description"></p>
-        </div>
-      </div>
-    </div>
+    <div id="map-contraceptives-use" class="map-graph"></div>
   </div>
 </div>
 <!--  step/text container  -->
@@ -95,7 +88,7 @@ Y conocer esas diferencias es imprescindible para desarrollar **políticas basad
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Los informes realizados siguiendo la [metodología HAI](http://www.who.int/medicines/areas/access/OMS_Medicine_prices.pdf), fruto cada uno de ellos de meses de riguroso trabajo, incluyen el desglose del coste total (qué parte es para el fabricante, para pagar impuestos o tasas, para costear el transporte y la distribución...), su disponibilidad en las farmacias (porque a veces el problema de acceso no es solo el precio) y el precio de medicamentos de marca y genéricos. De esta valiosa información hemos extraído datos de 56 países que nos permiten realizar comparaciones entre diferentes estudios, aún habiendo sido realizados en distintos años. Hemos tenido en cuenta **dos valores relativos**: la relación del coste con un precio de referencia internacional y, aún más importante, las horas de trabajo necesarias por los ciudadanos de cada país para comprar el tratamiento completo. Todos los cálculos están basados en **el genérico más barato**.
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 </div>
 </div>
 
@@ -128,7 +121,7 @@ Los informes realizados siguiendo la [metodología HAI](http://www.who.int/medic
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Los informes realizados siguiendo la [metodología HAI](http://www.who.int/medicines/areas/access/OMS_Medicine_prices.pdf), fruto cada uno de ellos de meses de riguroso trabajo, incluyen el desglose del coste total (qué parte es para el fabricante, para pagar impuestos o tasas, para costear el transporte y la distribución...), su disponibilidad en las farmacias (porque a veces el problema de acceso no es solo el precio) y el precio de medicamentos de marca y genéricos. De esta valiosa información hemos extraído datos de 56 países que nos permiten realizar comparaciones entre diferentes estudios, aún habiendo sido realizados en distintos años. Hemos tenido en cuenta **dos valores relativos**: la relación del coste con un precio de referencia internacional y, aún más importante, las horas de trabajo necesarias por los ciudadanos de cada país para comprar el tratamiento completo. Todos los cálculos están basados en **el genérico más barato**.
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 </div>
 
 
@@ -149,20 +142,12 @@ Los informes realizados siguiendo la [metodología HAI](http://www.who.int/medic
 
 <div class="page-content-container" markdown="1">
 
-Los informes realizados siguiendo la [metodología HAI](http://www.who.int/medicines/areas/access/OMS_Medicine_prices.pdf), fruto cada uno de ellos de meses de riguroso trabajo, incluyen el desglose del coste total (qué parte es para el fabricante, para pagar impuestos o tasas, para costear el transporte y la distribución...), su disponibilidad en las farmacias (porque a veces el problema de acceso no es solo el precio) y el precio de medicamentos de marca y genéricos. De esta valiosa información hemos extraído datos de 56 países que nos permiten realizar comparaciones entre diferentes estudios, aún habiendo sido realizados en distintos años. Hemos tenido en cuenta **dos valores relativos**: la relación del coste con un precio de referencia internacional y, aún más importante, las horas de trabajo necesarias por los ciudadanos de cada país para comprar el tratamiento completo. Todos los cálculos están basados en **el genérico más barato**.
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 </div>
 
 <div class="graph-container">
   <p class="graph-container-caption">Main reasons</p>
-  <div id="map-contraceptives-reasons" class="map-graph">
-    <div class="tooltip top" role="tooltip">
-      <div class="tooltip-arrow"></div>
-      <div class="tooltip-inner">
-        <p class="title"></p>
-        <p class="description"></p>
-      </div>
-    </div>
-  </div>
+  <div id="map-contraceptives-reasons" class="map-graph"></div>
 </div>
 
 </div>
