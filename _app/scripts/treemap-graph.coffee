@@ -7,6 +7,7 @@ class window.TreemapGraph extends window.BaseGraph
   constructor: (id, options) ->
     options.minSize = options.minSize || 80
     options.nodesPadding = options.nodesPadding || 8
+    options.transitionDuration = options.transitionDuration || 600
     options.mobileBreakpoint = options.mobileBreakpoint || 620
     super id, options
     return @
@@ -34,9 +35,9 @@ class window.TreemapGraph extends window.BaseGraph
     if @width <= @options.mobileBreakpoint
       @treemap.tile d3.treemapSlice
 
-    stratify = d3.stratify().parentId (d) -> d.parent
+    @stratify = d3.stratify().parentId (d) -> d.parent
 
-    @treemapRoot = stratify(@data)
+    @treemapRoot = @stratify(@data)
       .sum (d) => d[@options.key.value]
       .sort (a, b) -> b.value - a.value
     @treemap @treemapRoot
@@ -53,6 +54,33 @@ class window.TreemapGraph extends window.BaseGraph
         .call @setNode
         .call @setNodeDimension
 
+    @drawGraphLabels()
+
+    return @
+
+  updateGraph: ->
+    # update tremap 
+    @treemapRoot = @stratify(@data)
+      .sum (d) => d[@options.key.value]
+      .sort (a, b) -> b.value - a.value
+    @treemap @treemapRoot
+
+    # remove node labels
+    @nodes.selectAll('.node-label').remove()
+
+    # update nodes
+    @nodes.data @treemapRoot.leaves()
+      .call @setNode
+      .transition()
+      .duration @options.transitionDuration
+      .on 'end', (d,i) =>
+        if (i == @nodes.size()-1)
+          @drawGraphLabels()
+      .call @setNodeDimension
+
+    return @
+
+  drawGraphLabels: ->
     # add label only in nodes with size greater then options.minSize
     @nodes.append('div')
       .attr 'class', 'node-label'
@@ -64,10 +92,7 @@ class window.TreemapGraph extends window.BaseGraph
       .selectAll '.node-label'
         .style 'visibility', 'visible'
 
-    return @
-
   getDimensions: ->
-    console.log 'getDimensions', @width, @options.mobileBreakpoint
     super()
     if @width <= @options.mobileBreakpoint
       @containerHeight = @containerWidth
@@ -108,8 +133,8 @@ class window.TreemapGraph extends window.BaseGraph
       .style 'padding',    (d) => if (d.x1-d.x0 > 2*@options.nodesPadding && d.y1-d.y0 > 2*@options.nodesPadding) then @options.nodesPadding+'px' else 0
       #.style 'background', (d) -> while (d.depth > 1) d = d.parent; return colorScale(getParentId(d)); })
       .style 'visibility', (d) -> if (d.x1-d.x0 == 0) || (d.y1-d.y0 == 0) then 'hidden' else ''
-      .select '.node-label'
-        .style 'visibility', 'hidden'
+      #.select '.node-label'
+      #  .style 'visibility', 'hidden'
 
   setNodeLabel: (selection) =>
     label = selection.append 'div'

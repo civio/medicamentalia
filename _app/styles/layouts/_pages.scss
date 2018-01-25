@@ -440,35 +440,6 @@ header {
     }
   }
 
-  .graph-container{
-    font-family: $font-family-sans-serif;
-    color: $brand-primary;
-    margin-bottom: $grid-gutter-width;
-    text-align: center;
-
-    p{
-      font-size: 1em;
-      line-height: 1.25em;
-      margin: 0 auto $grid-gutter-width/2;
-      max-width: $page-content-container-width;
-
-      strong{
-        font-weight: 600;
-      }
-    }
-
-    .graph-container-caption{
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 600;
-      margin: $grid-gutter-width/6 auto $grid-gutter-width;
-    }
-  }
-  
-  .container-right .graph-container .graph-container-caption{
-    text-align: left;
-  }
-
   // Align right pictures
   .alignright{
     height: auto;
@@ -512,6 +483,42 @@ header {
   .twitter-tweet{
     margin: 0 auto 7*$grid-gutter-width/6 !important;
   }
+}
+
+
+// Graph container
+
+.graph-container{
+  font-family: $font-family-sans-serif;
+  color: $brand-primary;
+  margin-bottom: $grid-gutter-width;
+  text-align: center;
+
+  .page-content{
+    font-family: $font-family-sans-serif;
+  }
+
+  p{
+    font-size: 1em;
+    line-height: 1.25em;
+    margin: 0 auto $grid-gutter-width/2;
+    max-width: $page-content-container-width;
+
+    strong{
+      font-weight: 600;
+    }
+  }
+
+  .graph-container-caption{
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 600;
+    margin: $grid-gutter-width/6 auto $grid-gutter-width;
+  }
+}
+
+.container-right .graph-container .graph-container-caption{
+  text-align: left;
 }
 
 .wp-caption{

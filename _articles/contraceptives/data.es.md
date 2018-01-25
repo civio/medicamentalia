@@ -18,12 +18,33 @@ lang:             es
 
 La misma pastilla ronda los 880 euros en Estados Unidos, los 280 si quien lo compra es el Gobierno de España y los 490 para el francés. Las diferencias de precio son mucho más llamativas entre medicamentos patentados como el famoso Sovaldi, el nuevo tratamiento contra la Hepatitis C. Pero incluso en los medicamentos genéricos, cuyas [patentes](/patentes) caducaron hace años, la disparidad de costes por países son más que notables.
 </div>
-
-<div class="graph-container">
-  <p id="treemap-contraceptives-use-caption" class="graph-container-caption" style="display: none">Uso de anticonceptivos en <span class="country"></span></p>
-  <div id="treemap-contraceptives-use" class="treemap-graph"></div>
 </div>
 
+
+<div id="treemap-contraceptives-use-container" class="scroll-container">
+<!--  graphic container  -->
+<div class="scroll-graphic">
+  <div class="graph-container">
+    <div class="container page-content">
+      <p id="treemap-contraceptives-use-caption" class="graph-container-caption" style="display: none">Uso de anticonceptivos en <span class="country"></span></p>
+      <div id="treemap-contraceptives-use" class="treemap-graph"></div>
+    </div>
+  </div>
+</div>
+<!--  step/text container  -->
+<div class="scroll-text">
+  <div class="step" data-instance="0" data-step="0"></div>
+  <div class="step" data-instance="0" data-step="1">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+  <div class="step" data-instance="0" data-step="2">
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+</div>
+</div>
+
+
+<div class="container page-content">
 <div class="page-content-container" markdown="1">
 
 Y conocer esas diferencias es imprescindible para desarrollar **políticas basadas en la evidencia** (Indonesia, Líbano, Nigeria y Tayikistán ya [lo han hecho](http://www.who.int/medicines/areas/access/OMS_Medicine_prices.pdf)) y ofrecer datos y argumentos a gobiernos y organizaciones en sus negociaciones con las farmacéuticas. Por esa razón, la organización Health Action International ([HAI](http://www.haiweb.org/)) y la OMS trabajan desde 2003 en una metodología común que permite recopilar y comparar **precios, accesibilidad y estructura de costes de 14 medicamentos esenciales**. Ninguno de ellos está registrado bajo patente, pero eso no impide que la diferencia entre lo que cuesta adquirirlos en unos países y otros (sobre todo si tenemos en cuenta la relación del precio con los ingresos de los ciudadanos de cada país) sea espectacular.
@@ -46,26 +67,25 @@ Y conocer esas diferencias es imprescindible para desarrollar **políticas basad
     </div>
   </div>
 </div>
-
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="0" data-step="0"></div>
-  <div class="step" data-instance="0" data-step="1">
+  <div class="step" data-instance="1" data-step="0"></div>
+  <div class="step" data-instance="1" data-step="1">
     <p>La <strong>esterilización femenina</strong> es el método más popular del mundo y destaca en países como X, X y X. La masculina, en cambio, solo es el método prioritario en X, X y X.</p>
   </div>
-  <div class="step" data-instance="0" data-step="2">
+  <div class="step" data-instance="1" data-step="2">
     <p>El <strong>DIU</strong> es el segundo, tal y pascual.</p>
   </div>
-  <div class="step" data-instance="0" data-step="3">
+  <div class="step" data-instance="1" data-step="3">
     <p><strong>Píldora</strong> tercero, blablabla. Países más desarrollados.</p>
   </div>
-  <div class="step" data-instance="0" data-step="4">
+  <div class="step" data-instance="1" data-step="4">
     <p><strong>Condón</strong> en blablabla, y mira España, que en medio de todos es su favorito.</p>
   </div>
-  <div class="step" data-instance="0" data-step="5">
+  <div class="step" data-instance="1" data-step="5">
     <p>Los <strong>inyectables</strong> son muy populares sobre todo en África, blabla</p>
   </div>
-  <div class="step" data-instance="0" data-step="6">
+  <div class="step" data-instance="1" data-step="6">
     <p>Los <strong>métodos tradicionales</strong> -explicar cuáles son- destacan en países del arco mediterráneo y blablabla.</p>
   </div>
 </div>
@@ -79,6 +99,7 @@ Los informes realizados siguiendo la [metodología HAI](http://www.who.int/medic
 </div>
 </div>
 
+
 <div id="contraceptives-use-graph-container" class="scroll-container">
 <!--  graphic container  -->
 <div class="scroll-graphic">
@@ -90,24 +111,26 @@ Los informes realizados siguiendo la [metodología HAI](http://www.who.int/medic
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="1" data-step="0"></div>
-  <div class="step" data-instance="1" data-step="1">
+  <div class="step" data-instance="2" data-step="0"></div>
+  <div class="step" data-instance="2" data-step="1">
     <p>Todo esto es sobre mujeres que USAN algún método anticonceptivo. De las mujeres casadas o sexualmente activas de 15 a 49 años, <strong>el 63% usa algún tipo de método.</strong></p>
   </div>
-  <div class="step" data-instance="1" data-step="2">
+  <div class="step" data-instance="2" data-step="2">
     <p>Otro <strong>25% quiere seguir teniendo niños</strong> y, por lo tanto, decide no usar ningún método. </p>
   </div>
-  <div class="step" data-instance="1" data-step="3">
+  <div class="step" data-instance="2" data-step="3">
     <p>Pero el <strong>12%</strong> restante son aquellas mujeres que <strong>quieren retrasar o frenar su maternidad pero no usan ningún método anticonceptivo</strong>. Son las mujeres con sus necesidades NO CUBIERTAS. Y ahí está el problema. </p>
   </div>
 </div>
 </div>
+
 
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
 Los informes realizados siguiendo la [metodología HAI](http://www.who.int/medicines/areas/access/OMS_Medicine_prices.pdf), fruto cada uno de ellos de meses de riguroso trabajo, incluyen el desglose del coste total (qué parte es para el fabricante, para pagar impuestos o tasas, para costear el transporte y la distribución...), su disponibilidad en las farmacias (porque a veces el problema de acceso no es solo el precio) y el precio de medicamentos de marca y genéricos. De esta valiosa información hemos extraído datos de 56 países que nos permiten realizar comparaciones entre diferentes estudios, aún habiendo sido realizados en distintos años. Hemos tenido en cuenta **dos valores relativos**: la relación del coste con un precio de referencia internacional y, aún más importante, las horas de trabajo necesarias por los ciudadanos de cada país para comprar el tratamiento completo. Todos los cálculos están basados en **el genérico más barato**.
 </div>
+
 
 <div id="unmet-needs-gdp-container-graph" class="graph-container">
   <p class="graph-container-caption">Unmeet needs vs. GDP</p>
@@ -122,6 +145,7 @@ Los informes realizados siguiendo la [metodología HAI](http://www.who.int/medic
     -->
   </div>
 </div>
+
 
 <div class="page-content-container" markdown="1">
 
@@ -143,10 +167,10 @@ Los informes realizados siguiendo la [metodología HAI](http://www.who.int/medic
 
 </div>
 
+
 <svg style="display: none">
-  <symbol id="icon-woman" viewBox="0 0 193 450">
-    <path d="M30.4,117.6 L1,221.9 C-5.3,244.7 21.7,253.6 28.3,232.2 L54.6,136 L62,136 L16.8,305 L59,305 L59,432 C59,455 91,455 91,432 L91,305 L101,305 L101,432 C101,455 132,455 132,432 L132,305 L175.4,305 L129.2,136 L137.6,136 L163.9,232.2 C170.4,254.1 197.2,244.7 191.2,222 L161.8,117.6 C157.8,105.8 143.6,85 119.8,84 L72.5,84 C47.9,85 33.8,105.6 30.4,117.6 Z"/>
-    <path d="M132.6,38.2 C132.6,17.6 116.2,0.9 96,0.9 C75.8,0.9 59.4,17.6 59.4,38.2 C59.4,58.8 75.8,75.5 96,75.5 C116.2,75.5 132.6,58.8 132.6,38.2 Z"/>
+  <symbol id="icon-woman" viewBox="0 0 215 648">
+    <path d="M55 275l-4-38-2-5-2 3-9 38c-3 9-4 19-4 29l1 33 1 5 19-65zm124 70l2-29c1-11 3-23-1-34l-10-40-4-12-1 5-5 40 19 70zM62 170c-5-1-11-1-15-4a53 53 0 0 1-27-44c-1-14 5-26 12-38 9-14 15-29 18-45C55 14 75 1 99 0c8 0 15 1 23 4 4 2 7 5 10 9 3 5 8 0 12 3 7 6 12 13 17 21 16 27 25 57 25 88 0 23-10 37-31 43l-2 1c-1 2 1 2 2 3l19 9c6 2 10 6 13 13 13 31 19 64 26 97 4 17 1 33-3 49-2 9-5 18-5 27l1 21c-1 8-3 15-10 21-5 3-9 4-14 5-3 0-5 0-5 3 0 6-3 13-5 19-8 21-13 42-15 64l-8 55-5 38c-1 6-2 12-9 15-2 1-1 2 0 4 1 4 3 7 6 11 9 12 4 23-11 24-7 1-14 2-21-3-1-1-2 0-4 1-7 5-25 4-32-4-4-5-5-8-1-13 3-5 7-10 9-16 1-3 1-4-2-6-4-2-6-5-6-10l-8-51c-4-19-5-37-7-56-2-12-4-24-9-36l-11-35c0-3-2-4-5-5-11 0-20-7-22-18l-2-14c2-10 0-18-2-27a169 169 0 0 1 2-103c6-21 13-42 22-61 1-3 3-5 6-7l26-12-1-1z" fill-rule="evenodd"/>
   </symbol>
 </svg>
 

@@ -2,10 +2,11 @@
 
 (($) ->
 
+  useTreemap = null
   useMap = null
   useGraph = null
 
-  userCountry = null
+  userCountry = {}
 
   scrollamaInitialized = false
 
@@ -129,15 +130,22 @@
         .classed 'is-bottom', e.direction == 'down'
 
     handleStepEnter = (e) ->
-      console.log e
+      # console.log e
       $step = $(e.element)
       instance = $step.data('instance')
       step = $step.data('step')
       if instance == 0 
+        console.log 'scrollama 0', step
+        if useTreemap
+          if step == 2
+            useTreemap.updateData 'world', 'Mundo'
+          else if step == 1 and e.direction == 'up'
+            useTreemap.updateData userCountry.code, userCountry.name
+      if instance == 1 
         if useMap
           console.log 'scrollama 1', step
           useMap.setMapState step # update map based on step 
-      else if instance == 1
+      else if instance == 2
         if useGraph and step > 0
           data = [63, 88, 100] # 63, 63+25, 63+25+12
           from = if step > 1 then data[step-2] else 0
@@ -391,32 +399,15 @@
     # Load csvs & setup maps
     setupMaps data_use, data_reasons, countries, map
 
-  
+
   # Contraceptives App
   # -------------------
 
-  setupConstraceptivesUseTreemap = (data_use, countries, location) ->
-
-    # TODO!!! Get current country & add select in order to change it
-    data_country = data_use.filter (d) -> d.code == location.code
-
-    caption = $('#treemap-contraceptives-use-caption').show()
-    caption.find('.country').html location.name
-
-    # parse data
-    data = [{id: 'r'}] # add treemap root
-    methods_keys.forEach (key,i) ->
-      if data_country[0][key]
-        data.push
-          id: key.toLowerCase().replace(' ', '-')
-          name: '<strong>' + methods_names[lang][i] + '</strong><br/>' + Math.round(data_country[0][key]) + '%'
-          value: data_country[0][key]
-          icon: methods_icons[key]
-          parent: 'r'
-      else
-        console.log "There's no data for " + key
+  setupConstraceptivesUseTreemap = (data_use) ->
+    # set scrollama for treemap
+    setupScrollama 'treemap-contraceptives-use-container'
     # setup treemap
-    constraceptivesUseTreemap = new window.TreemapGraph 'treemap-contraceptives-use',
+    useTreemap = new window.ContraceptivesUseTreemapGraph 'treemap-contraceptives-use',
       aspectRatio: 0.5625
       margin:
         left:   0
@@ -426,10 +417,13 @@
       key:
         value: 'value'
         id: 'name'
-    console.log 'treemap', data
+      methodsKeys: methods_keys
+      methodsNames: methods_names[lang]
     # set data
-    constraceptivesUseTreemap.setData data
-    $(window).resize constraceptivesUseTreemap.onResize
+    useTreemap.setData data_use, userCountry.code, userCountry.name
+    # set resize
+    $(window).resize useTreemap.onResize
+
 
   # Contraceptives App
   # -------------------
@@ -460,20 +454,19 @@
       if location
         user_country = countries.filter (d) -> d.code2 == location.country_code
         if user_country[0]
-          location.code = user_country[0].code
-          location.name = user_country[0]['name_'+lang]
-          console.log location
+          userCountry.code = user_country[0].code
+          userCountry.name = user_country[0]['name_'+lang]
       else
         location = {}
 
       unless location.code
-        location.code = 'ESP'
-        location.name = if lang == 'es' then 'España' else 'Spain'
+        userCountry.code = 'ESP'
+        userCountry.name = if lang == 'es' then 'España' else 'Spain'
 
-      console.log location
+      console.log userCountry
 
       if $('#treemap-contraceptives-use').length > 0
-        setupConstraceptivesUseTreemap data_use, countries, location
+        setupConstraceptivesUseTreemap data_use
 
       if $('#map-contraceptives-use').length > 0
         setupConstraceptivesMaps data_use, data_reasons, countries, map
