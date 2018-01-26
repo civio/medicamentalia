@@ -2413,4 +2413,45 @@ body.guatemala-graph {
 
 #treemap-contraceptives-use{
   position: relative;
+
+  .node-female-sterilization{
+    background: $color-green-dark;
+  }
+  .node-male-sterilization{
+    background: $color-green-light;
+  }
+  .node-iud{
+    background: $color-blue;
+  }
+  .node-implant{
+    background: red;
+  }
+  .node-injectable{
+    background: red;
+  }
+  .node-pill{
+    background: $color-brown;
+  }
+  .node-male-condom{
+    background: $brand-primary;
+  }
+  .node-female-condom{
+    background: $color-orange;
+  }
+  .node-vaginal-barrier-methods{
+    background: red;
+  }
+  .node-lactational-amenorrhea-method-lam{
+    background: red;
+  }
+  .node-emergency-contraception{
+    background: red;
+  }
+  .node-other-modern-methods{
+    background: red;
+  }
+  .node-any-traditional-method{
+    background: $color-yellow;
+  }
+
 }

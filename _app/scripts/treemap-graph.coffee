@@ -46,7 +46,6 @@ class window.TreemapGraph extends window.BaseGraph
     @nodes = @container.selectAll('.node')
       .data @treemapRoot.leaves()
       .enter().append('div')
-        .attr 'class', 'node'
     #    .on 'mouseover', onNodeOver
     #    .on 'mousemove', onNodeMove
     #    .on 'mouseout',  onNodeOut
@@ -128,8 +127,12 @@ class window.TreemapGraph extends window.BaseGraph
     return @
 
 
+  getNodeClass: (d) ->
+    return 'node'
+
   setNode: (selection) =>
     selection
+      .attr 'class', @getNodeClass
       .style 'padding',    (d) => if (d.x1-d.x0 > 2*@options.nodesPadding && d.y1-d.y0 > 2*@options.nodesPadding) then @options.nodesPadding+'px' else 0
       #.style 'background', (d) -> while (d.depth > 1) d = d.parent; return colorScale(getParentId(d)); })
       .style 'visibility', (d) -> if (d.x1-d.x0 == 0) || (d.y1-d.y0 == 0) then 'hidden' else ''
