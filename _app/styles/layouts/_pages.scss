@@ -6,6 +6,7 @@ header {
   height: 33%;
   min-height: 350px;
   text-align: center;
+  overflow: hidden;
   color: white;
   background-repeat: no-repeat;
   background-position: center center;
@@ -439,35 +440,6 @@ header {
     }
   }
 
-  .graph-container{
-    font-family: $font-family-sans-serif;
-    color: $brand-primary;
-    margin-bottom: $grid-gutter-width;
-    text-align: center;
-
-    p{
-      font-size: 1em;
-      line-height: 1.25em;
-      margin: 0 auto $grid-gutter-width/2;
-      max-width: $page-content-container-width;
-
-      strong{
-        font-weight: 600;
-      }
-    }
-
-    .graph-container-caption{
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 600;
-      margin: $grid-gutter-width/6 auto $grid-gutter-width;
-    }
-  }
-  
-  .container-right .graph-container .graph-container-caption{
-    text-align: left;
-  }
-
   // Align right pictures
   .alignright{
     height: auto;
@@ -511,6 +483,42 @@ header {
   .twitter-tweet{
     margin: 0 auto 7*$grid-gutter-width/6 !important;
   }
+}
+
+
+// Graph container
+
+.graph-container{
+  font-family: $font-family-sans-serif;
+  color: $brand-primary;
+  margin-bottom: $grid-gutter-width;
+  text-align: center;
+
+  .page-content{
+    font-family: $font-family-sans-serif;
+  }
+
+  p{
+    font-size: 1em;
+    line-height: 1.25em;
+    margin: 0 auto $grid-gutter-width/2;
+    max-width: $page-content-container-width;
+
+    strong{
+      font-weight: 600;
+    }
+  }
+
+  .graph-container-caption{
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 600;
+    margin: $grid-gutter-width/6 auto $grid-gutter-width;
+  }
+}
+
+.container-right .graph-container .graph-container-caption{
+  text-align: left;
 }
 
 .wp-caption{
@@ -776,4 +784,56 @@ header {
   a{
     font-weight: 600;
   }
+}
+
+// Scroll items
+.scroll-container {
+  position: relative;
+}
+
+.scroll-graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  width: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 60;
+
+  &.is-fixed {
+    position: fixed;
+  }
+
+  &.is-bottom {
+    bottom: 0;
+    top: auto;
+  }
+
+  .graph-container {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+
+.scroll-text {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  //pointer-events: none;
+  z-index: 99;
+
+  .step p{
+    position: relative;
+    top: 15px; // 50%;
+    padding: 15px;
+    background: white;
+    background: rgba(255,255,255,.85);
+  } 
 }

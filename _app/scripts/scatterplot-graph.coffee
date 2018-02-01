@@ -107,10 +107,11 @@ class window.ScatterplotGraph extends window.BaseGraph
     return @
 
   updateGraphDimensions: ->
-    super()
     # update axis size
     @xAxis.tickSize @height
     @yAxis.tickSize @width
+    # call Basegraph.updateGraphDimensions
+    super()
     # update dots positions
     @container.selectAll('.dot')
       .call @setDotsDimensions
@@ -152,6 +153,11 @@ class window.ScatterplotGraph extends window.BaseGraph
   # overrid x axis positioning
   setXAxisPosition: (selection) =>
     selection.attr 'transform', 'translate(0,0)'
+
+  onResize: =>
+    if @$el and @containerWidth != @$el.width()
+      super()
+    return @
 
   # mouse events
   onMouseOver: (d) =>

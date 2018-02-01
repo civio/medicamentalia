@@ -16,6 +16,7 @@
     "d3-format": "1.0.2",
     "d3-geo": "^1.4.0",
     "d3-geo-projection": "^1.2.1",
+    "d3-hierarchy": "^1.1.5",
     "d3-polygon": "^1.0.2",
     "d3-queue": "3.0.3",
     "d3-request": "1.0.2",
@@ -46,6 +47,7 @@
     "jshint": "^2.9.3",
     "rollup": "^0.26.3",
     "rollup-plugin-node-resolve": "^1.5.0",
+    "scrollama": "^0.5.3",
     "topojson-client": "^2.1.0"
   }
 }

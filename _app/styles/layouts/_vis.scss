@@ -66,7 +66,7 @@ Common
 
   .bar {
     fill: mix( $gray-light, $gray-lighter, 40);
-    @include transition(.3s ease--out fill);
+    @include transition(.3s ease-out fill);
 
     &:hover,
     &.active {
@@ -131,6 +131,38 @@ Common
     fill: white;
   }
 
+  .bar-horizontal-graph{
+    .bar-title{
+      //font-size: .875em;
+      margin-top: 10px;
+      margin-bottom: 2px;
+      text-align: left;
+      //font-weight: 600;
+    }
+
+    .bar{
+      height: 25px;
+      margin: 2px 0; 
+      text-align: right;
+      background: $brand-primary;
+
+      span{
+        font-size: 13px;
+        padding-right: 6px;
+        line-height: 26px;
+        color: white;
+        font-weight: 300;
+      }
+    }
+
+    > div:last-child .bar span{
+      color: #222;
+      position: absolute;
+      padding-left: 5px;
+      font-weight: 400;
+    }
+  }
+
   .scatterplot-graph{
     position: relative;
 
@@ -164,6 +196,91 @@ Common
         opacity: 1;
       }
     }
+
+    .x-legend{
+      position: absolute;
+      bottom: -15px;
+      left: 20px;
+      right: 0;
+      padding: 0;
+      margin: 0;
+
+      li{
+        float: left;
+        width: 25%;
+        list-style: none;
+        text-transform: uppercase;
+        color: white;
+        margin: 0;
+        font-size: .75em;
+        letter-spacing: .02em;
+        font-weight: 300;
+        height: 18px;
+        line-height: 18px;
+        background: mix( $gray-light, $gray-lighter, 75% );
+        outline: 1px solid white;
+        text-align: center;
+      }
+    }
+  }
+
+  .treemap-graph{
+    .nodes-container{
+      position: relative;
+    }
+    .node{
+      position: absolute;
+      overflow: hidden;
+      outline: 1.5px solid white;
+      background: $brand-primary;
+    }
+    .node-label{
+      display: table;
+      width: 100%;
+      height: 96%;
+    }
+
+    .node-label-content{
+      display: table-cell;
+      margin: 0;
+      font-size: 1em;
+      line-height: 1.1em;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+     
+      @media (max-width: $screen-sm) {
+        font-size: 0.875em;
+      }
+
+      p{
+        font-weight: 300;
+        letter-spacing: .02em;
+        margin: 5px 0 0;
+
+        &.size-l{
+          font-size: 1.25em;
+        }
+        &.size-s{
+          font-size: .875em;
+        }
+      }
+
+      strong{
+        font-weight: 400;
+      }
+    }
+      
+    /*
+    svg{
+      top: 4px;
+      position: relative;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      fill: white;
+      stroke: white;
+    }
+    */
   }
 
   .annotation{
@@ -1809,31 +1926,6 @@ Infographic
       line-height: 1em;
     }
   }
-
-  .x-legend{
-    position: absolute;
-    bottom: -15px;
-    left: 20px;
-    right: 0;
-    padding: 0;
-    margin: 0;
-
-    li{
-      float: left;
-      width: 25%;
-      list-style: none;
-      text-transform: uppercase;
-      color: white;
-      margin: 0;
-      font-size: .75em;
-      letter-spacing: .02em;
-      font-weight: 300;
-      height: 18px;
-      line-height: 18px;
-      background: mix( $gray-light, $gray-lighter, 75% );
-      outline: 1px solid white;
-    }
-  }
 }
 #vaccine-vph-container-graph{
   position: relative;
@@ -2300,4 +2392,98 @@ body.guatemala-graph {
       }
     }
   }
+}
+
+#map-contraceptives-use{
+  margin: 0;
+  text-align: center;
+}
+
+#contraceptives-use-graph{
+  ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  li{
+    display: inline-block;
+    list-style: none;
+    margin: 5px 5px;
+
+    svg{
+      fill: $gray-light;
+      @include transition(.3s ease-out fill);   
+    }
+
+    &.fill-1 svg{
+      fill: $color-blue;
+    }
+    &.fill-2 svg{
+      fill: $color-yellow;
+    }
+    &.fill-3 svg{
+      fill: $color-orange;
+    }
+  }
+}
+
+#contraceptives-app-container{
+  .scroll-text{
+    max-width: 560px;
+
+    .step p{
+      background: none;
+    }
+
+    .step > div{
+      background: white;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 15px;
+    }
+  }
+}
+
+#treemap-contraceptives-use{
+  position: relative;
+
+  .node-female-sterilization{
+    background: #1f78b4;
+  }
+  .node-male-sterilization{
+    background: #a6cee3;
+  }
+  .node-iud{
+    background: #e31a1c;
+  }
+  .node-implant{
+    background: #fdbf6f;
+  }
+  .node-injectable{
+    background: #ff7f00;
+  }
+  .node-pill{
+    background: #fb9a99;
+  }
+  .node-male-condom{
+    background: #33a02c;
+  }
+  .node-female-condom{
+    background: #b2df8a;
+  }
+  .node-vaginal-barrier-methods{
+    background: #cab2d6;
+  }
+  .node-lactational-amenorrhea-method-lam{
+    background: #cab2d6;
+  }
+  .node-emergency-contraception{
+    background: #ffff99;
+  }
+  .node-other-modern-methods{
+    background: #6a3d9a;
+  }
+  .node-any-traditional-method{
+    background: #b15928;
+  }
+
 }

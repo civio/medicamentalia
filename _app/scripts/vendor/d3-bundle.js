@@ -43,6 +43,10 @@
   var ascendingBisect = bisector(ascending);
   var bisectRight = ascendingBisect.right;
 
+  function descending(a, b) {
+    return b < a ? -1 : b > a ? 1 : b >= a ? 0 : NaN;
+  }
+
   function extent(array, f) {
     var i = -1,
         n = array.length,
@@ -1799,7 +1803,517 @@
     return Math.max(0, exponent$1(max) - exponent$1(step)) + 1;
   }
 
-  var slice$1 = [].slice;
+  function count(node) {
+    var sum = 0,
+        children = node.children,
+        i = children && children.length;
+    if (!i) sum = 1;
+    else while (--i >= 0) sum += children[i].value;
+    node.value = sum;
+  }
+
+  function node_count() {
+    return this.eachAfter(count);
+  }
+
+  function node_each(callback) {
+    var node = this, current, next = [node], children, i, n;
+    do {
+      current = next.reverse(), next = [];
+      while (node = current.pop()) {
+        callback(node), children = node.children;
+        if (children) for (i = 0, n = children.length; i < n; ++i) {
+          next.push(children[i]);
+        }
+      }
+    } while (next.length);
+    return this;
+  }
+
+  function node_eachBefore(callback) {
+    var node = this, nodes = [node], children, i;
+    while (node = nodes.pop()) {
+      callback(node), children = node.children;
+      if (children) for (i = children.length - 1; i >= 0; --i) {
+        nodes.push(children[i]);
+      }
+    }
+    return this;
+  }
+
+  function node_eachAfter(callback) {
+    var node = this, nodes = [node], next = [], children, i, n;
+    while (node = nodes.pop()) {
+      next.push(node), children = node.children;
+      if (children) for (i = 0, n = children.length; i < n; ++i) {
+        nodes.push(children[i]);
+      }
+    }
+    while (node = next.pop()) {
+      callback(node);
+    }
+    return this;
+  }
+
+  function node_sum(value) {
+    return this.eachAfter(function(node) {
+      var sum = +value(node.data) || 0,
+          children = node.children,
+          i = children && children.length;
+      while (--i >= 0) sum += children[i].value;
+      node.value = sum;
+    });
+  }
+
+  function node_sort(compare) {
+    return this.eachBefore(function(node) {
+      if (node.children) {
+        node.children.sort(compare);
+      }
+    });
+  }
+
+  function node_path(end) {
+    var start = this,
+        ancestor = leastCommonAncestor(start, end),
+        nodes = [start];
+    while (start !== ancestor) {
+      start = start.parent;
+      nodes.push(start);
+    }
+    var k = nodes.length;
+    while (end !== ancestor) {
+      nodes.splice(k, 0, end);
+      end = end.parent;
+    }
+    return nodes;
+  }
+
+  function leastCommonAncestor(a, b) {
+    if (a === b) return a;
+    var aNodes = a.ancestors(),
+        bNodes = b.ancestors(),
+        c = null;
+    a = aNodes.pop();
+    b = bNodes.pop();
+    while (a === b) {
+      c = a;
+      a = aNodes.pop();
+      b = bNodes.pop();
+    }
+    return c;
+  }
+
+  function node_ancestors() {
+    var node = this, nodes = [node];
+    while (node = node.parent) {
+      nodes.push(node);
+    }
+    return nodes;
+  }
+
+  function node_descendants() {
+    var nodes = [];
+    this.each(function(node) {
+      nodes.push(node);
+    });
+    return nodes;
+  }
+
+  function node_leaves() {
+    var leaves = [];
+    this.eachBefore(function(node) {
+      if (!node.children) {
+        leaves.push(node);
+      }
+    });
+    return leaves;
+  }
+
+  function node_links() {
+    var root = this, links = [];
+    root.each(function(node) {
+      if (node !== root) { // Don’t include the root’s parent, if any.
+        links.push({source: node.parent, target: node});
+      }
+    });
+    return links;
+  }
+
+  function hierarchy(data, children) {
+    var root = new Node(data),
+        valued = +data.value && (root.value = data.value),
+        node,
+        nodes = [root],
+        child,
+        childs,
+        i,
+        n;
+
+    if (children == null) children = defaultChildren;
+
+    while (node = nodes.pop()) {
+      if (valued) node.value = +node.data.value;
+      if ((childs = children(node.data)) && (n = childs.length)) {
+        node.children = new Array(n);
+        for (i = n - 1; i >= 0; --i) {
+          nodes.push(child = node.children[i] = new Node(childs[i]));
+          child.parent = node;
+          child.depth = node.depth + 1;
+        }
+      }
+    }
+
+    return root.eachBefore(computeHeight);
+  }
+
+  function node_copy() {
+    return hierarchy(this).eachBefore(copyData);
+  }
+
+  function defaultChildren(d) {
+    return d.children;
+  }
+
+  function copyData(node) {
+    node.data = node.data.data;
+  }
+
+  function computeHeight(node) {
+    var height = 0;
+    do node.height = height;
+    while ((node = node.parent) && (node.height < ++height));
+  }
+
+  function Node(data) {
+    this.data = data;
+    this.depth =
+    this.height = 0;
+    this.parent = null;
+  }
+
+  Node.prototype = hierarchy.prototype = {
+    constructor: Node,
+    count: node_count,
+    each: node_each,
+    eachAfter: node_eachAfter,
+    eachBefore: node_eachBefore,
+    sum: node_sum,
+    sort: node_sort,
+    path: node_path,
+    ancestors: node_ancestors,
+    descendants: node_descendants,
+    leaves: node_leaves,
+    links: node_links,
+    copy: node_copy
+  };
+
+  function required(f) {
+    if (typeof f !== "function") throw new Error;
+    return f;
+  }
+
+  function constantZero() {
+    return 0;
+  }
+
+  function constant$2(x) {
+    return function() {
+      return x;
+    };
+  }
+
+  function roundNode(node) {
+    node.x0 = Math.round(node.x0);
+    node.y0 = Math.round(node.y0);
+    node.x1 = Math.round(node.x1);
+    node.y1 = Math.round(node.y1);
+  }
+
+  function treemapDice(parent, x0, y0, x1, y1) {
+    var nodes = parent.children,
+        node,
+        i = -1,
+        n = nodes.length,
+        k = parent.value && (x1 - x0) / parent.value;
+
+    while (++i < n) {
+      node = nodes[i], node.y0 = y0, node.y1 = y1;
+      node.x0 = x0, node.x1 = x0 += node.value * k;
+    }
+  }
+
+  var keyPrefix = "$";
+  var preroot = {depth: -1};
+  var ambiguous = {};
+  function defaultId(d) {
+    return d.id;
+  }
+
+  function defaultParentId(d) {
+    return d.parentId;
+  }
+
+  function stratify() {
+    var id = defaultId,
+        parentId = defaultParentId;
+
+    function stratify(data) {
+      var d,
+          i,
+          n = data.length,
+          root,
+          parent,
+          node,
+          nodes = new Array(n),
+          nodeId,
+          nodeKey,
+          nodeByKey = {};
+
+      for (i = 0; i < n; ++i) {
+        d = data[i], node = nodes[i] = new Node(d);
+        if ((nodeId = id(d, i, data)) != null && (nodeId += "")) {
+          nodeKey = keyPrefix + (node.id = nodeId);
+          nodeByKey[nodeKey] = nodeKey in nodeByKey ? ambiguous : node;
+        }
+      }
+
+      for (i = 0; i < n; ++i) {
+        node = nodes[i], nodeId = parentId(data[i], i, data);
+        if (nodeId == null || !(nodeId += "")) {
+          if (root) throw new Error("multiple roots");
+          root = node;
+        } else {
+          parent = nodeByKey[keyPrefix + nodeId];
+          if (!parent) throw new Error("missing: " + nodeId);
+          if (parent === ambiguous) throw new Error("ambiguous: " + nodeId);
+          if (parent.children) parent.children.push(node);
+          else parent.children = [node];
+          node.parent = parent;
+        }
+      }
+
+      if (!root) throw new Error("no root");
+      root.parent = preroot;
+      root.eachBefore(function(node) { node.depth = node.parent.depth + 1; --n; }).eachBefore(computeHeight);
+      root.parent = null;
+      if (n > 0) throw new Error("cycle");
+
+      return root;
+    }
+
+    stratify.id = function(x) {
+      return arguments.length ? (id = required(x), stratify) : id;
+    };
+
+    stratify.parentId = function(x) {
+      return arguments.length ? (parentId = required(x), stratify) : parentId;
+    };
+
+    return stratify;
+  }
+
+  function treemapSlice(parent, x0, y0, x1, y1) {
+    var nodes = parent.children,
+        node,
+        i = -1,
+        n = nodes.length,
+        k = parent.value && (y1 - y0) / parent.value;
+
+    while (++i < n) {
+      node = nodes[i], node.x0 = x0, node.x1 = x1;
+      node.y0 = y0, node.y1 = y0 += node.value * k;
+    }
+  }
+
+  var phi = (1 + Math.sqrt(5)) / 2;
+
+  function squarifyRatio(ratio, parent, x0, y0, x1, y1) {
+    var rows = [],
+        nodes = parent.children,
+        row,
+        nodeValue,
+        i0 = 0,
+        i1 = 0,
+        n = nodes.length,
+        dx, dy,
+        value = parent.value,
+        sumValue,
+        minValue,
+        maxValue,
+        newRatio,
+        minRatio,
+        alpha,
+        beta;
+
+    while (i0 < n) {
+      dx = x1 - x0, dy = y1 - y0;
+
+      // Find the next non-empty node.
+      do sumValue = nodes[i1++].value; while (!sumValue && i1 < n);
+      minValue = maxValue = sumValue;
+      alpha = Math.max(dy / dx, dx / dy) / (value * ratio);
+      beta = sumValue * sumValue * alpha;
+      minRatio = Math.max(maxValue / beta, beta / minValue);
+
+      // Keep adding nodes while the aspect ratio maintains or improves.
+      for (; i1 < n; ++i1) {
+        sumValue += nodeValue = nodes[i1].value;
+        if (nodeValue < minValue) minValue = nodeValue;
+        if (nodeValue > maxValue) maxValue = nodeValue;
+        beta = sumValue * sumValue * alpha;
+        newRatio = Math.max(maxValue / beta, beta / minValue);
+        if (newRatio > minRatio) { sumValue -= nodeValue; break; }
+        minRatio = newRatio;
+      }
+
+      // Position and record the row orientation.
+      rows.push(row = {value: sumValue, dice: dx < dy, children: nodes.slice(i0, i1)});
+      if (row.dice) treemapDice(row, x0, y0, x1, value ? y0 += dy * sumValue / value : y1);
+      else treemapSlice(row, x0, y0, value ? x0 += dx * sumValue / value : x1, y1);
+      value -= sumValue, i0 = i1;
+    }
+
+    return rows;
+  }
+
+  var squarify = (function custom(ratio) {
+
+    function squarify(parent, x0, y0, x1, y1) {
+      squarifyRatio(ratio, parent, x0, y0, x1, y1);
+    }
+
+    squarify.ratio = function(x) {
+      return custom((x = +x) > 1 ? x : 1);
+    };
+
+    return squarify;
+  })(phi);
+
+  function index$2() {
+    var tile = squarify,
+        round = false,
+        dx = 1,
+        dy = 1,
+        paddingStack = [0],
+        paddingInner = constantZero,
+        paddingTop = constantZero,
+        paddingRight = constantZero,
+        paddingBottom = constantZero,
+        paddingLeft = constantZero;
+
+    function treemap(root) {
+      root.x0 =
+      root.y0 = 0;
+      root.x1 = dx;
+      root.y1 = dy;
+      root.eachBefore(positionNode);
+      paddingStack = [0];
+      if (round) root.eachBefore(roundNode);
+      return root;
+    }
+
+    function positionNode(node) {
+      var p = paddingStack[node.depth],
+          x0 = node.x0 + p,
+          y0 = node.y0 + p,
+          x1 = node.x1 - p,
+          y1 = node.y1 - p;
+      if (x1 < x0) x0 = x1 = (x0 + x1) / 2;
+      if (y1 < y0) y0 = y1 = (y0 + y1) / 2;
+      node.x0 = x0;
+      node.y0 = y0;
+      node.x1 = x1;
+      node.y1 = y1;
+      if (node.children) {
+        p = paddingStack[node.depth + 1] = paddingInner(node) / 2;
+        x0 += paddingLeft(node) - p;
+        y0 += paddingTop(node) - p;
+        x1 -= paddingRight(node) - p;
+        y1 -= paddingBottom(node) - p;
+        if (x1 < x0) x0 = x1 = (x0 + x1) / 2;
+        if (y1 < y0) y0 = y1 = (y0 + y1) / 2;
+        tile(node, x0, y0, x1, y1);
+      }
+    }
+
+    treemap.round = function(x) {
+      return arguments.length ? (round = !!x, treemap) : round;
+    };
+
+    treemap.size = function(x) {
+      return arguments.length ? (dx = +x[0], dy = +x[1], treemap) : [dx, dy];
+    };
+
+    treemap.tile = function(x) {
+      return arguments.length ? (tile = required(x), treemap) : tile;
+    };
+
+    treemap.padding = function(x) {
+      return arguments.length ? treemap.paddingInner(x).paddingOuter(x) : treemap.paddingInner();
+    };
+
+    treemap.paddingInner = function(x) {
+      return arguments.length ? (paddingInner = typeof x === "function" ? x : constant$2(+x), treemap) : paddingInner;
+    };
+
+    treemap.paddingOuter = function(x) {
+      return arguments.length ? treemap.paddingTop(x).paddingRight(x).paddingBottom(x).paddingLeft(x) : treemap.paddingTop();
+    };
+
+    treemap.paddingTop = function(x) {
+      return arguments.length ? (paddingTop = typeof x === "function" ? x : constant$2(+x), treemap) : paddingTop;
+    };
+
+    treemap.paddingRight = function(x) {
+      return arguments.length ? (paddingRight = typeof x === "function" ? x : constant$2(+x), treemap) : paddingRight;
+    };
+
+    treemap.paddingBottom = function(x) {
+      return arguments.length ? (paddingBottom = typeof x === "function" ? x : constant$2(+x), treemap) : paddingBottom;
+    };
+
+    treemap.paddingLeft = function(x) {
+      return arguments.length ? (paddingLeft = typeof x === "function" ? x : constant$2(+x), treemap) : paddingLeft;
+    };
+
+    return treemap;
+  }
+
+  (function custom(ratio) {
+
+    function resquarify(parent, x0, y0, x1, y1) {
+      if ((rows = parent._squarify) && (rows.ratio === ratio)) {
+        var rows,
+            row,
+            nodes,
+            i,
+            j = -1,
+            n,
+            m = rows.length,
+            value = parent.value;
+
+        while (++j < m) {
+          row = rows[j], nodes = row.children;
+          for (i = row.value = 0, n = nodes.length; i < n; ++i) row.value += nodes[i].value;
+          if (row.dice) treemapDice(row, x0, y0, x1, y0 += (y1 - y0) * row.value / value);
+          else treemapSlice(row, x0, y0, x0 += (x1 - x0) * row.value / value, y1);
+          value -= row.value;
+        }
+      } else {
+        parent._squarify = rows = squarifyRatio(ratio, parent, x0, y0, x1, y1);
+        rows.ratio = ratio;
+      }
+    }
+
+    resquarify.ratio = function(x) {
+      return custom((x = +x) > 1 ? x : 1);
+    };
+
+    return resquarify;
+  })(phi);
+
+  var slice$2 = [].slice;
 
   var noabort = {};
 
@@ -1821,7 +2335,7 @@
     defer: function(callback) {
       if (typeof callback !== "function" || this._call) throw new Error;
       if (this._error != null) return this;
-      var t = slice$1.call(arguments, 1);
+      var t = slice$2.call(arguments, 1);
       t.push(callback);
       ++this._waiting, this._tasks.push(t);
       poke$1(this);
@@ -2043,7 +2557,7 @@
     }
   };
 
-  function constant$2(x) {
+  function constant$3(x) {
     return function constant() {
       return x;
     };
@@ -2094,7 +2608,7 @@
   function line() {
     var x = x$3,
         y = y$3,
-        defined = constant$2(true),
+        defined = constant$3(true),
         context = null,
         curve = curveLinear,
         output = null;
@@ -2120,15 +2634,15 @@
     }
 
     line.x = function(_) {
-      return arguments.length ? (x = typeof _ === "function" ? _ : constant$2(+_), line) : x;
+      return arguments.length ? (x = typeof _ === "function" ? _ : constant$3(+_), line) : x;
     };
 
     line.y = function(_) {
-      return arguments.length ? (y = typeof _ === "function" ? _ : constant$2(+_), line) : y;
+      return arguments.length ? (y = typeof _ === "function" ? _ : constant$3(+_), line) : y;
     };
 
     line.defined = function(_) {
-      return arguments.length ? (defined = typeof _ === "function" ? _ : constant$2(!!_), line) : defined;
+      return arguments.length ? (defined = typeof _ === "function" ? _ : constant$3(!!_), line) : defined;
     };
 
     line.curve = function(_) {
@@ -2145,9 +2659,9 @@
   function area() {
     var x0 = x$3,
         x1 = null,
-        y0 = constant$2(0),
+        y0 = constant$3(0),
         y1 = y$3,
-        defined = constant$2(true),
+        defined = constant$3(true),
         context = null,
         curve = curveLinear,
         output = null;
@@ -2195,27 +2709,27 @@
     }
 
     area.x = function(_) {
-      return arguments.length ? (x0 = typeof _ === "function" ? _ : constant$2(+_), x1 = null, area) : x0;
+      return arguments.length ? (x0 = typeof _ === "function" ? _ : constant$3(+_), x1 = null, area) : x0;
     };
 
     area.x0 = function(_) {
-      return arguments.length ? (x0 = typeof _ === "function" ? _ : constant$2(+_), area) : x0;
+      return arguments.length ? (x0 = typeof _ === "function" ? _ : constant$3(+_), area) : x0;
     };
 
     area.x1 = function(_) {
-      return arguments.length ? (x1 = _ == null ? null : typeof _ === "function" ? _ : constant$2(+_), area) : x1;
+      return arguments.length ? (x1 = _ == null ? null : typeof _ === "function" ? _ : constant$3(+_), area) : x1;
     };
 
     area.y = function(_) {
-      return arguments.length ? (y0 = typeof _ === "function" ? _ : constant$2(+_), y1 = null, area) : y0;
+      return arguments.length ? (y0 = typeof _ === "function" ? _ : constant$3(+_), y1 = null, area) : y0;
     };
 
     area.y0 = function(_) {
-      return arguments.length ? (y0 = typeof _ === "function" ? _ : constant$2(+_), area) : y0;
+      return arguments.length ? (y0 = typeof _ === "function" ? _ : constant$3(+_), area) : y0;
     };
 
     area.y1 = function(_) {
-      return arguments.length ? (y1 = _ == null ? null : typeof _ === "function" ? _ : constant$2(+_), area) : y1;
+      return arguments.length ? (y1 = _ == null ? null : typeof _ === "function" ? _ : constant$3(+_), area) : y1;
     };
 
     area.lineX0 =
@@ -2232,7 +2746,7 @@
     };
 
     area.defined = function(_) {
-      return arguments.length ? (defined = typeof _ === "function" ? _ : constant$2(!!_), area) : defined;
+      return arguments.length ? (defined = typeof _ === "function" ? _ : constant$3(!!_), area) : defined;
     };
 
     area.curve = function(_) {
@@ -3166,7 +3680,7 @@
   var array$1 = Array.prototype;
 
   var map$2 = array$1.map;
-  var slice$3 = array$1.slice;
+  var slice$4 = array$1.slice;
 
   var implicit = {name: "implicit"};
 
@@ -3175,7 +3689,7 @@
         domain = [],
         unknown = implicit;
 
-    range = range == null ? [] : slice$3.call(range);
+    range = range == null ? [] : slice$4.call(range);
 
     function scale(d) {
       var key = d + "", i = index.get(key);
@@ -3195,7 +3709,7 @@
     };
 
     scale.range = function(_) {
-      return arguments.length ? (range = slice$3.call(_), scale) : range.slice();
+      return arguments.length ? (range = slice$4.call(_), scale) : range.slice();
     };
 
     scale.unknown = function(_) {
@@ -3834,7 +4348,7 @@
     };
   }
 
-  function constant$3(x) {
+  function constant$4(x) {
     return function() {
       return x;
     };
@@ -3854,18 +4368,18 @@
 
   function hue(a, b) {
     var d = b - a;
-    return d ? linear$2(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant$3(isNaN(a) ? b : a);
+    return d ? linear$2(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant$4(isNaN(a) ? b : a);
   }
 
   function gamma(y) {
     return (y = +y) === 1 ? nogamma : function(a, b) {
-      return b - a ? exponential(a, b, y) : constant$3(isNaN(a) ? b : a);
+      return b - a ? exponential(a, b, y) : constant$4(isNaN(a) ? b : a);
     };
   }
 
   function nogamma(a, b) {
     var d = b - a;
-    return d ? linear$2(a, d) : constant$3(isNaN(a) ? b : a);
+    return d ? linear$2(a, d) : constant$4(isNaN(a) ? b : a);
   }
 
   var interpolateRgb = (function rgbGamma(y) {
@@ -4033,7 +4547,7 @@
 
   function interpolateValue(a, b) {
     var t = typeof b, c;
-    return b == null || t === "boolean" ? constant$3(b)
+    return b == null || t === "boolean" ? constant$4(b)
         : (t === "number" ? interpolateNumber
         : t === "string" ? ((c = color(b)) ? (b = c, interpolateRgb) : interpolateString)
         : b instanceof color ? interpolateRgb
@@ -4187,7 +4701,7 @@
   cubehelix$1(hue);
   var interpolateCubehelixLong = cubehelix$1(nogamma);
 
-  function constant$4(x) {
+  function constant$5(x) {
     return function() {
       return x;
     };
@@ -4202,7 +4716,7 @@
   function deinterpolate(a, b) {
     return (b -= (a = +a))
         ? function(x) { return (x - a) / b; }
-        : constant$4(b);
+        : constant$5(b);
   }
 
   function deinterpolateClamp(deinterpolate) {
@@ -4287,11 +4801,11 @@
     };
 
     scale.range = function(_) {
-      return arguments.length ? (range = slice$3.call(_), rescale()) : range.slice();
+      return arguments.length ? (range = slice$4.call(_), rescale()) : range.slice();
     };
 
     scale.rangeRound = function(_) {
-      return range = slice$3.call(_), interpolate = interpolateRound, rescale();
+      return range = slice$4.call(_), interpolate = interpolateRound, rescale();
     };
 
     scale.clamp = function(_) {
@@ -4389,7 +4903,7 @@
     function deinterpolate(a, b) {
       return (b = raise(b, exponent) - (a = raise(a, exponent)))
           ? function(x) { return (raise(x, exponent) - a) / b; }
-          : constant$4(b);
+          : constant$5(b);
     }
 
     function reinterpolate(a, b) {
@@ -4431,7 +4945,7 @@
     };
 
     scale.range = function(_) {
-      return arguments.length ? (n = (range = slice$3.call(_)).length - 1, rescale()) : range.slice();
+      return arguments.length ? (n = (range = slice$4.call(_)).length - 1, rescale()) : range.slice();
     };
 
     scale.invertExtent = function(y) {
@@ -4449,6 +4963,37 @@
     };
 
     return linearish(scale);
+  }
+
+  function threshold$1() {
+    var domain = [0.5],
+        range = [0, 1],
+        n = 1;
+
+    function scale(x) {
+      if (x <= x) return range[bisectRight(domain, x, 0, n)];
+    }
+
+    scale.domain = function(_) {
+      return arguments.length ? (domain = slice$4.call(_), n = Math.min(domain.length, range.length - 1), scale) : domain.slice();
+    };
+
+    scale.range = function(_) {
+      return arguments.length ? (range = slice$4.call(_), n = Math.min(domain.length, range.length - 1), scale) : range.slice();
+    };
+
+    scale.invertExtent = function(y) {
+      var i = range.indexOf(y);
+      return [domain[i - 1], domain[i]];
+    };
+
+    scale.copy = function() {
+      return threshold$1()
+          .domain(domain)
+          .range(range);
+    };
+
+    return scale;
   }
 
   var t0$1 = new Date;
@@ -5290,7 +5835,7 @@
 
   colors("3182bd6baed69ecae1c6dbefe6550dfd8d3cfdae6bfdd0a231a35474c476a1d99bc7e9c0756bb19e9ac8bcbddcdadaeb636363969696bdbdbdd9d9d9");
 
-  colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b0d58c564bc49c94e377c2f7b6d27f7f7fc7c7c7bcbd22dbdb8d17becf9edae5");
+  var category20 = colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b0d58c564bc49c94e377c2f7b6d27f7f7fc7c7c7bcbd22dbdb8d17becf9edae5");
 
   interpolateCubehelixLong(cubehelix(300, 0.5, 0.0), cubehelix(-240, 0.5, 1.0));
 
@@ -6022,13 +6567,13 @@
     querySelectorAll: function(selector) { return this._parent.querySelectorAll(selector); }
   };
 
-  function constant$5(x) {
+  function constant$6(x) {
     return function() {
       return x;
     };
   }
 
-  var keyPrefix = "$"; // Protect against keys like “__proto__”.
+  var keyPrefix$1 = "$"; // Protect against keys like “__proto__”.
 
   function bindIndex(parent, group, enter, update, exit, data) {
     var i = 0,
@@ -6069,7 +6614,7 @@
     // If multiple nodes have the same key, the duplicates are added to exit.
     for (i = 0; i < groupLength; ++i) {
       if (node = group[i]) {
-        keyValues[i] = keyValue = keyPrefix + key.call(node, node.__data__, i, group);
+        keyValues[i] = keyValue = keyPrefix$1 + key.call(node, node.__data__, i, group);
         if (keyValue in nodeByKeyValue) {
           exit[i] = node;
         } else {
@@ -6082,7 +6627,7 @@
     // If there a node associated with this key, join and add it to update.
     // If there is not (or the key is a duplicate), add it to enter.
     for (i = 0; i < dataLength; ++i) {
-      keyValue = keyPrefix + key.call(parent, data[i], i, data);
+      keyValue = keyPrefix$1 + key.call(parent, data[i], i, data);
       if (node = nodeByKeyValue[keyValue]) {
         update[i] = node;
         node.__data__ = data[i];
@@ -6111,7 +6656,7 @@
         parents = this._parents,
         groups = this._groups;
 
-    if (typeof value !== "function") value = constant$5(value);
+    if (typeof value !== "function") value = constant$6(value);
 
     for (var m = groups.length, update = new Array(m), enter = new Array(m), exit = new Array(m), j = 0; j < m; ++j) {
       var parent = parents[j],
@@ -7434,7 +7979,7 @@
     return null;
   }
 
-  var slice$4 = Array.prototype.slice;
+  var slice$5 = Array.prototype.slice;
 
   function identity$5(x) {
     return x;
@@ -7560,15 +8105,15 @@
     };
 
     axis.ticks = function() {
-      return tickArguments = slice$4.call(arguments), axis;
+      return tickArguments = slice$5.call(arguments), axis;
     };
 
     axis.tickArguments = function(_) {
-      return arguments.length ? (tickArguments = _ == null ? [] : slice$4.call(_), axis) : tickArguments.slice();
+      return arguments.length ? (tickArguments = _ == null ? [] : slice$5.call(_), axis) : tickArguments.slice();
     };
 
     axis.tickValues = function(_) {
-      return arguments.length ? (tickValues = _ == null ? null : slice$4.call(_), axis) : tickValues && tickValues.slice();
+      return arguments.length ? (tickValues = _ == null ? null : slice$5.call(_), axis) : tickValues && tickValues.slice();
     };
 
     axis.tickFormat = function(_) {
@@ -8839,7 +9384,7 @@
         + "z";
   }
 
-  function index$1(projection, context) {
+  function index$3(projection, context) {
     var pointRadius = 4.5,
         projectionStream,
         contextStream;
@@ -9808,7 +10353,7 @@
     }
   }
 
-  function constant$7(x) {
+  function constant$8(x) {
     return function() {
       return x;
     };
@@ -9951,15 +10496,15 @@
     }
 
     drag.filter = function(_) {
-      return arguments.length ? (filter = typeof _ === "function" ? _ : constant$7(!!_), drag) : filter;
+      return arguments.length ? (filter = typeof _ === "function" ? _ : constant$8(!!_), drag) : filter;
     };
 
     drag.container = function(_) {
-      return arguments.length ? (container = typeof _ === "function" ? _ : constant$7(_), drag) : container;
+      return arguments.length ? (container = typeof _ === "function" ? _ : constant$8(_), drag) : container;
     };
 
     drag.subject = function(_) {
-      return arguments.length ? (subject = typeof _ === "function" ? _ : constant$7(_), drag) : subject;
+      return arguments.length ? (subject = typeof _ === "function" ? _ : constant$8(_), drag) : subject;
     };
 
     drag.on = function() {
@@ -9970,7 +10515,7 @@
     return drag;
   }
 
-  function constant$8(x) {
+  function constant$9(x) {
     return function() {
       return x;
     };
@@ -10939,11 +11484,11 @@
     };
 
     voronoi.x = function(_) {
-      return arguments.length ? (x = typeof _ === "function" ? _ : constant$8(+_), voronoi) : x;
+      return arguments.length ? (x = typeof _ === "function" ? _ : constant$9(+_), voronoi) : x;
     };
 
     voronoi.y = function(_) {
-      return arguments.length ? (y = typeof _ === "function" ? _ : constant$8(+_), voronoi) : y;
+      return arguments.length ? (y = typeof _ === "function" ? _ : constant$9(+_), voronoi) : y;
     };
 
     voronoi.extent = function(_) {
@@ -10958,6 +11503,7 @@
   }
 
   exports.ascending = ascending;
+  exports.descending = descending;
   exports.extent = extent;
   exports.max = max;
   exports.min = min;
@@ -10979,6 +11525,10 @@
   exports.forceSimulation = simulation;
   exports.forceX = x$2;
   exports.forceY = y$2;
+  exports.stratify = stratify;
+  exports.treemap = index$2;
+  exports.treemapSlice = treemapSlice;
+  exports.treemapSquarify = squarify;
   exports.queue = queue;
   exports.area = area;
   exports.line = line;
@@ -10994,7 +11544,9 @@
   exports.scaleQuantize = quantize$1;
   exports.scalePow = pow;
   exports.scaleSequential = sequential;
+  exports.scaleThreshold = threshold$1;
   exports.interpolateMagma = magma;
+  exports.schemeCategory20 = category20;
   exports.schemeOranges = scheme$26;
   exports.interpolateOranges = Oranges;
   exports.interpolateRdYlGn = RdYlGn;
@@ -11017,7 +11569,7 @@
   exports.transition = transition;
   exports.axisBottom = axisBottom;
   exports.axisLeft = axisLeft;
-  exports.geoPath = index$1;
+  exports.geoPath = index$3;
   exports.geoKavrayskiy7 = kavrayskiy7;
   exports.drag = drag;
   exports.formatDefaultLocale = defaultLocale;

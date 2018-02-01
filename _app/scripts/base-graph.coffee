@@ -173,9 +173,10 @@ class window.BaseGraph
   # to overdrive
   updateGraphDimensions: ->
     # update svg dimension
-    @svg
-      .attr 'width',  @containerWidth
-      .attr 'height', @containerHeight
+    if @svg
+      @svg
+        .attr 'width',  @containerWidth
+        .attr 'height', @containerHeight
     # update scales dimensions
     if @x
       @x.range @getScaleXRange()

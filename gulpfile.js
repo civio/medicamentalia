@@ -49,6 +49,7 @@ var js_paths = {
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+    'node_modules/scrollama/build/scrollama.js',
     'node_modules/topojson-client/dist/topojson-client.js',
     '_app/scripts/vendor/selection-sharer.js',
     '_app/scripts/vendor/d3-bundle.js',
@@ -85,6 +86,18 @@ var js_paths = {
     '_app/scripts/base-graph.coffee',
     '_app/scripts/bar-graph.coffee',
     '_app/scripts/main-superbugs.coffee'
+  ],
+  // contraceptives.js sources
+  contraceptives: [
+    '_app/scripts/base-graph.coffee',
+    '_app/scripts/bar-horizontal-graph.coffee',
+    '_app/scripts/map-graph.coffee',
+    '_app/scripts/contraceptives-use-map-graph.coffee',
+    '_app/scripts/scatterplot-graph.coffee',
+    '_app/scripts/scatterplot-unmet-needs-graph.coffee',
+    '_app/scripts/treemap-graph.coffee',
+    '_app/scripts/contraceptives-use-treemap-graph.coffee',
+    '_app/scripts/main-contraceptives.coffee'
   ]
 };
 
@@ -203,6 +216,24 @@ gulp.task('js-superbugs', function() {
     .on('error', gutil.log);
 });
 
+gulp.task('js-contraceptives', function() {
+  var c = coffee();
+  c.on('error',function(e){
+    gutil.log(e);
+    c.end();
+  });
+  return gulp.src(js_paths.contraceptives)
+    .pipe(sourcemaps.init())
+    .pipe(c)
+    .pipe(concat('contraceptives.js'))
+    .pipe(sourcemaps.write())
+    .pipe(production(uglify(uglifyOptions)))
+    .pipe(gulp.dest('_site/assets/scripts'))
+    .pipe(reload({stream:true}))
+    .pipe(gulp.dest('assets/scripts'))
+    .on('error', gutil.log);
+});
+
 gulp.task('js-farma', function() {
   var c = coffee();
   c.on('error',function(e){
@@ -222,7 +253,7 @@ gulp.task('js-farma', function() {
 });
 
 // Create a js task wich call all js task dynamically defined
-gulp.task('js', ['popcorn', 'js-main', 'js-access', 'js-vaccines', 'js-superbugs']);
+gulp.task('js', ['popcorn', 'js-main', 'js-access', 'js-vaccines', 'js-superbugs', 'js-contraceptives']);
 
 // Jekyll build
 gulp.task('jekyll-build', function(done) {
