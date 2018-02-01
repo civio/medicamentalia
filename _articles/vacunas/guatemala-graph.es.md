@@ -1,7 +1,7 @@
 ---
-category:         vaccines
+category:         vacunas
 title:            Niveles de vacunación
-subtitle:        Un escudo con agujeros
+subtitle:         Un escudo con agujeros
 description:      La mitad de los países del mundo no alcanzan porcentajes de inmunización suficientes para frenar la transmisión de enfermedades como el sarampión
 home_description: La mitad de los países del mundo no alcanzan niveles de inmunización suficientes para frenar la transmisión de enfermedades como el sarampión
 img:              articles/home-patentes-1040x694.jpg

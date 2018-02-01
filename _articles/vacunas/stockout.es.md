@@ -1,5 +1,5 @@
 ---
-category:         vaccines
+category:         vacunas
 title:            Desabastecimiento
 subtitle:         Vacunas que no llegan
 description:      El mercado de las vacunas es un oligopolio concentrado en cuatro grandes empresas. Cuando un laboratorio tiene problemas de producción, los estados tienen pocas alternativas para satisfacer la demanda

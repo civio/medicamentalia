@@ -1,5 +1,5 @@
 ---
-category:         vaccines
+category:         vacunas
 title:            Antivacunas
 subtitle:         Cuando el problema no es solo de recursos
 description:      Países de renta alta han bajado la guardia y rebajado sus porcentajes de inmunización. En algunos, la confianza en las vacunas empieza a flojear   

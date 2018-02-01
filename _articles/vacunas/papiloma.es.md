@@ -1,5 +1,5 @@
 ---
-category:         vaccines
+category:         vacunas
 title:            VPH
 subtitle:         Vacunas contra el cáncer
 description:      "La inmunización contra el virus del papiloma humano, junto al cribado y el tratamiento precáncer, puede eliminar por completo el cáncer de cérvix. En contra: el elevado coste de la vacuna y las reticencias culturales y sociales"

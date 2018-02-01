@@ -12,7 +12,7 @@
         <a class="navbar-brand" href="{{ site.baseurl }}{% if page.lang == 'es' %}/es{% endif %}/" title="{{ site.title }}"><h1>{{ site.title }}</h1></a>
         {% if page.layout == 'article' %}
         {% if page.category %}
-        <a href="{{ site.baseurl }}{% if page.lang == 'es' %}/es{% endif %}/{{ page.category }}/" class="navbar-category" title="{{ site.data.locales[page.lang].categories[page.category].title }}">
+        <a href="{{ site.baseurl }}/{{ page.category }}/" class="navbar-category" title="{{ site.data.locales[page.lang].categories[page.category].title }}">
           <h2>{{ site.data.locales[page.lang].categories[page.category].title }}</h2>
         </a>
         {% endif %}

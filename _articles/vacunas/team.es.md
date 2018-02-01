@@ -1,5 +1,5 @@
 ---
-category:   vaccines
+category:   vacunas
 title:      Metodología
 img:        articles/home-vaccines-team.jpg
 

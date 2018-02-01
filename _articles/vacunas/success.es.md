@@ -1,5 +1,5 @@
 ---
-category:         vaccines
+category:         vacunas
 title:            Éxitos
 subtitle:         Plantando cara a las enfermedades desde el siglo XVIII
 description:      Han ayudado a acabar con enfermedades y están a punto de aniquilar otras. Repasamos los logros de las vacunas y sus protagonistas

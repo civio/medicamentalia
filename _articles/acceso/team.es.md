@@ -1,5 +1,5 @@
 ---
-category:   access
+category:   acceso
 title:      Metodología
 img:        articles/home-access-team.jpg
 

@@ -1,13 +1,19 @@
 en:
+  acceso: access
+  vacunas: vaccines
+  anticonceptivos: contraceptives
   articles: Articles
   by: By
   categories:
-    access: 
+    access:
       title: Access
       description: A journalistic investigation into access to medicines around the world
-    vaccines: 
+    vaccines:
       title: Vaccines
       description: Journalistic investigation on immunization levels and vaccine prices
+    contraceptives:
+      title: Contraceptives
+      description: Journalistic investigation into access to contraceptives around the world
     farma:
       title: Pharma
   date:
@@ -38,15 +44,21 @@ en:
     send: Send
     subscribe: SUBSCRIBE TO OUR NEWSLETTER
 es:
+  access: acceso
+  vaccines: vacunas 
+  contraceptives: anticonceptivos 
   articles: Artículos
   by: Por
   categories:
-    access: 
+    acceso:
       title: Acceso
       description: Investigación periodística sobre el acceso a medicamentos en todo el mundo
-    vaccines: 
+    vacunas:
       title: Vacunas
       description: Investigación periodística sobre las diferencias en niveles de inmunización y precios de vacunas
+    anticonceptivos:
+      title: Anticonceptivos
+      description: Investigación periodística sobre el acceso a anticonceptivos en todo el mundo
     farma:
       title: Farma
   date:

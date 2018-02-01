@@ -1,5 +1,5 @@
 ---
-category:         contraceptives
+category:         anticonceptivos
 title:            Ponte en su piel
 subtitle:         ...
 description:      ...

@@ -1,5 +1,5 @@
 ---
-category:         contraceptives
+category:         anticonceptivos
 title:            Datos
 subtitle:         ...
 description:      ...
