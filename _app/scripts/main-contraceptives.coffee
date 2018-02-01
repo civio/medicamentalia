@@ -341,8 +341,13 @@
 
   setupContraceptivesReasons = (data_reasons, countries) ->
 
-    reasonOpposed = []
     reasonHealth = []
+    reasonNotSex = []
+    reasonOpposed = []
+    reasonOpposedRespondent = []
+    reasonOpposedHusband = []
+    reasonOpposedOthers = []
+    reasonOpposedReligious = []
 
     reasonsKeys = Object.keys(reasons_names)
 
@@ -352,33 +357,71 @@
         d[reason] = +d[reason]
         if d[reason] > 1
           console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
-
       item = countries.filter (country) -> country.code2 == d.code
       if item and item[0]
         d.name = item[0]['name_'+lang]
       else
         console.log 'no country', d.code
-      reasonOpposed.push
-        name: d.name
-        value: 100*(d.i+d.j+d.k+d.l) # respondent opposed + husband/partner opposed + others opposed + religious prohibition
       reasonHealth.push
         name: d.name
         value: 100*(d.o+d.p+d.t) # health concerns + fear of side effects/health concerns + interferes with bodys processes
+      reasonNotSex.push
+        name: d.name
+        value: 100*d.b # not having sex
+      reasonOpposed.push
+        name: d.name
+        value: 100*(d.i+d.j+d.k+d.l) # respondent opposed + husband/partner opposed + others opposed + religious prohibition
+      reasonOpposedRespondent.push
+        name: d.name
+        value: 100*d.i # respondent opposed
+      reasonOpposedHusband.push
+        name: d.name
+        value: 100*d.j # rhusband/partner opposed
+      reasonOpposedOthers.push
+        name: d.name
+        value: 100*d.k #others opposed
+      reasonOpposedReligious.push
+        name: d.name
+        value: 100*d.l # religious prohibition
 
-    reasonOpposed.sort (a,b) -> return b.value-a.value
-    reasonHealth.sort (a,b) -> return b.value-a.value
+    sortArray = (a,b) -> return b.value-a.value
+    reasonHealth.sort sortArray
+    reasonNotSex.sort sortArray
+    reasonOpposed.sort sortArray
+    reasonOpposedRespondent.sort sortArray
+    reasonOpposedHusband.sort sortArray
+    reasonOpposedOthers.sort sortArray
+    reasonOpposedReligious.sort sortArray
 
-    reasonOpposedGraph = new window.BarHorizontalGraph('contraceptives-reasons-opposed',
+    new window.BarHorizontalGraph('contraceptives-reasons-health',
       key:
         id: 'name'
-        x: 'value')
-    reasonOpposedGraph.setData reasonOpposed.slice(0,5)
-
-    reasonHealthGraph = new window.BarHorizontalGraph('contraceptives-reasons-health',
+        x: 'value').setData reasonHealth.slice(0,5)
+    new window.BarHorizontalGraph('contraceptives-reasons-opposed',
       key:
         id: 'name'
-        x: 'value')
-    reasonHealthGraph.setData reasonHealth.slice(0,5)
+        x: 'value').setData reasonOpposed.slice(0,5)
+    new window.BarHorizontalGraph('contraceptives-reasons-not-sex',
+      key:
+        id: 'name'
+        x: 'value').setData reasonNotSex.slice(0,5)
+    new window.BarHorizontalGraph('contraceptives-reasons-opposed-respondent',
+      key:
+        id: 'name'
+        x: 'value').setData reasonOpposedRespondent.slice(0,5)
+    new window.BarHorizontalGraph('contraceptives-reasons-opposed-husband',
+      key:
+        id: 'name'
+        x: 'value').setData reasonOpposedHusband.slice(0,5)
+    new window.BarHorizontalGraph('contraceptives-reasons-opposed-others',
+      key:
+        id: 'name'
+        x: 'value').setData reasonOpposedOthers.slice(0,5)
+    new window.BarHorizontalGraph('contraceptives-reasons-opposed-religious',
+      key:
+        id: 'name'
+        x: 'value').setData reasonOpposedReligious.slice(0,5)
+
 
   # Contraceptives Use Treenap
   # --------------------------
