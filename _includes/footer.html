@@ -132,15 +132,13 @@
 <script type='text/javascript' src='{{ site.assetsurl }}/scripts/main.js?v=@version@'></script>
 
 {% if page.collection == 'articles' %}
-  {% if page.category  == 'access' %}
+  {% if page.category  == 'access' or page.category  == 'acceso' %}
     <script type='text/javascript' src='{{ site.assetsurl }}/scripts/access.js?v=@version@'></script>
-  {% elsif page.category  == 'vaccines' %}
+  {% elsif page.category  == 'vaccines' or page.category  == 'vacunas' %}
     <script type='text/javascript' src='{{ site.assetsurl }}/scripts/popcorn.js'></script>
     <script type='text/javascript' src='{{ site.assetsurl }}/scripts/vaccines.js?v=@version@'></script>
-  {% elsif page.category  == 'contraceptives' %}  
+  {% elsif page.category  == 'contraceptives' or page.category  == 'anticonceptivos' %}  
     <script type='text/javascript' src='{{ site.assetsurl }}/scripts/contraceptives.js?v=@version@'></script>
-  {% elsif page.category  == 'farma' %}
-    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/farma.js?v=@version@'></script>
   {% elsif page.ref  == 'superbugs' %}  
     <script type='text/javascript' src='{{ site.assetsurl }}/scripts/superbugs.js?v=@version@'></script>
   {% endif %}
