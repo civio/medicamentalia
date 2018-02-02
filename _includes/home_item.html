@@ -15,6 +15,8 @@
       {% if article.home_description %}
       <h3>{{ article.title }}</h3>
       <h4 class="portfolio-box-caption-description">{{ article.home_description }}</h4>
+      {% elsif article.title %}
+      <h3>{{ article.title }}</h3>
       {% else %}
       <h3 class="no-uppercase">{{ article.subtitle }}</h3>
       {% endif %}
