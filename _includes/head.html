@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{% if page.category %}{{ page.category | capitalize | escape }} | {% endif %}Medicamentalia</title>
-  <meta name="description" content="{% if page.description %}{% if page.subtitle %}{{ page.subtitle | escape | strip }}. {% endif %}{{ page.description | escape }}{% else %}{{ site.data.locales[page.lang].description }}{% endif %}">
+  <meta name="description" content="{% if page.meta_description %}{{ page.meta_description | escape }}{% elsif page.description %}{% if page.subtitle %}{{ page.subtitle | escape }}. {% endif %}{{ page.description | escape }}{% else %}{{ site.data.locales[page.lang].description }}{% endif %}">
   <meta name="google-site-verification" content="8o5mV2z-HGwt100VJC_8aweAUsLKpvs86NdLpZuWxhw" />
 
   <!-- Fb Open Graph Meta -->
