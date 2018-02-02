@@ -2429,7 +2429,23 @@ body.guatemala-graph {
   }
 }
 
-#contraceptives-app-container{
+#contraceptives-app{
+
+  .select-country{
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .contraceptives-app-data,
+  .contraceptives-app-filters{
+    text-align: left;
+  }
+
+  .contraceptives-app-filters p{
+    margin-bottom: 5px;
+  }
+  
+  /*
   .scroll-text{
     max-width: 560px;
 
@@ -2443,7 +2459,15 @@ body.guatemala-graph {
       padding: 15px;
     }
   }
+  */
 }
+
+#contraceptives-app-img{
+  width: 150px;
+  height: auto;
+  margin: 20px auto 0;
+}
+
 
 #treemap-contraceptives-use{
   position: relative;

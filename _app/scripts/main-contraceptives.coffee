@@ -452,7 +452,12 @@
   # -------------------
 
   setupContraceptivesApp = ->
-    setupScrollama 'contraceptives-app-container'
+    # setupScrollama 'contraceptives-app-container'
+    $('#contraceptives-app .select-country')
+      .change ->
+        console.log 'change', $(this).val()
+      .val userCountry.code
+      .trigger 'change'
 
 
   # Setup
