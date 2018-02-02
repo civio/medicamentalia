@@ -22,7 +22,7 @@ lang:       es
 <div class="container page-content" markdown="1">
 <div class="page-content-container" markdown="1">
 
-## Nosotros
+### Nosotros
 
 Medicamentalia-Vacunas es un trabajo periodístico de [Civio](http://www.civio.es/){:target="_blank"} sobre la situación de la vacunación en el mundo y que combina análisis de datos con trabajo de campo en varios países. Es una continuación de nuestra primera investigación, centrada en el [acceso a medicinas esenciales](/access/) y que fue galardonada con el premio a la Mejor Investigación del año (redacción pequeña) de los Data Journalism Awards y el Premio Gabriel García Márquez en su categoría de Innovación. 
 
@@ -41,7 +41,7 @@ Para sacar adelante Medicamentalia Vacunas han trabajado los miembros de Civio, 
 - **Serusha Govender** y **Anne Gonschorek**. Vídeo en Sudáfrica.
 
 {: #colaboradores}
-### Colaboradores: 
+#### Colaboradores: 
 
 - **Phil Smart**. Traducción español-inglés.
 - **Asier Andrés**. Apoyo a la investigación en Guatemala.
@@ -49,7 +49,7 @@ Para sacar adelante Medicamentalia Vacunas han trabajado los miembros de Civio, 
 - **Santi Cogolludo**. Fotos entrevista Mireia Díaz en Barcelona.
 
 {: #agradecimientos}
-### Agradecimientos
+#### Agradecimientos
 Este proyecto no habría sido posible sin el apoyo inicial de una beca de **Journalism Grants**. Queremos agradecer al [European Journalism Center](http://ejc.net/){:target="_blank"} el patrocinio de esta investigación, del mismo modo que ya lo hicieron en la primera fase de Medicamentalia, y su infinita paciencia y comprensión con los problemas que han ido retrasando el lanzamiento; en especial a **Diana Lungu**. 
 
 También dieron su sí al proyecto, antes de que fuera una realidad, nuestros *media partners*. Gracias a [Correctiv](https://correctiv.org/en/){:target="_blank"}, [El Mundo](http://www.elmundo.es/){:target="_blank"}, [Euronews](http://www.euronews.com/){:target="_blank"}, [La Sexta](http://www.lasexta.com/){:target="_blank"}, [The Bureau of Investigative Journalism](https://www.thebureauinvestigates.com/){:target="_blank"}, [Il Sole](http://www.ilsole24ore.com/){:target="_blank"} y [Euro Scientist](http://www.euroscientist.com/){:target="_blank"}, por la confianza y el apoyo. Sin ellos, llegaríamos a mucha menos gente y buena parte del trabajo dedicado a esta investigación sería en vano. En especial, **Hugo Garrido**, **Verónica Ramírez** y **Hristio Boytchev** nos ayudaron a adaptar los contenidos para sus respectivos medios. 
@@ -60,10 +60,10 @@ Gracias a todas las personas que cedieron su tiempo y su sabiduría en las entre
 
 {% include gallery.html id="team" %}
 
-## Metodología
+### Metodología
 
 {: #investigacion-previa}
-### Investigación previa
+#### Investigación previa
 
 Como en todos los proyectos de Civio, antes de dar el primer paso hacia adelante tuvimos que dar dos hacia atrás: tocaba zambullirse a fondo en el tema. Mientras en la primera fase de Medicamentalia nos dedicamos a investigar acceso a medicamentos -precios, sistema de patentes...- en esta segunda fase queríamos tratar el tema de las vacunas de forma internacional y, esta vez, ir más allá de los precios y fijarnos en otros elementos como los niveles de inmunización, qué problemas existían, cómo funcionaban los sistemas de compra conjunta y los problemas de abastecimiento, entre otros asuntos. 
 
@@ -74,19 +74,19 @@ No éramos los primeros en tratar un tema así, y *nos inspiraron investigacione
 Además, estudiamos a fondo los análisis sobre precios y comparativa entre países, así como del peso de la transparencia en las negociaciones entre estados y farmacéuticas, realizados hasta el momento, así como toda la información sobre tendencias del que acompaña al proyecto [V3P](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/), de la Organización Mundial de la Salud (OMS). En paralelo, analizamos el posicionamiento de la industria y las distintas organizaciones implicadas, como GAVI, Médicos Sin Fronteras y la propia OMS. 
 
 {: #los-datos}
-### Los datos
+#### Los datos
 Para esta investigación necesitábamos cruzar distintas bases de datos: niveles de inmunización, casos por enfermedad, muertes por enfermedad, calendarios de vacunación, niveles de *stockouts*, presupuestos públicos destinados a las campañas de inmunización, precios de compra de vacunas por parte de estados y organizaciones, además de elementos básicos necesarios para poner en contexto como población o Producto Interior Bruto por país. La mayoría de los datos recogidos, aunque están actualizados a diciembre de 2016, se refieren a información que abarca hasta 2015.
 
 A veces, los encontramos en bases de datos fáciles de reutilizar, aunque requerían alguna limpieza. Otras, la información estaba en algunas páginas web pero era necesario hacer *scraping* para obtener una versión con la que pudiéramos trabajar. Y, para las ocasiones en las que todo era más complicado, tuvimos que crearlos a partir de distintas fuentes de datos. 
 
-#### ¿Qué vacunas analizamos?
+##### ¿Qué vacunas analizamos?
 Empezamos teniendo en cuenta la [lista de vacunas esenciales](http://www.who.int/medicines/publications/essentialmedicines/en/){:target="_blank"} de la OMS. Estudiamos las recomendaciones para cada una y los calendarios de vacunación, para intentar abarcar aquellas más comunes en todo el planeta, lo que permitiría comparar entre diferentes países. 
 
 Realizamos unas fichas de cada vacuna para relacionarlas con su enfermedad y entender mejor su funcionamiento: dosis, recomendaciones... Así, tuvimos que excluir de algunos análisis la relación entre enfermedades y vacunas que no tenían un solo origen, como pasa con la meningitis -cubierta por diferentes tipos de vacunas según el tipo-, por ejemplo. Aunque la lista es amplia, según el análisis o los resultados nombramos una u otra vacuna en las investigaciones. No significa que el resto no sean importantes, sino que hemos encontrado menos información relevante o no eran comparables. 
 
 **Estos datos no son perfectos**, pero sí lo suficientemente significativos para extraer conclusiones. De hecho, [una de las preocupaciones](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1){:target="_blank"} del grupo de expertos en vacunas de la OMS es su baja calidad. ¿Cómo atajar un problema si no tenemos toda la información objetiva disponible sobre el mismo? De algunos países no se recogen datos de inmunización. Además, algunas de las cifras recogidas por la OMS en sus estadísticas no acaban de encajar. Un claro ejemplo de este problema es que las estadísticas de casos de cada enfermedad de la OMS y del European Centre for Disease Prevention and Control (ECDC) no coinciden del todo. 
 
-#### Datos de inmunización
+##### Datos de inmunización
 Son la base de buena parte de nuestras investigaciones y muestran qué porcentaje de personas de entre las que deben recibir la vacuna lo ha hecho. Los datos van desde 1980 -en algunas enfermedades- hasta 2015. La [fuente](http://www.who.int/immunization/monitoring_surveillance/data/Coverage_survey_data.xls?ua=1){:target="_blank"} es la OMS. También revisamos su [Atlas interactivo de inmunización](http://gamapserver.who.int/gho/interactive_charts/immunization/polio/atlas.html){:target="_blank"}, pero nos faltaba algo importante: relacionar esos niveles de cobertura con PIB y otras variables, no solo con su posición geográfica.
 
 Aunque son datos bastante completos y muy útiles para nuestra investigación, tenemos que tener en cuenta que son **estimaciones**. 
@@ -107,7 +107,7 @@ Existen algunas excepciones concretas. Por ejemplo, para la segunda dosis de la 
 
 Para la **inmunización de rebaño** hemos usado un 95% para el sarampión -por ser la cifra en la que coinciden más investigaciones-. Para la línea de la vacuna DTP utilizamos un 80%, que es la recomendación mínima de cobertura que establece el grupo SAGE de la OMS. Según los cálculos para obtener la inmunización de rebaño, la polio estaría entre un 80-86%. Utilizamos el 80%, el más bajo dentro de esa franja. Dos fuentes ([aquí](http://www.who.int/bulletin/volumes/86/2/07-040089/en/){:target="_blank"} y [aquí](http://cid.oxfordjournals.org/content/52/7/911.full){:target="_blank"}) sobre el tema, aunque hay muchas más.
 
-#### Casos y muertes por enfermedad
+##### Casos y muertes por enfermedad
 Para saber los casos registrados al año de cada enfermedad usamos la [tabla de incidencia](http://www.who.int/immunization/monitoring_surveillance/data/en/){:target="_blank"} de la OMS, a la que hemos añadido algunos datos:
 
 - Para poder incluir los casos de polio de 2016 en el vídeo del artículo de éxitos usamos la información disponible en [Polio Erradication](http://polioeradication.org/polio-today/polio-now/){:target="_blank"}, que informa casi al día de cómo está esa enfermedad en el mundo. Los puntos del mapa están ubicados por país, pero se colocan dentro de cada país de forma aleatoria. 
@@ -127,14 +127,14 @@ También hemos utilizado datos de mortalidad, de dos fuentes:
 - Datos de mortalidad general por enfermedad, [aquí](http://vizhub.healthdata.org/gbd-compare/){:target="_blank"}.
 
 
-#### Datos sobre desabastecimiento
+##### Datos sobre desabastecimiento
 
 Los datos relativos a desabastecimiento de vacunas provienen del repositorio de la OMS que monitoriza las estadísticas mundiales sobre enfermedades contagiosas evitables (disponible [aquí](http://apps.who.int/immunization_monitoring/globalsummary/indicators?ir%5Br%5D%5B%5D=AFRO&ir%5Br%5D%5B%5D=AMRO&ir%5Br%5D%5B%5D=EMRO&ir%5Br%5D%5B%5D=EURO&ir%5Br%5D%5B%5D=SEARO&ir%5Br%5D%5B%5D=WPRO&ir%5Bi%5D%5B%5D=VSRS_BCG&ir%5Bi%5D%5B%5D=VSRS_BCG_ANYDIST&commit=Ok+with+the+selection){:target="_blank"}). La información extraída de este repositorio fue actualizada por última vez por la OMS en diciembre de 2016, y solo cuenta con datos hasta 2015. 
 
 Los países notifican a la OMS si les han faltado vacunas, tanto a nivel nacional como en alguno de los distritos sanitarios en los que se divida cada país. La cifra global de 97 estados que sufrieron desabastecimiento en 2015 de alguna de las vacunas esenciales incluye tanto los producidos a nivel regional como nacional. Sin embargo, para que el gráfico sobre desabastecimiento de la vacuna contra la tuberculosis fuera más sencillo, solo se han tenido en cuenta, por su mayor relevancia, los problemas a nivel nacional. 
 
 {: #precios}
-#### Datos sobre precios
+##### Datos sobre precios
 Intentar poner luz sobre el mercado ha sido mucho más difícil en esta segunda fase, en la que nos centramos en el precio que pagan los estados por las vacunas, que en la primera, cuando investigamos [el precio en farmacia de ciertos medicamentos esenciales](http://medicamentalia.org/access/precios/). Hay poquísima información, la que hay es parcial y la comparación, por culpa de las múltiples variables que intervienen, es compleja y sus resultados deben ser tomados con cautela. La [base de datos de la OMS](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1100) incluye unos 50 países, pero están anonimizados.
 
 Arrancamos con información de siete países y tres organizaciones, y con diez vacunas, aquellas de las que tenemos más información para poder comparar -aunque nuestra base de datos recoge muchísimas más. El objetivo, si las fuerzas y los medios nos acompañan, es hacer crecer esta información con más países y más vacunas [[¿quieres colaborar?](http://medicamentalia.org/vaccines/nosotros/#colabora-y-republica)]. En todos los casos hemos comparado precios **sin impuestos**. 
@@ -170,21 +170,21 @@ Usamos algunas listas como [la de la OMS](https://extranet.who.int/gavi/PQ_Web/)
 Hemos incluído en nuestra información todos los precios, como rango, que ha pagado un país u organización en el tiempo analizado, así nos aseguramos de que están representadas las distintas opciones (marca, presentación...). Hemos intentado comparar en los artículos solo aquellas que, por su composición, son comparables, pero en algunos casos la información no era suficiente. Si encuentras algún error, por favor, [comunícanoslo](mailto:contacto@civio.es).
 
 {: #vph}
-#### Datos sobre cáncer de cérvix
+##### Datos sobre cáncer de cérvix
 Los últimos datos globales de incidencia del cáncer de cérvix, que se citan en la mayoría de estudios sobre el tema, son los de [Globocan de 2012](http://gco.iarc.fr/today/online-analysis-dual-bars?mode=cancer&mode_population=continents&population=320&sex=2&cancer=29&type=0&statistic=0&prevalence=0&color_palette=default). Aunque los hemos revisado para el reportaje, en la visualización principal decidimos utilizar datos más recientes, en este caso de mortalidad. La OMS [da estimaciones](http://www.who.int/healthinfo/global_burden_disease/estimates/en/index1.html) de causas de muerte en el mundo -2015- y de ahí hemos extraído, cruzándolas con datos de población y de PIB, la información que se muestra en el gráfico sobre mortalidad. Además, hemos añadido si los países habían introducido o no la vacuna de las [estadísticas](http://www.who.int/immunization/monitoring_surveillance/data/en/) de la OMS sobre este tema, referidas a 2015 pero actualizadas en enero de 2017. 
 
 La única duda era qué variable usar para mostrar la mortalidad. El cáncer de cérvix afecta solo a mujeres y a partir de determinadas edades, según todos los estudios analizados, por lo que decidimos dar la cifra de mortalidad sobre cada 100.000 mujeres mayores de 30 años. Son casi 274.000 de las 278.000 muertes que se estima que hubo, en 2015, por esta causa. 
 
 Para los datos de precios de compra por países hemos separado los tres tipos de vacuna. Para conocer el precio en clínicas privadas, el periodista Asier Andrés preguntó en cinco clínicas de diferentes rangos de precio en Ciudad de Guatemala.
 
-#### Otros datos empleados y sus fuentes
+##### Otros datos empleados y sus fuentes
 
 - Calendarios de vacunación de todo el mundo vía [OMS](http://apps.who.int/immunization_monitoring/globalsummary/schedules){:target="_blank"}.
 - Año de introducción de la vacuna. En algunos casos, las fechas de introducción eran demasiado recientes y no concordaban con las informaciones de los países. Además, 28 países no tenían. Solicitamos esa información a ocho de ellos y solo respondió uno, Guatemala. 
 - Los datos de PIB son del Banco Mundial. También los de población. Nos han servido para calcular el número de casos por habitante y, en algunos casos, eliminar países de los gráficos para aligerarlos, porque eran demasiado grandes y no permitían hacer comparativas. En concreto, dejamos fuera del gráfico que compara los diferentes niveles de inmunización a los países con menos de 300.000 habitantes. 
 
 {: #reportajes-y-pagina-web}
-### Reportajes y página web
+#### Reportajes y página web
 
 Analizar toda esa información nos permitió extraer conclusiones muy interesantes, pero necesitábamos ir más allá. Por eso desde el principio tuvimos claro que necesitábamos reportajes sobre el terreno. Centramos la investigación en dos lugares y preparamos las entrevistas. Elegimos dos destinos: 
 
@@ -198,7 +198,7 @@ La mayoría de los gráficos están **personalizados** y **muestran la informaci
 Créditos de imágenes de portada (de Flickr): _[Untitled](https://www.flickr.com/photos/cdcglobal/8290661927/in/photolist-dCBNX2-dCBQ2c-52uTd-dCHeGE-eiT6xa-dEWfa-dCHfkC-gABM-7jLH9R-eiYPpE-eiYPnb-dCBPBT-dCBPQk-6oPUze-6nSmty-eiT6jc-dCBPjn-dQXoqh-dmePf9-dEWFJ-dEWao-dQXoS9-dCHdSQ-9KowR3-eiT5Ha-dCBNTV-eiT6sP-ajZMmH-eiYPkE-eiYP5W-gTo3iT-eiYPbb-dEWyh-dEWBC-dCHfo1-gv7c1Y-eiT5Vi-acADNK-2W2iXP-4Nu73F-a7RGBX-dtN6ax-fqnzxX-6Womu7-7gAbC-ci5bjd-p4CN5M-f9mfR6-gnacYF-c3urAm/){:target="_blank"}_ de CDC Global, _[Packaging vials](https://www.flickr.com/photos/sanofi-pasteur/5594746841/){:target="_blank"}_, _[Filling machine](https://www.flickr.com/photos/sanofi-pasteur/10475652385/){:target="_blank"}_ y _[Dengue immunization public program in Paraná state of Brazil](https://www.flickr.com/photos/sanofi-pasteur/29855307395/){:target="_blank"}_ de Sanofi Pasteur.
 
 
-## Colabora y republica
+### Colabora y republica
 
 Medicamentalia-Vacunas no es un proyecto cerrado. Si tienes información relevante o **trabajas en un medio que quiere republicar todo o parte** del contenido, [escríbenos](mailto:contacto@civio.es) y te ayudamos a ponerlo en marcha. 
 

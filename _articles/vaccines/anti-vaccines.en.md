@@ -62,7 +62,7 @@ This is not the case in regions where epidemics of diseases such as measles or c
 
 A recent memory of the awfulness of an epidemic, along with a consciousness of the current difficulties in accessing healthcare, mean that in certain regions, such as Central America, confidence in vaccines is far greater. The initial fear of vaccines in rural areas (a fear of the unknown) **has not transformed into true anti-vaccine sentiment**, it remains anecdotal. Such communities have moved from "hiding their children" when vaccination campaigns arrived in their towns to "pushing their children to the front of the queue” for vaccines, according to Ademir Vásquez, from the Ministry of Health of Guatemala's national immunization programme.
 
-### How do we deal with this?
+#### How do we deal with this?
 
 <div class="container-right">
 {% include video-container.html videoid="_hSgScxpsWE" title="Mario Martínez, from PAHO." credit="Video: Manuel Penados." %}

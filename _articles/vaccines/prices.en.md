@@ -27,7 +27,7 @@ That is why many countries prefer not to publish such data. But, despite the gen
 <div class="page-content-container" markdown="1">
 
 
-## Brand new and expensive
+### Brand new and expensive
 
 As with drugs, new products and their [patents](http://medicamentalia.org/access/patents/) drive [prices up](http://medicamentalia.org/access/prices/). "With only two manufacturers for each of the new and much more expensive vaccines –PCV [pneumococcal], rotavirus and HPV [Human Papilloma Virus]– and the inability to use the two available products interchangeably, **companies are enjoying near monopolies**," denounces MSF in a [report](https://www.msfaccess.org/content/right-shot-bringing-down-barriers-affordable-and-adapted-vaccines) focusing entirely on the global vaccine market.
 
@@ -43,7 +43,7 @@ Spain tendered the purchase of the HPV vaccine with a requirement: it should pro
 Pneumococcus is a microorganism that causes pneumonia and meningitis. The 13-valent vaccine, produced by Pfizer and GSK, is one of the most expensive. Pfizer's version ranges from €113.54 in the United States to €42.85 and €45.73 in Spain and Portugal, very similar prices for two countries separated by more than 6,000 euros in per capita GDP. And these figures must be multiplied by three, the number of doses needed to immunize each child. GAVI countries can access it at a lower cost, €6,58 euros per dose, but organizations like Médecins Sans Frontières and many middle-income countries are left out. In fact, in Idomeni (Greece) MSF had to pay around €60 per dose to vaccinate refugees. Due to its hight price, this is the only vaccine for which MSF made an exception to its policy of not accepting donations.
 
 <div class="panel" markdown="1">
-### Why doesn't MSF accept donations?
+#### Why doesn't MSF accept donations?
 
 "Free is not always better." That's the conclusion of an [article](https://medium.com/@MSF_access/there-is-no-such-thing-as-free-vaccines-why-we-rejected-pfizers-donation-offer-of-pneumonia-6a79c9d9f32f) by Médecins Sans Frontières in which the organization explains why it rejects donations of vaccines. Four reasons are given: 1) donations are usually accompanied by restrictions, for example on which areas or populations can be used, which can delay vaccination in emergency campaigns; 2) donations can put an end to efforts to increase access to affordable vaccines by removing incentives for competitors to enter a market where free vaccines are available; 3) donations are used as a justification for why prices remain high for others, including humanitarian organizations and developing countries; and, finally, 4) donations can disappear as quickly as they arrived.
 </div>
@@ -79,7 +79,7 @@ Portugal went as far as to [pay](http://www.base.gov.pt/Base/pt/Pesquisa/Contrat
 The number of variables that can affect the final price -fees, associated insurance, whether transportation costs are included, packaging, volume, differences of elaboration or composition...,- and the little or no information provided about them, makes exposing the ultimate causes of price differences challenging. But, even despite all these nuances, shedding light on how much each of these seven countries and three organizations is paying for each vaccine helps visualize the playing field and better understand its rules. 
 
 
-## Joint purchasing systems
+### Joint purchasing systems
 
 In most cases, the lowest market prices are those offered to Unicef, which runs a [joint purchasing mechanism](https://www.unicef.org/supply/index_62330.html) for developing countries. The organization consolidates purchases and charges [a handling fee](https://www.unicef.org/supply/index_62330.html) of between 3 and 4.5%, depending on the vaccine and the income level of the country (i.e. the 43 classified as [least developed](http://unohrlls.org/about-ldcs/) pay the lowest percentage).
 
@@ -100,7 +100,7 @@ For the countries participating in the Revolving Fund there is an extra benefit,
 "The path must be to unite all these mechanisms, not only from America, but from the whole world, so that all countries have equitable access to products like vaccines," argues Mario Martínez from PAHO. And not just because of economies of scale.  Both Unicef and PAHO publish their purchase prices, which, due to their large volume, improve the transparency of the global market. One note though: PAHO only publishes the weighted average cost of each vaccine, **without breaking down the exact price** paid to each manufacturer.
 
 
-## Trading blindly
+### Trading blindly
 
 {% include caption.html img="articles/Contract_CM_PHV_13_5409_Rotavirus.png" caption="Detail of a contract for vaccine purchases in UK." align="alignright" %}
 

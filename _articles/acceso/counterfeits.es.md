@@ -26,9 +26,9 @@ lang:             es
 <div class="container page-content" markdown="1">
   <div class="page-content-container" markdown="1">
 
-## Acequias
+### Acequias
 
-### ¿Por qué existen medicamentos falsificados?
+#### ¿Por qué existen medicamentos falsificados?
 
 El sol acentúa el hedor en el cruce de la calle Mission con uno de los principales canales de la ciudad, que cruza los distritos de Cantonments y Osu para desparramarse en el Golfo de Guinea. En Acra casi no hay aceras. En su lugar, a ambos lados de la calzada, hay acequias, de entre un par de palmos y más de un metro de hondo, abiertas o cubiertas con tablones o rejas. Sobre estas acequias se vive, se compra y se vende, se fríe pollo en aceite de palma sobre unas brasas o se lava la ropa. Por ellas circula **el fruto líquido de los habitantes**, que fluye aceitoso sobre las algas en pequeñas acometidas para luego conectar con zanjas más grandes y al final verterse en canales anchos, donde alrededor del agua verdosa se acumulan la basura, nubes de insectos y algunas garcetas hambrientas.
 
@@ -86,9 +86,9 @@ Incluso en la capital, donde las farmacias no escasean, ocurre. Agyekum recuerda
 
 &nbsp;
 
-## Low tech / High tech
+### Low tech / High tech
 
-### ¿Cómo distinguir lo auténtico de lo falso?
+#### ¿Cómo distinguir lo auténtico de lo falso?
 
 Un gallo solitario pasa frente a la nueva sede de **mPedigree**, un chalet adosado de tres plantas en una calle residencial de North Dzorwulu, área donde la selva tropical empieza a abrirse camino entre los edificios, que principalmente consisten en el hotel Fiesta Royale, agencias del gobierno, residencias de soldados, embajadas o sedes de organizaciones internacionales.
 
@@ -148,9 +148,9 @@ El siguiente paso para los reguladores africanos será más difícil, pero Boate
 
 {% include gallery.html id="counterfeits" %}
 
-## Fronteras porosas
+### Fronteras porosas
 
-### ¿Cómo se detiene el tráfico de medicinas falsas?
+#### ¿Cómo se detiene el tráfico de medicinas falsas?
 
 Las falsificaciones están por todas partes.
 

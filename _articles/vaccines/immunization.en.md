@@ -45,7 +45,7 @@ In its reports, the organisation [includes](https://www.msf.es/sites/default/fil
 
 **India, which accounted for 30% of deaths from measles in under four year olds in 2015, with a total of 22,703 fatalities, had an estimated coverage rate of 81% for the first dose and 69% for the second dose**.
 
-### Pakistan, stronghold of polio
+#### Pakistan, stronghold of polio
 
 In neighbouring Pakistan, polio is reluctant to disappear entirely, although the first vaccine was invented in the 1950s. In 2016, just 42 cases of this disease were recorded worldwide. 21 of these cases were in Pakistan and another 13 just over the border with Afghanistan. 
 
@@ -68,7 +68,7 @@ This vaccine protects from diphtheria, tetanus and whooping cough, three illness
 Whooping cough, on the other hand, continues to cause large numbers of illness and deaths in children, and figures have not improved in recent years. In some years, such as 2012 and 2014, the figures have actually increased. 142,412 cases were recorded in 2015. 56,696 children died, 15% of those from Nigeria. 
 
 <div class="panel" markdown="1">
-### The slump in vaccinations in Guatemala
+#### The slump in vaccinations in Guatemala
 
 {% include video-container.html videoid="kEPPYvFkWhs" credit="Video and sound: Manuel Penados. Edition: Denise Pimentel." %}
 
@@ -98,7 +98,7 @@ Whilst there are reasons to be [optimistic](/vaccines/successes) in some areas, 
 The latest [report](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1){:target="_blank"} from the WHO Strategic Advisory Group of Experts is categorical. It warns that the group remains "very concerned " that " progress toward the goals to eradicate polio, eliminate measles and rubella, and eliminate maternal and neonatal tetanus is too slow”. **Global average immunization coverage has increased by only 1% since 2010**.
 
 <div class="panel" markdown="1">
-#### The causes, according to Médecins Sans Frontières
+##### The causes, according to Médecins Sans Frontières
 
 Médecins Sans Frontières list, in one of their [reports](https://www.msf.es/sites/default/files/legacy/adjuntos/Informe_La_Mejor_Vacuna_ESP_2012.pdf){:target="_blank"}, the reasons that, in their opinion, prevent basic standards in vaccination levels from being achieved. Firstly, the price - the basic package is now 68 times more expensive than in 2001, according to their figures. Moreover, the vaccines are not adapted to countries with limited resources. The majority of vaccines must be maintained at a constant temperature of between 1ºC and 8ºC, no mean feat in regions with poor transportation and electrical infrastructure, not to mention a shortage of healthcare professionals qualified to inject an infant. For this reason, Médecins Sans Frontières is calling for the development of thermostable vaccines, such as MenAfriVac, the vaccine developed to prevent Meningitis A in Sub-Saharan Africa, and other vaccine which do not require a syringe as they are orally administered (like the polio vaccine) or patch based. They are also calling for improvements so that the immunization schedule no longer demands five visits to the doctor in the first year of a child's life, quite a challenge for a family with no resources, transportation problems or living in a conflict zone. However, the uptake of vaccines is not purely a practical issue, there is a further underlying problem. According to the organisation, there are very few studies of strains that primarily affect developing countries, as research tends to be focused on epidemiology in developed countries.
 </div>

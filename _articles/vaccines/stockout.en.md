@@ -27,7 +27,7 @@ Everyone agrees that these shortages are a global problem, due to the fact that 
 
 On a global level, according to [World Health Organization data](http://apps.who.int/immunization_monitoring/globalsummary/indicators){:target="_blank"} (WHO), **97 countries** reported they were left without at least one of the essential vaccines in 2015 (the last year for which data is available) either on a national level on in certain areas. In Africa, 66% of countries **acknowledged supply disruption**. In America and Europe, one in every two countries admitted having suffered this problem. Taking into account the fact that **not all countries communicate this information to the WHO**, the real number of countries without vaccines at any moment could be greater still.
 
-## Out of stock against tuberculosis
+### Out of stock against tuberculosis
 The anti-tuberculosis BCG vaccine is a prime example of supply problems, caused by a [production failures](http://www.ssi.dk/English/News/News/2016/2016%20-%2001%20-%20EPI-NEWS%204%20BCG%20vaccine%20Japan.aspx){:target="_blank"} in one of the main labs of this vaccine, Statens Serum Institute, based in Denmark. Due to global shortages, in 2015 [54 countries reported stock shortages](http://apps.who.int/immunization_monitoring/globalsummary/indicators?ir%5Br%5D%5B%5D=AFRO&ir%5Br%5D%5B%5D=AMRO&ir%5Br%5D%5B%5D=EMRO&ir%5Br%5D%5B%5D=EURO&ir%5Br%5D%5B%5D=SEARO&ir%5Br%5D%5B%5D=WPRO&ir%5Bi%5D%5B%5D=VSRS_BCG&ir%5Bi%5D%5B%5D=VSRS_BCG_ANYDIST&commit=Ok+with+the+selection){:target="_blank"}. The majority of these countries are in Africa (21) and Europe (14). In 2015, UNICEF, who supply the vaccine to countries where tuberculosis is endemic, reported a [global supply shortage of 16.5 million doses](https://www.unicef.org/supply/index_90306.html){:target="_blank"}. Beyond the crisis that year, **many countries have been lacking the BCG vaccine for over a decade**. 
 
 </div>
@@ -90,13 +90,13 @@ The BCG vaccine supply crisis is worsened by **the concentration of production i
 
 <div class="panel" markdown="1">
 
-### Bexsero stockout in the EU
+#### Bexsero stockout in the EU
 
 Bexsero, the only vaccine available in the [European Union](http://www.ema.europa.eu/ema/index.jsp?curl=pages/medicines/human/medicines/002333/human_med_001614.jsp&mid=WC0b01ac058001d124){:target="_blank"} against Meningitis B, the most common serogroup in the continent, is currently suffering **distribution problems**. The antigen, produced by GlaxoSmithKline (GSK) [is approved in over 35 countries](http://www.gsk.com/en-gb/media/press-releases/2016/real-world-data-shows-83-percent-effectiveness-for-bexsero-in-infants-in-first-year-of-uk-national-meningitis-b-immunisation-programme/){:target="_blank"}, including the EU member states, Argentina, Chile, Uruguay, Canada, Brazil and the USA. Meanwhile the latter country has an alternative, Trumemba. In Spain, where the vaccine is recommended but unsubsidised, pharmacies have waiting lists of up to six months to obtain a dose (at a retail price of 105€). GSK Spain asserts that they will receive new doses in the second quarter of 2017. Other GSK subsidiaries have also reported manufacturing problems, like [Australia](http://apps.tga.gov.au/prod/MSI/search/){:target="_blank"} and the [United Kingdom](http://www.gsk.com/en-gb/media/resource-centre/meningitis-b-vaccine-information/){:target="_blank"}, due to "unanticipated global demand".
 
 </div>
 
-## Lack of control in South Africa
+### Lack of control in South Africa
 
 In South Africa, **provinces that default on their payments** for vaccines are another of the broken links in the supply chain, according to Shabir Madhi, director of the National Institute for Communicable Diseases (NICD).
 
@@ -112,7 +112,7 @@ Moreover, **bad road conditions and the distance from storage facilities to heal
 
 For this rural doctor, "it is frustrating not being able to offer a patient what you know they need". As soon as there is a shortage of vaccines, the centres are swamped as patients have to return. [Le Roux's research](http://www.samj.org.za/index.php/samj/article/viewFile/11760/7908){:target="_blank"} shows that the lack of vaccines in clinics resulted in **56% of children not completing their immunization courses**, according to their mothers.
 
-## Unreliable data
+### Unreliable data
 
 Johann Van der Heever, who managed the South African immunization programme for 11 years, blames the lack of control squarely on the Department of Health: "You have to staff the chain adequately, you have to provide equipment, supervision and monitoring which **is a function of the National Department**".
 
@@ -131,12 +131,12 @@ At the end of each year, SSP conducts a telephone interview about vaccines and s
 Data is indispensable to control the existence of vaccines in stores, to know when to make an efficient order for a clinic and to design effective vaccination campaigns that avoid possible outbreaks in communities with low immunization rates. Coordinated administration and the shouldering of responsibilities is vital to avoid shortages and stockouts of vaccines nationwide.  But above all, South Africa cannot allow its people to **lose faith** in its healthcare system.
 
 <div class="panel" markdown="1">
-### South Africa: managing in the dark
+#### South Africa: managing in the dark
 
 {% include video-container.html videoid="Q6elgS8YiSM" title="Shabir Madhi, Executive Director of the National Institute of Contagious Diseases." credit="Video: Serusha Govender. Edition: Miguel Ángel Gavilanes." %}
 
 Problems with data in South Africa do not only affect stock levels; the most basic data, such as immunization rates, are not reliable. The lack of an up-to-date and detailed survey on vaccination coverage makes it impossible to control and avoid possible outbreaks, according to Shabir Madhi of the National Institute of Contagious Diseases in South Africa, as it is not known in which areas immunization is lower than recommended. "We do not know the actual coverage against measles," laments Madhi. In addition, [the WHO reduces by more than 20 points](https://data.unicef.org/wp-content/uploads/country_profiles/South%20Africa/Immunization_zaf.pdf){:target="_blank"} the levels of coverage that South Africa presents to them. Madhi, who estimates that the real figure must be between both values, urges to carry out a new survey to solve this situation.
 </div>
 
-  </div>
+</div>
 </div>

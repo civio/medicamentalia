@@ -33,22 +33,14 @@ header {
     padding: 0;
     @include translate(0, -50%);
 
-
     .header-content-inner {
       max-width: 1000px;
       margin-left: auto;
       margin-right: auto;
       padding-top: 30px;
-
-      h2{
-        font-size: 18px;
-        max-width: 640px;
-        margin: 0 auto 15px;
-        line-height: 24px;
-      }
     }
 
-    h1{
+    h2{
       color: $color-yellow;
       font-size: 22px;
       margin: 0;
@@ -57,7 +49,7 @@ header {
       font-weight: 400;
     }
 
-    h2 {
+    h3 {
       color: $brand-secondary;
       font-size: 36px;
       font-weight: 600;
@@ -65,8 +57,14 @@ header {
       margin: 15px 0;
     }
 
-    p{
+    h4{
+      color: white;
+      font-size: 18px;
       font-weight: 300;
+      max-width: 670px;
+      margin: 0 auto 15px;
+      padding: 0 15px;
+      line-height: 24px;
     }
   }
   
@@ -342,14 +340,22 @@ header {
     font-size: 0.913em;
   }
 
-  h2{
+  h3{
     margin-top: 0;
     padding-top: 40px;
-    font-size: 38px;
+    font-size: 36px;
+    text-align: center;
   }
 
-  h2, h3{
+  h4{
+    font-size: 26px;
+    margin: 45px 0 30px;
     text-align: center;
+  }
+
+  .container-right .panel h4{
+    font-size: 22px;
+    text-align: left;
   }
 
   a.page-anchor{

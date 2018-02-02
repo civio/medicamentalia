@@ -11,9 +11,7 @@
         </button>
         <a class="navbar-brand" href="{{ site.baseurl }}{% if page.lang == 'es' %}/es{% endif %}/" title="{{ site.title }}">{{ site.title }}</a>
         {% if page.layout == 'article' and page.category %}
-        <a href="{{ site.baseurl }}/{{ page.category }}/" class="navbar-category" title="{{ page.category }}">
-          <h2>{{ page.category }}</h2>
-        </a>
+        <a href="{{ site.baseurl }}/{{ page.category }}/" class="navbar-category" title="{{ page.category | capitalize }}"><h1>{{ page.category | capitalize }}</h1></a>
         {% endif %}
     </div>
 
