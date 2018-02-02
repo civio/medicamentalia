@@ -4,18 +4,6 @@ en:
   anticonceptivos: contraceptives
   articles: Articles
   by: By
-  categories:
-    access:
-      title: Access
-      description: A journalistic investigation into access to medicines around the world
-    vaccines:
-      title: Vaccines
-      description: Journalistic investigation on immunization levels and vaccine prices
-    contraceptives:
-      title: Contraceptives
-      description: Journalistic investigation into access to contraceptives around the world
-    farma:
-      title: Pharma
   date:
     format: '%B %-d, %Y'
   description: Journalistic investigation on the gap in global access to health
@@ -49,18 +37,6 @@ es:
   contraceptives: anticonceptivos 
   articles: Artículos
   by: Por
-  categories:
-    acceso:
-      title: Acceso
-      description: Investigación periodística sobre el acceso a medicamentos en todo el mundo
-    vacunas:
-      title: Vacunas
-      description: Investigación periodística sobre las diferencias en niveles de inmunización y precios de vacunas
-    anticonceptivos:
-      title: Anticonceptivos
-      description: Investigación periodística sobre el acceso a anticonceptivos en todo el mundo
-    farma:
-      title: Farma
   date:
     format: '%-d de %B de %Y'
     months:
