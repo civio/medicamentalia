@@ -9,12 +9,12 @@
     <div class="portfolio-box-caption-content">
       {% if page.layout == 'home' %}
       {% if article.category %}
-      <p class="portfolio-box-category">{{ site.data.locales[page.lang].categories[article.category].title }}</p>
+      <p class="portfolio-box-category">{{ article.category }}</p>
       {% endif %}
       {% endif %}
       {% if article.home_description %}
       <h3>{{ article.title }}</h3>
-      <div class="portfolio-box-caption-description">{{ article.home_description }}</div>
+      <h4 class="portfolio-box-caption-description">{{ article.home_description }}</h4>
       {% else %}
       <h3 class="no-uppercase">{{ article.subtitle }}</h3>
       {% endif %}
