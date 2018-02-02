@@ -78,15 +78,17 @@ header {
   }
 }
 
-.vaccines header .header-overlay{
+.vaccines header .header-overlay,
+.vacunas header .header-overlay{
   background: darken( $overlay-green, 10% );
 }
-.access header .header-overlay{
+.access header .header-overlay,
+.acceso header .header-overlay{
   background: darken( $overlay-orange, 10% );
 }
-.farma header .header-overlay{
-  background: $overlay-farma;
-  opacity: 1;
+.anticonceptivos header .header-overlay,
+.contraceptives header .header-overlay{
+  background: darken( $overlay-contraceptives, 10% );
 }
 
 

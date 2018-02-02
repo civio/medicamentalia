@@ -442,7 +442,8 @@ $btn-scroll-down-icon-size: 44px;
 
   // Categoy colors
 
-  &.category-access{
+  &.category-access,
+  &.category-acceso{
 
     .portfolio-box-overlay{
       background: $overlay-orange;
@@ -458,7 +459,8 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
 
-  &.category-vaccines{
+  &.category-vaccines,
+  &.category-vacunas{
   
     .portfolio-box-overlay{
       background: $overlay-blue;
@@ -490,19 +492,20 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
 
-  &.category-farma{
+  &.category-anticonceptivos,
+  &.category-contraceptives{
   
     .portfolio-box-overlay,
     .portfolio-box-background{
-      background: $overlay-farma;
+      background: $overlay-contraceptives;
     }
 
     &:hover {
       .portfolio-box-overlay{
-        background: darken($overlay-farma, 10%);
+        background: darken($overlay-contraceptives, 10%);
       }
       .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-        color: darken($overlay-farma, 10%);
+        color: darken($overlay-contraceptives, 10%);
       }
     }
   }
