@@ -241,11 +241,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       </div>
       <div class="col-sm-7">
         <div class="contraceptives-app-data">
-          <p class="label">Principal método</p>
-          <p><strong>Condón</strong> <small>(lo usa el 26%)</small></p>
-          <p><strong id="contraceptives-app-data-use">78%</strong> Usa algún método anticonceptivo <small>(6% más que la media mundial)</small></p>
-          <p><strong id="contraceptives-app-data-use">13%</strong> Tiene necesidades no cubiertas <small>(12% menos que la media mundial)</small></p>
-          <p><strong id="contraceptives-app-data-use">Religión</strong> es la razón principal</p>
+          <div id="contraceptives-app-use">
+            <p><strong id="contraceptives-app-data-use"></strong> usa algún método anticonceptivo <small>(X% más que la media mundial)</small></p>
+            <p>Principal método: <strong id="contraceptives-app-data-main-method"></strong> <small>(lo usa el <span id="contraceptives-app-data-main-method-value"></span>)</small></p>
+          </div>
+          <div id="contraceptives-app-unmetneeds">
+            <p><strong id="contraceptives-app-data-unmetneeds"></strong> Tiene necesidades no cubiertas <small>(X% menos que la media mundial)</small></p>
+          </div>
+          <div id="contraceptives-app-reason">
+            <p><strong id="contraceptives-app-data-reason"></strong> es la razón principal <small>(afecta al <span id="contraceptives-app-data-reason-value"></span>)</small></p>
+          </div>
         </div>
         <div class="contraceptives-app-filters">
           <p>Filtra según</p>

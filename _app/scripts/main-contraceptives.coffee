@@ -256,7 +256,7 @@
       country_pop = countries_population.filter (e) -> e.code == d.code
       if country_gni[0] and country_gni[0]['2016']
           data.push
-            value: d['2016']
+            value: +d['2017']
             name: country_gni[0].name
             region: country_gni[0].region
             population: country_pop[0]['2015']
@@ -353,36 +353,33 @@
 
     # parse reasons data
     data_reasons.forEach (d) ->
+      ###
       reasonsKeys.forEach (reason) ->
         d[reason] = +d[reason]
-        if d[reason] > 1
+        if d[reason] > 100
           console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
-      item = countries.filter (country) -> country.code2 == d.code
-      if item and item[0]
-        d.name = item[0]['name_'+lang]
-      else
-        console.log 'no country', d.code
+      ###
       reasonHealth.push
         name: d.name
-        value: 100*(d.o+d.p+d.t) # health concerns + fear of side effects/health concerns + interferes with bodys processes
+        value: d.o+d.p+d.t # health concerns + fear of side effects/health concerns + interferes with bodys processes
       reasonNotSex.push
         name: d.name
-        value: 100*d.b # not having sex
+        value: d.b # not having sex
       reasonOpposed.push
         name: d.name
-        value: 100*(d.i+d.j+d.k+d.l) # respondent opposed + husband/partner opposed + others opposed + religious prohibition
+        value: d.i+d.j+d.k+d.l # respondent opposed + husband/partner opposed + others opposed + religious prohibition
       reasonOpposedRespondent.push
         name: d.name
-        value: 100*d.i # respondent opposed
+        value: d.i # respondent opposed
       reasonOpposedHusband.push
         name: d.name
-        value: 100*d.j # rhusband/partner opposed
+        value: d.j # rhusband/partner opposed
       reasonOpposedOthers.push
         name: d.name
-        value: 100*d.k #others opposed
+        value: d.k #others opposed
       reasonOpposedReligious.push
         name: d.name
-        value: 100*d.l # religious prohibition
+        value: d.l # religious prohibition
 
     sortArray = (a,b) -> return b.value-a.value
     reasonHealth.sort sortArray
@@ -451,11 +448,40 @@
   # Contraceptives App
   # -------------------
 
-  setupContraceptivesApp = ->
+  setupContraceptivesApp = (data_use, data_unmetneeds, data_reasons) ->
     # setupScrollama 'contraceptives-app-container'
     $('#contraceptives-app .select-country')
       .change ->
-        console.log 'change', $(this).val()
+        country_code = $(this).val()
+        console.log 'change', country_code
+        # Use
+        data_use_country = data_use.filter (d) -> d.code == country_code
+        if data_use_country and data_use_country[0]
+          country_methods = methods_keys.map (key, i) -> {'name': methods_names[lang][i], 'value': +data_use_country[0][key]}
+          country_methods = country_methods.sort (a,b) -> b.value-a.value
+          $('#contraceptives-app-data-use').html Math.round(+data_use_country[0]['Any modern method'])+'%'
+          $('#contraceptives-app-data-main-method').html country_methods[0].name
+          $('#contraceptives-app-data-main-method-value').html Math.round(country_methods[0].value)+'%'
+          $('#contraceptives-app-use').show()
+        else
+          $('#contraceptives-app-use').hide()
+        # Unmetneeds
+        data_unmetneeds_country = data_unmetneeds.filter (d) -> d.code == country_code
+        if data_unmetneeds_country and data_unmetneeds_country[0]
+          $('#contraceptives-app-data-unmetneeds').html Math.round(+data_unmetneeds_country[0]['2017'])+'%'
+          $('#contraceptives-app-unmetneeds').show()
+        else
+          $('#contraceptives-app-unmetneeds').hide()
+        # Reasons
+        data_reasons_country = data_reasons.filter (d) -> d.code == country_code
+        if data_reasons_country and data_reasons_country[0]
+          reasons = Object.keys(reasons_names).map (reason) -> {'name': reasons_names[reason], 'value': +data_reasons_country[0][reason]}
+          reasons = reasons.sort (a,b) -> b.value-a.value
+          $('#contraceptives-app-data-reason').html reasons[0].name
+          $('#contraceptives-app-data-reason-value').html Math.round(reasons[0].value)+'%'
+          $('#contraceptives-app-reason').show()
+        else
+          $('#contraceptives-app-reason').hide()
       .val userCountry.code
       .trigger 'change'
 
@@ -491,6 +517,20 @@
         userCountry.code = 'ESP'
         userCountry.name = if lang == 'es' then 'España' else 'Spain'
 
+      # add country ISO 3166-1 alpha-3 code to data_reasons
+      data_reasons.forEach (d) ->
+        item = countries.filter (country) -> country.code2 == d.code
+        if item and item[0]
+          d.code = item[0].code
+          d.name = item[0]['name_'+lang]
+          Object.keys(reasons_names).forEach (reason) ->
+            d[reason] = 100*d[reason]
+            if d[reason] > 100
+              console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
+          delete d.country
+        else
+          console.warn 'No country data for '+d.code
+
       console.log userCountry
 
       if $('#treemap-contraceptives-use').length
@@ -506,6 +546,6 @@
         setupContraceptivesReasons data_reasons, countries
 
       if $('#contraceptives-app').length
-        setupContraceptivesApp()
+        setupContraceptivesApp data_use, data_unmetneeds, data_reasons
 
 ) jQuery
