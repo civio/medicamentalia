@@ -5,6 +5,7 @@
   useTreemap = null
   useMap = null
   useGraph = null
+  unmetneedsGraph = null 
 
   userCountry = {}
 
@@ -180,7 +181,9 @@
             .filter (d) -> d >= from and d < to
             .classed 'fill-'+step, e.direction == 'down'
           console.log 'scrollama 2', step
-
+      else if instance == 3
+        if unmetneedsGraph and step > 0
+          unmetneedsGraph.setScatterplot()
 
     # start it up
     # 1. call a resize on load to update width/height/position of elements
@@ -249,6 +252,10 @@
   # --------------------------
 
   setupUnmetNeedsGdpGraph = (data_unmetneeds, countries_gni, countries_population) ->
+
+    # Setup Scrollama
+    setupScrollama 'unmet-needs-gdp-container-graph'
+
     # parse data
     data = []
     data_unmetneeds.forEach (d) ->
@@ -265,6 +272,7 @@
         console.log 'No GNI or Population data for this country', d.code, country_gni[0]
     # clear items without unmet-needs values
     #data = data.filter (d) -> d.gdp and d['unmet-needs'] 
+    ###
     unmetNeedsGdpGraph = new window.ScatterplotUnmetNeedsGraph 'unmet-needs-gdp-graph',
       aspectRatio: 0.5625
       margin:
@@ -279,8 +287,24 @@
         color: 'gni' #'region'
         size: 'population'
     # set data
-    unmetNeedsGdpGraph.setData data
-    $(window).resize unmetNeedsGdpGraph.onResize
+    ###
+    # setup graph
+    unmetneedsGraph = new window.BeeswarmScatterplotGraph 'unmet-needs-gdp-graph',
+      margin:
+        left:   0
+        rigth:  0
+        top:    0
+        bottom: 0
+      key:
+        x: 'gni'
+        y: 'value'
+        id: 'name'
+        size: 'population'
+        #color: 'gni'
+      dotMinSize: 1
+      dotMaxSize: 12
+    unmetneedsGraph.setData data
+    $(window).resize unmetneedsGraph.onResize
 
 
   # Use & Reasons maps
@@ -346,7 +370,6 @@
     reasonOpposed = []
     reasonOpposedRespondent = []
     reasonOpposedHusband = []
-    reasonOpposedOthers = []
     reasonOpposedReligious = []
 
     reasonsKeys = Object.keys(reasons_names)
@@ -374,9 +397,6 @@
       reasonOpposedHusband.push
         name: d.name
         value: d.j # rhusband/partner opposed
-      reasonOpposedOthers.push
-        name: d.name
-        value: d.k #others opposed
       reasonOpposedReligious.push
         name: d.name
         value: d.l # religious prohibition
@@ -387,7 +407,6 @@
     reasonOpposed.sort sortArray
     reasonOpposedRespondent.sort sortArray
     reasonOpposedHusband.sort sortArray
-    reasonOpposedOthers.sort sortArray
     reasonOpposedReligious.sort sortArray
 
     new window.BarHorizontalGraph('contraceptives-reasons-health',
@@ -410,10 +429,6 @@
       key:
         id: 'name'
         x: 'value').setData reasonOpposedHusband.slice(0,5)
-    new window.BarHorizontalGraph('contraceptives-reasons-opposed-others',
-      key:
-        id: 'name'
-        x: 'value').setData reasonOpposedOthers.slice(0,5)
     new window.BarHorizontalGraph('contraceptives-reasons-opposed-religious',
       key:
         id: 'name'

@@ -93,10 +93,9 @@ var js_paths = {
     '_app/scripts/bar-horizontal-graph.coffee',
     '_app/scripts/map-graph.coffee',
     '_app/scripts/contraceptives-use-map-graph.coffee',
-    '_app/scripts/scatterplot-graph.coffee',
-    '_app/scripts/scatterplot-unmet-needs-graph.coffee',
     '_app/scripts/treemap-graph.coffee',
     '_app/scripts/contraceptives-use-treemap-graph.coffee',
+    '_app/scripts/beeswarm-scatterplot-graph.coffee',
     '_app/scripts/main-contraceptives.coffee'
   ]
 };
@@ -226,24 +225,6 @@ gulp.task('js-contraceptives', function() {
     .pipe(sourcemaps.init())
     .pipe(c)
     .pipe(concat('contraceptives.js'))
-    .pipe(sourcemaps.write())
-    .pipe(production(uglify(uglifyOptions)))
-    .pipe(gulp.dest('_site/assets/scripts'))
-    .pipe(reload({stream:true}))
-    .pipe(gulp.dest('assets/scripts'))
-    .on('error', gutil.log);
-});
-
-gulp.task('js-farma', function() {
-  var c = coffee();
-  c.on('error',function(e){
-    gutil.log(e);
-    c.end();
-  });
-  return gulp.src(js_paths.farma)
-    .pipe(sourcemaps.init())
-    .pipe(c)
-    .pipe(concat('farma.js'))
     .pipe(sourcemaps.write())
     .pipe(production(uglify(uglifyOptions)))
     .pipe(gulp.dest('_site/assets/scripts'))

@@ -123,23 +123,44 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 </div>
+</div>
 
-
+<!--
 <div id="unmet-needs-gdp-container-graph" class="graph-container">
   <p class="graph-container-caption">Unmeet needs vs. GDP</p>
   <div id="unmet-needs-gdp-graph" class="scatterplot-graph">
-    <!--
     <ul class="x-legend">
       <li>Ingreso bajo</li>
       <li>Ingreso medio bajo</li>
       <li>Ingreso medio alto</li>
       <li>Ingreso alto</li>
     </ul>
-    -->
   </div>
+</div>
+-->
+
+<div id="unmet-needs-gdp-container-graph" class="scroll-container">
+<!--  graphic container  -->
+<div class="scroll-graphic">
+  <div class="graph-container">
+    <div class="container page-content">
+      <div id="unmet-needs-gdp-graph" class="scatterplot-graph"></div>
+    </div>
+  </div>
+</div>
+<!--  step/text container  -->
+<div class="scroll-text">
+  <div class="step" data-instance="3" data-step="0">
+    <p>Los que tienen unmmetneeds están arriba</p>
+  </div>
+  <div class="step" data-instance="3" data-step="1">
+    <p>Ahora los más ricos están a la derecha</p>
+  </div>
+</div>
 </div>
 
 
+<div class="container page-content">
 <div class="page-content-container" markdown="1">
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
@@ -175,19 +196,15 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 <div class="graph-container">
 <div class="row">
-<div class="col-sm-3">
+<div class="col-sm-4">
   <p class="graph-container-caption text-left">Respondent Opposed</p>
   <div id="contraceptives-reasons-opposed-respondent"></div>
 </div>
-<div class="col-sm-3">
+<div class="col-sm-4">
   <p class="graph-container-caption text-left">Husband/Partner Opposed</p>
   <div id="contraceptives-reasons-opposed-husband"></div>
 </div>
-<div class="col-sm-3">
-  <p class="graph-container-caption text-left">Others Opposed</p>
-  <div id="contraceptives-reasons-opposed-others"></div>
-</div>
-<div class="col-sm-3">
+<div class="col-sm-4">
   <p class="graph-container-caption text-left">Religious Opposed</p>
   <div id="contraceptives-reasons-opposed-religious"></div>
 </div>
