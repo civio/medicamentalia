@@ -424,15 +424,18 @@
     new window.BarHorizontalGraph('contraceptives-reasons-opposed-respondent',
       key:
         id: 'name'
-        x: 'value').setData reasonOpposedRespondent.slice(0,5)
+        x: 'value'
+      xAxis: [50, 100]).setData reasonOpposedRespondent.slice(0,5)
     new window.BarHorizontalGraph('contraceptives-reasons-opposed-husband',
       key:
         id: 'name'
-        x: 'value').setData reasonOpposedHusband.slice(0,5)
+        x: 'value'
+      xAxis: [50, 100]).setData reasonOpposedHusband.slice(0,5)
     new window.BarHorizontalGraph('contraceptives-reasons-opposed-religious',
       key:
         id: 'name'
-        x: 'value').setData reasonOpposedReligious.slice(0,5)
+        x: 'value'
+      xAxis: [50, 100]).setData reasonOpposedReligious.slice(0,5)
 
 
   # Contraceptives Use Treenap

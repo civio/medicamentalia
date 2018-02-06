@@ -132,6 +132,13 @@ Common
   }
 
   .bar-horizontal-graph{
+    position: relative;
+
+    .bar-container{
+      position: relative;
+      z-index: 90;
+    }
+
     .bar-title{
       //font-size: .875em;
       margin-top: 10px;
@@ -153,6 +160,15 @@ Common
         color: white;
         font-weight: 300;
       }
+    }
+
+    .axis{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      border-right: 1px solid mix( $gray-lighter, $gray-light, 80% );
+      z-index: 60;
     }
 
     /*
@@ -2565,4 +2581,8 @@ body.guatemala-graph {
     background: #c88a73;
   }
   */
+}
+
+.reasons-graphs .graph-container .bar-horizontal-graph .axis{
+  top: 22px;
 }
