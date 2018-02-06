@@ -839,9 +839,11 @@ header {
 
   .step p{
     position: relative;
-    top: 15px; // 50%;
-    padding: 15px;
+    display: inline-block;
+    top: 85%; //15px; // 50%;
+    padding: 15px 20px;
     background: white;
-    background: rgba(255,255,255,.85);
+    background: rgba(255,255,255,.92);
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
   } 
 }

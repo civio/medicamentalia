@@ -62,7 +62,6 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="1" data-step="0"></div>
   <div class="step" data-instance="1" data-step="1">
     <p>La <strong>esterilización femenina</strong> es el método más popular del mundo y destaca en países como X, X y X. La masculina, en cambio, solo es el método prioritario en X, X y X.</p>
   </div>
@@ -81,6 +80,7 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
   <div class="step" data-instance="1" data-step="6">
     <p>Los <strong>métodos tradicionales</strong> -explicar cuáles son- destacan en países del arco mediterráneo y blablabla.</p>
   </div>
+  <div class="step" data-instance="1" data-step="7"></div>
 </div>
 </div>
 
@@ -104,16 +104,16 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="2" data-step="0"></div>
   <div class="step" data-instance="2" data-step="1">
     <p>Todo esto es sobre mujeres que USAN algún método anticonceptivo. De las mujeres casadas o sexualmente activas de 15 a 49 años, <strong>el 63% usa algún tipo de método.</strong></p>
   </div>
   <div class="step" data-instance="2" data-step="2">
-    <p>Otro <strong>25% quiere seguir teniendo niños</strong> y, por lo tanto, decide no usar ningún método. </p>
+    <p>Otro <strong>25% quiere seguir teniendo niños</strong> y, por lo tanto, decide no usar ningún método.</p>
   </div>
   <div class="step" data-instance="2" data-step="3">
-    <p>Pero el <strong>12%</strong> restante son aquellas mujeres que <strong>quieren retrasar o frenar su maternidad pero no usan ningún método anticonceptivo</strong>. Son las mujeres con sus necesidades NO CUBIERTAS. Y ahí está el problema. </p>
+    <p>Pero el <strong>12%</strong> restante son aquellas mujeres que <strong>quieren retrasar o frenar su maternidad pero no usan ningún método anticonceptivo</strong>. Son las mujeres con sus necesidades NO CUBIERTAS. Y ahí está el problema.</p>
   </div>
+  <div class="step" data-instance="2" data-step="4"></div>
 </div>
 </div>
 
@@ -156,6 +156,7 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
   <div class="step" data-instance="3" data-step="1">
     <p>Ahora los más ricos están a la derecha</p>
   </div>
+  <div class="step" data-instance="3" data-step="2"></div>
 </div>
 </div>
 

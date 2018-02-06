@@ -197,8 +197,8 @@
         graphic:    '.scroll-graphic'     # the graphic
         text:       '.scroll-text'        # the step container
         step:       '.scroll-text .step'  # the step elements
-        offset:     0.8                   # set the trigger to be 1/2 way down screen
-        #debug:      true                 # display the trigger offset for testing
+        offset:     0.05                   # set the trigger to be 1/2 way down screen
+        debug:      false                 # display the trigger offset for testing
       .onContainerEnter handleContainerEnter 
       .onContainerExit  handleContainerExit 
 
