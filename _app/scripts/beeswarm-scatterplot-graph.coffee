@@ -8,6 +8,7 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
     options.dotSize = options.dotSize || 5
     options.dotMinSize = options.dotMinSize || 2
     options.dotMaxSize = options.dotMaxSize || 15
+    options.mode = options.mode || 0 # mode 0: beeswarm, mode 1: scatterplot
     super id, options
     return @
 
@@ -34,7 +35,7 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
   setDot: (selection) =>
     selection
       .attr 'r',  (d) => if @size then d.radius else @options.dotSize
-      #.attr 'fill', (d) => @color @colorMap(d[@options.key.color])
+      .call @setDotFill
       .call @setDotPosition
 
   setSimulation: ->
@@ -55,13 +56,17 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
 
   setDotPosition: (selection) =>
     selection
-      .attr 'cx', (d) -> d.x
-      .attr 'cy', (d) -> d.y
+      .attr 'cx', (d) => if @options.mode == 0 then d.x else Math.round @x(d[@options.key.x])
+      .attr 'cy', (d) => if @options.mode == 0 then d.y else Math.round @y(d[@options.key.y])
 
-  setScatterplotDotPosition: (selection) =>
-    selection
-      .attr 'cx', (d) => @x(d[@options.key.x])
-      .attr 'cy', (d) => @y(d[@options.key.y])
+  setDotFill: (selection) =>
+    selection.attr 'fill', (d) => if @options.key.color and @options.mode == 1 then @color d[@options.key.color] else '#e2723b'
+
+  setMode: (mode) ->
+    @options.mode = mode
+    @container.selectAll('.dot')
+      .call @setDotFill
+      .call @setDotPosition
 
   setSize: ->
     if @size
@@ -79,10 +84,6 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
       .call @setDotPosition
     return @
 
-  setScatterplot: =>
-    console.log 'x scale', @x.domain(), @x.range()
-    @container.selectAll('.dot')
-      .call @setScatterplotDotPosition
 
   # Scale methods
   # ------------
@@ -104,11 +105,8 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
         .range @getSizeRange()
     # set color scale if options.key.color is defined
     if @options.key.color
-      @colorMap = d3.scaleQuantize()
-        .domain [0, 100]
-        .range [25, 50, 75, 100]
-      @color = d3.scaleSequential d3.interpolateRdYlGn
-      #@color = d3.scaleOrdinal d3.schemeRdYlGn
+      @color = d3.scaleThreshold()
+        .range d3.schemeOranges[5].reverse()
     # setup axis
     @xAxis = d3.axisBottom(@x)
       .tickSize @height
@@ -129,7 +127,7 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
     return [0, d3.max(@data, (d) => d[@options.key.size])]
 
   getColorDomain: =>
-    return [100, 0]
+    return [1005, 3955, 12235, 100000]
 
   drawScales: ->
     # set scales domains

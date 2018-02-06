@@ -2474,6 +2474,11 @@ body.guatemala-graph {
 
 #unmet-needs-gdp-graph{
   position: relative;
+
+  .dot{
+    opacity: 0.8;
+    @include transition( 0.4s ease-in-out all );
+  }
 }
 
 #treemap-contraceptives-use{

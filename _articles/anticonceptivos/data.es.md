@@ -144,7 +144,7 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 <div class="scroll-graphic">
   <div class="graph-container">
     <div class="container page-content">
-      <div id="unmet-needs-gdp-graph" class="scatterplot-graph"></div>
+      <div id="unmet-needs-gdp-graph"></div>
     </div>
   </div>
 </div>

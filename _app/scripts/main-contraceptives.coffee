@@ -182,8 +182,8 @@
             .classed 'fill-'+step, e.direction == 'down'
           console.log 'scrollama 2', step
       else if instance == 3
-        if unmetneedsGraph and step > 0
-          unmetneedsGraph.setScatterplot()
+        if unmetneedsGraph and unmetneedsGraph.options.mode != step
+          unmetneedsGraph.setMode step
 
     # start it up
     # 1. call a resize on load to update width/height/position of elements
@@ -293,14 +293,14 @@
       margin:
         left:   0
         rigth:  0
-        top:    0
+        top:    5
         bottom: 0
       key:
         x: 'gni'
         y: 'value'
         id: 'name'
         size: 'population'
-        #color: 'gni'
+        color: 'gni'
       dotMinSize: 1
       dotMaxSize: 12
     unmetneedsGraph.setData data
