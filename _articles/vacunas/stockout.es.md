@@ -1,5 +1,5 @@
 ---
-category:         vaccines
+category:         vacunas
 title:            Desabastecimiento
 subtitle:         Vacunas que no llegan
 description:      El mercado de las vacunas es un oligopolio concentrado en cuatro grandes empresas. Cuando un laboratorio tiene problemas de producción, los estados tienen pocas alternativas para satisfacer la demanda
@@ -28,7 +28,7 @@ Todos coinciden en que la escasez es un problema global, debido a que solo unos 
 
 A nivel global, según [datos de la Organización Mundial de la Salud](http://apps.who.int/immunization_monitoring/globalsummary/indicators){:target="_blank"} (OMS), **97 países** declararon haberse quedado sin al menos una de las vacunas esenciales en 2015 –el último año del que se disponen datos– ya sea a nivel estatal o en alguno de sus distritos. En África, el 66% de sus estados **reconocieron cortes en el suministro**. En América y Europa uno de cada dos países admitieron haber sufrido ese problema. Si tenemos en cuenta que **no todos ellos comunican esta información a la OMS**, la cifra real de países que se quedaron sin vacunas en algún momento podría ser superior.
 
-## Sin 'stock' contra la tuberculosis
+### Sin 'stock' contra la tuberculosis
 Destaca el caso del desabastecimiento de la BCG -Bacillus Calmette–Guérin, contra la tuberculosis-, debido a por un [fallo de la producción](http://www.ssi.dk/English/News/News/2016/2016%20-%2001%20-%20EPI-NEWS%204%20BCG%20vaccine%20Japan.aspx){:target="_blank"} de uno de los principales laboratorios de esta vacuna, Statens Serum Institute, con sede en Dinamarca. Debido al desabastecimiento global de 2015, [54 estados reportaron falta de *stock*](http://apps.who.int/immunization_monitoring/globalsummary/indicators?ir%5Br%5D%5B%5D=AFRO&ir%5Br%5D%5B%5D=AMRO&ir%5Br%5D%5B%5D=EMRO&ir%5Br%5D%5B%5D=EURO&ir%5Br%5D%5B%5D=SEARO&ir%5Br%5D%5B%5D=WPRO&ir%5Bi%5D%5B%5D=VSRS_BCG&ir%5Bi%5D%5B%5D=VSRS_BCG_ANYDIST&commit=Ok+with+the+selection){:target="_blank"}. La mayoría, concentrados en los continentes africano (21) y europeo (14). Además, Unicef, que suministra esta vacuna a países en los que la tuberculosis es endémica, reportó que [le faltaron 16,5 millones de dosis](https://www.unicef.org/supply/index_90306.html){:target="_blank"}. Al margen de la crisis de ese año, **el BCG es el antígeno que más países han echado en falta desde hace más de una década**.
 
 </div>
@@ -91,14 +91,14 @@ La crisis de la BCG se ve agravada por **la concentración de la producción en 
 
 <div class="panel" markdown="1">
 
-### Sin Bexsero en la UE
+#### Sin Bexsero en la UE
 
 Bexsero, la única vacuna disponible en la [Unión Europea](http://www.ema.europa.eu/ema/index.jsp?curl=pages/medicines/human/medicines/002333/human_med_001614.jsp&mid=WC0b01ac058001d124){:target="_blank"} que protege contra la meningitis B, el serogrupo más común en el viejo continente, cuenta en la actualidad con **problemas de distribución**. Este antígeno fabricado por GlaxoSmithKline (GSK) [está aprobado en más de 35 países](http://www.gsk.com/en-gb/media/press-releases/2016/real-world-data-shows-83-percent-effectiveness-for-bexsero-in-infants-in-first-year-of-uk-national-meningitis-b-immunisation-programme/){:target="_blank"}, entre los que están los estados miembros de la UE, Argentina, Chile, Uruguay, Canadá, Brasil y Estados Unidos. Este último cuenta con un segundo fármaco para esta enfermedad, Trumemba. En España, donde la vacuna no está subvencionada aunque sí recomendada, las farmacias ofrecen listas de espera de hasta seis meses para hacerse con una dosis (con un precio de venta al público de 105 euros). Desde GSK España aseguran que recibirán nuevas dosis en el segundo trimestre de 2017. Otras filiales también han notificado problemas con el suministro de esta vacuna, como en
 [Australia](http://apps.tga.gov.au/prod/MSI/search/){:target="_blank"} y [Reino Unido](http://www.gsk.com/en-gb/media/resource-centre/meningitis-b-vaccine-information/){:target="_blank"}, debido a la "inesperada demanda global", según la compañía.
 
 </div>
 
-## Falta de control en Sudáfrica
+### Falta de control en Sudáfrica
 
 En Sudáfrica, **los impagos de las provincias en los procesos de compra** de vacunas son otro de los eslabones que fallan en la cadena de suministro, según Shabir Madhi, director del Centro Nacional de Enfermedades Infecciosas (NICD, por sus siglas en inglés).
 
@@ -114,7 +114,7 @@ Además, **en el ámbito rural se acentúa la importancia del estado de las carr
 
 Para este médico rural "es frustrante no poder ofrecer al paciente lo que sabes que necesita". En cuanto hay escasez de vacunas, los centros se saturan, ya que los pacientes tienen que volver. Sus [conclusiones](http://www.samj.org.za/index.php/samj/article/viewFile/11760/7908){:target="_blank"}le llevan a afirmar que la falta de vacunas en las clínicas provocó que **el 56% de los niños estudiados no completaran el calendario de vacunación**, según sus madres.
 
-## Sin datos
+### Sin datos
 
 Johann Van der Heever, que dirigió durante 11 años el programa de inmunización de Sudáfrica, responsabiliza de la falta de control al Departamento de Salud: "Tienes que dotar de personal de manera adecuada a la cadena, tienes que supervisar y monitorizar los equipos. **Esto es responsabilidad del Departamento Nacional**".
 
@@ -133,7 +133,7 @@ En los últimos meses de cada año, SSP lleva a cabo una encuesta telefónica so
 Los datos son imprescindibles: para controlar las existencias de vacunas en los depósitos, para saber cuándo realizar un pedido eficiente para una clínica y para diseñar campañas de vacunación efectivas que eviten posibles brotes en comunidades con baja inmunización. La coordinación en la administración y la asunción de responsabilidades es vital para evitar, al menos en casa, la escasez y el desabastecimiento de vacunas.  Pero, ante todo, Sudáfrica no puede permitirse que sus ciudadanos **pierdan la fe** en su sistema de salud.
 
 <div class="panel" markdown="1">
-### Sudáfrica: a ciegas
+#### Sudáfrica: a ciegas
 
 {% include video-container.html videoid="zS3r31gWUGU" title="Shabir Madhi, del Centro Nacional de Enfermedades Infecciosas." credit="Vídeo: Serusha Govender. Edición: Miguel Ángel Gavilanes." %}
 

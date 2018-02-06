@@ -155,12 +155,14 @@ Common
       }
     }
 
+    /*
     > div:last-child .bar span{
       color: #222;
       position: absolute;
       padding-left: 5px;
       font-weight: 400;
     }
+    */
   }
 
   .scatterplot-graph{
@@ -1707,7 +1709,7 @@ Infographic
     clear: both;
   }
 
-  h3{
+  h4{
     margin: 1.5*$grid-gutter-width auto;
   }
 
@@ -1719,7 +1721,7 @@ Infographic
   .panel{
     margin: 0 $grid-gutter-width/2 $grid-gutter-width/2;
   }
-  h4{
+  h5{
     margin-top: 2*$grid-gutter-width/3;
     margin-bottom: $grid-gutter-width/2;
   }
@@ -2427,7 +2429,27 @@ body.guatemala-graph {
   }
 }
 
-#contraceptives-app-container{
+#contraceptives-app{
+
+  .select-country{
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .contraceptives-app-data{
+    margin: 30px 0;
+  }
+
+  .contraceptives-app-data,
+  .contraceptives-app-filters{
+    text-align: left;
+  }
+
+  .contraceptives-app-filters p{
+    margin-bottom: 5px;
+  }
+  
+  /*
   .scroll-text{
     max-width: 560px;
 
@@ -2441,49 +2463,101 @@ body.guatemala-graph {
       padding: 15px;
     }
   }
+  */
+}
+
+#contraceptives-app-img{
+  width: 150px;
+  height: auto;
+  margin: 20px auto 0;
+}
+
+#unmet-needs-gdp-graph{
+  position: relative;
 }
 
 #treemap-contraceptives-use{
   position: relative;
 
   .node-female-sterilization{
-    background: #1f78b4;
+    background: #d75628;
   }
   .node-male-sterilization{
-    background: #a6cee3;
+    background: #af4c3a;
   }
   .node-iud{
-    background: #e31a1c;
+    background: #d6b635;
   }
   .node-implant{
-    background: #fdbf6f;
+    background: #ab844d;
   }
   .node-injectable{
-    background: #ff7f00;
+    background: #9add3c;
   }
   .node-pill{
-    background: #fb9a99;
+    background: #56c3ab;
   }
   .node-male-condom{
-    background: #33a02c;
+    background: #6fbd54;
   }
   .node-female-condom{
-    background: #b2df8a;
+    background: #60cc86;
   }
   .node-vaginal-barrier-methods{
-    background: #cab2d6;
+    background: #82a169;
   }
   .node-lactational-amenorrhea-method-lam{
-    background: #cab2d6;
+    background: #b98c79;
   }
   .node-emergency-contraception{
-    background: #ffff99;
+    background: #b8ac54;
   }
   .node-other-modern-methods{
-    background: #6a3d9a;
+    background: #97b1a0;
   }
   .node-any-traditional-method{
-    background: #b15928;
+    background: #423f28;
   }
 
+  /*
+  .node-female-sterilization{
+    background: #bd0063;
+  }
+  .node-male-sterilization{
+    background: #893a31;
+  }
+  .node-iud{
+    background: #02dad4;
+  }
+  .node-implant{
+    background: #c1c400;
+  }
+  .node-injectable{
+    background: #019e4c;
+  }
+  .node-pill{
+    background: #ff87af;
+  }
+  .node-male-condom{
+    background: #606400;
+  }
+  .node-female-condom{
+    background: #9ed66a;
+  }
+  .node-vaginal-barrier-methods{
+    background: #ff9e3e;
+  }
+  .node-lactational-amenorrhea-method-lam{
+    background: #4ab8ff;
+  }
+  .node-emergency-contraception{
+    background: #8e6794;
+  }
+  .node-other-modern-methods{
+    background: #ff7c6c;
+  }
+  .node-any-traditional-method{
+    background: #c88a73;
+  }
+  */
 }

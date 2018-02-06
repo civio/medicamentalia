@@ -27,9 +27,9 @@ And the differences don’t only lie in the price negotiated between the company
 
 <small>* The currency conversions to EUR, where applicable, are done using June 8th rates, retrieved from [xe.com](http://www.xe.com/).</small>
 
-## The patent system
+### The patent system
 
-### One international agreement, 161 ways of applying it
+#### One international agreement, 161 ways of applying it
 
 All national legislation springs from an international agreement called [TRIPS](https://www.wto.org/spanish/docs_s/legal_s/27-trips.pdf) (acronym for Trade-Related Aspects of Intellectual Property Rights), signed in 1994 in advance of the World Trade Organization (WTO). This harmonized the international systems for all types of patents, not only pharmaceuticals, when it came into effect in January 1995. The agreement established that a patent will last **20 years from the date it is first filed**, yet many countries grant extensions of several years — a minimum of five in the European Union, for example, if there are processing delays. In the case of Brazil, the law states that patents last 20 years from the application date, as stated by TRIPS, or — and here is the key — **ten years from the date of approval**. Hence, after the first ten years, every year of delay extends the monopoly on the drug. In Spain, the law is being [debated](http://www.congreso.es/docu/docum/ddocum/dosieres/sleg/legislatura_10/spl_71/pdfs/1.pdf), in Congress, on the path to reform. One international rule, 161 ways to apply it; the same figure as the number of countries who are members of the WTO.
 
@@ -39,7 +39,7 @@ She lives in a house on the outskirts of Rio with two turtles and a dog, surroun
 
 Reinaldo Guimarães enters this debate. After working in several positions linked to the public sector, he became Secretary of State for Science and Technology under the Brazilian Ministry of Health (2007-2010) and is now vice president of ABIFINA, the association that brings the local pharmaceutical industry together. Although he says that the patent system has "many merits", like disclosing the process (how was an innovation achieved?), Guimarães mistrusts the role of patents as a stimulus to innovation. Not only in the field of medicines, but for any industry. Because, he argues, "In the end, what stimulates innovation most is competition. Not monopoly. And patents are a monopoly." Organizations like ABIA also separate innovation and patents. “**The number of new molecules falls each year**;” argues Pedro Villardi, adding that "we are not in a scenario of great innovation and high prices. There is actually little innovation and high prices."<a name="cost"></a>
 
-## The cost of developing a new drug
+### The cost of developing a new drug
 
 {% include video-container.html videoid="29PBm1nBbgk" title="Pharmaceuticals and civil society confront their numbers of developing a new drug." credit="Video: Anne Vigna and Miguel Á. Gavilanes" %}
 
@@ -59,9 +59,9 @@ Robert W. Armstrong, former Vice President of Global R&D in Eli Lilly and Compan
 
 More than €2 billion? €1,172 million? €44 million? What is the real cost? The differences between the calculations of industry and civil organizations are abysmal. To Guimarães, what separates them is **method of calculation**. "If you include all the phase IV clinical trials in R&D, which are more expensive, the figure rises". The same with including marketing. "And even more if you include the expectation of return on capital in the financial market", for example, what you would have earned if you had invested that money for the same amount of time as the duration of the research and production of the drug. That amount, the capital cost, has an important weight in the final result. In fact, the Tufts CSDD study breaks down its final figure into two components: of the total $2,558 million, $1,395 million correspond to direct spending, known as “out-of-pocket” spending, and the remaining $1,163 million are time costs; what investors **would have received** had they decided to put their money elsewhere while the drug was being developed. That, in the words of Guimarães, is the "magic formula".<a name="alternatives"></a>
 
-## Alternatives
+### Alternatives
 
-### Working around the traditional intellectual property model
+#### Working around the traditional intellectual property model
 
 Even with its flaws, Guimarães is pragmatic when it comes to assessing the patent system: "If you have nothing to put in its place, whatever is available is the best." So are there no alternatives? Organizations, governments and pharmaceutical companies, sometimes forced by circumstances, **have sought and tried other models**. As an example, there is the voluntary license from Gilead in India, or the [compulsory license approved by Brazil in 2007](/access/compulsory-license); a measure allowed by the TRIPS agreement yet not considered the solution by the IFPMA (International Federation of Pharmaceutical Manufacturers and Associations) because, [they argue](http://www.ifpma.org/innovation/ip-access.html),there are other more effective ways in practice. Of course, according to the federation, these alternative paths **should always be complementary** to the patent system and be applied only when a clear market failure can be proved.
 
@@ -73,7 +73,7 @@ A [study](http://www.ifpma.org/fileadmin/content/Publication/2012/Assembling_the
 
 Of all the systems analyzed, **the favorites of the study** are open databases, [Advanced Market Commitments](https://en.wikipedia.org/wiki/Advance_market_commitments) governments or entities, sometimes formed by several countries, guaranteeing a viable market for a drug if it is developed — and Product Development Partnerships (PDPs) between industry, government, NGOs and academia to develop a new drug. Brazil kept the acronym. Its particular PDP, called [Parcerias de Desenvolvimiento Produtivo](http://bvsms.saude.gov.br/bvs/saudelegis/gm/2012/prt0837_18_04_2012.html), is based on collaborations between industry and government, which offers exclusive access to its enormous market in exchange for transfer of technology to public laboratories. Farmanginhos, the most important public laboratory, went from revenues of €57 million in 2012 to €143 million in 2013 thanks to these PDPs. They are the mainstay of Brazil's policy on access to medicines, however some people frown upon them.
 
-### Market failures
+#### Market failures
 
 Unfortunately, for some diseases there are no patents to fight against. We are talking about 17 **neglected diseases** (according to the [WHO classification](http://www.who.int/neglected_diseases/diseases/en/)) which affect one-sixth of the world population but have little visibility, and whose treatments **attract no innovation** in the pharmaceutical market. "We wish someone had tried to profit from them, at least then we would know how to start solving the problem", says Eric Stobbaerts, DNDi (Drugs for Neglected Diseases Initiative) director for Latin America, half jokingly.
 

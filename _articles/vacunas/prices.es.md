@@ -1,5 +1,5 @@
 ---
-category:         vaccines
+category:         vacunas
 title:            Precios
 subtitle:         Cifras que no cuadran
 description:      Algunos países pagan más por sus vacunas que otros con rentas más altas. La opacidad del sector oculta la cuantía a la que los gobiernos las adquieren e impide exigir mejores precios
@@ -27,7 +27,7 @@ Por eso muchos países prefieren no publicar esos datos. Pero, pese a la opacida
 <div class="page-content-container" markdown="1">
 
 
-## Nuevas y caras
+### Nuevas y caras
 
 Como ocurre con los medicamentos, los nuevos productos y sus [patentes](http://medicamentalia.org/access/patents/) disparan los [precios](http://medicamentalia.org/access/prices/). "Con solo dos fabricantes para cada una de las nuevas y mucho más caras vacunas -contra el neumococo, el rotavirus y el Virus del Papiloma Humano (VPH)- y la imposibilidad de usar los dos productos disponibles de forma intercambiable, **las compañías están disfrutando de casi monopolios"**, denuncia MSF en un [informe](https://www.msfaccess.org/content/right-shot-bringing-down-barriers-affordable-and-adapted-vaccines) dedicado íntegramente a analizar el mercado global de vacunas  
 
@@ -43,7 +43,7 @@ España licitó la compra de la vacuna contra el VPH con un requisito: que, al m
 El neumococo es un microorganismo que provoca neumonía y meningitis. La vacuna que protege contra 13 tipos de esta bacteria, producida por Pfizer y GSK, es una de las más caras. La versión de Pfizer va de los 113,54 euros en Estados Unidos a los 42,85 y 45,73 euros en España y Portugal, respectivamente, precios muy similares para dos países a los que separan más de 6.000 dólares de PIB por habitante. Y estas cifras se tienen que multiplicar por tres, el número de dosis necesarias para inmunizar a cada niño. Los países que forman parte de la alianza GAVI pueden acceder a ella por mucho menos, 6,58 euros la dosis, pero organizaciones como Médicos Sin Fronteras y muchos países de ingresos medios se quedan fuera. De hecho, en Idomeni (Grecia), MSF ha tenido que pagar alrededor de 60 euros la dosis para vacunar a los refugiados. Debido a su elevado precio, esta es la única vacuna por la que la organización humanitaria ha hecho una excepción a su política antidonaciones. 
 
 <div class="panel" markdown="1">
-### ¿Por qué MSF no acepta donaciones?
+#### ¿Por qué MSF no acepta donaciones?
 
 "Gratis no es siempre mejor". Así condensa Médicos Sin Fronteras un [artículo](https://medium.com/@MSF_access/there-is-no-such-thing-as-free-vaccines-why-we-rejected-pfizers-donation-offer-of-pneumonia-6a79c9d9f32f#.lr1f61oz8) en el que explica por qué **rechaza las donaciones de vacunas**. Da cuatro razones: 1) las donaciones suelen ir acompañadas de restricciones, por ejemplo sobre en qué areas o poblaciones se pueden usar, lo que puede retrasar la vacunación en campañas de emergencia; 2) las donaciones pueden acabar con los esfuerzos por incrementar el acceso a vacunas asequibles, al eliminar incentivos a competidores para entrar en un mercado en el que ya hay vacunas gratis; 3) las donaciones se usan como justificación para imponer precios altos en otros países, incluyendo organizaciones humanitarias o países en desarrollo; y, por último, 4) las donaciones pueden desaparecer tan rápido como llegaron. 
 </div>
@@ -78,7 +78,7 @@ Portugal [ha llegado a pagar](http://www.base.gov.pt/Base/pt/Pesquisa/Contrato?a
 
 La cantidad de variables que pueden afectar al precio final -tasas, seguros asociados, pago o no de transporte, presentación, volumen, diferencias de elaboración o composición...- y la escasa o nula información que se da sobre ellas hace difícil bucear hasta las causas últimas de las diferencias. Pero poner sobre la mesa a cuánto está pagando cada vacuna cada uno de estos siete estados y estas tres organizaciones, aún con todos esos matices, ayuda a despejar el campo de juego y entender mejor sus reglas. 
 
-## Sistemas de compra conjunta
+### Sistemas de compra conjunta
 
 En la mayoría de casos, los precios más bajos del mercado van a parar a Unicef, que cuenta con un [mecanismo de compra conjunto](https://www.unicef.org/supply/index_62330.html) para países en desarrollo. La organización centraliza las compras y cobra unas [tasas](https://www.unicef.org/supply/index_62330.html) por gestión de entre un 3 y un 4,5%, dependiendo del tipo de vacuna y de los ingresos del país (los 43 clasificados como [los menos desarrollados del mundo](http://unohrlls.org/about-ldcs/) pagan los porcentajes más bajos, por ejemplo).
 
@@ -98,7 +98,7 @@ Para los países participantes del Fondo Rotatorio existe un beneficio extra má
 
 "El camino tiene que ser unir todos estos mecanismos no de América, sino del mundo, para que todos los países tengan acceso equitativo a productos como las vacunas", argumenta Mario Martínez, de la OPS. Y no solo por economía de escala. Ambos sistemas publican los precios a los que adquieren las vacunas y eso, debido a su importante volumen de compras, mejora el nivel de transparencia del mercado global. Eso sí, en el caso del Fondo publican la media ponderada del coste de cada vacuna, **sin desglosar el precio exacto** que pagan a cada fabricante.  
 
-## Negociando a ciegas
+### Negociando a ciegas
 
 {% include caption.html img="articles/Contract_CM_PHV_13_5409_Rotavirus.png" caption="Detalle de un contrato de compra de vacunas" align="alignright" %}
 

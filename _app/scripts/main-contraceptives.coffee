@@ -5,6 +5,7 @@
   useTreemap = null
   useMap = null
   useGraph = null
+  unmetneedsGraph = null 
 
   userCountry = {}
 
@@ -180,7 +181,9 @@
             .filter (d) -> d >= from and d < to
             .classed 'fill-'+step, e.direction == 'down'
           console.log 'scrollama 2', step
-
+      else if instance == 3
+        if unmetneedsGraph and step > 0
+          unmetneedsGraph.setScatterplot()
 
     # start it up
     # 1. call a resize on load to update width/height/position of elements
@@ -249,6 +252,10 @@
   # --------------------------
 
   setupUnmetNeedsGdpGraph = (data_unmetneeds, countries_gni, countries_population) ->
+
+    # Setup Scrollama
+    setupScrollama 'unmet-needs-gdp-container-graph'
+
     # parse data
     data = []
     data_unmetneeds.forEach (d) ->
@@ -256,7 +263,7 @@
       country_pop = countries_population.filter (e) -> e.code == d.code
       if country_gni[0] and country_gni[0]['2016']
           data.push
-            value: d['2016']
+            value: +d['2017']
             name: country_gni[0].name
             region: country_gni[0].region
             population: country_pop[0]['2015']
@@ -265,6 +272,7 @@
         console.log 'No GNI or Population data for this country', d.code, country_gni[0]
     # clear items without unmet-needs values
     #data = data.filter (d) -> d.gdp and d['unmet-needs'] 
+    ###
     unmetNeedsGdpGraph = new window.ScatterplotUnmetNeedsGraph 'unmet-needs-gdp-graph',
       aspectRatio: 0.5625
       margin:
@@ -279,8 +287,24 @@
         color: 'gni' #'region'
         size: 'population'
     # set data
-    unmetNeedsGdpGraph.setData data
-    $(window).resize unmetNeedsGdpGraph.onResize
+    ###
+    # setup graph
+    unmetneedsGraph = new window.BeeswarmScatterplotGraph 'unmet-needs-gdp-graph',
+      margin:
+        left:   0
+        rigth:  0
+        top:    0
+        bottom: 0
+      key:
+        x: 'gni'
+        y: 'value'
+        id: 'name'
+        size: 'population'
+        #color: 'gni'
+      dotMinSize: 1
+      dotMaxSize: 12
+    unmetneedsGraph.setData data
+    $(window).resize unmetneedsGraph.onResize
 
 
   # Use & Reasons maps
@@ -341,44 +365,75 @@
 
   setupContraceptivesReasons = (data_reasons, countries) ->
 
-    reasonOpposed = []
     reasonHealth = []
+    reasonNotSex = []
+    reasonOpposed = []
+    reasonOpposedRespondent = []
+    reasonOpposedHusband = []
+    reasonOpposedReligious = []
 
     reasonsKeys = Object.keys(reasons_names)
 
     # parse reasons data
     data_reasons.forEach (d) ->
+      ###
       reasonsKeys.forEach (reason) ->
         d[reason] = +d[reason]
-        if d[reason] > 1
+        if d[reason] > 100
           console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
-
-      item = countries.filter (country) -> country.code2 == d.code
-      if item and item[0]
-        d.name = item[0]['name_'+lang]
-      else
-        console.log 'no country', d.code
-      reasonOpposed.push
-        name: d.name
-        value: 100*(d.i+d.j+d.k+d.l) # respondent opposed + husband/partner opposed + others opposed + religious prohibition
+      ###
       reasonHealth.push
         name: d.name
-        value: 100*(d.o+d.p+d.t) # health concerns + fear of side effects/health concerns + interferes with bodys processes
+        value: d.o+d.p+d.t # health concerns + fear of side effects/health concerns + interferes with bodys processes
+      reasonNotSex.push
+        name: d.name
+        value: d.b # not having sex
+      reasonOpposed.push
+        name: d.name
+        value: d.i+d.j+d.k+d.l # respondent opposed + husband/partner opposed + others opposed + religious prohibition
+      reasonOpposedRespondent.push
+        name: d.name
+        value: d.i # respondent opposed
+      reasonOpposedHusband.push
+        name: d.name
+        value: d.j # rhusband/partner opposed
+      reasonOpposedReligious.push
+        name: d.name
+        value: d.l # religious prohibition
 
-    reasonOpposed.sort (a,b) -> return b.value-a.value
-    reasonHealth.sort (a,b) -> return b.value-a.value
+    sortArray = (a,b) -> return b.value-a.value
+    reasonHealth.sort sortArray
+    reasonNotSex.sort sortArray
+    reasonOpposed.sort sortArray
+    reasonOpposedRespondent.sort sortArray
+    reasonOpposedHusband.sort sortArray
+    reasonOpposedReligious.sort sortArray
 
-    reasonOpposedGraph = new window.BarHorizontalGraph('contraceptives-reasons-opposed',
+    new window.BarHorizontalGraph('contraceptives-reasons-health',
       key:
         id: 'name'
-        x: 'value')
-    reasonOpposedGraph.setData reasonOpposed.slice(0,5)
-
-    reasonHealthGraph = new window.BarHorizontalGraph('contraceptives-reasons-health',
+        x: 'value').setData reasonHealth.slice(0,5)
+    new window.BarHorizontalGraph('contraceptives-reasons-opposed',
       key:
         id: 'name'
-        x: 'value')
-    reasonHealthGraph.setData reasonHealth.slice(0,5)
+        x: 'value').setData reasonOpposed.slice(0,5)
+    new window.BarHorizontalGraph('contraceptives-reasons-not-sex',
+      key:
+        id: 'name'
+        x: 'value').setData reasonNotSex.slice(0,5)
+    new window.BarHorizontalGraph('contraceptives-reasons-opposed-respondent',
+      key:
+        id: 'name'
+        x: 'value').setData reasonOpposedRespondent.slice(0,5)
+    new window.BarHorizontalGraph('contraceptives-reasons-opposed-husband',
+      key:
+        id: 'name'
+        x: 'value').setData reasonOpposedHusband.slice(0,5)
+    new window.BarHorizontalGraph('contraceptives-reasons-opposed-religious',
+      key:
+        id: 'name'
+        x: 'value').setData reasonOpposedReligious.slice(0,5)
+
 
   # Contraceptives Use Treenap
   # --------------------------
@@ -408,8 +463,42 @@
   # Contraceptives App
   # -------------------
 
-  setupContraceptivesApp = ->
-    setupScrollama 'contraceptives-app-container'
+  setupContraceptivesApp = (data_use, data_unmetneeds, data_reasons) ->
+    # setupScrollama 'contraceptives-app-container'
+    $('#contraceptives-app .select-country')
+      .change ->
+        country_code = $(this).val()
+        console.log 'change', country_code
+        # Use
+        data_use_country = data_use.filter (d) -> d.code == country_code
+        if data_use_country and data_use_country[0]
+          country_methods = methods_keys.map (key, i) -> {'name': methods_names[lang][i], 'value': +data_use_country[0][key]}
+          country_methods = country_methods.sort (a,b) -> b.value-a.value
+          $('#contraceptives-app-data-use').html Math.round(+data_use_country[0]['Any modern method'])+'%'
+          $('#contraceptives-app-data-main-method').html country_methods[0].name
+          $('#contraceptives-app-data-main-method-value').html Math.round(country_methods[0].value)+'%'
+          $('#contraceptives-app-use').show()
+        else
+          $('#contraceptives-app-use').hide()
+        # Unmetneeds
+        data_unmetneeds_country = data_unmetneeds.filter (d) -> d.code == country_code
+        if data_unmetneeds_country and data_unmetneeds_country[0]
+          $('#contraceptives-app-data-unmetneeds').html Math.round(+data_unmetneeds_country[0]['2017'])+'%'
+          $('#contraceptives-app-unmetneeds').show()
+        else
+          $('#contraceptives-app-unmetneeds').hide()
+        # Reasons
+        data_reasons_country = data_reasons.filter (d) -> d.code == country_code
+        if data_reasons_country and data_reasons_country[0]
+          reasons = Object.keys(reasons_names).map (reason) -> {'name': reasons_names[reason], 'value': +data_reasons_country[0][reason]}
+          reasons = reasons.sort (a,b) -> b.value-a.value
+          $('#contraceptives-app-data-reason').html reasons[0].name
+          $('#contraceptives-app-data-reason-value').html Math.round(reasons[0].value)+'%'
+          $('#contraceptives-app-reason').show()
+        else
+          $('#contraceptives-app-reason').hide()
+      .val userCountry.code
+      .trigger 'change'
 
 
   # Setup
@@ -443,6 +532,20 @@
         userCountry.code = 'ESP'
         userCountry.name = if lang == 'es' then 'España' else 'Spain'
 
+      # add country ISO 3166-1 alpha-3 code to data_reasons
+      data_reasons.forEach (d) ->
+        item = countries.filter (country) -> country.code2 == d.code
+        if item and item[0]
+          d.code = item[0].code
+          d.name = item[0]['name_'+lang]
+          Object.keys(reasons_names).forEach (reason) ->
+            d[reason] = 100*d[reason]
+            if d[reason] > 100
+              console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
+          delete d.country
+        else
+          console.warn 'No country data for '+d.code
+
       console.log userCountry
 
       if $('#treemap-contraceptives-use').length
@@ -458,6 +561,6 @@
         setupContraceptivesReasons data_reasons, countries
 
       if $('#contraceptives-app').length
-        setupContraceptivesApp()
+        setupContraceptivesApp data_use, data_unmetneeds, data_reasons
 
 ) jQuery

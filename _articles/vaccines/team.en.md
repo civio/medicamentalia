@@ -22,7 +22,7 @@ lang:       en
 <div class="container page-content" markdown="1">
 <div class="page-content-container" markdown="1">
 
-## The team
+### The team
 
 Medicamentalia Vaccines is a journalistic investigation by [Civio](http://www.civio.es/){:target="_blank"} into the current situation of vaccination worldwide, combining data analysis with field research in a range of countries. This is the sequel to our first investigation, focused on [access to medicines](/access/), which was awarded Investigation of the Year (small newsroom) in the Data Journalism Awards and the Gabriel García Márquez Journalism Prize (Innovation category). 
 
@@ -41,7 +41,7 @@ Medicamentalia is the work of the members of Civio in conjunction with an array 
 - **Serusha Govender** and **Anne Gonschorek**. Filming in South Africa.
 
 {: #collaborators}
-### Collaborators:
+#### Collaborators:
 
 - **Philip Smart**. Spanish-English translation
 - **Asier Andrés**. Research support in Guatemala.
@@ -50,7 +50,7 @@ Medicamentalia is the work of the members of Civio in conjunction with an array 
 
 
 {: #acknowledgements}
-### Acknowledgements
+#### Acknowledgements
 This project would not have been possible without the initial grant from **Journalism Grants**. We would like to thank the [European Journalism Center](http://ejc.net/){:target="_blank"} for sponsoring this research, as they did for the first part of the Medicamentalia project, and their infinite patience and understanding with the problems that delayed the launch; especially to **Diana Lungu** who was always ready to lend a hand. 
 
 Our *media partners* also gave the green light to this project before it became a reality. Thanks to [Correctiv](https://correctiv.org/en/){:target="_blank"}, [El Mundo](http://www.elmundo.es/){:target="_blank"}, [Euronews](http://www.euronews.com/){:target="_blank"}, [La Sexta](http://www.lasexta.com/){:target="_blank"}, [The Bureau of Investigative Journalism](https://www.thebureauinvestigates.com/){:target="_blank"}, [Il Sole](http://www.ilsole24ore.com/){:target="_blank"} and [Euro Scientist](http://www.euroscientist.com/){:target="_blank"} for their faith and support. Without them, we would reach a far smaller audience and much of this work would have been in vain. **Hugo Garrido**, **Verónica Ramírez** and **Hristio Boytchev** helped us to adapt the contents to their media. 
@@ -61,10 +61,10 @@ Thanks to everyone that gave up their time and knowledge in the interviews, both
 
 {% include gallery.html id="team" %}
 
-## Methodology
+### Methodology
 
 {: #preliminary-research}
-### Preliminary research
+#### Preliminary research
 
 As with all Civio projects, the first step forwards in the investigation implied a necessary step backwards - we had to take a plunge unto the subject. Whilst in the first part of the Medicamentalia project we focused on researching access to medicines (prices, patent systems, etc.), in this second phase we wanted to investigate vaccines on an international level. This time, we wanted to go beyond the costs and focus on other elements such as immunization rates, the problems that exist with immunization, how pooled purchasing systems operate between different countries and supply issues, to name but a few. 
 
@@ -75,19 +75,19 @@ We were not the first to investigate such a topic and *we were inspired by the r
 We also studied thoroughly existing analysis on price differences across countries and the importance of transparency in state-pharmaceutical negotiations, as well as all information on ongoing trends accompanying the WHO's [V3P project](http://www.who.int/immunization/programmes_systems/procurement/v3p/platform/module1/en/). In parallel, we analyzed the positions from industry actors and the different organizations involved, e.g. GAVI, Médecins Sans Frontières and the WHO itself.
 
 {: #the-data}
-### The data
+#### The data
 For this research, we needed to cross check various databases: immunization rates, cases by disease, deaths by disease, immunization schedules, levels of *stockouts*, public budgets allocated to immunization campaigns, purchase prices of vaccines for countries and organisations, as well as the basic elements required to provide context such as GDP or population by country or region. The majority of data collected, although updated in December 2016, refers to information covering the period up to 2015.
 
 We found some of the data in easily reusable databases, although it required some cleansing. Other information was obtained from websites where it required *scraping* to obtain a version of the data that we could work with. In more complicated instances, we had to draw upon a range of several data sources. 
 
-#### Which vaccines did we analyse?
+##### Which vaccines did we analyse?
 We began by considering the WHO [list of essential medicines](http://www.who.int/medicines/publications/essentialmedicines/en/){:target="_blank"}. We studied the advice and immunization schedules for each one, in an attempt to cover the most common diseases worldwide, which would allow us to make comparisons between different countries. 
 
 We created a document for each vaccine to link them to the disease and better understand how they work (doses, advice, etc.) We had to exclude from some analysis the relationship between vaccines and diseases which have more than one origin, as is the case with meningitis (which has various vaccines depending on the type of the disease), for example. Although there is a long list, according to the analysis of the results we included particular vaccines in the research. This does not mean that the others are less important, we simply found less relevant information about them or only information that was not comparable. 
 
 **This data is not perfect**, however it was sufficiently meaningful for us to be able to extract conclusions. In fact, [one of the concerns](http://apps.who.int/iris/bitstream/10665/251810/1/WER9148.pdf?ua=1){:target="_blank"} of the group of vaccine experts at the WHO is the poor data quality. “How can you conduct an investigation without all objective information available on the subject?” Immunization data is not collected from certain countries. Moreover, some of the figures gathered by the WHO and other statistical services do not concur. An example of this problem is the statistics of cases of each disease from the WHO and those from the European Centre for Disease Prevention and Control (ECDC), which do not entirely concur. 
 
-#### Immunization data
+##### Immunization data
 This is used in a great deal of our research and shows the percentage of people that have received a vaccine out of the number of people that should receive it. Data runs from as far back as 1980 for some diseases, to 2015. The [source](http://www.who.int/immunization/monitoring_surveillance/data/Coverage_survey_data.xls?ua=1){:target="_blank"} is the WHO. We also reviewed the WHO [interactive immunization atlas](http://gamapserver.who.int/gho/interactive_charts/immunization/polio/atlas.html){:target="_blank"}, but this does not relate immunization rates with GDP and other variables - just the geographical location.
 
 Although this is fairly complete data and very useful for our research, we must take into account the fact that these are **estimates**. 
@@ -108,7 +108,7 @@ There are a few specific exceptions. For instance, for the second dose of the me
 
 For **herd immunization** we have used a rate of 95% for measles (the figure which is agreed in most research). For the DPT vaccine line we used 80%, the minimum coverage level recommended by the WHO SAGE group. According to calculations of the necessary rate to achieve herd immunization, polio would require between 80% and 86%. We used 80%, the lowest rate within this range. Two sources ([here](http://www.who.int/bulletin/volumes/86/2/07-040089/en/) and [here](http://cid.oxfordjournals.org/content/52/7/911.full){:target="_blank"}) discuss the subject, although there are many more.
 
-#### Cases and deaths by disease
+##### Cases and deaths by disease
 In order to determine the number of cases of each disease recorded every year, we used the WHO [table of incidences](http://www.who.int/immunization/monitoring_surveillance/data/en/){:target="_blank"}, to which we have added certain data:
 
 - In order to be able to include cases of polio in 2016 in the successes article video, we used the information available in [Polio Eradication](http://polioeradication.org/polio-today/polio-now/){:target="_blank"}, an extremely up to date report on the global state of polio. The dots are ubicated by country, but inside a country they are randomly distributed.  
@@ -127,15 +127,14 @@ We have also used mortality figures, from two sources:
 - Child mortality by country and [by disease](http://apps.who.int/gho/data/view.main.ghe100-AGO?lang=en){:target="_blank"}. With data from 2000 to 2015.
 - General mortality data by disease, [here](http://vizhub.healthdata.org/gbd-compare/){:target="_blank"}.
 
-
-#### Stockouts data
+##### Stockouts data
 
 Data on vaccine stockouts come from the WHO monitoring system of vaccine-preventable diseases (available [here](http://apps.who.int/immunization_monitoring/globalsummary/indicators?ir%5Br%5D%5B%5D=AFRO&ir%5Br%5D%5B%5D=AMRO&ir%5Br%5D%5B%5D=EMRO&ir%5Br%5D%5B%5D=EURO&ir%5Br%5D%5B%5D=SEARO&ir%5Br%5D%5B%5D=WPRO&ir%5Bi%5D%5B%5D=VSRS_BCG&ir%5Bi%5D%5B%5D=VSRS_BCG_ANYDIST&commit=Ok+with+the+selection){:target="_blank"}). The information extracted from this repository was last updated by the WHO in December of 2016, and only has data until 2015.
 
 Countries notify WHO if they have experienced stockouts, either at national level or in some of the health districts where each country is divided. The global figure of 97 states that suffered a shortage in 2015 of some of the essential vaccines includes both those produced at the regional and national level. However, to make the map of stockouts of the vaccine against tuberculosis simpler, only the problems at national level have been taken into account, because of their greater relevance.
 
 {: #prices}
-#### Price data
+##### Price data
 
 Trying to shed light on the market turned out to be much more difficult in this second phase, where we focused on prices paid by countries for vaccines, than in the first, when we investigated [the price of certain essential drugs](http://medicamentalia.org/access/prices/). There is very little information available, and what is there is partial. And comparisons, because of the multiple variables involved, are complex and force us to take the results with caution. The [WHO price database](http://apps.who.int/immunization/vaccineprice/en/Navigation/Load?menu=1100) includes about 50 countries, but their names are anonymised.
 
@@ -174,7 +173,7 @@ We used some lists like [the one from the WHO](https://extranet.who.int/gavi/PQ_
 We have included in our articles all the prices, as a range, paid by a country or organization in the analyzed time, in order to represent all the the different options (e.g. brand, packaging). We've tried to compare in the articles only those data points that, because of their composition and other characteristics, were actually comparable, but in some cases the information was not enough. If you find any errors, please [let us know](mailto: contacto@civio.es).
 
 {: #vph}
-#### Cervical cancer data
+##### Cervical cancer data
 
 The latest global data on cervical cancer incidence, cited in most studies on the subject, is that from [Globocan 2012](http://gco.iarc.fr/today/online-analysis-dual-bars?mode=cancer&mode_population=continents&population=320&sex=2&cancer=29&type=0&statistic=0&prevalence=0&color_palette=default). Although we reviewed it for our investigation, we decided to use more recent data for the main data visualization, in this case about mortality. The WHO [gives estimates](http://www.who.int/healthinfo/global_burden_disease/estimates/en/index1.html) of causes of death in the world in 2015 and from there we extracted, adding population and GDP, the mortality information shown in the visualization. Additionally, we used [WHO statistics](http://www.who.int/immunization/monitoring_surveillance/data/en/) (updated in January 2017) to show whether or not countries had introduced the vaccine on 2015.
 
@@ -182,14 +181,14 @@ We discussed which variable should be used to represent mortality. According t
 
 For the country purchasing price data we considered the three vaccine types separately (Cervarix, Gardasil and 9-valent Gardasil). To get its price in private clinics, the journalist Asier Andrés gathered the data in five medical centers located in Guatemala City with different price ranges.
 
-#### Other data sources
+##### Other data sources
 
 - Immunization schedules for all countries via [WHO](http://apps.who.int/immunization_monitoring/globalsummary/schedules){:target="_blank"}.
 - The years of vaccine introductions. In some cases, the dates of introduction were very recent and did not match the information from the countries. Moreover, 28 countries did not have the information. We requested this information from eight countries and only one responded - Guatemala. 
 - GDP data is taken from the World Bank, as is population data. This enabled us to calculate the number of cases per capita and, in some cases, omit certain countries from the charts in order to simplify the visualizations: concretely, we omitted data from countries with a population of less than 300,000 from the graph that compares different immunization rates. 
 
 {: #reports-and-website}
-### Reports and website
+#### Reports and website
 
 Analysis of all this information allowed us to draw some very interesting conclusions, but we needed to examine it in even more detail. We were clear from the start that we needed first-hand reports. We focused the research on two regions and prepared the interviews. We chose two destinations: 
 
@@ -203,7 +202,7 @@ Most of the data visualizations are **customized, displaying information dependi
 
 Home pictures credits (from Flickr): _[Untitled](https://www.flickr.com/photos/cdcglobal/8290661927/in/photolist-dCBNX2-dCBQ2c-52uTd-dCHeGE-eiT6xa-dEWfa-dCHfkC-gABM-7jLH9R-eiYPpE-eiYPnb-dCBPBT-dCBPQk-6oPUze-6nSmty-eiT6jc-dCBPjn-dQXoqh-dmePf9-dEWFJ-dEWao-dQXoS9-dCHdSQ-9KowR3-eiT5Ha-dCBNTV-eiT6sP-ajZMmH-eiYPkE-eiYP5W-gTo3iT-eiYPbb-dEWyh-dEWBC-dCHfo1-gv7c1Y-eiT5Vi-acADNK-2W2iXP-4Nu73F-a7RGBX-dtN6ax-fqnzxX-6Womu7-7gAbC-ci5bjd-p4CN5M-f9mfR6-gnacYF-c3urAm/){:target="_blank"}_ from CDC Global, _[Packaging vials](https://www.flickr.com/photos/sanofi-pasteur/5594746841/){:target="_blank"}_, _[Filling machine](https://www.flickr.com/photos/sanofi-pasteur/10475652385/){:target="_blank"}_ and _[Dengue immunization public program in Paraná state of Brazil](https://www.flickr.com/photos/sanofi-pasteur/29855307395/){:target="_blank"}_ from Sanofi Pasteur.
 
-## Collaboration and reproduction
+### Collaboration and reproduction
 
 Medicamentalia Vaccines is not a closed project. If you have relevant information or **you work for an organisation that wishes to reproduce all or part** of the content, [write to us](mailto:contacto@civio.es) and we will help you to make it happen.
 

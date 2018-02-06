@@ -72,7 +72,7 @@
 
     .header-content{
 
-      h2{
+      h1{
         padding: 0;
         margin-bottom: 10px;
         color: $brand-secondary;
@@ -80,8 +80,23 @@
         font-size: 2.5em;
         font-weight: 400;
         letter-spacing: 0.07em;
+        line-height: 1.375em;
         text-align: center;
         text-transform: uppercase;
+        background: none;
+      }
+
+      h2{
+        font-size: 18px;
+        max-width: 640px;
+        margin: 0 auto 15px;
+        line-height: 24px;
+
+        padding: 0 $grid-gutter-width/2;
+
+        @media (min-width: $screen-sm) {
+          padding: 0;
+        }
       }
     }
   }
@@ -412,10 +427,12 @@ $btn-scroll-down-icon-size: 44px;
 
       .portfolio-box-caption-description{
         //font-family: $font-family-serif;
+        color: white;
         font-size: 1.125em;
+        line-height: 1.25em;
         //width: 334px;
         max-width: 500px;
-        margin: 0 auto 30px;
+        margin: 0 auto $grid-gutter-width/2;
         font-weight: 300;
       }
     }  
@@ -442,7 +459,8 @@ $btn-scroll-down-icon-size: 44px;
 
   // Categoy colors
 
-  &.category-access{
+  &.category-access,
+  &.category-acceso{
 
     .portfolio-box-overlay{
       background: $overlay-orange;
@@ -458,7 +476,8 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
 
-  &.category-vaccines{
+  &.category-vaccines,
+  &.category-vacunas{
   
     .portfolio-box-overlay{
       background: $overlay-blue;
@@ -490,19 +509,20 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
 
-  &.category-farma{
+  &.category-anticonceptivos,
+  &.category-contraceptives{
   
     .portfolio-box-overlay,
     .portfolio-box-background{
-      background: $overlay-farma;
+      background: $overlay-contraceptives;
     }
 
     &:hover {
       .portfolio-box-overlay{
-        background: darken($overlay-farma, 10%);
+        background: darken($overlay-contraceptives, 10%);
       }
       .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
-        color: darken($overlay-farma, 10%);
+        color: darken($overlay-contraceptives, 10%);
       }
     }
   }
@@ -528,6 +548,7 @@ $btn-scroll-down-icon-size: 44px;
   border: 2px solid white;
   font-size: .875em;
   width: 190px;
+  margin-top: $grid-gutter-width/2;
   padding: 10px 0;
   @include transition(.4s ease-out background-color);
 }

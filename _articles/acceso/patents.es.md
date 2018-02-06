@@ -1,5 +1,5 @@
 ---
-category:         access
+category:         acceso
 title:            Patentes
 subtitle:         Peaje a la salud
 description:      Aunque existen modelos alternativos, la aplicación de los derechos de propiedad intelectual a los medicamentos sigue siendo el camino marcado por la industria
@@ -31,9 +31,9 @@ Y es que las diferencias no radican solo en el precio que negocia cada empresa c
 
 <small>* El cambio de moneda a euros de todo el texto, cuando las fuentes originales están en una moneda distinta, está basado en las cifras recogidas el 8 de junio de 2015 de la página web [xe.com](http://www.xe.com/).</small>
 
-## El sistema de patentes
+### El sistema de patentes
 
-### Un acuerdo internacional, 161 maneras de aplicarlo
+#### Un acuerdo internacional, 161 maneras de aplicarlo
 
 Toda la legislación nacional bebe de un acuerdo internacional, el [TRIPS](https://www.wto.org/spanish/docs_s/legal_s/27-trips.pdf) (Acuerdo sobre los aspectos de los derechos de propiedad intelectual relacionados con el comercio, en sus siglas en inglés), **firmado en 1994 como avanzadilla de la Organización Mundial del Comercio (OMC)**, que armonizó el sistema internacional de todo tipo de patentes, no solo las farmacéuticas, desde su entrada en vigor en enero de 1995.
 
@@ -49,7 +49,7 @@ En la misma línea argumentaba Pedro Villardi unos días antes desde la sede de 
 
 Entra en el terreno de debate Reinaldo Guimarães. Después de pasar por varios cargos vinculados con lo público, fue Secretario de Estado de Ciencia y Tecnología bajo el Ministerio de Sanidad brasileño (2007-2010) y ahora es vicepresidente de ABIFINA, la asociación que engloba a la industria farmacéutica local. Aunque asegura que el sistema de patentes tiene “muchos méritos”, como hacer público el proceso (¿cómo se llegó a esa innovación?), **desconfía de su función como estímulo a la innovación**. Y no solo en el campo de los medicamentos, sino en cualquier industria. Porque, argumenta, “en el fondo, lo que más estimula la innovación es la competencia. No es el monopolio. Y las patentes son un monopolio”. Desde organizaciones como ABIA también desvinculan innovación y patentes. “**El número de nuevas moléculas cae cada año**”, argumenta Pedro Villardi, y añade que “no existe una realidad de mucha innovación y precio alto. Existe una realidad de poca innovación y precio alto”.<a name="coste"></a>
 
-## ¿Cuánto cuesta crear un fármaco?
+### ¿Cuánto cuesta crear un fármaco?
 
 {% include video-container.html videoid="Rzz03TcuB9Q" title="Farmacéuticas y organizaciones enfrentan sus cifras sobre el coste de crear un fármaco." credit="Vídeo: Anne Vigna and Miguel Á. Gavilanes" %}
 
@@ -71,9 +71,9 @@ Para Robert W. Armstrong, antiguo vicepresidente de I+D Global de Eli Lilly and 
 
 ¿Más de 2.000 millones de euros? ¿1.172? ¿44? ¿Cuál es el coste real? Las divergencias entre los cálculos de la industria y de las organizaciones civiles son abismales. Lo que les separa, para Guimarães, es **el método de cálculo**. “Si incluyes en I+D los estudios clínicos de fase cuatro, que son más caros, la cifra sube”. También si incluyes el _marketing_. “Y más aún si incluyes la expectativa de rendimiento de capital en el mercado financiero”, es decir, lo que tendrías si hubieras invertido ese dinero durante todo el tiempo que dura la investigación y la producción del fármaco. Ese importe, los costes de capital, tiene un peso importantísimo en el resultado final. De hecho, el estudio de la Tufts CSDD desglosa su cifra total en dos componentes: de los 2.558 millones de dólares totales, 1.395 corresponden a gasto directo, lo que denominan _out-of-pocket_, y el resto, 1.163 millones de dólares, son _time costs_: el retorno **que habrían recibido** los inversores si hubieran decidido colocar su dinero en otro sitio mientras el fármaco se desarrolla. Esa es la “fórmula milagrosa”, en palabras de Guimarães.<a name="alternativas"></a>
 
-## Alternativas
+### Alternativas
 
-### Modelos que esquivan la propiedad intelectual tradicional
+#### Modelos que esquivan la propiedad intelectual tradicional
 
 Aun con sus fallos, Guimarães es pragmático a la hora de evaluar el sistema de patentes: “Si no tienes nada para poner en su lugar, lo que hay es lo mejor”. Entonces, ¿no hay alternativas? Las organizaciones, los gobiernos y las propias farmacéuticas han **buscado y probado otros modelos**, en ocasiones obligados por las circunstancias. Lo son, por ejemplo, la licencia voluntaria de Gilead en India, o [la licencia obligatoria aprobada por Brasil en 2007](/licencia-obligatoria/), una medida contemplada en el propio acuerdo TRIPS pero que, para la IFPMA (Federación Internacional de Productores Farmacéuticos y Asociaciones, en sus siglas en inglés ), no es la solución, puesto que, [argumentan](http://www.ifpma.org/innovation/ip-access.html), hay otras vías más efectivas en la práctica. Eso sí, según la federación, esos caminos alternativos **deben ser siempre complementarios** al sistema de patentes y aplicarse solo cuando se pueda demostrar un claro fallo del mercado.
 
@@ -85,7 +85,7 @@ Una [investigación](http://www.ifpma.org/fileadmin/content/Publication/2012/Ass
 
 De todos los sistemas analizados, **los favoritos del estudio** son las bases de datos abiertas, los [_Advanced Market Commitments_](https://en.wikipedia.org/wiki/Advance_market_commitments) –gobiernos o entidades, en ocasiones formadas por varios países, que garanticen un mercado viable para un medicamento en caso de que éste se desarrolle– y los _Product Development Partnerships_ (PDP), colaboraciones entre industria, gobiernos, ONG y mundo académico para el desarrollo de un nuevo medicamento. En Brasil mantienen las siglas. Su PDP particular se llama [_Parcerias de Desenvolvimiento Produtivo_](http://bvsms.saude.gov.br/bvs/saudelegis/gm/2012/prt0837_18_04_2012.html), colaboraciones entre la industria y el gobierno, que ofrece su enorme mercado, para la transferencia de tecnología a los laboratorios públicos. Farmanginhos, el más importante, pasó de facturar 57 millones de euros en 2012 a 143 en 2013 gracias a estas PDP. Son el pilar de su política de acceso a medicamentos pero no todos las ven con buenos ojos.
 
-### Fallos del mercado
+#### Fallos del mercado
 
 Por desgracia, para algunas enfermedades no hay patentes contra las que luchar. Hablamos de 17 dolencias denominadas **olvidadas**, según la [categoría de la OMS](http://www.who.int/neglected_diseases/diseases/en/), que afectan a una sexta parte de la población mundial, pero tienen poca visibilidad, por lo que **el mercado farmacéutico no innova** en esos tratamientos. “Nos hubiese gustado que hubiese ánimo de lucro porque por lo menos sabríamos por dónde tomar el problema”, comenta medio en broma Eric Stobbaerts, director en Latinoamérica de la DNDi (Iniciativa Medicamentos para Enfermedades Olvidadas).
 

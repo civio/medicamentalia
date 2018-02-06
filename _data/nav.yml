@@ -9,7 +9,33 @@ access:
     type: article
   - ref: access-team
     type: article
+acceso:
+  - ref: prices
+    type: article
+  - ref: counterfeits
+    type: article
+  - ref: compulsory-license
+    type: article
+  - ref: patents
+    type: article
+  - ref: access-team
+    type: article
 vaccines:
+  - ref: vaccines-prices
+    type: article
+  - ref: immunization
+    type: article
+  - ref: antivaccines
+    type: article
+  - ref: success
+    type: article
+  - ref: stockout
+    type: article
+  - ref: papilloma
+    type: article
+  - ref: vaccines-team
+    type: article
+vacunas:
   - ref: vaccines-prices
     type: article
   - ref: immunization

@@ -1,5 +1,5 @@
 ---
-category:         vaccines
+category:         vacunas
 title:            Niveles de vacunación
 subtitle:         Un escudo con agujeros
 description:      La mitad de los países del mundo no alcanza porcentajes de inmunización suficientes para frenar la transmisión de enfermedades como el sarampión
@@ -45,7 +45,7 @@ En sus informes, la organización [incluye](https://www.msf.es/sites/default/fil
 
 **India, donde se produjeron un 30% de las muertes por sarampión de menores de cuatro años en 2015 de todo el mundo, con 22.703 fallecidos, registró estimaciones de cobertura de un 81% en la primera dosis y un 69% en la segunda**.
 
-### Pakistán, reducto de polio
+#### Pakistán, reducto de polio
 
 Muy cerca, en Pakistán, la polio se resiste a desaparecer del todo, aunque la vacuna se inventó en los años 50. En 2016 se registraron 42 casos de esta enfermedad en todo el planeta. 21 de ellos se produjeron en Pakistán y otros 13 justo al otro lado de la frontera, en Afganistán. 
 
@@ -68,7 +68,7 @@ Esta vacuna protege contra la **difteria, el tétanos y la tos ferina**, tres en
 La tos ferina, en cambio, sigue provocando un número elevado de enfermos y muertes infantiles, y las cifras de los últimos años no acaban de menguar. De hecho, en algunos años, como 2012 y 2014, creció el número de afectados. En 2015, se registraron 142.412 casos. De ellos, 56.696 niños murieron a causa de esta enfermedad, un 15% de ellos en Nigeria. 
 
 <div class="panel" markdown="1">
-### El desplome de la vacunación en Guatemala
+#### El desplome de la vacunación en Guatemala
 
 {% include video-container.html videoid="pAcmKOSHwVY" credit="Vídeo y sonido: Manuel Penados. Edición: Denise Pimentel." %}
 

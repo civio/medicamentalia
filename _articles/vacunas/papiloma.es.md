@@ -1,5 +1,5 @@
 ---
-category:         vaccines
+category:         vacunas
 title:            VPH
 subtitle:         Vacunas contra el cáncer
 description:      "La inmunización contra el virus del papiloma humano, junto al cribado y el tratamiento precáncer, puede eliminar por completo el cáncer de cérvix. En contra: el elevado coste de la vacuna y las reticencias culturales y sociales"
@@ -41,13 +41,13 @@ Por el momento, las vacunas actuales no son la "solución absoluta" para esta en
 
 Las principales barreras a la hora de implantar estas nuevas vacunas, según un [informe](http://apps.who.int/iris/bitstream/10665/85344/1/9789275317471_spa.pdf?ua=1) de la OMS de 2013, son: la dificultad de llegar a niñas no escolarizadas (se recomienda entre los nueve y los 13 años), el coste (piden que se rebaje a menos de cinco dólares por niña vacunada) y los "rumores o desinformación" que pueden frenar su implantación si no se comunican de forma clara las razones de dirigirse solo a las niñas. En este punto, el informe recalca que **es importantísimo educar, también, a los hombres**.
 
-## La barrera cultural y social
+### La barrera cultural y social
 "Casi todas las semanas alguien me pregunta si debería vacunar o no a su niña. Y esas dudas vienen desde cuestiones religiosas, culturales... En muchas ocasiones creen que si vacunan a sus hijas están diciéndoles que pueden iniciar relaciones sexuales, ya que es infección de transmisión sexual", relata Mauricio Maza. 
 
 Y es que esta no es una vacuna cualquiera. Es una vacuna nueva, que además está relacionada con un virus de transmisión sexual. Y el cáncer de cérvix no es un cáncer cualquiera. Es un cáncer que afecta solo a las mujeres.
 
 <div class="panel" markdown="1">
-### Machismo y pobreza frenan las revisiones y disparan la incidencia
+#### Machismo y pobreza frenan las revisiones y disparan la incidencia
 
 {% include video-container.html videoid="N_EZXJ49fTk" credit="Vídeo: Manuel Penados." %}
 </div>
@@ -60,8 +60,7 @@ En una línea similar se manifiesta Gloria Cruz, una de las participantes por pa
 
 José Jerónimo, especialista en cáncer en mujeres de la organización [PATH](http://www.path.org/), cree que estas reticencias son solo temporales: "Es propio de etapas donde se está introduciendo algo nuevo en los programas. Es solo cuestión de tiempo, que las aguas se calmen, tener mas experiencia con esta vacuna...". Mireia Díaz refuerza esa idea: "Hay millones y millones de niñas vacunadas en Europa, no se ha demostrado ni un solo caso que realmente haya sido ocasionado por la vacuna del VPH. No hay evidencia de que esta vacuna sea perjudicial". Ya en 2009, después de que dos chicas de 14 años ingresaran con convulsiones en España, la Agencia Europea del Medicamento [defendió](http://sociedad.elpais.com/sociedad/2009/02/19/actualidad/1234998010_850215.html) la seguridad de la vacuna, alegando que era "muy improbable" la relación entre esas convulsiones y la inmunización. "La vacunación debe continuar", sentenció entonces el organismo.
 
-
-## La barrera económica
+### La barrera económica
 
 Cuando la vacuna no está instaurada en los programas públicos, la única vía para acceder a ella es a través de clínicas privadas. Gerson Eduardo Gálvez Torres es ginecólogo en [Aprofam](http://www.aprofam.org.gt/nosotros/quienes-somos/), una red de clínicas en Guatemala, sin ánimo de lucro, destinada a ofrecer servicios de salud sexual y reproductiva a precios asequibles. Asegura que pocos piden ese servicio. **"Al vencer esa barrera, la cultural, lo otro que detiene es lo económico"**.
 

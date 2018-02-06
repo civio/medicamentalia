@@ -2,8 +2,8 @@
 <header id="home-header" class="category-header">
   <div class="header-content">
     <div class="header-content-inner">
-        <h2>{{ site.data.locales[page.lang].categories[include.id].title }}</h2>
-        <p>{{ site.data.locales[page.lang].categories[include.id].description }}</p>
+        <h1>{{ page.title }}</h1>
+        <h2>{{ page.description }}</h2>
     </div>
   </div>
 </header>
@@ -29,7 +29,7 @@
   <div class="key-findings-overlay"></div>
   <div class="container">
     {% capture keyFindings %}
-    {% include key_findings_{{ include.id }}.{{ page.lang }}.md %}
+    {% include key_findings_{{ include.id }}.md %}
     {% endcapture %}
     {{ keyFindings | markdownify }}
   </div>

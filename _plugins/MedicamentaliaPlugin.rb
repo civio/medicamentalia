@@ -28,7 +28,7 @@ eos
     include MedicamentaliaUtils
 
     def add_anchor_links(text)
-      text.gsub(/\<h2\>(.+?)\<\/h2\>/){ s = $1; '<a id="'+slugify(s)+'" class="page-anchor"></a><h2>'+s+'</h2>' }
+      text.gsub(/\<h3\>(.+?)\<\/h3\>/){ s = $1; '<a id="'+slugify(s)+'" class="page-anchor"></a><h3>'+s+'</h3>' }
     end
   end
 
@@ -52,8 +52,8 @@ eos
       # context.environments.first['page'] return page object
       content = parser.convert( context.environments.first['page']['content'] )
       menu = '';
-      # Matches h2 tags in content
-      content.gsub(/\<h2\>(.+?)\<\/h2\>/){ 
+      # Matches h3 tags in content
+      content.gsub(/\<h3\>(.+?)\<\/h3\>/){ 
         s = $1
         menu = menu + '<li><a href="#'+slugify(s)+'" title="'+s+'">'+s+'</a></li>'
       }

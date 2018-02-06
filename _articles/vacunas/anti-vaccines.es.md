@@ -1,5 +1,5 @@
 ---
-category:         vaccines
+category:         vacunas
 title:            Antivacunas
 subtitle:         Cuando el problema no es solo de recursos
 description:      Países de renta alta han bajado la guardia y rebajado sus porcentajes de inmunización. En algunos, la confianza en las vacunas empieza a flojear   
@@ -61,7 +61,7 @@ Sí lo están en regiones en las que las epidemias de males como el sarampión o
 
 Que la memoria mantenga vivos los recuerdos de épocas peores y las dificultades de acceso a la salud hacen que, en ciertas regiones, como en Centroamérica, la desconfianza no florezca. El miedo inicial a las vacunas en zonas rurales -por temor a lo desconocido- **no ha evolucionado hasta transformarse en los movimientos antivacunas modernos**, que son anecdóticos. Esas comunidades han pasado "de esconder a sus niños" cuando llegaban los responsables de las campañas de vacunación a "hacer cola cuando se enteran de que llegó la vacuna al centro de salud", como narra Ademir Vásquez, del programa nacional de inmunizaciones del Ministerio de Salud de Guatemala.
 
-### ¿Cómo se combate?
+#### ¿Cómo se combate?
 
 <div class="container-right">
 {% include video-container.html videoid="kHLADRHFwfU" title="Mario Martínez, de la PAHO." credit="Vídeo: Manuel Penados." %}

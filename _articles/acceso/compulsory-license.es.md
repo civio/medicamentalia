@@ -1,5 +1,5 @@
 ---
-category:         access
+category:         acceso
 title:            Licencia obligatoria
 subtitle:         Un acto soberano –y aislado– contra las patentes
 description:      Ocho años después de tumbar la patente sobre el efavirenz, un antirretroviral, vuelven las dudas sobre la sostenibilidad del programa AIDS del gobierno de Brasil
@@ -17,7 +17,7 @@ lang:             es
 
 Con cada crisis sanitaria, el modelo de patentes sube a la palestra y vuelve a ponerse en tela de juicio. Uno de los momentos cumbre del debate sobre acceso a los medicamentos y propiedad intelectual fue la aprobación en 2007, en Brasil, de **un decreto que tumbaba el monopolio de la farmacéutica Merck** sobre el efavirenz, un antirretroviral en el que el gobierno gastaba 40 millones de dólares anuales (unos 36 millones de euros). Ahora que han pasado los años y podemos enfocar con perspectiva, repasamos la historia de esa decisión y, sobre todo, cuáles fueron sus consecuencias y qué poso dejó en el sistema de salud brasileño.
 
-## ¿Qué es?
+### ¿Qué es?
 
 {% include video-container.html videoid="a2e8NZ7lXhw" title="Reinaldo Guimarães explica qué es y qué no la licencia obligatoria." credit="Vídeo: Anne Vigna y Miguel Á. Gavilanes" %}
 
@@ -27,9 +27,9 @@ Lo que sí es la licencia obligatoria es un [mecanismo](https://www.wto.org/ENGL
 
 Guimarães también aclara que, pese a la expectación creada por el caso brasileño y las críticas de las grandes farmacéuticas y de otros países, **no era la primera vez que un gobierno tomaba esta medida**. Antes lo había hecho [Tailandia](http://www.cptech.org/ip/health/c/thailand/thaicl4efavirenz.html), por ejemplo. Incluso Estados Unidos, en pleno pánico tras el atentado contra las torres gemelas de 2001, utilizó la licencia obligatoria como una amenaza que sobrevoló las negociaciones con Bayer para conseguir [rebajar a la mitad el precio](http://archive.hhs.gov/news/press/2001pres/20011024.html) del antibiótico para tratar el ántrax.
 
-## Camino previo
+### Camino previo
 
-### ¿Qué llevó a Brasil a aprobar la licencia obligatoria del efavirenz?
+#### ¿Qué llevó a Brasil a aprobar la licencia obligatoria del efavirenz?
 
 {% include video-container.html videoid="b_Bz0RfLkEY" title="Felipe Carvalho (MSF) y Pedro Villardi (ABIA) explican el trabajo de la sociedad civil desde 1996 para reclamar una licencia obligatoria." credit="Vídeo: Anne Vigna y Miguel Á. Gavilanes" %}
 
@@ -41,9 +41,9 @@ Las cifras confirman la tendencia. **En 2007, el gasto público en medicamentos 
 
 Pese a la presión de este grupo, tanto en foros oficiales como en manifestaciones, **el Gobierno sólo blandió la licencia obligatoria en las negociaciones de precios con las farmacéuticas como una amenaza**. Es lo que pasó con Kaletra, una combinación de los antirretrovirales lopinavir y ritonavir, patentada por Abbot. En 2005, en pleno clímax de las negociaciones con la farmacéutica, el ejecutivo de Lula subió la apuesta y declaró el medicamento de interés público –paso previo a la concesión de la licencia obligatoria–. De esta forma consiguió una rebaja considerable en el precio sin tener que consumar la amenaza. Muchos años después, en 2012, la Corte Federal de Rio de Janeiro [declaró](http://www.ip-watch.org/weblog/wp-content/uploads/2012/03/Sente%C3%A7a_0903-Brazil-Pipeilne-Mar-2012.pdf) inconstitucional la patente de Kaletra, porque había sido aprobada vía _pipeline mechanism_, un sistema que dio vía libre a patentes aprobadas en otros países sin necesidad de pasar por los controles y el visto bueno de las administraciones brasileñas.
 
-## La decisión
+### La decisión
 
-### 2007\. El Gobierno aprueba la licencia obligatoria
+#### 2007\. El Gobierno aprueba la licencia obligatoria
 
 {% include video-container.html videoid="XokXc6BvhLA" title="Miembros del gobierno y de la sociedad civil relatan qué significó la aprobación de la licencia obligatoria." credit="Vídeo: Anne Vigna y Miguel Á. Gavilanes" %}
 
@@ -53,9 +53,9 @@ Juan Carlos Raxach es un médico cubano infectado por VIH desde 1983. Tres años
 
 La sociedad civil celebró la medida, pero muchos otros la criticaron. Y la decisión no estuvo exenta de amenazas, como recuerdan todos los implicados en el proceso. De las farmacéuticas y de otros gobiernos. **“Con presiones o no, la decisión del presidente ya estaba tomada, y ha impactado mucho a lo que pasó después”**, recuerda el entonces ministro de Salud brasileño.
 
-## Efectos
+### Efectos
 
-### ¿Cuáles fueron las consecuencias directas de la decisión?
+#### ¿Cuáles fueron las consecuencias directas de la decisión?
 
 {% include video-container.html videoid="8M-MnWXYwKk" title="¿Se cumplieron los malos augurios de las farmacéuticas? Los protagonistas narran las consecuencias –reales– del fin del monopolio de Merck sobre el efavirenz." credit="Vídeo: Anne Vigna y Miguel Á. Gavilanes" %}
 
@@ -76,9 +76,9 @@ Lo que sí cumplió las previsiones fue el ahorro que logró el Sistema Único d
 
 Aunque su objetivo primero era mantener la sostenibilidad del programa de SIDA, “la licencia obligatoria abrió el camino para que el ministerio de salud brasileño pudiera utilizar su capacidad de compra para promover la fabricación local de medicamentos”, recuerda Guimarães. Y es ahí donde los laboratorios públicos que, en su opinión, funcionan como un “regulador de mercado”, empezaron a tener un peso cada vez más importante. En las afueras de Rio de Janeiro, un enorme complejo acoge a más de mil trabajadores, entre funcionarios y contratados, unos con batas blancas y otros _look_ de oficina. Los carritos de golf que transportan a los visitantes en su interior dan cuenta de la magnitud del espacio. **Farmanginhos, el laboratorio público más importante del país, está preparado para acoger cerca de 50 tipos de medicamentos y producir más de 6.500 millones de unidades al año**. Pero en la actualidad no trabaja, ni de lejos, al máximo de su capacidad. Un viernes por la tarde, en la pulcra línea de producción, la única en marcha en ese momento, entre máscaras y gorros antisépticos, botes y botes de efavirenz siguen saliendo en fila india.
 
-## Brasil, hoy
+### Brasil, hoy
 
-### ¿Cuál es la situación sanitaria del país?
+#### ¿Cuál es la situación sanitaria del país?
 
 {% include video-container.html videoid="po74FEThqaU" title="Han pasado casi diez años. Analizamos cuál es la situación actual del sistema sanitario brasileño." credit="Vídeo: Anne Vigna y Miguel Á. Gavilanes" %}
 
@@ -90,9 +90,9 @@ Además de lo costoso de mantener un programa que garantiza el acceso gratuito a
 
 En cuanto a los seropositivos, el problema, según Juan Carlos Raxach, es **la brecha entre distintas regiones del país**. Así, la mortalidad por esta enfermedad casi duplica la tasa nacional. La causa, en su opinión, es la falta de profesionales, un diagnóstico tardío y un retroceso en la manera de afrontar las campañas de prevención. “Una de las cosas que me encantaron de Brasil cuando llegué de Cuba era esa audacia con la que el propio gobierno hacía campañas y hablaba sobre el tema de la prevención con homosexuales de una forma totalmente abierta. Ahí están los carteles que hablan”, recuerda este médico cubano mientras señala decenas de imágenes que cuelgan del salón de conferencias de ABIA, en los que se muestran evocadoras imágenes de sexo homosexual y mensajes directos y claros sobre el uso del preservativo. Todos esos materiales, como recuerda Pedro Vellardi, se realizaron de la mano de la sociedad civil, en un momento en el que la relación entre ellos y el Gobierno era mucho más cercana. Pero, como explican ambos, la última campaña de prevención fue vetada porque había un beso entre dos hombres. Aunque a priori pueda parecer un cambio de actitud moral sin consecuencias directas, afecta a la epidemia. “A largo plazo va a dar problemas”, añade Raxach, “porque no hay control de la epidemia solo con tomar medicamentos”.
 
-## Una y no más
+### Una y no más
 
-### ¿Por qué no se ha vuelto a usar la licencia obligatoria en Brasil?
+#### ¿Por qué no se ha vuelto a usar la licencia obligatoria en Brasil?
 
 {% include video-container.html videoid="k0sOvJEb2XU" title="Los expertos razonan sobre por qué no se ha vuelto a usar esta medida." credit="Vídeo: Anne Vigna y Miguel Á. Gavilanes" %}
 

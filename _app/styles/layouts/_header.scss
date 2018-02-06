@@ -33,16 +33,13 @@
 
   .navbar-brand{
     color: $brand-secondary;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.05em;
+    line-height: 1.125em;
     text-transform: uppercase;
     padding-left: 32px;
+    padding-right: 10px;
     background: url(../images/medicamentalia-small.png) no-repeat 4px center transparent;
     @include transition(.3s ease-in-out color);
-
-    h1{
-      font-size: 1em;
-      margin: 0;
-    }
 
     &:hover{
       color: $color-green-light;
@@ -55,7 +52,7 @@
     padding: 15px 5px;
     @include transition(.3s ease-in-out color);
 
-    h2{
+    h1{
       color: $color-green-light;
       margin: 0;
       font-size: 20px;
@@ -67,7 +64,7 @@
     &:hover{
       text-decoration: none;
 
-      h2{
+      h1{
         color: $brand-secondary;
       }
     }

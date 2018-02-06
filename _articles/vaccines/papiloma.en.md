@@ -41,14 +41,14 @@ Current vaccines are not the "complete solution", Díaz points out. They don't r
 
 The main barriers to implementating of these new vaccines, according to a 2013 WHO [report](http://apps.who.int/iris/bitstream/10665/85344/1/9789275317471_spa.pdf?ua=1), are: the difficulty of reaching unschooled girls (the vaccine is recommended for girls between 9 and 13 years), the cost (the report asks for the price to be reduced to less than five dollars per girl vaccinated) and "rumors or misinformation" that can slow down implementation if the reasons for addressing only girls are not communicated. At this point, the report stresses that it's very important to educate men also.
 
-## Social and cultural barriers
+### Social and cultural barriers
 
 "Almost every week someone asks me whether or not to vaccinate their daughter, and these doubts come from religious, cultural issues... In many cases they believe that if they vaccinate their daughters they are telling them that they can start having sex, since HPV is a sexually transmitted infection," says Mauricio Maza.
 
 That is because this is not an ordinary vaccine. It is new, and related to a sexually transmitted virus. Nor is cervical cancer is not just any cancer: it affects only women.
 
 <div class="panel" markdown="1">
-### Machismo and poverty slow down checkups and increase incidence
+#### Machismo and poverty slow down checkups and increase incidence
 
 {% include video-container.html videoid="IKy2XNDwDXM" credit="Video: Manuel Penados." %}
 </div>
@@ -61,7 +61,7 @@ In a similar vein, Gloria Cruz, one of the civil society participantsat the Sexu
 
 José Jerónimo, a specialist in cancer in women at the international nonprofit [PATH](http://www.path.org/), believes that these reservations are only temporary: "It's typical of stages where something new is being introduced into the programs. It's only a matter of time, the waters will calm down as we have more experience with the vaccine...". Mireia Díaz reinforces this idea: "There are millions and millions of girls vaccinated in Europe, not one case of negative sife effects has ever been proven that was actually caused by the HPV vaccine. There is no evidence that this vaccine is harmful." In 2009, after two 14-year-old girls were hospitalized with seizures in Spain, the European Medicines Agency [defended](http://sociedad.elpais.com/sociedad/2009/02/19/actualidad/1234998010_850215.html) the safety of the vaccine, claiming that a link between the seizures and the immunization was "very unlikely". "Vaccination should continue," the agency said.
 
-## The economic barrier
+### The economic barrier
 
 When the vaccine is not included in public programs, the only way to access it is through private clinics. Gerson Eduardo Gálvez Torres is a gynecologist at [Aprofam](http://www.aprofam.org.gt/nosotros/quienes-somos/), a Guatemalan network of not-for-profit clinics that offers affordable sexual and reproductive health services. He says few people ask for the vaccine. "Once you overcome the first barrier, the cultural one, the economic one stops you."
 

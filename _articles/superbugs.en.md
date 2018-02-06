@@ -26,7 +26,7 @@ In Spain, as in other countries, one of the reasons leading to resistance is ove
 
 Troubling results like that have prompted the government to adopt a [National Strategic Plan](http://www.aemps.gob.es/publicaciones/publica/plan-estrategico-antibioticos/v2/docs/plan-estrategico-antimicrobianos-AEMPS.pdf) to reduce antibiotic resistance in 2014\. It comes to the conclusion that the use of antibiotics seems excessive and often inadequate. And, the plan adds, the treatment is not appropriate in half of the cases.
 
-## Facts are scarce
+### Facts are scarce
 
 Despite the apparent seriousness of the problem and the government’s stated intentions, Spain apparently lacks the political will for action beyond the surface:  The National Plan set goals for the period 2014-2018, and included the publication of an annual report on the state of affairs, but citizens have had little information about its progress.
 
@@ -48,7 +48,7 @@ Half of those self-medicating got the antibiotics at a pharmacy. The other half 
 
 One possible solution discussed in the last years is providing less pills per package, so that there is nothing left to be stored away.
 
-## What is an antibiotic?
+### What is an antibiotic?
 
 Misuse of antibiotics goes hand in hand with insufficient knowledge. When asked whether an antibiotic is useful to treat problems caused by virus, 46 percent of Europeans gave the incorrect answer: yes. 36 percent think incorrectly they are useful to treat fevers or colds. In Spain, these percentages were even worse – 48 percent and 45 percent.
 
@@ -66,7 +66,7 @@ The Spanish government seems to lack the stamina in consistently informing its p
 
 In 2006, nearly two million Euro [had been allocated](http://www.lamoncloa.gob.es/serviciosdeprensa/cpci/paginas/PlanesEInformes.aspx) for a similar campaign; in 2007, almost five. That year also saw a [campaign aimed at cattle raisers](http://www.aemps.gob.es/vigilancia/medicamentosVeterinarios/docs/ganaderos-antibioticos_abril-2007.pdf). But, with an exception of 2011, in following years the matter no longer seemed a priority. Only in 2015, a communication budget was available again, and a very similar campaign took place, this time with a cost of half a million.
 
-## Veterinary use
+### Veterinary use
 
 Spain has a population of meat producing animals of more than 7 million tons, it in second place just behind Germany (8,749,000 tons), according to the [2014 ESVAC report](http://www.ema.europa.eu/docs/en_GB/document_library/Report/2016/10/WC500214217.pdf). Despite being only second in the population table, it leads when looking at purchase of antibiotics: 2,965.5 tons were sold in Spain in 2014, more than in any other European country, followed by Italy with 1,441.6 tons, according to data provided by pharmaceutical companies.
 

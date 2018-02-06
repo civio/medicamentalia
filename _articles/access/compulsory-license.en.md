@@ -17,7 +17,7 @@ lang:             en
 
 With each health crisis, the patent model rises to the forefront of the debate and is once again brought into question. One of the highpoints of the debate on the access to medicines and intellectual property was Brazil’s approval in 2007 of a decree that overthrew the monopoly of the pharmaceutical company Merck over efavirenz; an antiretroviral which used to cost the government 40 million dollars per year (36 million euros). Now years have passed, we can retrospectively reflect upon the history of that decision and, above all, its consequences and the stamp it left on the Brazilian health system.
 
-## What is it?
+### What is it?
 
 {% include video-container.html videoid="SJ5b76uK88A" title="Reinaldo Guimarães explains what a compulsory license is (and what is not)." credit="Video: Anne Vigna and Miguel Á. Gavilanes" %}
 
@@ -27,9 +27,9 @@ Compulsory licensing is a [mechanism](https://www.wto.org/ENGLISH/tratop_e/trips
 
 Guimarães also clarifies that, despite the expectation created by the Brazilian case and the criticism from big pharmaceutical companies and other countries, **this was not the first time a government took this measure**. [Thailand](http://Tailandia) had done it before, for example. Even the United States, in the panic after the twin towers attack in 2001, used the threat of compulsory license to influence the negotiations [to halve the price](http://archive.hhs.gov/news/press/2001pres/20011024.html) of Bayer’s antibiotic to treat Anthrax.
 
-## The previous path
+### The previous path
 
-### What drove Brazil to approve compulsory licensing of efavirenz?
+#### What drove Brazil to approve compulsory licensing of efavirenz?
 
 {% include video-container.html videoid="_peUmC9KkB8" title="Felipe Carvalho (MSF) and Pedro Villardi (ABIA) explain the work of civil society to demand a compulsory license, which began in 1996." credit="Video: Anne Vigna and Miguel Á. Gavilanes" %}
 
@@ -47,9 +47,9 @@ In spite of the pressure from this group, both in official forums and demonstrat
 
 Many years later, in 2012, the Supreme Court of Rio de Janeiro [declared the Kaletra patent unconstitutional](http://www.ip-watch.org/weblog/wp-content/uploads/2012/03/Sente%C3%A7a_0903-Brazil-Pipeilne-Mar-2012.pdf) because it had been approved via pipeline mechanism — a system which gave green light to patents approved in other countries without having to go through the controls and approval of Brazilian authorities.
 
-## The decision
+### The decision
 
-### 2007: the Government approves compulsory license
+#### 2007: the Government approves compulsory license
 
 {% include video-container.html videoid="S5wu-DQEygU" title="Members of government and civil society explain what the approval of compulsory license meant. " credit="Video: Anne Vigna and Miguel Á. Gavilanes" %}
 
@@ -63,9 +63,9 @@ For this reason, he does not hesitate in highlighting the importance of the comp
 
 Civil society welcomed the initiative, but many others criticised it. The decision was not free from threat — as recalled by those involved in the process — from pharmaceutical companies and other governments. **"With pressure or without, the president's decision was already made, and it had a great impact on what happened afterwards,"** affirms the Brazilian Minister of Health of that moment.
 
-## The effects
+### The effects
 
-### What were the direct consequences of the decision?
+#### What were the direct consequences of the decision?
 
 {% include video-container.html videoid="AuSSSPdEujI" title="Were the pharmaceutical companies right in their negative predictions? The prime actors describe the – real - consequences of the end of the Merck monopoly over efavirenz." credit="Video: Anne Vigna and Miguel Á. Gavilanes" %}
 
@@ -90,9 +90,9 @@ Although the main goal was to maintain the sustainability of the AIDS programme,
 
 On the outskirts of Rio de Janeiro a huge complex houses more than a thousand workers, official and temporary, some with white coats and others with business attire. Golf carts transporting visitors show the magnitude of the space. **Farmanginhos, the country's most important public laboratory, is able to work with 50 types of drugs and produce more than 6,500 million units per year**. However, nowadays the laboratory does not work even remotely close to its maximum productive capacity. One Friday afternoon on the neat production line — the only one running at that time — bottles and bottles of efavirenz keep coming out in single file among antiseptic masks and caps.
 
-## Brazil today
+### Brazil today
 
-### What is the health situation in the country?
+#### What is the health situation in the country?
 
 {% include video-container.html videoid="ietBRDRxp9E" title="Ten years on, we analyse the situation of the Brazilian health care system." credit="Video: Anne Vigna and Miguel Á. Gavilanes" %}
 
@@ -106,9 +106,9 @@ As for those living with HIV, the problem, according to Juan Carlos Raxach, is t
 
 All these materials, were made in collaboration with civil society at a time when the relationship between them and the government was much closer, recalls Pedro Vellardi. However, both men explain, the latest prevention campaign was vetoed because it involved a kiss between two men. Although a priori it may seem to be a change of moral attitude without direct consequences, It does affect the epidemic. "In the long run it will cause problems," adds Raxach, "because you cannot control an epidemic only using medicines."
 
-## Once, and never again
+### Once, and never again
 
-### Why hasn’t the use of compulsory licensing been repeated in Brazil?
+#### Why hasn’t the use of compulsory licensing been repeated in Brazil?
 
 {% include video-container.html videoid="umOZpSyEULQ" title="Experts talk about the reasons why compulsory licensing has not been used again." credit="Video: Anne Vigna and Miguel Á. Gavilanes" %}
 

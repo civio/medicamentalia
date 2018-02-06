@@ -26,9 +26,9 @@ lang:             en
 <div class="container page-content" markdown="1">
   <div class="page-content-container" markdown="1">
 
-## Ditches
+### Ditches
 
-### Why does counterfeit medicine exist?
+#### Why does counterfeit medicine exist?
 
 The sun accentuates the stench at the intersection of Mission Street with one of the main canals of the city, which crosses the districts of Cantonments and Osu to scatter itself in the Gulf of Guinea. In Accra there are almost not sidewalks; instead, on both sides of the road, there are ditches. With a depth of between a handspan and more than a meter, these ditches are open or covered with planks or bars. On top of them, people live, buy, sell, fry chicken in palm oil on hot coal, or wash clothes. Through them, **run the residues of the inhabitants**, oily-flowing over algae. The waste gathers in larger trenches and finally accumulates into wide canals like this, around green water, clouds of insects and some hungry egrets.
 
@@ -86,9 +86,9 @@ In 2011, police officers in the coastal city of Takoradi, in the southwest, [arr
 
 Even in the capital, where pharmacies are not rare, this happens. Agyekum points out that "one day I was in a bus terminal and saw a guy selling malaria pills and other medications. I thought 'wow, here in Accra?' You can also get medicine in a market. I would not buy from that kind of people, I think that most of us go to pharmacies, but I've seen others buying and selling."  
 
-## Low tech / High tech
+### Low tech / High tech
 
-### How to distinguish the genuine from the fake?
+#### How to distinguish the genuine from the fake?
 
 A lone rooster passes in front of the new headquarters of **mPedigree**, a three-storey townhouse on a residential street in North Dzorwulu, where the rainforest begins to finds its way between the buildings. The area mainly consists of the Fiesta Royale hotel, government agencies, homes for soldiers, embassies and international organizations.
 
@@ -148,9 +148,9 @@ The next step for African regulators will be more difficult, but Boateng believe
 
 {% include gallery.html id="counterfeits" %}
 
-## Porous borders
+### Porous borders
 
-### How to stop the counterfeit medicines trade?
+#### How to stop the counterfeit medicines trade?
 
 Counterfeits are everywhere.
 
