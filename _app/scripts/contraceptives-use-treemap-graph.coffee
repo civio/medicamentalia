@@ -4,13 +4,6 @@ class window.ContraceptivesUseTreemapGraph extends window.TreemapGraph
   dataParser: (data, country_code, country_name) ->
      # set parsedData array
     parsedData = [{id: 'r'}] # add treemap root
-    ### merge Vaginal barrier methods, Lactational amenorrhea method & Emergency contraception in Other modern methods
-    getKeyValue = (key, data) ->
-      if key != 'other-modern-methods'
-        return data[key]
-      else
-        return data[key]+merge_keys.reduce((sum, value) -> sum+data[value])
-    ###
     # TODO!!! Get current country & add select in order to change it
     data_country = data.filter (d) -> d.code == country_code
     console.log data_country[0]
@@ -25,7 +18,6 @@ class window.ContraceptivesUseTreemapGraph extends window.TreemapGraph
             value: +data_country[0][key]
         else
           console.log "There's no data for " + key
-      console.log methods
       # filter methods with value < 5% & add to Other modern methods
       for key,method of methods
         if key != 'Other modern methods' and key != 'Any traditional method' and method.value < 5
@@ -44,6 +36,9 @@ class window.ContraceptivesUseTreemapGraph extends window.TreemapGraph
       $('#treemap-contraceptives-use-country').html country_name
       $('#treemap-contraceptives-use-any-method').html Math.round(data_country[0]['Any modern method'])
       $('#treemap-contraceptives-use-method').html parsedDataSorted[0].raw_name
+    else
+      console.warn 'No data country for '+country_code
+      # TODO!!! What we do if there's no data for user's country
     return parsedData
 
   # overdrive set data

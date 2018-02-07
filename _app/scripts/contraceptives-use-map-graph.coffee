@@ -1,6 +1,64 @@
 class window.ContraceptivesUseMapGraph extends window.MapGraph
 
-  currentState = 0
+  currentState: 0
+
+  states: [
+    {
+      id: 'Female sterilization'
+      labels: [
+        {
+          cx_factor: 0.7
+          cy_factor: 0.48
+          r: 0
+          textOffset: [-20, 30]
+          text: 'India'
+        },
+        {
+          cx_factor: 0.27
+          cy_factor: 0.465
+          r: 0
+          textOffset: [20, -5]
+          text: 'República Dominicana'
+        }
+      ]
+    },
+    {
+      id: 'Male sterilization'
+      labels: [
+        {
+          cx_factor: 0.463
+          cy_factor: 0.263
+          r: 0
+          textOffset: [-20, 10]
+          text: 'Reino Unido'
+        }
+      ]
+    },
+    {
+      id: 'IUD'
+      labels: ['Corea del Norte']
+    },
+    {
+      id: 'Pill'
+      labels: ['Argelia']
+    },
+    {
+      id: 'Male condom'
+      labels: ['Canada', 'Botswana']
+    },
+    {
+      id: 'Injectable'
+      labels: ['Etiopía']
+    },
+    {
+      id: 'Any traditional method'
+      labels: []
+    },
+    {
+      id: 'Any traditional method'
+      labels: ['Albania']
+    }
+  ]
 
 
   # override getDimensions
@@ -22,49 +80,32 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
       @height = @containerHeight - @options.margin.top - @options.margin.bottom
     return @
 
+  onResize: =>
+    super()
+    @setAnnotations()
+
   # override color domain
   setColorDomain: ->
     @color.domain [0, 80]
     return @
 
-
-  ###
-  # override color scale
-  @color = d3.scaleOrdinal d3.schemeCategory20
-  # override setCountryColor
-  @setCountryColor = (d) ->
-    value = @data.filter (e) -> e.code_num == d.id
-    if value[0]
-      #console.log @color
-      console.log value[0].values[0].id, value[0].values[0].name, @color(value[0].values[0].id)
-    return if value[0] then @color(value[0].values[0].id) else '#eee'
-  #@formatFloat = @formatInteger
-  #@getLegendData = -> [0,2,4,6,8]
-  @setTooltipData = (d) ->
-    @$tooltip
-      .find '.tooltip-inner .title'
-      .html d.name
-    @$tooltip
-      .find '.description'
-      #.html d.values[0].name+' ('+d.values[0].value+'%)'
-      .html d.value+'%'
-  ###
-
+  drawGraph: (map) ->
+    super(map)
+    @ringNote = d3.ringNote()
+    return @
 
   setMapState: (state) ->
     if state != @currentState
       #console.log 'set state '+state
       @currentState = state
-      if state == 1
-        @data.forEach (d) -> d.value = +d['Female sterilization']
-      else if state == 2
-        @data.forEach (d) -> d.value = +d['IUD']
-      else if state == 3
-        @data.forEach (d) -> d.value = +d['Pill']
-      else if state == 4
-        @data.forEach (d) -> d.value = +d['Male condom']
-      else if state == 5
-        @data.forEach (d) -> d.value = +d['Injectable']
-      else if state == 6
-        @data.forEach (d) -> d.value = +d['Any traditional method']
+      @currentMethod = @states[@currentState-1]
+      @data.forEach (d) => d.value = +d[@currentMethod.id]
       @updateGraph @data
+      @setAnnotations()
+
+  setAnnotations: ->
+    if @currentMethod
+      @currentMethod.labels.forEach (d) => 
+        d.cx = d.cx_factor*@width
+        d.cy = d.cy_factor*@height
+      @container.call @ringNote, @currentMethod.labels
