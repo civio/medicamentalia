@@ -522,6 +522,12 @@ header {
     line-height: 1.375em;
     font-weight: 600;
     margin: $grid-gutter-width/6 auto $grid-gutter-width;
+
+    small{
+      font-size: 17px;
+      line-height: 1.25em;
+      font-weight: 400;
+    }
   }
 }
 

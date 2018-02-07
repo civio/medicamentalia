@@ -2497,9 +2497,26 @@ body.guatemala-graph {
   }
 }
 
+#treemap-contraceptives-use-container{
+  margin: $grid-gutter-width/2 0;
+
+  .page-content > p{
+    margin: $grid-gutter-width auto;
+  }
+}
+
 #treemap-contraceptives-use{
   position: relative;
 
+  .node{
+    @include transition(.4s ease-in-out all);
+  }
+
+  .node-any-traditional-method{
+    background: $color-orange;
+  }
+
+  /*
   .node-female-sterilization{
     background: #d75628;
   }
@@ -2540,7 +2557,7 @@ body.guatemala-graph {
     background: #423f28;
   }
 
-  /*
+
   .node-female-sterilization{
     background: #bd0063;
   }

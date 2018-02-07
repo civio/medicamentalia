@@ -30,7 +30,7 @@ Fanta Jatta es una de las personas que conoce mejor estos casos. Lo cuenta en la
 <div class="scroll-graphic">
   <div class="graph-container">
     <div class="container page-content">
-      <p class="graph-container-caption">Porcentaje de uso entre mujeres de entre 15 y 49 años y sexualmente activas que usa algún método.</p>
+      <p>Porcentaje de uso entre mujeres de entre 15 y 49 años y sexualmente activas que usa algún método</p>
       <div id="treemap-contraceptives-use" class="treemap-graph"></div>
     </div>
   </div>
@@ -38,10 +38,10 @@ Fanta Jatta es una de las personas que conoce mejor estos casos. Lo cuenta en la
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-instance="0" data-step="0">
-    <p>En <strong id="treemap-contraceptives-use-country"></strong>, un x% de las mujeres usa algún método anticonceptivo moderno. El más habitual es X (x%)</p>
+    <p>En <strong id="treemap-contraceptives-use-country"></strong>, un <span id="treemap-contraceptives-use-any-method"></span>% de las mujeres usa algún método anticonceptivo moderno. El más habitual es <strong id="treemap-contraceptives-use-method"></strong>.</p>
   </div>
   <div class="step" data-instance="0" data-step="1">
-    <p><strong>En el mundo</strong> los métodos más habituales son la esterilización femenina, el DIU y la píldora.</p>
+    <p><strong>En el mundo</strong> los métodos más habituales son la <strong>esterilización femenina</strong>, el <strong>DIU</strong> y la <strong>píldora</strong>.</p>
   </div>
   <div class="step" data-instance="0" data-step="2"></div>
 </div>

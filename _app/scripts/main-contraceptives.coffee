@@ -131,7 +131,7 @@
 
     # resize function to set dimensions on load and on page resize
     handleResize = ->
-      width = Math.floor window.innerWidth
+      width = graphic.node().getBoundingClientRect().width #Math.floor window.innerWidth
       height = Math.floor window.innerHeight
       # 1. update height of step elements for breathing room between steps
       steps.style 'height', height + 'px'
@@ -534,6 +534,10 @@
       unless location.code
         userCountry.code = 'ESP'
         userCountry.name = if lang == 'es' then 'España' else 'Spain'
+
+      #test other countries
+      #userCountry.code = 'RUS'
+      #userCountry.name = 'Rusia'
 
       # add country ISO 3166-1 alpha-3 code to data_reasons
       data_reasons.forEach (d) ->
