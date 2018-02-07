@@ -2505,6 +2505,10 @@ body.guatemala-graph {
   }
 }
 
+#contraceptives-use-container .graph-container > p{
+  margin: $grid-gutter-width auto;
+}
+
 #treemap-contraceptives-use{
   position: relative;
 

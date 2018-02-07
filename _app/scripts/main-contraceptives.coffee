@@ -162,7 +162,7 @@
       instance = $step.data('instance')
       step = $step.data('step')
       if instance == 0 
-        console.log 'scrollama 0', step
+        #console.log 'scrollama 0', step
         if useTreemap
           if step == 1
             useTreemap.updateData 'world', 'Mundo'
@@ -170,7 +170,7 @@
             useTreemap.updateData userCountry.code, userCountry.name
       else if instance == 1 
         if useMap
-          console.log 'scrollama 1', step
+          #console.log 'scrollama 1', step
           useMap.setMapState step # update map based on step 
       else if instance == 2
         if useGraph and step > 0
@@ -180,7 +180,7 @@
           useGraph.selectAll('li')
             .filter (d) -> d >= from and d < to
             .classed 'fill-'+step, e.direction == 'down'
-          console.log 'scrollama 2', step
+          #console.log 'scrollama 2', step
       else if instance == 3
         if unmetneedsGraph and unmetneedsGraph.options.mode != step
           unmetneedsGraph.setMode step
@@ -350,9 +350,10 @@
     useMap = new window.ContraceptivesUseMapGraph 'map-contraceptives-use',
       aspectRatio: 0.5625
       margin:
-        top: 0
+        top: 20
         bottom: 0
-      legend: false
+      legend: true
+    useMap.getLegendData = -> [0,20,40,60,80]
     useMap.setData data_use, map
     useMap.onResize()
 

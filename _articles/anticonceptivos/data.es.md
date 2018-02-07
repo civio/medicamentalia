@@ -60,6 +60,7 @@ Pero su uso no es homogeneo ni entre países ni entre clases sociales. La [situa
 <!--  graphic container  -->
 <div class="scroll-graphic">
   <div class="graph-container">
+    <p>Uso de la esterilización femenina entre mujeres que usan algún método anticonceptivo</p>
     <div id="map-contraceptives-use" class="map-graph"></div>
   </div>
 </div>

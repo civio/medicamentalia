@@ -5,18 +5,19 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
 
   # override getDimensions
   getDimensions: ->
+    offset = 100
     if @$el
-      bodyHeight = $('body').height()
+      bodyHeight = $('body').height()-offset
       @containerWidth  = @$el.width()
       @containerHeight = @containerWidth * @options.aspectRatio
       # avoid graph height overflow browser height 
       if @containerHeight > bodyHeight
         @containerHeight = bodyHeight
         @containerWidth = @containerHeight / @options.aspectRatio
-        @$el.css 'top', 0
+        #@$el.css 'top', 0
       # vertical center graph
-      else
-        @$el.css 'top', (bodyHeight-@containerHeight) / 2
+      #else
+      #  @$el.css 'top', (bodyHeight-@containerHeight) / 2
       @width  = @containerWidth - @options.margin.left - @options.margin.right
       @height = @containerHeight - @options.margin.top - @options.margin.bottom
     return @
