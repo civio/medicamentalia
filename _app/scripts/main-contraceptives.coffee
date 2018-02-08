@@ -197,7 +197,7 @@
         graphic:    '.scroll-graphic'     # the graphic
         text:       '.scroll-text'        # the step container
         step:       '.scroll-text .step'  # the step elements
-        offset:     0.05                   # set the trigger to be 1/2 way down screen
+        offset:     0.05                  # set the trigger to be 1/2 way down screen
         debug:      false                 # display the trigger offset for testing
       .onContainerEnter handleContainerEnter 
       .onContainerExit  handleContainerExit 
@@ -219,8 +219,8 @@
     setupScrollama 'contraceptives-use-graph-container'
     # Setup Graph
     graphWidth = 0
-    useGraph = d3.select('#contraceptives-use-graph')
     dataIndex = [0..99]
+    useGraph = d3.select('#contraceptives-use-graph')
     useGraph.append('ul')
       .selectAll('li')
         .data(dataIndex)
@@ -508,9 +508,6 @@
   # Setup
   # ---------------
 
-  if $('#contraceptives-use-graph').length > 0
-    setupConstraceptivesUseGraph()
-
   # Load csvs & setup maps
   # !!! TODO -> Use a single countries file with gni & population info 
   d3.queue()
@@ -561,6 +558,9 @@
 
       if $('#map-contraceptives-use').length
         setupConstraceptivesMaps data_use, countries, map
+
+      if $('#contraceptives-use-graph').length > 0
+        setupConstraceptivesUseGraph()
 
       if $('#unmet-needs-gdp-graph').length
         setupUnmetNeedsGdpGraph data_unmetneeds, countries_gni, countries_population

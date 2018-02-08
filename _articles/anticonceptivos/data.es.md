@@ -115,17 +115,26 @@ En Gambia, muchas mujeres usan un método que recibe diferentes nombres pero que
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-instance="2" data-step="1">
-    <p>Hasta ahora hemos hablado de aquellas mujeres que USAN algún método anticonceptivo. De las mujeres casadas o sexualmente activas de 15 a 49 años, <strong> el 63% usa algún tipo de método</strong>.</p>
+    <p>Hasta ahora hemos hablado de aquellas mujeres que usan algún método anticonceptivo. De las mujeres casadas o sexualmente activas de 15 a 49 años, <strong> el 63% usa algún tipo de método</strong>.</p>
   </div>
   <div class="step" data-instance="2" data-step="2">
     <p>Otro <strong>25% quiere seguir teniendo niños</strong> y, por lo tanto, decide no usar ningún método.</p>
   </div>
   <div class="step" data-instance="2" data-step="3">
-    <p>Pero el <strong>12%</strong> restante son aquellas mujeres que <strong>quieren retrasar o frenar su maternidad pero no usan ningún método</strong>. Son las mujeres con necesidades NO CUBIERTAS. Y ahí está el problema.</p>
+    <p>Pero el <strong>12%</strong> restante son aquellas mujeres que <strong>quieren retrasar o frenar su maternidad pero no usan ningún método</strong>. Son las mujeres con necesidades no cubiertas. Y ahí está el problema.</p>
   </div>
   <div class="step" data-instance="2" data-step="4"></div>
 </div>
 </div>
+
+
+<div class="container page-content">
+<div class="page-content-container" markdown="1">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</div>
+</div>
+
 
 <!--
 <div id="unmet-needs-gdp-container-graph" class="graph-container">
