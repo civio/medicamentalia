@@ -2492,19 +2492,38 @@ body.guatemala-graph {
   position: relative;
 
   .dot{
-    opacity: 0.8;
+    opacity: 0.85;
     @include transition( 0.4s ease-in-out all );
   }
+  .dot-label{
+    font-size: 12px;
+    fill: $gray-dark;
+    text-anchor: middle;
+    text-shadow: 0 1px 0 rgba(255,255,255,.4);
+    @include transition( 0.3s opacity all );
+  }
+
+  .y.axis .tick:nth-child(2){
+    text{
+      display: none;
+    }
+    line{
+      stroke: mix($gray-light, $gray-lighter, 50%);
+    }
+  }
+
+  .y.axis .tick text{
+    text-anchor: start;
+  }
 }
+
 
 #treemap-contraceptives-use-container{
   margin: $grid-gutter-width/2 0;
-
-  .page-content > p{
-    margin: $grid-gutter-width auto;
-  }
 }
 
+#treemap-contraceptives-use-container .page-content > p,
+#unmet-needs-gdp-container-graph .page-content > p,
 #contraceptives-use-container .graph-container > p{
   margin: $grid-gutter-width auto;
 }

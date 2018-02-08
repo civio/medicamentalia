@@ -1,7 +1,6 @@
 class window.ScatterplotGraph extends window.BaseGraph
 
 
-
   # Constructor
   # -----------
 

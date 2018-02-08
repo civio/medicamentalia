@@ -21,6 +21,8 @@ Babatunde Osotimehin falleció el pasado mes de julio. Años antes, cuando era d
 Un derecho que se daña cada vez que una niña se queda embarazada, cada vez que a una mujer se le acusa de promiscua, o hasta de prostituta, por usar algún método, cada vez que es obligada a tener hijos no deseados, cada vez que se ve obligada a abortar en condiciones insalubres, cada vez que alguien le dice lo que tiene que hacer o le vetóa el acceso, aunque sea ella la que cargue, en muchos países, con las consecuencias de ese decisión, cada vez que un nuevo parto pone su salud al límite o la mata. Todos estos no son ejemplos, son historias reales recopiladas durante esta investigación, destinada a conocer cómo se ejerce este derecho universal y a qué barreras se enfrentan las mujeres para hacerlo. 
 
 Fanta Jatta es una de las personas que conoce mejor estos casos. Lo cuenta en la sede de la organización Action Aid International, en Gambia, donde dirige el programa de derechos de las mujeres. Para ella, además de los problemas de salud -para madres y niños- que provocan la falta de acceso a los anticonceptivos, hay algo elem
+
+#### Usos
 </div>
 </div>
 
@@ -131,7 +133,9 @@ En Gambia, muchas mujeres usan un método que recibe diferentes nombres pero que
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+#### Razones
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </div>
 </div>
 
@@ -155,6 +159,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <div class="scroll-graphic">
   <div class="graph-container">
     <div class="container page-content">
+      <p>Porcentaje de mujeres con <strong>necesidades no cubiertas</strong></p>
       <div id="unmet-needs-gdp-graph"></div>
     </div>
   </div>
@@ -162,7 +167,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-instance="3" data-step="0">
-    <p>Ese problema, las necesidades no cubiertas, es mayor en algunos países del mundo que en otros.</p>
+    <p>Ese problema, las <strong>necesidades no cubiertas</strong>, es mayor en algunos países del mundo que en otros.</p>
   </div>
   <div class="step" data-instance="3" data-step="1">
     <p>Vinculamos con el GNI.</p>
@@ -190,9 +195,11 @@ Así, el porcentaje de mujeres con necesidades no cubiertas de los países menos
 
 Vamos a centrarnos en esos países en los que la situación es más complicada. ¿Qué barreras impiden a las mujeres el acceso a los anticonceptivos?. Según el estudio *[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)*, del Guttmacher Institute, que analizó 52 países, las principales son los efectos secundarios, la poca frecuencia sexual, y la oposición (ya sea propia o impuesta). 
 
-<div class="graph-container">
-  <p class="graph-container-caption">Razones de salud </p>
-  <div id="contraceptives-reasons-health"></div>
+<div class="container-right">
+  <div class="graph-container">
+    <p class="graph-container-caption">Razones de salud </p>
+    <div id="contraceptives-reasons-health"></div>
+  </div>
 </div>
 
 La mayoría de quienes responden que no usan anticonceptivos por razones de salud, miedo a los efectos secundarios o porque afecta a los procesos naturales del cuerpo han usado alguna vez un método, según el estudio de Guttmacher. Esto es, saben de lo que hablan: sangrado excesivo o menor, náuseas, cambios en el cuerpo -engordan, les crece vello-, falta de líbido, cambios de humor... la larga lista de efectos secundarios de los anticonceptivos hormonales no ayuda. 
@@ -201,45 +208,32 @@ La mayoría de quienes responden que no usan anticonceptivos por razones de salu
 
 Y a ellos se suman las creencias no basadas en la evidencia científica, como que pueden dañar los ovarios, [producir infertilidad](https://www.guttmacher.org/journals/ipsrh/2015/12/belief-family-planning-myths-individual-and-community-levels-and-modern)  o hasta dañar al miembro masculino. La clave, según Alieu Jammeh, Reproductive Health Commodity Security Coordinator de UNFPA en Gambia, es que haya variedad, que se expliquen bien sus efectos para evitar la mala fama no justificada de algunos métodos y que cada mujer pueda elegir el que mejor se adapte a ella. Esta barrera es la más importante en el global de países analizados. 
 
-<div class="graph-container">
-  <p class="graph-container-caption">Sexo infrecuente</p>
-  <div id="contraceptives-reasons-not-sex"></div>
-</div>
-
 Muchas mujeres aseguran que no usan anticonceptivos porque no tienen sexo de forma habitual, aunque en ocasiones responden -en la misma encuesta- que sí han tenido encuentros sexuales en el último mes. En algunos países, las mujeres solteras pueden no responder de forma sincera sobre su actividad sexual para evitar ser señaladas. Para muchas de ellas, en público, el sexo no existe y tampoco los métodos anticonceptivos.
 
-<div class="graph-container">
-  <p class="graph-container-caption">Oposición</p>
-  <div id="contraceptives-reasons-opposed"></div>
+<div class="container-right">
+  <div class="graph-container">
+    <p class="graph-container-caption">Oposición</p>
+    <div id="contraceptives-reasons-opposed"></div>
+  </div>
 </div>
+
 
 Al contrario de lo que ocurre con las barreras relacionadas con la salud de la mujer -los efectos secundarios que conllevan algunos métodos anticonceptivos hormonales, por ejemplo-, esta razón no es reactiva, sino cultural. La mayoría de quienes nombran esta barrera como principal no han usado nunca un método, según el estudio de Guttmacher. Alguien, ya sea la propia mujer, el marido u otros, está en contra de su uso. Pero, ¿quién y por qué?
 
-<div class="container-right">
-  <div class="graph-container">
-    <p class="graph-container-caption">Oposición de la mujer</p>
-    <div id="contraceptives-reasons-opposed-respondent"></div>
-  </div>
-</div>
-
 En la mayoría de casos, es la propia mujer entrevistada quien asegura oponerse. Teniendo en cuenta que solo analizamos las respuestas de aquellas que tienen necesidades no cubiertas -es decir, que no quieren tener más hijos pero pese a eso no usan ningún método anticonceptivo-, todo apunta a que su negativa puede ser de muchos tipos -por razones culturales, sociales, religiosas...
 
-<div class="container-right">
-  <div class="graph-container">
-    <p class="graph-container-caption">Oposición del marido o la pareja</p>
-    <div id="contraceptives-reasons-opposed-husband"></div>
-  </div>
-</div>
+<div class="panel" markdown="1">
+
+##### Oposición del marido o la pareja
 
 Según Fanta Jatta, de Action Aid International, en Gambia "muchas mujeres no toman decisiones independientes, se toman en su nombre". Ha conocido casos de mujeres maltratadas por sus maridos cuando descubrían que estaban tomando la píldora, y de otras obligadas a quedarse embarazadas cuando era un peligro para su salud. Momodou Njie, de la Family Planning Association en Gambia, cuenta historias de mujeres que acuden a la clínica a escondidas y dejan la cartilla allí por miedo a ser descubiertas. Para él, "la mayoría de las decisiones las toman los hombres, pero en algunos casos lo hace la mujer porque quiere salvar su vida".
 
-La clave es quién toma esta decisión. Para Alieu Jammeh, de Naciones Unidas, es importante involucrar a los hombres en la decisión para "minimizar la fricción" en el matrimonio. Pero, más allá de eso, "es derecho de la mujer tomarlo si quiere".
+<div class="graph-container">
+  <p>Oposición del marido o la pareja</p>
+  <div id="contraceptives-reasons-opposed-husband"></div>
+</div>
 
-<div class="container-right">
-  <div class="graph-container">
-    <p class="graph-container-caption">Oposición por motivos religiosos</p>
-    <div id="contraceptives-reasons-opposed-religious"></div>
-  </div>
+La clave es quién toma esta decisión. Para Alieu Jammeh, de Naciones Unidas, es importante involucrar a los hombres en la decisión para "minimizar la fricción" en el matrimonio. Pero, más allá de eso, "es derecho de la mujer tomarlo si quiere".
 </div>
 
 Aunque sus porcentajes son más bajos, la religión puede afectar también a la oposición de mujer y marido los casos anteriores. Y no es un problema intrínseco a una religión concreta; todas las mayoritarias imponen barreras. En los casos más ortodoxos, es el iman, el cura o el rabino quienes deciden si se usan, o no, métodos. Y hasta cuáles. [enlace al otro texto]

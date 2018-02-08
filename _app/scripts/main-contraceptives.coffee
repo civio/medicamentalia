@@ -299,8 +299,9 @@
         x: 'gni'
         y: 'value'
         id: 'name'
+        label: 'name'
         size: 'population'
-        color: 'gni'
+        color: 'value' #'gni'
       dotMinSize: 1
       dotMaxSize: 12
     unmetneedsGraph.setData data
