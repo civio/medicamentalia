@@ -506,6 +506,22 @@
       .trigger 'change'
 
 
+  # Contraceptives App
+  # -------------------
+
+  setupMaternalMortality = ->
+    dataIndex = [0..4999]
+    mortalityGraph = d3.select('#maternal-mortality-developed')
+    mortalityGraph.append('ul')
+      .selectAll('li')
+        .data(dataIndex)
+      .enter().append('li')
+        .append('svg')
+          .append('use')
+            .attr('xlink:href', '#icon-woman')
+            .attr('viewBox', '0 0 193 450')
+
+
   # Setup
   # ---------------
 
@@ -571,5 +587,8 @@
 
       if $('#contraceptives-app').length
         setupContraceptivesApp data_use, data_unmetneeds, data_reasons
+
+      #if $('#maternal-mortality-developed').length
+      #  setupMaternalMortality()
 
 ) jQuery

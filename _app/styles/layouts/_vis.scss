@@ -2417,7 +2417,7 @@ body.guatemala-graph {
   text-align: center;
 }
 
-#contraceptives-use-graph{
+.graph-container .womans-graph{
   ul{
     margin: 0;
     padding: 0;
@@ -2432,16 +2432,18 @@ body.guatemala-graph {
       fill: $gray-light;
       @include transition(.3s ease-out fill);   
     }
+  } 
+}
 
-    &.fill-1 svg{
-      fill: $color-blue;
-    }
-    &.fill-2 svg{
-      fill: $color-yellow;
-    }
-    &.fill-3 svg{
-      fill: $color-orange;
-    }
+#contraceptives-use-graph li{
+  &.fill-1 svg{
+    fill: $color-blue;
+  }
+  &.fill-2 svg{
+    fill: $color-yellow;
+  }
+  &.fill-3 svg{
+    fill: $color-orange;
   }
 }
 
@@ -2541,13 +2543,15 @@ body.guatemala-graph {
     list-style: none;
     float: left;
     width: 25%;
-    line-height: 25px;
-    font-size: 12px;
-    font-weight: 300;
-    text-transform: uppercase;
-    background: mix( $gray-light, $gray-lighter, 75% );
     color: white;
+    font-size: .75em;
+    letter-spacing: .02em;
+    font-weight: 300;
+    height: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
     outline: 1px solid white;
+    background: mix( $gray-light, $gray-lighter, 75% );
   }
 }
 
