@@ -60,7 +60,7 @@ Pero su uso no es homogeneo ni entre países ni entre clases sociales. La [situa
 <!--  graphic container  -->
 <div class="scroll-graphic">
   <div class="graph-container">
-    <p>Uso de la esterilización femenina entre mujeres que usan algún método anticonceptivo</p>
+    <p>Uso de <strong id="map-contraceptives-use-method"></strong> entre mujeres que usan algún método anticonceptivo</p>
     <div id="map-contraceptives-use" class="map-graph"></div>
   </div>
 </div>
@@ -79,7 +79,7 @@ Pero su uso no es homogeneo ni entre países ni entre clases sociales. La [situa
     <p>La <strong>píldora</strong>  es prioritaria, entre otras zonas, en el norte de África y buena parte de la Europa occidental, pero no en España.</p>
   </div>
   <div class="step" data-instance="1" data-step="5">
-    <p>El <strong>preservativo masculino</strong> es uno de los métodos más habituales en países tan distintos como Botswana (79%) y Canadá (64%), y en otros países entre mujeres no casadas que no tienen acceso a otros métodos más establecidos. Es el principal método elegido como anticonceptivo en España (38%).</p>
+    <p>El <strong>preservativo masculino</strong> es uno de los métodos más habituales en países tan distintos como Botsuana (79%) y Canadá (64%), y en otros países entre mujeres no casadas que no tienen acceso a otros métodos más establecidos. Es el principal método elegido como anticonceptivo en España (38%).</p>
   </div>
   <div class="step" data-instance="1" data-step="6">
     <p>El método <strong>inyectable</strong>, también hormonal, es el favorito en África. Para muchas mujeres es la solución perfecta si deciden usar anticonceptivos sin que se enteren sus maridos, que en muchos casos están en contra. No se nota, es fácil de administrar -un pinchazo rápido cada tres meses- y no deja huella.</p>

@@ -5,61 +5,166 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
   states: [
     {
       id: 'Female sterilization'
+      text: 
+        es: 'esterilización femenina'
+        en: 'female sterilization'
       labels: [
         {
           cx_factor: 0.7
           cy_factor: 0.48
           r: 0
           textOffset: [-20, 30]
-          text: 'India'
+          label:
+            es: 'India'
+            en: 'India'
         },
         {
           cx_factor: 0.27
           cy_factor: 0.465
           r: 0
           textOffset: [20, -5]
-          text: 'República Dominicana'
+          label:
+            es: 'República Dominicana'
+            en: 'Dominican Republic'
         }
       ]
     },
     {
       id: 'Male sterilization'
+      text: 
+        es: 'esterilización masculina'
+        en: 'male sterilization'
       labels: [
         {
           cx_factor: 0.463
           cy_factor: 0.263
           r: 0
           textOffset: [-20, 10]
-          text: 'Reino Unido'
+          label:
+            es: 'Reino Unido'
+            en: 'United Kingdom'
         }
       ]
     },
     {
       id: 'IUD'
-      labels: ['Corea del Norte']
+      text: 
+        es: 'DIU'
+        en: 'IUD'
+      labels: [
+        {
+          cx_factor: 0.85
+          cy_factor: 0.34
+          r: 0
+          textWidth: 80
+          textOffset: [12, 0]
+          label:
+            es: 'Corea del Norte'
+            en: 'North Korea'
+        }
+      ]
     },
     {
       id: 'Pill'
-      labels: ['Argelia']
+      text: 
+        es: 'píldora'
+        en: 'pill'
+      labels: [
+        {
+          cx_factor: 0.464
+          cy_factor: 0.416
+          r: 0
+          textOffset: [-35, 0]
+          label:
+            es: 'Argelia'
+            en: 'Algeria'
+        }
+      ]
     },
     {
       id: 'Male condom'
-      labels: ['Canada', 'Botswana']
+      text: 
+        es: 'preservativo masculino'
+        en: 'male condom'
+      labels: [
+        {
+          cx_factor: 0.265
+          cy_factor: 0.297
+          r: 0
+          textOffset: [30, 25]
+          label:
+            es: 'Canadá'
+            en: 'Canada'
+        },
+        {
+          cx_factor: 0.564
+          cy_factor: 0.73
+          r: 0
+          textOffset: [15, -10]
+          label:
+            es: 'Botsuana'
+            en: 'Botswana'
+        }
+      ]
     },
     {
       id: 'Injectable'
-      labels: ['Etiopía']
+      text: 
+        es: 'inyectable'
+        en: 'injectable'
+      labels: [
+        {
+          cx_factor: 0.616
+          cy_factor: 0.571
+          r: 0
+          textOffset: [15, 5]
+          label:
+            es: 'Etiopía'
+            en: 'Ethiopia'
+        }
+      ]
     },
     {
       id: 'Any traditional method'
-      labels: []
+      text: 
+        es: 'métodos tradicionales'
+        en: 'traditional methods'
+      labels: [
+        {
+          cx_factor: 0.536
+          cy_factor: 0.318
+          r: 16
+          textOffset: [-26, 0]
+          label:
+            es: 'Balcanes'
+            en: 'Balkans'
+        }
+      ]
     },
     {
       id: 'Any traditional method'
-      labels: ['Albania']
+      text: 
+        es: 'métodos tradicionales'
+        en: 'traditional methods'
+      labels: [
+        {
+          cx_factor: 0.534
+          cy_factor: 0.332
+          r: 0
+          textOffset: [-10, 0]
+          label:
+            es: 'Albania'
+            en: 'Albania'
+        }
+      ]
     }
   ]
 
+  getLegendData: ->
+    return [0,20,40,60,80]
+
+  getLegendFormat: (d) =>
+    return d+'%'
 
   # override getDimensions
   getDimensions: ->
@@ -84,6 +189,8 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
     super()
     @setAnnotations()
 
+
+
   # override color domain
   setColorDomain: ->
     @color.domain [0, 80]
@@ -99,6 +206,7 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
       #console.log 'set state '+state
       @currentState = state
       @currentMethod = @states[@currentState-1]
+      $('#map-contraceptives-use-method').html @currentMethod.text[@options.lang]
       @data.forEach (d) => d.value = +d[@currentMethod.id]
       @updateGraph @data
       @setAnnotations()
@@ -108,4 +216,5 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
       @currentMethod.labels.forEach (d) => 
         d.cx = d.cx_factor*@width
         d.cy = d.cy_factor*@height
+        d.text = d.label[@options.lang]
       @container.call @ringNote, @currentMethod.labels

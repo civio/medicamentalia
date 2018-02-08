@@ -353,7 +353,7 @@
         top: 20
         bottom: 0
       legend: true
-    useMap.getLegendData = -> [0,20,40,60,80]
+      lang: lang
     useMap.setData data_use, map
     useMap.onResize()
 
