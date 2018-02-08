@@ -2500,7 +2500,6 @@ body.guatemala-graph {
     fill: $gray-dark;
     text-anchor: middle;
     text-shadow: 0 1px 0 rgba(255,255,255,.4);
-    @include transition( 0.3s opacity all );
   }
 
   .y.axis .tick:nth-child(2){
@@ -2514,6 +2513,41 @@ body.guatemala-graph {
 
   .y.axis .tick text{
     text-anchor: start;
+  }
+
+  .x.axis .tick {
+    line{
+      display: block;
+      stroke: $gray-lighter;
+      opacity: 0;
+      @include transition( 0.3s ease-in-out opacity );
+    }
+    text{
+      display: none;
+    }
+  }
+}
+
+#unmet-needs-gdp-container-graph .x-legend{
+  position: relative;
+  margin: -3px 0 0;
+  padding: 0;
+  width: 100%;
+  opacity: 0;
+  @include transition( 0.3s ease-in-out opacity );
+
+  li{
+    margin: 0;
+    list-style: none;
+    float: left;
+    width: 25%;
+    line-height: 25px;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    background: mix( $gray-light, $gray-lighter, 75% );
+    color: white;
+    outline: 1px solid white;
   }
 }
 

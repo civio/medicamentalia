@@ -16,6 +16,13 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
   # Main methods
   # ------------
 
+  # to overdrive
+  dataParser: (data) ->
+    if @options.key.size
+      return data.sort (a,b) => b[@options.key.size]-a[@options.key.size]
+    else
+      return data
+
   drawGraph: ->
 
     @setSize()
@@ -31,7 +38,7 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
       .attr 'class', 'dot'
       .attr 'id', (d) => 'dot-'+d[@options.key.id]
       .call @setDot
-      .on 'mouseover', (d) => console.log d
+      #.on 'mouseover', (d) => console.log d
 
     # draw labels
     if @options.key.label
@@ -91,6 +98,9 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
     @container.selectAll('.dot')
       .attr 'fill', @getDotFill
       .call @setDotPosition
+    if @xLegend
+      @xLegend.style 'opacity', @options.mode
+    # show/hide dot labels
     if @options.key.label
       @container.selectAll('.dot-label')
         .style 'opacity', 0
@@ -98,6 +108,9 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
         .transition()
         .delay 500
         .style 'opacity', 1
+    # show/hide x axis lines
+    @container.selectAll('.x.axis .tick line')
+      .style 'opacity', @options.mode
 
   setSize: ->
     if @size
@@ -147,8 +160,7 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
     # setup axis
     @xAxis = d3.axisBottom(@x)
       .tickSize @height
-      .tickValues [500, 1000, 5000, 10000, 50000]
-      .tickFormat (d) -> d+'$'
+      .tickValues [1005, 3955, 12235]
     @yAxis = d3.axisLeft(@y)
       .tickSize @width
       .tickValues [0, 10, 20, 30, 40]
@@ -156,7 +168,7 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
     return @
 
   setXAxisPosition: (selection) =>
-    selection.attr 'transform', 'translate(0,5)'
+    selection.attr 'transform', 'translate(-1,5)'
 
   getScaleXDomain: =>
     return [250, 85000]
@@ -171,7 +183,6 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
     return [0, d3.max(@data, (d) => d[@options.key.size])]
 
   getColorDomain: =>
-    #return [1005, 3955, 12235, 100000]
     return [0, 10, 20, 30]
 
   drawScales: ->
@@ -188,6 +199,8 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
         .attr 'class', 'x axis'
         .call @setXAxisPosition
         .call @xAxis
+      @container.selectAll('.x.axis .tick line')
+        .attr 'y1', @y(40)-4
     # set y axis
     if @yAxis
       @container.append('g')
@@ -197,6 +210,14 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
       @container.selectAll('.y.axis .tick text')
         .attr 'dx', 3
         .attr 'dy', -4
+    # set x lenged
+    incomes = @xAxis.tickValues()
+    incomes.unshift 0
+    incomesMax = @x @getScaleXDomain()[1]
+    incomes = incomes.map (d) => if d > 0 then 100*@x(d)/incomesMax else 0
+    incomes.push 100
+    @xLegend = d3.select(d3.select('#'+@id).node().parentNode).select('.x-legend')
+    @xLegend.selectAll('li').style 'width', (d,i) -> (incomes[i+1]-incomes[i])+'%'
     return @
 
   getDimensions: ->

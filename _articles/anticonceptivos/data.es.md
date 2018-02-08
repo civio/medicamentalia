@@ -140,20 +140,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </div>
 
 
-<!--
-<div id="unmet-needs-gdp-container-graph" class="graph-container">
-  <p class="graph-container-caption">Unmeet needs vs. GDP</p>
-  <div id="unmet-needs-gdp-graph" class="scatterplot-graph">
-    <ul class="x-legend">
-      <li>Ingreso bajo</li>
-      <li>Ingreso medio bajo</li>
-      <li>Ingreso medio alto</li>
-      <li>Ingreso alto</li>
-    </ul>
-  </div>
-</div>
--->
-
 <div id="unmet-needs-gdp-container-graph" class="scroll-container">
 <!--  graphic container  -->
 <div class="scroll-graphic">
@@ -161,6 +147,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     <div class="container page-content">
       <p>Porcentaje de mujeres con <strong>necesidades no cubiertas</strong></p>
       <div id="unmet-needs-gdp-graph"></div>
+      <ul class="x-legend">
+        <li>Renta baja</li>
+        <li>Renta media-baja</li>
+        <li>Renta media-alta</li>
+        <li>Renta alta</li>
+      </ul>
     </div>
   </div>
 </div>
@@ -170,7 +162,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     <p>Ese problema, las <strong>necesidades no cubiertas</strong>, es mayor en algunos países del mundo que en otros.</p>
   </div>
   <div class="step" data-instance="3" data-step="1">
-    <p>Vinculamos con el GNI.</p>
+    <p>Distribuimos los países en base a su nivel de renta.</p>
   </div>
   <div class="step" data-instance="3" data-step="1">
     <p>En países más ricos, como Estados Unidos, Alemania o España, el porcentaje de mujeres con necesidades no cubiertas es inferior al 15%.</p>
