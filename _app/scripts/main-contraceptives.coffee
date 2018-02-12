@@ -182,7 +182,7 @@
             .classed 'fill-'+step, e.direction == 'down'
           #console.log 'scrollama 2', step
       else if instance == 3
-        if unmetneedsGraph and unmetneedsGraph.options.mode != step
+        if unmetneedsGraph
           unmetneedsGraph.setMode step
 
     # start it up
@@ -264,6 +264,7 @@
       if country_gni[0] and country_gni[0]['2016']
           data.push
             value: +d['2017']
+            id: country_gni[0].code
             name: country_gni[0].name
             region: country_gni[0].region
             population: country_pop[0]['2015']
@@ -298,7 +299,7 @@
       key:
         x: 'gni'
         y: 'value'
-        id: 'name'
+        id: 'id'
         label: 'name'
         size: 'population'
         color: 'value' #'gni'

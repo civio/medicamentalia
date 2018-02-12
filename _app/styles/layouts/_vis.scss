@@ -2500,12 +2500,28 @@ body.guatemala-graph {
   .dot{
     opacity: 0.85;
     @include transition( 0.4s ease-in-out all );
+
+    &.inactive{
+      fill: mix($gray-light, $gray-lighter, 25%);
+    }
   }
   .dot-label{
-    font-size: 12px;
+    font-size: 11px;
     fill: $gray-dark;
     text-anchor: middle;
     text-shadow: 0 1px 0 rgba(255,255,255,.4);
+    opacity: 0;
+
+    &.inactive{
+      visibility: hidden;
+    }
+
+    &.size-l{
+      font-size: 13px;
+    }
+    &.size-s{
+      font-size: 12px;
+    }
   }
 
   .y.axis .tick:nth-child(2){

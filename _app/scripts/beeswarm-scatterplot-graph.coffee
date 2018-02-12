@@ -1,5 +1,8 @@
 class window.BeeswarmScatterplotGraph extends window.BaseGraph
 
+
+  incomeLevels: [1005, 3955, 12235]
+
   # Constructor
   # -----------
 
@@ -45,7 +48,7 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
       @container.selectAll('.dot-label')
         .data @data.filter (d) => d[@options.key.size] > 78000000
       .enter().append('text')
-        .attr 'class', 'dot-label'
+        .attr 'class', (d) => return if d[@options.key.size] > 1000000000 then 'dot-label size-l' else if d[@options.key.size] > 180000000 then 'dot-label size-m' else 'dot-label'
         #.attr 'dx', '0.75em'
         .attr 'dy', '0.25em'
         .text (d) => d[@options.key.label]
@@ -95,22 +98,36 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
 
   setMode: (mode) ->
     @options.mode = mode
-    @container.selectAll('.dot')
-      .attr 'fill', @getDotFill
-      .call @setDotPosition
-    if @xLegend
-      @xLegend.style 'opacity', @options.mode
-    # show/hide dot labels
-    if @options.key.label
-      @container.selectAll('.dot-label')
-        .style 'opacity', 0
-        .call @setDotLabelPosition
-        .transition()
-        .delay 500
-        .style 'opacity', 1
-    # show/hide x axis lines
-    @container.selectAll('.x.axis .tick line')
-      .style 'opacity', @options.mode
+    if @options.mode < 2
+      @container.selectAll('.dot, .dot-label')
+        .classed 'inactive', false
+      @container.selectAll('.dot')
+        .call @setDotPosition
+      if @xLegend
+        @xLegend.style 'opacity', @options.mode
+      # show/hide dot labels
+      if @options.key.label
+        @container.selectAll('.dot-label')
+          .style 'opacity', 0
+          .call @setDotLabelPosition
+          .transition()
+          .delay 500
+          .style 'opacity', 1
+      # show/hide x axis lines
+      @container.selectAll('.x.axis .tick line')
+        .style 'opacity', @options.mode
+    else if @options.mode == 2
+      @container.selectAll('.dot, .dot-label')
+        .classed 'inactive', (d) => d[@options.key.x] < @incomeLevels[2] or d[@options.key.y] > 15
+    else if @options.mode == 3
+      @container.selectAll('.dot, .dot-label')
+        .classed 'inactive', (d) => d[@options.key.x] > @incomeLevels[1] or d[@options.key.y] < 30
+    else if @options.mode == 4
+       @container.selectAll('.dot, .dot-label')
+        .classed 'inactive', (d) => d.id != 'SAU' and d.id != 'JPN'
+    else if @options.mode == 5
+       @container.selectAll('.dot, .dot-label')
+        .classed 'inactive', false
 
   setSize: ->
     if @size
@@ -160,7 +177,7 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
     # setup axis
     @xAxis = d3.axisBottom(@x)
       .tickSize @height
-      .tickValues [1005, 3955, 12235]
+      .tickValues @incomeLevels
     @yAxis = d3.axisLeft(@y)
       .tickSize @width
       .tickValues [0, 10, 20, 30, 40]

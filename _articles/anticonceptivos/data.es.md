@@ -164,16 +164,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   <div class="step" data-instance="3" data-step="1">
     <p>Distribuimos los países en base a su nivel de renta.</p>
   </div>
-  <div class="step" data-instance="3" data-step="1">
+  <div class="step" data-instance="3" data-step="2">
     <p>En países más ricos, como Estados Unidos, Alemania o España, el porcentaje de mujeres con necesidades no cubiertas es inferior al 15%.</p>
   </div>
-  <div class="step" data-instance="3" data-step="1">
+  <div class="step" data-instance="3" data-step="3">
     <p>En los países con menos renta, ese porcentaje supera el 30%</p>
   </div>
-  <div class="step" data-instance="3" data-step="1">
+  <div class="step" data-instance="3" data-step="4">
     <p>Japón y Arabia Saudí, pese a su riqueza, tienen necesidades al mismo nivel que países mucho más pobres.</p>
   </div>
-  <div class="step" data-instance="3" data-step="1"></div>
+  <div class="step" data-instance="3" data-step="5"></div>
 </div>
 </div>
 
@@ -254,7 +254,7 @@ Y, ¿qué significa que haya necesidades no cubiertas? Que el derecho a planific
 
 <div class="container page-content">
 <div class="page-content-container reasons-graphs" markdown="1">
-  
+
 <div class="graph-container">
   <p>En <strong>paises en desarrollo</strong> mueren en el parto <strong>33 de cada 5000</strong> mujeres</p>
   <div id="maternal-mortality-developing" class="womans-graph"></div>
