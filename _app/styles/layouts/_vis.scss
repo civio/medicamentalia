@@ -2426,7 +2426,7 @@ body.guatemala-graph {
   li{
     display: inline-block;
     list-style: none;
-    margin: 5px 5px;
+    margin: 8px 5px;
 
     svg{
       fill: $gray-light;
@@ -2445,6 +2445,10 @@ body.guatemala-graph {
   &.fill-3 svg{
     fill: $color-orange;
   }
+}
+
+#maternal-mortality-developed li{
+  margin: 1px 1px;
 }
 
 #contraceptives-app{

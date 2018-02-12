@@ -241,12 +241,20 @@ En Europa hace tiempo que escasean las campañas de promoción de los anticoncep
 Y, ¿qué significa que haya necesidades no cubiertas? Que el derecho a planificar la reproducción propia no se cumple. Según la [OMS](http://www.who.int/mediacentre/factsheets/fs351/en/), la planificación familiar reduce los abortos, especialmente los inseguros; refuerza el derecho para determinar el número y el tiempo para tener hijos y previene muertes de madres e hijos.
 
 830 mujeres mueren cada día por causas relacionadas con el embarazo y el parto. Casi todas ellas suceden en países en desarrollo. [Fuente](http://www.who.int/maternal-health/en/). De hecho, la OMS estima que más de un tercio de esas muertes, [en 2015](http://www.who.int/reproductivehealth/publications/monitoring/maternal-mortality-2015/en/), se produjeron en Nigeria y La India. O, dicho de otra forma: si vives en una región desarrollada tienes una posibilidad entre 4.900 de morir en el parto; si vives en regiones en desarrollo, una entre 150.
-
-<div class="graph-container">
-  <p>En <strong>paises desarrollados</strong> sólo <strong>1 de cada 5000</strong> mujeres mueren en el parto</p>
-  <div id="maternal-mortality-developed" class="womans-graph"></div>
+</div>
 </div>
 
+
+<div class="graph-container">
+  <div class="container page-content">
+    <p>En <strong>paises desarrollados</strong> sólo <strong>1 de cada 5000</strong> mujeres mueren en el parto</p>
+    <div id="maternal-mortality-developed" class="womans-graph"></div>
+  </div>
+</div>
+
+<div class="container page-content">
+<div class="page-content-container reasons-graphs" markdown="1">
+  
 <div class="graph-container">
   <p>En <strong>paises en desarrollo</strong> mueren en el parto <strong>33 de cada 5000</strong> mujeres</p>
   <div id="maternal-mortality-developing" class="womans-graph"></div>
