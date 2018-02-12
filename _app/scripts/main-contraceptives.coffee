@@ -251,7 +251,7 @@
   # Unmeet Needs vs GDP graph
   # --------------------------
 
-  setupUnmetNeedsGdpGraph = (data_unmetneeds, countries_gni, countries_population) ->
+  setupUnmetNeedsGdpGraph = (data_unmetneeds, countries) ->
 
     # Setup Scrollama
     setupScrollama 'unmet-needs-gdp-container-graph'
@@ -259,36 +259,17 @@
     # parse data
     data = []
     data_unmetneeds.forEach (d) ->
-      country_gni = countries_gni.filter (e) -> e.code == d.code
-      country_pop = countries_population.filter (e) -> e.code == d.code
-      if country_gni[0] and country_gni[0]['2016']
+      country = countries.filter (e) -> e.code == d.code
+      if country[0] and country[0]['gni']
           data.push
-            value: +d['2017']
-            id: country_gni[0].code
-            name: country_gni[0].name
-            region: country_gni[0].region
-            population: country_pop[0]['2015']
-            gni: country_gni[0]['2016']
+            value:      +d['2017']
+            id:         country[0].code
+            name:       country[0]['name_'+lang]
+            population: +country[0]['population']
+            gni:        +country[0]['gni']
       else
-        console.log 'No GNI or Population data for this country', d.code, country_gni[0]
-    # clear items without unmet-needs values
-    #data = data.filter (d) -> d.gdp and d['unmet-needs'] 
-    ###
-    unmetNeedsGdpGraph = new window.ScatterplotUnmetNeedsGraph 'unmet-needs-gdp-graph',
-      aspectRatio: 0.5625
-      margin:
-        left:   0
-        rigth:  0
-        top:    0
-        bottom: 0
-      key:
-        x: 'gni'
-        y: 'value'
-        id: 'name'
-        color: 'gni' #'region'
-        size: 'population'
-    # set data
-    ###
+        console.log 'No GNI or Population data for this country', d.code, country[0]
+    console.table data
     # setup graph
     unmetneedsGraph = new window.BeeswarmScatterplotGraph 'unmet-needs-gdp-graph',
       margin:
@@ -297,14 +278,14 @@
         top:    5
         bottom: 0
       key:
-        x: 'gni'
-        y: 'value'
-        id: 'id'
-        label: 'name'
-        size: 'population'
-        color: 'value' #'gni'
+        x:      'gni'
+        y:      'value'
+        id:     'id'
+        label:  'name'
+        color:  'value'
+        size:   'population'
       dotMinSize: 1
-      dotMaxSize: 12
+      dotMaxSize: 32
     unmetneedsGraph.setData data
     $(window).resize unmetneedsGraph.onResize
 
@@ -544,17 +525,14 @@
   # ---------------
 
   # Load csvs & setup maps
-  # !!! TODO -> Use a single countries file with gni & population info 
   d3.queue()
     .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
     .defer d3.csv,  baseurl+'/data/unmet-needs.csv'
     .defer d3.csv,  baseurl+'/data/contraceptives-reasons.csv'
-    .defer d3.csv,  baseurl+'/data/countries.csv'
-    .defer d3.csv,  baseurl+'/data/countries-gni-'+lang+'.csv'
-    .defer d3.csv,  baseurl+'/data/countries-population-'+lang+'.csv'
+    .defer d3.csv,  baseurl+'/data/countries-gni-population-2016.csv'
     .defer d3.json, baseurl+'/data/map-world-110.json'
     .defer d3.json, 'https://freegeoip.net/json/'
-    .await (error, data_use, data_unmetneeds, data_reasons, countries, countries_gni, countries_population, map, location) ->
+    .await (error, data_use, data_unmetneeds, data_reasons, countries, map, location) ->
 
       if location
         user_country = countries.filter (d) -> d.code2 == location.country_code
@@ -598,7 +576,7 @@
         setupConstraceptivesUseGraph()
 
       if $('#unmet-needs-gdp-graph').length
-        setupUnmetNeedsGdpGraph data_unmetneeds, countries_gni, countries_population
+        setupUnmetNeedsGdpGraph data_unmetneeds, countries
 
       if $('#contraceptives-reasons-opposed').length
         setupContraceptivesReasons data_reasons, countries
