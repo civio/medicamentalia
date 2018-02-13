@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-sm-5">
+    <img class="contraceptives-app-img" src="/assets/images/svg/{{ include.img }}.svg">
+  </div>
+  <div class="col-sm-7">
+    <div class="contraceptives-app-data">
+      {% if include.title %}
+      <h5>{{ include.title }}</h5>
+      {% endif %}
+      <div id="contraceptives-app-use">
+        <p><strong id="contraceptives-app-data-use"></strong> usa algún método anticonceptivo <small>(X% más que la media mundial)</small></p>
+        <p>Principal método: <strong id="contraceptives-app-data-main-method"></strong> <small>(lo usa el <span id="contraceptives-app-data-main-method-value"></span>)</small></p>
+      </div>
+      <div id="contraceptives-app-unmetneeds">
+        <p><strong id="contraceptives-app-data-unmetneeds"></strong> Tiene necesidades no cubiertas <small>(X% menos que la media mundial)</small></p>
+      </div>
+      <div id="contraceptives-app-reason">
+        <p><strong id="contraceptives-app-data-reason"></strong> es la razón principal <small>(afecta al <span id="contraceptives-app-data-reason-value"></span>)</small></p>
+      </div>
+    </div>
+    {% if include.filters %}
+    <div class="contraceptives-app-filters">
+      <p>Filtra según</p>
+      <p><a class="btn btn-default" href="#" role="button" data-value="0">Entorno urbano o rural</a></p>
+      <p><a class="btn btn-default" href="#" role="button" data-value="1">Edad</a></p>
+      <p><a class="btn btn-default" href="#" role="button" data-value="2">Nivel de estudios</a></p>
+      <p><a class="btn btn-default" href="#" role="button" data-value="3">Nivel de renta</a></p>
+    </div>
+    {% endif %}
+  </div>
+</div>

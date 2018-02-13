@@ -2470,6 +2470,12 @@ body.guatemala-graph {
   .contraceptives-app-filters p{
     margin-bottom: 5px;
   }
+
+  .contraceptives-app-img{
+    width: 120px;
+    height: auto;
+    margin: 20px auto 0;
+  }
   
   /*
   .scroll-text{
@@ -2486,12 +2492,6 @@ body.guatemala-graph {
     }
   }
   */
-}
-
-#contraceptives-app-img{
-  width: 150px;
-  height: auto;
-  margin: 20px auto 0;
 }
 
 #unmet-needs-gdp-graph{
