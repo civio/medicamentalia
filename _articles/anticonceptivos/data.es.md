@@ -16,11 +16,13 @@ lang:             es
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Babatunde Osotimehin falleció el pasado mes de julio. Años antes, cuando era director ejecutivo del Fondo de Población de Naciones Unidas (FPNU), [afirmó](http://www.unfpa.org/press/additional-investments-family-planning-would-save-developing-countries-more-11-billion-year#) que la planificación familiar no es un privilegio, sino un derecho. Y que no solo ayuda a escapar de la pobreza, sino que también es "uno de los medios más efectivos para empoderar a las mujeres". Era 2012 y Naciones Unidas [declaraba](http://www.unfpa.org/sites/default/files/pub-pdf/SP_SWOP2012_Report.pdf) que elegir si se quiere tener hijos y cuándo y cómo hacerlo es un derecho humano fundamental. 
+Babatunde Osotimehin falleció el pasado mes de julio. Años antes, cuando era director ejecutivo del Fondo de Población de Naciones Unidas (FPNU), [afirmó](http://www.unfpa.org/press/additional-investments-family-planning-would-save-developing-countries-more-11-billion-year#) que la planificación familiar no es un privilegio, sino un derecho. Y que no solo ayuda a escapar de la pobreza, sino que también es **"uno de los medios más efectivos para empoderar a las mujeres"**. Era 2012 y Naciones Unidas [declaraba](http://www.unfpa.org/sites/default/files/pub-pdf/SP_SWOP2012_Report.pdf) que elegir si se quiere tener hijos y cuándo y cómo hacerlo es un derecho humano fundamental. 
 
-Un derecho que se daña cada vez que una niña se queda embarazada, cada vez que a una mujer se le acusa de promiscua, o hasta de prostituta, por usar algún método, cada vez que es obligada a tener hijos no deseados, cada vez que se ve obligada a abortar en condiciones insalubres, cada vez que alguien le dice lo que tiene que hacer o le vetóa el acceso, aunque sea ella la que cargue, en muchos países, con las consecuencias de ese decisión, cada vez que un nuevo parto pone su salud al límite o la mata. Todos estos no son ejemplos, son historias reales recopiladas durante esta investigación, destinada a conocer cómo se ejerce este derecho universal y a qué barreras se enfrentan las mujeres para hacerlo. 
+Un derecho que se daña cada vez que una niña se queda embarazada, cada vez que a una mujer se le acusa de promiscua, o hasta de prostituta, por usar algún método, cada vez que es obligada a tener hijos no deseados, cada vez que se ve obligada a abortar en condiciones insalubres, cada vez que alguien le dice lo que tiene que hacer o le vetó el acceso, aunque sea ella la que cargue, en muchos países, con las consecuencias de ese decisión, cada vez que un nuevo parto pone su salud al límite o la mata. Esta no es una lista de ejemplos teóricos, son historias reales recopiladas durante esta investigación, destinada a conocer cómo se ejerce este derecho universal y a qué barreras se enfrentan las mujeres para hacerlo. 
 
-Fanta Jatta es una de las personas que conoce mejor estos casos. Lo cuenta en la sede de la organización Action Aid International, en Gambia, donde dirige el programa de derechos de las mujeres. Para ella, además de los problemas de salud -para madres y niños- que provocan la falta de acceso a los anticonceptivos, hay algo elem
+> Foto lateral Fanta
+
+Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la sede de la organización Action Aid International, en Gambia, donde dirige el programa de derechos de las mujeres. Para ella, además de los problemas de salud -para madres y niños- que provocan la falta de acceso a los anticonceptivos, hay algo más, algo elemental: quién decide y cómo. La capacidad de decisión libre para ejercer este derecho. 
 
 #### Usos
 </div>
@@ -32,7 +34,7 @@ Fanta Jatta es una de las personas que conoce mejor estos casos. Lo cuenta en la
 <div class="scroll-graphic">
   <div class="graph-container">
     <div class="container page-content">
-      <p>Porcentaje de uso entre mujeres de entre 15 y 49 años y sexualmente activas que usa algún método</p>
+      <p>Porcentaje de uso entre mujeres (de 15 a 49 años y sexualmente activas) que utilizan algún método</p>
       <div id="treemap-contraceptives-use" class="treemap-graph"></div>
     </div>
   </div>
@@ -72,10 +74,10 @@ Pero su uso no es homogeneo ni entre países ni entre clases sociales. La [situa
     <p>La <strong>esterilización femenina</strong> es el método más habitual en India (67%); además, destaca en muchos países centroamericanos, como República Dominicana (59%), Puerto Rico, El Salvador y México.</p>
   </div>
   <div class="step" data-instance="1" data-step="2">
-    <p>La <strong>esterilización masculina</strong> tiene una implantación muchísimo menor y no alcanza porctenajes tan altos. Por ejemplo: es el método de un 25% de las parejas en Reino Unido, donde solo está por detrás de la píldora y el condón.</p>
+    <p>La <strong>esterilización masculina</strong> tiene una implantación muchísimo menor y no alcanza porcentajes tan altos. Por ejemplo: un 25% de las mujeres en Reino Unido contestaron que es el método que usan sus parejas. Esta por detrás de la píldora y el condón.</p>
   </div>
   <div class="step" data-instance="1" data-step="3">
-    <p markdown="1">El <strong>DIU</strong> destaca en estados asiáticos, con Corea del Norte por encima de todos: es el método que usa el 95% de las mujeres que quiere controlar su natalidad. En otros países, su uso es casi residual. Algunos médicos [rechazan insertarlo](https://www.washingtonpost.com/national/health-science/why-do-some-doctors-refuse-to-give-women-iuds/2017/10/12/ee1e881e-a3c9-11e7-b14f-f41773cd5a14_story.html?utm_term=.6e3da2fb3930) por falsas creencias sobre su seguridad en mujeres que no han tenido hijos.</p>
+    <p markdown="1">El <strong>DIU</strong> destaca en estados asiáticos, con Corea del Norte por encima de todos: es el método que usa el 95% de las mujeres que quiere controlar su natalidad. En China, durante la época en la que estuvo vigente la política de hijo único, las mujeres eran obligadas a ponerse uno tras su primer parto. Ahora, se [está ofreciendo](https://www.nytimes.com/2017/01/07/world/asia/after-one-child-policy-outrage-at-chinas-offer-to-remove-iuds.html) a retirarlos de forma gratuita. En el resto del mundo es mucho menos habitual. Algunos médicos [rechazan insertarlo](https://www.washingtonpost.com/national/health-science/why-do-some-doctors-refuse-to-give-women-iuds/2017/10/12/ee1e881e-a3c9-11e7-b14f-f41773cd5a14_story.html?utm_term=.6e3da2fb3930) por falsas creencias sobre su seguridad en mujeres que no han tenido hijos.</p>
   </div>
   <div class="step" data-instance="1" data-step="4">
     <p>La <strong>píldora</strong>  es prioritaria, entre otras zonas, en el norte de África y buena parte de la Europa occidental, pero no en España.</p>
@@ -84,7 +86,7 @@ Pero su uso no es homogeneo ni entre países ni entre clases sociales. La [situa
     <p>El <strong>preservativo masculino</strong> es uno de los métodos más habituales en países tan distintos como Botsuana (79%) y Canadá (64%), y en otros países entre mujeres no casadas que no tienen acceso a otros métodos más establecidos. Es el principal método elegido como anticonceptivo en España (38%).</p>
   </div>
   <div class="step" data-instance="1" data-step="6">
-    <p>El método <strong>inyectable</strong>, también hormonal, es el favorito en África. Para muchas mujeres es la solución perfecta si deciden usar anticonceptivos sin que se enteren sus maridos, que en muchos casos están en contra. No se nota, es fácil de administrar -un pinchazo rápido cada tres meses- y no deja huella.</p>
+    <p>El método <strong>inyectable</strong>, también hormonal, es el favorito en África. Para muchas mujeres es la solución perfecta si deciden usar anticonceptivos sin que se enteren sus maridos si ellos están en contra. No se nota, es fácil de administrar -un pinchazo rápido cada uno tres o cinco meses- y no deja huella.</p>
   </div>
   <div class="step" data-instance="1" data-step="7">
     <p>Los <strong>métodos tradicionales</strong> van desde la marcha atrás al control del ciclo, pasando por prácticas locales vinculadas a la religión o la magia. Estos métodos, muy poco o nada fiables, son mayoritarios en la región de los Balcanes</p>
@@ -100,7 +102,7 @@ Pero su uso no es homogeneo ni entre países ni entre clases sociales. La [situa
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-En Gambia, muchas mujeres usan un método que recibe diferentes nombres pero que para todas ellas representa la vía tradicional anticonceptiva. Está realizado de diversas formas (una cuerdita, una rama, con o sin frases del Corán en un papelito), pero que parten de lo mismo: si se ata a la cintura que protegerá a la mujer de quedarse embarazada. Por supuesto, no tiene base científica.
+En Gambia, muchas mujeres usan un método que recibe diferentes nombres y que representa la vía tradicional. Puede ser una cuerdita o una rama, con o sin frases del Corán en un papelito, pero todas esas formas y nombres parten de la misma creencia: si se ata a la cintura protegerá a la mujer de quedarse embarazada. Por supuesto, no tiene base científica.
 </div>
 </div>
 
@@ -117,13 +119,13 @@ En Gambia, muchas mujeres usan un método que recibe diferentes nombres pero que
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-instance="2" data-step="1">
-    <p>Hasta ahora hemos hablado de aquellas mujeres que usan algún método anticonceptivo. De las mujeres casadas o sexualmente activas de 15 a 49 años, <strong> el 63% usa algún tipo de método</strong>.</p>
+    <p>Hasta ahora hemos hablado de aquellas mujeres que usan anticonceptivos. De las mujeres casadas o sexualmente activas de 15 a 49 años, <strong> el 63% usa algún tipo de método</strong>.</p>
   </div>
   <div class="step" data-instance="2" data-step="2">
-    <p>Otro <strong>25% quiere seguir teniendo niños</strong> y, por lo tanto, decide no usar ningún método.</p>
+    <p>Otro <strong>25% quiere seguir teniendo niños</strong> en el momento de ser entrevistada y, por lo tanto, decide no usar ningún método.</p>
   </div>
   <div class="step" data-instance="2" data-step="3">
-    <p>Pero el <strong>12%</strong> restante son aquellas mujeres que <strong>quieren retrasar o frenar su maternidad pero no usan ningún método</strong>. Son las mujeres con necesidades no cubiertas. Y ahí está el problema.</p>
+    <p>Pero el <strong>12%</strong> restante son aquellas mujeres que <strong>quieren retrasar o frenar su maternidad pero no usan ningún método</strong>. Tienen necesidades no cubiertas. Y ahí está el problema.</p>
   </div>
   <div class="step" data-instance="2" data-step="4"></div>
 </div>
@@ -133,9 +135,8 @@ En Gambia, muchas mujeres usan un método que recibe diferentes nombres pero que
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-#### Razones
+Puede ser que no quieran tener ningún hijo o no quieran tener más. "Siete es suficiente", argumenta XXX, de Gambia. O que quieran espaciar los embarazos, por razones de salud, para poder cuidar de los hijos de forma escalonada o por organización personal. (decla gambiana que dice que se quedó embarazada al poco de tener a otro). Pero, aún así, no usan ningún método.  
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </div>
 </div>
 
@@ -159,13 +160,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-instance="3" data-step="0">
-    <p>Ese problema, las <strong>necesidades no cubiertas</strong>, es mayor en algunos países del mundo que en otros.</p>
+    <p>Ese problema, las <strong>necesidades no cubiertas</strong>, es mayor en algunos países del mundo que en otros. Apenas es relevante en China, mientras en Samoa alcanza el 43%. </p>
   </div>
   <div class="step" data-instance="3" data-step="1">
-    <p>Distribuimos los países en base a su nivel de renta.</p>
+    <p>Pero, si distribuimos los países en base a su nivel de renta...</p>
   </div>
   <div class="step" data-instance="3" data-step="2">
-    <p>En países más ricos, como Estados Unidos, Alemania o España, el porcentaje de mujeres con necesidades no cubiertas es inferior al 15%.</p>
+    <p>En los más ricos, como Estados Unidos, Alemania o España, el porcentaje de mujeres con necesidades no cubiertas es inferior al 15%.</p>
   </div>
   <div class="step" data-instance="3" data-step="3">
     <p>En los países con menos renta, ese porcentaje supera el 30%</p>
@@ -183,22 +184,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Así, el porcentaje de mujeres con necesidades no cubiertas de los países menos desarrollados (21,4%) casi duplica la mediana mundial (11,5%), según la ONU. 
 
-> "Pobreza no es solo la falta de dinero, o material, es también la falta del poder de tomar decisiones", argumenta Fanta Jatta, Women's Right Specialist at Action Aid International (declaración con foto? de Fanta Jatta).
 
-Vamos a centrarnos en esos países en los que la situación es más complicada. ¿Qué barreras impiden a las mujeres el acceso a los anticonceptivos?. Según el estudio *[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)*, del Guttmacher Institute, que analizó 52 países, las principales son los efectos secundarios, la poca frecuencia sexual, y la oposición (ya sea propia o impuesta). 
+
+#### Barreras
+
+Vamos a centrarnos en esos países en los que la situación es más complicada. ¿Qué barreras impiden a las mujeres el acceso a los anticonceptivos?. Según el estudio *[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)*, del Guttmacher Institute, que analizó 52 países, las principales son **los efectos secundarios, la poca frecuencia sexual, y la oposición (ya sea propia o impuesta)**. 
+
+La mayoría de quienes responden que no usan anticonceptivos por razones de salud, miedo a los efectos secundarios o porque afecta a los procesos naturales del cuerpo han usado alguna vez un método, según el estudio de Guttmacher. Esto es, saben de lo que hablan: sangrado excesivo o menor, náuseas, cambios en el cuerpo -engordan, les crece vello-, falta de líbido, cambios de humor... la larga lista de efectos secundarios de los anticonceptivos hormonales no ayuda. 
+
+"En cuanto a los efectos secundarios, es necesario que haya mucho más progreso e investigación. Esto no es suficiente, sobre todo porque muchos de los métodos anticonceptivos se focalizan solo en la mujer, mientras para los hombres hay muy pocas oportunidades de ser activos en este sentido", argumenta Mirjam Beck, una alemana de 27 años. En 2016 [se frenó](http://cnnespanol.cnn.com/2016/10/31/inyeccion-anticonceptiva-masculina-es-altamente-efectiva-pero-tiene-efectos-secundarios/) el estudio de un anticonceptivo masculino por sus efectos secundarios, muy similares a los que sufren las mujeres en la actualidad. 
 
 <div class="container-right">
   <div class="graph-container">
-    <p class="graph-container-caption">Razones de salud </p>
+    <p class="graph-container-caption">Razones de salud para no usar anticonceptivos</p>
     <div id="contraceptives-reasons-health"></div>
   </div>
 </div>
 
-La mayoría de quienes responden que no usan anticonceptivos por razones de salud, miedo a los efectos secundarios o porque afecta a los procesos naturales del cuerpo han usado alguna vez un método, según el estudio de Guttmacher. Esto es, saben de lo que hablan: sangrado excesivo o menor, náuseas, cambios en el cuerpo -engordan, les crece vello-, falta de líbido, cambios de humor... la larga lista de efectos secundarios de los anticonceptivos hormonales no ayuda. 
+> [Fotico?] "Yo prefiero utilizar el preservativo, que que no tiene ningún efecto secundario, que la píldora" (María, 24 años)
 
-> [Fotico?] "Yo prefiero utilizar el preservativo que sí que no tiene ningún efecto secundario que la píldora" (María, 24 años)
-
-Y a ellos se suman las creencias no basadas en la evidencia científica, como que pueden dañar los ovarios, [producir infertilidad](https://www.guttmacher.org/journals/ipsrh/2015/12/belief-family-planning-myths-individual-and-community-levels-and-modern)  o hasta dañar al miembro masculino. La clave, según Alieu Jammeh, Reproductive Health Commodity Security Coordinator de UNFPA en Gambia, es que haya variedad, que se expliquen bien sus efectos para evitar la mala fama no justificada de algunos métodos y que cada mujer pueda elegir el que mejor se adapte a ella. Esta barrera es la más importante en el global de países analizados. 
+Y a ellos se suman las creencias no basadas en la evidencia científica, como que pueden dañar los ovarios, [producir infertilidad](https://www.guttmacher.org/journals/ipsrh/2015/12/belief-family-planning-myths-individual-and-community-levels-and-modern)  o hasta dañar al miembro masculino. La clave, según Alieu Jammeh, Reproductive Health Commodity Security Coordinator de UNFPA en Gambia, es que haya variedad, que se expliquen bien sus efectos para evitar la mala fama no justificada de algunos métodos y que cada mujer pueda elegir el que mejor se adapte a ella. Esta barrera es la más importante en el global de países analizados y es la razón para no usar anticonceptivos de más de la mitad de las mujeres con necesidades en Haití. 
 
 Muchas mujeres aseguran que no usan anticonceptivos porque no tienen sexo de forma habitual, aunque en ocasiones responden -en la misma encuesta- que sí han tenido encuentros sexuales en el último mes. En algunos países, las mujeres solteras pueden no responder de forma sincera sobre su actividad sexual para evitar ser señaladas. Para muchas de ellas, en público, el sexo no existe y tampoco los métodos anticonceptivos.
 
@@ -230,9 +235,11 @@ La clave es quién toma esta decisión. Para Alieu Jammeh, de Naciones Unidas, e
 
 Aunque sus porcentajes son más bajos, la religión puede afectar también a la oposición de mujer y marido los casos anteriores. Y no es un problema intrínseco a una religión concreta; todas las mayoritarias imponen barreras. En los casos más ortodoxos, es el iman, el cura o el rabino quienes deciden si se usan, o no, métodos. Y hasta cuáles. [enlace al otro texto]
 
+> "Se sigue imponiendo la moral personal a la hora de atender a las usuarias", Patricia Ortega.
+
 La suegra, el padre, o hasta los servicios médicos o farmacéuticos, entre otros, pueden intervenir en la decisión de la mujer. La Red por lso derechos sexuales y reproductivos en México (Ddeser) realizó un monitoreo sobre cómo funcionaba los servicios de reparto de anticonceptivos con dos gobiernos distintos. Entrevistaron a responsables, médicos, funcionarios, usuarias... Y hasta acudieron a los centros como *clientas fantasma*. Encontraron centros en los que se niegan a dar condones a jóvenes y se acumulan allí hasta que caducan, o donde no dan la píldora a mujeres casadas, por poner solo dos ejemplos. 
 
-> "Se sigue imponiendo la moral personal a la hora de atender a las usuarias", Patricia Ortega.
+> "Pobreza no es solo la falta de dinero, o material, es también la falta del poder de tomar decisiones", argumenta Fanta Jatta, Women's Right Specialist at Action Aid International (declaración con foto? de Fanta Jatta).
 
 Cada vez es menos frecuente quienes responden que no conocen métodos o que no tienen acceso a ellos o cuestan demasiado, pero en el Oeste y el Centro de África estas razones "fueron nombradas por más de un 10% de las mujeres entrevistadas", según el estudio de Guttmacher. En México, Patricia Ortega (Ddser) asegura que en la universidad hay "personas que no saben ni usar un condón". (meter lo de GIRE) En Gambia, los anuncios en televisión promoviendo el uso de anticonceptivos fueron una revolución social hace unos años, no sin críticas por parte de los sectores católicos.
 
