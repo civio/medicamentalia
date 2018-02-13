@@ -65,6 +65,24 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
       ]
     },
     {
+      id: 'IUD'
+      text: 
+        es: 'DIU'
+        en: 'IUD'
+      labels: [
+        {
+          cx_factor: 0.84
+          cy_factor: 0.41
+          r: 0
+          textWidth: 80
+          textOffset: [12, 0]
+          label:
+            es: 'China'
+            en: 'China'
+        }
+      ]
+    },
+    {
       id: 'Pill'
       text: 
         es: 'píldora'
@@ -114,8 +132,8 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
         en: 'injectable'
       labels: [
         {
-          cx_factor: 0.616
-          cy_factor: 0.571
+          cx_factor: 0.62
+          cy_factor: 0.56
           r: 0
           textOffset: [15, 5]
           label:

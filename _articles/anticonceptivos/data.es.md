@@ -77,24 +77,27 @@ Pero su uso no es homogeneo ni entre países ni entre clases sociales. La [situa
     <p>La <strong>esterilización masculina</strong> tiene una implantación muchísimo menor y no alcanza porcentajes tan altos. Por ejemplo: un 25% de las mujeres en Reino Unido contestaron que es el método que usan sus parejas. Esta por detrás de la píldora y el condón.</p>
   </div>
   <div class="step" data-instance="1" data-step="3">
-    <p markdown="1">El <strong>DIU</strong> destaca en estados asiáticos, con Corea del Norte por encima de todos: es el método que usa el 95% de las mujeres que quiere controlar su natalidad. En China, durante la época en la que estuvo vigente la política de hijo único, las mujeres eran obligadas a ponerse uno tras su primer parto. Ahora, se [está ofreciendo](https://www.nytimes.com/2017/01/07/world/asia/after-one-child-policy-outrage-at-chinas-offer-to-remove-iuds.html) a retirarlos de forma gratuita. En el resto del mundo es mucho menos habitual. Algunos médicos [rechazan insertarlo](https://www.washingtonpost.com/national/health-science/why-do-some-doctors-refuse-to-give-women-iuds/2017/10/12/ee1e881e-a3c9-11e7-b14f-f41773cd5a14_story.html?utm_term=.6e3da2fb3930) por falsas creencias sobre su seguridad en mujeres que no han tenido hijos.</p>
+    <p markdown="1">El <strong>DIU</strong> destaca en estados asiáticos, con Corea del Norte por encima de todos: es el método que usa el 95% de las mujeres que quiere controlar su natalidad.</p>
   </div>
   <div class="step" data-instance="1" data-step="4">
-    <p>La <strong>píldora</strong>  es prioritaria, entre otras zonas, en el norte de África y buena parte de la Europa occidental, pero no en España.</p>
+    <p markdown="1">En China, durante la época en la que estuvo vigente la política de hijo único, las mujeres eran obligadas a ponerse el <strong>DIU</strong> tras su primer parto. Ahora, se [está ofreciendo](https://www.nytimes.com/2017/01/07/world/asia/after-one-child-policy-outrage-at-chinas-offer-to-remove-iuds.html) a retirarlos de forma gratuita. En el resto del mundo es mucho menos habitual. Algunos médicos [rechazan insertarlo](https://www.washingtonpost.com/national/health-science/why-do-some-doctors-refuse-to-give-women-iuds/2017/10/12/ee1e881e-a3c9-11e7-b14f-f41773cd5a14_story.html?utm_term=.6e3da2fb3930) por falsas creencias sobre su seguridad en mujeres que no han tenido hijos.</p>
   </div>
   <div class="step" data-instance="1" data-step="5">
-    <p>El <strong>preservativo masculino</strong> es uno de los métodos más habituales en países tan distintos como Botsuana (79%) y Canadá (64%), y en otros países entre mujeres no casadas que no tienen acceso a otros métodos más establecidos. Es el principal método elegido como anticonceptivo en España (38%).</p>
+    <p>La <strong>píldora</strong>  es prioritaria, entre otras zonas, en el norte de África y buena parte de la Europa occidental, pero no en España.</p>
   </div>
   <div class="step" data-instance="1" data-step="6">
-    <p>El método <strong>inyectable</strong>, también hormonal, es el favorito en África. Para muchas mujeres es la solución perfecta si deciden usar anticonceptivos sin que se enteren sus maridos si ellos están en contra. No se nota, es fácil de administrar -un pinchazo rápido cada uno tres o cinco meses- y no deja huella.</p>
+    <p>El <strong>preservativo masculino</strong> es uno de los métodos más habituales en países tan distintos como Botsuana (79%) y Canadá (64%), y en otros países entre mujeres no casadas que no tienen acceso a otros métodos más establecidos. Es el principal método elegido como anticonceptivo en España (38%).</p>
   </div>
   <div class="step" data-instance="1" data-step="7">
-    <p>Los <strong>métodos tradicionales</strong> van desde la marcha atrás al control del ciclo, pasando por prácticas locales vinculadas a la religión o la magia. Estos métodos, muy poco o nada fiables, son mayoritarios en la región de los Balcanes</p>
+    <p>El método <strong>inyectable</strong>, también hormonal, es el favorito en África. Para muchas mujeres es la solución perfecta si deciden usar anticonceptivos sin que se enteren sus maridos si ellos están en contra. No se nota, es fácil de administrar -un pinchazo rápido cada uno tres o cinco meses- y no deja huella.</p>
   </div>
   <div class="step" data-instance="1" data-step="8">
+    <p>Los <strong>métodos tradicionales</strong> van desde la marcha atrás al control del ciclo, pasando por prácticas locales vinculadas a la religión o la magia. Estos métodos, muy poco o nada fiables, son mayoritarios en la región de los Balcanes</p>
+  </div>
+  <div class="step" data-instance="1" data-step="9">
     <p>En Albania, por ejemplo, la marcha atrás es el principal método anticonceptivo para un 58% de mujeres.</p>
   </div>
-  <div class="step" data-instance="1" data-step="8"></div>
+  <div class="step" data-instance="1" data-step="10"></div>
 </div>
 </div>
 
