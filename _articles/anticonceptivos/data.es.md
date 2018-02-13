@@ -135,7 +135,7 @@ En Gambia, muchas mujeres usan un método que recibe diferentes nombres y que re
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Puede ser que no quieran tener ningún hijo o no quieran tener más. "Siete es suficiente", argumenta XXX, de Gambia. O que quieran espaciar los embarazos, por razones de salud, para poder cuidar de los hijos de forma escalonada o por organización personal. (decla gambiana que dice que se quedó embarazada al poco de tener a otro). Pero, aún así, no usan ningún método.  
+Puede ser que quieran espaciar los embarazos, por razones de salud, para poder cuidar de los hijos de forma escalonada o por organización personal. "Empecé a tomar anticonceptivos tras mi primer embarazo. Solo siete meses después volvía a estar embarazada. Entonces, cuando tuve a mi segundo hijo, decidí que no quería volver a pasar por la misma situación en mi tercer embarazo", cuenta XXX, de Gambia. O que, simplemente, no quieran tener ningún hijo o no quieran tener más. "Siete es suficiente", argumenta ahora XX, unos años después. Pero, aún así, no usan ningún método.  
 
 </div>
 </div>
@@ -192,6 +192,8 @@ Vamos a centrarnos en esos países en los que la situación es más complicada. 
 
 La mayoría de quienes responden que no usan anticonceptivos por razones de salud, miedo a los efectos secundarios o porque afecta a los procesos naturales del cuerpo han usado alguna vez un método, según el estudio de Guttmacher. Esto es, saben de lo que hablan: sangrado excesivo o menor, náuseas, cambios en el cuerpo -engordan, les crece vello-, falta de líbido, cambios de humor... la larga lista de efectos secundarios de los anticonceptivos hormonales no ayuda. 
 
+> [Fotico alemana]
+
 "En cuanto a los efectos secundarios, es necesario que haya mucho más progreso e investigación. Esto no es suficiente, sobre todo porque muchos de los métodos anticonceptivos se focalizan solo en la mujer, mientras para los hombres hay muy pocas oportunidades de ser activos en este sentido", argumenta Mirjam Beck, una alemana de 27 años. En 2016 [se frenó](http://cnnespanol.cnn.com/2016/10/31/inyeccion-anticonceptiva-masculina-es-altamente-efectiva-pero-tiene-efectos-secundarios/) el estudio de un anticonceptivo masculino por sus efectos secundarios, muy similares a los que sufren las mujeres en la actualidad. 
 
 <div class="container-right">
@@ -201,11 +203,13 @@ La mayoría de quienes responden que no usan anticonceptivos por razones de salu
   </div>
 </div>
 
-> [Fotico?] "Yo prefiero utilizar el preservativo, que que no tiene ningún efecto secundario, que la píldora" (María, 24 años)
+Y a ellos se suman las creencias no basadas en la evidencia científica, como que pueden dañar los ovarios, [producir infertilidad](https://www.guttmacher.org/journals/ipsrh/2015/12/belief-family-planning-myths-individual-and-community-levels-and-modern) o hasta dañar al miembro masculino. 
 
-Y a ellos se suman las creencias no basadas en la evidencia científica, como que pueden dañar los ovarios, [producir infertilidad](https://www.guttmacher.org/journals/ipsrh/2015/12/belief-family-planning-myths-individual-and-community-levels-and-modern)  o hasta dañar al miembro masculino. La clave, según Alieu Jammeh, Reproductive Health Commodity Security Coordinator de UNFPA en Gambia, es que haya variedad, que se expliquen bien sus efectos para evitar la mala fama no justificada de algunos métodos y que cada mujer pueda elegir el que mejor se adapte a ella. Esta barrera es la más importante en el global de países analizados y es la razón para no usar anticonceptivos de más de la mitad de las mujeres con necesidades en Haití. 
+> (en fotos de Marie Stopes). En X, a una media hora de Dakar, decenas de mujeres, la mayoría con niños en los brazos, esperan con los pies en la arena y bajo un toldo que les protege del sol, al ritmo de una música bien animada, que arranque el espectáculo. El imam también está presente. Se preparan condones, todo el mundo se coloca, el DJ baja la música y Coumba Dieng, de la organización Marie Stopes, empieza su clase práctica sobre anticonceptivos. Explica uno a uno los métodos, con ellos en la mano y un entusiasmo que aúna la firmeza de una arenga política y el choteo de un padrino de bodas. La principal barrera para convencerlas del uso de métodos anticonceptivos son "los rumores, sobre todo los rumores", admite la maestra de ceremonias de esta particular clase práctica en las afueras.  
 
-Muchas mujeres aseguran que no usan anticonceptivos porque no tienen sexo de forma habitual, aunque en ocasiones responden -en la misma encuesta- que sí han tenido encuentros sexuales en el último mes. En algunos países, las mujeres solteras pueden no responder de forma sincera sobre su actividad sexual para evitar ser señaladas. Para muchas de ellas, en público, el sexo no existe y tampoco los métodos anticonceptivos.
+La clave, según Alieu Jammeh, que trabaja en la UNFPA en Gambia, es que haya variedad, que se expliquen bien sus efectos para evitar la mala fama no justificada de algunos métodos y que cada mujer pueda elegir el que mejor se adapte a ella. Esta barrera es la más importante en el global de países analizados y es la razón para no usar anticonceptivos de más de la mitad de las mujeres con necesidades en Haití. 
+
+Muchas mujeres aseguran que no usan anticonceptivos porque **no tienen sexo de forma habitual**, aunque en ocasiones responden -en la misma encuesta- que sí han tenido encuentros sexuales en el último mes. La sensación de riesgo, en muchos casos, es menor que la real. En algunos países, las mujeres solteras pueden no responder de forma sincera sobre su actividad sexual para evitar ser señaladas. Para muchas de ellas, en público, el sexo no existe y tampoco los métodos anticonceptivos.
 
 <div class="container-right">
   <div class="graph-container">
@@ -214,42 +218,49 @@ Muchas mujeres aseguran que no usan anticonceptivos porque no tienen sexo de for
   </div>
 </div>
 
-
-Al contrario de lo que ocurre con las barreras relacionadas con la salud de la mujer -los efectos secundarios que conllevan algunos métodos anticonceptivos hormonales, por ejemplo-, esta razón no es reactiva, sino cultural. La mayoría de quienes nombran esta barrera como principal no han usado nunca un método, según el estudio de Guttmacher. Alguien, ya sea la propia mujer, el marido u otros, está en contra de su uso. Pero, ¿quién y por qué?
+Al contrario de lo que ocurre con las barreras relacionadas con la salud de la mujer -los efectos secundarios que conllevan algunos métodos anticonceptivos hormonales, por ejemplo-, esta razón no es reactiva, sino cultural. Es mayoritaria en países como Timor Oriental, Albania y Gambia. La mayoría de quienes nombran esta barrera como principal no han usado nunca un método, según el estudio de Guttmacher. Alguien, ya sea la propia mujer, el marido u otros, está en contra de su uso. Pero, ¿quién y por qué?
 
 En la mayoría de casos, es la propia mujer entrevistada quien asegura oponerse. Teniendo en cuenta que solo analizamos las respuestas de aquellas que tienen necesidades no cubiertas -es decir, que no quieren tener más hijos pero pese a eso no usan ningún método anticonceptivo-, todo apunta a que su negativa puede ser de muchos tipos -por razones culturales, sociales, religiosas...
+
+Aunque sus porcentajes son más bajos, la religión puede afectar también a la oposición de mujer y marido los casos anteriores. Y no es un problema intrínseco a una religión concreta; todas las mayoritarias imponen barreras. En los casos más ortodoxos, es el iman, el cura o el rabino quienes deciden si se usan, o no, métodos. Y hasta cuáles. [enlace al otro texto]
 
 <div class="panel" markdown="1">
 
 ##### Oposición del marido o la pareja
 
-Según Fanta Jatta, de Action Aid International, en Gambia "muchas mujeres no toman decisiones independientes, se toman en su nombre". Ha conocido casos de mujeres maltratadas por sus maridos cuando descubrían que estaban tomando la píldora, y de otras obligadas a quedarse embarazadas cuando era un peligro para su salud. Momodou Njie, de la Family Planning Association en Gambia, cuenta historias de mujeres que acuden a la clínica a escondidas y dejan la cartilla allí por miedo a ser descubiertas. Para él, "la mayoría de las decisiones las toman los hombres, pero en algunos casos lo hace la mujer porque quiere salvar su vida".
+Según Fanta Jatta, de Action Aid International, en Gambia "muchas mujeres no toman decisiones independientes, se toman en su nombre". Ha conocido casos de mujeres maltratadas por sus maridos cuando descubrían que estaban tomando la píldora, y de otras obligadas a quedarse embarazadas cuando era un peligro para su salud. Momodou Njie, de la Family Planning Association en el país africano, cuenta historias de mujeres que acuden a la clínica a escondidas y dejan la cartilla allí por miedo a ser descubiertas. Para él, "la mayoría de las decisiones las toman los hombres, pero en algunos casos lo hace la mujer porque quiere salvar su vida".
 
 <div class="graph-container">
   <p>Oposición del marido o la pareja</p>
   <div id="contraceptives-reasons-opposed-husband"></div>
 </div>
 
+En Albania, país en la que la marcha atrás tiene un porcentaje más alto de uso, es también en el que la oposición del marido supone la principal barrera al acceso. Le siguen Timor Oriental, Mali, Senegal y Afganistán. 
+
 La clave es quién toma esta decisión. Para Alieu Jammeh, de Naciones Unidas, es importante involucrar a los hombres en la decisión para "minimizar la fricción" en el matrimonio. Pero, más allá de eso, "es derecho de la mujer tomarlo si quiere".
 </div>
 
-Aunque sus porcentajes son más bajos, la religión puede afectar también a la oposición de mujer y marido los casos anteriores. Y no es un problema intrínseco a una religión concreta; todas las mayoritarias imponen barreras. En los casos más ortodoxos, es el iman, el cura o el rabino quienes deciden si se usan, o no, métodos. Y hasta cuáles. [enlace al otro texto]
-
 > "Se sigue imponiendo la moral personal a la hora de atender a las usuarias", Patricia Ortega.
 
-La suegra, el padre, o hasta los servicios médicos o farmacéuticos, entre otros, pueden intervenir en la decisión de la mujer. La Red por lso derechos sexuales y reproductivos en México (Ddeser) realizó un monitoreo sobre cómo funcionaba los servicios de reparto de anticonceptivos con dos gobiernos distintos. Entrevistaron a responsables, médicos, funcionarios, usuarias... Y hasta acudieron a los centros como *clientas fantasma*. Encontraron centros en los que se niegan a dar condones a jóvenes y se acumulan allí hasta que caducan, o donde no dan la píldora a mujeres casadas, por poner solo dos ejemplos. 
+La suegra, el padre, o hasta los servicios médicos o farmacéuticos, entre otros, pueden intervenir en la decisión de la mujer. La Red por los derechos sexuales y reproductivos en México (Ddeser) realizó un monitoreo sobre cómo funcionaba los servicios de reparto de anticonceptivos con dos gobiernos distintos. Entrevistaron a responsables, médicos, funcionarios, usuarias... Y hasta acudieron a los centros como *clientas fantasma*. Encontraron clínicas en las que se niegan a dar condones a jóvenes y se acumulan allí "hasta que caducan", denuncia Patricia Ortega; o donde no dan la píldora a mujeres casadas, por poner solo dos ejemplos. 
 
 > "Pobreza no es solo la falta de dinero, o material, es también la falta del poder de tomar decisiones", argumenta Fanta Jatta, Women's Right Specialist at Action Aid International (declaración con foto? de Fanta Jatta).
 
-Cada vez es menos frecuente quienes responden que no conocen métodos o que no tienen acceso a ellos o cuestan demasiado, pero en el Oeste y el Centro de África estas razones "fueron nombradas por más de un 10% de las mujeres entrevistadas", según el estudio de Guttmacher. En México, Patricia Ortega (Ddser) asegura que en la universidad hay "personas que no saben ni usar un condón". (meter lo de GIRE) En Gambia, los anuncios en televisión promoviendo el uso de anticonceptivos fueron una revolución social hace unos años, no sin críticas por parte de los sectores católicos.
+Cada vez es menos frecuente quienes responden que no conocen métodos o que no tienen acceso a ellos o cuestan demasiado, pero en el Oeste y el Centro de África estas razones "fueron nombradas por más de un 10% de las mujeres entrevistadas", según el estudio de Guttmacher. En México, Patricia Ortega asegura que en la universidad **hay "personas que no saben ni usar un condón"**. Ante la pregunta sobre cuántas veces se puede usar un mismo preservativo, un 15,5% de los participantes en la Encuesta Nacional de Salud y Nutrición mexicana [respondieron de forma incorrecta](http://informe2015.gire.org.mx/#/acceso-anticonceptivos).
+
+En Gambia, los anuncios en televisión promoviendo el uso de anticonceptivos fueron una revolución social hace ya muchos años, no sin críticas por parte de los sectores católicos.
 
 En Europa hace tiempo que escasean las campañas de promoción de los anticonceptivos -excepto si las paga Durex-, y cada vez se invierte más en fomento de la natalidad, ya sea a través de una [campaña](https://elpais.com/internacional/2017/11/10/actualidad/1510327993_647673.html) del Gobierno polaco para animar a sus ciudadanos a tener sexo o con las [campañas anuales del gobierno gallego](https://civio.es/el-boe-nuestro-de-cada-dia/2013/07/29/galicia-licita-por-640-000-euros-una-campana-para-animar-a-sus-ciudadanos-a-tener-hijos/) en las que se apela a la “necesaria responsabilidad compartida” para traer más niños al mundo.
+
+
+> Carrusel pocalos, Feijoo y otros - pantallazos
+
 
 Y, ¿qué significa que haya necesidades no cubiertas? Que el derecho a planificar la reproducción propia no se cumple. Según la [OMS](http://www.who.int/mediacentre/factsheets/fs351/en/), la planificación familiar reduce los abortos, especialmente los inseguros; refuerza el derecho para determinar el número y el tiempo para tener hijos y previene muertes de madres e hijos.
 
 830 mujeres mueren cada día por causas relacionadas con el embarazo y el parto. Casi todas ellas suceden en países en desarrollo. [Fuente](http://www.who.int/maternal-health/en/). De hecho, la OMS estima que más de un tercio de esas muertes, [en 2015](http://www.who.int/reproductivehealth/publications/monitoring/maternal-mortality-2015/en/), se produjeron en Nigeria y La India. O, dicho de otra forma: si vives en una región desarrollada tienes una posibilidad entre 4.900 de morir en el parto; si vives en regiones en desarrollo, una entre 150.
 
-Es una cuestión de salud pública, pero sobre todo de derechos. El de elegir de forma libre si una mujer quiere tener hijos, cómo y cuándo.
+Es una cuestión de salud pública, pero también de derechos. El de elegir de forma libre si se quiere tener hijos, cómo y cuándo.
 </div>
 </div>
 
