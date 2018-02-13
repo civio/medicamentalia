@@ -160,7 +160,7 @@ Puede ser que quieran espaciar los embarazos, por razones de salud, para poder c
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-instance="3" data-step="0">
-    <p>Ese problema, las <strong>necesidades no cubiertas</strong>, es mayor en algunos países del mundo que en otros. Apenas es relevante en China, mientras en Samoa alcanza el 43%. </p>
+    <p>Ese problema, las <strong>necesidades no cubiertas</strong>, es mayor en algunos países del mundo que en otros. Apenas es relevante en China, mientras en Angola supera el 36%.</p>
   </div>
   <div class="step" data-instance="3" data-step="1">
     <p>Pero, si distribuimos los países en base a su nivel de renta...</p>
@@ -190,11 +190,9 @@ Así, el porcentaje de mujeres con necesidades no cubiertas de los países menos
 
 Vamos a centrarnos en esos países en los que la situación es más complicada. ¿Qué barreras impiden a las mujeres el acceso a los anticonceptivos?. Según el estudio *[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)*, del Guttmacher Institute, que analizó 52 países, las principales son **los efectos secundarios, la poca frecuencia sexual, y la oposición (ya sea propia o impuesta)**. 
 
-La mayoría de quienes responden que no usan anticonceptivos por razones de salud, miedo a los efectos secundarios o porque afecta a los procesos naturales del cuerpo han usado alguna vez un método, según el estudio de Guttmacher. Esto es, saben de lo que hablan: sangrado excesivo o menor, náuseas, cambios en el cuerpo -engordan, les crece vello-, falta de líbido, cambios de humor... la larga lista de efectos secundarios de los anticonceptivos hormonales no ayuda. 
-
 > [Fotico alemana]
 
-"En cuanto a los efectos secundarios, es necesario que haya mucho más progreso e investigación. Esto no es suficiente, sobre todo porque muchos de los métodos anticonceptivos se focalizan solo en la mujer, mientras para los hombres hay muy pocas oportunidades de ser activos en este sentido", argumenta Mirjam Beck, una alemana de 27 años. En 2016 [se frenó](http://cnnespanol.cnn.com/2016/10/31/inyeccion-anticonceptiva-masculina-es-altamente-efectiva-pero-tiene-efectos-secundarios/) el estudio de un anticonceptivo masculino por sus efectos secundarios, muy similares a los que sufren las mujeres en la actualidad. 
+La mayoría de quienes responden que no usan anticonceptivos por razones de salud, miedo a los efectos secundarios o porque afecta a los procesos naturales del cuerpo han usado alguna vez un método, según el estudio de Guttmacher. Esto es, saben de lo que hablan: sangrado excesivo o menor, náuseas, cambios en el cuerpo -engordan, les crece vello-, falta de líbido, cambios de humor... la larga lista de efectos secundarios de los anticonceptivos hormonales no ayuda. 
 
 <div class="container-right">
   <div class="graph-container">
@@ -203,9 +201,17 @@ La mayoría de quienes responden que no usan anticonceptivos por razones de salu
   </div>
 </div>
 
+"En cuanto a los efectos secundarios, es necesario que haya mucho más progreso e investigación. Esto no es suficiente, sobre todo porque muchos de los métodos anticonceptivos se focalizan solo en la mujer, mientras para los hombres hay muy pocas oportunidades de ser activos en este sentido", argumenta Mirjam Beck, una alemana de 27 años. En 2016 [se frenó](http://cnnespanol.cnn.com/2016/10/31/inyeccion-anticonceptiva-masculina-es-altamente-efectiva-pero-tiene-efectos-secundarios/) el estudio de un anticonceptivo masculino por sus efectos secundarios, muy similares a los que sufren las mujeres en la actualidad. 
+
 Y a ellos se suman las creencias no basadas en la evidencia científica, como que pueden dañar los ovarios, [producir infertilidad](https://www.guttmacher.org/journals/ipsrh/2015/12/belief-family-planning-myths-individual-and-community-levels-and-modern) o hasta dañar al miembro masculino. 
 
-> (en fotos de Marie Stopes). En X, a una media hora de Dakar, decenas de mujeres, la mayoría con niños en los brazos, esperan con los pies en la arena y bajo un toldo que les protege del sol, al ritmo de una música bien animada, que arranque el espectáculo. El imam también está presente. Se preparan condones, todo el mundo se coloca, el DJ baja la música y Coumba Dieng, de la organización Marie Stopes, empieza su clase práctica sobre anticonceptivos. Explica uno a uno los métodos, con ellos en la mano y un entusiasmo que aúna la firmeza de una arenga política y el choteo de un padrino de bodas. La principal barrera para convencerlas del uso de métodos anticonceptivos son "los rumores, sobre todo los rumores", admite la maestra de ceremonias de esta particular clase práctica en las afueras.  
+<div class="panel" markdown="1">
+#### Un título
+
+(en fotos de Marie Stopes)
+
+En X, a una media hora de Dakar, decenas de mujeres, la mayoría con niños en los brazos, esperan con los pies en la arena y bajo un toldo que les protege del sol, al ritmo de una música bien animada, que arranque el espectáculo. El imam también está presente. Se preparan condones, todo el mundo se coloca, el DJ baja la música y Coumba Dieng, de la organización Marie Stopes, empieza su clase práctica sobre anticonceptivos. Explica uno a uno los métodos, con ellos en la mano y un entusiasmo que aúna la firmeza de una arenga política y el choteo de un padrino de bodas. La principal barrera para convencerlas del uso de métodos anticonceptivos son "los rumores, sobre todo los rumores", admite la maestra de ceremonias de esta particular clase práctica en las afueras.
+</div>
 
 La clave, según Alieu Jammeh, que trabaja en la UNFPA en Gambia, es que haya variedad, que se expliquen bien sus efectos para evitar la mala fama no justificada de algunos métodos y que cada mujer pueda elegir el que mejor se adapte a ella. Esta barrera es la más importante en el global de países analizados y es la razón para no usar anticonceptivos de más de la mitad de las mujeres con necesidades en Haití. 
 
@@ -228,12 +234,11 @@ Aunque sus porcentajes son más bajos, la religión puede afectar también a la 
 
 ##### Oposición del marido o la pareja
 
-Según Fanta Jatta, de Action Aid International, en Gambia "muchas mujeres no toman decisiones independientes, se toman en su nombre". Ha conocido casos de mujeres maltratadas por sus maridos cuando descubrían que estaban tomando la píldora, y de otras obligadas a quedarse embarazadas cuando era un peligro para su salud. Momodou Njie, de la Family Planning Association en el país africano, cuenta historias de mujeres que acuden a la clínica a escondidas y dejan la cartilla allí por miedo a ser descubiertas. Para él, "la mayoría de las decisiones las toman los hombres, pero en algunos casos lo hace la mujer porque quiere salvar su vida".
-
 <div class="graph-container">
-  <p>Oposición del marido o la pareja</p>
   <div id="contraceptives-reasons-opposed-husband"></div>
 </div>
+
+Según Fanta Jatta, de Action Aid International, en Gambia "muchas mujeres no toman decisiones independientes, se toman en su nombre". Ha conocido casos de mujeres maltratadas por sus maridos cuando descubrían que estaban tomando la píldora, y de otras obligadas a quedarse embarazadas cuando era un peligro para su salud. Momodou Njie, de la Family Planning Association en el país africano, cuenta historias de mujeres que acuden a la clínica a escondidas y dejan la cartilla allí por miedo a ser descubiertas. Para él, "la mayoría de las decisiones las toman los hombres, pero en algunos casos lo hace la mujer porque quiere salvar su vida".
 
 En Albania, país en la que la marcha atrás tiene un porcentaje más alto de uso, es también en el que la oposición del marido supone la principal barrera al acceso. Le siguen Timor Oriental, Mali, Senegal y Afganistán. 
 
