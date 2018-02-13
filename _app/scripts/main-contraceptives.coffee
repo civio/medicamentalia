@@ -491,6 +491,7 @@
   # Contraceptives App
   # -------------------
 
+  ###
   setupMaternalMortality = ->
     dataIndex = [0..4999]
     mortalityGraph = d3.select('#maternal-mortality-developed')
@@ -519,7 +520,7 @@
       #mortalityGraph.style 'margin-top', (($('body').height()-mortalityGraph.node().offsetHeight)*.5)+'px'
     window.addEventListener 'resize', resizeHandler
     resizeHandler()
-
+  ###
 
   # Setup
   # ---------------
@@ -584,7 +585,7 @@
       if $('#contraceptives-app').length
         setupContraceptivesApp data_use, data_unmetneeds, data_reasons
 
-      if $('#maternal-mortality-developed').length
-        setupMaternalMortality()
+      #if $('#maternal-mortality-developed').length
+      #  setupMaternalMortality()
 
 ) jQuery
