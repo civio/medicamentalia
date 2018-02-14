@@ -274,9 +274,9 @@ En Europa hace tiempo que escasean las campañas de promoción de los anticoncep
 
 Y, ¿qué significa que haya necesidades no cubiertas? Que el derecho a planificar la reproducción propia no se cumple. Según la [OMS](http://www.who.int/mediacentre/factsheets/fs351/en/), la planificación familiar reduce los abortos, especialmente los inseguros; refuerza el derecho para determinar el número y el tiempo para tener hijos y previene muertes de madres e hijos.
 
-En 2012, [85 millones de embarazos en todo el mundo](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4727534/) no fueron intencionados. Se trata del 40% del total y muchos de ellos acaban en aborto -natural o voluntario. 
+En 2012, [85 millones de embarazos en todo el mundo](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4727534/) no fueron intencionados. Se trata del 40% del total y muchos de ellos acaban en aborto -natural o voluntario. Más datos: se [estima](http://www.who.int/mediacentre/factsheets/fs388/en/) que se realizan 25 millones de abortos inseguros al año, la mayoría de ellos en países en desarrollo. Con el riesgo que eso conlleva.
 
-830 mujeres mueren cada día por causas relacionadas con el embarazo y el parto. Casi todas ellas suceden en países en desarrollo. [Fuente](http://www.who.int/maternal-health/en/). De hecho, la OMS estima que más de un tercio de esas muertes, [en 2015](http://www.who.int/reproductivehealth/publications/monitoring/maternal-mortality-2015/en/), se produjeron en Nigeria y La India. O, dicho de otra forma: si vives en una región desarrollada tienes una posibilidad entre 4.900 de morir en el parto; si vives en regiones en desarrollo, una entre 150.
+Y más: 830 mujeres mueren cada día por causas relacionadas con el embarazo y el parto. Casi todas ellas suceden en países en desarrollo. [Fuente](http://www.who.int/maternal-health/en/). De hecho, la OMS estima que más de un tercio de esas muertes, [en 2015](http://www.who.int/reproductivehealth/publications/monitoring/maternal-mortality-2015/en/), se produjeron en Nigeria y La India. O, dicho de otra forma: si vives en una región desarrollada tienes una posibilidad entre 4.900 de morir en el parto; si vives en regiones en desarrollo, una entre 150.
 
 Es una cuestión de salud pública, pero también de derechos. El de elegir de forma libre si se quiere tener hijos, cómo y cuándo.
 </div>
