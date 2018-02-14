@@ -209,7 +209,7 @@ La mayoría de quienes responden que no usan anticonceptivos por razones de salu
 Y a ellos se suman las creencias no basadas en la evidencia científica, como que pueden dañar los ovarios, [producir infertilidad](https://www.guttmacher.org/journals/ipsrh/2015/12/belief-family-planning-myths-individual-and-community-levels-and-modern) o hasta dañar al miembro masculino. 
 
 <div class="panel" markdown="1">
-#### Un título
+##### Un título
 
 (en fotos de Marie Stopes)
 
@@ -248,11 +248,14 @@ En Albania, país en la que la marcha atrás tiene un porcentaje más alto de us
 La clave es quién toma esta decisión. Para Alieu Jammeh, de Naciones Unidas, es importante involucrar a los hombres en la decisión para "minimizar la fricción" en el matrimonio. Pero, más allá de eso, "es derecho de la mujer tomarlo si quiere".
 </div>
 
-> "Se sigue imponiendo la moral personal a la hora de atender a las usuarias", Patricia Ortega.
+> Se sigue imponiendo la moral personal a la hora de atender a las usuarias
+> <footer>Patricia Ortega</footer>
 
 La suegra, el padre, o hasta los servicios médicos o farmacéuticos, entre otros, pueden intervenir en la decisión de la mujer. La Red por los derechos sexuales y reproductivos en México (Ddeser) realizó un monitoreo sobre cómo funcionaba los servicios de reparto de anticonceptivos con dos gobiernos distintos. Entrevistaron a responsables, médicos, funcionarios, usuarias... Y hasta acudieron a los centros como *clientas fantasma*. Encontraron clínicas en las que se niegan a dar condones a jóvenes y se acumulan allí "hasta que caducan", denuncia Patricia Ortega; o donde no dan la píldora a mujeres casadas, por poner solo dos ejemplos. 
 
-> "Pobreza no es solo la falta de dinero, o material, es también la falta del poder de tomar decisiones", argumenta Fanta Jatta, Women's Right Specialist at Action Aid International (declaración con foto? de Fanta Jatta).
+> Pobreza no es solo la falta de dinero, o material, es también la falta del poder de tomar decisiones
+> <footer>Fanta Jatta, Women's Right Specialist at Action Aid International</footer>
+{: .center}
 
 Cada vez es menos frecuente quienes responden que no conocen métodos o que no tienen acceso a ellos o cuestan demasiado, pero en el Oeste y el Centro de África estas razones "fueron nombradas por más de un 10% de las mujeres entrevistadas", según el estudio de Guttmacher. En México, Patricia Ortega asegura que en la universidad **hay "personas que no saben ni usar un condón"**. Ante la pregunta sobre cuántas veces se puede usar un mismo preservativo, un 15,5% de los participantes en la Encuesta Nacional de Salud y Nutrición mexicana [respondieron de forma incorrecta](http://informe2015.gire.org.mx/#/acceso-anticonceptivos).
 
