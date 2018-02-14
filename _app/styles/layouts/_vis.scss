@@ -2755,3 +2755,45 @@ body.guatemala-graph {
 .reasons-graphs .graph-container .bar-horizontal-graph .axis{
   top: 22px;
 }
+
+
+.page-content .blockquote-image{
+  position: relative;
+
+  blockquote{
+    color: $brand-primary;
+    position: absolute;
+    margin: -4rem 15% 0;
+    width: auto !important;
+    top: 50%;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    z-index: 30;
+
+    > p{
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    footer{
+      font-size: 1em;
+      //font-weight: 600;
+    }
+  }
+
+  figure{
+    position: relative;
+    z-index: 20;
+
+    &:before{
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      opacity: .35;
+    }
+  }
+}

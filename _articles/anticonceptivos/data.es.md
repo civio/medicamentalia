@@ -20,9 +20,17 @@ Babatunde Osotimehin falleció el pasado mes de julio. Años antes, cuando era d
 
 Un derecho que se daña cada vez que una niña se queda embarazada, cada vez que a una mujer se le acusa de promiscua, o hasta de prostituta, por usar algún método, cada vez que es obligada a tener hijos no deseados, cada vez que se ve obligada a abortar en condiciones insalubres, cada vez que alguien le dice lo que tiene que hacer o le vetó el acceso, aunque sea ella la que cargue, en muchos países, con las consecuencias de ese decisión, cada vez que un nuevo parto pone su salud al límite o la mata. Esta no es una lista de ejemplos teóricos, son historias reales recopiladas durante esta investigación, destinada a conocer cómo se ejerce este derecho universal y a qué barreras se enfrentan las mujeres para hacerlo. 
 
-{% include caption.html img="contraceptives/fanta-jatta.jpg" caption="Fanta Jatta" align="alignright" %}
-
 Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la sede de la organización Action Aid International, en Gambia, donde dirige el programa de derechos de las mujeres. Para ella, además de los problemas de salud -para madres y niños- que provocan la falta de acceso a los anticonceptivos, hay algo más, algo elemental: quién decide y cómo. La capacidad de decisión libre para ejercer este derecho. 
+
+<div class="blockquote-image">
+<blockquote class="center">
+  <p>Necesitamos entender cómo funcionan nuestros cuerpos y poder tomar nuestras propias decisiones.</p>
+  <footer>Fanta Jatta</footer>
+</blockquote>
+<figure class="wp-caption">
+  <img src="{{ site.assetsurl }}/images/contraceptives/fanta-jatta.jpg" alt="Fanta Jatta">
+</figure>
+</div>
 
 #### Usos
 </div>
@@ -80,7 +88,7 @@ Pero su uso no es homogeneo ni entre países ni entre clases sociales. La [situa
     <p markdown="1">El <strong>DIU</strong> destaca en estados asiáticos, con Corea del Norte por encima de todos: es el método que usa el 95% de las mujeres que quiere controlar su natalidad.</p>
   </div>
   <div class="step" data-instance="1" data-step="4">
-    <p markdown="1">En China, durante la época en la que estuvo vigente la política de hijo único, las mujeres eran obligadas a ponerse el <strong>DIU</strong> tras su primer parto. Ahora, se [está ofreciendo](https://www.nytimes.com/2017/01/07/world/asia/after-one-child-policy-outrage-at-chinas-offer-to-remove-iuds.html) a retirarlos de forma gratuita. En el resto del mundo es mucho menos habitual. Algunos médicos [rechazan insertarlo](https://www.washingtonpost.com/national/health-science/why-do-some-doctors-refuse-to-give-women-iuds/2017/10/12/ee1e881e-a3c9-11e7-b14f-f41773cd5a14_story.html?utm_term=.6e3da2fb3930) por falsas creencias sobre su seguridad en mujeres que no han tenido hijos.</p>
+    <p markdown="1">En China, donde el X% usa el <strong>DIU</strong>, durante la época en la que estuvo vigente la política de hijo único, el gobierno obligaba a las mujeres a usarlo tras su primer parto. Ahora, se [está ofreciendo](https://www.nytimes.com/2017/01/07/world/asia/after-one-child-policy-outrage-at-chinas-offer-to-remove-iuds.html) a retirarlos de forma gratuita. En el resto del mundo es mucho menos habitual. Algunos médicos [rechazan insertarlo](https://www.washingtonpost.com/national/health-science/why-do-some-doctors-refuse-to-give-women-iuds/2017/10/12/ee1e881e-a3c9-11e7-b14f-f41773cd5a14_story.html?utm_term=.6e3da2fb3930) por falsas creencias sobre su seguridad en mujeres que no han tenido hijos.</p>
   </div>
   <div class="step" data-instance="1" data-step="5">
     <p>La <strong>píldora</strong>  es prioritaria, entre otras zonas, en el norte de África y buena parte de la Europa occidental, pero no en España.</p>
@@ -223,10 +231,10 @@ Muchas mujeres aseguran que no usan anticonceptivos porque **no tienen sexo de f
   <div class="graph-container">
     <p class="graph-container-caption">Oposición</p>
     <ul id="contraceptives-reasons-opposed-legend">
-      <li class="respondent-opposed">Oposición personal</li>
-      <li class="husband-partner-opposed">Oposición del marido o la pareja</li>
-      <li class="religious-prohibition">Oposición religiosa</li>
-      <li class="others-opposed">Otras oposiciones</li>
+      <li class="respondent-opposed">De la mujer</li>
+      <li class="husband-partner-opposed">De la pareja</li>
+      <li class="religious-prohibition">Religiosa</li>
+      <li class="others-opposed">Otras</li>
     </ul>
     <div id="contraceptives-reasons-opposed"></div>
   </div>
@@ -241,10 +249,6 @@ Aunque sus porcentajes son más bajos, la religión puede afectar también a la 
 <div class="panel" markdown="1">
 
 ##### Oposición del marido o la pareja
-
-<div class="graph-container">
-  <div id="contraceptives-reasons-opposed-husband"></div>
-</div>
 
 Según Fanta Jatta, de Action Aid International, en Gambia "muchas mujeres no toman decisiones independientes, se toman en su nombre". Ha conocido casos de mujeres maltratadas por sus maridos cuando descubrían que estaban tomando la píldora, y de otras obligadas a quedarse embarazadas cuando era un peligro para su salud. Momodou Njie, de la Family Planning Association en el país africano, cuenta historias de mujeres que acuden a la clínica a escondidas y dejan la cartilla allí por miedo a ser descubiertas. Para él, "la mayoría de las decisiones las toman los hombres, pero en algunos casos lo hace la mujer porque quiere salvar su vida".
 
@@ -266,11 +270,9 @@ Cada vez es menos frecuente quienes responden que no conocen métodos o que no t
 
 En Gambia, los anuncios en televisión promoviendo el uso de anticonceptivos fueron una revolución social hace ya muchos años, no sin críticas por parte de los sectores católicos.
 
-En Europa hace tiempo que escasean las campañas de promoción de los anticonceptivos -[excepto si las paga Durex](https://www.youtube.com/watch?v=KR4A-c23rsE)-, y cada vez se invierte más en fomento de la natalidad, ya sea a través de una [campaña](https://elpais.com/internacional/2017/11/10/actualidad/1510327993_647673.html) del Gobierno polaco para animar a sus ciudadanos a tener sexo o con las [campañas anuales del gobierno gallego](https://civio.es/el-boe-nuestro-de-cada-dia/2013/07/29/galicia-licita-por-640-000-euros-una-campana-para-animar-a-sus-ciudadanos-a-tener-hijos/) en las que se apela a la “necesaria responsabilidad compartida” para traer más niños al mundo.
-
-
 > Carrusel pocalos, Feijoo y otros - pantallazos
 
+En Europa hace tiempo que escasean las campañas de promoción de los anticonceptivos -[excepto si las paga Durex](https://www.youtube.com/watch?v=KR4A-c23rsE)-, y cada vez se invierte más en fomento de la natalidad, ya sea a través de una [campaña](https://elpais.com/internacional/2017/11/10/actualidad/1510327993_647673.html) del Gobierno polaco para animar a sus ciudadanos a tener sexo o con las [campañas anuales del gobierno gallego](https://civio.es/el-boe-nuestro-de-cada-dia/2013/07/29/galicia-licita-por-640-000-euros-una-campana-para-animar-a-sus-ciudadanos-a-tener-hijos/) en las que se apela a la “necesaria responsabilidad compartida” para traer más niños al mundo.
 
 Y, ¿qué significa que haya necesidades no cubiertas? Que el derecho a planificar la reproducción propia no se cumple. Según la [OMS](http://www.who.int/mediacentre/factsheets/fs351/en/), la planificación familiar reduce los abortos, especialmente los inseguros; refuerza el derecho para determinar el número y el tiempo para tener hijos y previene muertes de madres e hijos.
 
