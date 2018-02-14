@@ -138,7 +138,8 @@ En Gambia, muchas mujeres usan un método que recibe diferentes nombres y que re
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Puede ser que quieran espaciar los embarazos, por razones de salud, para poder cuidar de los hijos de forma escalonada o por organización personal. "Empecé a tomar anticonceptivos tras mi primer embarazo. Solo siete meses después volvía a estar embarazada. Entonces, cuando tuve a mi segundo hijo, decidí que no quería volver a pasar por la misma situación en mi tercer embarazo", cuenta XXX, de Gambia. O que, simplemente, no quieran tener ningún hijo o no quieran tener más. "Siete es suficiente", argumenta ahora XX, unos años después. Pero, aún así, no usan ningún método.  
+Puede ser que quieran espaciar los embarazos, por razones de salud, para poder cuidar de los hijos de forma escalonada o por organización personal. "Empecé a tomar anticonceptivos tras mi primer embarazo. Solo siete meses después volvía a estar embarazada. Entonces, cuando tuve a mi segundo hijo, decidí que no quería volver a pasar por la misma situación en mi tercer embarazo", cuenta Jarra Joof, de Gambia. O que, simplemente, no quieran tener ningún hijo o no quieran tener más. "Siete es suficiente", argumenta ahora, tiempo después de esos primeros partos, con 42 años. Las razones son muchas, pero las mujeres con necesidades no cubiertas tienen algo en común: han decidido no quedarse embarazadas pero, aún así, no usan ningún método.  
+
 
 </div>
 </div>
@@ -268,6 +269,8 @@ En Europa hace tiempo que escasean las campañas de promoción de los anticoncep
 
 
 Y, ¿qué significa que haya necesidades no cubiertas? Que el derecho a planificar la reproducción propia no se cumple. Según la [OMS](http://www.who.int/mediacentre/factsheets/fs351/en/), la planificación familiar reduce los abortos, especialmente los inseguros; refuerza el derecho para determinar el número y el tiempo para tener hijos y previene muertes de madres e hijos.
+
+En 2012, [85 millones de embarazos en todo el mundo](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4727534/) no fueron intencionados. Se trata del 40% del total y muchos de ellos acaban en aborto -natural o voluntario. 
 
 830 mujeres mueren cada día por causas relacionadas con el embarazo y el parto. Casi todas ellas suceden en países en desarrollo. [Fuente](http://www.who.int/maternal-health/en/). De hecho, la OMS estima que más de un tercio de esas muertes, [en 2015](http://www.who.int/reproductivehealth/publications/monitoring/maternal-mortality-2015/en/), se produjeron en Nigeria y La India. O, dicho de otra forma: si vives en una región desarrollada tienes una posibilidad entre 4.900 de morir en el parto; si vives en regiones en desarrollo, una entre 150.
 
