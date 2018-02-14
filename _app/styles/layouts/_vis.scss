@@ -140,7 +140,7 @@ Common
     }
 
     .bar-title{
-      //font-size: .875em;
+      font-size: 1.5rem;
       margin-top: 10px;
       margin-bottom: 2px;
       text-align: left;
@@ -179,6 +179,32 @@ Common
       font-weight: 400;
     }
     */
+  }
+
+  .bar-horizontal-stacked-graph{
+    .bar-container{
+      clear: both;
+      span{
+        float: left;
+        line-height: 28px;
+        text-indent: 6px;
+        font-size: 13px;
+      }
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .bar-title{
+        margin-top: 7px;
+      }
+    }
+    .bar{
+      float: left;
+    }
+    .axis{
+      top: 24px;
+    }
   }
 
   .scatterplot-graph{
@@ -2679,6 +2705,51 @@ body.guatemala-graph {
     background: #c88a73;
   }
   */
+}
+
+#contraceptives-reasons-opposed{
+  .bar-respondent-opposed{
+    background: darken($color-green-dark, 2%); 
+  }
+  .bar-husband-partner-opposed{
+    background: darken($color-green, 3%);
+  }
+  .bar-religious-prohibition{
+    background: $color-blue;
+  }
+  .bar-others-opposed{
+    background: lighten($color-green-light, 3%);
+  }
+}
+
+#contraceptives-reasons-opposed-legend{
+  padding: 0;
+  margin: -10px 0 15px;
+  text-align: left;
+
+  li{
+    color: white;
+    list-style: none;
+    display: inline-block;
+    font-size: 0.75em;
+    line-height: 2em;
+    padding: 0 8px;
+    margin: 0 4px 6px 0;
+    cursor: pointer;
+
+    &.respondent-opposed{
+      background: darken($color-green-dark, 2%); 
+    }
+    &.husband-partner-opposed{
+      background: darken($color-green, 3%);
+    }
+    &.religious-prohibition{
+      background: $color-blue;
+    }
+    &.others-opposed{
+      background: lighten($color-green-light, 3%);
+    }
+  }
 }
 
 .reasons-graphs .graph-container .bar-horizontal-graph .axis{

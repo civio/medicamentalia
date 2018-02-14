@@ -44,36 +44,37 @@
 
   methods_names = 
     'es': [
-      "Esterilización femenina"
-      "Esterilización masculina"
+      "esterilización femenina"
+      "esterilización masculina"
       "DIU"
-      "Implante"
-      "Inyectable"
-      "Píldora"
-      "Condón masculino"
-      "Condón femenino"
-      "Métodos de barrera vaginal"
-      "Método de la amenorrea de la lactancia (MELA)"
-      "Anticonceptivos de emergencia"
-      "Otros métodos modernos"
-      "Métodos tradicionales"
+      "implante"
+      "inyectable"
+      "píldora"
+      "condón masculino"
+      "condón femenino"
+      "métodos de barrera vaginal"
+      "método de la amenorrea de la lactancia (MELA)"
+      "anticonceptivos de emergencia"
+      "otros métodos modernos"
+      "métodos tradicionales"
     ]
     'en': [
-      "Female sterilization"
-      "Male sterilization"
+      "female sterilization"
+      "male sterilization"
       "IUD"
-      "Implant"
-      "Injectable"
-      "Pill"
-      "Male condom"
-      "Female condom"
-      "Vaginal barrier methods"
-      "Lactational amenorrhea method (LAM)"
-      "Emergency contraception"
-      "Other modern methods"
-      "Traditional methods"
+      "implant"
+      "injectable"
+      "pill"
+      "male condom"
+      "female condom"
+      "vaginal barrier methods"
+      "lactational amenorrhea method (LAM)"
+      "emergency contraception"
+      "other modern methods"
+      "traditional methods"
     ]
 
+  ###
   methods_icons = 
     "Female sterilization": 'sterilization'
     "Male sterilization": 'sterilization'
@@ -88,6 +89,7 @@
     "Emergency contraception": null
     "Other modern methods": null
     "Any traditional method": 'traditional'
+  ###
 
   reasons_names = 
     "a": "not married"
@@ -269,7 +271,6 @@
             gni:        +country[0]['gni']
       else
         console.log 'No GNI or Population data for this country', d.code, country[0]
-    console.table data
     # setup graph
     unmetneedsGraph = new window.BeeswarmScatterplotGraph 'unmet-needs-gdp-graph',
       margin:
@@ -350,57 +351,63 @@
   setupContraceptivesReasons = (data_reasons, countries) ->
 
     reasonHealth = []
+    reasonOpposed = []
+    reasonOpposedHusband = []
+    ###
     reasonNotSex = []
     reasonOpposed = []
     reasonOpposedRespondent = []
-    reasonOpposedHusband = []
     reasonOpposedReligious = []
-
-    reasonsKeys = Object.keys(reasons_names)
+    ###
 
     # parse reasons data
     data_reasons.forEach (d) ->
-      ###
-      reasonsKeys.forEach (reason) ->
-        d[reason] = +d[reason]
-        if d[reason] > 100
-          console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
-      ###
-      reasonHealth.push
-        name: d.name
-        value: d.o+d.p+d.t # health concerns + fear of side effects/health concerns + interferes with bodys processes
-      reasonNotSex.push
-        name: d.name
-        value: d.b # not having sex
-      reasonOpposed.push
-        name: d.name
-        value: d.i+d.j+d.k+d.l # respondent opposed + husband/partner opposed + others opposed + religious prohibition
-      reasonOpposedRespondent.push
-        name: d.name
-        value: d.i # respondent opposed
-      reasonOpposedHusband.push
-        name: d.name
-        value: d.j # rhusband/partner opposed
-      reasonOpposedReligious.push
-        name: d.name
-        value: d.l # religious prohibition
+      if d.name
+        reasonHealth.push
+          name: d.name
+          value: d.o+d.p+d.t # health concerns + fear of side effects/health concerns + interferes with bodys processes
+        reasonOpposedHusband.push
+          name: d.name
+          value: d.j # husband/partner opposed
+        ###
+        reasonNotSex.push
+          name: d.name
+          value: d.b # not having sex
+        reasonOpposedRespondent.push
+          name: d.name
+          value: d.i # respondent opposed
+        reasonOpposedReligious.push
+          name: d.name
+          value: d.l # religious prohibition
+        ###
+        reasonOpposed.push
+          name:   d.name
+          total:  d.i+d.j+d.k+d.l  # respondent opposed + husband/partner opposed + others opposed + religious prohibition
+          values: [
+            {name: reasons_names.i, value: d.i}
+            {name: reasons_names.j, value: d.j}
+            {name: reasons_names.l, value: d.l}
+            {name: reasons_names.k, value: d.k}
+          ]
 
-    sortArray = (a,b) -> return b.value-a.value
-    reasonHealth.sort sortArray
+    reasonHealth.sort         (a,b) -> return b.value-a.value
+    reasonOpposedHusband.sort (a,b) -> return b.value-a.value
+    reasonOpposed.sort        (a,b) -> return b.total-a.total
+    console.log reasonOpposed
+    ###
     reasonNotSex.sort sortArray
     reasonOpposed.sort sortArray
     reasonOpposedRespondent.sort sortArray
     reasonOpposedHusband.sort sortArray
     reasonOpposedReligious.sort sortArray
-
+    ###
     new window.BarHorizontalGraph('contraceptives-reasons-health',
       key:
         id: 'name'
         x: 'value').setData reasonHealth.slice(0,5)
-    new window.BarHorizontalGraph('contraceptives-reasons-opposed',
-      key:
-        id: 'name'
-        x: 'value').setData reasonOpposed.slice(0,5)
+   
+    new window.BarHorizontalStackedGraph('contraceptives-reasons-opposed',{}).setData reasonOpposed.slice(0,10)
+    ###
     new window.BarHorizontalGraph('contraceptives-reasons-not-sex',
       key:
         id: 'name'
@@ -410,16 +417,18 @@
         id: 'name'
         x: 'value'
       xAxis: [50, 100]).setData reasonOpposedRespondent.slice(0,5)
-    new window.BarHorizontalGraph('contraceptives-reasons-opposed-husband',
-      key:
-        id: 'name'
-        x: 'value'
-      xAxis: [50, 100]).setData reasonOpposedHusband.slice(0,5)
+    
     new window.BarHorizontalGraph('contraceptives-reasons-opposed-religious',
       key:
         id: 'name'
         x: 'value'
       xAxis: [50, 100]).setData reasonOpposedReligious.slice(0,5)
+    ###
+    new window.BarHorizontalGraph('contraceptives-reasons-opposed-husband',
+      key:
+        id: 'name'
+        x: 'value'
+      xAxis: [50, 100]).setData reasonOpposedHusband.slice(0,5)
 
 
   # Contraceptives Use Treenap

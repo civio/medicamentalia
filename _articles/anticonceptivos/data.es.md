@@ -20,7 +20,7 @@ Babatunde Osotimehin falleció el pasado mes de julio. Años antes, cuando era d
 
 Un derecho que se daña cada vez que una niña se queda embarazada, cada vez que a una mujer se le acusa de promiscua, o hasta de prostituta, por usar algún método, cada vez que es obligada a tener hijos no deseados, cada vez que se ve obligada a abortar en condiciones insalubres, cada vez que alguien le dice lo que tiene que hacer o le vetó el acceso, aunque sea ella la que cargue, en muchos países, con las consecuencias de ese decisión, cada vez que un nuevo parto pone su salud al límite o la mata. Esta no es una lista de ejemplos teóricos, son historias reales recopiladas durante esta investigación, destinada a conocer cómo se ejerce este derecho universal y a qué barreras se enfrentan las mujeres para hacerlo. 
 
-> Foto lateral Fanta
+{% include caption.html img="contraceptives/fanta-jatta.jpg" caption="Fanta Jatta" align="alignright" %}
 
 Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la sede de la organización Action Aid International, en Gambia, donde dirige el programa de derechos de las mujeres. Para ella, además de los problemas de salud -para madres y niños- que provocan la falta de acceso a los anticonceptivos, hay algo más, algo elemental: quién decide y cómo. La capacidad de decisión libre para ejercer este derecho. 
 
@@ -188,13 +188,11 @@ Puede ser que quieran espaciar los embarazos, por razones de salud, para poder c
 
 Así, el porcentaje de mujeres con necesidades no cubiertas de los países menos desarrollados (21,4%) casi duplica la mediana mundial (11,5%), según la ONU. 
 
-
-
 #### Barreras
 
 Vamos a centrarnos en esos países en los que la situación es más complicada. ¿Qué barreras impiden a las mujeres el acceso a los anticonceptivos?. Según el estudio *[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)*, del Guttmacher Institute, que analizó 52 países, las principales son **los efectos secundarios, la poca frecuencia sexual, y la oposición (ya sea propia o impuesta)**. 
 
-> [Fotico alemana]
+{% include caption.html img="contraceptives/mirjam-beck.jpg" caption="Mirjam Beck" align="alignright" %}
 
 La mayoría de quienes responden que no usan anticonceptivos por razones de salud, miedo a los efectos secundarios o porque afecta a los procesos naturales del cuerpo han usado alguna vez un método, según el estudio de Guttmacher. Esto es, saben de lo que hablan: sangrado excesivo o menor, náuseas, cambios en el cuerpo -engordan, les crece vello-, falta de líbido, cambios de humor... la larga lista de efectos secundarios de los anticonceptivos hormonales no ayuda. 
 
@@ -224,6 +222,12 @@ Muchas mujeres aseguran que no usan anticonceptivos porque **no tienen sexo de f
 <div class="container-right">
   <div class="graph-container">
     <p class="graph-container-caption">Oposición</p>
+    <ul id="contraceptives-reasons-opposed-legend">
+      <li class="respondent-opposed">Oposición personal</li>
+      <li class="husband-partner-opposed">Oposición del marido o la pareja</li>
+      <li class="religious-prohibition">Oposición religiosa</li>
+      <li class="others-opposed">Otras oposiciones</li>
+    </ul>
     <div id="contraceptives-reasons-opposed"></div>
   </div>
 </div>

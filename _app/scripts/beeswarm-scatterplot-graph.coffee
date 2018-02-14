@@ -3,6 +3,29 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
 
   incomeLevels: [1005, 3955, 12235]
 
+  labels: [
+    'AGO',
+    'BGD',
+    'BEL',
+    'BRA',
+    'DEU',
+    'ESP',
+    'ETH',
+    'FIN',
+    'IND',
+    'IDN',
+    'JPN',
+    'NGA',
+    'PAK',
+    'PHL',
+    'RUS',
+    'SAU',
+    'TUR',
+    'UGA',
+    'USA',
+    'VNM'
+  ]
+
   # Constructor
   # -----------
 
@@ -46,7 +69,7 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
     # draw labels
     if @options.key.label
       @container.selectAll('.dot-label')
-        .data @data.filter (d) => d[@options.key.size] > 79000000
+        .data @data.filter (d) => @labels.indexOf(d[@options.key.id]) != -1
       .enter().append('text')
         .attr 'class', (d) => return if d[@options.key.size] > 1000000000 then 'dot-label size-l' else if d[@options.key.size] > 180000000 then 'dot-label size-m' else 'dot-label'
         #.attr 'dx', '0.75em'

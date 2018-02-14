@@ -1,12 +1,10 @@
-class window.BarHorizontalGraph extends window.BaseGraph
+class window.BarHorizontalStackedGraph extends window.BarHorizontalGraph
 
 
   # Constructor
   # -----------
 
   constructor: (id, options) ->
-    #console.log 'Bar Horizontal Graph', id, options
-    options.xAxis = options.xAxis || [25, 50, 75, 100]
     super id, options
     return @
 
@@ -17,15 +15,10 @@ class window.BarHorizontalGraph extends window.BaseGraph
   # override svg & use html div instead
   setSVG: ->
     @container = d3.select('#'+@id)
-      .attr 'class', 'bar-horizontal-graph'
+      .attr 'class', 'bar-horizontal-graph bar-horizontal-stacked-graph'
 
   dataParser: (data) ->
-    data.forEach (d) => 
-      d[@options.key.x] = +d[@options.key.x]
     return data
-
-  setScales: ->
-    return @
 
   drawScales: ->
     if @options.xAxis
@@ -44,17 +37,15 @@ class window.BarHorizontalGraph extends window.BaseGraph
       .attr 'class', 'bar-container'
       .call @setBars
     return @
-
   
   setBars: (element) =>
-    if @options.key.id
-      element.attr 'id', (d) => d[@options.key.id]
-      element.append('div')
-        .attr 'class', 'bar-title'
-        .html (d) => d[@options.key.id]
     element.append('div')
-      .attr 'class', 'bar'
-      .style 'width', (d) => 
-        return d[@options.key.x]+'%'
-      .append('span')
-        .html (d) => Math.round(d[@options.key.x])+'%'
+      .attr 'class', 'bar-title'
+      .html (d) -> d.name
+    element.selectAll('bar')
+      .data (d) -> return d.values
+    .enter().append('div')
+      .attr 'class', (d) -> 'bar bar-'+d.name.replace(/ |\//g,'-')
+      .style 'width', (d) -> d.value+'%'
+    element.append('span')
+      .html (d) => Math.round(d.total)+'%'
