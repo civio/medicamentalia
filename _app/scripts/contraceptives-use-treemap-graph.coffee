@@ -28,7 +28,7 @@ class window.ContraceptivesUseTreemapGraph extends window.TreemapGraph
         parsedData.push
           id: method.id
           raw_name: method.name
-          name: '<strong>' + method.name + '</strong><br/>' + Math.round(method.value) + '%'
+          name: '<strong>' + method.name.charAt(0).toUpperCase() + method.name.slice(1) + '</strong><br/>' + Math.round(method.value) + '%'
           value: method.value
           parent: 'r'
       parsedDataSorted = parsedData.sort (a,b) -> if a.value and b.value then b.value-a.value else 1

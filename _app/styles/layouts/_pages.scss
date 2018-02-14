@@ -392,6 +392,19 @@ header {
     > p{
       font-size: 21px;
       line-height: 34px;
+      margin-bottom: 0;
+    }
+
+    footer{
+      color: $brand-primary;
+      font-size: .75em;
+      font-weight: 400;
+      padding-top: 15px;
+      text-indent: 0;
+
+      &:before{
+        display: none;
+      }
     }
 
     &:before{
@@ -411,6 +424,11 @@ header {
       &:before{
         display: none;
       }
+    }
+
+    &.center{
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
@@ -713,6 +731,12 @@ header {
 
     blockquote {
       margin-top: -2px; // Adjust vertical alignment with parragraph
+
+      &.center{
+        margin-top: 0;
+        float: none;
+        width: 100% !important;
+      }
     }
 
     .alignright{
@@ -751,6 +775,11 @@ header {
     .container-right{
       width: ($page-content-container-width/2) + $page-content-container-margin - (1.5 * $grid-gutter-width) !important;
       margin-right: ($grid-gutter-width / 2) - $page-content-container-margin;  // -16.7%; // $blockquote-margin-right;
+
+      &.center{
+        width: 100% !important;
+        margin-right: auto;
+      }
     }
   }
 }
@@ -765,6 +794,11 @@ header {
     .container-right{
       width: ($page-content-container-width/2) + $page-content-container-margin - (1.5 * $grid-gutter-width) !important;
       margin-right: ($grid-gutter-width / 2) - $page-content-container-margin;
+
+      &.center{
+        width: 100% !important;
+        margin-right: auto;
+      }
     }
   }
 }
