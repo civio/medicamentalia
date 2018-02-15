@@ -76,7 +76,7 @@ Pero su uso no es homogeneo ni entre países ni entre clases sociales. La [situa
     <p>La <strong>esterilización femenina</strong> es el método más habitual en India (67%); además, destaca en muchos países centroamericanos, como República Dominicana (59%), Puerto Rico, El Salvador y México.</p>
   </div>
   <div class="step" data-instance="1" data-step="2">
-    <p>La <strong>esterilización masculina</strong> tiene una implantación muchísimo menor y no alcanza porcentajes tan altos. Por ejemplo: un 25% de las mujeres en Reino Unido contestaron que es el método que usan sus parejas. Esta por detrás de la píldora y el condón.</p>
+    <p>La <strong>esterilización masculina</strong> tiene una implantación muchísimo menor y no alcanza porcentajes tan altos. Por ejemplo: un 30% de las mujeres en Canadá contestó que es el método que usan sus parejas. En Reino Unido ese porcentaje es del 25%.</p>
   </div>
   <div class="step" data-instance="1" data-step="3">
     <p markdown="1">El <strong>DIU</strong> destaca en estados asiáticos, con Corea del Norte por encima de todos: es el método que usa el 95% de las mujeres que quiere controlar su natalidad.</p>
@@ -88,10 +88,10 @@ Pero su uso no es homogeneo ni entre países ni entre clases sociales. La [situa
     <p>La <strong>píldora</strong>  es prioritaria, entre otras zonas, en el norte de África y buena parte de la Europa occidental, pero no en España.</p>
   </div>
   <div class="step" data-instance="1" data-step="6">
-    <p>El <strong>preservativo masculino</strong> es uno de los métodos más habituales en países tan distintos como Botsuana (79%) y Canadá (64%), y en otros países entre mujeres no casadas que no tienen acceso a otros métodos más establecidos. Es el principal método elegido como anticonceptivo en España (38%).</p>
+    <p>El <strong>preservativo masculino</strong> es uno de los métodos más habituales en países tan distintos como Botsuana (79%) y Grecia (49%), y en otros países entre mujeres no casadas que no tienen acceso a otros métodos más establecidos. Es el principal método elegido como anticonceptivo en España (38%).</p>
   </div>
   <div class="step" data-instance="1" data-step="7">
-    <p>El método <strong>inyectable</strong>, también hormonal, es el favorito en África. Para muchas mujeres es la solución perfecta si deciden usar anticonceptivos sin que se enteren sus maridos si ellos están en contra. No se nota, es fácil de administrar -un pinchazo rápido cada uno tres o cinco meses- y no deja huella.</p>
+    <p>El método <strong>inyectable</strong>, también hormonal, es el favorito en África y buena parte del Sudeste Asiático. Para muchas mujeres es la solución perfecta si deciden usar anticonceptivos sin que se enteren sus maridos si ellos están en contra. No se nota, es fácil de administrar -un pinchazo rápido cada uno tres o cinco meses- y no deja huella.</p>
   </div>
   <div class="step" data-instance="1" data-step="8">
     <p>Los <strong>métodos tradicionales</strong> van desde la marcha atrás al control del ciclo, pasando por prácticas locales vinculadas a la religión o la magia. Estos métodos, muy poco o nada fiables, son mayoritarios en la región de los Balcanes</p>
@@ -192,12 +192,6 @@ Así, el porcentaje de mujeres con necesidades no cubiertas de los países menos
 
 Vamos a centrarnos en esos países en los que la situación es más complicada. ¿Qué barreras impiden a las mujeres el acceso a los anticonceptivos?. Según el estudio *[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)*, del Guttmacher Institute, que analizó 52 países, las principales son **los efectos secundarios, la poca frecuencia sexual, y la oposición (ya sea propia o impuesta)**. 
 
-<div class="panel">
-{% include blockquote-media.html img="contraceptives/mirjam-beck-thumb" quote="Sentía que cualquier tipo de anticonceptivo hormonal me afectaba tanto física como psicológicamente." author="Mirjam Beck" %}
-</div>
-
-La mayoría de quienes responden que no usan anticonceptivos por razones de salud, miedo a los efectos secundarios o porque afecta a los procesos naturales del cuerpo han usado alguna vez un método, según el estudio de Guttmacher. Esto es, saben de lo que hablan: sangrado excesivo o menor, náuseas, cambios en el cuerpo -engordan, les crece vello-, falta de líbido, cambios de humor... la larga lista de efectos secundarios de los anticonceptivos hormonales no ayuda. 
-
 <div class="container-right">
   <div class="graph-container">
     <p class="graph-container-caption">Razones de salud para no usar anticonceptivos</p>
@@ -205,7 +199,13 @@ La mayoría de quienes responden que no usan anticonceptivos por razones de salu
   </div>
 </div>
 
+La mayoría de quienes responden que no usan anticonceptivos por razones de salud, miedo a los efectos secundarios o porque afecta a los procesos naturales del cuerpo han usado alguna vez un método, según el estudio de Guttmacher. Esto es, saben de lo que hablan: sangrado excesivo o menor, náuseas, cambios en el cuerpo -engordan, les crece vello-, falta de líbido, cambios de humor... la larga lista de efectos secundarios de los anticonceptivos hormonales no ayuda. 
+
 "En cuanto a los efectos secundarios, es necesario que haya mucho más progreso e investigación. Esto no es suficiente, sobre todo porque muchos de los métodos anticonceptivos se focalizan solo en la mujer, mientras para los hombres hay muy pocas oportunidades de ser activos en este sentido", argumenta Mirjam Beck, una alemana de 27 años. En 2016 [se frenó](http://cnnespanol.cnn.com/2016/10/31/inyeccion-anticonceptiva-masculina-es-altamente-efectiva-pero-tiene-efectos-secundarios/) el estudio de un anticonceptivo masculino por sus efectos secundarios, muy similares a los que sufren las mujeres en la actualidad. 
+
+<div class="panel">
+{% include blockquote-media.html img="contraceptives/mirjam-beck-thumb" quote="Sentía que cualquier tipo de anticonceptivo hormonal me afectaba tanto física como psicológicamente." author="Mirjam Beck" %}
+</div>
 
 Y a ellos se suman las creencias no basadas en la evidencia científica, como que pueden dañar los ovarios, [producir infertilidad](https://www.guttmacher.org/journals/ipsrh/2015/12/belief-family-planning-myths-individual-and-community-levels-and-modern) o hasta dañar al miembro masculino. 
 </div>
