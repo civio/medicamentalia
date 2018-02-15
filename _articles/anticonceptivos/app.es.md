@@ -235,7 +235,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       <option value="ZMB">Zambia</option>
       <option value="ZWE">Zimbabue</option>
     </select>
-    {% include contraceptives-app-item.html filters=true img='woman' %}
+    {% include contraceptives/app-item.html filters=true img='woman' %}
   </div>
 </div>
 </div>
@@ -247,10 +247,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <div id="contraceptives-app">
   <div class="row">
     <div class="col-sm-6">
-      {% include contraceptives-app-item.html title='Entorno urbano' img='woman-urban' %}
+      {% include contraceptives/app-item.html title='Entorno urbano' img='woman-urban' %}
     </div>
     <div class="col-sm-6">
-      {% include contraceptives-app-item.html title='Entorno rural' img='woman-rural' %}
+      {% include contraceptives/app-item.html title='Entorno rural' img='woman-rural' %}
     </div>
   </div>
 </div>
@@ -260,13 +260,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <div id="contraceptives-app">
   <div class="row">
     <div class="col-sm-4">
-      {% include contraceptives-app-item.html title='Entre 15 y 24 años' img='woman-younger' %}
+      {% include contraceptives/app-item.html title='Entre 15 y 24 años' img='woman-younger' %}
     </div>
     <div class="col-sm-4">
-      {% include contraceptives-app-item.html title='Entre 25 y 34 años' img='woman' %}
+      {% include contraceptives/app-item.html title='Entre 25 y 34 años' img='woman' %}
     </div>
     <div class="col-sm-4">
-      {% include contraceptives-app-item.html title='Entre 35 y 49 años' img='woman-older' %}
+      {% include contraceptives/app-item.html title='Entre 35 y 49 años' img='woman-older' %}
     </div>
   </div>
 </div>
@@ -275,16 +275,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <div id="contraceptives-app">
   <div class="row">
     <div class="col-sm-3">
-      {% include contraceptives-app-item.html title='Sin educación' img='woman' %}
+      {% include contraceptives/app-item.html title='Sin educación' img='woman' %}
     </div>
     <div class="col-sm-3">
-      {% include contraceptives-app-item.html title='Educación primaria' img='woman' %}
+      {% include contraceptives/app-item.html title='Educación primaria' img='woman' %}
     </div>
     <div class="col-sm-3">
-      {% include contraceptives-app-item.html title='Educación secundaria' img='woman' %}
+      {% include contraceptives/app-item.html title='Educación secundaria' img='woman' %}
     </div>
     <div class="col-sm-3">
-      {% include contraceptives-app-item.html title='Educación superior' img='woman' %}
+      {% include contraceptives/app-item.html title='Educación superior' img='woman' %}
     </div>
   </div>
 </div>

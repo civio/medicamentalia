@@ -34,6 +34,8 @@ class window.BarHorizontalGraph extends window.BaseGraph
       .enter().append('div')
         .attr 'class', 'axis'
         .style 'left', (d) -> d+'%'
+        .append 'span'
+          .html (d) -> d+'%'
     return @
 
   drawGraph: ->

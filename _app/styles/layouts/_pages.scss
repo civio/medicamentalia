@@ -395,6 +395,10 @@ header {
       margin-bottom: 0;
     }
 
+    strong{
+      font-weight: 600;
+    }
+
     footer{
       color: $brand-primary;
       font-size: .75em;
@@ -573,6 +577,11 @@ header {
   strong{
     font-weight: 400;
   }
+}
+
+.panel .wp-caption{
+  background: none;
+  margin-top: 20px;
 }
 
 

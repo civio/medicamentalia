@@ -133,6 +133,8 @@ Common
 
   .bar-horizontal-graph{
     position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
 
     .bar-container{
       position: relative;
@@ -169,6 +171,14 @@ Common
       width: 0;
       border-right: 1px solid mix( $gray-lighter, $gray-light, 80% );
       z-index: 60;
+
+      span{
+        position: absolute;
+        bottom: -1.5em;
+        left: -1em;
+        color: mix( $gray-lighter, $gray-light, 50% );
+        font-size: .625em;
+      }
     }
 
     /*
@@ -2756,7 +2766,7 @@ body.guatemala-graph {
   top: 22px;
 }
 
-
+/*
 .page-content .blockquote-image{
   position: relative;
 
@@ -2794,6 +2804,63 @@ body.guatemala-graph {
       bottom: 0;
       background: white;
       opacity: .35;
+    }
+  }
+}
+*/
+
+.page-content .blockquote-media{
+  margin: 30px 0;
+
+  .media-left{
+    padding: 0;
+  }
+
+  img{
+    width: 160px;
+    height: auto;
+    border-radius: 80px;
+    overflow: hidden;
+  }
+
+  .media-body{
+    padding-left: 20px;
+    vertical-align: middle;
+  }
+
+  blockquote{
+    margin: 0 0 5px;
+    
+    p{
+      font-size: 21px;
+      line-height: 34px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.page-content .panel .blockquote-media{
+  margin: 0 -5px 20px;
+}
+
+#carousel-marie-stopes{
+  margin-top: 15px;
+  margin-bottom: 45px;
+  .scroll-graphic{
+    overflow: hidden;
+    > div{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      webkit-background-size: cover;
+      background-size: cover;
+      opacity: 0;
+      @include transition(.6s ease-in-out opacity);
+
+      &.active{
+        opacity: 1;
+      }
     }
   }
 }

@@ -1,0 +1,13 @@
+<div class="media blockquote-media">
+  <div class="media-left">
+    <img src="{{ site.assetsurl }}/images/{{ include.img }}.jpg" alt="{{ include.author }}">
+  </div>
+  <div class="media-body">
+    <blockquote class="center">
+      <p>{{ include.quote }}</p>
+      {% if include.author %}
+      <footer><strong>{{ include.author }}</strong>{% if include.author_description %}, {{ include.author_description }}{% endif %}</footer>
+      {% endif %}
+    </blockquote>
+  </div>
+</div>

@@ -22,14 +22,8 @@ Un derecho que se daña cada vez que una niña se queda embarazada, cada vez que
 
 Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la sede de la organización Action Aid International, en Gambia, donde dirige el programa de derechos de las mujeres. Para ella, además de los problemas de salud -para madres y niños- que provocan la falta de acceso a los anticonceptivos, hay algo más, algo elemental: quién decide y cómo. La capacidad de decisión libre para ejercer este derecho. 
 
-<div class="blockquote-image">
-<blockquote class="center">
-  <p>Necesitamos entender cómo funcionan nuestros cuerpos y poder tomar nuestras propias decisiones.</p>
-  <footer>Fanta Jatta</footer>
-</blockquote>
-<figure class="wp-caption">
-  <img src="{{ site.assetsurl }}/images/contraceptives/fanta-jatta.jpg" alt="Fanta Jatta">
-</figure>
+<div class="panel">
+{% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="Necesitamos entender cómo funcionan nuestros cuerpos y poder tomar nuestras propias decisiones." author="Fanta Jatta" author_description="Women's Right Specialist at Action Aid International" %}
 </div>
 
 #### Usos
@@ -146,9 +140,7 @@ En Gambia, muchas mujeres usan un método que recibe diferentes nombres y que re
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Puede ser que quieran espaciar los embarazos, por razones de salud, para poder cuidar de los hijos de forma escalonada o por organización personal. "Empecé a tomar anticonceptivos tras mi primer embarazo. Solo siete meses después volvía a estar embarazada. Entonces, cuando tuve a mi segundo hijo, decidí que no quería volver a pasar por la misma situación en mi tercer embarazo", cuenta Jarra Joof, de Gambia. O que, simplemente, no quieran tener ningún hijo o no quieran tener más. "Siete es suficiente", argumenta ahora, tiempo después de esos primeros partos, con 42 años. Las razones son muchas, pero las mujeres con necesidades no cubiertas tienen algo en común: han decidido no quedarse embarazadas pero, aún así, no usan ningún método.  
-
-
+Puede ser que quieran espaciar los embarazos, por razones de salud, para poder cuidar de los hijos de forma escalonada o por organización personal. "Empecé a tomar anticonceptivos tras mi primer embarazo. Solo siete meses después volvía a estar embarazada. Entonces, cuando tuve a mi segundo hijo, decidí que no quería volver a pasar por la misma situación en mi tercer embarazo", cuenta Jarra Joof, de Gambia. O que, simplemente, no quieran tener ningún hijo o no quieran tener más. "Siete es suficiente", argumenta ahora, tiempo después de esos primeros partos, con 42 años. Las razones son muchas, pero las mujeres con necesidades no cubiertas tienen algo en común: han decidido no quedarse embarazadas pero, aún así, no usan ningún método.
 </div>
 </div>
 
@@ -200,28 +192,56 @@ Así, el porcentaje de mujeres con necesidades no cubiertas de los países menos
 
 Vamos a centrarnos en esos países en los que la situación es más complicada. ¿Qué barreras impiden a las mujeres el acceso a los anticonceptivos?. Según el estudio *[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)*, del Guttmacher Institute, que analizó 52 países, las principales son **los efectos secundarios, la poca frecuencia sexual, y la oposición (ya sea propia o impuesta)**. 
 
-{% include caption.html img="contraceptives/mirjam-beck.jpg" caption="Mirjam Beck" align="alignright" %}
+<div class="panel">
+{% include blockquote-media.html img="contraceptives/mirjam-beck-thumb" quote="Sentía que cualquier tipo de anticonceptivo hormonal me afectaba tanto física como psicológicamente." author="Mirjam Beck" %}
+</div>
 
 La mayoría de quienes responden que no usan anticonceptivos por razones de salud, miedo a los efectos secundarios o porque afecta a los procesos naturales del cuerpo han usado alguna vez un método, según el estudio de Guttmacher. Esto es, saben de lo que hablan: sangrado excesivo o menor, náuseas, cambios en el cuerpo -engordan, les crece vello-, falta de líbido, cambios de humor... la larga lista de efectos secundarios de los anticonceptivos hormonales no ayuda. 
 
 <div class="container-right">
   <div class="graph-container">
     <p class="graph-container-caption">Razones de salud para no usar anticonceptivos</p>
-    <div id="contraceptives-reasons-health"></div>
+    {% include contraceptives/reasons-health.html %}
   </div>
 </div>
 
 "En cuanto a los efectos secundarios, es necesario que haya mucho más progreso e investigación. Esto no es suficiente, sobre todo porque muchos de los métodos anticonceptivos se focalizan solo en la mujer, mientras para los hombres hay muy pocas oportunidades de ser activos en este sentido", argumenta Mirjam Beck, una alemana de 27 años. En 2016 [se frenó](http://cnnespanol.cnn.com/2016/10/31/inyeccion-anticonceptiva-masculina-es-altamente-efectiva-pero-tiene-efectos-secundarios/) el estudio de un anticonceptivo masculino por sus efectos secundarios, muy similares a los que sufren las mujeres en la actualidad. 
 
 Y a ellos se suman las creencias no basadas en la evidencia científica, como que pueden dañar los ovarios, [producir infertilidad](https://www.guttmacher.org/journals/ipsrh/2015/12/belief-family-planning-myths-individual-and-community-levels-and-modern) o hasta dañar al miembro masculino. 
-
-<div class="panel" markdown="1">
-##### Un título
-
-(en fotos de Marie Stopes)
-
-En Pout, a una hora de Dakar, decenas de mujeres, la mayoría con niños en los brazos, esperan con los pies en la arena y bajo un toldo que les protege del sol, al ritmo de una música bien animada, que arranque el espectáculo. El imam también está presente. Se preparan condones, todo el mundo se coloca, el DJ baja la música y Coumba Dieng, de la organización Marie Stopes, empieza su clase práctica sobre anticonceptivos. Explica uno a uno los métodos, con ellos en la mano y un entusiasmo que aúna la firmeza de una arenga política y el choteo de un padrino de bodas. La principal barrera para convencerlas del uso de métodos anticonceptivos son "los rumores, sobre todo los rumores", admite la maestra de ceremonias de esta particular clase práctica en las afueras.
 </div>
+</div>
+
+
+<div id="carousel-marie-stopes" class="scroll-container">
+<!--  graphic container  -->
+<div class="scroll-graphic">
+  <!-- foto señoras general -->
+  <div class="step-0 active" style="background-image: url({{ site.assetsurl }}/images/contraceptives/marie-stopes-1.jpg)"></div>
+  <div class="step-1" style="background-image: url({{ site.assetsurl }}/images/contraceptives/marie-stopes-2.jpg)"></div>
+  <div class="step-2" style="background-image: url({{ site.assetsurl }}/images/contraceptives/marie-stopes-3.jpg)"></div>
+  <div class="step-3 step-4" style="background-image: url({{ site.assetsurl }}/images/contraceptives/marie-stopes-4.jpg)"></div>
+</div>
+<!--  step/text container  -->
+<div class="scroll-text">
+  <div class="step" data-instance="4" data-step="0">
+    <p>En Pout, a una hora de Dakar, decenas de mujeres, la mayoría con niños en los brazos, esperan con los pies en la arena y bajo un toldo que les protege del sol, al ritmo de una música bien animada, que arranque el espectáculo. El imam también está presente.</p>
+  </div>
+  <div class="step" data-instance="4" data-step="1">
+    <p>Se preparan condones, todo el mundo se coloca, el DJ baja la música y Coumba Dieng, de la organización Marie Stopes, empieza su clase práctica sobre anticonceptivos.</p>
+  </div>
+  <div class="step" data-instance="4" data-step="2">
+    <p>Explica uno a uno los métodos, con ellos en la mano y un entusiasmo que aúna la firmeza de una arenga política y el choteo de un padrino de bodas.</p>
+  </div>
+  <div class="step" data-instance="4" data-step="3">
+    <p>La principal barrera para convencerlas del uso de métodos anticonceptivos son "los rumores, sobre todo los rumores", admite la maestra de ceremonias de esta particular clase práctica en las afueras.</p>
+  </div>
+  <div class="step" data-instance="4" data-step="4"></div>
+</div>
+</div>
+
+
+<div class="container page-content">
+<div class="page-content-container" markdown="1">
 
 La clave, según Alieu Jammeh, que trabaja en la UNFPA en Gambia, es que haya variedad, que se expliquen bien sus efectos para evitar la mala fama no justificada de algunos métodos y que cada mujer pueda elegir el que mejor se adapte a ella. Esta barrera es la más importante en el global de países analizados y es la razón para no usar anticonceptivos de más de la mitad de las mujeres con necesidades en Haití. 
 
@@ -236,7 +256,7 @@ Muchas mujeres aseguran que no usan anticonceptivos porque **no tienen sexo de f
       <li class="religious-prohibition">Religiosa</li>
       <li class="others-opposed">Otras</li>
     </ul>
-    <div id="contraceptives-reasons-opposed"></div>
+    {% include contraceptives/reasons-opposed.html %}
   </div>
 </div>
 
@@ -260,17 +280,17 @@ La clave es quién toma esta decisión. Para Alieu Jammeh, de Naciones Unidas, e
 > Se sigue imponiendo la moral personal a la hora de atender a las usuarias
 > <footer>Patricia Ortega</footer>
 
-La suegra, el padre, o hasta los servicios médicos o farmacéuticos, entre otros, pueden intervenir en la decisión de la mujer. La Red por los derechos sexuales y reproductivos en México (Ddeser) realizó un monitoreo sobre cómo funcionaba los servicios de reparto de anticonceptivos con dos gobiernos distintos. Entrevistaron a responsables, médicos, funcionarios, usuarias... Y hasta acudieron a los centros como *clientas fantasma*. Encontraron clínicas en las que se niegan a dar condones a jóvenes y se acumulan allí "hasta que caducan", denuncia Patricia Ortega; o donde no dan la píldora a mujeres casadas, por poner solo dos ejemplos. 
+La suegra, el padre, o hasta los servicios médicos o farmacéuticos, entre otros, pueden intervenir en la decisión de la mujer. La Red por los derechos sexuales y reproductivos en México (Ddeser) realizó un monitoreo sobre cómo funcionaba los servicios de reparto de anticonceptivos con dos gobiernos distintos. Entrevistaron a responsables, médicos, funcionarios, usuarias... Y hasta acudieron a los centros como *clientas fantasma*. Encontraron clínicas en las que se niegan a dar condones a jóvenes y se acumulan allí "hasta que caducan", denuncia Patricia Ortega; o donde no dan la píldora a mujeres casadas, por poner solo dos ejemplos.
 
-> Pobreza no es solo la falta de dinero, o material, es también la falta del poder de tomar decisiones
-> <footer>Fanta Jatta, Women's Right Specialist at Action Aid International</footer>
-{: .center}
+<div class="panel">
+{% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="Pobreza no es solo la falta de dinero, o material, es también la falta del poder de tomar decisiones." author="Fanta Jatta" author_description="Women's Right Specialist at Action Aid International" %}
+</div>
 
 Cada vez es menos frecuente quienes responden que no conocen métodos o que no tienen acceso a ellos o cuestan demasiado, pero en el Oeste y el Centro de África estas razones "fueron nombradas por más de un 10% de las mujeres entrevistadas", según el estudio de Guttmacher. En México, Patricia Ortega asegura que en la universidad **hay "personas que no saben ni usar un condón"**. Ante la pregunta sobre cuántas veces se puede usar un mismo preservativo, un 15,5% de los participantes en la Encuesta Nacional de Salud y Nutrición mexicana [respondieron de forma incorrecta](http://ensanut.insp.mx/informes/ENSANUT2012ResultadosNacionales.pdf).
 
 En Gambia, los anuncios en televisión promoviendo el uso de anticonceptivos fueron una revolución social hace ya muchos años, no sin críticas por parte de los sectores católicos.
 
-> Carrusel pocalos, Feijoo y otros - pantallazos
+{% include caption.html img="contraceptives/fomento-natalidad.jpg" caption="Campañas fomento natalidad" fullWidth=true %}
 
 En Europa hace tiempo que escasean las campañas de promoción de los anticonceptivos -[excepto si las paga Durex](https://www.youtube.com/watch?v=KR4A-c23rsE)-, y cada vez se invierte más en fomento de la natalidad, ya sea a través de una [campaña](https://elpais.com/internacional/2017/11/10/actualidad/1510327993_647673.html) del Gobierno polaco para animar a sus ciudadanos a tener sexo o con las [campañas anuales del gobierno gallego](https://civio.es/el-boe-nuestro-de-cada-dia/2013/07/29/galicia-licita-por-640-000-euros-una-campana-para-animar-a-sus-ciudadanos-a-tener-hijos/) en las que se apela a la “necesaria responsabilidad compartida” para traer más niños al mundo.
 
@@ -290,4 +310,4 @@ Es una cuestión de salud pública, pero también de derechos. El de elegir de f
   </symbol>
 </svg>
 
-{% include contraceptives-icons.html %}
+{% include contraceptives/icons.html %}

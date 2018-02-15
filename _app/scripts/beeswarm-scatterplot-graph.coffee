@@ -6,12 +6,11 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
   labels: [
     'AGO',
     'BGD',
-    'BEL',
     'BRA',
+    'CHN',
     'DEU',
     'ESP',
     'ETH',
-    'FIN',
     'IND',
     'IDN',
     'JPN',
