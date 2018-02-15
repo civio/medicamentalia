@@ -267,7 +267,7 @@
       country = countries.filter (e) -> e.code == d.code
       if country[0] and country[0]['gni']
           data.push
-            value:      +d['2017']
+            value:      +d['estimated']
             id:         country[0].code
             name:       country[0]['name_'+lang]
             population: +country[0]['population']
