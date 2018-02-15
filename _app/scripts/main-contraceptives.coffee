@@ -385,7 +385,6 @@
     $('#contraceptives-app .select-country')
       .change ->
         country_code = $(this).val()
-        console.log 'change', country_code
         # Use
         data_use_country = data_use.filter (d) -> d.code == country_code
         if data_use_country and data_use_country[0]
@@ -494,8 +493,6 @@
           delete d.country
         else
           console.warn 'No country data for '+d.code
-
-      console.log userCountry
 
       if $('#treemap-contraceptives-use').length
         setupConstraceptivesUseTreemap data_use
