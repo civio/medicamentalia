@@ -278,13 +278,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       {% include contraceptives/app-item.html title='Sin educación' img='woman' %}
     </div>
     <div class="col-sm-3">
-      {% include contraceptives/app-item.html title='Educación primaria' img='woman' %}
+      {% include contraceptives/app-item.html title='Educación primaria' img='woman-primary' %}
     </div>
     <div class="col-sm-3">
-      {% include contraceptives/app-item.html title='Educación secundaria' img='woman' %}
+      {% include contraceptives/app-item.html title='Educación secundaria' img='woman-secondary' %}
     </div>
     <div class="col-sm-3">
-      {% include contraceptives/app-item.html title='Educación superior' img='woman' %}
+      {% include contraceptives/app-item.html title='Educación superior' img='woman-superior' %}
     </div>
   </div>
 </div>
