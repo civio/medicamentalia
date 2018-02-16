@@ -244,7 +244,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <div class="graph-container">
 
 <!-- URBANO / RURAL -->
-<div id="contraceptives-app">
+<div id="contraceptives-filter-0" class="contraceptives-filter">
   <div class="row">
     <div class="col-sm-6">
       {% include contraceptives/app-item.html title='Entorno urbano' img='woman-urban' %}
@@ -257,7 +257,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 <!-- EDAD -->
-<div id="contraceptives-app">
+<div id="contraceptives-filter-1" class="contraceptives-filter">
   <div class="row">
     <div class="col-sm-4">
       {% include contraceptives/app-item.html title='Entre 15 y 24 años' img='woman-younger' %}
@@ -272,7 +272,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </div>
 
 <!-- ESTUDIOS -->
-<div id="contraceptives-app">
+<div id="contraceptives-filter-2" class="contraceptives-filter">
   <div class="row">
     <div class="col-sm-3">
       {% include contraceptives/app-item.html title='Sin educación' img='woman' %}
