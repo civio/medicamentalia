@@ -2730,6 +2730,12 @@ body.guatemala-graph {
   .bar-others-opposed{
     background: lighten($color-green-light, 3%);
   }
+  .bar{
+    @include transition(.3s ease-out background);
+    &.disabled{
+      background: mix($gray-light, $gray-lighter, 25%);
+    }
+  }
 }
 
 #contraceptives-reasons-opposed-legend{
@@ -2737,15 +2743,25 @@ body.guatemala-graph {
   margin: -10px 0 15px;
   text-align: left;
 
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
   li{
     color: white;
     list-style: none;
     display: inline-block;
+    float: left;
     font-size: 0.75em;
-    line-height: 2em;
+    line-height: 30px;
     padding: 0 8px;
-    margin: 0 4px 6px 0;
+    margin: 0;
     cursor: pointer;
+    border-right: 4px solid white;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
 
     &.respondent-opposed{
       background: darken($color-green-dark, 2%); 

@@ -36,13 +36,13 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
         en: 'male sterilization'
       labels: [
         {
-          cx_factor: 0.463
-          cy_factor: 0.263
+          cx_factor: 0.265
+          cy_factor: 0.297
           r: 0
-          textOffset: [-20, 10]
+          textOffset: [30, 25]
           label:
-            es: 'Reino Unido'
-            en: 'United Kingdom'
+            es: 'Canadá'
+            en: 'Canada'
         }
       ]
     },
@@ -106,13 +106,13 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
         en: 'male condom'
       labels: [
         {
-          cx_factor: 0.265
-          cy_factor: 0.297
+          cx_factor: 0.542
+          cy_factor: 0.345
           r: 0
-          textOffset: [30, 25]
+          textOffset: [-12, 0]
           label:
-            es: 'Canadá'
-            en: 'Canada'
+            es: 'Grecia'
+            en: 'Greece'
         },
         {
           cx_factor: 0.564

@@ -348,10 +348,6 @@
     $(window).resize useMap.onResize
 
 
-  # Contraceptives Reasons Graphs
-  # -----------------------------
-
-
   # Contraceptives Use Treenap
   # --------------------------
 
@@ -375,6 +371,21 @@
     useTreemap.setData data_use, userCountry.code, userCountry.name
     # set resize
     $(window).resize useTreemap.onResize
+
+
+  # Contraceptives Reasons Opposition Graphs
+  # ----------------------------------------
+
+  setupReasonsOpposedGraph = ->
+    $bars = $('#contraceptives-reasons-opposed .bar')
+    $('#contraceptives-reasons-opposed-legend li')
+      .mouseover ->
+        $bars
+          .addClass('disabled')
+          .filter('.bar-'+$(this).attr('class'))
+            .removeClass('disabled')
+      .mouseout ->
+        $bars.removeClass('disabled')
 
 
   # Contraceptives App
@@ -416,40 +427,6 @@
       .val userCountry.code
       .trigger 'change'
 
-
-  # Contraceptives App
-  # -------------------
-
-  ###
-  setupMaternalMortality = ->
-    dataIndex = [0..4999]
-    mortalityGraph = d3.select('#maternal-mortality-developed')
-    mortalityGraph.append('ul')
-      .selectAll('li')
-        .data(dataIndex)
-      .enter().append('li')
-        .append('svg')
-          .append('use')
-            .attr('xlink:href', '#icon-woman')
-            .attr('viewBox', '0 0 193 450')
-    # Resize handler
-    resizeHandler = ->
-      if graphWidth != mortalityGraph.node().offsetWidth
-        graphWidth = mortalityGraph.node().offsetWidth
-        itemsWidth = (graphWidth / 100) - 2
-        itemsHeight = 2.33*itemsWidth
-        #itemsWidth = if graphWidth < 480 then '10%' else '5%'
-        #itemsHeight = if graphWidth < 480 then graphWidth * 0.1 / 0.75 else graphWidth * 0.05 / 0.75
-        mortalityGraph.selectAll('li')
-          .style 'width', itemsWidth+'px'
-          .style 'height', itemsHeight+'px'
-        mortalityGraph.selectAll('svg')
-          .attr 'width', itemsWidth
-          .attr 'height', itemsHeight
-      #mortalityGraph.style 'margin-top', (($('body').height()-mortalityGraph.node().offsetHeight)*.5)+'px'
-    window.addEventListener 'resize', resizeHandler
-    resizeHandler()
-  ###
 
   # Setup
   # ---------------
@@ -512,10 +489,10 @@
       if $('#carousel-marie-stopes').length
         setupScrollama 'carousel-marie-stopes'
 
+      if $('#contraceptives-reasons-opposed').length
+        setupReasonsOpposedGraph()
+
       if $('#contraceptives-app').length
         setupContraceptivesApp data_use, data_unmetneeds, data_reasons
-
-      #if $('#maternal-mortality-developed').length
-      #  setupMaternalMortality()
 
 ) jQuery
