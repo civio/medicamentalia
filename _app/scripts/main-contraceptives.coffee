@@ -388,46 +388,6 @@
         $bars.removeClass('disabled')
 
 
-  # Contraceptives App
-  # -------------------
-
-  setupContraceptivesApp = (data_use, data_unmetneeds, data_reasons) ->
-    # setupScrollama 'contraceptives-app-container'
-    $('#contraceptives-app .select-country')
-      .change ->
-        country_code = $(this).val()
-        # Use
-        data_use_country = data_use.filter (d) -> d.code == country_code
-        if data_use_country and data_use_country[0]
-          country_methods = methods_keys.map (key, i) -> {'name': methods_names[lang][i], 'value': +data_use_country[0][key]}
-          country_methods = country_methods.sort (a,b) -> b.value-a.value
-          $('#contraceptives-app-data-use').html Math.round(+data_use_country[0]['Any modern method'])+'%'
-          $('#contraceptives-app-data-main-method').html country_methods[0].name
-          $('#contraceptives-app-data-main-method-value').html Math.round(country_methods[0].value)+'%'
-          $('#contraceptives-app-use').show()
-        else
-          $('#contraceptives-app-use').hide()
-        # Unmetneeds
-        data_unmetneeds_country = data_unmetneeds.filter (d) -> d.code == country_code
-        if data_unmetneeds_country and data_unmetneeds_country[0]
-          $('#contraceptives-app-data-unmetneeds').html Math.round(+data_unmetneeds_country[0]['2017'])+'%'
-          $('#contraceptives-app-unmetneeds').show()
-        else
-          $('#contraceptives-app-unmetneeds').hide()
-        # Reasons
-        data_reasons_country = data_reasons.filter (d) -> d.code == country_code
-        if data_reasons_country and data_reasons_country[0]
-          reasons = Object.keys(reasons_names).map (reason) -> {'name': reasons_names[reason], 'value': +data_reasons_country[0][reason]}
-          reasons = reasons.sort (a,b) -> b.value-a.value
-          $('#contraceptives-app-data-reason').html reasons[0].name
-          $('#contraceptives-app-data-reason-value').html Math.round(reasons[0].value)+'%'
-          $('#contraceptives-app-reason').show()
-        else
-          $('#contraceptives-app-reason').hide()
-      .val userCountry.code
-      .trigger 'change'
-
-
   # Setup
   # ---------------
 
@@ -493,6 +453,6 @@
         setupReasonsOpposedGraph()
 
       if $('#contraceptives-app').length
-        setupContraceptivesApp data_use, data_unmetneeds, data_reasons
+        new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], reasons_names
 
 ) jQuery

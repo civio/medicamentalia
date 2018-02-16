@@ -98,6 +98,7 @@ var js_paths = {
     '_app/scripts/treemap-graph.coffee',
     '_app/scripts/contraceptives-use-treemap-graph.coffee',
     '_app/scripts/beeswarm-scatterplot-graph.coffee',
+    '_app/scripts/contraceptives-app.coffee',
     '_app/scripts/main-contraceptives.coffee'
   ]
 };
