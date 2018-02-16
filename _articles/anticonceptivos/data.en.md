@@ -1,6 +1,6 @@
 ---
 category:         anticonceptivos
-title:            Datos
+title:            Data
 subtitle:         Radiografía de un derecho
 description:      Una de cada diez mujeres en todo el planeta no usa los anticonceptivos que necesita. Analizamos cómo se ejerce este derecho y cómo los efectos secundarios, el machismo, las creencias y las imposiciones de terceros lo vulneran.
 home_description: Una de cada diez mujeres en todo el planeta no usa los anticonceptivos que necesita. Analizamos cómo se ejerce este derecho y cómo los efectos secundarios, el machismo, las creencias y las imposiciones de terceros lo vulneran.
@@ -8,9 +8,9 @@ img:              articles/viz-screenshoot-1040x456.jpg
 order:            1
 highlighted:      true
 author:           ...
-slug:             datos
+slug:             data
 ref:              data
-lang:             es
+lang:             en
 ---
 
 <div class="container page-content">
@@ -153,10 +153,10 @@ Puede ser que quieran espaciar los embarazos, por razones de salud, para poder c
       <p>Porcentaje de mujeres con <strong>necesidades no cubiertas</strong></p>
       <div id="unmet-needs-gdp-graph"></div>
       <ul class="x-legend">
-        <li>Renta baja</li>
-        <li>Renta media-baja</li>
-        <li>Renta media-alta</li>
-        <li>Renta alta</li>
+        <li>Low income</li>
+        <li>Lower-middle income</li>
+        <li>Upper-middle income</li>
+        <li>High income</li>
       </ul>
     </div>
   </div>
@@ -195,7 +195,7 @@ Vamos a centrarnos en esos países en los que la situación es más complicada. 
 <div class="container-right">
   <div class="graph-container">
     <p class="graph-container-caption">Razones de salud para no usar anticonceptivos</p>
-    {% include contraceptives/reasons-health.es.html %}
+    {% include contraceptives/reasons-health.en.html %}
   </div>
 </div>
 
@@ -256,7 +256,7 @@ Muchas mujeres aseguran que no usan anticonceptivos porque **no tienen sexo de f
       <li class="religious-prohibition">Religiosa</li>
       <li class="others-opposed">Otras</li>
     </ul>
-    {% include contraceptives/reasons-opposed.es.html %}
+    {% include contraceptives/reasons-opposed.en.html %}
   </div>
 </div>
 
