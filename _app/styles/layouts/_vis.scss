@@ -2504,8 +2504,21 @@ body.guatemala-graph {
     text-align: left;
   }
 
-  .contraceptives-app-filters p{
-    margin: 15px 0;
+  .contraceptives-app-filters{
+    p{
+      margin: 15px 0;
+    }
+    .btn:hover{
+      color: $brand-primary;
+      border-color: $brand-primary;
+      background: white;
+    }
+    .btn.active{
+      color: white;
+      background: $brand-primary;
+      border-color: $brand-primary;
+      font-weight: 400;
+    }
   }
 
   .contraceptives-app-img{
@@ -2520,7 +2533,10 @@ body.guatemala-graph {
     border-color: #ccc;
   }
   .select2-selection__rendered{
-    line-height: 32px;
+    color: #333;
+    line-height: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
   }
   .select2-selection__arrow{
     height: 30px;

@@ -74,6 +74,35 @@
       "traditional methods"
     ]
 
+  methods_dhs_names = 
+    'es': 
+      '1': "píldora"
+      '2': "DIU"
+      '3': "inyectable"
+      '5': "condón"
+      '6': "esterilización femenina"
+      '7': "esterilización masculina"
+      '8': "abstinencia periódica"
+      '9': "marcha atrás"
+      '10': "otros"
+      '11': "implante"
+      '13': "método de la amenorrea de la lactancia (MELA)"
+      '17': "métodos tradicionales"
+    'en':
+      '1': "pill"
+      '2': "IUD"
+      '3': "injectable"
+      '5': "condom"
+      '6': "female sterilization"
+      '7': "male sterilization"
+      '8': "periodic abstinence"
+      '9': "withdrawal"
+      '10': "other"
+      '11': "implant"
+      '13': "lactational amenorrhea method (LAM)"
+      '17': "traditional methods"
+
+
   ###
   methods_icons = 
     "Female sterilization": 'sterilization'
@@ -453,6 +482,6 @@
         setupReasonsOpposedGraph()
 
       if $('#contraceptives-app').length
-        new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], reasons_names
+        new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names
 
 ) jQuery
