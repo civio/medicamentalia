@@ -41,10 +41,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <div id="contraceptives-filter-0" class="contraceptives-filter">
   <div class="row">
     <div class="col-sm-6">
-      {% include contraceptives/app-item.html id="contraceptives-filter-0-0" title='Entorno urbano' img='woman-urban' %}
+      {% include contraceptives/app-item.html id="contraceptives-filter-0-1" title='Entorno urbano' img='woman-urban' %}
     </div>
     <div class="col-sm-6">
-      {% include contraceptives/app-item.html id="contraceptives-filter-0-1" title='Entorno rural' img='woman-rural' %}
+      {% include contraceptives/app-item.html id="contraceptives-filter-0-2" title='Entorno rural' img='woman-rural' %}
     </div>
   </div>
 </div>
@@ -54,13 +54,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <div id="contraceptives-filter-1" class="contraceptives-filter">
   <div class="row">
     <div class="col-sm-4">
-      {% include contraceptives/app-item.html id="contraceptives-filter-1-0" title='Entre 15 y 24 años' img='woman-younger' %}
+      {% include contraceptives/app-item.html id="contraceptives-filter-1-1" title='Entre 15 y 24 años' img='woman-younger' %}
     </div>
     <div class="col-sm-4">
-      {% include contraceptives/app-item.html id="contraceptives-filter-1-1" title='Entre 25 y 34 años' img='woman' %}
+      {% include contraceptives/app-item.html id="contraceptives-filter-1-2" title='Entre 25 y 34 años' img='woman' %}
     </div>
     <div class="col-sm-4">
-      {% include contraceptives/app-item.html id="contraceptives-filter-1-2" title='Entre 35 y 49 años' img='woman-older' %}
+      {% include contraceptives/app-item.html id="contraceptives-filter-1-3" title='Entre 35 y 49 años' img='woman-older' %}
     </div>
   </div>
 </div>
@@ -79,6 +79,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
     <div class="col-sm-3">
       {% include contraceptives/app-item.html id="contraceptives-filter-2-3" title='Educación superior' img='woman-superior' %}
+    </div>
+  </div>
+</div>
+
+<!-- INGRESOS -->
+<div id="contraceptives-filter-3" class="contraceptives-filter">
+  <div class="row">
+    <div class="col-sm-3">
+      {% include contraceptives/app-item.html id="contraceptives-filter-3-1" title='Ingresos bajos' img='woman' %}
+    </div>
+    <div class="col-sm-3">
+      {% include contraceptives/app-item.html id="contraceptives-filter-3-2" title='Ingresos medios-bajos' img='woman' %}
+    </div>
+    <div class="col-sm-3">
+      {% include contraceptives/app-item.html id="contraceptives-filter-3-3" title='Ingresos medios' img='woman' %}
+    </div>
+    <div class="col-sm-3">
+      {% include contraceptives/app-item.html id="contraceptives-filter-3-4" title='Ingresos medios-altos' img='woman' %}
+    </div>
+    <div class="col-sm-3">
+      {% include contraceptives/app-item.html id="contraceptives-filter-3-5" title='Ingresos altos' img='woman' %}
     </div>
   </div>
 </div>

@@ -5,6 +5,7 @@ class window.ContraceptivesApp
     'contraceptives-filter-0': 'residence'
     'contraceptives-filter-1': 'age'
     'contraceptives-filter-2': 'education'
+    'contraceptives-filter-3': 'wealth'
 
 
   constructor: (data_use, data_unmetneeds, data_reasons, user_country, methods_keys, methods_names, reasons_names) ->
@@ -81,8 +82,8 @@ class window.ContraceptivesApp
       d3.csv $('body').data('baseurl')+'/data/contraceptives-reasons/UGIR52DT_'+@filter_keys[@filter]+'.csv', (error, data) =>
         console.log data
         if data
-          data.forEach (d,i) =>
-            @setAppItemData @filterEl.find('#'+@filter+'-'+i), 100*d.using_modern_method/d.n, d.most_popular_method, 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, d.most_popular_reason, 100*d.most_popular_reason_n/d.n_reasons
+          data.forEach (d) =>
+            @setAppItemData @filterEl.find('#'+@filter+'-'+d.id), 100*d.using_modern_method/d.n, d.most_popular_method, 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, d.most_popular_reason, 100*d.most_popular_reason_n/d.n_reasons
 
 
   setAppItemData: ($el, use, method, method_value, unmetneeds, reason, reason_value) ->
