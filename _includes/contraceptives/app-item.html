@@ -1,23 +1,16 @@
-<div class="row"{% if include.id %} id="{{ include.id }}"{% endif %}>
-  <div class="col-sm-5">
-    <img class="contraceptives-app-img" src="/assets/images/svg/{{ include.img }}.svg">
+<img class="contraceptives-app-img" src="/assets/images/svg/{{ include.img }}.svg">
+<div class="contraceptives-app-data">
+  {% if include.title %}
+  <h5>{{ include.title }}</h5>
+  {% endif %}
+  <div class="contraceptives-app-use">
+    <p><strong class="contraceptives-app-data-use"></strong> usa algún método anticonceptivo <small>(X% más que la media mundial)</small></p>
+    <p>Principal método: <strong class="contraceptives-app-data-main-method"></strong> <small>(lo usa el <span class="contraceptives-app-data-main-method-value"></span>)</small></p>
   </div>
-  <div class="col-sm-7">
-    <div class="contraceptives-app-data">
-      {% if include.title %}
-      <h5>{{ include.title }}</h5>
-      {% endif %}
-      <div class="contraceptives-app-use">
-        <p><strong class="contraceptives-app-data-use"></strong> usa algún método anticonceptivo <small>(X% más que la media mundial)</small></p>
-        <p>Principal método: <strong class="contraceptives-app-data-main-method"></strong> <small>(lo usa el <span class="contraceptives-app-data-main-method-value"></span>)</small></p>
-      </div>
-      <div class="contraceptives-app-unmetneeds">
-        <p><strong class="contraceptives-app-data-unmetneeds"></strong> Tiene necesidades no cubiertas <small>(X% menos que la media mundial)</small></p>
-      </div>
-      <div class="contraceptives-app-reason">
-        <p><strong class="contraceptives-app-data-reason"></strong> es la razón principal <small>(afecta al <span class="contraceptives-app-data-reason-value"></span>)</small></p>
-      </div>
-    </div>
-    
+  <div class="contraceptives-app-unmetneeds">
+    <p><strong class="contraceptives-app-data-unmetneeds"></strong> Tiene necesidades no cubiertas <small>(X% menos que la media mundial)</small></p>
+  </div>
+  <div class="contraceptives-app-reason">
+    <p><strong class="contraceptives-app-data-reason"></strong> es la razón principal <small>(afecta al <span class="contraceptives-app-data-reason-value"></span>)</small></p>
   </div>
 </div>

@@ -121,31 +121,94 @@
   ###
 
   reasons_names = 
-    "a": "not married"
-    "b": "not having sex"
-    "c": "infrequent sex"
-    "d": "menopausal/hysterectomy"
-    "e": "subfecund/infecund"
-    "f": "postpartum amenorrheic"
-    "g": "breastfeeding"
-    "h": "fatalistic"
-    "i": "respondent opposed"       # opposed
-    "j": "husband/partner opposed"  # opposed
-    "k": "others opposed"           # opposed
-    "l": "religious prohibition"    # opposed
-    "m": "knows no method"
-    "n": "knows no source"
-    "o": "health concerns"                      # salud
-    "p": "fear of side effects/health concerns" # salud
-    "q": "lack of access/too far"
-    "r": "costs too much"
-    "s": "inconvenient to use"
-    "t": "interferes with bodys processes"      # salud
-    "u": "preferred method not available"
-    "v": "no method available"
-    "w": "(no estándar)"
-    "x": "other"
-    "z": "don't know"
+    'es':
+      "a": "not married"
+      "b": "not having sex"
+      "c": "infrequent sex"
+      "d": "menopausal/hysterectomy"
+      "e": "subfecund/infecund"
+      "f": "postpartum amenorrheic"
+      "g": "breastfeeding"
+      "h": "fatalistic"
+      "i": "respondent opposed"       # opposed
+      "j": "husband/partner opposed"  # opposed
+      "k": "others opposed"           # opposed
+      "l": "religious prohibition"    # opposed
+      "m": "knows no method"
+      "n": "knows no source"
+      "o": "health concerns"                      # salud
+      "p": "fear of side effects/health concerns" # salud
+      "q": "lack of access/too far"
+      "r": "costs too much"
+      "s": "inconvenient to use"
+      "t": "interferes with bodys processes"      # salud
+      "u": "preferred method not available"
+      "v": "no method available"
+      "w": "(no estándar)"
+      "x": "other"
+      "z": "don't know"
+    'en':
+      "a": "not married"
+      "b": "not having sex"
+      "c": "infrequent sex"
+      "d": "menopausal/hysterectomy"
+      "e": "subfecund/infecund"
+      "f": "postpartum amenorrheic"
+      "g": "breastfeeding"
+      "h": "fatalistic"
+      "i": "respondent opposed"
+      "j": "husband/partner opposed"
+      "k": "others opposed"
+      "l": "religious prohibition"
+      "m": "knows no method"
+      "n": "knows no source"
+      "o": "health concerns"
+      "p": "fear of side effects/health concerns"
+      "q": "lack of access/too far"
+      "r": "costs too much"
+      "s": "inconvenient to use"
+      "t": "interferes with bodys processes"
+      "u": "preferred method not available"
+      "v": "no method available"
+      "w": "(no estándar)"
+      "x": "other"
+      "z": "don't know"
+
+  reasons_dhs_names = 
+    'es': 
+      'v3a08a': 'not married'
+      'v3a08b': 'not having sex'
+      'v3a08c': 'infrequent sex'
+      'v3a08d': 'menopausal/hysterectomy'
+      'v3a08e': 'subfecund/infecund'
+      'v3a08f': 'postpartum amenorrheic'
+      'v3a08g': 'breastfeeding'
+      'v3a08h': 'fatalistic'
+      'v3a08i': 'respondent opposed'
+      'v3a08j': 'husband/partner opposed'
+      'v3a08k': 'others opposed'
+      'v3a08l': 'religious prohibition'
+      'v3a08m': 'knows no method'
+      'v3a08n': 'knows no source'
+      'v3a08o': 'health concerns'
+      'v3a08p': 'fear of side effects'
+    'en': 
+      'v3a08a': 'not married'
+      'v3a08b': 'not having sex'
+      'v3a08c': 'infrequent sex'
+      'v3a08d': 'menopausal/hysterectomy'
+      'v3a08e': 'subfecund/infecund'
+      'v3a08f': 'postpartum amenorrheic'
+      'v3a08g': 'breastfeeding'
+      'v3a08h': 'fatalistic'
+      'v3a08i': 'respondent opposed'
+      'v3a08j': 'husband/partner opposed'
+      'v3a08k': 'others opposed'
+      'v3a08l': 'religious prohibition'
+      'v3a08m': 'knows no method'
+      'v3a08n': 'knows no source'
+      'v3a08o': 'health concerns'
+      'v3a08p': 'fear of side effects'
 
   # Scrollama Setup
   # ---------------
@@ -452,7 +515,7 @@
         if item and item[0]
           d.code = item[0].code
           d.name = item[0]['name_'+lang]
-          Object.keys(reasons_names).forEach (reason) ->
+          Object.keys(reasons_names[lang]).forEach (reason) ->
             d[reason] = 100*d[reason]
             if d[reason] > 100
               console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
@@ -473,7 +536,7 @@
         setupUnmetNeedsGdpGraph data_unmetneeds, countries
 
       #if $('#contraceptives-reasons-opposed').length
-      #  new ContraceptivesReasons data_reasons, countries, reasons_names
+      #  new ContraceptivesReasons data_reasons, countries, reasons_names[lang]
 
       if $('#carousel-marie-stopes').length
         setupScrollama 'carousel-marie-stopes'
@@ -482,6 +545,6 @@
         setupReasonsOpposedGraph()
 
       if $('#contraceptives-app').length
-        new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names
+        new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang]
 
 ) jQuery

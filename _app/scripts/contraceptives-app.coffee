@@ -9,7 +9,7 @@ class window.ContraceptivesApp
     'contraceptives-filter-3': 'wealth'
 
 
-  constructor: (data_use, data_unmetneeds, data_reasons, user_country, methods_keys, methods_names, methods_dhs_names, reasons_names) ->
+  constructor: (data_use, data_unmetneeds, data_reasons, user_country, methods_keys, methods_names, methods_dhs_names, reasons_names, reasons_dhs_names) ->
 
     @data = 
       use:        data_use
@@ -20,6 +20,7 @@ class window.ContraceptivesApp
     @methodsNames     = methods_names
     @methodsDHSNames  = methods_dhs_names
     @reasonsNames     = reasons_names
+    @reasonsDHSNames  = reasons_dhs_names
 
     @$app = $('#contraceptives-app')
 
@@ -55,7 +56,7 @@ class window.ContraceptivesApp
         console.log data
         d = data[0]
         # setup data
-        @setAppItemData @$app, 100*d.using_modern_method/d.n, @methodsDHSNames[d.most_popular_method], 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, d.most_popular_reason, 100*d.most_popular_reason_n/d.n_reasons
+        @setAppItemData @$app, 100*d.using_modern_method/d.n, @methodsDHSNames[d.most_popular_method], 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, @reasonsDHSNames[d.most_popular_reason], 100*d.most_popular_reason_n/d.n_reasons
         # show filters
         @$app.find('.contraceptives-app-filters').show()
     else
@@ -97,7 +98,7 @@ class window.ContraceptivesApp
         console.log data
         if data
           data.forEach (d) =>
-            @setAppItemData @filterEl.find('#'+@filter+'-'+d.id), 100*d.using_modern_method/d.n, @methodsDHSNames[d.most_popular_method], 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, d.most_popular_reason, 100*d.most_popular_reason_n/d.n_reasons
+            @setAppItemData @filterEl.find('#'+@filter+'-'+d.id), 100*d.using_modern_method/d.n, @methodsDHSNames[d.most_popular_method], 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, @reasonsDHSNames[d.most_popular_reason], 100*d.most_popular_reason_n/d.n_reasons
 
 
   setAppItemData: ($el, use, method, method_value, unmetneeds, reason, reason_value) ->

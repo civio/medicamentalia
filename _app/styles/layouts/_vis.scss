@@ -2496,6 +2496,17 @@ body.guatemala-graph {
     margin: 0 auto;
   }
 
+  .contraceptives-app-data-container{
+    display: table;
+    width: 100%;
+
+    > div{
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
   .contraceptives-app-data{
     margin: 30px 0;
   }
@@ -2560,6 +2571,12 @@ body.guatemala-graph {
     }
   }
   */
+}
+
+#contraceptives-filter-3 > .row > .col-sm-3{
+  @media (min-width: $screen-sm) {
+    width: 20%;
+  }
 }
 
 #unmet-needs-gdp-graph{
