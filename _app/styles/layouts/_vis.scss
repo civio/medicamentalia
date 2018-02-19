@@ -2488,9 +2488,11 @@ body.guatemala-graph {
 }
 
 #contraceptives-app{
+  opacity: 0;
+  @include transition(0.3s ease-out opacity);
 
   .select-country{
-    max-width: 220px;
+    max-width: 260px;
     margin: 0 auto;
   }
 
@@ -2498,13 +2500,12 @@ body.guatemala-graph {
     margin: 30px 0;
   }
 
-  .contraceptives-app-data,
-  .contraceptives-app-filters{
+  .contraceptives-app-data{
     text-align: left;
   }
 
   .contraceptives-app-filters p{
-    margin-bottom: 5px;
+    margin: 15px 0;
   }
 
   .contraceptives-app-img{
@@ -2512,7 +2513,22 @@ body.guatemala-graph {
     height: auto;
     margin: 20px auto 0;
   }
-  
+
+  .select2-selection{
+    border-radius: 0;
+    height: 32px;
+    border-color: #ccc;
+  }
+  .select2-selection__rendered{
+    line-height: 32px;
+  }
+  .select2-selection__arrow{
+    height: 30px;
+  }
+  .select2-results__option{
+    padding: 5px;
+  }
+
   /*
   .scroll-text{
     max-width: 560px;

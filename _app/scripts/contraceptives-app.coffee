@@ -21,11 +21,14 @@ class window.ContraceptivesApp
     @$app = $('#contraceptives-app')
 
     @$app.find('.select-country')
+      .select2()
       .change @onSelectCountry
       .val user_country.code
       .trigger 'change'
 
     @$app.find('.contraceptives-app-filters .btn').click @onSelectFilter
+
+    @$app.css('opacity',1)
 
 
   onSelectCountry: (e) =>
@@ -63,6 +66,8 @@ class window.ContraceptivesApp
       reason_value = reasons[0].value
 
     @setAppItemData @$app, use, method, method_value, unmetneeds, reason, reason_value
+
+    # check filters availability
 
 
   onSelectFilter: (e) =>

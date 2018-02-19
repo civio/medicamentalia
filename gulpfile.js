@@ -50,6 +50,7 @@ var js_paths = {
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
     'node_modules/scrollama/build/scrollama.js',
+    'node_modules/select2/dist/js/select2.js',
     'node_modules/topojson-client/dist/topojson-client.js',
     '_app/scripts/vendor/selection-sharer.js',
     '_app/scripts/vendor/d3-bundle.js',
