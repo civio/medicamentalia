@@ -2497,6 +2497,11 @@ body.guatemala-graph {
   opacity: 0;
   @include transition(0.3s ease-out opacity);
 
+  .contraceptives-app-label{
+    text-transform: uppercase;
+    font-size: .875em;
+  }
+
   .select-country{
     max-width: 260px;
     margin: 0 auto;
