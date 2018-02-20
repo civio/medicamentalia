@@ -205,7 +205,7 @@ La mayoría de quienes responden que no usan anticonceptivos por razones de salu
 "En cuanto a los efectos secundarios, es necesario que haya mucho más progreso e investigación. Esto no es suficiente, sobre todo porque muchos de los métodos anticonceptivos se focalizan solo en la mujer, mientras para los hombres hay muy pocas oportunidades de ser activos en este sentido", argumenta Mirjam Beck, una alemana de 27 años. En 2016 [se frenó](http://cnnespanol.cnn.com/2016/10/31/inyeccion-anticonceptiva-masculina-es-altamente-efectiva-pero-tiene-efectos-secundarios/) el estudio de un anticonceptivo masculino por sus efectos secundarios, muy similares a los que sufren las mujeres en la actualidad. 
 
 <div class="panel">
-{% include blockquote-media.html img="contraceptives/mirjam-beck-thumb" quote="Sentía que cualquier tipo de anticonceptivo hormonal me afectaba tanto física como psicológicamente." author="Mirjam Beck" %}
+{% include blockquote-media.html img="contraceptives/mirjam-beck-thumb" quote="Sentía que cualquier tipo de anticonceptivo hormonal me afectaba tanto física como psicológicamente." author="Mirjam Beck" author_description="alemana de 27 años" %}
 </div>
 
 Y a ellos se suman las creencias no basadas en la evidencia científica, como que pueden dañar los ovarios, [producir infertilidad](https://www.guttmacher.org/journals/ipsrh/2015/12/belief-family-planning-myths-individual-and-community-levels-and-modern) o hasta dañar al miembro masculino. 
@@ -279,7 +279,7 @@ La clave es quién toma esta decisión. Para Alieu Jammeh, de Naciones Unidas, e
 </div>
 
 > Se sigue imponiendo la moral personal a la hora de atender a las usuarias
-> <footer>Patricia Ortega</footer>
+> <footer><strong>Patricia Ortega</strong>, miembro de la asociación mexicana Ddeser</footer>
 
 La suegra, el padre, o hasta los servicios médicos o farmacéuticos, entre otros, pueden intervenir en la decisión de la mujer. La Red por los derechos sexuales y reproductivos en México (Ddeser) realizó un monitoreo sobre cómo funcionaba los servicios de reparto de anticonceptivos con dos gobiernos distintos. Entrevistaron a responsables, médicos, funcionarios, usuarias... Y hasta acudieron a los centros como *clientas fantasma*. Encontraron clínicas en las que se niegan a dar condones a jóvenes y se acumulan allí "hasta que caducan", denuncia Patricia Ortega; o donde no dan la píldora a mujeres casadas, por poner solo dos ejemplos.
 
@@ -291,7 +291,7 @@ Cada vez es menos frecuente quienes responden que no conocen métodos o que no t
 
 En Gambia, los anuncios en televisión promoviendo el uso de anticonceptivos fueron una revolución social hace ya muchos años, no sin críticas por parte de los sectores católicos.
 
-{% include caption.html img="contraceptives/fomento-natalidad.jpg" caption="Campañas fomento natalidad" fullWidth=true %}
+{% include caption.html img="contraceptives/fomento-natalidad.jpg" caption="“Reproducíos como conejos”, aconseja el ministerio de sanidad polaco" fullWidth=true %}
 
 En Europa hace tiempo que escasean las campañas de promoción de los anticonceptivos -[excepto si las paga Durex](https://www.youtube.com/watch?v=KR4A-c23rsE)-, y cada vez se invierte más en fomento de la natalidad, ya sea a través de una [campaña](https://elpais.com/internacional/2017/11/10/actualidad/1510327993_647673.html) del Gobierno polaco para animar a sus ciudadanos a tener sexo o con las [campañas anuales del gobierno gallego](https://civio.es/el-boe-nuestro-de-cada-dia/2013/07/29/galicia-licita-por-640-000-euros-una-campana-para-animar-a-sus-ciudadanos-a-tener-hijos/) en las que se apela a la “necesaria responsabilidad compartida” para traer más niños al mundo.
 
@@ -302,6 +302,97 @@ En 2012, [85 millones de embarazos en todo el mundo](https://www.ncbi.nlm.nih.go
 Y más: 830 mujeres mueren cada día por causas relacionadas con el embarazo y el parto. Casi todas ellas suceden en países en desarrollo. [Fuente](http://www.who.int/maternal-health/en/). De hecho, la OMS estima que más de un tercio de esas muertes, [en 2015](http://www.who.int/reproductivehealth/publications/monitoring/maternal-mortality-2015/en/), se produjeron en Nigeria y La India. O, dicho de otra forma: si vives en una región desarrollada tienes una posibilidad entre 4.900 de morir en el parto; si vives en regiones en desarrollo, una entre 150.
 
 Es una cuestión de salud pública, pero también de derechos. El de elegir de forma libre si se quiere tener hijos, cómo y cuándo.
+</div>
+</div>
+
+<!-- APP -->
+<div class="contraceptives-app-container">
+<div class="container page-content">
+<div class="page-content-container">
+
+<div class="graph-container">
+  <div id="contraceptives-app">
+    <div>
+      <p>Selecciona un país</p>
+      {% include contraceptives/countries-select.html %}
+    </div>
+    <div class="contraceptives-app-data-container">{% include contraceptives/app-item.html img='woman' %}</div>
+    <div class="contraceptives-app-filters">
+      <p>Filtra según</p>
+      <a class="btn btn-default" href="#contraceptives-filter-0" role="button" title="Entorno urbano o rural">Entorno urbano o rural</a>
+      <a class="btn btn-default" href="#contraceptives-filter-1" role="button" title="Edad">Edad</a>
+      <a class="btn btn-default" href="#contraceptives-filter-2" role="button" title="N ivel de estudios">Nivel de estudios</a>
+      <a class="btn btn-default" href="#contraceptives-filter-3" role="button" title="Nivel de renta">Nivel de renta</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="graph-container">
+<!-- URBANO / RURAL -->
+<div id="contraceptives-filter-0" class="contraceptives-filter">
+  <div class="row">
+    <div id="contraceptives-filter-0-1" class="col-sm-6">
+      {% include contraceptives/app-item.html title='Entorno urbano' img='woman-urban' %}
+    </div>
+    <div id="contraceptives-filter-0-2" class="col-sm-6">
+      {% include contraceptives/app-item.html title='Entorno rural' img='woman-rural' %}
+    </div>
+  </div>
+</div>
+<!-- EDAD -->
+<div id="contraceptives-filter-1" class="contraceptives-filter">
+  <div class="row">
+    <div id="contraceptives-filter-1-1" class="col-sm-4">
+      {% include contraceptives/app-item.html title='Entre 15 y 24 años' img='woman-younger' %}
+    </div>
+    <div id="contraceptives-filter-1-2" class="col-sm-4">
+      {% include contraceptives/app-item.html title='Entre 25 y 34 años' img='woman' %}
+    </div>
+    <div id="contraceptives-filter-1-3" class="col-sm-4">
+      {% include contraceptives/app-item.html title='Entre 35 y 49 años' img='woman-older' %}
+    </div>
+  </div>
+</div>
+<!-- ESTUDIOS -->
+<div id="contraceptives-filter-2" class="contraceptives-filter">
+  <div class="row">
+    <div id="contraceptives-filter-2-0" class="col-sm-3">
+      {% include contraceptives/app-item.html title='Sin educación' img='woman' %}
+    </div>
+    <div id="contraceptives-filter-2-1" class="col-sm-3">
+      {% include contraceptives/app-item.html title='Educación primaria' img='woman-primary' %}
+    </div>
+    <div id="contraceptives-filter-2-2" class="col-sm-3">
+      {% include contraceptives/app-item.html title='Educación secundaria' img='woman-secondary' %}
+    </div>
+    <div id="contraceptives-filter-2-3" class="col-sm-3">
+      {% include contraceptives/app-item.html title='Educación superior' img='woman-superior' %}
+    </div>
+  </div>
+</div>
+<!-- INGRESOS -->
+<div id="contraceptives-filter-3" class="contraceptives-filter">
+  <div class="row">
+    <div id="contraceptives-filter-3-1" class="col-sm-3">
+      {% include contraceptives/app-item.html title='Ingresos bajos' img='woman' %}
+    </div>
+    <div id="contraceptives-filter-3-2" class="col-sm-3">
+      {% include contraceptives/app-item.html title='Ingresos medios-bajos' img='woman-income-low-medium' %}
+    </div>
+    <div id="contraceptives-filter-3-3" class="col-sm-3">
+      {% include contraceptives/app-item.html title='Ingresos medios' img='woman-income-medium' %}
+    </div>
+    <div id="contraceptives-filter-3-4" class="col-sm-3">
+      {% include contraceptives/app-item.html title='Ingresos medios-altos' img='woman-income-medium-high' %}
+    </div>
+    <div id="contraceptives-filter-3-5" class="col-sm-3">
+      {% include contraceptives/app-item.html title='Ingresos altos' img='woman-income-high' %}
+    </div>
+  </div>
+</div>
+
+</div>
 </div>
 </div>
 
