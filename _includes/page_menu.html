@@ -1,4 +1,5 @@
-{% capture menu %}{% article_menu page %}{% endcapture %}
+{% if page.article_menu %}{% assign menu = page.article_menu %}
+{% else %}{% capture menu %}{% article_menu page %}{% endcapture %}{% endif %}
 {% if menu != '' %}
 <nav class="nav-page page-{{ page.ref }}">
   <div class="nav-page-container">

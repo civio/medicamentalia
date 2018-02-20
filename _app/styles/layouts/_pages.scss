@@ -276,7 +276,8 @@ header {
 }
 
 @media (min-width: $screen-md) {
-  .lang-es .nav-page.page-superbugs .navbar-nav li{
+  .lang-es .nav-page.page-superbugs .navbar-nav li,
+  .nav-page.page-religion .navbar-nav li{
     width: 25%;
   }
 }
@@ -430,9 +431,35 @@ header {
       }
     }
 
-    &.center{
+    &.center,
+    &.literary{
       margin-right: auto;
       margin-left: auto;
+    }
+
+    &.literary{
+      color: $brand-primary;
+      font-family: $font-family-serif;
+      text-align: right;
+      font-weight: 400;
+      font-style: italic;
+      text-indent: 0;
+
+      &:before{
+        display: none;
+      }
+
+      > p{
+        font-size: 20px;
+        line-height: 34px;
+        margin-bottom: 0;
+      }
+
+      footer{
+        font-size: 16px;
+        font-family: $font-family-sans-serif;
+        font-style: normal;
+      }
     }
   }
 
@@ -745,6 +772,12 @@ header {
         margin-top: 0;
         float: none;
         width: 100% !important;
+      }
+      &.literary{
+        margin-top: 0;
+        float: none;
+        width: 60% !important;
+        margin-left: 40%;
       }
     }
 

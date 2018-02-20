@@ -213,7 +213,7 @@ Y a ellos se suman las creencias no basadas en la evidencia científica, como qu
 </div>
 
 
-<div id="carousel-marie-stopes" class="scroll-container">
+<div id="carousel-marie-stopes" class="carousel-scrollama scroll-container">
 <!--  graphic container  -->
 <div class="scroll-graphic">
   <!-- foto señoras general -->
@@ -224,19 +224,19 @@ Y a ellos se suman las creencias no basadas en la evidencia científica, como qu
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="4" data-step="0">
+  <div class="step" data-instance="carousel" data-step="0">
     <p>En Pout, a una hora de Dakar, decenas de mujeres, la mayoría con niños en los brazos, esperan con los pies en la arena y bajo un toldo que les protege del sol, al ritmo de una música bien animada, que arranque el espectáculo. El imam también está presente.</p>
   </div>
-  <div class="step" data-instance="4" data-step="1">
+  <div class="step" data-instance="carousel" data-step="1">
     <p>Se preparan condones, todo el mundo se coloca, el DJ baja la música y Coumba Dieng, de la organización Marie Stopes, empieza su clase práctica sobre anticonceptivos.</p>
   </div>
-  <div class="step" data-instance="4" data-step="2">
+  <div class="step" data-instance="carousel" data-step="2">
     <p>Explica uno a uno los métodos, con ellos en la mano y un entusiasmo que aúna la firmeza de una arenga política y el choteo de un padrino de bodas.</p>
   </div>
-  <div class="step" data-instance="4" data-step="3">
+  <div class="step" data-instance="carousel" data-step="3">
     <p>La principal barrera para convencerlas del uso de métodos anticonceptivos son "los rumores, sobre todo los rumores", admite la maestra de ceremonias de esta particular clase práctica en las afueras.</p>
   </div>
-  <div class="step" data-instance="4" data-step="4"></div>
+  <div class="step" data-instance="carousel" data-step="4"></div>
 </div>
 </div>
 

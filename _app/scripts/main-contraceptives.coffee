@@ -287,9 +287,10 @@
       else if instance == 3
         if unmetneedsGraph
           unmetneedsGraph.setMode step
-      else if instance == 4
-        $('#carousel-marie-stopes .scroll-graphic .active').removeClass('active')
-        $('#carousel-marie-stopes .scroll-graphic .step-'+step).addClass('active')
+      else if instance == 'carousel'
+        graphic = $step.parent().parent().find('.scroll-graphic')
+        graphic.find('.active').removeClass('active')
+        graphic.find('.step-'+step).addClass('active')
 
     # start it up
     # 1. call a resize on load to update width/height/position of elements
@@ -555,5 +556,13 @@
 
       if $('#contraceptives-app').length
         new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang]
+
+
+      if $('#carousel-rabinos').length
+        setupScrollama 'carousel-rabinos'
+      if $('#carousel-imam').length
+        setupScrollama 'carousel-imam'
+      if $('#carousel-papa').length
+        setupScrollama 'carousel-papa'
 
 ) jQuery
