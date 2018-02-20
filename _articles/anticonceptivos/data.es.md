@@ -283,11 +283,11 @@ La clave es quién toma esta decisión. Para Alieu Jammeh, de Naciones Unidas, e
 
 La suegra, el padre, o hasta los servicios médicos o farmacéuticos, entre otros, pueden intervenir en la decisión de la mujer. La Red por los Derechos Sexuales y Reproductivos en México (ddeser) realizó un monitoreo sobre cómo funcionaban los servicios de reparto de anticonceptivos con dos gobiernos distintos. Entrevistaron a responsables, médicos, funcionarios, usuarias... Y hasta acudieron a los centros como *clientas fantasma*. Encontraron clínicas en las que se niegan a dar condones a jóvenes y se acumulan allí "hasta que caducan", denuncia Patricia Ortega; o donde no dan la píldora a mujeres casadas, por poner solo dos ejemplos.
 
+Cada vez es menos frecuente quienes responden que no conocen métodos o que no tienen acceso a ellos o cuestan demasiado, pero en el Oeste y el Centro de África estas razones "fueron nombradas por más de un 10% de las mujeres entrevistadas", según el estudio de Guttmacher. En México, Patricia Ortega asegura que en la universidad **hay "personas que no saben ni usar un condón"**. Ante la pregunta sobre cuántas veces se puede usar un mismo preservativo, un 15,5% de los participantes en la Encuesta Nacional de Salud y Nutrición mexicana [respondieron de forma incorrecta](http://ensanut.insp.mx/informes/ENSANUT2012ResultadosNacionales.pdf).
+
 <div class="panel">
 {% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="Pobreza no es solo la falta de dinero, o material, es también la falta del poder de tomar decisiones." author="Fanta Jatta" author_description="Responsable de Derecho de la Mujer en Action Aid International Gambia" %}
 </div>
-
-Cada vez es menos frecuente quienes responden que no conocen métodos o que no tienen acceso a ellos o cuestan demasiado, pero en el Oeste y el Centro de África estas razones "fueron nombradas por más de un 10% de las mujeres entrevistadas", según el estudio de Guttmacher. En México, Patricia Ortega asegura que en la universidad **hay "personas que no saben ni usar un condón"**. Ante la pregunta sobre cuántas veces se puede usar un mismo preservativo, un 15,5% de los participantes en la Encuesta Nacional de Salud y Nutrición mexicana [respondieron de forma incorrecta](http://ensanut.insp.mx/informes/ENSANUT2012ResultadosNacionales.pdf).
 
 En Gambia, los anuncios en televisión promoviendo el uso de anticonceptivos fueron una revolución social hace ya muchos años, incluyendo conceptos como los *Cool condoms*, no sin críticas por parte de los sectores católicos.
 
