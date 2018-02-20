@@ -2488,7 +2488,7 @@ body.guatemala-graph {
 }
 
 .contraceptives-app-container{
-  margin: 15px 0 45px;
+  margin: 0 0 45px;
   padding: 30px 0 0;
   background: #d9ede8;
 }
@@ -2584,8 +2584,10 @@ body.guatemala-graph {
 }
 
 .contraceptives-app-data{
-  margin: 20px 0 30px;
+  max-width: 320px;
+  margin: 20px auto 30px;
   color: $text-color;
+  //text-align: left;
 }
 
 #contraceptives-filter-3 > .row > .col-sm-3{

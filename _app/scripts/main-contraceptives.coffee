@@ -122,31 +122,31 @@
 
   reasons_names = 
     'es':
-      "a": "not married"
-      "b": "not having sex"
-      "c": "infrequent sex"
-      "d": "menopausal/hysterectomy"
-      "e": "subfecund/infecund"
-      "f": "postpartum amenorrheic"
-      "g": "breastfeeding"
-      "h": "fatalistic"
-      "i": "respondent opposed"       # opposed
-      "j": "husband/partner opposed"  # opposed
-      "k": "others opposed"           # opposed
-      "l": "religious prohibition"    # opposed
-      "m": "knows no method"
-      "n": "knows no source"
-      "o": "health concerns"                      # salud
-      "p": "fear of side effects/health concerns" # salud
-      "q": "lack of access/too far"
-      "r": "costs too much"
-      "s": "inconvenient to use"
-      "t": "interferes with bodys processes"      # salud
-      "u": "preferred method not available"
-      "v": "no method available"
+      "a": "no están casadas"
+      "b": "no tienen sexo"
+      "c": "tienen sexo infrecuente"
+      "d": "menopausia o esterilización"
+      "e": "son subfecundas o infecundas"
+      "f": "amenorrea postparto"
+      "g": "están dando el pecho"
+      "h": "fatalista"
+      "i": "la mujer se opone"
+      "j": "el marido o la pareja se opone"
+      "k": "otros se oponen"        
+      "l": "prohibición religiosa"  
+      "m": "no conoce los métodos"
+      "n": "no conoce ninguna fuente donde adquirirlos"
+      "o": "preocupaciones de salud"                     
+      "p": "miedo a los efectos secundarios/preocupaciones de salud" 
+      "q": "falta de acceso/muy lejos"
+      "r": "cuestan demasiado"
+      "s": "inconvenientes para su uso"
+      "t": "interfiere con los procesos del cuerpo"
+      "u": "el método elegido no está disponible"
+      "v": "no hay métodos disponibles"
       "w": "(no estándar)"
-      "x": "other"
-      "z": "don't know"
+      "x": "otros"
+      "z": "no lo sé"
     'en':
       "a": "not married"
       "b": "not having sex"
@@ -167,7 +167,7 @@
       "q": "lack of access/too far"
       "r": "costs too much"
       "s": "inconvenient to use"
-      "t": "interferes with bodys processes"
+      "t": "interferes with body's processes"
       "u": "preferred method not available"
       "v": "no method available"
       "w": "(no estándar)"
@@ -176,22 +176,26 @@
 
   reasons_dhs_names = 
     'es': 
-      'v3a08a': 'not married'
-      'v3a08b': 'not having sex'
-      'v3a08c': 'infrequent sex'
-      'v3a08d': 'menopausal/hysterectomy'
-      'v3a08e': 'subfecund/infecund'
-      'v3a08f': 'postpartum amenorrheic'
-      'v3a08g': 'breastfeeding'
-      'v3a08h': 'fatalistic'
-      'v3a08i': 'respondent opposed'
-      'v3a08j': 'husband/partner opposed'
-      'v3a08k': 'others opposed'
-      'v3a08l': 'religious prohibition'
-      'v3a08m': 'knows no method'
-      'v3a08n': 'knows no source'
-      'v3a08o': 'health concerns'
-      'v3a08p': 'fear of side effects'
+      'v3a08a': 'no están casadas'
+      'v3a08b': 'no tienen sexo'
+      'v3a08c': 'tienen sexo infrecuente'
+      'v3a08d': 'menopausia o esterilización'
+      'v3a08e': 'son subfecundas o infecundas'
+      'v3a08f': 'amenorrea postparto'
+      'v3a08g': 'están dando el pecho'
+      'v3a08h': 'fatalista'
+      'v3a08i': 'la mujer se opone'
+      'v3a08j': 'el marido o la pareja se opone'
+      'v3a08k': 'otros se oponen'        
+      'v3a08l': 'prohibición religiosa'
+      'v3a08m': 'no conoce los métodos'
+      'v3a08n': 'no conoce ninguna fuente donde adquirirlos'
+      'v3a08o': 'preocupaciones de salud'
+      'v3a08p': 'miedo a los efectos secundarios'
+      'v3a08q': 'falta de acceso/muy lejos'
+      'v3a08r': 'cuestan demasiado'
+      'v3a08s': 'inconvenientes para su uso'
+      'v3a08t': "interfiere con los procesos del cuerpo"
     'en': 
       'v3a08a': 'not married'
       'v3a08b': 'not having sex'
@@ -209,6 +213,11 @@
       'v3a08n': 'knows no source'
       'v3a08o': 'health concerns'
       'v3a08p': 'fear of side effects'
+      'v3a08q': 'lack of access/too far'
+      'v3a08r': 'costs too much'
+      'v3a08s': 'inconvenient to use'
+      'v3a08t': "interferes with the body's processes"
+
 
   # Scrollama Setup
   # ---------------

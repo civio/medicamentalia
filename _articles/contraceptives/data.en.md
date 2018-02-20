@@ -1,10 +1,10 @@
 ---
-category:         anticonceptivos
-title:            Data
+category:         contraceptives
+title:            Datos
 subtitle:         Radiografía de un derecho
 description:      Una de cada diez mujeres en todo el planeta no usa los anticonceptivos que necesita. Analizamos cómo se ejerce este derecho y cómo los efectos secundarios, el machismo, las creencias y las imposiciones de terceros lo vulneran.
 home_description: Una de cada diez mujeres en todo el planeta no usa los anticonceptivos que necesita. Analizamos cómo se ejerce este derecho y cómo los efectos secundarios, el machismo, las creencias y las imposiciones de terceros lo vulneran.
-img:              articles/viz-screenshoot-1040x456.jpg
+img:              articles/home-contraceptives.jpg
 order:            1
 highlighted:      true
 author:           ...
@@ -154,10 +154,10 @@ Puede ser que quieran espaciar los embarazos, por razones de salud, para poder c
       <p>Porcentaje de mujeres con <strong>necesidades no cubiertas</strong></p>
       <div id="unmet-needs-gdp-graph"></div>
       <ul class="x-legend">
-        <li>Low income</li>
-        <li>Lower-middle income</li>
-        <li>Upper-middle income</li>
-        <li>High income</li>
+        <li>Renta baja</li>
+        <li>Renta media-baja</li>
+        <li>Renta media-alta</li>
+        <li>Renta alta</li>
       </ul>
     </div>
   </div>
@@ -205,7 +205,7 @@ La mayoría de quienes responden que no usan anticonceptivos por razones de salu
 "En cuanto a los efectos secundarios, es necesario que haya mucho más progreso e investigación. Esto no es suficiente, sobre todo porque muchos de los métodos anticonceptivos se focalizan solo en la mujer, mientras para los hombres hay muy pocas oportunidades de ser activos en este sentido", argumenta Mirjam Beck, una alemana de 27 años. En 2016 [se frenó](http://cnnespanol.cnn.com/2016/10/31/inyeccion-anticonceptiva-masculina-es-altamente-efectiva-pero-tiene-efectos-secundarios/) el estudio de un anticonceptivo masculino por sus efectos secundarios, muy similares a los que sufren las mujeres en la actualidad. 
 
 <div class="panel">
-{% include blockquote-media.html img="contraceptives/mirjam-beck-thumb" quote="Sentía que cualquier tipo de anticonceptivo hormonal me afectaba tanto física como psicológicamente." author="Mirjam Beck" %}
+{% include blockquote-media.html img="contraceptives/mirjam-beck-thumb" quote="Sentía que cualquier tipo de anticonceptivo hormonal me afectaba tanto física como psicológicamente." author="Mirjam Beck" author_description="alemana de 27 años" %}
 </div>
 
 Y a ellos se suman las creencias no basadas en la evidencia científica, como que pueden dañar los ovarios, [producir infertilidad](https://www.guttmacher.org/journals/ipsrh/2015/12/belief-family-planning-myths-individual-and-community-levels-and-modern) o hasta dañar al miembro masculino. 
@@ -279,7 +279,7 @@ La clave es quién toma esta decisión. Para Alieu Jammeh, de Naciones Unidas, e
 </div>
 
 > Se sigue imponiendo la moral personal a la hora de atender a las usuarias
-> <footer>Patricia Ortega</footer>
+> <footer><strong>Patricia Ortega</strong>, miembro de la asociación mexicana Ddeser</footer>
 
 La suegra, el padre, o hasta los servicios médicos o farmacéuticos, entre otros, pueden intervenir en la decisión de la mujer. La Red por los derechos sexuales y reproductivos en México (Ddeser) realizó un monitoreo sobre cómo funcionaba los servicios de reparto de anticonceptivos con dos gobiernos distintos. Entrevistaron a responsables, médicos, funcionarios, usuarias... Y hasta acudieron a los centros como *clientas fantasma*. Encontraron clínicas en las que se niegan a dar condones a jóvenes y se acumulan allí "hasta que caducan", denuncia Patricia Ortega; o donde no dan la píldora a mujeres casadas, por poner solo dos ejemplos.
 
@@ -291,7 +291,7 @@ Cada vez es menos frecuente quienes responden que no conocen métodos o que no t
 
 En Gambia, los anuncios en televisión promoviendo el uso de anticonceptivos fueron una revolución social hace ya muchos años, no sin críticas por parte de los sectores católicos.
 
-{% include caption.html img="contraceptives/fomento-natalidad.jpg" caption="Campañas fomento natalidad" fullWidth=true %}
+{% include caption.html img="contraceptives/fomento-natalidad.jpg" caption="“Reproducíos como conejos”, aconseja el ministerio de sanidad polaco" fullWidth=true %}
 
 En Europa hace tiempo que escasean las campañas de promoción de los anticonceptivos -[excepto si las paga Durex](https://www.youtube.com/watch?v=KR4A-c23rsE)-, y cada vez se invierte más en fomento de la natalidad, ya sea a través de una [campaña](https://elpais.com/internacional/2017/11/10/actualidad/1510327993_647673.html) del Gobierno polaco para animar a sus ciudadanos a tener sexo o con las [campañas anuales del gobierno gallego](https://civio.es/el-boe-nuestro-de-cada-dia/2013/07/29/galicia-licita-por-640-000-euros-una-campana-para-animar-a-sus-ciudadanos-a-tener-hijos/) en las que se apela a la “necesaria responsabilidad compartida” para traer más niños al mundo.
 
@@ -304,6 +304,9 @@ Y más: 830 mujeres mueren cada día por causas relacionadas con el embarazo y e
 Es una cuestión de salud pública, pero también de derechos. El de elegir de forma libre si se quiere tener hijos, cómo y cuándo.
 </div>
 </div>
+
+<!-- APP -->
+{% include contraceptives/app.es.html %}
 
 <svg style="display: none">
   <symbol id="icon-woman" viewBox="0 0 215 648">

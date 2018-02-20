@@ -302,6 +302,12 @@ En 2012, [85 millones de embarazos en todo el mundo](https://www.ncbi.nlm.nih.go
 Y más: 830 mujeres mueren cada día por causas relacionadas con el embarazo y el parto. Casi todas ellas suceden en países en desarrollo. [Fuente](http://www.who.int/maternal-health/en/). De hecho, la OMS estima que más de un tercio de esas muertes, [en 2015](http://www.who.int/reproductivehealth/publications/monitoring/maternal-mortality-2015/en/), se produjeron en Nigeria y La India. O, dicho de otra forma: si vives en una región desarrollada tienes una posibilidad entre 4.900 de morir en el parto; si vives en regiones en desarrollo, una entre 150.
 
 Es una cuestión de salud pública, pero también de derechos. El de elegir de forma libre si se quiere tener hijos, cómo y cuándo.
+
+<h4>Ponte en su piel</h4>
+<div class="graph-container">
+  <p>Explora los datos y descubre las diferencias en el acceso a metodos para mujeres de todo el mundo.</p>
+</div>
+
 </div>
 </div>
 

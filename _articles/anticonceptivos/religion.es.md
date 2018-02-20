@@ -1,6 +1,6 @@
 ---
 category:         anticonceptivos
-title:            Ponte en su piel
+title:            Religion
 subtitle:         ...
 description:      ...
 home_description: ...
@@ -9,8 +9,8 @@ order:            1
 highlighted:      true
 author:           ...
 pub_date:         2018-02-20
-slug:             app
-ref:              app
+slug:             religion
+ref:              religion
 lang:             es
 ---
 
@@ -21,6 +21,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </div>
 </div>
-
-<!-- APP -->
-{% include contraceptives/app.es.html %}
