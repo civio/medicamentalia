@@ -8,7 +8,7 @@ img:              articles/viz-screenshoot-1040x456.jpg
 order:            1
 highlighted:      true
 author:           ...
-pub_date:         2017-02-24
+pub_date:         2018-02-20
 slug:             data
 ref:              contraceptives-data
 lang:             en

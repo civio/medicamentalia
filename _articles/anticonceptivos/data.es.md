@@ -8,7 +8,7 @@ img:              articles/home-contraceptives.jpg
 order:            1
 highlighted:      true
 author:           ...
-pub_date:         2017-02-24
+pub_date:         2018-02-20
 slug:             datos
 ref:              contraceptives-data
 lang:             es

@@ -2505,37 +2505,31 @@ body.guatemala-graph {
       text-align: center;
       vertical-align: middle;
     }
-  }
 
-  .contraceptives-app-data{
-    margin: 30px 0;
-  }
-
-  .contraceptives-app-data{
-    text-align: left;
+    .contraceptives-app-img{
+      margin: 20px 20px 20px 0;
+    }
   }
 
   .contraceptives-app-filters{
     p{
       margin: 15px 0;
     }
-    .btn:hover{
-      color: $brand-primary;
-      border-color: $brand-primary;
-      background: white;
+    .btn{
+      margin-bottom: 4px; 
+    
+      &:hover{
+        color: $brand-primary;
+        border-color: $brand-primary;
+        background: white;
+      }
+      &.active{
+        color: white;
+        background: $brand-primary;
+        border-color: $brand-primary;
+        font-weight: 400;
+      }
     }
-    .btn.active{
-      color: white;
-      background: $brand-primary;
-      border-color: $brand-primary;
-      font-weight: 400;
-    }
-  }
-
-  .contraceptives-app-img{
-    width: 120px;
-    height: auto;
-    margin: 20px auto 0;
   }
 
   .select2-selection{
@@ -2573,10 +2567,18 @@ body.guatemala-graph {
   */
 }
 
+.contraceptives-app-data{
+  margin: 20px 0 30px;
+}
+
 #contraceptives-filter-3 > .row > .col-sm-3{
   @media (min-width: $screen-sm) {
     width: 20%;
   }
+}
+
+#contraceptives-filter-2-3 .contraceptives-app-img{
+  margin-top: -20px;  // fix vertical offset for superior education picture
 }
 
 #unmet-needs-gdp-graph{
