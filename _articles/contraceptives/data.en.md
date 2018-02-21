@@ -1,9 +1,9 @@
 ---
 category:         contraceptives
-title:            Datos
-subtitle:         Radiografía de un derecho
-description:      Una de cada diez mujeres en todo el planeta no usa los anticonceptivos que necesita. Analizamos cómo se ejerce este derecho y cómo los efectos secundarios, el machismo, las creencias y las imposiciones de terceros lo vulneran.
-home_description: Una de cada diez mujeres en todo el planeta no usa los anticonceptivos que necesita. Analizamos cómo se ejerce este derecho y cómo los efectos secundarios, el machismo, las creencias y las imposiciones de terceros lo vulneran.
+title:            Data
+subtitle:         Cross-examination of a human right
+description:      One in ten women around the world doesn't use the contraceptives she needs. We analyze how women exercise this right and how the side effects, mysoginy, beliefs, and outsiders interfere with it.
+home_description: One in ten women around the world doesn't use the contraceptives she needs. We analyze how women exercise this right and how the side effects, mysoginy, beliefs, and outsiders interfere with it.
 img:              articles/home-contraceptives.jpg
 order:            1
 highlighted:      true
@@ -17,17 +17,16 @@ lang:             en
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Babatunde Osotimehin falleció el pasado mes de julio. Años antes, cuando era director ejecutivo del Fondo de Población de Naciones Unidas (FPNU), [afirmó](http://www.unfpa.org/press/additional-investments-family-planning-would-save-developing-countries-more-11-billion-year#) que la planificación familiar no es un privilegio, sino un derecho. Y que no solo ayuda a escapar de la pobreza, sino que también es **"uno de los medios más efectivos para empoderar a las mujeres"**. Era 2012 y Naciones Unidas [declaraba](http://www.unfpa.org/sites/default/files/pub-pdf/SP_SWOP2012_Report.pdf) que elegir si se quiere tener hijos y cuándo y cómo hacerlo es un derecho humano fundamental. 
+Family planning is not a privilege, but a right. That's what Babatunde Osotimehin said when he was the executive director of the United Nations Population Fund (UNFPA), in 2012. It not only helps eradicate poverty, he said, but is also "one of the most effective means of empowering women". He died past July. International organizations, including the United Nations, have been [declaring](https://www.unfpa.org/sites/default/files/pub-pdf/EN_SWOP2012_Report.pdf) for decades that choosing if you want to have children and when and how to do it is a fundamental human right.
 
-Un derecho que se daña cada vez que una niña se queda embarazada, cada vez que a una mujer se le acusa de promiscua, o hasta de prostituta, por usar algún método, cada vez que es obligada a tener hijos no deseados, cada vez que se ve obligada a abortar en condiciones insalubres, cada vez que alguien le dice lo que tiene que hacer o le vetó el acceso, aunque sea ella la que cargue, en muchos países, con las consecuencias de ese decisión, cada vez que un nuevo parto pone su salud al límite o la mata. Esta no es una lista de ejemplos teóricos, son historias reales recopiladas durante esta investigación, destinada a conocer cómo se ejerce este derecho universal y a qué barreras se enfrentan las mujeres para hacerlo. 
-
-Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la sede de la organización Action Aid International, en Gambia, donde dirige el programa de derechos de las mujeres. Para ella, además de los problemas de salud -para madres y niños- que provocan la falta de acceso a los anticonceptivos, hay algo más, algo elemental: quién decide y cómo. La capacidad de decisión libre para ejercer este derecho. 
+But it's a right that is undermined whenever a girl becomes pregnant, whenever a woman is accused of being promiscuous, or even prostitute, for using some form of birth control, every time she is forced to have unwanted children, every time she is forced to have abortions in unsanitary conditions, every time someone tells her what she must do or blocks her access, although she is the one who, in many countries, bears the consequences of that decision, every time that a new birth puts her health at risk or kills her. These are not made-up examples. They are true stories gathered in this investigation of how people exercise this universal right and what barriers women confront to do it.
+Fanta Jatta knows more than most about these cases. She talks about it at the headquarters of Action Aid International, in Banjul, Gambia, where she directs the program on women's rights. For her, in addition to the health problems--for mothers and children--caused by a lack of access to contraceptives, there is something more fundamental: who decides and how. "We need to understand how our bodies work and make our own decisions," she says.
 
 <div class="panel">
-{% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="Necesitamos entender cómo funcionan nuestros cuerpos y poder tomar nuestras propias decisiones." author="Fanta Jatta" author_description="Women's Right Specialist at Action Aid International" %}
+{% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="We need to understand how our bodies work and make our own decisions." author="Fanta Jatta" author_description="Women's Right Specialist at Action Aid International Gambia" %}
 </div>
 
-#### Usos
+#### Uses
 </div>
 </div>
 
@@ -37,7 +36,7 @@ Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la
 <div class="scroll-graphic">
   <div class="graph-container">
     <div class="container page-content">
-      <p>Porcentaje de uso entre mujeres (de 15 a 49 años y sexualmente activas) que utilizan algún método</p>
+      <p>Percentage of sexually active women aged 15-49 years using any family planning methods</p>
       <div id="treemap-contraceptives-use" class="treemap-graph"></div>
     </div>
   </div>
@@ -45,10 +44,10 @@ Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-instance="0" data-step="0">
-    <p>En <strong id="treemap-contraceptives-use-country"></strong>, un <span id="treemap-contraceptives-use-any-method"></span>% de las mujeres usa algún método anticonceptivo moderno. El más habitual es <strong id="treemap-contraceptives-use-method"></strong>.</p>
+    <p>In <strong id="treemap-contraceptives-use-country"></strong>, <span id="treemap-contraceptives-use-any-method"></span>% of women use a modern contraceptive method. The most common is <strong id="treemap-contraceptives-use-method"></strong>.</p>
   </div>
   <div class="step" data-instance="0" data-step="1">
-    <p><strong>En el mundo</strong> los métodos más habituales son la <strong>esterilización femenina</strong>, el <strong>DIU</strong> y la <strong>píldora</strong>.</p>
+    <p><strong>Worldwide</strong>, the most common methods are <strong>female sterilization</strong>, intrauterine devices (<strong>IUD</strong>) and the <strong>pill</strong>.</p>
   </div>
   <div class="step" data-instance="0" data-step="2"></div>
 </div>
@@ -58,7 +57,7 @@ Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Pero su uso no es homogeneo ni entre países ni entre clases sociales. La [situación económica](http://www.eldiario.es/piedrasdepapel/Pontelo-Ponselo-anticonceptivos-desigualdad_6_563853635.html), el contexto cultural, la distribución de las farmacéuticas y las políticas públicas condicionan los métodos más populares en cada país. 
+But contraceptive use is not homogeneous between countries or social classes. The economic situation, cultural context, availability of pharmacies, and public policies determine the most popular method in each country.
 </div>
 </div>
 
@@ -74,31 +73,31 @@ Pero su uso no es homogeneo ni entre países ni entre clases sociales. La [situa
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-instance="1" data-step="1">
-    <p>La <strong>esterilización femenina</strong> es el método más habitual en India (67%); además, destaca en muchos países centroamericanos, como República Dominicana (59%), Puerto Rico, El Salvador y México.</p>
+    <p><strong>Female sterilization</strong> is the most common contraceptive method in India (67%); it is also common in many Central American countries such as the Dominican Republic (59%), Puerto Rico, El Salvador and Mexico.</p>
   </div>
   <div class="step" data-instance="1" data-step="2">
-    <p>La <strong>esterilización masculina</strong> tiene una implantación muchísimo menor y no alcanza porcentajes tan altos. Por ejemplo: un 30% de las mujeres en Canadá contestó que es el método que usan sus parejas. En Reino Unido ese porcentaje es del 25%.</p>
+    <p><strong>Male sterilization</strong> is a lot less common and does not reach such high percentages. For example: it's the method of choice for 30% of couples in Canada. In the United Kingdom this percentatge is 25%.</p>
   </div>
   <div class="step" data-instance="1" data-step="3">
-    <p markdown="1">El <strong>DIU</strong> destaca en estados asiáticos, con Corea del Norte por encima de todos: es el método que usa el 95% de las mujeres que quiere controlar su natalidad.</p>
+    <p markdown="1">The <strong>IUD</strong> stands out in Asian countries, above all North Korea: is the method used by 95% of women on birth control.</p>
   </div>
   <div class="step" data-instance="1" data-step="4">
-    <p markdown="1">En China, donde el 48% usa el <strong>DIU</strong>, durante la época en la que estuvo vigente la política de hijo único, el gobierno obligaba a las mujeres a usarlo tras su primer parto. Ahora, se [está ofreciendo](https://www.nytimes.com/2017/01/07/world/asia/after-one-child-policy-outrage-at-chinas-offer-to-remove-iuds.html) a retirarlos de forma gratuita. En el resto del mundo es mucho menos habitual. Algunos médicos [rechazan insertarlo](https://www.washingtonpost.com/national/health-science/why-do-some-doctors-refuse-to-give-women-iuds/2017/10/12/ee1e881e-a3c9-11e7-b14f-f41773cd5a14_story.html?utm_term=.6e3da2fb3930) por falsas creencias sobre su seguridad en mujeres que no han tenido hijos.</p>
+    <p markdown="1">In China, where 48% use the **IUD**, during the time when the one-child policy was in force, the government forced women to use it after their first birth. Now, it [is being offered](https://www.nytimes.com/2017/01/07/world/asia/after-one-child-policy-outrage-at-chinas-offer-to-remove-iuds. html) to withdraw them for free. In other countries, its use is almost negligible. Some doctors refuse to insert it due to [false beliefs about its safety](https://www.washingtonpost.com/national/health-science/why-do-some-doctors-refuse-to-give-women-iuds/2017/10/12/ee1e881e-a3c9-11e7-b14f-f41773cd5a14_story.html?utm_term=.6e3da2fb3930) in women who have not had children.</p>
   </div>
   <div class="step" data-instance="1" data-step="5">
-    <p>La <strong>píldora</strong>  es prioritaria, entre otras zonas, en el norte de África y buena parte de la Europa occidental, pero no en España.</p>
+    <p>The <strong>pill</strong> is the leader in other places, such as North Africa and much of Western Europe, but not Spain.</p>
   </div>
   <div class="step" data-instance="1" data-step="6">
-    <p>El <strong>preservativo masculino</strong> es uno de los métodos más habituales en países tan distintos como Botsuana (79%) y Grecia (49%), y en otros países entre mujeres no casadas que no tienen acceso a otros métodos más establecidos. Es el principal método elegido como anticonceptivo en España (38%).</p>
+    <p>The <strong>male condom</strong> is one of the most common in countries as different as Botswana (79%) and Greece (49%), and in other countries for unmarried women who do not have access to other more established methods. It is the leading contraceptive method in Spain (38%).</p>
   </div>
   <div class="step" data-instance="1" data-step="7">
-    <p>El método <strong>inyectable</strong>, también hormonal, es el favorito en África y buena parte del Sudeste Asiático. Para muchas mujeres es la solución perfecta si deciden usar anticonceptivos sin que se enteren sus maridos si ellos están en contra. No se nota, es fácil de administrar -un pinchazo rápido cada uno tres o cinco meses- y no deja huella.</p>
+    <p>The <strong>injectable</strong> hormone method, also hormonal based, is the favorite in Africa. For many women it is the perfect solution if they decide to use contraceptives without their husbands finding out, since many husbands would be against it. It is undetectable, easy to administer -a quick shot every one, three or five months- and leaves no trace.</p>
   </div>
   <div class="step" data-instance="1" data-step="8">
-    <p>Los <strong>métodos tradicionales</strong> van desde la marcha atrás al control del ciclo, pasando por prácticas locales vinculadas a la religión o la magia. Estos métodos, muy poco o nada fiables, son mayoritarios en la región de los Balcanes</p>
+    <p><strong>Traditional methods</strong> range from tracking the menstrual cycle to local practices tied to religion or magic. These methods, which are unreliable at best, are the leading method in the Balkans.</p>
   </div>
   <div class="step" data-instance="1" data-step="9">
-    <p>En Albania, por ejemplo, la marcha atrás es el principal método anticonceptivo para un 58% de mujeres.</p>
+    <p>In Albania, for example, the withdrawal is the main form of birth control for 58% of women.</p>
   </div>
   <div class="step" data-instance="1" data-step="10"></div>
 </div>
@@ -108,7 +107,7 @@ Pero su uso no es homogeneo ni entre países ni entre clases sociales. La [situa
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-En Gambia, muchas mujeres usan un método que recibe diferentes nombres y que representa la vía tradicional. Puede ser una cuerdita o una rama, con o sin frases del Corán en un papelito, pero todas esas formas y nombres parten de la misma creencia: si se ata a la cintura protegerá a la mujer de quedarse embarazada. Por supuesto, no tiene base científica.
+In Gambia, many women use a traditional method with different names that is carried out in different ways. They share the same, unscientific, principle: the women tie a cord or a branch with or without words from the Koran on a slip of paper to their waists to try to prevent pregnancy. Of course it does not work. 
 </div>
 </div>
 
@@ -125,13 +124,13 @@ En Gambia, muchas mujeres usan un método que recibe diferentes nombres y que re
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-instance="2" data-step="1">
-    <p>Hasta ahora hemos hablado de aquellas mujeres que usan anticonceptivos. De las mujeres casadas o sexualmente activas de 15 a 49 años, <strong> el 63% usa algún tipo de método</strong>.</p>
+    <p>Until now we have spoken of women that use some contraceptive method. Of married or sexually active women from 15 to 49 years of age, <strong>63% practise some form of birth control</strong>.</p>
   </div>
   <div class="step" data-instance="2" data-step="2">
-    <p>Otro <strong>25% quiere seguir teniendo niños</strong> en el momento de ser entrevistada y, por lo tanto, decide no usar ningún método.</p>
+    <p>Another <strong>25% wish to continue having children</strong> and are therefore not practising birth control.</p>
   </div>
   <div class="step" data-instance="2" data-step="3">
-    <p>Pero el <strong>12%</strong> restante son aquellas mujeres que <strong>quieren retrasar o frenar su maternidad pero no usan ningún método</strong>. Tienen necesidades no cubiertas. Y ahí está el problema.</p>
+    <p>But the remaining <strong>12% are women who wish to delay or prevent maternity but do not use birth control</strong>. They are the women with unmet needs. And there is the problem.</p>
   </div>
   <div class="step" data-instance="2" data-step="4"></div>
 </div>
@@ -141,7 +140,7 @@ En Gambia, muchas mujeres usan un método que recibe diferentes nombres y que re
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Puede ser que quieran espaciar los embarazos, por razones de salud, para poder cuidar de los hijos de forma escalonada o por organización personal. "Empecé a tomar anticonceptivos tras mi primer embarazo. Solo siete meses después volvía a estar embarazada. Entonces, cuando tuve a mi segundo hijo, decidí que no quería volver a pasar por la misma situación en mi tercer embarazo", cuenta Jarra Joof, de Gambia. O que, simplemente, no quieran tener ningún hijo o no quieran tener más. "Siete es suficiente", argumenta ahora, tiempo después de esos primeros partos, con 42 años. Las razones son muchas, pero las mujeres con necesidades no cubiertas tienen algo en común: han decidido no quedarse embarazadas pero, aún así, no usan ningún método.
+They may want to space pregnancies, for health reasons, to be able to take care of the children in a staggered way or by personal organization. "I started taking contraceptives after my first pregnancy, only seven months later I was pregnant again, so when I had my second child, I decided I did not want to go through the same situation again in my third pregnancy," says Jarra Joof, Gambia. Or that, simply, they do not want to have any children or do not want to have more. "Seven is enough," he argues now, some time after those first births, at 42. The reasons are many, but women with unmet needs have something in common: they have decided not to become pregnant but, still, they do not use any method.
 </div>
 </div>
 
@@ -154,10 +153,10 @@ Puede ser que quieran espaciar los embarazos, por razones de salud, para poder c
       <p>Porcentaje de mujeres con <strong>necesidades no cubiertas</strong></p>
       <div id="unmet-needs-gdp-graph"></div>
       <ul class="x-legend">
-        <li>Renta baja</li>
-        <li>Renta media-baja</li>
-        <li>Renta media-alta</li>
-        <li>Renta alta</li>
+        <li>Low income</li>
+        <li>Lower-middle income</li>
+        <li>Upper-middle income</li>
+        <li>High-income</li>
       </ul>
     </div>
   </div>
@@ -165,19 +164,19 @@ Puede ser que quieran espaciar los embarazos, por razones de salud, para poder c
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-instance="3" data-step="0">
-    <p>Ese problema, las <strong>necesidades no cubiertas</strong>, es mayor en algunos países del mundo que en otros. Apenas es relevante en China, mientras en Angola supera el 36%.</p>
+    <p>This problem, the <strong>unmet needs</strong>, is bigger in some countries than in others. It is hardly relevant in China, while in Angola it exceeds 36%.</p>
   </div>
   <div class="step" data-instance="3" data-step="1">
-    <p>Pero, si distribuimos los países en base a su nivel de renta...</p>
+    <p>Let's distribute them for their Gross National Income (GNI).</p>
   </div>
   <div class="step" data-instance="3" data-step="2">
-    <p>En los más ricos, como Estados Unidos, Alemania o España, el porcentaje de mujeres con necesidades no cubiertas es inferior al 15%.</p>
+    <p>In rich countries, such as the United States, Germany, or Spain, the percentage of women with unmet needs is less than 15%.</p>
   </div>
   <div class="step" data-instance="3" data-step="3">
-    <p>En los países con menos renta, ese porcentaje supera el 30%</p>
+    <p>In the least developed countries, that percentage is over 30%.</p>
   </div>
   <div class="step" data-instance="3" data-step="4">
-    <p>Japón y Arabia Saudí, pese a su riqueza, tienen necesidades al mismo nivel que países mucho más pobres.</p>
+    <p>Japan and Saudi Arabia, despite their wealth, have unmet needs on par with much poorer countries.</p>
   </div>
   <div class="step" data-instance="3" data-step="5"></div>
 </div>
@@ -187,33 +186,33 @@ Puede ser que quieran espaciar los embarazos, por razones de salud, para poder c
 <div class="container page-content">
 <div class="page-content-container reasons-graphs" markdown="1">
 
-Así, el porcentaje de mujeres con necesidades no cubiertas de los países menos desarrollados (21,4%) casi duplica la mediana mundial (11,5%), según la ONU. 
+So the percentage of women with unmet needs in the least developed countries (21.4%) is almost double that of the global mean (11.5%), the UN reports.
 
-#### Barreras
+#### Reasons
 
-Vamos a centrarnos en esos países en los que la situación es más complicada. ¿Qué barreras impiden a las mujeres el acceso a los anticonceptivos?. Según el estudio *[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)*, del Guttmacher Institute, que analizó 52 países, las principales son **los efectos secundarios, la poca frecuencia sexual, y la oposición (ya sea propia o impuesta)**. 
+We are going to focus on those countries with the most difficult situations. What are the barriers for women to access contraceptives? According to the Guttmacher Institute's report  Unmet need for contraception in developing countries: examining women's reasons for not using a method, which analyzed 52 countries, the principal barriers are side effects, infrequent sex, and resistance by the woman or others. 
 
 <div class="container-right">
   <div class="graph-container">
-    <p class="graph-container-caption">Razones de salud para no usar anticonceptivos</p>
+    <p class="graph-container-caption">Mujeres con necesidades que no usan anticonceptivos por razones de salud</p>
     {% include contraceptives/reasons-health.en.html %}
   </div>
 </div>
 
-La mayoría de quienes responden que no usan anticonceptivos por razones de salud, miedo a los efectos secundarios o porque afecta a los procesos naturales del cuerpo han usado alguna vez un método, según el estudio de Guttmacher. Esto es, saben de lo que hablan: sangrado excesivo o menor, náuseas, cambios en el cuerpo -engordan, les crece vello-, falta de líbido, cambios de humor... la larga lista de efectos secundarios de los anticonceptivos hormonales no ayuda. 
+The majority of respondents that do not use contraceptives for health reasons, or for fear of side effects, or because it affects natural bodily processes, have used some method at some point, according to the study. That is, they know what they are talking about: excess or reduced bleeding, nausea, changes in the body--weight gain or hair growth--loss of libido, mood changes... the long list of side effects of hormonal contraceptives does not help.
 
-"En cuanto a los efectos secundarios, es necesario que haya mucho más progreso e investigación. Esto no es suficiente, sobre todo porque muchos de los métodos anticonceptivos se focalizan solo en la mujer, mientras para los hombres hay muy pocas oportunidades de ser activos en este sentido", argumenta Mirjam Beck, una alemana de 27 años. En 2016 [se frenó](http://cnnespanol.cnn.com/2016/10/31/inyeccion-anticonceptiva-masculina-es-altamente-efectiva-pero-tiene-efectos-secundarios/) el estudio de un anticonceptivo masculino por sus efectos secundarios, muy similares a los que sufren las mujeres en la actualidad. 
+"It is necessary that there is much more progress and research. This is not enough, especially since many of the contraceptive methods focus only on women, while for men there are very few opportunities to be active in this sense", argues Mirjam Beck, a 27-year-old German. In 2016 the study of a male contraceptive [was stopped](http://cnnespanol.cnn.com/2016/10/31/inyeccion-anticonceptiva-masculina-es-altamente-efectiva-pero-tiene-efectos-secundarios/) due to its side effects, very similar to those suffered by women today.
 
 <div class="panel">
-{% include blockquote-media.html img="contraceptives/mirjam-beck-thumb" quote="Sentía que cualquier tipo de anticonceptivo hormonal me afectaba tanto física como psicológicamente." author="Mirjam Beck" author_description="alemana de 27 años" %}
+{% include blockquote-media.html img="contraceptives/mirjam-beck-thumb" quote="I felt that any type of hormonal contraceptive affected me both physically and psychologically." author="Mirjam Beck" author_description="27-year-old German" %}
 </div>
 
-Y a ellos se suman las creencias no basadas en la evidencia científica, como que pueden dañar los ovarios, [producir infertilidad](https://www.guttmacher.org/journals/ipsrh/2015/12/belief-family-planning-myths-individual-and-community-levels-and-modern) o hasta dañar al miembro masculino. 
+And there are also [reasons not based on scientific evidence](https://www.guttmacher.org/journals/ipsrh/2015/12/belief-family-planning-myths-individual-and-community-levels-and-modern), such as the claim that they might harm the ovaries, cause infertility, or even harm the male member.  
 </div>
 </div>
 
 
-<div id="carousel-marie-stopes" class="scroll-container">
+<div id="carousel-marie-stopes" class="carousel-scrollama scroll-container">
 <!--  graphic container  -->
 <div class="scroll-graphic">
   <!-- foto señoras general -->
@@ -224,19 +223,19 @@ Y a ellos se suman las creencias no basadas en la evidencia científica, como qu
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="4" data-step="0">
-    <p>En Pout, a una hora de Dakar, decenas de mujeres, la mayoría con niños en los brazos, esperan con los pies en la arena y bajo un toldo que les protege del sol, al ritmo de una música bien animada, que arranque el espectáculo. El imam también está presente.</p>
+  <div class="step" data-instance="carousel" data-step="0">
+    <p>In Pout, one hour from Dakar, dozens of women, most with children in their arms, wait with their feet in the sand and under an awning that protects them from the sun, to the rhythm of a well-animated music, that starts the show. The imam is also present.</p>
   </div>
-  <div class="step" data-instance="4" data-step="1">
+  <div class="step" data-instance="carousel" data-step="1">
     <p>Se preparan condones, todo el mundo se coloca, el DJ baja la música y Coumba Dieng, de la organización Marie Stopes, empieza su clase práctica sobre anticonceptivos.</p>
   </div>
-  <div class="step" data-instance="4" data-step="2">
+  <div class="step" data-instance="carousel" data-step="2">
     <p>Explica uno a uno los métodos, con ellos en la mano y un entusiasmo que aúna la firmeza de una arenga política y el choteo de un padrino de bodas.</p>
   </div>
-  <div class="step" data-instance="4" data-step="3">
+  <div class="step" data-instance="carousel" data-step="3">
     <p>La principal barrera para convencerlas del uso de métodos anticonceptivos son "los rumores, sobre todo los rumores", admite la maestra de ceremonias de esta particular clase práctica en las afueras.</p>
   </div>
-  <div class="step" data-instance="4" data-step="4"></div>
+  <div class="step" data-instance="carousel" data-step="4"></div>
 </div>
 </div>
 
@@ -244,64 +243,70 @@ Y a ellos se suman las creencias no basadas en la evidencia científica, como qu
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-La clave, según Alieu Jammeh, que trabaja en la UNFPA en Gambia, es que haya variedad, que se expliquen bien sus efectos para evitar la mala fama no justificada de algunos métodos y que cada mujer pueda elegir el que mejor se adapte a ella. Esta barrera es la más importante en el global de países analizados y es la razón para no usar anticonceptivos de más de la mitad de las mujeres con necesidades en Haití. 
+The key, according to Alieu Jammeh, Reproductive Health Commodity Security Coordinator at UNFPA in Banjul, The Gambia, is the availability of variety, that their effects are well-explaiend to avoid bad unjustified bad reputations of some metods, and that each woman can decide which is best for her. This is the most important barrier across the analyzed countries.
 
-Muchas mujeres aseguran que no usan anticonceptivos porque **no tienen sexo de forma habitual**, aunque en ocasiones responden -en la misma encuesta- que sí han tenido encuentros sexuales en el último mes. La sensación de riesgo, en muchos casos, es menor que la real. En algunos países, las mujeres solteras pueden no responder de forma sincera sobre su actividad sexual para evitar ser señaladas. Para muchas de ellas, en público, el sexo no existe y tampoco los métodos anticonceptivos.
+Many women claim that they don't use contraceptives because they do not have sex on a regular basis. But sometimes they reply -in the very same survey- that they have had sexual encounters in the preceding month. In some countries, single women may not respond frankly about their sexual activity to avoid being singled out. For many of them, at least in public, sex and contraceptives are non-existent.
 
 <div class="container-right">
   <div class="graph-container">
-    <p class="graph-container-caption">Oposición</p>
+    <p class="graph-container-caption">Mujeres con necesidades que no usan anticonceptivos porque alguien se opone</p>
     <ul id="contraceptives-reasons-opposed-legend">
-      <li class="respondent-opposed">De la mujer</li>
-      <li class="husband-partner-opposed">De la pareja</li>
-      <li class="religious-prohibition">Religiosa</li>
-      <li class="others-opposed">Otras</li>
+      <li class="respondent-opposed">La mujer</li>
+      <li class="husband-partner-opposed">La pareja</li>
+      <li class="religious-prohibition">Prohibición religiosa</li>
+      <li class="others-opposed">Otros</li>
     </ul>
     {% include contraceptives/reasons-opposed.en.html %}
   </div>
 </div>
 
-Al contrario de lo que ocurre con las barreras relacionadas con la salud de la mujer -los efectos secundarios que conllevan algunos métodos anticonceptivos hormonales, por ejemplo-, esta razón no es reactiva, sino cultural. Es mayoritaria en países como Timor Oriental, Albania y Gambia. La mayoría de quienes nombran esta barrera como principal no han usado nunca un método, según el estudio de Guttmacher. Alguien, ya sea la propia mujer, el marido u otros, está en contra de su uso. Pero, ¿quién y por qué?
+This refers to cultural reasons, in contrast to women's health-related barriers, such as the side effects of some hormonal contraceptives. Most of those who say this is the principal barrier have never used any method of birth control, according to the Guttmacher study. Somebody, whether it's the woman herself, her husband or others, is against her using birth control. But whom and why?
 
-En la mayoría de casos, es la propia mujer entrevistada quien asegura oponerse. Teniendo en cuenta que solo analizamos las respuestas de aquellas que tienen necesidades no cubiertas -es decir, que no quieren tener más hijos pero pese a eso no usan ningún método anticonceptivo-, todo apunta a que su negativa puede ser de muchos tipos -por razones culturales, sociales, religiosas...
+In most cases, the woman being interviewed says she is against birth control. Keeping in mind that we are only analyzing the responses of those women whose necessities are unmet--that is, they do not want more children but are not using birth control--everything points toward their response coming from many sources, from cultural to social to religious. 
 
-Aunque sus porcentajes son más bajos, la religión puede afectar también a la oposición de mujer y marido los casos anteriores. Y no es un problema intrínseco a una religión concreta; todas las mayoritarias imponen barreras. En los casos más ortodoxos, es el iman, el cura o el rabino quienes deciden si se usan, o no, métodos. Y hasta cuáles. [enlace al otro texto]
+Although the percentages are lower, religion can also affect opposition in the cases above. And the problem is not specific to any one religion: all the major ones impose barriers. In the most orthodox cases, it's the imam, priest, or rabbi who decides who uses, or doesn't use, birth control, and what type.
 
 <div class="panel" markdown="1">
 
-##### Oposición del marido o la pareja
+##### Husband or partner opposition
 
-Según Fanta Jatta, de Action Aid International, en Gambia "muchas mujeres no toman decisiones independientes, se toman en su nombre". Ha conocido casos de mujeres maltratadas por sus maridos cuando descubrían que estaban tomando la píldora, y de otras obligadas a quedarse embarazadas cuando era un peligro para su salud. Momodou Njie, de la Family Planning Association en el país africano, cuenta historias de mujeres que acuden a la clínica a escondidas y dejan la cartilla allí por miedo a ser descubiertas. Para él, "la mayoría de las decisiones las toman los hombres, pero en algunos casos lo hace la mujer porque quiere salvar su vida".
+"Many women do not make independent decisions. They are made for them," says Fanta Jatta, of Action Aid International, in Banjul, The Gambia. She has known cases of women whose husbands began abusing them upon discovering they were taking the pill and others forced to carry pregnancies to term when it was a health risk. Momodou Njie of the Family Planning Association in Banjul, Gambia, tells stories of women who visit the clinic incognito and leave their paperwork there for fear of being discovered. "Men make most of the decisions, but in some cases the woman does it because she wants to save her life," he says.
 
-En Albania, país en la que la marcha atrás tiene un porcentaje más alto de uso, es también en el que la oposición del marido supone la principal barrera al acceso. Le siguen Timor Oriental, Mali, Senegal y Afganistán. 
+In Albania, a country in which backing has a higher percentage of use, is also where the opposition of the husband is the main barrier to access. It is followed by East Timor, Mali, Senegal and Afghanistan.
 
-La clave es quién toma esta decisión. Para Alieu Jammeh, de Naciones Unidas, es importante involucrar a los hombres en la decisión para "minimizar la fricción" en el matrimonio. Pero, más allá de eso, "es derecho de la mujer tomarlo si quiere".
+The key is who makes the decision. For Alieu Jammeh, of the United Nations, it's important to include men in the decision to "minimize the friction" in the marriage. But, beyond that, "it's the woman's right to decide if she wants".
 </div>
 
-> Se sigue imponiendo la moral personal a la hora de atender a las usuarias
-> <footer><strong>Patricia Ortega</strong>, miembro de la asociación mexicana Ddeser</footer>
+> They continue imposing their personal morals when it comes time to serve users
+> <footer><strong>Patricia Ortega</strong>, ddeser</footer>
 
-La suegra, el padre, o hasta los servicios médicos o farmacéuticos, entre otros, pueden intervenir en la decisión de la mujer. La Red por los derechos sexuales y reproductivos en México (Ddeser) realizó un monitoreo sobre cómo funcionaba los servicios de reparto de anticonceptivos con dos gobiernos distintos. Entrevistaron a responsables, médicos, funcionarios, usuarias... Y hasta acudieron a los centros como *clientas fantasma*. Encontraron clínicas en las que se niegan a dar condones a jóvenes y se acumulan allí "hasta que caducan", denuncia Patricia Ortega; o donde no dan la píldora a mujeres casadas, por poner solo dos ejemplos.
+The mother-in-law, the father, or even medical or pharmacuetical services, among others, may intervene in the woman's decision. The Network for Sexual and Reproductive Rights in Mexico (DDESER) did a study of contraceptive distribution under two different governments. They interviewed managers, doctors, civil servants, and users. They even sent mystery shoppers posing as users. They found centers that refused to give condoms to youth, where the condoms piled up until they expired, or where they don't give the pill to married women, to give just two examples.
+
+It's increasingly rare for women not to know about birth control methods, to lack access, or for them to cost too much. But in West and Central Africa, those reasons, "were mentioned by more than 10% of interviewed women," in the Guttmacher study. In Mexico, Patricia Ortega of DDSER says that there are "people who don't even know how to use a condom," at university.  When asked about how many times a condom can be used, 15.5% of the participants in the [Mexican National Health and Nutrition Survey](http://ensanut.insp.mx/informes/ENSANUT2012ResultadosNacionales.pdf) responded incorrectly.
 
 <div class="panel">
-{% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="Pobreza no es solo la falta de dinero, o material, es también la falta del poder de tomar decisiones." author="Fanta Jatta" author_description="Women's Right Specialist at Action Aid International" %}
+{% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="Poverty is not just a lack of money or material goods. It's also a lack of power to make decisions." author="Fanta Jatta" author_description="Women's Right Specialist at Action Aid International in Banjul, The Gambia" %}
 </div>
 
-Cada vez es menos frecuente quienes responden que no conocen métodos o que no tienen acceso a ellos o cuestan demasiado, pero en el Oeste y el Centro de África estas razones "fueron nombradas por más de un 10% de las mujeres entrevistadas", según el estudio de Guttmacher. En México, Patricia Ortega asegura que en la universidad **hay "personas que no saben ni usar un condón"**. Ante la pregunta sobre cuántas veces se puede usar un mismo preservativo, un 15,5% de los participantes en la Encuesta Nacional de Salud y Nutrición mexicana [respondieron de forma incorrecta](http://ensanut.insp.mx/informes/ENSANUT2012ResultadosNacionales.pdf).
+In The Gambia, television ads promoting contraceptive use were a social revolution a few years ago, and did not lack for critics in the Catholic community.
 
-En Gambia, los anuncios en televisión promoviendo el uso de anticonceptivos fueron una revolución social hace ya muchos años, no sin críticas por parte de los sectores católicos.
+In Europe promotional campaigns for contraceptives have been rare for a while -with the exception of [those paid for by Durex](https://www.youtube.com/watch?v=KR4A-c23rsE)- and there is more and more public investment in promoting child-bearing. The Polish government ran a [campaign](https://elpais.com/internacional/2017/11/10/actualidad/1510327993_647673.html) encouraging its citizens to have sex and there is an [annual campaign in the Spanish region of Galicia](https://civio.es/el-boe-nuestro-de-cada-dia/2013/07/29/galicia-licita-por-640-000-euros-una-campana-para-animar-a-sus-ciudadanos-a-tener-hijos/) that appeals to the "necessary shared responsibility" of bringing more children into the world. 
 
-{% include caption.html img="contraceptives/fomento-natalidad.jpg" caption="“Reproducíos como conejos”, aconseja el ministerio de sanidad polaco" fullWidth=true %}
+{% include caption.html img="contraceptives/fomento-natalidad.jpg" caption="“Reproducíos como conejos”, aconseja el ministerio de sanidad polaco en el anuncio de la izquierda. A la derecha, campaña del gobierno gallego." fullWidth=true %}
 
-En Europa hace tiempo que escasean las campañas de promoción de los anticonceptivos -[excepto si las paga Durex](https://www.youtube.com/watch?v=KR4A-c23rsE)-, y cada vez se invierte más en fomento de la natalidad, ya sea a través de una [campaña](https://elpais.com/internacional/2017/11/10/actualidad/1510327993_647673.html) del Gobierno polaco para animar a sus ciudadanos a tener sexo o con las [campañas anuales del gobierno gallego](https://civio.es/el-boe-nuestro-de-cada-dia/2013/07/29/galicia-licita-por-640-000-euros-una-campana-para-animar-a-sus-ciudadanos-a-tener-hijos/) en las que se apela a la “necesaria responsabilidad compartida” para traer más niños al mundo.
+What does it mean for there to be unmet needs? That a woman cannot exercise her right to plan her own reproduction. According to the [WHO](http://www.who.int/mediacentre/factsheets/fs351/en/), family planning reduces abortions, especially dangerous ones, it reinforces the right to determine the number and timing of children, and prevents the deaths of both mothers and children.
 
-Y, ¿qué significa que haya necesidades no cubiertas? Que el derecho a planificar la reproducción propia no se cumple. Según la [OMS](http://www.who.int/mediacentre/factsheets/fs351/en/), la planificación familiar reduce los abortos, especialmente los inseguros; refuerza el derecho para determinar el número y el tiempo para tener hijos y previene muertes de madres e hijos.
+In 2012, 85 million pregnancies worldwide [were unintended](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4727534/). This is 40% of the total and many of them end in abortion - natural or voluntary. More data: an estimated 25 million unsafe abortions are performed annually, most of them in developing countries. With the risk that entails.
 
-En 2012, [85 millones de embarazos en todo el mundo](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4727534/) no fueron intencionados. Se trata del 40% del total y muchos de ellos acaban en aborto -natural o voluntario. Más datos: se [estima](http://www.who.int/mediacentre/factsheets/fs388/en/) que se realizan 25 millones de abortos inseguros al año, la mayoría de ellos en países en desarrollo. Con el riesgo que eso conlleva.
+Some 830 women [die every day](http://www.who.int/maternal-health/en/) due to causes related to pregnancy and childbirth. Almost all are in developing countries. In fact, the WHO estimates that [in 2015 more](http://www.who.int/reproductivehealth/publications/monitoring/maternal-mortality-2015/en/) than a third of those deaths occurred in Nigeria and India. Another way to put it is: if you live in a developed region your odds of dying in childbirth are 1 in 4.900. If you live in a developing country, they are 1 in 150.  
 
-Y más: 830 mujeres mueren cada día por causas relacionadas con el embarazo y el parto. Casi todas ellas suceden en países en desarrollo. [Fuente](http://www.who.int/maternal-health/en/). De hecho, la OMS estima que más de un tercio de esas muertes, [en 2015](http://www.who.int/reproductivehealth/publications/monitoring/maternal-mortality-2015/en/), se produjeron en Nigeria y La India. O, dicho de otra forma: si vives en una región desarrollada tienes una posibilidad entre 4.900 de morir en el parto; si vives en regiones en desarrollo, una entre 150.
+It's a question of public health, but above all of rights. Women have the right to freely choose if they want children, and how, and when.
 
-Es una cuestión de salud pública, pero también de derechos. El de elegir de forma libre si se quiere tener hijos, cómo y cuándo.
+<h4>Ponte en su piel</h4>
+<div class="graph-container">
+  <p>Explora los datos y descubre las diferencias en el acceso a metodos anticonceptivos para mujeres de todo el mundo.</p>
+</div>
+
 </div>
 </div>
 
@@ -313,5 +318,3 @@ Es una cuestión de salud pública, pero también de derechos. El de elegir de f
     <path d="M55 275l-4-38-2-5-2 3-9 38c-3 9-4 19-4 29l1 33 1 5 19-65zm124 70l2-29c1-11 3-23-1-34l-10-40-4-12-1 5-5 40 19 70zM62 170c-5-1-11-1-15-4a53 53 0 0 1-27-44c-1-14 5-26 12-38 9-14 15-29 18-45C55 14 75 1 99 0c8 0 15 1 23 4 4 2 7 5 10 9 3 5 8 0 12 3 7 6 12 13 17 21 16 27 25 57 25 88 0 23-10 37-31 43l-2 1c-1 2 1 2 2 3l19 9c6 2 10 6 13 13 13 31 19 64 26 97 4 17 1 33-3 49-2 9-5 18-5 27l1 21c-1 8-3 15-10 21-5 3-9 4-14 5-3 0-5 0-5 3 0 6-3 13-5 19-8 21-13 42-15 64l-8 55-5 38c-1 6-2 12-9 15-2 1-1 2 0 4 1 4 3 7 6 11 9 12 4 23-11 24-7 1-14 2-21-3-1-1-2 0-4 1-7 5-25 4-32-4-4-5-5-8-1-13 3-5 7-10 9-16 1-3 1-4-2-6-4-2-6-5-6-10l-8-51c-4-19-5-37-7-56-2-12-4-24-9-36l-11-35c0-3-2-4-5-5-11 0-20-7-22-18l-2-14c2-10 0-18-2-27a169 169 0 0 1 2-103c6-21 13-42 22-61 1-3 3-5 6-7l26-12-1-1z" fill-rule="evenodd"/>
   </symbol>
 </svg>
-
-{% include contraceptives/icons.html %}
