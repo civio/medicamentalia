@@ -1,12 +1,7 @@
 # Main script for contraceptives articles
 
 (($) ->
-
-  useTreemap = null
-  useMap = null
-  useGraph = null
-  unmetneedsGraph = null 
-
+  
   userCountry = {}
 
   scrollamaInitialized = false
@@ -481,6 +476,29 @@
       new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang]
 
 
+
+  # setup line chart
+  setupMortalityLineGraph =  ->
+    data = [{
+      '1990': 385
+      '1995': 369
+      '2000': 341
+      '2005': 288
+      '2010': 246
+      '2015': 216
+    }]
+    graph = new window.LineGraph('maternal-mortality-graph',
+      isArea: true
+      margin: left: 20)
+    graph.xAxis.tickValues [1995, 2005, 2015]
+    graph.yAxis
+      .tickValues [100, 200, 300]
+      .tickFormat d3.format('.0s')
+    graph.yFormat = d3.format('.2s')
+    graph.getScaleYDomain = -> return [0, 385]
+    graph.setData data
+    $(window).resize graph.onResize
+
   # Setup
   # ---------------
 
@@ -502,5 +520,7 @@
       new ScrollGraph 'carousel-imam', onCarouselStep
     if $('#carousel-papa').length
       new ScrollGraph 'carousel-papa', onCarouselStep
+    if $('#maternal-mortality-graph').length
+      setupMortalityLineGraph()
 
 ) jQuery

@@ -386,6 +386,7 @@
           key:
             x: 'disease'
             id: 'disease')
+        console.log disease_data
         graphs.push graph
         graph.xAxis.tickValues [1980, 2015]
         graph.yAxis.ticks(2).tickFormat d3.format('.0s')

@@ -33,7 +33,7 @@ En la encíclica [*Humanae Vitae*](http://w2.vatican.va/content/paul-vi/es/encyc
 
 A 5.600 kilómetros de Jerusalén y 4.140 del Vaticano, en la región de Thiès, en Senegal, **decenas de mujeres ocupan sus sillas de plástico**, sobre la arena y bajo un toldo. La mayoría lleva en brazos a los niños más pequeños, mientras los mayores corretean cerca. El público atiende, entre risas -pudorosas a veces, a carcajadas, otras- la clase práctica sobre métodos anticonceptivos de Coumba Dieng, de la organización Marie Stopes. **Los únicos hombres que participan en el evento, menos de una decena, son el encargado del sonido, algunos miembros de la organización, el imam** y sus acompañantes. La presencia aquí del líder religioso es muy importante para evitar el rechazo de las mujeres y, sobre todo, de sus maridos. 
 
-> foto cartelico evento si encaja
+{% include caption.html img="contraceptives/gambia-event.jpg" align="alignright"%}
 
 Unos días antes, en noviembre de 2017, se celebraba en Gambia, el pequeño país africano incrustado en Senegal en el que la mayoría aplastante (más del 90%) de la población es musulmana, un congreso de tres días sobre *Islam, bienestar familiar y prácticas tradicionales*. Miembros del Gobierno, líderes religiosos, representantes del Fondo de Población de Naciones Unidas (FPNU) y Unicef se sentaron a hablar durante tres días de la erradicación de la mutilación genital femenina y los matrimonios con niñas. Y sobre anticonceptivos. "Es imprescindible orientar a los líderes religiosos para que difundan mensajes sobre planificación familiar en sus sermones, durante sus oraciones, tras las oraciones...", argumenta Momodou Njie, de la Gambia Family Planning Association, una entidad que lleva décadas ayudando a mujeres a acceder a estos servicios. 
 
@@ -144,8 +144,9 @@ En 2016, la malnutrición amenazó las vidas de cerca de 52 millones de niños m
 
 <div class="container-right">
   <div class="graph-container">
-    <p class="graph-container-caption">Muertes de mujeres en el parto</p>
-    <p>por cada 100.000 niños</p>
+    <p class="graph-container-caption" style="margin-left: 20px; margin-bottom: 0">Muertes de mujeres en el parto</p>
+    <p style="text-align: left; margin-left: 20px; margin-bottom: 30px;">por cada 100.000 niños</p>
+    <div id="maternal-mortality-graph" class="line-graph"></div>
   </div>
 </div>
 

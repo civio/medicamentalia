@@ -37,7 +37,7 @@ class window.LineGraph extends window.BaseGraph
         #else
         #  console.log('No hay datos de para', d[@options.key.x], 'en ', year);
         delete d[year]
-    return data
+    return data 
 
   setScales: ->
     # set x scale

@@ -922,20 +922,22 @@ World diseases cases
   .row{
     margin-top: $grid-gutter-width;
   }
-  .graph-container {
-    .line{
-      stroke: $color-orange;
-      stroke-width: 2px;
-    }
-    .line-label-point{
-      stroke: $color-orange;
-    }
-    .area{
-      fill: $color-orange;
-    }
-  }
 }
 
+
+#world-cases .graph-container,
+#maternal-mortality-graph{
+  .line{
+    stroke: $color-orange;
+    stroke-width: 2px;
+  }
+  .line-label-point{
+    stroke: $color-orange;
+  }
+  .area{
+    fill: $color-orange;
+  }
+}
 
 /*
 Infographic
