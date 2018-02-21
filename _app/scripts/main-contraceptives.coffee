@@ -502,7 +502,7 @@
   # Setup
   # ---------------
 
-  if $('body').hasClass('data') or $('body').hasClass('datos')
+  if $('body').hasClass('datos-uso-barreras') or $('body').hasClass('data-use-barriers')
     # Load csvs & setup maps
     d3.queue()
       .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
