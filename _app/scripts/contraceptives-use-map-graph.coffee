@@ -224,10 +224,11 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
       #console.log 'set state '+state
       @currentState = state
       @currentMethod = @states[@currentState-1]
-      $('#map-contraceptives-use-method').html @currentMethod.text[@options.lang]
-      @data.forEach (d) => d.value = +d[@currentMethod.id]
-      @updateGraph @data
-      @setAnnotations()
+      if @currentMethod
+        $('#map-contraceptives-use-method').html @currentMethod.text[@options.lang]
+        @data.forEach (d) => d.value = +d[@currentMethod.id]
+        @updateGraph @data
+        @setAnnotations()
 
   setAnnotations: ->
     if @currentMethod

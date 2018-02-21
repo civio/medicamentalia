@@ -40,7 +40,7 @@ Unos días antes, en noviembre de 2017, se celebraba en Gambia, el pequeño paí
 <div class="panel alignright" markdown="1">
 ##### Una mordaza global
 
-> Foto
+{% include caption.html img="contraceptives/trump-usaid.jpg" fullWidth=true %}
 
 En enero de 2017, el presidente Trump [reinstauró y amplió](https://www.whitehouse.gov/presidential-actions/presidential-memorandum-regarding-mexico-city-policy) la *Política de la Ciudad de México*. Promovida por Reagan en 1984, exige a todas las ONGs, en cualquier lugar del mundo, certificar que no "practicarán ni promoverán activamente el aborto como método de planificación familiar", como condición para recibir ayudas bilaterales de Estados Unidos en materia de salud. Con Trump, esta exigencia se amplió a nuevos programas. Esta política ha sido aplicada de forma intermitente durante presidencias de corte republicano, y derogada por la administraciones demócratas. En el caso de Marie Stopes, que reparte de forma gratuita métodos anticonceptivos a quienes no tienen recursos, ese veto puedo suponer que "estas mujeres no tendrán medios para acceder a la planificación familiar", se lamenta Coumba Dieng.
 </div>
@@ -58,6 +58,8 @@ Una de esas organizaciones es la FPNU. Alieu Jammeh trabaja en la sede de Gambia
 {: .literary}
 
 El primer deber del hombre y la mujer en el Judaísmo es multiplicarse. Deben tener tantos hijos como sea posible o, al menos, según las interpretaciones, un niño y una niña. Consideran que el esperma del hombre contiene el aliento de vida necesario para la concepción. Y es, por tanto, sagrado e imperativo. Por eso, para los más estrictos, la regla es clara: desperdiciarlo es pecado. Es el *hash-hatat zera*, o la emisión indebida de semen.
+</div>
+</div>
 
 <div id="carousel-rabinos" class="carousel-scrollama scroll-container">
 <!--  graphic container  -->
@@ -68,19 +70,21 @@ El primer deber del hombre y la mujer en el Judaísmo es multiplicarse. Deben te
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="carousel" data-step="0">
+  <div class="step" data-step="0">
     <p>"Prohibido, prohibido y prohibido. Por eso no existe la marcha atrás".</p>
   </div>
-  <div class="step" data-instance="carousel" data-step="1">
+  <div class="step" data-step="1">
     <p>"El semen del hombre no puede estar fuera, no puede ser en vano".</p>
   </div>
-  <div class="step" data-instance="carousel" data-step="2">
+  <div class="step" data-step="2">
     <p>"Los judíos, y especialmente los ortodoxos, saben que es cortar la suerte de uno".</p>
   </div>
-  <div class="step" data-instance="carousel" data-step="3"></div>
+  <div class="step" data-step="2"></div>
 </div>
 </div>
 
+<div class="container page-content">
+<div class="page-content-container" markdown="1">
 Para Mira Raz, rabina progresista, que se ponga el foco en el semen del hombre abre la puerta al uso de anticonceptivos por parte de la mujer. Así, para religiosos reformistas como ella, sí estarían permitidos métodos como la píldora o el DIU, pero no los de barrera, como los anticonceptivos. Y, más allá de la teoría, aclara: **"Yo no soy un policía de Dios"**. Joseph Hoffner, rabino del hospital Ma'ayanei Hayeshua en Bnei Brak, una colonia ultraortodoxa de Tel Aviv, coincide con ella: "Lo que el hombre tiene que ponerse está prohibido, y casi todas las demás cosas están permitidas", argumenta. 
 
 Yair Hass es director de Hillel, una organización que se dedica a ayudar a adultos que deciden abandonar el encorsetado mundo del judaísmo ultraortodoxo. Para él, el control de la natalidad en Israel es un tema "muy conflictivo", porque la idea es "llegar al número [de población] de antes del Holocausto", cuenta. Y, además, en este país, la natalidad es un asunto de Estado: hay que superar en número a palestinos y al resto de países vecinos. Con todos estos ingredientes, la pirámide poblacional de Israel en 2017 tiene la misma forma que la de España en los años 60, en pleno *baby boom*, aunque las distintas sensibilidades religiosas mantienen sus diferencias. Así, hoy los *haredim* o judíos ultraortodoxos, con más hijos, representan el 10% de la población israelí. Para 2059 [se estima](https://en.idi.org.il/media/4240/shnaton-e_8-9-16_web.pdf) que supongan el 35%.
@@ -109,6 +113,8 @@ La amenorrea de la lactancia es un método anticonceptivo que solo pueden utiliz
 </div> 
 
 Las tres religiones dejan una rendija abierta para casos en los que la salud está en juego. 
+</div>
+</div>
 
 <div id="carousel-imam" class="carousel-scrollama scroll-container">
 <!--  graphic container  -->
@@ -119,19 +125,21 @@ Las tres religiones dejan una rendija abierta para casos en los que la salud est
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="carousel" data-step="0">
+  <div class="step" data-step="0">
     <p>"Depende de por qué quieres planificar tu familia. Si es por problemas de salud, lo aceptamos. La primera preocupación del Islam es proteger la vida".</p>
   </div>
-  <div class="step" data-instance="carousel" data-step="1">
+  <div class="step" data-step="1">
     <p>"Pero parar de tener hijos porque no tienes dinero... Odiamos eso, estamos en contra".</p>
   </div>
-  <div class="step" data-instance="carousel" data-step="2">
+  <div class="step" data-step="2">
     <p>"Somos los hijos de Alá, todos nosotros. Y antes de que Alá envíe a alguien, él provee todas las necesidades para él o ella".</p>
   </div>
-  <div class="step" data-instance="carousel" data-step="3"></div>
+  <div class="step" data-step="2"></div>
 </div>
 </div>
 
+<div class="container page-content">
+<div class="page-content-container" markdown="1">
 En 2016, la malnutrición amenazó las vidas de cerca de 52 millones de niños menores de cinco años en todo el mundo, [según Unicef](https://data.unicef.org/wp-content/uploads/2017/06/JME-2017_brochure_June-25.pdf). 
 
 <div class="container-right">
@@ -173,6 +181,8 @@ Su marido se enteraría poco después de que estaba usando un método anticoncep
 El mismo estudio firma que "la religión tiene un papel fundamental produciendo y reproduciendo argumentos morales en contra de la educación sexual". En Guatemala, como informó [Nómada](https://nomada.gt/como-las-visiones-religiosas-impiden-la-educacion-sexual-en-guatemala/), la filiación conservadora de altos funcionarios del Ministerio de Educación, así como la influencia de las confesiones católica y evangélica en el currículo escolar, han excluido la educación sexual en las aulas. 
 
 En España, en 2009, el entonces obispo de Palencia, [José Ignacio Munilla](https://twitter.com/obispomunilla), [comparó](http://www.europapress.es/castilla-y-leon/noticia-obispo-palencia-compara-guia-educacion-sexual-unesco-pan-circo-imperio-romano-20090910193434.html) la Guía de educación sexual de la Unesco con el *pan y circo* del Imperio Romano. En 2015, ya como obispo de San Sebastián, [escribió](https://www.religionenlibertad.com/el-obispo-munilla-explica-10-verdades-sobre-sexo-politicamente-incorrectas-41704.htm) en su libro *Sexo con alma y cuerpo* que la mayoría de los cursos de educación afectivo-sexual que se imparten en la red de enseñanza pública "no ofrecen una educación sexual sino una mera enseñanza de la práctica genital". En 2004, Juan Antonio Reig Pla, entonces obispo de Segorbe-Castellón, [afirmó](https://www.lavozdegalicia.es/noticia/sociedad/2004/12/15/obispo-afirma-educacion-sexual-imparte-aulas-limita-exaltar-homosexualidad/0003_3296614.htm) que la educación sexual que se da en las aulas se reducía a "exaltar la homosexualidad". En la asignatura de Religión en escuelas públicas pueden hablar -o no- del tema según sus propios términos, puesto que [es la Conferencia Episcopal](https://civio.es/el-boe-nuestro-de-cada-dia/2015/02/24/curriculo-de-religion-en-primaria-y-secundaria-mas-rezos-y-menos-islam/) quien decide el currículo y los contenidos. 
+</div>
+</div>
 
 <div id="carousel-papa" class="carousel-scrollama scroll-container">
 <!--  graphic container  -->
@@ -182,16 +192,18 @@ En España, en 2009, el entonces obispo de Palencia, [José Ignacio Munilla](htt
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="carousel" data-step="0">
+  <div class="step" data-step="0">
     <p>"El impulso sexual puede ser cultivado en un camino de autoconomiento y en el desarrollo de la capacidad de autodominio".</p>
   </div>
-  <div class="step" data-instance="carousel" data-step="1">
+  <div class="step" data-step="1">
     <p>"Es irresponsable toda invitación a los adolescentes a que jueguen con sus cuerpos y deseos".</p>
   </div>
-  <div class="step" data-instance="carousel" data-step="2"></div>
+  <div class="step" data-step="1"></div>
 </div>
 </div>
 
+<div class="container page-content">
+<div class="page-content-container" markdown="1">
 Y esa falta de educación sexual tiene consecuencias. Yair Hass, de Hillel, habla sobre sus usuarios: "No saben absolutamente nada, es un tema tabú. El día de su boda, uno de ellos no sabía cómo se creaba un niño ni las diferencias entre un hombre y una mujer". Sarah Reich, exultraortodoxa y voluntaria de esta organización, cuenta que, aunque recibió el "extraordinario" permiso del rabino para usar anticonceptivos, nadie le enseñó "cómo evitar tener hijos". Y a los dos meses de casarse se quedó embarazada. **Para evitar un segundo embarazo, se levantaba de la cama tras tener relaciones y "saltaba, saltaba muchísimo, hacía cientos de saltos"**. 
 
 

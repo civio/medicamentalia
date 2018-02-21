@@ -94,6 +94,7 @@ var js_paths = {
     //'_app/scripts/bar-horizontal-graph.coffee',
     //'_app/scripts/bar-horizontal-stacked-graph.coffee',
     //'_app/scripts/contraceptives-reasons.coffee',
+    '_app/scripts/scroll-graph.coffee',
     '_app/scripts/map-graph.coffee',
     '_app/scripts/contraceptives-use-map-graph.coffee',
     '_app/scripts/treemap-graph.coffee',

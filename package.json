@@ -47,7 +47,7 @@
     "jshint": "^2.9.3",
     "rollup": "^0.26.3",
     "rollup-plugin-node-resolve": "^1.5.0",
-    "scrollama": "^0.5.3",
+    "scrollama": "^1.4.1",
     "select2": "^4.0.6-rc.1",
     "topojson-client": "^2.1.0"
   }

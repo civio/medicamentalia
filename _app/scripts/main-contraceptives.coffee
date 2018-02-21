@@ -219,111 +219,11 @@
       'v3a08t': "interferes with the body's processes"
 
 
-  # Scrollama Setup
-  # ---------------
-
-  setupScrollama = (id) ->
-    container = d3.select('#'+id)
-    graphic   = container.select('.scroll-graphic')
-    chart     = graphic.select('.graph-container')
-    text      = container.select('.scroll-text')
-    steps     = text.selectAll('.step')
-
-    # initialize scrollama
-    scroller = scrollama()
-
-    # resize function to set dimensions on load and on page resize
-    handleResize = ->
-      width = graphic.node().getBoundingClientRect().width #Math.floor window.innerWidth
-      height = Math.floor window.innerHeight
-      # 1. update height of step elements for breathing room between steps
-      steps.style 'height', height + 'px'
-      # 2. update height of graphic element
-      graphic.style 'height', height + 'px'
-      # 3. update width of chart
-      chart
-        .style 'width', width+'px'
-        .style 'height', height+'px'
-      # 4. tell scrollama to update new element dimensions
-      scroller.resize()
-
-    handleContainerEnter = (e) ->
-      # sticky the graphic
-      graphic
-        .classed 'is-fixed', true
-        .classed 'is-bottom', false
-
-    handleContainerExit = (e) ->
-      # un-sticky the graphic, and pin to top/bottom of container
-      graphic
-        .classed 'is-fixed', false
-        .classed 'is-bottom', e.direction == 'down'
-
-    handleStepEnter = (e) ->
-      # console.log e
-      $step = $(e.element)
-      instance = $step.data('instance')
-      step = $step.data('step')
-      if instance == 0 
-        #console.log 'scrollama 0', step
-        if useTreemap
-          if step == 1
-            useTreemap.updateData 'world', 'Mundo'
-          else if step == 0 and e.direction == 'up'
-            useTreemap.updateData userCountry.code, userCountry.name
-      else if instance == 1 
-        if useMap
-          #console.log 'scrollama 1', step
-          useMap.setMapState step # update map based on step 
-      else if instance == 2
-        if useGraph and step > 0
-          data = [63, 88, 100] # 63, 63+25, 63+25+12
-          from = if step > 1 then data[step-2] else 0
-          to = data[step-1]
-          useGraph.selectAll('li')
-            .filter (d) -> d >= from and d < to
-            .classed 'fill-'+step, e.direction == 'down'
-          #console.log 'scrollama 2', step
-      else if instance == 3
-        if unmetneedsGraph
-          unmetneedsGraph.setMode step
-      else if instance == 'carousel'
-        graphic = $step.parent().parent().find('.scroll-graphic')
-        graphic.find('.active').removeClass('active')
-        graphic.find('.step-'+step).addClass('active')
-
-    # start it up
-    # 1. call a resize on load to update width/height/position of elements
-    handleResize()
-
-    # 2. setup the scrollama instance
-    # 3. bind scrollama event handlers (this can be chained like below)
-    scroller
-      .setup
-        container:  '#'+id                # our outermost scrollytelling element
-        graphic:    '.scroll-graphic'     # the graphic
-        text:       '.scroll-text'        # the step container
-        step:       '.scroll-text .step'  # the step elements
-        offset:     0.05                  # set the trigger to be 1/2 way down screen
-        debug:      false                 # display the trigger offset for testing
-      .onContainerEnter handleContainerEnter 
-      .onContainerExit  handleContainerExit 
-
-    # Ensure to setup onStepEnter handler only once
-    unless scrollamaInitialized
-      scrollamaInitialized = true
-      scroller.onStepEnter  handleStepEnter 
-      
-    # setup resize event
-    window.addEventListener 'resize', handleResize
-
-
   # Contraceptives Use Graph 
   # -------------------------
 
   setupConstraceptivesUseGraph = ->
-    # Setup Scrollama
-    setupScrollama 'contraceptives-use-graph-container'
+
     # Setup Graph
     graphWidth = 0
     dataIndex = [0..99]
@@ -336,6 +236,7 @@
           .append('use')
             .attr('xlink:href', '#icon-woman')
             .attr('viewBox', '0 0 193 450')
+
     # Resize handler
     resizeHandler = ->
       if graphWidth != useGraph.node().offsetWidth
@@ -351,17 +252,26 @@
           .attr 'width', itemsWidth
           .attr 'height', itemsHeight
       useGraph.style 'margin-top', (($('body').height()-useGraph.node().offsetHeight)*.5)+'px'
-    window.addEventListener 'resize', resizeHandler
+
+    # set scrollama for treemap
+    new ScrollGraph 'contraceptives-use-graph-container', (e) ->
+      currentStep = +d3.select(e.element).attr('data-step')
+      if currentStep > 0
+        data = [63, 88, 100] # 63, 63+25, 63+25+12
+        from = if currentStep > 1 then data[currentStep-2] else 0
+        to = data[currentStep-1]
+        useGraph.selectAll('li')
+          .filter (d) -> d >= from and d < to
+          .classed 'fill-'+currentStep, e.direction == 'down'
+
     resizeHandler()
+    window.addEventListener 'resize', resizeHandler
 
 
   # Unmeet Needs vs GDP graph
   # --------------------------
 
   setupUnmetNeedsGdpGraph = (data_unmetneeds, countries) ->
-
-    # Setup Scrollama
-    setupScrollama 'unmet-needs-gdp-container-graph'
 
     # parse data
     data = []
@@ -376,6 +286,7 @@
             gni:        +country[0]['gni']
       else
         console.log 'No GNI or Population data for this country', d.code, country[0]
+
     # setup graph
     unmetneedsGraph = new window.BeeswarmScatterplotGraph 'unmet-needs-gdp-graph',
       margin:
@@ -393,6 +304,12 @@
       dotMinSize: 1
       dotMaxSize: 32
     unmetneedsGraph.setData data
+
+    # set scrollama for treemap
+    new ScrollGraph 'unmet-needs-gdp-container-graph', (e) ->
+      currentStep = +d3.select(e.element).attr('data-step')
+      unmetneedsGraph.setMode currentStep
+
     $(window).resize unmetneedsGraph.onResize
 
 
@@ -400,9 +317,6 @@
   # -------------------
 
   setupConstraceptivesMaps = (data_use, countries, map) ->
-
-    # Setup Scrollama
-    setupScrollama 'contraceptives-use-container'
 
     # parse data use
     data_use.forEach (d) ->
@@ -444,9 +358,14 @@
       legend: true
       lang: lang
     useMap.setData data_use, map
-    useMap.onResize()
+
+    # set scrollama for treemap
+    new ScrollGraph 'contraceptives-use-container', (e) ->
+      currentStep = +d3.select(e.element).attr('data-step')
+      useMap.setMapState currentStep # update map based on step 
 
     # setup resize
+    useMap.onResize()
     $(window).resize useMap.onResize
 
 
@@ -454,8 +373,7 @@
   # --------------------------
 
   setupConstraceptivesUseTreemap = (data_use) ->
-    # set scrollama for treemap
-    setupScrollama 'treemap-contraceptives-use-container'
+
     # setup treemap
     useTreemap = new window.ContraceptivesUseTreemapGraph 'treemap-contraceptives-use',
       aspectRatio: 0.5625
@@ -471,6 +389,15 @@
       methodsNames: methods_names[lang]
     # set data
     useTreemap.setData data_use, userCountry.code, userCountry.name
+
+    # set scrollama for treemap
+    new ScrollGraph 'treemap-contraceptives-use-container', (e) ->
+      currentStep = +d3.select(e.element).attr('data-step')
+      if currentStep == 1
+        useTreemap.updateData 'world', 'Mundo'
+      else if currentStep == 0 and e.direction == 'up'
+        useTreemap.updateData userCountry.code, userCountry.name
+
     # set resize
     $(window).resize useTreemap.onResize
 
@@ -490,79 +417,90 @@
         $bars.removeClass('disabled')
 
 
+  onCarouselStep = (e) ->
+    currentStep = d3.select(e.element).attr('data-step')
+    #console.log 'carousel', currentStep
+    @graphic.selectAll('.active').classed 'active', false
+    @graphic.select('.step-'+currentStep).classed 'active', true
+
+
+  setupDataArticle = (error, data_use, data_unmetneeds, data_reasons, countries, map, location) ->
+
+    if location
+      user_country = countries.filter (d) -> d.code2 == location.country_code
+      if user_country[0]
+        userCountry.code = user_country[0].code
+        userCountry.name = user_country[0]['name_'+lang]
+    else
+      location = {}
+
+    unless location.code
+      userCountry.code = 'ESP'
+      userCountry.name = if lang == 'es' then 'España' else 'Spain'
+
+    #test other countries
+    #userCountry.code = 'RUS'
+    #userCountry.name = 'Rusia'
+
+    # add country ISO 3166-1 alpha-3 code to data_reasons
+    data_reasons.forEach (d) ->
+      item = countries.filter (country) -> country.code2 == d.code
+      if item and item[0]
+        d.code = item[0].code
+        d.name = item[0]['name_'+lang]
+        Object.keys(reasons_names[lang]).forEach (reason) ->
+          d[reason] = 100*d[reason]
+          if d[reason] > 100
+            console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
+        delete d.country
+      else
+        console.warn 'No country data for '+d.code
+
+    if $('#treemap-contraceptives-use').length
+      setupConstraceptivesUseTreemap data_use
+
+    if $('#map-contraceptives-use').length
+      setupConstraceptivesMaps data_use, countries, map
+
+    if $('#contraceptives-use-graph').length > 0
+      setupConstraceptivesUseGraph()
+
+    if $('#unmet-needs-gdp-graph').length
+      setupUnmetNeedsGdpGraph data_unmetneeds, countries
+
+    #if $('#contraceptives-reasons-opposed').length
+    #  new ContraceptivesReasons data_reasons, countries, reasons_names[lang]
+
+    if $('#carousel-marie-stopes').length
+      new ScrollGraph 'carousel-marie-stopes', onCarouselStep
+
+    if $('#contraceptives-reasons-opposed').length
+      setupReasonsOpposedGraph()
+
+    if $('#contraceptives-app').length
+      new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang]
+
+
   # Setup
   # ---------------
 
-  # Load csvs & setup maps
-  d3.queue()
-    .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
-    .defer d3.csv,  baseurl+'/data/unmet-needs.csv'
-    .defer d3.csv,  baseurl+'/data/contraceptives-reasons.csv'
-    .defer d3.csv,  baseurl+'/data/countries-gni-population-2016.csv'
-    .defer d3.json, baseurl+'/data/map-world-110.json'
-    .defer d3.json, 'https://freegeoip.net/json/'
-    .await (error, data_use, data_unmetneeds, data_reasons, countries, map, location) ->
+  if $('body').hasClass('data') or $('body').hasClass('datos')
+    # Load csvs & setup maps
+    d3.queue()
+      .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
+      .defer d3.csv,  baseurl+'/data/unmet-needs.csv'
+      .defer d3.csv,  baseurl+'/data/contraceptives-reasons.csv'
+      .defer d3.csv,  baseurl+'/data/countries-gni-population-2016.csv'
+      .defer d3.json, baseurl+'/data/map-world-110.json'
+      .defer d3.json, 'https://freegeoip.net/json/'
+      .await setupDataArticle
 
-      if location
-        user_country = countries.filter (d) -> d.code2 == location.country_code
-        if user_country[0]
-          userCountry.code = user_country[0].code
-          userCountry.name = user_country[0]['name_'+lang]
-      else
-        location = {}
-
-      unless location.code
-        userCountry.code = 'ESP'
-        userCountry.name = if lang == 'es' then 'España' else 'Spain'
-
-      #test other countries
-      #userCountry.code = 'RUS'
-      #userCountry.name = 'Rusia'
-
-      # add country ISO 3166-1 alpha-3 code to data_reasons
-      data_reasons.forEach (d) ->
-        item = countries.filter (country) -> country.code2 == d.code
-        if item and item[0]
-          d.code = item[0].code
-          d.name = item[0]['name_'+lang]
-          Object.keys(reasons_names[lang]).forEach (reason) ->
-            d[reason] = 100*d[reason]
-            if d[reason] > 100
-              console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
-          delete d.country
-        else
-          console.warn 'No country data for '+d.code
-
-      if $('#treemap-contraceptives-use').length
-        setupConstraceptivesUseTreemap data_use
-
-      if $('#map-contraceptives-use').length
-        setupConstraceptivesMaps data_use, countries, map
-
-      if $('#contraceptives-use-graph').length > 0
-        setupConstraceptivesUseGraph()
-
-      if $('#unmet-needs-gdp-graph').length
-        setupUnmetNeedsGdpGraph data_unmetneeds, countries
-
-      #if $('#contraceptives-reasons-opposed').length
-      #  new ContraceptivesReasons data_reasons, countries, reasons_names[lang]
-
-      if $('#carousel-marie-stopes').length
-        setupScrollama 'carousel-marie-stopes'
-
-      if $('#contraceptives-reasons-opposed').length
-        setupReasonsOpposedGraph()
-
-      if $('#contraceptives-app').length
-        new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang]
-
-
-      if $('#carousel-rabinos').length
-        setupScrollama 'carousel-rabinos'
-      if $('#carousel-imam').length
-        setupScrollama 'carousel-imam'
-      if $('#carousel-papa').length
-        setupScrollama 'carousel-papa'
+  else if $('body').hasClass 'religion'
+    if $('#carousel-rabinos').length
+      new ScrollGraph 'carousel-rabinos', onCarouselStep
+    if $('#carousel-imam').length
+      new ScrollGraph 'carousel-imam', onCarouselStep
+    if $('#carousel-papa').length
+      new ScrollGraph 'carousel-papa', onCarouselStep
 
 ) jQuery
