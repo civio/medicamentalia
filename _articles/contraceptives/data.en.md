@@ -9,7 +9,7 @@ order:            1
 highlighted:      true
 author:           ...
 pub_date:         2018-02-20
-slug:             data
+slug:             data-use-barriers
 ref:              contraceptives-data
 lang:             en
 ---

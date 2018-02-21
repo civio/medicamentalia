@@ -19,7 +19,7 @@ article_menu:     <li><a href="#hasta-la-ltima-gota-de-semen-es-sagrada" title="
 <div class="page-content-container" markdown="1">
 
 > "Creced y multiplicaos"
-> <footer>(Génesis, 1:28)</footer>
+> <footer>Génesis, 1:28</footer>
 {: .literary}
 
 De fondo, centenares de libros religiosos, la materia prima con la que trabaja el rabino ultraortodoxo Daniel Bitton, de origen marroquí. Ante el vapor de una cafetera, en su despacho del Instituto Hamaor de Jerusalén, arranca la entrevista. Lo hace desde lo más básico, su postura sobre la planificación familiar: **"Yo no puedo explicar algo que no existe. Para nosotros no existe la planificación familiar, nosotros no decidimos nada, Dios planifica todo y Dios decide todo"**. De la negación a la prohibición, la postura de este rabino no es única. Las tres principales religiones monoteístas parten de la misma base: el sexo solo está permitido dentro del matrimonio y su fin último es la reproducción. Bajo esa premisa hay poco espacio para los anticonceptivos y su uso y promoción alientan la promiscuidad y el pecado. 
@@ -53,8 +53,8 @@ Una de esas organizaciones es la FPNU. Alieu Jammeh trabaja en la sede de Gambia
 ### Hasta la última gota de semen es sagrada
 {: data}
 
-> "Onán sabía que aquella descendencia no sería suya, y así, cuando tenía relaciones con su cuñada, derramaba en tierra el semen, para no darle un hijo a su hermano. Esto no le gustó a Yavé, y también a él lo hizo morir"
-> <footer>(Génesis, 38:8-10)</footer>
+> "Onán sabía que aquella descendencia no sería suya, y así, cuando tenía relaciones con su cuñada, derramaba en tierra el semen, para no darle un hijo a su hermano. Esto no le gustó a Yahvé, y también a él lo hizo morir"
+> <footer>Génesis, 38:8-10</footer>
 {: .literary}
 
 El primer deber del hombre y la mujer en el Judaísmo es multiplicarse. Deben tener tantos hijos como sea posible o, al menos, según las interpretaciones, un niño y una niña. Consideran que el esperma del hombre contiene el aliento de vida necesario para la concepción. Y es, por tanto, sagrado e imperativo. Por eso, para los más estrictos, la regla es clara: desperdiciarlo es pecado. Es el *hash-hatat zera*, o la emisión indebida de semen.
@@ -97,7 +97,7 @@ En 1982, en una visita a Madrid, Juan Pablo II afirmó ante miles de fieles que 
 ### Permiso concedido -a veces- por motivos de salud
 
 > "No matéis a vuestros hijos por temor a la pobreza. Nosotros los proveemos a ellos y a vosotros"
-> <footer>(Coran, 17:31)</footer>
+> <footer>Coran, 17:31</footer>
 {: .literary}
 
 "No es lícito, ni aún por razones gravísimas, hacer el mal para conseguir el bien", reza la encíclica *Humanae Vitae*. Pero, entonces, ¿no hay ninguna situación que permita, para los religiosos más acérrimos, el uso de anticonceptivos? El mismo documento acepta que, "si para espaciar los nacimientos hay serios motivos, derivados de las condiciones físicas o psicológicas de los cónyuges, o de circunstancias exteriores, es lícito tener en cuenta los ritmos naturales". También los permite, aunque solo en parejas que ya han tenido hijos, para tener una "fecundidad menos exhuberante". 

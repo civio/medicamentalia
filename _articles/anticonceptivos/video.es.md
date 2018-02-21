@@ -1,7 +1,7 @@
 ---
 category:         anticonceptivos
-title:            Datos
-subtitle:         Radiografía de un derecho
+title:            Video
+subtitle:         Las señoras dan la turra
 description:      Una de cada diez mujeres en todo el planeta no usa los anticonceptivos que necesita. Analizamos cómo se ejerce este derecho y cómo los efectos secundarios, el machismo, las creencias y las imposiciones de terceros lo vulneran.
 home_description: Una de cada diez mujeres en todo el planeta no usa los anticonceptivos que necesita. Analizamos cómo se ejerce este derecho y cómo los efectos secundarios, el machismo, las creencias y las imposiciones de terceros lo vulneran.
 img:              articles/home-contraceptives.jpg
@@ -9,8 +9,8 @@ order:            1
 highlighted:      true
 author:           ...
 pub_date:         2018-02-20
-slug:             datos-uso-barreras
-ref:              contraceptives-data
+slug:             video
+ref:              contraceptives-video
 lang:             es
 ---
 
@@ -319,3 +319,5 @@ Es una cuestión de salud pública, pero también de derechos. El de elegir de f
     <path d="M55 275l-4-38-2-5-2 3-9 38c-3 9-4 19-4 29l1 33 1 5 19-65zm124 70l2-29c1-11 3-23-1-34l-10-40-4-12-1 5-5 40 19 70zM62 170c-5-1-11-1-15-4a53 53 0 0 1-27-44c-1-14 5-26 12-38 9-14 15-29 18-45C55 14 75 1 99 0c8 0 15 1 23 4 4 2 7 5 10 9 3 5 8 0 12 3 7 6 12 13 17 21 16 27 25 57 25 88 0 23-10 37-31 43l-2 1c-1 2 1 2 2 3l19 9c6 2 10 6 13 13 13 31 19 64 26 97 4 17 1 33-3 49-2 9-5 18-5 27l1 21c-1 8-3 15-10 21-5 3-9 4-14 5-3 0-5 0-5 3 0 6-3 13-5 19-8 21-13 42-15 64l-8 55-5 38c-1 6-2 12-9 15-2 1-1 2 0 4 1 4 3 7 6 11 9 12 4 23-11 24-7 1-14 2-21-3-1-1-2 0-4 1-7 5-25 4-32-4-4-5-5-8-1-13 3-5 7-10 9-16 1-3 1-4-2-6-4-2-6-5-6-10l-8-51c-4-19-5-37-7-56-2-12-4-24-9-36l-11-35c0-3-2-4-5-5-11 0-20-7-22-18l-2-14c2-10 0-18-2-27a169 169 0 0 1 2-103c6-21 13-42 22-61 1-3 3-5 6-7l26-12-1-1z" fill-rule="evenodd"/>
   </symbol>
 </svg>
+
+{% include contraceptives/icons.html %}
