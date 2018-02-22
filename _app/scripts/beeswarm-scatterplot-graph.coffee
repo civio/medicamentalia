@@ -262,7 +262,7 @@ class window.BeeswarmScatterplotGraph extends window.BaseGraph
   getDimensions: ->
     if @$el
       @containerWidth  = @$el.width()
-      @containerHeight = @containerWidth * @options.aspectRatio
+      @containerHeight = if @containerWidth > 680 then @containerWidth * @options.aspectRatio else if @containerWidth > 520 then @containerWidth * .75 else @containerWidth
       @width           = @containerWidth - @options.margin.left - @options.margin.right
       @height          = @containerHeight - @options.margin.top - @options.margin.bottom
     return @

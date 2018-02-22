@@ -236,7 +236,7 @@
     resizeHandler = ->
       if graphWidth != useGraph.node().offsetWidth
         graphWidth = useGraph.node().offsetWidth
-        itemsWidth = (graphWidth / 20) - 10
+        itemsWidth = if graphWidth > 480 then (graphWidth / 20) - 10 else (graphWidth / 20) - 4
         itemsHeight = 2.33*itemsWidth
         #itemsWidth = if graphWidth < 480 then '10%' else '5%'
         #itemsHeight = if graphWidth < 480 then graphWidth * 0.1 / 0.75 else graphWidth * 0.05 / 0.75
@@ -348,7 +348,7 @@
     useMap = new window.ContraceptivesUseMapGraph 'map-contraceptives-use',
       aspectRatio: 0.5625
       margin:
-        top: 20
+        top: 60
         bottom: 0
       legend: true
       lang: lang
@@ -463,9 +463,6 @@
     if $('#unmet-needs-gdp-graph').length
       setupUnmetNeedsGdpGraph data_unmetneeds, countries
 
-    #if $('#contraceptives-reasons-opposed').length
-    #  new ContraceptivesReasons data_reasons, countries, reasons_names[lang]
-
     if $('#carousel-marie-stopes').length
       new ScrollGraph 'carousel-marie-stopes', onCarouselStep
 
@@ -474,7 +471,6 @@
 
     if $('#contraceptives-app').length
       new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang]
-
 
 
   # setup line chart
@@ -498,6 +494,7 @@
     graph.getScaleYDomain = -> return [0, 385]
     graph.setData data
     $(window).resize graph.onResize
+
 
   # Setup
   # ---------------

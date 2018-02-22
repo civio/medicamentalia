@@ -403,6 +403,7 @@ header {
     footer{
       color: $brand-primary;
       font-size: .75em;
+      line-height: 1.5em;
       font-weight: 400;
       padding-top: 15px;
       text-indent: 0;
@@ -558,6 +559,8 @@ header {
   p{
     font-size: 1em;
     line-height: 1.25em;
+    padding-right: 10px;
+    padding-left: 10px;
     margin: 0 auto $grid-gutter-width/2;
     max-width: $page-content-container-width;
 
@@ -929,6 +932,7 @@ header {
     display: inline-block;
     top: 85%; //15px; // 50%;
     padding: 15px 20px;
+    margin: 0 10px;
     background: white;
     background: rgba(255,255,255,.92);
     box-shadow: 1px 1px 10px rgba(0,0,0,0.1);

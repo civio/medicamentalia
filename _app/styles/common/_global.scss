@@ -125,6 +125,11 @@ h4, h5{
     font-size: 1em;
     line-height: 1.375em;
   }
+
+  @media (max-width: $screen-md) {
+    padding-right: 2*$grid-gutter-width/3;
+    padding-left: 2*$grid-gutter-width/3;
+  }
 }
 
 

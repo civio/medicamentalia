@@ -87,6 +87,7 @@ class window.ContraceptivesApp
   onSelectFilter: (e) =>
     e.preventDefault()
     if @filter != $(e.target).attr('href').substring(1)
+      $('html, body').animate {scrollTop: @$app.find('.contraceptives-app-filters').offset().top-15}, 400
       @$app.find('.contraceptives-app-filters .btn').removeClass('active')
       $target = $(e.target).addClass('active')
       @filter = $target.attr('href').substring(1)

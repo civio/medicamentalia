@@ -2466,6 +2466,10 @@ body.guatemala-graph {
     list-style: none;
     margin: 8px 5px;
 
+    @media (max-width: 526px) {
+      margin: 7px 2px;
+    }
+
     svg{
       fill: $gray-light;
       @include transition(.3s ease-out fill);   
@@ -2923,6 +2927,17 @@ body.guatemala-graph {
       font-size: 21px;
       line-height: 34px;
       margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: $screen-xs) {
+    .media-left{
+      display: block;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .media-body{
+      padding-left: 10px;
     }
   }
 }
