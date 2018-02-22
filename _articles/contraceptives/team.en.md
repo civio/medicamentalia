@@ -1,18 +1,7 @@
 ---
 category:   contraceptives
 title:      Methodology
-img:        articles/home-vaccines-team.jpg
-
-gallery:
-  - image: articles/pizarra.jpg
-    title: Raúl and Eva discuss the structure of the project and consider their plans for the finished website.
-  - image: articles/miguel.jpg
-    title: "Miguel, mid-interview in Pretoria (spot the false elephant). | Photo: Serusha Govender"
-  - image: articles/eva-asier.jpg
-    title: "Eva and Asier, during the interview with gynaecologist Gerson Eduardo Galvez, in Guatemala City. | Photo: Manuel Penados"
-  - image: articles/raul.jpg
-    title: Raúl, creating beautiful things to explain difficult concepts.
-
+img:        articles/home-contraceptives-team.jpg
 order:      6
 slug:       team
 ref:        contraceptives-team

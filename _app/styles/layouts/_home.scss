@@ -514,12 +514,12 @@ $btn-scroll-down-icon-size: 44px;
   
     .portfolio-box-overlay,
     .portfolio-box-background{
-      background: $overlay-contraceptives;
+      background-color: $overlay-contraceptives;
     }
 
     &:hover {
       .portfolio-box-overlay{
-        background: darken($overlay-contraceptives, 10%);
+        background-color: darken($overlay-contraceptives, 10%);
       }
       .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
         color: darken($overlay-contraceptives, 10%);
