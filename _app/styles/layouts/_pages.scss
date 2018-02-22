@@ -904,6 +904,7 @@ header {
   .graph-container {
     position: absolute;
     left: 0;
+    right: 0;
     top: 50%;
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -918,6 +919,10 @@ header {
   text-align: center;
   //pointer-events: none;
   z-index: 89;
+
+  .step{
+    height: 300px;
+  }
 
   .step p{
     position: relative;
