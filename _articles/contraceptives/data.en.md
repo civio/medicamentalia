@@ -43,13 +43,13 @@ Fanta Jatta knows more than most about these cases. She talks about it at the he
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="0" data-step="0">
+  <div class="step" data-step="0">
     <p>In <strong id="treemap-contraceptives-use-country"></strong>, <span id="treemap-contraceptives-use-any-method"></span>% of women use a modern contraceptive method. The most common is <strong id="treemap-contraceptives-use-method"></strong>.</p>
   </div>
-  <div class="step" data-instance="0" data-step="1">
+  <div class="step" data-step="1">
     <p><strong>Worldwide</strong>, the most common methods are <strong>female sterilization</strong>, intrauterine devices (<strong>IUD</strong>) and the <strong>pill</strong>.</p>
   </div>
-  <div class="step" data-instance="0" data-step="2"></div>
+  <div class="step" data-step="2"></div>
 </div>
 </div>
 
@@ -72,34 +72,34 @@ But contraceptive use is not homogeneous between countries or social classes. Th
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="1" data-step="1">
+  <div class="step" data-step="1">
     <p><strong>Female sterilization</strong> is the most common contraceptive method in India (67%); it is also common in many Central American countries such as the Dominican Republic (59%), Puerto Rico, El Salvador and Mexico.</p>
   </div>
-  <div class="step" data-instance="1" data-step="2">
+  <div class="step" data-step="2">
     <p><strong>Male sterilization</strong> is a lot less common and does not reach such high percentages. For example: it's the method of choice for 30% of couples in Canada. In the United Kingdom this percentatge is 25%.</p>
   </div>
-  <div class="step" data-instance="1" data-step="3">
+  <div class="step" data-step="3">
     <p markdown="1">The <strong>IUD</strong> stands out in Asian countries, above all North Korea: is the method used by 95% of women on birth control.</p>
   </div>
-  <div class="step" data-instance="1" data-step="4">
+  <div class="step" data-step="4">
     <p markdown="1">In China, where 48% use the **IUD**, during the time when the one-child policy was in force, the government forced women to use it after their first birth. Now, it [is being offered](https://www.nytimes.com/2017/01/07/world/asia/after-one-child-policy-outrage-at-chinas-offer-to-remove-iuds. html) to withdraw them for free. In other countries, its use is almost negligible. Some doctors refuse to insert it due to [false beliefs about its safety](https://www.washingtonpost.com/national/health-science/why-do-some-doctors-refuse-to-give-women-iuds/2017/10/12/ee1e881e-a3c9-11e7-b14f-f41773cd5a14_story.html?utm_term=.6e3da2fb3930) in women who have not had children.</p>
   </div>
-  <div class="step" data-instance="1" data-step="5">
+  <div class="step" data-step="5">
     <p>The <strong>pill</strong> is the leader in other places, such as North Africa and much of Western Europe, but not Spain.</p>
   </div>
-  <div class="step" data-instance="1" data-step="6">
+  <div class="step" data-step="6">
     <p>The <strong>male condom</strong> is one of the most common in countries as different as Botswana (79%) and Greece (49%), and in other countries for unmarried women who do not have access to other more established methods. It is the leading contraceptive method in Spain (38%).</p>
   </div>
-  <div class="step" data-instance="1" data-step="7">
+  <div class="step" data-step="7">
     <p>The <strong>injectable</strong> hormone method, also hormonal based, is the favorite in Africa. For many women it is the perfect solution if they decide to use contraceptives without their husbands finding out, since many husbands would be against it. It is undetectable, easy to administer -a quick shot every one, three or five months- and leaves no trace.</p>
   </div>
-  <div class="step" data-instance="1" data-step="8">
+  <div class="step" data-step="8">
     <p><strong>Traditional methods</strong> range from tracking the menstrual cycle to local practices tied to religion or magic. These methods, which are unreliable at best, are the leading method in the Balkans.</p>
   </div>
-  <div class="step" data-instance="1" data-step="9">
+  <div class="step" data-step="9">
     <p>In Albania, for example, the withdrawal is the main form of birth control for 58% of women.</p>
   </div>
-  <div class="step" data-instance="1" data-step="10"></div>
+  <div class="step" data-step="10"></div>
 </div>
 </div>
 
@@ -123,16 +123,16 @@ In Gambia, many women use a traditional method with different names that is carr
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="2" data-step="1">
+  <div class="step" data-step="1">
     <p>Until now we have spoken of women that use some contraceptive method. Of married or sexually active women from 15 to 49 years of age, <strong>63% practise some form of birth control</strong>.</p>
   </div>
-  <div class="step" data-instance="2" data-step="2">
+  <div class="step" data-step="2">
     <p>Another <strong>25% wish to continue having children</strong> and are therefore not practising birth control.</p>
   </div>
-  <div class="step" data-instance="2" data-step="3">
+  <div class="step" data-step="3">
     <p>But the remaining <strong>12% are women who wish to delay or prevent maternity but do not use birth control</strong>. They are the women with unmet needs. And there is the problem.</p>
   </div>
-  <div class="step" data-instance="2" data-step="4"></div>
+  <div class="step" data-step="4"></div>
 </div>
 </div>
 
@@ -163,22 +163,22 @@ They may want to space pregnancies, for health reasons, to be able to take care 
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="3" data-step="0">
+  <div class="step" data-step="0">
     <p>This problem, the <strong>unmet needs</strong>, is bigger in some countries than in others. It is hardly relevant in China, while in Angola it exceeds 36%.</p>
   </div>
-  <div class="step" data-instance="3" data-step="1">
+  <div class="step" data-step="1">
     <p>Let's distribute them for their Gross National Income (GNI).</p>
   </div>
-  <div class="step" data-instance="3" data-step="2">
+  <div class="step" data-step="2">
     <p>In rich countries, such as the United States, Germany, or Spain, the percentage of women with unmet needs is less than 15%.</p>
   </div>
-  <div class="step" data-instance="3" data-step="3">
+  <div class="step" data-step="3">
     <p>In the least developed countries, that percentage is over 30%.</p>
   </div>
-  <div class="step" data-instance="3" data-step="4">
+  <div class="step" data-step="4">
     <p>Japan and Saudi Arabia, despite their wealth, have unmet needs on par with much poorer countries.</p>
   </div>
-  <div class="step" data-instance="3" data-step="5"></div>
+  <div class="step" data-step="5"></div>
 </div>
 </div>
 
@@ -223,19 +223,19 @@ And there are also [reasons not based on scientific evidence](https://www.guttma
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
-  <div class="step" data-instance="carousel" data-step="0">
+  <div class="step" data-step="0">
     <p>In Pout, one hour from Dakar, dozens of women, most with children in their arms, wait with their feet in the sand and under an awning that protects them from the sun, to the rhythm of a well-animated music, that starts the show. The imam is also present.</p>
   </div>
-  <div class="step" data-instance="carousel" data-step="1">
+  <div class="step" data-step="1">
     <p>Se preparan condones, todo el mundo se coloca, el DJ baja la música y Coumba Dieng, de la organización Marie Stopes, empieza su clase práctica sobre anticonceptivos.</p>
   </div>
-  <div class="step" data-instance="carousel" data-step="2">
+  <div class="step" data-step="2">
     <p>Explica uno a uno los métodos, con ellos en la mano y un entusiasmo que aúna la firmeza de una arenga política y el choteo de un padrino de bodas.</p>
   </div>
-  <div class="step" data-instance="carousel" data-step="3">
+  <div class="step" data-step="3">
     <p>La principal barrera para convencerlas del uso de métodos anticonceptivos son "los rumores, sobre todo los rumores", admite la maestra de ceremonias de esta particular clase práctica en las afueras.</p>
   </div>
-  <div class="step" data-instance="carousel" data-step="4"></div>
+  <div class="step" data-step="4"></div>
 </div>
 </div>
 
