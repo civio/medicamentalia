@@ -131,7 +131,7 @@ En Gambia, muchas mujeres usan un método tradicional que recibe diferentes nomb
     <p>Otro <strong>25% quería seguir teniendo niños</strong> en el momento de ser entrevistada y, por lo tanto, decide no usar ningún método.</p>
   </div>
   <div class="step" data-step="3">
-    <p>Pero el <strong>12%</strong> restante son aquellas mujeres que <strong>quieren retrasar o frenar su maternidad pero no usan ningún método</strong>. Tienen necesidades no cubiertas. Y ahí está el problema.</p>
+    <p>Pero el <strong>12%</strong> restante son aquellas mujeres que <strong>quieren retrasar o frenar su maternidad pero no usan ningún método</strong>. Ni siquiera uno tradicional, como la marcha atrás. Tienen necesidades no cubiertas. Y ahí está el problema.</p>
   </div>
   <div class="step" data-step="4"></div>
 </div>
@@ -191,7 +191,7 @@ Así, el **porcentaje de mujeres con necesidades no cubiertas de los países men
 
 #### Barreras
 
-Vamos a centrarnos en esos países en los que la situación es más complicada. ¿Qué barreras impiden a las mujeres el acceso a los anticonceptivos? Según el estudio *[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)*, del Guttmacher Institute, que analizó 52 países, las principales son **los efectos secundarios, la poca frecuencia sexual, y la oposición (ya sea propia o impuesta)**. 
+Vamos a centrarnos en esos países en los que la situación es más complicada. ¿Qué barreras impiden a las mujeres el acceso a los anticonceptivos? Según el estudio *[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)*, del Guttmacher Institute, que analizó 52 países, las principales son **los efectos secundarios, la poca frecuencia sexual, y la oposición (ya sea propia o impuesta)**.  
 
 <div class="container-right">
   <div class="graph-container">
