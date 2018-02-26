@@ -17,13 +17,13 @@ lang:             en
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Family planning is not a privilege, but a right. That's what Babatunde Osotimehin said when he was the executive director of the United Nations Population Fund (UNFPA), in 2012. It not only helps eradicate poverty, he said, but is also "one of the most effective means of empowering women". He died past July. International organizations, including the United Nations, have been [declaring](https://www.unfpa.org/sites/default/files/pub-pdf/EN_SWOP2012_Report.pdf) for decades that choosing if you want to have children and when and how to do it is a fundamental human right.
+Family planning is not a privilege, but a right. That's what Babatunde Osotimehin said when he was the executive director of the United Nations Population Fund (UNFPA), in 2012. It not only helps eradicate poverty, he said, but is also "one of the most effective means of empowering women". He died past July. International organisations, including the United Nations, have been [declaring](https://www.unfpa.org/sites/default/files/pub-pdf/EN_SWOP2012_Report.pdf) for decades that choosing if you want to have children and when and how to do it is a fundamental human right.
 
 But it's a right that is undermined whenever a girl becomes pregnant, whenever a woman is accused of being promiscuous, or even prostitute, for using some form of birth control, every time she is forced to have unwanted children, every time she is forced to have abortions in unsanitary conditions, every time someone tells her what she must do or blocks her access, although she is the one who, in many countries, bears the consequences of that decision, every time that a new birth puts her health at risk or kills her. These are not made-up examples. They are true stories gathered in this investigation of how people exercise this universal right and what barriers women confront to do it.
 Fanta Jatta knows more than most about these cases. She talks about it at the headquarters of Action Aid International, in Banjul, Gambia, where she directs the program on women's rights. For her, in addition to the health problems--for mothers and children--caused by a lack of access to contraceptives, there is something more fundamental: who decides and how. "We need to understand how our bodies work and make our own decisions," she says.
 
 <div class="panel">
-{% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="We need to understand how our bodies work and make our own decisions." author="Fanta Jatta" author_description="Women's Right Specialist at Action Aid International Gambia" %}
+{% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="We need to understand how our bodies work and make our own choices." author="Fanta Jatta" author_description="Women's Right Specialist at Action Aid International Gambia" %}
 </div>
 
 #### Uses
@@ -36,7 +36,7 @@ Fanta Jatta knows more than most about these cases. She talks about it at the he
 <div class="scroll-graphic">
   <div class="graph-container">
     <div class="container page-content">
-      <p>Percentage of sexually active women aged 15-49 years using any family planning methods</p>
+      <p>Percentage of sexually active women aged 15-49 years using any family planning method</p>
       <div id="treemap-contraceptives-use" class="treemap-graph"></div>
     </div>
   </div>
@@ -47,7 +47,7 @@ Fanta Jatta knows more than most about these cases. She talks about it at the he
     <p>In <strong id="treemap-contraceptives-use-country"></strong>, <span id="treemap-contraceptives-use-any-method"></span>% of women use a modern contraceptive method. The most common is <strong id="treemap-contraceptives-use-method"></strong>.</p>
   </div>
   <div class="step" data-step="1">
-    <p><strong>Worldwide</strong>, the most common methods are <strong>female sterilization</strong>, intrauterine devices (<strong>IUD</strong>) and the <strong>pill</strong>.</p>
+    <p><strong>Worldwide</strong>, the most common methods are <strong>female sterilisation</strong>, intrauterine devices (<strong>IUD</strong>) and <strong>the pill</strong>.</p>
   </div>
   <div class="step" data-step="2"></div>
 </div>
@@ -57,7 +57,7 @@ Fanta Jatta knows more than most about these cases. She talks about it at the he
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-But contraceptive use is not homogeneous between countries or social classes. The economic situation, cultural context, availability of pharmacies, and public policies determine the most popular method in each country.
+But contraceptive use is not homogeneous between countries or across social classes. The economic situation, cultural context, availability of pharmacies, and public policies determine the most popular method in each country.
 </div>
 </div>
 
@@ -66,38 +66,38 @@ But contraceptive use is not homogeneous between countries or social classes. Th
 <!--  graphic container  -->
 <div class="scroll-graphic">
   <div class="graph-container">
-    <p>Uso de <strong id="map-contraceptives-use-method"></strong> entre mujeres que usan algún método anticonceptivo</p>
+    <p>Use of <strong id="map-contraceptives-use-method"></strong> among women who use birth control</p>
     <div id="map-contraceptives-use" class="map-graph"></div>
   </div>
 </div>
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="1">
-    <p><strong>Female sterilization</strong> is the most common contraceptive method in India (67%); it is also common in many Central American countries such as the Dominican Republic (59%), Puerto Rico, El Salvador and Mexico.</p>
+    <p><strong>Female sterilisation</strong> is the most common contraceptive method in India (67%); it is also common in Mexico and in many Central American countries such as the Dominican Republic (59%), Puerto Rico and El Salvador.</p>
   </div>
   <div class="step" data-step="2">
-    <p><strong>Male sterilization</strong> is a lot less common and does not reach such high percentages. For example: it's the method of choice for 30% of couples in Canada. In the United Kingdom this percentatge is 25%.</p>
+    <p><strong>Male sterilisation</strong> is a lot less common. It's used by 30% of couples in Canada and 25% of couples in the United Kingdom.</p>
   </div>
   <div class="step" data-step="3">
-    <p markdown="1">The <strong>IUD</strong> stands out in Asian countries, above all North Korea: is the method used by 95% of women on birth control.</p>
+    <p markdown="1">The <strong>IUD</strong> dominates in Asian countries. Some 95% of women in North Korea on birth control use it.</p>
   </div>
   <div class="step" data-step="4">
-    <p markdown="1">In China, where 48% use the **IUD**, during the time when the one-child policy was in force, the government forced women to use it after their first birth. Now, it [is being offered](https://www.nytimes.com/2017/01/07/world/asia/after-one-child-policy-outrage-at-chinas-offer-to-remove-iuds. html) to withdraw them for free. In other countries, its use is almost negligible. Some doctors refuse to insert it due to [false beliefs about its safety](https://www.washingtonpost.com/national/health-science/why-do-some-doctors-refuse-to-give-women-iuds/2017/10/12/ee1e881e-a3c9-11e7-b14f-f41773cd5a14_story.html?utm_term=.6e3da2fb3930) in women who have not had children.</p>
+    <p markdown="1">In China, 48% of women on birth control today use the **IUD**. At the time of the one-child policy, the government forced women to use the IUDs after a first birth. Now, the government [is offering] (https://www.nytimes.com/2017/01/07/world/asia/after-one-child-policy-outrage-at-chinas-offer-to-remove-iuds.html) to remove the IUDs for free. In other countries, its use is almost negligible. Some doctors refuse to insert it due to [false beliefs about its safety](https://www.washingtonpost.com/national/health-science/why-do-some-doctors-refuse-to-give-women-iuds/2017/10/12/ee1e881e-a3c9-11e7-b14f-f41773cd5a14_story.html?utm_term=.6e3da2fb3930) in women who have not had children.</p>
   </div>
   <div class="step" data-step="5">
     <p>The <strong>pill</strong> is the leader in other places, such as North Africa and much of Western Europe, but not Spain.</p>
   </div>
   <div class="step" data-step="6">
-    <p>The <strong>male condom</strong> is one of the most common in countries as different as Botswana (79%) and Greece (49%), and in other countries for unmarried women who do not have access to other more established methods. It is the leading contraceptive method in Spain (38%).</p>
+    <p>The <strong>male condom</strong> is one of the most common methods in countries as different as Botswana (79%) and Greece (49%), and in other countries where  unmarried women do not have access to longer-lasting methods. It is the leading contraceptive method in Spain (38%).</p>
   </div>
   <div class="step" data-step="7">
-    <p>The <strong>injectable</strong> hormone method, also hormonal based, is the favorite in Africa. For many women it is the perfect solution if they decide to use contraceptives without their husbands finding out, since many husbands would be against it. It is undetectable, easy to administer -a quick shot every one, three or five months- and leaves no trace.</p>
+    <p>The <strong>injectable hormone method</strong> is popular in Africa. For many women it is the perfect solution if they decide to use contraceptives without their husband's knowledge. Many men would be against it. But injections are easy to administer: a quick shot every one, three or five months and leave no trace.</p>
   </div>
   <div class="step" data-step="8">
     <p><strong>Traditional methods</strong> range from tracking the menstrual cycle to local practices tied to religion or magic. These methods, which are unreliable at best, are the leading method in the Balkans.</p>
   </div>
   <div class="step" data-step="9">
-    <p>In Albania, for example, the withdrawal is the main form of birth control for 58% of women.</p>
+    <p>In Albania, for example, the pull-out method is the main form of birth control for 58% of women.</p>
   </div>
   <div class="step" data-step="10"></div>
 </div>
@@ -107,7 +107,7 @@ But contraceptive use is not homogeneous between countries or social classes. Th
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-In Gambia, many women use a traditional method with different names that is carried out in different ways. They share the same, unscientific, principle: the women tie a cord or a branch with or without words from the Koran on a slip of paper to their waists to try to prevent pregnancy. Of course it does not work. 
+In The Gambia, many women use a traditional method with different names that is carried out in different ways. They share the same, unscientific, principle: the women tie a cord or a branch with or without words from the Koran on a slip of paper to their waists to try to prevent pregnancy. Of course it does not work. 
 </div>
 </div>
 
@@ -124,13 +124,13 @@ In Gambia, many women use a traditional method with different names that is carr
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="1">
-    <p>Until now we have spoken of women that use some contraceptive method. Of married or sexually active women from 15 to 49 years of age, <strong>63% practise some form of birth control</strong>.</p>
+    <p>Until now we have discussed women that use some form of birth control. Of married or sexually active women from 15 to 49 years of age, <strong>63% practise some form of birth control.</strong></p>
   </div>
   <div class="step" data-step="2">
-    <p>Another <strong>25% wish to continue having children</strong> and are therefore not practising birth control.</p>
+    <p>Another <strong>25% wish to continue having children</strong> and so are not practising birth control.</p>
   </div>
   <div class="step" data-step="3">
-    <p>But the remaining <strong>12% are women who wish to delay or prevent maternity but do not use birth control</strong>. They are the women with unmet needs. And there is the problem.</p>
+    <p>But the remaining <strong>12% are women who wish to delay or prevent maternity but are not using birth control</strong>. They are the women with unmet needs. And there is the problem.</p>
   </div>
   <div class="step" data-step="4"></div>
 </div>
@@ -140,7 +140,11 @@ In Gambia, many women use a traditional method with different names that is carr
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-They may want to space pregnancies, for health reasons, to be able to take care of the children in a staggered way or by personal organization. "I started taking contraceptives after my first pregnancy, only seven months later I was pregnant again, so when I had my second child, I decided I did not want to go through the same situation again in my third pregnancy," says Jarra Joof, Gambia. Or that, simply, they do not want to have any children or do not want to have more. "Seven is enough," he argues now, some time after those first births, at 42. The reasons are many, but women with unmet needs have something in common: they have decided not to become pregnant but, still, they do not use any method.
+They may want to space their pregnancies for health reasons or to stagger their child care or organise their own lives a certain way. "I started taking contraceptives after my first pregnancy, only seven months later I was pregnant again, so when I had my second child, I decided I did not want to go through the same situation again in my third pregnancy," says Jarra Joof, a 42-year-old member of her children´s school´s Mothers´ Club in Banjul, The Gambia.
+
+Joof spaced our her subsequent pregnancies, for example, and now she is back to using birth control. "Seven is enough," Joof says. 
+
+Some women may not want to have any children at all or simply not want more. Their reasons are many, but women with unmet birth control needs have at least one thing in common: they don´t want to get pregnant but are not doing anything about it.
 </div>
 </div>
 
@@ -150,7 +154,7 @@ They may want to space pregnancies, for health reasons, to be able to take care 
 <div class="scroll-graphic">
   <div class="graph-container">
     <div class="container page-content">
-      <p>Porcentaje de mujeres con <strong>necesidades no cubiertas</strong></p>
+      <p>Percentage of women with <strong>unmet needs</strong></p>
       <div id="unmet-needs-gdp-graph"></div>
       <ul class="x-legend">
         <li>Low income</li>
@@ -164,16 +168,16 @@ They may want to space pregnancies, for health reasons, to be able to take care 
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="0">
-    <p>This problem, the <strong>unmet needs</strong>, is bigger in some countries than in others. It is hardly relevant in China, while in Angola it exceeds 36%.</p>
+    <p>The problem of <strong>unmet needs</strong> is bigger in some countries than in others. It hardly exists in China, while in Angola it exceeds 36%.</p>
   </div>
   <div class="step" data-step="1">
-    <p>Let's distribute them for their Gross National Income (GNI).</p>
+    <p>Comparing them by their Gross National Income (GNI).</p>
   </div>
   <div class="step" data-step="2">
-    <p>In rich countries, such as the United States, Germany, or Spain, the percentage of women with unmet needs is less than 15%.</p>
+    <p>In rich countries, such as the United States, Germany or Spain, the percentage of women with unmet needs is less than 15%.</p>
   </div>
   <div class="step" data-step="3">
-    <p>In the least developed countries, that percentage is over 30%.</p>
+    <p>In the least developed countries the percentage is over 30%.</p>
   </div>
   <div class="step" data-step="4">
     <p>Japan and Saudi Arabia, despite their wealth, have unmet needs on par with much poorer countries.</p>
