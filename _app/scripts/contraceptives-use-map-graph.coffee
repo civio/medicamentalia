@@ -37,7 +37,7 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
       labels: [
         {
           cx_factor: 0.265
-          cy_factor: 0.297
+          cy_factor: 0.28
           r: 0
           textOffset: [30, 25]
           label:
@@ -54,7 +54,7 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
       labels: [
         {
           cx_factor: 0.85
-          cy_factor: 0.34
+          cy_factor: 0.32
           r: 0
           textWidth: 80
           textOffset: [12, 0]
@@ -90,7 +90,7 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
       labels: [
         {
           cx_factor: 0.464
-          cy_factor: 0.416
+          cy_factor: 0.41
           r: 0
           textOffset: [-35, 0]
           label:
@@ -107,7 +107,7 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
       labels: [
         {
           cx_factor: 0.542
-          cy_factor: 0.345
+          cy_factor: 0.335
           r: 0
           textOffset: [-12, 0]
           label:
@@ -116,7 +116,7 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
         },
         {
           cx_factor: 0.564
-          cy_factor: 0.73
+          cy_factor: 0.74
           r: 0
           textOffset: [15, -10]
           label:
@@ -133,9 +133,9 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
       labels: [
         {
           cx_factor: 0.62
-          cy_factor: 0.56
+          cy_factor: 0.55
           r: 0
-          textOffset: [15, 5]
+          textOffset: [15, 0]
           label:
             es: 'Etiopía'
             en: 'Ethiopia'
@@ -150,7 +150,7 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
       labels: [
         {
           cx_factor: 0.536
-          cy_factor: 0.318
+          cy_factor: 0.3
           r: 16
           textOffset: [-26, 0]
           label:
@@ -167,7 +167,7 @@ class window.ContraceptivesUseMapGraph extends window.MapGraph
       labels: [
         {
           cx_factor: 0.534
-          cy_factor: 0.332
+          cy_factor: 0.31
           r: 0
           textOffset: [-10, 0]
           label:
