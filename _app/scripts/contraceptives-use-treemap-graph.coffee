@@ -6,7 +6,6 @@ class window.ContraceptivesUseTreemapGraph extends window.TreemapGraph
     parsedData = [{id: 'r'}] # add treemap root
     # TODO!!! Get current country & add select in order to change it
     data_country = data.filter (d) -> d.code == country_code
-    console.log data_country[0]
     if data_country[0]
       # set methods object
       methods = {}

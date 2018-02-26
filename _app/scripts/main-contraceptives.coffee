@@ -54,8 +54,8 @@
       "métodos tradicionales"
     ]
     'en': [
-      "female sterilization"
-      "male sterilization"
+      "female sterilisation"
+      "male sterilisation"
       "IUD"
       "implant"
       "injectable"
@@ -88,8 +88,8 @@
       '2': "IUD"
       '3': "injectable"
       '5': "condom"
-      '6': "female sterilization"
-      '7': "male sterilization"
+      '6': "female sterilisation"
+      '7': "male sterilisation"
       '8': "periodic abstinence"
       '9': "withdrawal"
       '10': "other"
@@ -252,7 +252,7 @@
     new ScrollGraph 'contraceptives-use-graph-container', (e) ->
       currentStep = +d3.select(e.element).attr('data-step')
       if currentStep > 0
-        data = [63, 88, 100] # 63, 63+25, 63+25+12
+        data = [64, 88, 100] # 64, 64+24, 64+24+12
         from = if currentStep > 1 then data[currentStep-2] else 0
         to = data[currentStep-1]
         useGraph.selectAll('li')
@@ -279,8 +279,10 @@
             name:       country[0]['name_'+lang]
             population: +country[0]['population']
             gni:        +country[0]['gni']
+      ###
       else
         console.log 'No GNI or Population data for this country', d.code, country[0]
+      ###
 
     # setup graph
     unmetneedsGraph = new window.BeeswarmScatterplotGraph 'unmet-needs-gdp-graph',
@@ -341,9 +343,11 @@
       if item and item[0]
         d.name = item[0]['name_'+lang]
         d.code_num = item[0]['code_num']
+      ###
       else
         console.log 'no country', d.code
-
+      ###
+    
     # Set use map
     useMap = new window.ContraceptivesUseMapGraph 'map-contraceptives-use',
       aspectRatio: 0.5625
@@ -448,8 +452,10 @@
           if d[reason] > 100
             console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
         delete d.country
+      ###
       else
         console.warn 'No country data for '+d.code
+      ###
 
     if $('#treemap-contraceptives-use').length
       setupConstraceptivesUseTreemap data_use
