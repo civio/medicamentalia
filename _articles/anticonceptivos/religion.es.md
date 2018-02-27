@@ -40,8 +40,6 @@ Unos días antes, en noviembre de 2017, se celebraba en Gambia, el pequeño paí
 <div class="panel alignright" markdown="1">
 ##### Una mordaza global
 
-{% include caption.html img="contraceptives/trump-usaid.jpg" fullWidth=true %}
-
 En enero de 2017, el presidente Trump [reinstauró y amplió](https://www.whitehouse.gov/presidential-actions/presidential-memorandum-regarding-mexico-city-policy) la *Política de la Ciudad de México*. Promovida por Reagan en 1984, exige a todas las ONGs, en cualquier lugar del mundo, certificar que no "practicarán ni promoverán activamente el aborto como método de planificación familiar", como condición para recibir ayudas bilaterales de Estados Unidos en materia de salud. Con Trump, esta exigencia se amplió a nuevos programas. Esta política ha sido aplicada de forma intermitente durante presidencias de corte republicano, y derogada por la administraciones demócratas. En el caso de Marie Stopes, que reparte de forma gratuita métodos anticonceptivos a quienes no tienen recursos, ese veto puedo suponer que "estas mujeres no tendrán medios para acceder a la planificación familiar", se lamenta Coumba Dieng.
 </div>
 

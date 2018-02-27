@@ -12,7 +12,7 @@ pub_date:         2018-02-20
 slug:             religion
 ref:              religion
 lang:             en
-article_menu:     <li><a href="#every-sperm-is-sacred" title="Every sperm is sacred">Every sperm is sacred</a></li><li><a href="#permission-granted-sometimes-for-health-reasons" title="Health exceptions">Health exceptions</a></li><li><a href="#educating-against-contraceptives" title="Sex education">Sex education</a></li><li><a href="#men-interpret-the-laws-of-god" title="Interpreting the word of God">Interpreting the word of God</a></li>
+article_menu:     <li><a href="#every-sperm-is-sacred" title="Every sperm is sacred">Every sperm is sacred</a></li><li><a href="#permission-granted-sometimes-for-health-reasons" title="Health exceptions">Health exceptions</a></li><li><a href="#educating-against-contraceptives" title="Sex education">Sex education</a></li><li><a href="#whos-word-of-god" title="Who's word of God?">Who's word of God?</a></li>
 ---
 
 <div class="container page-content">
@@ -42,8 +42,6 @@ A few days before, neighbouring The Gambia, an overwhelmingly Muslim-majority co
 
 <div class="panel alignright" markdown="1">
 ##### A global gag rule
-
-{% include caption.html img="contraceptives/trump-usaid.jpg" fullWidth=true %}
 
 In January 2017, US President Donald Trump [re-activated and expanded](https://www.whitehouse.gov/presidential-actions/presidential-memorandum-regarding-mexico-city-policy) the Mexico City policy. The policy, first enacted by former US President Ronald Reagan in 1984, requires international NGOs to certify that they do not "perform or actively promote abortion as a method of family planning," as a condition for receiving US federal funding. With Trump, this requirement was extended to new programs. The policy has generally been applied by Republican administrations and rescinded by Democratic administrations. In the case of Marie Stopes International, which distributes contraceptives free to the needy, the policy could mean that "these women won't have what they need for family planning," Dieng says.
 </div>
@@ -216,9 +214,9 @@ And that lack of sex education has consequences. Yair Hass, from Hillel, talks a
 
 Sarah Reich, an ex-ultra-Orthodox volunteer at Hillel, says that, although she received the "extraordinary" permission of her rabbi to use contraceptives, nobody taught her "how to avoid having children". Two months after getting married she was pregnant. **To avoid a second pregnancy, she got out of bed after having sex and "jumped up and down, jumped a lot, I jumped hundreds of times."**
 
-### Men interpret the laws of God
+### Who's word of God?
 
-But not all religious leaders apply the rules the same way nor do all believers follow them the same way. In Mexico, the women's group [Catholics for the right to decide](http://catolicasmexico.org/ns/) has been promoting another perspective for years. Its animated series, *Catholicadas*, now in its ninth season, confronts issues such as abortion, sexual education and contraceptives, among many others.
+But not all religious leaders apply the rules the same way nor do all believers follow them the same way. In Mexico, the women's group [Catholics for the right to decide](http://catolicasmexico.org/ns/) has been promoting another perspective for years. Its animated series, *Catolicadas*, now in its ninth season, confronts issues such as abortion, sexual education and contraceptives, among many others.
 
 {% include caption.html img="contraceptives/catolicadas.jpg" caption="Address issues such as the role of women in the Catholic Church, the prohibition of condoms or sex education." fullWidth=true %}
 
