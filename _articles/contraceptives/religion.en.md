@@ -12,6 +12,7 @@ pub_date:         2018-02-20
 slug:             religion
 ref:              religion
 lang:             en
+article_menu:     <li><a href="#hasta-la-ltima-gota-de-semen-es-sagrada" title="Every sperm is sacred">Every sperm is sacred</a></li><li><a href="#permiso-concedido-a-veces-por-motivos-de-salud" title="Health exceptions">Health exceptions</a></li><li><a href="#educando-en-contra-de-los-anticonceptivos" title="Sex education">Sex education</a></li><li><a href="#los-hombres-interpretan-las-leyes-de-dios" title="Interpreting the word of God">Interpreting the word of God</a></li>
 ---
 
 <div class="container page-content">
