@@ -525,11 +525,11 @@
     ###
     # Load csvs & setup maps
     d3.queue()
-      .defer d3.csv,  'https://pre.medicamentalia.org/data/contraceptives-use-countries.csv'
-      .defer d3.csv,  'https://pre.medicamentalia.org/data/unmet-needs.csv'
-      .defer d3.csv,  'https://pre.medicamentalia.org/data/contraceptives-reasons.csv'
-      .defer d3.csv,  'https://pre.medicamentalia.org/data/countries-gni-population-2016.csv'
-      .defer d3.json, 'https://pre.medicamentalia.org/data/map-world-110.json'
+      .defer d3.csv,  'https://pre.medicamentalia.org/assets/data/contraceptives-use-countries.csv'
+      .defer d3.csv,  'https://pre.medicamentalia.org/assets/data/unmet-needs.csv'
+      .defer d3.csv,  'https://pre.medicamentalia.org/assets/data/contraceptives-reasons.csv'
+      .defer d3.csv,  'https://pre.medicamentalia.org/assets/data/countries-gni-population-2016.csv'
+      .defer d3.json, 'https://pre.medicamentalia.org/assets/data/map-world-110.json'
       .defer d3.json, 'https://freegeoip.net/json/'
       .await setupDataArticle
 
