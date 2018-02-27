@@ -31,7 +31,7 @@ El equipo detrás de Medicamentalia Anticonceptivos:
 + **Giulio Piantadosi**. Edición de vídeo.
 + **Maya Siminovich.** Vídeo y producción en Israel.
 + **Pablo Duer.** Producción en Israel.
-+ **Muna Faye.** Vídeo y fotografía en Gambia. 
++ **Muna Manneh-Fye.** Vídeo y fotografía en Gambia. 
 + **Modou Lamin.** Traslados y producción en Gambia.
 + **Malyka Diagana.** Vídeo y fotografía en Senegal.
 + **Antonio Guzmán.** Diseñador. Ilustraciones.
@@ -40,7 +40,6 @@ El equipo detrás de Medicamentalia Anticonceptivos:
 Además, para llegar a más mujeres en otras latitudes, hemos contado con amigos y colaboradores. Son:
 
 + **Carmen Santamaría**, desde Argentina.
-+ **Alice Campanille**, desde Colombia.
 + **Petra Piitulainen**, desde Finlandia.
 + **Elsa Cabria y Ximena Villagrán**, desde Guatemala.
 + **Marta Orosz**, de Correctiv, desde Alemania.
