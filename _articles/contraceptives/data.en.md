@@ -140,11 +140,11 @@ In The Gambia, many women use variations of a traditional method that goes by di
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-They may want to space their pregnancies for health reasons or to stagger their child care or organise their own lives a certain way. Jarra Joof, a 42-year-old member of her community's Mothers´ Club in Banjul, The Gambia, wanted to wait a while after her first child was born. But, "only seven months later I was pregnant again. Then I had my second baby. However, I did not want to find myself in the same situation for my third pregnancy," she says.
+They may want to space their pregnancies for health reasons or to stagger their child care or organise their own lives a certain way. Jarra Joof, a 42-year-old member of her community's Mothers' Club in Banjul, The Gambia, wanted to wait a while after her first child was born. But, "only seven months later I was pregnant again. Then I had my second baby. However, I did not want to find myself in the same situation for my third pregnancy," she says.
 
 Joof used birth control to space her next four pregnancies. Now she is back to using birth control full time. "Seven children are enough," Joof says.
 
-Some women may not want to have any more children, like Joof, or they may not want children at all. Though their reasons may vary, women with unmet birth control needs have at least one thing in common: they don´t want to get pregnant and they are not doing anything about it.
+Some women may not want to have any more children, like Joof, or they may not want children at all. Though their reasons may vary, women with unmet birth control needs have at least one thing in common: they don't want to get pregnant and they are not doing anything about it.
 </div>
 </div>
 
@@ -172,7 +172,7 @@ Some women may not want to have any more children, like Joof, or they may not wa
   </div>
   <div class="step" data-step="1">
     <p>Let's compare by their Gross National Income (GNI).</p>
-  </div>analyse
+  </div>
   <div class="step" data-step="2">
     <p>In rich countries, such as the United States, Germany or Spain, the percentage of women with unmet needs is less than 15%.</p>
   </div>
@@ -315,7 +315,7 @@ It's a question of public health, but above all of rights. Women have the right 
 </div>
 
 <!-- APP -->
-{% include contraceptives/app.es.html %}
+{% include contraceptives/app.en.html %}
 
 <svg style="display: none">
   <symbol id="icon-woman" viewBox="0 0 215 648">
