@@ -12,7 +12,7 @@ pub_date:         2018-02-20
 slug:             religion
 ref:              religion
 lang:             en
-article_menu:     <li><a href="#hasta-la-ltima-gota-de-semen-es-sagrada" title="Every sperm is sacred">Every sperm is sacred</a></li><li><a href="#permiso-concedido-a-veces-por-motivos-de-salud" title="Health exceptions">Health exceptions</a></li><li><a href="#educando-en-contra-de-los-anticonceptivos" title="Sex education">Sex education</a></li><li><a href="#los-hombres-interpretan-las-leyes-de-dios" title="Interpreting the word of God">Interpreting the word of God</a></li>
+article_menu:     <li><a href="#every-sperm-is-sacred" title="Every sperm is sacred">Every sperm is sacred</a></li><li><a href="#permission-granted-sometimes-for-health-reasons" title="Health exceptions">Health exceptions</a></li><li><a href="#educating-against-contraceptives" title="Sex education">Sex education</a></li><li><a href="#men-interpret-the-laws-of-god" title="Interpreting the word of God">Interpreting the word of God</a></li>
 ---
 
 <div class="container page-content">
@@ -23,7 +23,7 @@ article_menu:     <li><a href="#hasta-la-ltima-gota-de-semen-es-sagrada" title="
 {: .literary}
 
 
-Hundreds of religious texts serve as a backdrop in the office of Moroccan ultra-Orthodox rabbi Daniel Bitton, at the Hamaor Insititute in Jerusalem, Israel. Steam rises from a coffeemaker and the interview begins. He starts at the beginning, which is his position on family planning: **"I can't explain something that doesn't exist." There is no such thing as family planning for us. We don't decide anything. God plans everything and decides everything."**
+Hundreds of religious texts serve as a backdrop in the office of Moroccan ultra-Orthodox rabbi Daniel Bitton, at the Hamaor Institute in Jerusalem, Israel. Steam rises from a coffeemaker and the interview begins. He starts at the beginning, which is his position on family planning: **"I can't explain something that doesn't exist. There is no such thing as family planning for us. We don't decide anything. God plans everything and decides everything."**
 
 From denial to prohibition, the rabbi is not alone in his position. The three main monotheistic religions have the same starting point: sex is only permitted within marriage and its ultimate goal is reproduction. That leaves little room for contraceptives. Promoting their use might encourage promiscuity and sin.
 
