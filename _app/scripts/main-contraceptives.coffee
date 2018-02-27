@@ -446,20 +446,21 @@
     #userCountry.name = 'Rusia'
 
     # add country ISO 3166-1 alpha-3 code to data_reasons
-    data_reasons.forEach (d) ->
-      item = countries.filter (country) -> country.code2 == d.code
-      if item and item[0]
-        d.code = item[0].code
-        d.name = item[0]['name_'+lang]
-        Object.keys(reasons_names[lang]).forEach (reason) ->
-          d[reason] = 100*d[reason]
-          if d[reason] > 100
-            console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
-        delete d.country
-      ###
-      else
-        console.warn 'No country data for '+d.code
-      ###
+    if data_reasons
+      data_reasons.forEach (d) ->
+        item = countries.filter (country) -> country.code2 == d.code
+        if item and item[0]
+          d.code = item[0].code
+          d.name = item[0]['name_'+lang]
+          Object.keys(reasons_names[lang]).forEach (reason) ->
+            d[reason] = 100*d[reason]
+            if d[reason] > 100
+              console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
+          delete d.country
+        ###
+        else
+          console.warn 'No country data for '+d.code
+        ###
 
     if $('#treemap-contraceptives-use').length
       setupConstraceptivesUseTreemap data_use
