@@ -423,69 +423,6 @@
     @graphic.select('.step-'+currentStep).classed 'active', true
 
 
-  setLocation = (countries) ->
-    if location
-      user_country = countries.filter (d) -> d.code2 == location.country_code
-      if user_country[0]
-        userCountry.code = user_country[0].code
-        userCountry.name = user_country[0]['name_'+lang]
-    else
-      location = {}
-
-    unless location.code
-      userCountry.code = 'ESP'
-      userCountry.name = if lang == 'es' then 'España' else 'Spain'
-
-
-  setupDataArticle = (error, data_use, data_unmetneeds, data_reasons, countries, map, location) ->
-
-    console.log 'setupDataArticle', error, data_use, data_unmetneeds, data_reasons, countries, map, location
-
-    setLocation countries
-
-    #test other countries
-    #userCountry.code = 'RUS'
-    #userCountry.name = 'Rusia'
-
-    # add country ISO 3166-1 alpha-3 code to data_reasons
-    if data_reasons
-      data_reasons.forEach (d) ->
-        item = countries.filter (country) -> country.code2 == d.code
-        if item and item[0]
-          d.code = item[0].code
-          d.name = item[0]['name_'+lang]
-          Object.keys(reasons_names[lang]).forEach (reason) ->
-            d[reason] = 100*d[reason]
-            if d[reason] > 100
-              console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
-          delete d.country
-        ###
-        else
-          console.warn 'No country data for '+d.code
-        ###
-
-    if $('#treemap-contraceptives-use').length
-      setupConstraceptivesUseTreemap data_use
-
-    if $('#map-contraceptives-use').length
-      setupConstraceptivesMaps data_use, countries, map
-
-    if $('#contraceptives-use-graph').length > 0
-      setupConstraceptivesUseGraph()
-
-    if $('#unmet-needs-gdp-graph').length
-      setupUnmetNeedsGdpGraph data_unmetneeds, countries
-
-    if $('#carousel-marie-stopes').length
-      new ScrollGraph 'carousel-marie-stopes', onCarouselStep
-
-    if $('#contraceptives-reasons-opposed').length
-      setupReasonsOpposedGraph()
-
-    if $('#contraceptives-app').length
-      new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang]
-
-
   # setup line chart
   setupMortalityLineGraph =  ->
     data = [{
@@ -509,33 +446,79 @@
     $(window).resize graph.onResize
 
 
+  setLocation = (location, countries) ->
+    if location
+      user_country = countries.filter (d) -> d.code2 == location.country_code
+      if user_country[0]
+        userCountry.code = user_country[0].code
+        userCountry.name = user_country[0]['name_'+lang]
+    else
+      location = {}
+
+    unless location.code
+      userCountry.code = 'ESP'
+      userCountry.name = if lang == 'es' then 'España' else 'Spain'
+
+
+  setupDataArticle = (data_use, data_unmetneeds, data_reasons, countries, map) ->
+
+    # add country ISO 3166-1 alpha-3 code to data_reasons
+    data_reasons.forEach (d) ->
+      item = countries.filter (country) -> country.code2 == d.code
+      if item and item[0]
+        d.code = item[0].code
+        d.name = item[0]['name_'+lang]
+        Object.keys(reasons_names[lang]).forEach (reason) ->
+          d[reason] = 100*d[reason]
+          if d[reason] > 100
+            console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
+        delete d.country
+      ###
+      else
+        console.warn 'No country data for '+d.code
+      ###
+
+    if $('#treemap-contraceptives-use').length
+      setupConstraceptivesUseTreemap data_use
+
+    if $('#map-contraceptives-use').length
+      setupConstraceptivesMaps data_use, countries, map
+
+    if $('#contraceptives-use-graph').length > 0
+      setupConstraceptivesUseGraph()
+
+    if $('#unmet-needs-gdp-graph').length
+      setupUnmetNeedsGdpGraph data_unmetneeds, countries
+
+    if $('#carousel-marie-stopes').length
+      new ScrollGraph 'carousel-marie-stopes', onCarouselStep
+
+    if $('#contraceptives-reasons-opposed').length
+      setupReasonsOpposedGraph()
+
+    if $('#contraceptives-app').length
+      new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang]
+
+
   # Setup
   # ---------------
 
-  console.log baseurl
-
+  # data article
   if $('body').hasClass('datos-uso-barreras') or $('body').hasClass('data-use-barriers')
-    ###
-    # Load csvs & setup maps
-    d3.queue()
-      .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
-      .defer d3.csv,  baseurl+'/data/unmet-needs.csv'
-      .defer d3.csv,  baseurl+'/data/contraceptives-reasons.csv'
-      .defer d3.csv,  baseurl+'/data/countries-gni-population-2016.csv'
-      .defer d3.json, baseurl+'/data/map-world-110.json'
-      .defer d3.json, 'https://freegeoip.net/json/'
-      .await setupDataArticle
-    ###
-    # Load csvs & setup maps
-    d3.queue()
-      .defer d3.csv,  'https://pre.medicamentalia.org/assets/data/contraceptives-use-countries.csv'
-      .defer d3.csv,  'https://pre.medicamentalia.org/assets/data/unmet-needs.csv'
-      .defer d3.csv,  'https://pre.medicamentalia.org/assets/data/contraceptives-reasons.csv'
-      .defer d3.csv,  'https://pre.medicamentalia.org/assets/data/countries-gni-population-2016.csv'
-      .defer d3.json, 'https://pre.medicamentalia.org/assets/data/map-world-110.json'
-      .defer d3.json, 'https://freegeoip.net/json/'
-      .await setupDataArticle
+    # Load location
+    d3.json 'https://freegeoip.net/json/', (error, location) ->
+      # Load csvs & setup maps
+      d3.queue()
+        .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
+        .defer d3.csv,  baseurl+'/data/unmet-needs.csv'
+        .defer d3.csv,  baseurl+'/data/contraceptives-reasons.csv'
+        .defer d3.csv,  baseurl+'/data/countries-gni-population-2016.csv'
+        .defer d3.json, baseurl+'/data/map-world-110.json'
+        .await (error, data_use, data_unmetneeds, data_reasons, countries, map) ->
+          setLocation location, countries
+          setupDataArticle data_use, data_unmetneeds, data_reasons, countries, map
 
+  # religion article
   else if $('body').hasClass 'religion'
     if $('#carousel-rabinos').length
       new ScrollGraph 'carousel-rabinos', onCarouselStep
@@ -546,32 +529,20 @@
     if $('#maternal-mortality-graph').length
       setupMortalityLineGraph()
 
+   # data static article
   else if $('body').hasClass 'datos-uso-barreras-static'
-    # Load csvs & setup maps
-    d3.queue()
-      .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
-      .defer d3.csv,  baseurl+'/data/unmet-needs.csv'
-      .defer d3.csv,  baseurl+'/data/contraceptives-reasons.csv'
-      .defer d3.csv,  baseurl+'/data/countries-gni-population-2016.csv'
-      .defer d3.json, 'https://freegeoip.net/json/'
-      .await (error, data_use, data_unmetneeds, data_reasons, countries, location) ->
-        setLocation countries
-        # add country ISO 3166-1 alpha-3 code to data_reasons
-        data_reasons.forEach (d) ->
-          item = countries.filter (country) -> country.code2 == d.code
-          if item and item[0]
-            d.code = item[0].code
-            d.name = item[0]['name_'+lang]
-            Object.keys(reasons_names[lang]).forEach (reason) ->
-              d[reason] = 100*d[reason]
-              if d[reason] > 100
-                console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
-            delete d.country
-          ###
-          else
-            console.warn 'No country data for '+d.code
-          ###  
-        if $('#contraceptives-app').length
-          new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang]
+    # Load location
+    d3.json 'https://freegeoip.net/json/', (error, location) ->
+      # Load csvs & setup maps
+      d3.queue()
+        .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
+        .defer d3.csv,  baseurl+'/data/unmet-needs.csv'
+        .defer d3.csv,  baseurl+'/data/contraceptives-reasons.csv'
+        .defer d3.csv,  baseurl+'/data/countries-gni-population-2016.csv'
+        .defer d3.json, baseurl+'/data/map-world-110.json'
+        .await (error, data_use, data_unmetneeds, data_reasons, countries, map) ->
+          setLocation location, countries
+          if $('#contraceptives-app').length
+            new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang]
 
 ) jQuery
