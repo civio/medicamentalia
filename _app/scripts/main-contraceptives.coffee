@@ -423,8 +423,7 @@
     @graphic.select('.step-'+currentStep).classed 'active', true
 
 
-  setupDataArticle = (error, data_use, data_unmetneeds, data_reasons, countries, map, location) ->
-
+  setLocation = (countries) ->
     if location
       user_country = countries.filter (d) -> d.code2 == location.country_code
       if user_country[0]
@@ -436,6 +435,11 @@
     unless location.code
       userCountry.code = 'ESP'
       userCountry.name = if lang == 'es' then 'España' else 'Spain'
+
+
+  setupDataArticle = (error, data_use, data_unmetneeds, data_reasons, countries, map, location) ->
+
+    setLocation countries
 
     #test other countries
     #userCountry.code = 'RUS'
@@ -505,7 +509,10 @@
   # Setup
   # ---------------
 
+  console.log baseurl
+
   if $('body').hasClass('datos-uso-barreras') or $('body').hasClass('data-use-barriers')
+    ###
     # Load csvs & setup maps
     d3.queue()
       .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
@@ -513,6 +520,16 @@
       .defer d3.csv,  baseurl+'/data/contraceptives-reasons.csv'
       .defer d3.csv,  baseurl+'/data/countries-gni-population-2016.csv'
       .defer d3.json, baseurl+'/data/map-world-110.json'
+      .defer d3.json, 'https://freegeoip.net/json/'
+      .await setupDataArticle
+    ###
+    # Load csvs & setup maps
+    d3.queue()
+      .defer d3.csv,  'https://pre.medicamentalia.org/data/contraceptives-use-countries.csv'
+      .defer d3.csv,  'https://pre.medicamentalia.org/data/unmet-needs.csv'
+      .defer d3.csv,  'https://pre.medicamentalia.org/data/contraceptives-reasons.csv'
+      .defer d3.csv,  'https://pre.medicamentalia.org/data/countries-gni-population-2016.csv'
+      .defer d3.json, 'https://pre.medicamentalia.org/data/map-world-110.json'
       .defer d3.json, 'https://freegeoip.net/json/'
       .await setupDataArticle
 
@@ -525,5 +542,33 @@
       new ScrollGraph 'carousel-papa', onCarouselStep
     if $('#maternal-mortality-graph').length
       setupMortalityLineGraph()
+
+  else if $('body').hasClass 'datos-uso-barreras-static'
+    # Load csvs & setup maps
+    d3.queue()
+      .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
+      .defer d3.csv,  baseurl+'/data/unmet-needs.csv'
+      .defer d3.csv,  baseurl+'/data/contraceptives-reasons.csv'
+      .defer d3.csv,  baseurl+'/data/countries-gni-population-2016.csv'
+      .defer d3.json, 'https://freegeoip.net/json/'
+      .await (error, data_use, data_unmetneeds, data_reasons, countries, location) ->
+        setLocation countries
+        # add country ISO 3166-1 alpha-3 code to data_reasons
+        data_reasons.forEach (d) ->
+          item = countries.filter (country) -> country.code2 == d.code
+          if item and item[0]
+            d.code = item[0].code
+            d.name = item[0]['name_'+lang]
+            Object.keys(reasons_names[lang]).forEach (reason) ->
+              d[reason] = 100*d[reason]
+              if d[reason] > 100
+                console.log 'Alert! Value greater than zero. ' + d.country + ', ' + reason + ': ' + d[reason]
+            delete d.country
+          ###
+          else
+            console.warn 'No country data for '+d.code
+          ###  
+        if $('#contraceptives-app').length
+          new ContraceptivesApp data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang]
 
 ) jQuery
