@@ -439,6 +439,8 @@
 
   setupDataArticle = (error, data_use, data_unmetneeds, data_reasons, countries, map, location) ->
 
+    console.log 'setupDataArticle', error, data_use, data_unmetneeds, data_reasons, countries, map, location
+
     setLocation countries
 
     #test other countries
