@@ -61,6 +61,7 @@ Y cómo no, gracias a todas aquellas personas que compartieron con nosotros su t
 
 {% include caption.html img="contraceptives/forum-for-african-woman-gambia.jpg" caption="" fullWidth=true %}
 
+<a name="metodologia">
 
 ### Metodología
 
