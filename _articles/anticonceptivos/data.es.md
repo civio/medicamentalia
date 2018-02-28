@@ -58,7 +58,7 @@ Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Pero **su uso no es homogéneo ni entre países ni entre clases sociales**. La [situación económica](http://www.eldiario.es/piedrasdepapel/Pontelo-Ponselo-anticonceptivos-desigualdad_6_563853635.html), el contexto cultural, la distribución de las farmacéuticas y las políticas públicas condicionan los métodos más populares en cada país. 
+Pero **[su uso no es homogéneo ni entre países ni entre clases sociales](/anticonceptivos/nosotros/#datos){:target="_blank"}**. La [situación económica](http://www.eldiario.es/piedrasdepapel/Pontelo-Ponselo-anticonceptivos-desigualdad_6_563853635.html), el contexto cultural, la distribución de las farmacéuticas y las políticas públicas condicionan los métodos más populares en cada país. 
 </div>
 </div>
 
@@ -143,7 +143,7 @@ En Gambia, muchas mujeres usan un método tradicional que recibe diferentes nomb
 
 Puede ser que quieran espaciar los embarazos por razones de salud, para poder cuidar de los hijos de forma escalonada o por organización personal. "Todo empezó tras mi primer embarazo. **Solo siete meses después volvía a estar embarazada**. Entonces, cuando tuve a mi segundo hijo, decidí que no quería volver a pasar por la misma situación otra vez", cuenta Jarra Joof, de Gambia, una de las mujeres entrevistadas para este reportaje. Fue entonces cuando se planteó usar anticonceptivos. 
 
-Puede que, simplemente, no quieran tener ningún hijo o no quieran tener más. **"Siete es suficiente"**, argumenta ahora, tiempo después de esos primeros partos, con 42 años. Las razones son muchas, pero **las mujeres con necesidades no cubiertas tienen algo en común: han decidido no quedarse embarazadas pero, aún así, no usan ningún método**.
+Puede que, simplemente, no quieran tener ningún hijo o no quieran tener más. **"Siete es suficiente"**, argumenta ahora, tiempo después de esos primeros partos, con 42 años. Las razones son muchas, pero **[las mujeres con necesidades no cubiertas tienen algo en común](/anticonceptivos/nosotros/#datos-globales){:target="_blank"}: han decidido no quedarse embarazadas pero, aún así, no usan ningún método**.
 </div>
 </div>
 
@@ -202,7 +202,7 @@ Vamos a centrarnos en esos países en los que la situación es más complicada. 
   </div>
 </div>
 
-Esta barrera es la más importante en el global de países analizados y es la razón para no usar anticonceptivos de más de la mitad de las mujeres con necesidades en Haití, según nuestro análisis de los datos en bruto de los Demographic and Health Surveys ([DHS](https://www.statcompiler.com/en/)) de la agencia de desarrollo de Estados Unidos.
+Esta barrera es la más importante en el global de países analizados y es la razón para no usar anticonceptivos de más de la mitad de las mujeres con necesidades en Haití, según [nuestro análisis de los datos en bruto de los Demographic and Health Surveys](/anticonceptivos/nosotros/#barreras){:target="_blank"} ([DHS](https://www.statcompiler.com/en/)) de la agencia de desarrollo de Estados Unidos.
 
 La mayoría de quienes responden que no usan anticonceptivos por razones de salud, miedo a los efectos secundarios o porque afecta a los procesos naturales del cuerpo han usado alguna vez un método, según el estudio de Guttmacher. Esto es, saben de lo que hablan: **sangrado excesivo o menor, náuseas, cambios en el cuerpo -engordan, les crece vello-, falta de libido, cambios de humor...** La larga lista de efectos secundarios de los anticonceptivos hormonales no ayuda. 
 
