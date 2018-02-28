@@ -198,7 +198,7 @@ Let's focus on countries with the most difficult situations. What are the barrie
 
 <div class="container-right">
   <div class="graph-container">
-    <p class="graph-container-caption">Mujeres con necesidades que no usan anticonceptivos por razones de salud</p>
+    <p class="graph-container-caption">Women with unmet needs not using contraceptives for health reasons</p>
     {% include contraceptives/reasons-health.en.html %}
   </div>
 </div>
@@ -253,12 +253,12 @@ Many women claim that they don't use contraceptives because they do not have sex
 
 <div class="container-right">
   <div class="graph-container">
-    <p class="graph-container-caption">Mujeres con necesidades que no usan anticonceptivos porque alguien se opone</p>
+    <p class="graph-container-caption">Women with unmet needs not using contraceptives for opposition</p>
     <ul id="contraceptives-reasons-opposed-legend">
-      <li class="respondent-opposed">La mujer</li>
-      <li class="husband-partner-opposed">La pareja</li>
-      <li class="religious-prohibition">Prohibición religiosa</li>
-      <li class="others-opposed">Otros</li>
+      <li class="respondent-opposed">Woman</li>
+      <li class="husband-partner-opposed">Partner</li>
+      <li class="religious-prohibition">Religion</li>
+      <li class="others-opposed">Others</li>
     </ul>
     {% include contraceptives/reasons-opposed.en.html %}
   </div>
