@@ -649,8 +649,13 @@ $btn-scroll-down-icon-size: 44px;
         }
       }
 
+      p {
+        font-size: 19px;
+      }
+
       a{
         color: white;
+        font-weight: 400;
 
         &:hover{
           color: $brand-secondary;
