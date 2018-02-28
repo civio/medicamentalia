@@ -44,7 +44,7 @@ Además, para llegar a más mujeres en otras latitudes, hemos contado con amigos
 + **Elsa Cabria y Ximena Villagrán**, desde Guatemala.
 + **Marta Orosz**, de Correctiv, desde Alemania.
 
-#### Agradecimientos
+#### Agradecimientos {#agradecimientos}
 
 Este proyecto no hubiera sido posible sin el patrocinio del European Journalism Centre, que, por tercera vez, nos otorgó una de sus becas de Journalism Grants.
 
@@ -64,7 +64,7 @@ Y cómo no, gracias a todas aquellas personas que compartieron con nosotros su t
 
 ### Metodología
 
-#### Los datos
+#### Los datos {#datos}
 
 Las dos fuentes principales de los datos son: el [World Contraceptive Use](http://www.un.org/en/development/desa/population/publications/dataset/contraception/wcu2017.shtml) de la División de Población de Naciones Unidas; y los Demographic and Health Surveys ([DHS](https://www.statcompiler.com/en/)) de la agencia de desarrollo de Estados Unidos. Hemos analizado, tratado y combinado estas fuentes con otras, como las que marcan niveles de renta o dificultades de las mujeres relacionadas con la falta de planificación familiar. Ambos están basados en encuestas a mujeres. 
 
@@ -75,7 +75,7 @@ Tras estudiar a fondo su metodología ([aquí](http://www.un.org/en/development/
 2. Las necesidades no cubiertas (*unmet needs*, en inglés) es el porcentaje de mujeres que, aunque quieren limitar o espaciar sus embarazos, no usan ningún método anticonceptivo, ni siquiera uno tradicional, como la marcha atrás. Se calcula, como el resto, sobre la base de las mujeres de 15 a 49 años sexualmente activas.  
 
 
-#### Uso de anticonceptivos por país
+#### Uso de anticonceptivos por país {#uso-anticonceptivos}
 
 Para conocer cuáles son los métodos anticonceptivos más elegidos en cada país, hemos utilizado las estadísticas publicadas en 2017 por la *Population Division* de Naciones Unidas (ONU). De los datos recogidos en su [World Contraceptive Use 2017](http://www.un.org/en/development/desa/population/publications/dataset/contraception/wcu2017.shtml), hemos seleccionado los de aquellos países cuyas encuestas –la base de este informe– fueron recogidas a partir de 2007. Para los datos de los países restantes (aquellos con datos más antiguos), hemos utilizado estimaciones para el año 2015 de la prevalencia de uso de cada método anticonceptivo. Esto es debido a que la única fuente de las Naciones Unidas que contiene datos desagregados por anticonceptivo son los [anexos](http://www.un.org/en/development/desa/population/publications/dataset/contraception/wcu2015/annex-tables.xlsx) de su informe de 2015.
 
@@ -86,23 +86,24 @@ En ambos casos, hemos tratado los datos para pasar del porcentaje de uso de cada
 Como hace Naciones Unidas en sus últimos estudios, incluímos la Amenorrea de la lactancia entre los métodos moderno y no en tradicionales. 
 
 
-#### Datos globales y necesidades no cubiertas
+#### Datos globales y necesidades no cubiertas {#datos-globales}
 
 Para los datos mundiales de uso (los que puedes ver en la infografía de mujeres) y las necesidades no cubiertas por país (en el scatterplot) hemos utilizado las **estimaciones** de [UN](http://www.un.org/en/development/desa/population/theme/family-planning/cp_model.shtml) publicadas en 2017. 
 
 Para el uso global, hemos utilizado el dato más reciente (2017); para las necesidades no cubiertas, el de 2016, puesto que este es el último año del que tenemos [niveles de renta por país](https://blogs.worldbank.org/opendata/new-country-classifications-income-level-2017-2018) con los que vincularlos. La fuente de estos últimos datos es el [Banco Mundial](https://datahelpdesk.worldbank.org/knowledgebase/articles/378831-why-use-gni-per-capita-to-classify-economies-into). 
 
-#### Barreras
+#### Barreras {#barreras}
+
 Los datos globales de barreras que se nombran en el texto salen del [estudio](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries) *Unmet need for contraception in developing countries: examining women’s reasons for not using a method*, del Guttmacher Institute. Pero, para nuestros gráficos y para los datos por países que usamos en la aplicación, necesitábamos tratar los datos en crudo de DHS. 
 
 Estamos usando los microdatos descargados de DHS en formato Stata. Posteriormente los importamos a R, donde hacemos las manipulaciones necesarias. Estamos calculando la distribución en la variable `v375a`, "Main reason not using a method" ("Principal razón para no usar un método", en español), pero solo para unos valores determinados en la variable `v624`, "Unmet need" ("Necesidades no cubiertas", en español). En concreto, para los valores 1 ("Unmet need to space"; "Necesidad no cubierta para espaciar", en español) y 2 ("Unmet need to limit"; "Necesidad no cubierta para limitar", en español).
 
-#### Aplicación
+#### Aplicación {#aplicacion}
 Para la aplicación, en la que lo importante es ofrecer los datos concretos de cada país que se consulte, hemos podido ser más precisos. Para los países que están en DHS, donde podíamos tratar los datos en bruto, hemos usado DHS, que nos permite desglosar por niveles de renta, estudios, entorno y edad.
 
 Para los que no estén en DHS, usamos los datos de Naciones Unidas (que no permiten ese desglose). En el caso del porcentaje de necesidades no cubiertas, utilizamos los datos reales si las encuestas se han realizado a partir de 2007 (esto es, en los últimos diez años). Si no, utilizamos las estimaciones.
 
-#### La web
+#### La web {#web}
 
 Esta página web está desarrollada con [Jekyll](https://jekyllrb.com/){:target="_blank"} y utiliza Javascript y [D3.js](https://d3js.org/){:target="_blank"} para las visualizaciones. Puedes encontrar el código de la web en nuestro [repositorio de Github](https://github.com/civio/medicamentalia){:target="_blank"}.
 
