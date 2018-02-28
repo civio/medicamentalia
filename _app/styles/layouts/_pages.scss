@@ -464,40 +464,6 @@ header {
     }
   }
 
-  .video-container{
-    position: relative;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 */
-    margin: 60px 0 30px;
-
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .container-right{
-    .video-container{
-      margin-top: 40px;
-    }
-  }
-  
-  .video-container-caption{
-    color: $brand-primary;
-    font-family: $font-family-sans-serif;
-    font-size: 1em;
-    font-weight: 600;
-    line-height: 1.375em;
-    margin: -20px 0 40px;
-
-    strong{
-      font-weight: 400;
-    }
-  }
-
   // Align right pictures
   .alignright{
     height: auto;
@@ -804,6 +770,44 @@ header {
   }
 }
 
+
+// Videos
+
+.video-container{
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  margin: 60px 0 30px;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.container-right{
+  .video-container{
+    margin-top: 40px;
+  }
+}
+
+.video-container-caption{
+  color: $brand-primary;
+  font-family: $font-family-sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.375em;
+  margin: -20px 0 40px;
+
+  strong{
+    font-weight: 400;
+  }
+}
+
+
 // Computers Resolution
 @media (min-width: $screen-md) {
   header{
@@ -940,4 +944,27 @@ header {
     background: rgba(255,255,255,.92);
     box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
   } 
+}
+
+// Contraceptives video
+
+.testimonies-of-women,
+.testimonios-de-mujeres {
+  .page-content .author,
+  .page-content .date {
+    display: none;
+  }
+}
+
+#contraceptives-video {
+  padding: 30px;
+
+  @media (max-width: $screen-sm-min) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .video-container {
+    margin-top: 0;
+  }
 }

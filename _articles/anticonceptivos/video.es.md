@@ -7,16 +7,11 @@ home_description: Mujeres de todo el mundo hablan de anticonceptivos, su uso, la
 img:              articles/home-contraceptives.jpg
 order:            1
 highlighted:      true
-author:           ...
-pub_date:         2018-02-20
 slug:             testimonios-de-mujeres
 ref:              contraceptives-video
 lang:             es
 ---
 
-<div class="container page-content">
-<div class="page-content-container" markdown="1">
-
-Lorem Metemos el vídeo yeyer.
-</div>
+<div id="contraceptives-video">
+{% include video-container.html videoid="eY8R4SCd26o" %}
 </div>
