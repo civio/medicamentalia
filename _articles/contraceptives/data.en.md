@@ -97,7 +97,7 @@ But contraceptive use is not homogeneous between countries or across social clas
     <p><strong>Traditional methods</strong> range from tracking the menstrual cycle to local practices tied to religion or magic. These methods, which are unreliable at best, are the leading method in the Balkans.</p>
   </div>
   <div class="step" data-step="9">
-    <p>In Albania, for example, the pull-out method is the main form of birth control for 58% of women.</p>
+    <p>In Albania, for example, the pull-out method is the main form of birth control for 84% of women.</p>
   </div>
   <div class="step" data-step="10"></div>
 </div>

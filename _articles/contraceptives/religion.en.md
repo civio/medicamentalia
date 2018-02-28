@@ -51,7 +51,7 @@ Religious bans on contraceptives affect more than just believers. They affect sw
 Ortega has her work cut out for her: Guadalajara is one of the most religious states in Mexico. Catholic schools there have organised massive demonstrations against birth control and abortion. The ex-cardinal Juan Sandoval Íñiguez [said](https://www.youtube.com/watch?time_continue=30&v=DSkBK7cCFD4) that the rise in murders of women is due to their own "imprudence" in getting into stranger's cars. Few political candidates in his state can make it through an electoral campaign without a photo opportunity with him. The ex-cardinal is clear about his position on contraceptives: no. In a [video](https://www.youtube.com/watch?v=CZefj0YBodY) titled roughly "Duo of death: contraception and euthanasia", he says: "The UN is committed to reducing the population of the world [...] It promotes organisations that help in this devil's work."
 
 One of the organisations he mentions is the UNPFA. 
-Alieu Jammeh, an UNPFA official in The Gambia says, **"All the work you've done in thirty, in fifty years, the imam can undo in five minutes."**
+Alieu Jammeh, an UNPFA official in The Gambia says, **"All the work you've done in three, four, five years, the imam can undo in five minutes."**
 
 
 ### Every sperm is sacred

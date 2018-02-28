@@ -7,7 +7,7 @@ home_description: Las tres principales religiones monoteístas -Catolicismo, Jud
 img:              articles/home-contraceptives.jpg
 order:            1
 highlighted:      true
-author:           ...
+author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo y Verónica Ramírezimán
 pub_date:         2018-02-20
 slug:             religion
 ref:              religion
@@ -31,7 +31,7 @@ Muchas cosas han cambiado en el seno de estas religiones, tanto entre sus repres
 
 En la encíclica [*Humanae Vitae*](http://w2.vatican.va/content/paul-vi/es/encyclicals/documents/hf_p-vi_enc_25071968_humanae-vitae.html), del Papa San Pablo VI, el uso de anticonceptivos solo lleva al "goce egoísta, falta de respeto y abuso de la mujer". Y la esterilización o cualquier acción para hacer imposible la procreación están prohibidos. El Papa Francisco, en su exhortación apostólica [*Amoris Laetitia*](http://w2.vatican.va/content/francesco/es/apost_exhortations/documents/papa-francesco_esortazione-ap_20160319_amoris-laetitia.html#Dimensi%C3%B3n_er%C3%B3tica_del_amor_), dio un paso adelante al eliminar la pátina de pecado al sexo -entre esposos, eso sí; fuera, otra negación, ni existe-, pero critica en ese mismo texto las campañas "coercitivas" de fomento del uso de anticonceptivos por parte de los gobiernos, englobadas en una peligrosa "mentalidad antinatalista". Y carga contra el concepto de *sexo seguro*: "Como sin un posible hijo fuera un enemigo del cual hay que protegerse". 
 
-A 5.600 kilómetros de Jerusalén y 4.140 del Vaticano, en la región de Thiès, en Senegal, **decenas de mujeres ocupan sus sillas de plástico**, sobre la arena y bajo un toldo. La mayoría lleva en brazos a los niños más pequeños, mientras los mayores corretean cerca. El público atiende, entre risas -pudorosas a veces, a carcajadas, otras- la clase práctica sobre métodos anticonceptivos de Coumba Dieng, de la organización Marie Stopes. **Los únicos hombres que participan en el evento, menos de una decena, son el encargado del sonido, algunos miembros de la organización, el imam** y sus acompañantes. La presencia aquí del líder religioso es muy importante para evitar el rechazo de las mujeres y, sobre todo, de sus maridos. 
+A 5.600 kilómetros de Jerusalén y 4.140 del Vaticano, en la región de Thiès, en Senegal, **decenas de mujeres ocupan sus sillas de plástico**, sobre la arena y bajo un toldo. La mayoría lleva en brazos a los niños más pequeños, mientras los mayores corretean cerca. El público atiende, entre risas -pudorosas a veces, a carcajadas, otras- la clase práctica sobre métodos anticonceptivos de Coumba Dieng, de la organización Marie Stopes. **Los únicos hombres que participan en el evento, menos de una decena, son el encargado del sonido, algunos miembros de la organización, el imán** y sus acompañantes. La presencia aquí del líder religioso es muy importante para evitar el rechazo de las mujeres y, sobre todo, de sus maridos. 
 
 {% include caption.html img="contraceptives/gambia-event.jpg" align="alignright"%}
 
@@ -45,7 +45,7 @@ En enero de 2017, el presidente Trump [reinstauró y amplió](https://www.whiteh
 
 El veto de la religión al uso de anticonceptivos no solo se manifiesta en las ideas de los líderes religiosos y cómo afectan a las decisiones personales de los creyentes, sino también en grandes políticas, como el veto de Trump a organizaciones que practiquen o defienda el aborto; o en pequeñas acciones cotidianas, como las vallas morales que se imponen a otros. Patricia Ortega, de la Red por los derechos sexuales y reproductivos en México (ddeser), cuenta que no hace tanto, en la cadena de farmacias Guadalajara, una de las más importantes del país, no se vendían preservativos. El catolicismo de sus propietarios se extiende ahora a la píldora del día después, que no se vende en sus establecimientos. Ella trabaja con todo en contra: en Guadalajara, uno de los estados mexicanos en los que la religión tiene más peso. Prueba de ello es, además de las masivas manifestaciones en su contra, el peso político de un cardenal emérito, Juan Sandoval Íñiguez, que [llegó a afirmar](https://www.youtube.com/watch?time_continue=30&v=DSkBK7cCFD4) que las mujeres son asesinadas por culpa de su "imprudencia". Pocos candidatos pasan por una campaña electoral sin intentar hacerse una foto con él. Sobre anticonceptivos, este excardenal lo tiene claro: no y no. En un [vídeo](https://www.youtube.com/watch?v=CZefj0YBodY) titulado *Binomio de muerte: anticoncepción y eutanasia*, afirma: "La ONU está empeñada en reducir la población del mundo [...] promueve organismos que la ayudan en este trabajo del diablo".
 
-Una de esas organizaciones es la FPNU. Alieu Jammeh trabaja en la sede de Gambia. **"Todo el trabajo que has hecho en 30, en 50 años, el imam puede tirarlo por tierra en cinco minutos"**, se lamenta. 
+Una de esas organizaciones es la FPNU. Alieu Jammeh trabaja en la sede de Gambia. **"Todo el trabajo que has hecho en tres, cuatro, cinco añosx el imán puede tirarlo por tierra en cinco minutos"**, se lamenta. 
 
 
 ### Hasta la última gota de semen es sagrada

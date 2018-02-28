@@ -7,7 +7,7 @@ home_description: Una de cada diez mujeres en todo el planeta no usa los anticon
 img:              articles/home-contraceptives.jpg
 order:            1
 highlighted:      true
-author:           ...
+author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo y Verónica Ramírez
 pub_date:         2018-02-20
 slug:             datos-uso-barreras
 ref:              contraceptives-data
@@ -45,7 +45,7 @@ Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="0">
-    <p>En <strong id="treemap-contraceptives-use-country"></strong>, un <span id="treemap-contraceptives-use-any-method"></span>% de las mujeres usa algún <strong>método anticonceptivo moderno</strong>. El más habitual es <strong id="treemap-contraceptives-use-method"></strong>.</p>
+    <p>En <strong id="treemap-contraceptives-use-country"></strong>, un <span id="treemap-contraceptives-use-any-method"></span>% de las mujeres respondieron que ellas o sus parejas usan algún <strong>método anticonceptivo moderno</strong>. El más habitual es <strong id="treemap-contraceptives-use-method"></strong>.</p>
   </div>
   <div class="step" data-step="1">
     <p><strong>En el mundo</strong>, los métodos más habituales son la <strong>esterilización femenina</strong>, el <strong>DIU</strong> y la <strong>píldora</strong>.</p>
@@ -74,7 +74,7 @@ Pero **su uso no es homogéneo ni entre países ni entre clases sociales**. La [
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="1">
-    <p>La <strong>esterilización femenina</strong> es el método más habitual en India (67%); además, destaca en muchos países centroamericanos, como República Dominicana (59%), Puerto Rico, El Salvador y México.</p>
+    <p>La <strong>esterilización femenina</strong> es el método más habitual en India (67%); además, destaca en México (49%) y muchos países centroamericanos, como República Dominicana (59%), Puerto Rico (47%) y El Salvador (51%).</p>
   </div>
   <div class="step" data-step="2">
     <p>La <strong>esterilización masculina</strong> tiene una implantación muchísimo menor y no alcanza porcentajes tan altos. Por ejemplo: un 30% de las mujeres en Canadá contestó que es el método que usan sus parejas. En Reino Unido ese porcentaje es del 25%.</p>
@@ -89,7 +89,7 @@ Pero **su uso no es homogéneo ni entre países ni entre clases sociales**. La [
     <p>La <strong>píldora</strong>  es prioritaria, entre otras zonas, en el norte de África y buena parte de la Europa occidental, pero no en España.</p>
   </div>
   <div class="step" data-step="6">
-    <p>El <strong>preservativo masculino</strong> es uno de los métodos más habituales en países tan distintos como Botsuana (79%) y Grecia (49%), y en otros países entre mujeres no casadas que no tienen acceso a otros métodos más establecidos. Es el principal método elegido como anticonceptivo en España (38%).</p>
+    <p>El <strong>preservativo masculino</strong> es uno de los métodos más habituales en países tan distintos como Botsuana (79%) y Grecia (49%), y en otros países entre mujeres no casadas que no tienen acceso a otros métodos más estables o permanentes. Es el principal método elegido como anticonceptivo en España (38%).</p>
   </div>
   <div class="step" data-step="7">
     <p>El método <strong>inyectable</strong>, también hormonal, es el favorito en África y buena parte del Sudeste Asiático. Para muchas mujeres es la solución perfecta si deciden usar anticonceptivos sin que se enteren sus maridos si ellos están en contra. No se nota, es fácil de administrar -un pinchazo rápido cada uno, tres o cinco meses- y no deja huella.</p>
@@ -98,7 +98,7 @@ Pero **su uso no es homogéneo ni entre países ni entre clases sociales**. La [
     <p>Los <strong>métodos tradicionales</strong> van desde la marcha atrás al control del ciclo, pasando por prácticas locales vinculadas a la religión o la magia. Estos métodos, muy poco o nada fiables, son mayoritarios en la región de los Balcanes</p>
   </div>
   <div class="step" data-step="9">
-    <p>En Albania, por ejemplo, la marcha atrás es el principal método anticonceptivo para un 58% de mujeres.</p>
+    <p>En Albania, por ejemplo, la marcha atrás es el principal método anticonceptivo para un 84% de mujeres.</p>
   </div>
   <div class="step" data-step="10"></div>
 </div>
@@ -141,7 +141,9 @@ En Gambia, muchas mujeres usan un método tradicional que recibe diferentes nomb
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-Puede ser que quieran espaciar los embarazos, por razones de salud, para poder cuidar de los hijos de forma escalonada o por organización personal. "Empecé a tomar anticonceptivos tras mi primer embarazo. **Solo siete meses después volvía a estar embarazada**. Entonces, cuando tuve a mi segundo hijo, decidí que no quería volver a pasar por la misma situación en mi tercer embarazo", cuenta Jarra Joof, de Gambia. O que, simplemente, no quieran tener ningún hijo o no quieran tener más. **"Siete es suficiente"**, argumenta ahora, tiempo después de esos primeros partos, con 42 años. Las razones son muchas, pero **las mujeres con necesidades no cubiertas tienen algo en común: han decidido no quedarse embarazadas pero, aún así, no usan ningún método**.
+Puede ser que quieran espaciar los embarazos por razones de salud, para poder cuidar de los hijos de forma escalonada o por organización personal. "Todo empezó tras mi primer embarazo. **Solo siete meses después volvía a estar embarazada**. Entonces, cuando tuve a mi segundo hijo, decidí que no quería volver a pasar por la misma situación otra vez", cuenta Jarra Joof, de Gambia, una de las mujeres entrevistadas para este reportaje. Fue entonces cuando se planteó usar anticonceptivos. 
+
+Puede que, simplemente, no quieran tener ningún hijo o no quieran tener más. **"Siete es suficiente"**, argumenta ahora, tiempo después de esos primeros partos, con 42 años. Las razones son muchas, pero **las mujeres con necesidades no cubiertas tienen algo en común: han decidido no quedarse embarazadas pero, aún así, no usan ningún método**.
 </div>
 </div>
 
@@ -166,9 +168,9 @@ Puede ser que quieran espaciar los embarazos, por razones de salud, para poder c
 <div class="scroll-text">
   <div class="step" data-step="0">
     <p>Ese problema, las <strong>necesidades no cubiertas</strong>, es mayor en algunos países del mundo que en otros. Apenas es relevante en China, mientras en Angola supera el 36%.</p>
-  </div>
+  </div>imán
   <div class="step" data-step="1">
-    <p>Pero, si distribuimos los países en base a su nivel de renta...</p>
+    <p>Pero, si distribuimos los países según su nivel de renta...</p>
   </div>
   <div class="step" data-step="2">
     <p>En los más ricos, como Estados Unidos, Alemania o España, el porcentaje de mujeres con necesidades no cubiertas es inferior al 15%.</p>
@@ -187,7 +189,7 @@ Puede ser que quieran espaciar los embarazos, por razones de salud, para poder c
 <div class="container page-content">
 <div class="page-content-container reasons-graphs" markdown="1">
 
-Así, el **porcentaje de mujeres con necesidades no cubiertas de los países menos desarrollados** (21,4%) casi **duplica la mediana mundial** (11,5%), según la ONU. 
+Así, el **porcentaje de mujeres con necesidades no cubiertas de los países menos desarrollados** (21,4%) casi **duplica la mediana mundial** (11,5%), según datos de 2017 de la ONU. 
 
 #### Barreras
 
@@ -227,7 +229,7 @@ Y a ellos se suman las creencias no basadas en la evidencia científica, como qu
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="0">
-    <p>En Pout, a una hora de Dakar, decenas de mujeres, la mayoría con niños en los brazos, esperan con los pies en la arena y bajo un toldo que les protege del sol, al ritmo de una música bien animada, que arranque el espectáculo. El imam también está presente.</p>
+    <p>En Pout, a una hora de Dakar, decenas de mujeres, la mayoría con niños en los brazos, esperan con los pies en la arena y bajo un toldo que les protege del sol, al ritmo de una música bien animada, que arranque el espectáculo. El imán también está presente.</p>
   </div>
   <div class="step" data-step="1">
     <p>Se preparan condones, todo el mundo se coloca, el DJ baja la música y Coumba Dieng, de la organización Marie Stopes, empieza su clase práctica sobre anticonceptivos.</p>
@@ -267,7 +269,7 @@ Al contrario de lo que ocurre con las barreras relacionadas con la salud de la m
 
 En la mayoría de casos, **es la propia mujer entrevistada quien asegura oponerse**. Teniendo en cuenta que solo analizamos las respuestas de aquellas que tienen necesidades no cubiertas -es decir, que no quieren tener más hijos pero pese a eso no usan ningún método anticonceptivo-, todo apunta a que **su negativa puede ser de muchos tipos: por razones culturales, sociales, religiosas...**
 
-Aunque sus porcentajes son más bajos, la religión puede afectar también a la oposición de mujer y marido los casos anteriores. Y no es un problema intrínseco a una religión concreta; todas las mayoritarias imponen barreras. [En los ambientes más ortodoxos, es el iman, el cura o el rabino quienes deciden si se usan, o no, métodos. Y hasta cuáles](enlace al otro texto). 
+Aunque sus porcentajes son más bajos, la religión puede afectar también a la oposición de mujer y marido de los casos anteriores. Y no es un problema intrínseco a un credo concreto; todas las mayoritarias imponen barreras. [En los ambientes más ortodoxos, es el imán, el cura o el rabino quienes deciden si se usan, o no, métodos. Y hasta cuáles](/anticonceptivos/religion). 
 
 <div class="panel" markdown="1">
 
@@ -275,7 +277,7 @@ Aunque sus porcentajes son más bajos, la religión puede afectar también a la 
 
 Según Fanta Jatta, en Gambia **"muchas mujeres no toman decisiones independientes, se toman en su nombre"**. Ha conocido casos de mujeres maltratadas por sus maridos cuando descubrían que estaban tomando la píldora, y de otras obligadas a quedarse embarazadas cuando era un peligro para su salud. Momodou Njie, de la Family Planning Association en el país africano, cuenta historias de mujeres que acuden a la clínica a escondidas y dejan la cartilla allí por miedo a ser descubiertas. Para él, "la mayoría de las decisiones las toman los hombres, pero en algunos casos lo hace la mujer porque quiere salvar su vida".
 
-En **Albania**, país en la que **la marcha atrás tiene un porcentaje más alto de uso**, es también en el que **la oposición del marido supone la principal barrera** al acceso. Le siguen Timor Oriental, Mali, Senegal y Afganistán. 
+En **Albania**, país donde **la marcha atrás tiene un porcentaje más alto de uso**, es también en el que **la oposición del marido supone la principal barrera** al acceso. Le siguen Timor Oriental, Mali, Senegal y Afganistán. 
 
 La clave es quién toma esta decisión. Para Alieu Jammeh, de Naciones Unidas, **es importante involucrar a los hombres para "minimizar la fricción"** en el matrimonio. Pero, más allá de eso, "es derecho de la mujer tomarlo si quiere".
 </div>
@@ -285,7 +287,7 @@ La clave es quién toma esta decisión. Para Alieu Jammeh, de Naciones Unidas, *
 
 **La suegra, el padre, o hasta los servicios médicos o farmacéuticos, entre otros, pueden intervenir en la decisión de la mujer**. La Red por los Derechos Sexuales y Reproductivos en México (ddeser) realizó un monitoreo sobre cómo funcionaban los servicios de reparto de anticonceptivos con dos gobiernos distintos. Entrevistaron a responsables, médicos, funcionarios, usuarias... Y hasta acudieron a los centros como *clientas fantasma*. Encontraron clínicas en las que se niegan a dar condones a jóvenes y se acumulan allí "hasta que caducan", denuncia Patricia Ortega; o donde no dan la píldora a mujeres casadas, por poner solo dos ejemplos.
 
-Cada vez es menos frecuente quienes responden que no conocen métodos o que no tienen acceso a ellos o cuestan demasiado, pero en el Oeste y el Centro de África estas razones "fueron nombradas por más de un 10% de las mujeres entrevistadas", según el estudio de Guttmacher. En México, Patricia Ortega asegura que en la universidad **hay "personas que no saben ni usar un condón"**. Ante la pregunta sobre cuántas veces se puede usar un mismo preservativo, un 15,5% de los participantes en la Encuesta Nacional de Salud y Nutrición mexicana [respondieron de forma incorrecta](http://ensanut.insp.mx/informes/ENSANUT2012ResultadosNacionales.pdf).
+Cada vez son menos frecuentes quienes responden que no conocen métodos o que no tienen acceso a ellos o cuestan demasiado, pero en el Oeste y el Centro de África estas razones "fueron nombradas por más de un 10% de las mujeres entrevistadas", según el estudio de Guttmacher. En México, Patricia Ortega asegura que en la universidad **hay "personas que no saben ni usar un condón"**. Ante la pregunta sobre cuántas veces se puede usar un mismo preservativo, un 15,5% de los participantes en la Encuesta Nacional de Salud y Nutrición mexicana [respondieron de forma incorrecta](http://ensanut.insp.mx/informes/ENSANUT2012ResultadosNacionales.pdf).
 
 <div class="panel">
 {% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="Pobreza no es solo la falta de dinero, o material, es también la falta del poder de tomar decisiones." author="Fanta Jatta" author_description="Responsable de Derecho de la Mujer en Action Aid International Gambia" %}
@@ -295,19 +297,19 @@ En **Gambia**, los **anuncios en televisión promoviendo el uso de anticonceptiv
 
 En Europa hace tiempo que escasean las campañas de promoción de los anticonceptivos -[excepto si las paga Durex](https://www.youtube.com/watch?v=KR4A-c23rsE)-, y **cada vez se invierte más en el fomento de la natalidad**, ya sea a través de una [campaña](https://elpais.com/internacional/2017/11/10/actualidad/1510327993_647673.html) del Gobierno polaco para animar a sus ciudadanos a tener sexo o con los [anuncios anuales del gobierno gallego](https://civio.es/el-boe-nuestro-de-cada-dia/2013/07/29/galicia-licita-por-640-000-euros-una-campana-para-animar-a-sus-ciudadanos-a-tener-hijos/) en los que se apela a la “necesaria responsabilidad compartida” para traer más niños al mundo.
 
-{% include caption.html img="contraceptives/fomento-natalidad.jpg" caption="“Reproducíos como conejos”, aconseja el ministerio de sanidad polaco en el anuncio de la izquierda. A la derecha, campaña del gobierno gallego." fullWidth=true %}
+{% include caption.html img="contraceptives/fomento-natalidad.jpg" caption="“Reproducíos como conejos”, aconseja el Ministerio de Sanidad polaco en el anuncio de la izquierda. A la derecha, campaña del gobierno gallego." fullWidth=true %}
 
-Y, ¿qué significa que haya necesidades no cubiertas? Que **el derecho a planificar la reproducción propia no se cumple**. Según la [OMS](http://www.who.int/mediacentre/factsheets/fs351/en/), la planificación familiar reduce los abortos, especialmente los inseguros; refuerza el derecho para determinar el número y el tiempo para tener hijos y previene muertes de madres e hijos.
+Y, ¿qué significa que haya necesidades no cubiertas? Que **el derecho a planificar la reproducción propia no se cumple**. Según la [OMS](http://www.who.int/mediacentre/factsheets/fs351/en/), la planificación familiar reduce los abortos, especialmente los inseguros; refuerza el derecho para determinar el número de hijos y el tiempo para tenerlos y previene muertes tanto de ellos como de sus madres.
 
 **En 2012, [85 millones de embarazos en todo el mundo](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4727534/) no fueron intencionados**. Se trata del 40% del total y muchos de ellos acaban en aborto -natural o voluntario. Más datos: se [estima](http://www.who.int/mediacentre/factsheets/fs388/en/) que **se realizan 25 millones de abortos inseguros al año**, la mayoría de ellos en países en desarrollo. Con el riesgo que eso conlleva.
 
-Y más: **[830 mujeres mueren cada día ](http://www.who.int/maternal-health/en/)por causas relacionadas con el embarazo y el parto**. Casi todas ellas suceden en países en desarrollo. De hecho, la OMS estima que más de un tercio de esas muertes, [en 2015](http://www.who.int/reproductivehealth/publications/monitoring/maternal-mortality-2015/en/), se produjeron en Nigeria y La India. O, dicho de otra forma: **si vives en una región en desarrollo tienes una posibilidad entre 4.900 de morir en el parto; si vives en una región desarrollada, una entre 150**.
+Y más: **[830 mujeres mueren cada día ](http://www.who.int/maternal-health/en/)por causas relacionadas con el embarazo y el parto**. Casi todas ellas suceden en países en desarrollo. De hecho, la OMS estima que más de un tercio de esas muertes, [en 2015](http://www.who.int/reproductivehealth/publications/monitoring/maternal-mortality-2015/en/), se produjeron en Nigeria y La India. O, dicho de otra forma: **si vives en una región en desarrollo tienes una posibilidad entre 150 de morir en el parto; si vives en una región desarrollada, una entre 4.900**.
 
 Es una cuestión de salud pública, pero también de derechos. El de elegir de forma libre si se quiere tener hijos, cómo y cuándo.
 
 <h4>Ponte en su piel</h4>
 <div class="graph-container">
-  <p>Explora los datos y descubre las diferencias en el acceso a metodos anticonceptivos para mujeres de todo el mundo.</p>
+  <p>Explora los datos y descubre las diferencias en el acceso a métodos anticonceptivos para mujeres de todo el mundo.</p>
 </div>
 
 </div>
