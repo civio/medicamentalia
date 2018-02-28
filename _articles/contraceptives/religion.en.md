@@ -76,7 +76,7 @@ Men and women's first duty in Judaism is to multiply. They should have as many c
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="0">
-    <p>"Forbidden, forbidden, forbidden. That's why we don't have the pull-out method."</p>
+    <p>"Forbidden, forbidden, forbidden. That's why we don't have the pull-out method.", rabbi Daniel Bitton.</p>
   </div>
   <div class="step" data-step="1">
     <p>"The man's semen cannot emerge in vain." </p>
@@ -132,7 +132,7 @@ All three religions leave a loophole for cases in which the mother's health is a
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="0">
-    <p>"It depends on why you're doing family planning. If it's for health reasons, we accept it. Islam's first priority is to protect life."</p>
+    <p>"It depends on why you're doing family planning. If it's for health reasons, we accept it. Islam's first priority is to protect life.", Ousman M. Jah, Gambia Supreme Islamic Council.</p>
   </div>
   <div class="step" data-step="1">
     <p>"But not having children for lack of money... We abhor that. We are against it."</p>
@@ -199,7 +199,7 @@ In 2009 [José Ignacio Munilla](https://twitter.com/obispomunilla), then the bis
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="0">
-    <p>"The sexual urge can be directed through a process of growth in self-knowledge and selfcontrol capable of nurturing valuable capacities for joy and for loving encounter."</p>
+    <p>"The sexual urge can be directed through a process of growth in self-knowledge and selfcontrol capable of nurturing valuable capacities for joy and for loving encounter.", Amoris Laetitia, Pope Francis</p>
   </div>
   <div class="step" data-step="1">
     <p>"It is always irresponsible to invite adolescents to toy with their bodies and their desires."</p>
