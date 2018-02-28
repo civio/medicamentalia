@@ -27,7 +27,7 @@ Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la
 {% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="Necesitamos entender cómo funcionan nuestros cuerpos y poder tomar nuestras propias decisiones." author="Fanta Jatta" author_description="Responsable de Derecho de la Mujer en Action Aid International Gambia" %}
 </div>
 
-#### Usos
+#### Usos {#usos}
 </div>
 </div>
 
@@ -191,7 +191,7 @@ Puede que, simplemente, no quieran tener ningún hijo o no quieran tener más. *
 
 Así, el **porcentaje de mujeres con necesidades no cubiertas de los países menos desarrollados** (21,4%) casi **duplica la mediana mundial** (11,5%), según datos de 2017 de la ONU. 
 
-#### Barreras
+#### Barreras {#barreras}
 
 Vamos a centrarnos en esos países en los que la situación es más complicada. ¿Qué barreras impiden a las mujeres el acceso a los anticonceptivos? Según el estudio *[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)*, del Guttmacher Institute, que analizó 52 países, las principales son **los efectos secundarios, la poca frecuencia sexual, y la oposición (ya sea propia o impuesta)**.  
 
@@ -307,7 +307,8 @@ Y más: **[830 mujeres mueren cada día ](http://www.who.int/maternal-health/en/
 
 Es una cuestión de salud pública, pero también de derechos. El de elegir de forma libre si se quiere tener hijos, cómo y cuándo.
 
-<h4>Ponte en su piel</h4>
+#### Ponte en su piel {#ponte-en-su-piel}
+
 <div class="graph-container">
   <p>Explora los datos y descubre las diferencias en el acceso a métodos anticonceptivos para mujeres de todo el mundo.</p>
 </div>

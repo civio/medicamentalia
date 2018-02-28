@@ -26,7 +26,7 @@ Fanta Jatta knows more than most about these cases. She talks about it at the he
 {% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="We need to understand how our bodies work and make our own choices." author="Fanta Jatta" author_description="Women's Rights Specialist at Action Aid International Gambia" %}
 </div>
 
-#### Uses
+#### Uses {#uses}
 </div>
 </div>
 
@@ -192,7 +192,7 @@ Some women may not want to have any more children, like Joof, or they may not wa
 
 So the percentage of women with unmet needs in the least developed countries (21.4%) is almost double that of the global mean (11.5%), according to the UN.
 
-#### Reasons
+#### Barriers {#barriers}
 
 Let's focus on countries with the most difficult situations. What are the barriers for women to access contraceptives? According to the Guttmacher Institute's report <i>[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)</i>, which analysed 52 countries, the principal barriers are side effects, infrequent sex and resistance by the woman or others. 
 
@@ -306,7 +306,8 @@ Some 830 women [die every day](http://www.who.int/maternal-health/en/) due to pr
 
 It's a question of public health, but above all of rights. Women have the right to freely choose if they want children, and how, and when.
 
-<h4>See it their way</h4>
+#### See it their way {#see-it-their-way}
+
 <div class="graph-container">
   <p>Explore the data and discover how access to birth control differs for women all over the world.</p>
 </div>
