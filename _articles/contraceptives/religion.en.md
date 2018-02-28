@@ -7,7 +7,7 @@ home_description: The three main monotheistic religions, Catholicism, Judaism, a
 img:              articles/home-contraceptives.jpg
 order:            1
 highlighted:      true
-author:           ...
+author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo & Verónica Ramírez
 pub_date:         2018-02-20
 slug:             religion
 ref:              religion
