@@ -1,5 +1,5 @@
 ---
-category:         anticonceptivos
+category:         contraceptives
 title:            Video
 subtitle:         Las señoras dan la turra
 description:      Una de cada diez mujeres en todo el planeta no usa los anticonceptivos que necesita. Analizamos cómo se ejerce este derecho y cómo los efectos secundarios, el machismo, las creencias y las imposiciones de terceros lo vulneran.
