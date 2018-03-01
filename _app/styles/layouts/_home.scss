@@ -655,7 +655,6 @@ $btn-scroll-down-icon-size: 44px;
 
       a{
         color: white;
-        font-weight: 400;
 
         &:hover{
           color: $brand-secondary;
@@ -669,6 +668,15 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
 }
+
+// Make key-findings links bold on contraceptives home
+.anticonceptivos,
+.contraceptives {
+  #key-findings ul li a{
+    font-weight: 400;
+  }
+}
+
 
 @media (max-width: $screen-sm) {
   #key-findings ul{

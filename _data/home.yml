@@ -6,5 +6,7 @@
   size: 6
 - ref: vaccines
   size: 12
+  type: page
 - ref: access
   size: 12
+  type: page
