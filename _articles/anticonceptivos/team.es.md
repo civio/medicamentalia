@@ -2,7 +2,7 @@
 category:   anticonceptivos
 title:      Metodología
 img:        articles/home-contraceptives-team.jpg 
-order:      6
+order:      4
 slug:       nosotros
 ref:        contraceptives-team
 lang:       es

@@ -5,13 +5,12 @@ subtitle:         Radiografía de un derecho
 description:      Una de cada diez mujeres en todo el planeta no usa los anticonceptivos que necesita. Analizamos cómo se ejerce este derecho y cómo los efectos secundarios, el machismo, las creencias y las imposiciones de terceros lo vulneran.
 home_description: Una de cada diez mujeres en todo el planeta no usa los anticonceptivos que necesita. Analizamos cómo se ejerce este derecho y cómo los efectos secundarios, el machismo, las creencias y las imposiciones de terceros lo vulneran.
 img:              articles/home-contraceptives.jpg
-order:            1
-highlighted:      true
-author:           ...
+author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo y Verónica Ramírez
 pub_date:         2018-02-20
 slug:             datos-uso-barreras-static
 ref:              contraceptives-data-static
 lang:             es
+draft:            true
 ---
 
 <div class="container page-content">

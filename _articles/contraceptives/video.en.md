@@ -4,8 +4,8 @@ title:            Video
 subtitle:         Women speak up 
 description:      Women from around the world talk about contraception, barriers, side effects & about who makes the decision.
 home_description: Women from around the world talk about contraception, barriers, side effects & about who makes the decision.
-img:              articles/home-contraceptives.jpg
-order:            1
+img:              articles/home-contraceptives-video.jpg
+order:            3
 highlighted:      true
 slug:             testimonies-of-women
 ref:              contraceptives-video

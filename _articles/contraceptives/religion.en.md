@@ -4,8 +4,8 @@ title:            Religion
 subtitle:         The Sin of Birth Control
 description:      The three main monotheistic religions, Catholicism, Judaism, and Islam, all limit the right of women to decide about their pregnancies. But within each there are schisms and different interpretations and levels of acceptance.
 home_description: The three main monotheistic religions, Catholicism, Judaism, and Islam, all limit the right of women to decide about their pregnancies. But within each there are schisms and different interpretations and levels of acceptance.
-img:              articles/home-contraceptives.jpg
-order:            1
+img:              articles/home-contraceptives-religion.jpg
+order:            2
 highlighted:      true
 author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo & Verónica Ramírez
 pub_date:         2018-02-20

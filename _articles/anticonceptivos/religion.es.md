@@ -4,8 +4,8 @@ title:            Religión
 subtitle:         El pecado de la anticoncepción
 description:      Las tres principales religiones monoteístas -Catolicismo, Judaísmo e Islam- limitan el derecho de la mujer a decidir sobre sus embarazos, pero dentro de cada una de ellas hay interpretaciones, rendijas y diferentes niveles de aceptación.
 home_description: Las tres principales religiones monoteístas -Cristianismo, Judaísmo e Islam- limitan el derecho de la mujer a decidir sobre sus embarazos, pero dentro de cada una de ellas hay interpretaciones, rendijas y diferentes niveles de aceptación.
-img:              articles/home-contraceptives.jpg
-order:            1
+img:              articles/home-contraceptives-religion.jpg
+order:            2
 highlighted:      true
 author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo y Verónica Ramírezimán
 pub_date:         2018-02-20
