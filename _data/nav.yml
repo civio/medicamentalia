@@ -53,7 +53,7 @@ vacunas:
 anticonceptivos:
   - ref: contraceptives-data
     type: article
-  - ref: religion
+  - ref: contraceptives-religion
     type: article
   - ref: contraceptives-video
     type: article
@@ -62,7 +62,7 @@ anticonceptivos:
 contraceptives:
   - ref: contraceptives-data
     type: article
-  - ref: religion
+  - ref: contraceptives-religion
     type: article
   - ref: contraceptives-video
     type: article

@@ -10,7 +10,7 @@ highlighted:      true
 author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo y Verónica Ramírezimán
 pub_date:         2018-02-20
 slug:             religion
-ref:              religion
+ref:              contraceptives-religion
 lang:             es
 article_menu:     <li><a href="#hasta-la-ltima-gota-de-semen-es-sagrada" title="Semen sagrado">Semen sagrado</a></li><li><a href="#permiso-concedido-a-veces-por-motivos-de-salud" title="Excepciones">Excepciones</a></li><li><a href="#educando-en-contra-de-los-anticonceptivos" title="Educación sexual">Educación sexual</a></li><li><a href="#los-hombres-interpretan-las-leyes-de-dios" title="Interpretación escrituras">Interpretación escrituras</a></li>
 ---
