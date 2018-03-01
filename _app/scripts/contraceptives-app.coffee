@@ -257,7 +257,7 @@ class window.ContraceptivesApp
       d3.csv $('body').data('baseurl')+'/data/contraceptives-reasons/'+@dhs_countries[@country_code].name+'_all.csv', (error, data) =>
         d = data[0]
         # setup data
-        @setAppItemData @$app, 100*d.using_modern_method/d.n, @methodsDHSNames[d.most_popular_method], 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, @reasonsDHSNames[d.most_popular_reason], 100*d.most_popular_reason_n/d.n_reasons
+        @setAppItemData @$app, 100*d.using_modern_method/d.n, @methodsDHSNames[d.most_popular_method], 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, @reasonsDHSNames[d.most_popular_reason], 100*d.most_popular_reason_n/d.n_reasons, @sentences[@country_code]
         # show filters
         @$app.find('.contraceptives-app-filters').show()
     else
@@ -285,7 +285,7 @@ class window.ContraceptivesApp
         reason       = reasons[0].name
         reason_value = reasons[0].value
       # setup data
-      @setAppItemData @$app, use, method, method_value, unmetneeds, reason, reason_value
+      @setAppItemData @$app, use, method, method_value, unmetneeds, reason, reason_value, @sentences[@country_code]
 
 
   onSelectFilter: (e) =>
@@ -304,7 +304,7 @@ class window.ContraceptivesApp
             @setAppItemData @filterEl.find('#'+@filter+'-'+d.id), 100*d.using_modern_method/d.n, @methodsDHSNames[d.most_popular_method], 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, @reasonsDHSNames[d.most_popular_reason], 100*d.most_popular_reason_n/d.n_reasons
 
 
-  setAppItemData: ($el, use, method, method_value, unmetneeds, reason, reason_value) ->
+  setAppItemData: ($el, use, method, method_value, unmetneeds, reason, reason_value, sentence) ->
 
     #console.log 'setAppItemData', $el, use, method, method_value, unmetneeds, reason, reason_value
 
@@ -333,3 +333,9 @@ class window.ContraceptivesApp
       $el.find('.contraceptives-app-reason').show()
     else
       $el.find('.contraceptives-app-reason').hide()
+
+    if sentence
+      $el.find('.contraceptives-app-sentence').html(sentence).show()
+    else
+      $el.find('.contraceptives-app-sentence').hide()
+

@@ -2535,7 +2535,17 @@ body.guatemala-graph {
     .contraceptives-app-data{
       font-size: 1.125em;
       text-align: left;
+      padding-top: 15px;
+      padding-bottom: 10px;
     }
+  }
+
+  .contraceptives-app-sentence{
+    padding: 15px;
+    background: white;
+    margin: 20px 10px 10px;
+    font-size: .913em;
+    line-height: 1.375em;
   }
 
   .contraceptives-app-filters{
