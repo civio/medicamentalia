@@ -57,7 +57,7 @@ Fanta Jatta knows more than most about these cases. She talks about it at the he
 <div class="container page-content">
 <div class="page-content-container" markdown="1">
 
-But contraceptive use is not homogeneous between countries or across social classes. The economic situation, cultural context, availability of pharmacies and public policies determine the most popular method in each country.
+But [contraceptive use is not homogeneous between countries or across social classes](/contraceptives/team/#data){:target="_blank"}. The economic situation, cultural context, availability of pharmacies and public policies determine the most popular method in each country.
 </div>
 </div>
 
@@ -144,7 +144,7 @@ They may want to space their pregnancies for health reasons or to stagger their 
 
 Joof used birth control to space her next four pregnancies. Now she is back to using birth control full time. "Seven children are enough," Joof says.
 
-Some women may not want to have any more children, like Joof, or they may not want children at all. Though their reasons may vary, women with unmet birth control needs have at least one thing in common: they don't want to get pregnant and they are not doing anything about it.
+Some women may not want to have any more children, like Joof, or they may not want children at all. Though their reasons may vary, [women with unmet birth control needs have at least one thing in common](/contraceptives/team/#global-data){:target="_blank"}: they don't want to get pregnant and they are not doing anything about it.
 </div>
 </div>
 
