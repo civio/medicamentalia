@@ -30,47 +30,43 @@ Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la
 
 <!-- TREEMAP -->
 
+<div class="panel" markdown="1">
 **En España, un 63% de las mujeres usa algún método anticonceptivo moderno. El más habitual es el condón masculino.**
 
 **En el mundo, los métodos más habituales son la esterilización femenina, el DIU y la píldora.**
-
+</div>
 <!--  -->
 
 Pero **su uso no es homogéneo ni entre países ni entre clases sociales**. La [situación económica](http://www.eldiario.es/piedrasdepapel/Pontelo-Ponselo-anticonceptivos-desigualdad_6_563853635.html), el contexto cultural, la distribución de las farmacéuticas y las políticas públicas condicionan los métodos más populares en cada país. 
 
 <!-- MAPS -->
 
-**La esterilización femenina es el método más habitual en India (67%); además, destaca en muchos países centroamericanos, como República Dominicana (59%), Puerto Rico, El Salvador y México.**
+<div class="panel" markdown="1">
+##### Algunos datos sobre el uso de los distintos métodos anticonceptivos
 
-**La esterilización masculina tiene una implantación muchísimo menor y no alcanza porcentajes tan altos. Por ejemplo: un 30% de las mujeres en Canadá contestó que es el método que usan sus parejas. En Reino Unido ese porcentaje es del 25%.**
+- La **esterilización femenina** es el método más habitual en India (67%); además, destaca en muchos países centroamericanos, como República Dominicana (59%), Puerto Rico, El Salvador y México.
 
-**El DIU destaca en estados asiáticos, con Corea del Norte por encima de todos: es el método que usa el 95% de las mujeres que quiere controlar su natalidad.**
+- La **esterilización masculina** tiene una implantación muchísimo menor y no alcanza porcentajes tan altos. Por ejemplo: un 30% de las mujeres en Canadá contestó que es el método que usan sus parejas. En Reino Unido ese porcentaje es del 25%.
 
-**En China, donde el 48% usa el DIU, durante la época en la que estuvo vigente la política de hijo único, el gobierno obligaba a las mujeres a usarlo tras su primer parto. Ahora, se [está ofreciendo](https://www.nytimes.com/2017/01/07/world/asia/after-one-child-policy-outrage-at-chinas-offer-to-remove-iuds.html) a retirarlos de forma gratuita. En el resto del mundo es mucho menos habitual. Algunos médicos [rechazan insertarlo](https://www.washingtonpost.com/national/health-science/why-do-some-doctors-refuse-to-give-women-iuds/2017/10/12/ee1e881e-a3c9-11e7-b14f-f41773cd5a14_story.html?utm_term=.6e3da2fb3930) por falsas creencias sobre su seguridad en mujeres que no han tenido hijos.**
+- El **DIU** destaca en estados asiáticos, con Corea del Norte por encima de todos: es el método que usa el 95% de las mujeres que quiere controlar su natalidad. En China, donde el 48% usa el DIU, durante la época en la que estuvo vigente la política de hijo único, el gobierno obligaba a las mujeres a usarlo tras su primer parto. Ahora, se [está ofreciendo](https://www.nytimes.com/2017/01/07/world/asia/after-one-child-policy-outrage-at-chinas-offer-to-remove-iuds.html) a retirarlos de forma gratuita. En el resto del mundo es mucho menos habitual. Algunos médicos [rechazan insertarlo](https://www.washingtonpost.com/national/health-science/why-do-some-doctors-refuse-to-give-women-iuds/2017/10/12/ee1e881e-a3c9-11e7-b14f-f41773cd5a14_story.html?utm_term=.6e3da2fb3930) por falsas creencias sobre su seguridad en mujeres que no han tenido hijos.
 
-**La píldora es prioritaria, entre otras zonas, en el norte de África y buena parte de la Europa occidental, pero no en España.**
+- La **píldora** es prioritaria, entre otras zonas, en el norte de África y buena parte de la Europa occidental, pero no en España.
 
-**El preservativo masculino es uno de los métodos más habituales en países tan distintos como Botsuana (79%) y Grecia (49%), y en otros países entre mujeres no casadas que no tienen acceso a otros métodos más establecidos. Es el principal método elegido como anticonceptivo en España (38%).**
+- El **preservativo masculino** es uno de los métodos más habituales en países tan distintos como Botsuana (79%) y Grecia (49%), y en otros países entre mujeres no casadas que no tienen acceso a otros métodos más establecidos. Es el principal método elegido como anticonceptivo en España (38%).
 
-**El método inyectable, también hormonal, es el favorito en África y buena parte del Sudeste Asiático. Para muchas mujeres es la solución perfecta si deciden usar anticonceptivos sin que se enteren sus maridos si ellos están en contra. No se nota, es fácil de administrar -un pinchazo rápido cada uno, tres o cinco meses- y no deja huella.**
+- El método **inyectable**, también hormonal, es el favorito en África y buena parte del Sudeste Asiático. Para muchas mujeres es la solución perfecta si deciden usar anticonceptivos sin que se enteren sus maridos si ellos están en contra. No se nota, es fácil de administrar -un pinchazo rápido cada uno, tres o cinco meses- y no deja huella.
 
-**Los métodos tradicionales van desde la marcha atrás al control del ciclo, pasando por prácticas locales vinculadas a la religión o la magia. Estos métodos, muy poco o nada fiables, son mayoritarios en la región de los Balcanes.**
-
-**En Albania, por ejemplo, la marcha atrás es el principal método anticonceptivo para un 58% de mujeres.**
-
+- Los **métodos tradicionales** van desde la marcha atrás al control del ciclo, pasando por prácticas locales vinculadas a la religión o la magia. Estos métodos, muy poco o nada fiables, son mayoritarios en la región de los Balcanes. En Albania, por ejemplo, la marcha atrás es el principal método anticonceptivo para un 58% de mujeres.
+</div>
 <!--  -->
 
 En Gambia, muchas mujeres usan un método tradicional que recibe diferentes nombres y está realizado de diversas formas. Parten de lo mismo: **se ata a la cintura una cuerdita, una rama, o un papelito con o sin frases del Corán**, para proteger a la mujer de quedarse embarazada. Por supuesto, no tiene base científica. 
 
 <!-- WOMANS -->
 
-**Hasta ahora hemos hablado de aquellas mujeres que usan anticonceptivos. De las mujeres casadas o sexualmente activas de 15 a 49 años, el 64% usa algún tipo de método.**
+Hasta ahora hemos hablado de aquellas mujeres que usan anticonceptivos. De las mujeres casadas o sexualmente activas de 15 a 49 años, **el 64% usa algún tipo de método**. Otro **24% quería seguir teniendo niños** en el momento de ser entrevistada y, por lo tanto, decide no usar ningún método. Pero **el 12% restante son aquellas mujeres que quieren retrasar o frenar su maternidad pero no usan ningún método**. Ni siquiera uno tradicional, como la marcha atrás. Tienen necesidades no cubiertas. Y ahí está el problema.
 
-**Otro 24% quería seguir teniendo niños en el momento de ser entrevistada y, por lo tanto, decide no usar ningún método.**
-
-**Pero el 12% restante son aquellas mujeres que quieren retrasar o frenar su maternidad pero no usan ningún método. Ni siquiera uno tradicional, como la marcha atrás. Tienen necesidades no cubiertas. Y ahí está el problema.**
-
-{% include caption.html img="contraceptives/womens-use.png" fullWidth=true %}
+{% include caption.html img="contraceptives/womens-use.png" fullWidth=true caption="12 de cada 100 mujeres quieren retrasar o frenar su maternidad pero no usan ningún método." %}
 
 <!--  -->
 
@@ -81,13 +77,7 @@ Puede ser que quieran espaciar los embarazos, por razones de salud, para poder c
 
 **Ese problema, las necesidades no cubiertas, es mayor en algunos países del mundo que en otros. Apenas es relevante en China, mientras en Angola supera el 36%.**
 
-**Pero, si distribuimos los países en base a su nivel de renta...**
-
-**En los más ricos, como Estados Unidos, Alemania o España, el porcentaje de mujeres con necesidades no cubiertas es inferior al 15%.**
-
-**En los países con menos renta, ese porcentaje supera el 30%**
-
-**Japón y Arabia Saudí, pese a su riqueza, tienen necesidades al mismo nivel que países mucho más pobres.**
+Pero, si distribuimos los países en base a su nivel de renta, **en los más ricos**, como Estados Unidos, Alemania o España, **el porcentaje de mujeres con necesidades no cubiertas es inferior al 15%**. **En los países con menos renta, ese porcentaje supera el 30%**. Japón y Arabia Saudí, pese a su riqueza, tienen necesidades al mismo nivel que países mucho más pobres.
 
 <div id="unmet-needs-gdp-container-graph" class="graph-container" style="margin-bottom: 60px;">
   <p>Porcentaje de mujeres con <strong>necesidades no cubiertas</strong></p>
