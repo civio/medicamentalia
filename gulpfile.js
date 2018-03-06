@@ -111,7 +111,7 @@ var js_paths = {
 
 // Uses Sass compiler to process styles, adds vendor prefixes, minifies,
 // and then outputs file to appropriate location(s)
-gulp.task('css', function() {
+gulp.task('css-main', function() {
   var s = sass();
   s.on('error',function(e){
     gutil.log(e);
@@ -128,6 +128,28 @@ gulp.task('css', function() {
     .pipe(gulp.dest('assets/styles'))
     .on('error', gutil.log);
 });
+
+gulp.task('css-main-static', function() {
+  var s = sass();
+  s.on('error',function(e){
+    gutil.log(e);
+    s.end();
+  });
+  return gulp.src('_app/styles/main-static.scss')
+    .pipe(sourcemaps.init())
+    .pipe(s)
+    .pipe(sourcemaps.write())
+    .pipe(production(autoprefixer({browsers: ['last 2 versions', 'ie >= 10']})))
+    .pipe(production(cssmin()))
+    .pipe(gulp.dest('_site/assets/styles'))
+    .pipe(reload({stream:true}))
+    .pipe(gulp.dest('assets/styles'))
+    .on('error', gutil.log);
+});
+
+// Create a css task wich call all css task dynamically defined
+gulp.task('css', ['css-main', 'css-main-static']);
+
 
 /*
 // Concatenates and uglifies JS files and outputs result to
