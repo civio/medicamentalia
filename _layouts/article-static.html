@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="{{ page.url | replace:'/',' ' | strip }} lang-{{ page.lang }}{% if page.layout == 'article' %} article{% endif %}" data-baseurl="{{ site.assetsurl }}" data-lang="{{ page.lang }}">
+
+    <div class="container page-content">
+      
+      <div style="text-align: center">
+        <h2>{{ page.title }}</h2>
+        {% if page.subtitle %}
+        <h3>{{ page.subtitle }}</h3>
+        {% endif %}
+        <h4>{{ page.description }}</h4>
+      </div>
+
+      <p class="author">
+        {% if page.author %}
+        {{ site.data.locales[page.lang].by }} <span>{{ page.author }}</span>
+        {% endif %}
+      </p>
+      <p class="date">
+        {% if page.pub_date %}
+          {% assign date_format = site.data.locales[page.lang].date.format %}
+          {% assign m = page.pub_date | date: "%-m" | minus: 1 %}
+          {% if site.data.locales[page.lang].date.months[m] %}
+            {% assign date_format = date_format | replace: "%B", site.data.locales[page.lang].date.months[m] %}
+          {% endif %}
+          {{ page.pub_date | date: date_format }}
+        {% endif %}
+      </p>
+    </div>
+
+    {{ page.content | add_anchor_links }}
+
+    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/main.js?v=@version@'></script>
+    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/contraceptives-static.js?v=@version@'></script>
+
+  </body>
+</html>

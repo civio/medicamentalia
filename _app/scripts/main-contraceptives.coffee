@@ -529,20 +529,4 @@
     if $('#maternal-mortality-graph').length
       setupMortalityLineGraph()
 
-   # data static article
-  else if $('body').hasClass 'datos-uso-barreras-static'
-    # Load location
-    d3.json 'https://freegeoip.net/json/', (error, location) ->
-      # Load csvs & setup maps
-      d3.queue()
-        .defer d3.csv,  baseurl+'/data/contraceptives-use-countries.csv'
-        .defer d3.csv,  baseurl+'/data/unmet-needs.csv'
-        .defer d3.csv,  baseurl+'/data/contraceptives-reasons.csv'
-        .defer d3.csv,  baseurl+'/data/countries-gni-population-2016.csv'
-        .defer d3.json, baseurl+'/data/map-world-110.json'
-        .await (error, data_use, data_unmetneeds, data_reasons, countries, map) ->
-          setLocation location, countries
-          if $('#contraceptives-app').length
-            new ContraceptivesApp lang, data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang]
-
 ) jQuery

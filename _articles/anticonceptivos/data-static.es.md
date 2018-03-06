@@ -11,6 +11,7 @@ slug:             datos-uso-barreras-static
 ref:              contraceptives-data-static
 lang:             es
 draft:            true
+layout:           article-static
 ---
 
 <div class="container page-content">
@@ -31,9 +32,9 @@ Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la
 <!-- TREEMAP -->
 
 <div class="panel" markdown="1">
-**En España, un 63% de las mujeres usa algún método anticonceptivo moderno. El más habitual es el condón masculino.**
+En **España**, un **63% de las mujeres usa algún método anticonceptivo moderno**. El más habitual es el **condón masculino** (38%).
 
-**En el mundo, los métodos más habituales son la esterilización femenina, el DIU y la píldora.**
+**En el mundo**, los métodos más habituales son la **esterilización femenina** (30%), el **DIU** (22%) y la **píldora** (14%).
 </div>
 <!--  -->
 
@@ -198,7 +199,8 @@ Y más: **[830 mujeres mueren cada día ](http://www.who.int/maternal-health/en/
 
 Es una cuestión de salud pública, pero también de derechos. El de elegir de forma libre si se quiere tener hijos, cómo y cuándo.
 
-<h4>Ponte en su piel</h4>
+#### Ponte en su piel
+
 <div class="graph-container">
   <p>Explora los datos y descubre las diferencias en el acceso a metodos anticonceptivos para mujeres de todo el mundo.</p>
 </div>

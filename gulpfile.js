@@ -101,6 +101,11 @@ var js_paths = {
     '_app/scripts/beeswarm-scatterplot-graph.coffee',
     '_app/scripts/contraceptives-app.coffee',
     '_app/scripts/main-contraceptives.coffee'
+  ],
+  // contraceptives-static.js sources
+  contraceptivesStatic: [
+    '_app/scripts/contraceptives-app.coffee',
+    '_app/scripts/main-contraceptives-static.coffee'
   ]
 };
 
@@ -237,8 +242,26 @@ gulp.task('js-contraceptives', function() {
     .on('error', gutil.log);
 });
 
+gulp.task('js-contraceptives-static', function() {
+  var c = coffee();
+  c.on('error',function(e){
+    gutil.log(e);
+    c.end();
+  });
+  return gulp.src(js_paths.contraceptivesStatic)
+    .pipe(sourcemaps.init())
+    .pipe(c)
+    .pipe(concat('contraceptives-static.js'))
+    .pipe(sourcemaps.write())
+    .pipe(production(uglify(uglifyOptions)))
+    .pipe(gulp.dest('_site/assets/scripts'))
+    .pipe(reload({stream:true}))
+    .pipe(gulp.dest('assets/scripts'))
+    .on('error', gutil.log);
+});
+
 // Create a js task wich call all js task dynamically defined
-gulp.task('js', ['popcorn', 'js-main', 'js-access', 'js-vaccines', 'js-superbugs', 'js-contraceptives']);
+gulp.task('js', ['popcorn', 'js-main', 'js-access', 'js-vaccines', 'js-superbugs', 'js-contraceptives', 'js-contraceptives-static']);
 
 // Jekyll build
 gulp.task('jekyll-build', function(done) {
