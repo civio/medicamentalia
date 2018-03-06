@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
-
   <body class="{{ page.url | replace:'/',' ' | strip }} lang-{{ page.lang }}{% if page.layout == 'article' %} article{% endif %}">
 
     <div id="lang" data-lang="{{ page.lang }}"></div>
@@ -34,6 +32,8 @@
     </div>
 
     {{ page.content | add_anchor_links }}
+
+    <link rel='stylesheet' href='{{ site.assetsurl }}/styles/main-static.css?v=@version@'>
 
     <script type='text/javascript' src='{{ site.assetsurl }}/scripts/main.js?v=@version@'></script>
     <script type='text/javascript' src='{{ site.assetsurl }}/scripts/contraceptives-static.js?v=@version@'></script>

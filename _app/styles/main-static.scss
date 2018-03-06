@@ -3,6 +3,8 @@
 // Vendors styles
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Source+Serif+Pro:400,600";
 
+@import "vendor/selection-sharer";
+
 // Main variables
 @import "common/variables";
 
@@ -68,4 +70,5 @@
 @import "components/grid";
 
 // Layouts
+@import "layouts/pages";
 @import "layouts/vis";
