@@ -3,8 +3,9 @@
 
   {% include head.html %}
 
-  <body class="{{ page.url | replace:'/',' ' | strip }} lang-{{ page.lang }}{% if page.layout == 'article' %} article{% endif %}" data-baseurl="{{ site.assetsurl }}" data-lang="{{ page.lang }}">
+  <body class="{{ page.url | replace:'/',' ' | strip }} lang-{{ page.lang }}{% if page.layout == 'article' %} article{% endif %}">
 
+    <div id="lang" data-lang="{{ page.lang }}"></div>
     <div class="container page-content">
       
       <div style="text-align: center">
