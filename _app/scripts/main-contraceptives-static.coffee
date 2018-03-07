@@ -4,11 +4,9 @@
   
   userCountry = {}
 
-  scrollamaInitialized = false
-
   # Get current article lang & base url
-  lang    = $('#lang').data('lang')
-  baseurl = 'https://pre.medicamentalia.org/assets'
+  lang    = $('body').data('lang')
+  baseurl = $('body').data('baseurl')
 
   #console.log 'contraceptives', lang, baseurl
 

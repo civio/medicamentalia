@@ -8,3 +8,6 @@ lang:             en
 ---
 
 {% include infographic_prices.en.html iframe="1" %}
+
+<script type='text/javascript' src='{{ site.assetsurl }}/scripts/main.js'></script>
+<script type='text/javascript' src='{{ site.assetsurl }}/scripts/access.js'></script>
