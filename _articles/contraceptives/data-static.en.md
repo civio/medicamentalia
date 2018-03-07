@@ -31,6 +31,8 @@ Fanta Jatta knows more than most about these cases. She talks about it at the he
 <div class="panel" markdown="1">
 
 **Worldwide**, the most common contraceptive methods are **emale sterilisation** (30%), intrauterine devices (**IUD**, 22%) and **the pill** (14%).
+
+{% include caption.html img="contraceptives/treemap-methods.en.png" fullWidth=true %}
 </div>
 <!--  -->
 

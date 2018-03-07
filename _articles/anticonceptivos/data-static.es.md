@@ -32,7 +32,10 @@ Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la
 En **España**, un **63% de las mujeres usa algún método anticonceptivo moderno**. El más habitual es el **condón masculino** (38%).
 
 **En el mundo**, los métodos más habituales son la **esterilización femenina** (30%), el **DIU** (22%) y la **píldora** (14%).
+
+{% include caption.html img="contraceptives/treemap-methods.es.png" fullWidth=true %}
 </div>
+
 <!--  -->
 
 Pero **su uso no es homogéneo ni entre países ni entre clases sociales**. La [situación económica](http://www.eldiario.es/piedrasdepapel/Pontelo-Ponselo-anticonceptivos-desigualdad_6_563853635.html), el contexto cultural, la distribución de las farmacéuticas y las políticas públicas condicionan los métodos más populares en cada país. 
