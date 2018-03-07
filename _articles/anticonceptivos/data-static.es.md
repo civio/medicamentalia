@@ -14,9 +14,6 @@ draft:            true
 layout:           article-static
 ---
 
-<div class="container page-content">
-<div class="page-content-container" markdown="1">
-
 La planificación familiar no es un privilegio, sino un derecho. Así lo [afirmó](http://www.unfpa.org/press/additional-investments-family-planning-would-save-developing-countries-more-11-billion-year#) Babatunde Osotimehin cuando era director ejecutivo del Fondo de Población de Naciones Unidas (FPNU), en el [2012](http://www.unfpa.org/sites/default/files/pub-pdf/SP_SWOP2012_Report.pdf). No solo ayuda a escapar de la pobreza, dijo, sino que también es "uno de los medios más efectivos para empoderar a las mujeres". Falleció el pasado mes de julio. Entidades internacionales, entre ellas las Naciones Unidas, llevan declarando durante décadas que **elegir si se quiere tener hijos y cuándo y cómo hacerlo es un derecho humano fundamental**. 
 
 Un derecho que se daña cada vez que una niña se queda embarazada, cada vez que a una mujer se le acusa de promiscua, o hasta de prostituta, por usar algún método, cada vez que es obligada a tener hijos no deseados, cada vez que se ve forzada a abortar en condiciones insalubres, cada vez que alguien le dice lo que tiene que hacer o le veta el acceso, aunque sea ella la que cargue, en muchos países, con las consecuencias de ese decisión, cada vez que un nuevo parto pone su salud al límite o la mata. Esta no es una lista de ejemplos teóricos: son historias reales recopiladas durante esta investigación, destinada a **conocer cómo se ejerce este derecho universal y a qué barreras se enfrentan las mujeres para hacerlo**. 
@@ -82,15 +79,7 @@ Pero, si distribuimos los países en base a su nivel de renta, **en los más ric
 
 <div id="unmet-needs-gdp-container-graph" class="graph-container" style="margin-bottom: 60px;">
   <p>Porcentaje de mujeres con <strong>necesidades no cubiertas</strong></p>
-  <div id="unmet-needs-gdp-graph">
-    {% include contraceptives/contraceptives-scatteplot.html %}
-  </div>
-  <ul class="x-legend" style="opacity: 1">
-    <li>Renta baja</li>
-    <li>Renta media-baja</li>
-    <li>Renta media-alta</li>
-    <li>Renta alta</li>
-  </ul>
+  {% include caption.html img="contraceptives/unmetneeds-graph.es.png" fullWidth=true %}
 </div>
 
 <!--  -->
@@ -103,11 +92,9 @@ Así, el **porcentaje de mujeres con necesidades no cubiertas de los países men
 
 Vamos a centrarnos en esos países en los que la situación es más complicada. ¿Qué barreras impiden a las mujeres el acceso a los anticonceptivos? Según el estudio *[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)*, del Guttmacher Institute, que analizó 52 países, las principales son **los efectos secundarios, la poca frecuencia sexual, y la oposición (ya sea propia o impuesta)**.  
 
-<div class="container-right">
-  <div class="graph-container">
-    <p class="graph-container-caption">Mujeres con necesidades que no usan anticonceptivos por razones de salud</p>
-    {% include contraceptives/reasons-health.es.html %}
-  </div>
+<div class="graph-container">
+  <p class="graph-container-caption">Mujeres con necesidades que no usan anticonceptivos por razones de salud</p>
+  {% include caption.html img="contraceptives/reasons-health-graph.es.png" fullWidth=true %}
 </div>
 
 Esta barrera es la más importante en el global de países analizados y es la razón para no usar anticonceptivos de más de la mitad de las mujeres con necesidades en Haití, según nuestro análisis de los datos en bruto de los Demographic and Health Surveys ([DHS](https://www.statcompiler.com/en/)) de la agencia de desarrollo de Estados Unidos.
@@ -144,17 +131,9 @@ La clave, según Alieu Jammeh, que trabaja en la UNFPA en Gambia, es que haya v
 
 Otras aseguran que no usan anticonceptivos porque **no tienen sexo de forma habitual**, aunque en ocasiones responden -en la misma encuesta- que sí han tenido encuentros sexuales en el último mes. La sensación de riesgo, a veces, es menor que la real. **En algunos países, las mujeres solteras pueden no responder de forma sincera sobre su actividad sexual para evitar ser señaladas**. Para muchas de ellas, en público, el sexo no existe y tampoco los métodos anticonceptivos.
 
-<div class="container-right">
-  <div class="graph-container">
-    <p class="graph-container-caption">Mujeres con necesidades que no usan anticonceptivos porque alguien se opone</p>
-    <ul id="contraceptives-reasons-opposed-legend">
-      <li class="respondent-opposed">La mujer</li>
-      <li class="husband-partner-opposed">La pareja</li>
-      <li class="religious-prohibition">Prohibición religiosa</li>
-      <li class="others-opposed">Otros</li>
-    </ul>
-    {% include contraceptives/reasons-opposed.es.html %}
-  </div>
+<div class="graph-container">
+  <p class="graph-container-caption">Mujeres con necesidades que no usan anticonceptivos porque alguien se opone</p>
+  {% include caption.html img="contraceptives/reasons-opposition-graph.es.png" fullWidth=true %}
 </div>
 
 Al contrario de lo que ocurre con las barreras relacionadas con la salud de la mujer -los efectos secundarios que conllevan algunos métodos anticonceptivos hormonales, por ejemplo-, **esta barrera no es reactiva, sino cultural**. Es mayoritaria en países como Timor Oriental, Albania y Gambia. La mayoría de quienes nombran esta razón como la principal no ha usado nunca un método. **Alguien, ya sea la propia mujer, el marido u otros, está en contra de su uso.** Pero, ¿quién y por qué?
@@ -199,14 +178,9 @@ Y más: **[830 mujeres mueren cada día ](http://www.who.int/maternal-health/en/
 
 Es una cuestión de salud pública, pero también de derechos. El de elegir de forma libre si se quiere tener hijos, cómo y cuándo.
 
-#### Ponte en su piel
+#### Ponte en su piel
 
 <div class="graph-container">
   <p>Explora los datos y descubre las diferencias en el acceso a metodos anticonceptivos para mujeres de todo el mundo.</p>
 </div>
 
-</div>
-</div>
-
-<!-- APP -->
-{% include contraceptives/app.es.html %}

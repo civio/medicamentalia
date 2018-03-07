@@ -6,13 +6,11 @@
     <div id="lang" data-lang="{{ page.lang }}"></div>
     <div class="container page-content">
       
-      <div style="text-align: center">
-        <h2>{{ page.title }}</h2>
-        {% if page.subtitle %}
-        <h3>{{ page.subtitle }}</h3>
-        {% endif %}
-        <h4>{{ page.description }}</h4>
-      </div>
+      <h2>{{ page.title }}</h2>
+      {% if page.subtitle %}
+      <h3>{{ page.subtitle }}</h3>
+      {% endif %}
+      <h4>{{ page.description }}</h4>
 
       <p class="author">
         {% if page.author %}
@@ -32,11 +30,6 @@
     </div>
 
     {{ page.content | add_anchor_links }}
-
-    <link rel='stylesheet' href='{{ site.assetsurl }}/styles/main-static.css?v=@version@'>
-
-    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/main.js?v=@version@'></script>
-    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/contraceptives-static.js?v=@version@'></script>
 
   </body>
 </html>

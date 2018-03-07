@@ -15,9 +15,6 @@ lang:             en
 layout:           article-static
 ---
 
-<div class="container page-content">
-<div class="page-content-container" markdown="1">
-
 Family planning is not a privilege, but a right. That's what Babatunde Osotimehin said when he was executive director of the United Nations Population Fund (UNFPA), in 2012. It not only helps eradicate poverty, he said, but is also "one of the most effective means of empowering women". He died last July. International organisations, including the United Nations, have been [declaring](https://www.unfpa.org/sites/default/files/pub-pdf/EN_SWOP2012_Report.pdf) for decades that choosing if you want to have children and when and how to do it is a fundamental human right.
 
 But it's a right that is undermined whenever a girl becomes pregnant, whenever a woman is accused of being promiscuous, or being a prostitute, for using some form of birth control. It is undermined every time she is forced to have unwanted children, every time she is forced to have abortions in unsafe conditions, every time someone tells her what she must do or what she cannot do with her body, even when she is the one who, in many countries, bears the consequences of those decisions. It is undermined every time a new birth puts a woman's health at risk or kills her. These are not made-up examples. They are true stories gathered in this investigation of how people exercise this universal right and the barriers women must overcome to do so.
@@ -89,15 +86,7 @@ But if we compare by their Gross National Income (GNI), **in rich countries**, s
 
 <div id="unmet-needs-gdp-container-graph" class="graph-container" style="margin-bottom: 60px;">
   <p>Percentage of women with <strong>unmet needs</strong></p>
-  <div id="unmet-needs-gdp-graph">
-    {% include contraceptives/contraceptives-scatteplot.html %}
-  </div>
-  <ul class="x-legend">
-    <li>Low income</li>
-    <li>Lower-middle income</li>
-    <li>Upper-middle income</li>
-    <li>High-income</li>
-  </ul>
+  {% include caption.html img="contraceptives/unmetneeds-graph.en.png" fullWidth=true %}
 </div>
 
 
@@ -109,11 +98,9 @@ So the percentage of women with unmet needs in the least developed countries (21
 
 Let's focus on countries with the most difficult situations. What are the barriers for women to access contraceptives? According to the Guttmacher Institute's report <i>[Unmet need for contraception in developing countries: examining women's reasons for not using a method](https://www.guttmacher.org/report/unmet-need-for-contraception-in-developing-countries)</i>, which analysed 52 countries, the principal barriers are side effects, infrequent sex and resistance by the woman or others. 
 
-<div class="container-right">
-  <div class="graph-container">
-    <p class="graph-container-caption">Women with unmet needs not using contraceptives for health reasons</p>
-    {% include contraceptives/reasons-health.en.html %}
-  </div>
+<div class="graph-container">
+  <p class="graph-container-caption">Women with unmet needs not using contraceptives for health reasons</p>
+  {% include caption.html img="contraceptives/reasons-health-graph.en.png" fullWidth=true %}
 </div>
 
 The majority of respondents not on birth control for health reasons have used it at some point, according to the study. That is, they know what they are talking about: excess or reduced bleeding, nausea, changes in the body--weight gain or hair growth--loss of libido, mood changes... the long list of side effects for hormonal contraceptives does not help.
@@ -148,17 +135,9 @@ The key, according to Alieu Jammeh, Reproductive Health Commodity Security Coord
 
 Many women claim that they don't use contraceptives because they do not have sex on a regular basis. But sometimes they reply in the very same survey that they have had sexual encounters in the preceding month. In some countries, single women may not report their sexual activity to avoid being singled out. For many of them, at least in public, sex and contraceptives don't exist.
 
-<div class="container-right">
-  <div class="graph-container">
-    <p class="graph-container-caption">Women with unmet needs not using contraceptives for opposition</p>
-    <ul id="contraceptives-reasons-opposed-legend">
-      <li class="respondent-opposed">Woman</li>
-      <li class="husband-partner-opposed">Partner</li>
-      <li class="religious-prohibition">Religion</li>
-      <li class="others-opposed">Others</li>
-    </ul>
-    {% include contraceptives/reasons-opposed.en.html %}
-  </div>
+<div class="graph-container">
+  <p class="graph-container-caption">Women with unmet needs not using contraceptives for opposition</p>
+  {% include caption.html img="contraceptives/reasons-opposition-graph.en.png" fullWidth=true %}
 </div>
 
 This refers to cultural reasons, in contrast to women's health-related barriers, such as the side effects of some hormonal contraceptives. Most of the respondents who say this is their principal barrier have never used any method of birth control, according to the Guttmacher study. Somebody, whether it's the woman herself, her husband or others, is against her using birth control. But whom and why?
@@ -208,9 +187,3 @@ It's a question of public health, but above all of rights. Women have the right 
 <div class="graph-container">
   <p>Explore the data and discover how access to birth control differs for women all over the world.</p>
 </div>
-
-</div>
-</div>
-
-<!-- APP -->
-{% include contraceptives/app.en.html %}
