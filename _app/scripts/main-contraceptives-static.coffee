@@ -229,6 +229,8 @@
   # Setup
   # ---------------
 
+  pymChild = new pym.Child()
+
   # Load location
   d3.json 'https://freegeoip.net/json/', (error, location) ->
     # Load csvs & setup maps
@@ -241,6 +243,6 @@
       .await (error, data_use, data_unmetneeds, data_reasons, countries, map) ->
         setLocation location, countries
         if $('#contraceptives-app').length
-          new ContraceptivesApp lang, data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang]
+          new ContraceptivesApp lang, data_use, data_unmetneeds, data_reasons, userCountry, methods_keys, methods_names[lang], methods_dhs_names[lang], reasons_names[lang], reasons_dhs_names[lang], pymChild
 
 ) jQuery

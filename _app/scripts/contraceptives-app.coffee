@@ -238,7 +238,7 @@ class window.ContraceptivesApp
       'ZMB': '<a href="https://www.ideo.org/project/diva-centres">In Zambia, a radical new approach to contraception is giving adolescent girls the information and services of contraception while doing the manicure.</a>'
 
 
-  constructor: (lang, data_use, data_unmetneeds, data_reasons, user_country, methods_keys, methods_names, methods_dhs_names, reasons_names, reasons_dhs_names) ->
+  constructor: (lang, data_use, data_unmetneeds, data_reasons, user_country, methods_keys, methods_names, methods_dhs_names, reasons_names, reasons_dhs_names, pym) ->
 
     @sentences = @sentences[lang]
 
@@ -252,6 +252,8 @@ class window.ContraceptivesApp
     @methodsDHSNames  = methods_dhs_names
     @reasonsNames     = reasons_names
     @reasonsDHSNames  = reasons_dhs_names
+
+    @pym = pym
 
     @$app = $('#contraceptives-app')
 
@@ -318,6 +320,9 @@ class window.ContraceptivesApp
       # setup data
       @setAppItemData @$app, use, method, method_value, unmetneeds, reason, reason_value, @sentences[@country_code]
 
+    if @pym
+      @pym.sendHeight()
+
 
   onSelectFilter: (e) =>
     e.preventDefault()
@@ -333,6 +338,8 @@ class window.ContraceptivesApp
         if data
           data.forEach (d) =>
             @setAppItemData @filterEl.find('#'+@filter+'-'+d.id), 100*d.using_modern_method/d.n, @methodsDHSNames[d.most_popular_method], 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, @reasonsDHSNames[d.most_popular_reason], 100*d.most_popular_reason_n/d.n_reasons
+          if @pym
+            @pym.sendHeight()
 
 
   setAppItemData: ($el, use, method, method_value, unmetneeds, reason, reason_value, sentence) ->

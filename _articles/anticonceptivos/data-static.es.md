@@ -182,5 +182,8 @@ Es una cuestión de salud pública, pero también de derechos. El de elegir de f
 
 <div class="graph-container">
   <p>Explora los datos y descubre las diferencias en el acceso a metodos anticonceptivos para mujeres de todo el mundo.</p>
+  <div id="contraceptives-app-iframe"></div>
 </div>
 
+<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+<script>var pymParent = new pym.Parent('contraceptives-app-iframe', 'https://pre.medicamentalia.org/contraceptives-app-iframe-es/', {});</script>
