@@ -186,4 +186,8 @@ It's a question of public health, but above all of rights. Women have the right 
 
 <div class="graph-container">
   <p>Explore the data and discover how access to birth control differs for women all over the world.</p>
+  <div id="contraceptives-app-iframe"></div>
 </div>
+
+<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+<script>var pymParent = new pym.Parent('contraceptives-app-iframe', 'https://pre.medicamentalia.org/contraceptives-app-iframe-en/', {});</script>
