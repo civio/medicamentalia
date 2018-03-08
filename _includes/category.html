@@ -12,6 +12,15 @@
 <section id="home" class="no-padding category-home">
   <div class="container">
     <div class="row no-gutter">
+      {% if include.id == 'contraceptives' %}
+      <div class="home-video col-sm-12">
+      {% include video-container.html videoid="_41JiecNi2I" %}
+      </div>
+      {% elsif include.id == 'anticonceptivos' %}
+      <div class="home-video col-sm-12">
+      {% include video-container.html videoid="MrvQgA1TYR4" %}
+      </div>
+      {% endif %}
       {% assign articles=site.articles | where:"category", include.id | sort:"order" %}
       {% for article in articles %}
         {% if article.lang == page.lang and article.draft != true %}

@@ -67,7 +67,9 @@
   }
 
   &.category-header{
-    min-height: 50%;
+    min-height: 0;
+    height: 350px;
+    // min-height: 50%;
     // background: url("../images/medicine-pattern.jpg") repeat 0 0 $brand-primary;
 
     .header-content{
@@ -323,10 +325,13 @@ $btn-scroll-down-icon-size: 44px;
   }
 
   [class*=col-] {
-    height: 350px;
     margin-bottom: $grid-gutter-width/2;
     padding-left: $grid-gutter-width/4;
     padding-right: $grid-gutter-width/4;
+  }
+
+  .portfolio-box{
+    height: 350px;
   }
 }
 
@@ -577,10 +582,23 @@ body.home-investigation {
       margin-bottom: 0;
       margin-top: -15px;
     }
+
+    .home-video{
+      height: auto;
+
+      .video-container{
+        margin: 0 0 15px;
+      }
+    }
   }
   .portfolio-box {
     border: 15px solid white;
   }
+}
+
+body.home-investigation .portfolio-contraceptives-video,
+body.home-investigation .portfolio-anticonceptivos-video {
+  display: none;
 }
 
 
