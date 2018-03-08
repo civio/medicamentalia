@@ -10,7 +10,7 @@
 
 <!-- Investigation articles -->
 <section id="home" class="no-padding category-home">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row no-gutter">
       {% assign articles=site.articles | where:"category", include.id | sort:"order" %}
       {% for article in articles %}
@@ -26,7 +26,7 @@
 
 <!-- Key Findings -->
 <section class="no-padding" id="key-findings">
-  <div class="key-findings-overlay"></div>
+  <!-- <div class="key-findings-overlay"></div> -->
   <div class="container">
     {% capture keyFindings %}
     {% include key_findings_{{ include.id }}.md %}

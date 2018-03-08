@@ -68,7 +68,7 @@
 
   &.category-header{
     min-height: 50%;
-    background: url("../images/medicine-pattern.jpg") repeat 0 0 $brand-primary;
+    // background: url("../images/medicine-pattern.jpg") repeat 0 0 $brand-primary;
 
     .header-content{
 
@@ -102,11 +102,12 @@
   }
 }
 
-
+/*
 .vaccines #home-header.category-header,
 .vaccines #key-findings .key-findings-overlay{ 
   background-image: url("../images/vaccine-pattern.jpg");
 }
+*/
 
 .home #language-selector{
   position: fixed;
@@ -551,6 +552,35 @@ $btn-scroll-down-icon-size: 44px;
   margin-top: $grid-gutter-width/2;
   padding: 10px 0;
   @include transition(.4s ease-out background-color);
+}
+
+
+// Home investigation
+
+body.home-investigation {
+  background: url("../images/medicine-pattern.jpg") repeat 0 0 $brand-primary;
+
+  &.vaccines,
+  &.vacunas {
+    background-image: url("../images/vaccine-pattern.jpg");
+  }
+
+  #home {
+    background: transparent;
+    padding: 0 0 60px;
+
+    .container{
+      padding: 0;
+    }
+
+    [class*=col-] {
+      margin-bottom: 0;
+      margin-top: -15px;
+    }
+  }
+  .portfolio-box {
+    border: 15px solid white;
+  }
 }
 
 
