@@ -303,8 +303,8 @@ gulp.task('jekyll-build-production', function(done) {
     .on('close', done);
 });
 
-gulp.task('jekyll-build-elmundo', function(done) {
-  return cp.spawn('jekyll', ['build', '--config', '_config.yml,_config-elmundo.yml'], {stdio: 'inherit'})
+gulp.task('jekyll-build-socios', function(done) {
+  return cp.spawn('jekyll', ['build', '--config', '_config.yml,_config-socios.yml'], {stdio: 'inherit'})
     .on('error', function(error){
       gutil.log(gutil.colors.red(error.message));
     })
@@ -343,15 +343,7 @@ gulp.task('watch', function() {
 });
 
 // Minify HTML Files
-gulp.task('html', ['css', 'js', 'jekyll-build-production'], function() {
-  return gulp.src('_site/**/*.html')
-    .pipe(version(['html','js','css']))
-    .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
-    .pipe(gulp.dest('_site'));
-});
-
-// Minify HTML Files
-gulp.task('publish-elmundo', ['css', 'js', 'jekyll-build-elmundo'], function() {
+gulp.task('html', function() {
   return gulp.src('_site/**/*.html')
     .pipe(version(['html','js','css']))
     .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
@@ -359,7 +351,13 @@ gulp.task('publish-elmundo', ['css', 'js', 'jekyll-build-elmundo'], function() {
 });
 
 // Publish site folder in gh-pages branch
-gulp.task('publish', ['html'], function() {
+gulp.task('publish-socios', ['css', 'js', 'jekyll-build-socios', 'html'], function() {
+  return gulp.src('_site/**/*')
+    .pipe(ghPages());
+});
+
+// Publish site folder in gh-pages branch
+gulp.task('publish', ['css', 'js', 'jekyll-build-production', 'html'], function() {
   return gulp.src('_site/**/*')
     .pipe(ghPages());
 });

@@ -1,0 +1,5 @@
+# This config file overrides _config.yml for socios environment
+
+baseurl: '' 
+url: https://socios.medicamentalia.org # the base hostname & protocol for your site
+assetsurl: https://socios.medicamentalia.org/assets
