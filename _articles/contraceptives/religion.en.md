@@ -13,6 +13,7 @@ slug:             religion
 ref:              contraceptives-religion
 lang:             en
 article_menu:     <li><a href="#every-sperm-is-sacred" title="Every sperm is sacred">Every sperm is sacred</a></li><li><a href="#permission-granted-sometimes-for-health-reasons" title="Health exceptions">Health exceptions</a></li><li><a href="#educating-against-contraceptives" title="Sex education">Sex education</a></li><li><a href="#whos-word-of-god" title="Who's word of God?">Who's word of God?</a></li>
+draft:            true
 ---
 
 <div class="container page-content">

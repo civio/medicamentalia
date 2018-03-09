@@ -12,6 +12,7 @@ pub_date:         2018-02-20
 slug:             data-use-barriers
 ref:              contraceptives-data
 lang:             en
+draft:            true
 ---
 
 <div class="container page-content">

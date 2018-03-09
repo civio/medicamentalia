@@ -12,6 +12,7 @@ pub_date:         2018-02-20
 slug:             datos-uso-barreras
 ref:              contraceptives-data
 lang:             es
+draft:            true
 ---
 
 <div class="container page-content">
