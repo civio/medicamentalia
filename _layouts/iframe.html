@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html style="width: auto; height: auto;">
 
   {% include head.html %}
 
-  <body class="iframe article {{ page.url | replace:'/',' ' | strip }}" data-baseurl="{{ site.assetsurl }}" data-lang="{{ page.lang }}">
+  <body class="iframe article {{ page.url | replace:'/',' ' | strip }}" data-baseurl="{{ site.assetsurl }}" data-lang="{{ page.lang }}" style="width: auto; height: auto;">
 
     {{ content }}
-
-    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/infographics.js'></script>
-    <script type='text/javascript' src='{{ site.assetsurl }}/scripts/main.js'></script>
 
   </body>
 

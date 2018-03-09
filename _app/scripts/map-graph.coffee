@@ -43,7 +43,6 @@ class window.MapGraph extends window.BaseGraph
 
   setColorDomain: ->
     @color.domain [0, d3.max(@data, (d) -> d.value)]
-    console.log @color.domain()
     return @
 
   drawLegend: ->
@@ -68,7 +67,7 @@ class window.MapGraph extends window.BaseGraph
         .attr 'x', (d,i) -> Math.round legenItemWidth*(i+0.5-(legendData.length/2))
         .attr 'y', 20
         .attr 'text-anchor', 'start'
-        .text (d) -> d
+        .text @getLegendFormat
 
   drawGraph: (map) ->
     # get countries data
@@ -133,6 +132,9 @@ class window.MapGraph extends window.BaseGraph
 
   getLegendData: =>
     return d3.range 0, @color.domain()[1]
+
+  getLegendFormat: (d) =>
+    return d
 
   onMouseOver: (d) =>
     value = @data.filter (e) -> e.code_num == d.id

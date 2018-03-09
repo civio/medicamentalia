@@ -1,0 +1,21 @@
+<img class="contraceptives-app-img" src="{{ site.assetsurl }}/images/svg/{{ include.img }}.svg">
+<div class="contraceptives-app-data">
+  {% if include.title %}
+  <h5>{{ include.title }}</h5>
+  {% endif %}
+  <div class="contraceptives-app-use">
+    <p>El <strong class="contraceptives-app-data-use"></strong>{% if include.main %} de las mujeres de entre 15 y 49 años{% endif %} usa algún método anticonceptivo</p>
+  </div>
+  <div class="contraceptives-app-method">
+    <p>Principal método: <strong class="contraceptives-app-data-main-method"></strong> <br><small>(lo usa el <span class="contraceptives-app-data-main-method-value"></span>)</small></p>
+  </div>
+  <div class="contraceptives-app-unmetneeds">
+    <p>El <strong class="contraceptives-app-data-unmetneeds"></strong> tiene necesidades no cubiertas{% if include.main %} <br><small>(necesita anticonceptivos pero no los usa)</small>{% endif %}</p>
+  </div>
+  <div class="contraceptives-app-reason">
+    <p>Principal barrera: <strong class="contraceptives-app-data-reason"></strong> <br><small>(afecta al <span class="contraceptives-app-data-reason-value"></span>)</small></p>
+  </div>
+  {% if include.main %}
+  <div class="contraceptives-app-sentence"></div>
+  {% endif %}
+</div>

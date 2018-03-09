@@ -1,0 +1,21 @@
+<img class="contraceptives-app-img" src="{{ site.assetsurl }}/images/svg/{{ include.img }}.svg">
+<div class="contraceptives-app-data">
+  {% if include.title %}
+  <h5>{{ include.title }}</h5>
+  {% endif %}
+  <div class="contraceptives-app-use">
+    <p><strong class="contraceptives-app-data-use"></strong>{% if include.main %} of women aged 15 to 49{% endif %} use some form of birth control</p>
+  </div>
+  <div class="contraceptives-app-method">
+    <p>Main method: <strong class="contraceptives-app-data-main-method"></strong> <br><small>(<span class="contraceptives-app-data-main-method-value"></span> use this)</small></p>
+  </div>
+  <div class="contraceptives-app-unmetneeds">
+    <p>Some <strong class="contraceptives-app-data-unmetneeds"></strong> have unmet needs{% if include.main %} <br><small>(meaning they need contraceptives but do not have them)</small>{% endif %}</p>
+  </div>
+  <div class="contraceptives-app-reason">
+    <p>Main barrier: <strong class="contraceptives-app-data-reason"></strong> <br><small>(affects <span class="contraceptives-app-data-reason-value"></span>)</small></p>
+  </div>
+  {% if include.main %}
+  <div class="contraceptives-app-sentence"></div>
+  {% endif %}
+</div>

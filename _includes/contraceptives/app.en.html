@@ -1,0 +1,91 @@
+<div class="contraceptives-app-container">
+<div class="container page-content">
+<div class="page-content-container">
+
+<div class="graph-container">
+  <div id="contraceptives-app">
+    <div>
+      <p class="contraceptives-app-label">Choose a country</p>
+      {% include contraceptives/countries-select.en.html %}
+      <p class="contraceptives-app-label-small">Data from <span id="contraceptives-app-data-year"></span></p>
+    </div>
+    <div class="contraceptives-app-data-container">{% include contraceptives/app-item.en.html main=true img='woman' %}</div>
+    <div class="contraceptives-app-filters">
+      <p class="contraceptives-app-label">Filter by</p>
+      <a class="btn btn-default" href="#contraceptives-filter-0" role="button" title="Urban or rural">Urban or rural</a>
+      <a class="btn btn-default" href="#contraceptives-filter-1" role="button" title="Age">Age</a>
+      <a class="btn btn-default" href="#contraceptives-filter-2" role="button" title="Education">Education</a>
+      <a class="btn btn-default" href="#contraceptives-filter-3" role="button" title="Income">Income</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="graph-container">
+<!-- URBANO / RURAL -->
+<div id="contraceptives-filter-0" class="contraceptives-filter">
+  <div class="row">
+    <div id="contraceptives-filter-0-1" class="col-sm-6">
+      {% include contraceptives/app-item.en.html title='Urban' img='woman-urban' %}
+    </div>
+    <div id="contraceptives-filter-0-2" class="col-sm-6">
+      {% include contraceptives/app-item.en.html title='Rural' img='woman-rural' %}
+    </div>
+  </div>
+</div>
+<!-- EDAD -->
+<div id="contraceptives-filter-1" class="contraceptives-filter">
+  <div class="row">
+    <div id="contraceptives-filter-1-1" class="col-sm-4">
+      {% include contraceptives/app-item.en.html title='From 15 to 24 years old' img='woman-younger' %}
+    </div>
+    <div id="contraceptives-filter-1-2" class="col-sm-4">
+      {% include contraceptives/app-item.en.html title='From 25 to 34 years old' img='woman' %}
+    </div>
+    <div id="contraceptives-filter-1-3" class="col-sm-4">
+      {% include contraceptives/app-item.en.html title='From 35 to 49 years old' img='woman-older' %}
+    </div>
+  </div>
+</div>
+<!-- ESTUDIOS -->
+<div id="contraceptives-filter-2" class="contraceptives-filter">
+  <div class="row">
+    <div id="contraceptives-filter-2-0" class="col-sm-3">
+      {% include contraceptives/app-item.en.html title='No education' img='woman' %}
+    </div>
+    <div id="contraceptives-filter-2-1" class="col-sm-3">
+      {% include contraceptives/app-item.en.html title='Primary education' img='woman-primary' %}
+    </div>
+    <div id="contraceptives-filter-2-2" class="col-sm-3">
+      {% include contraceptives/app-item.en.html title='Secondary education' img='woman-secondary' %}
+    </div>
+    <div id="contraceptives-filter-2-3" class="col-sm-3">
+      {% include contraceptives/app-item.en.html title='Higher education' img='woman-superior' %}
+    </div>
+  </div>
+</div>
+<!-- INGRESOS -->
+<div id="contraceptives-filter-3" class="contraceptives-filter">
+  <div class="row">
+    <div id="contraceptives-filter-3-1" class="col-sm-3">
+      {% include contraceptives/app-item.en.html title='Low income' img='woman' %}
+    </div>
+    <div id="contraceptives-filter-3-2" class="col-sm-3">
+      {% include contraceptives/app-item.en.html title='Lower-middle income' img='woman-income-low-medium' %}
+    </div>
+    <div id="contraceptives-filter-3-3" class="col-sm-3">
+      {% include contraceptives/app-item.en.html title='Middle income' img='woman-income-medium' %}
+    </div>
+    <div id="contraceptives-filter-3-4" class="col-sm-3">
+      {% include contraceptives/app-item.en.html title='Upper-middle income' img='woman-income-medium-high' %}
+    </div>
+    <div id="contraceptives-filter-3-5" class="col-sm-3">
+      {% include contraceptives/app-item.en.html title='High income' img='woman-income-high' %}
+    </div>
+  </div>
+</div>
+
+<p><a href="/contraceptives/team/#methodology" target="_blank">Methodology</a></p>
+</div>
+</div>
+</div>

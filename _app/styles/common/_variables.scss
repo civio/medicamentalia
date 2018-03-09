@@ -26,12 +26,13 @@ $color-blue:            #008f86;
 $color-orange:          #e2723b;
 $color-brown:           #653015;
 $color-yellow:          #bbd646;
+$color-blue-dark:       #0057c2; //07418A;
 
 $overlay-green:         darken($color-green-light, 15%); 
 $overlay-blue:          darken($color-blue, 12%);
 $overlay-orange:        darken($color-orange, 15%);
 $overlay-yellow:        darken($color-yellow, 30%);
-$overlay-contraceptives: #055469;
+$overlay-contraceptives: $color-blue-dark;
 
 $tooltip-arrow-color:   white;  //$color-orange;
 $tooltip-color:         $color-orange;

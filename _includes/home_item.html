@@ -1,4 +1,4 @@
-<a class="portfolio-box portfolio-{{ article.ref }} category-{{ article.category }}" href="{{ article.url | prepend: site.baseurl }}" title="{{ article.title }}">
+<a class="portfolio-box portfolio-{{ article.ref }} category-{{ article.category }}" href="{% if article.ref == 'contraceptives-video' %}{% if article.lang == 'es' %}{{ '/anticonceptivos' | prepend: site.baseurl }}{% else %}{{ '/contraceptives' | prepend: site.baseurl }}{% endif %}{% else %}{{ article.url | prepend: site.baseurl }}{% endif %}" title="{{ article.title }}">
   {% if article.img %}
     <div class="portfolio-box-background" style="background-image: url('{{ site.assetsurl }}/images/{{ article.img }}')"></div>
   {% else %}
@@ -23,6 +23,8 @@
       <button class="read-more-btn btn">
         {% if article.ref == 'prices' %}
           {{ site.data.locales[page.lang].explore_data  }}
+        {% elsif article.ref == 'contraceptives-video' %}
+          {{ site.data.locales[page.lang].see_video  }}
         {% else %}
           {{ site.data.locales[page.lang].readmore  }}
         {% endif %}

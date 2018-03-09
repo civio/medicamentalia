@@ -1,22 +1,12 @@
-- ref: vaccines-prices
+- ref: contraceptives-video
   size: 12
-- ref: immunization
-  size: 4
-- ref: antivaccines
-  size: 4
-- ref: success
-  size: 4
-- ref: stockout
+- ref: contraceptives-data
   size: 6
-- ref: papilloma
+- ref: contraceptives-religion
   size: 6
-- ref: prices
+- ref: vaccines
   size: 12
-- ref: patents
-  size: 4
-- ref: counterfeits
-  size: 4
-- ref: compulsory-license
-  size: 4
-- ref: superbugs
+  type: page
+- ref: access
   size: 12
+  type: page

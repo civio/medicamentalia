@@ -1,5 +1,5 @@
-<figure style="width: 460px" class="wp-caption {{ include.align }}">
-  <img class="size-medium wp-image-77" src="{{ site.assetsurl }}/images/{{ include.img }}" alt="{{ include.caption }}}" width="460" height="343">
+<figure {% unless include.fullWidth %}style="width: 460px"{% endunless %} class="wp-caption {{ include.align }}">
+  <img class="size-medium wp-image-77" src="{{ site.assetsurl }}/images/{{ include.img }}" alt="{{ include.caption }}}" {% unless include.fullWidth %}width="460" height="343"{% endunless %}>
   {% if include.author %}
   <figcaption class="wp-caption-text">{{ include.caption }}<strong> | {{ include.author }}</strong></figcaption>
   {% else %}

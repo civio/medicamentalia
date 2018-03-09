@@ -67,8 +67,10 @@
   }
 
   &.category-header{
-    min-height: 50%;
-    background: url("../images/medicine-pattern.jpg") repeat 0 0 $brand-primary;
+    min-height: 0;
+    height: 350px;
+    // min-height: 50%;
+    // background: url("../images/medicine-pattern.jpg") repeat 0 0 $brand-primary;
 
     .header-content{
 
@@ -102,11 +104,12 @@
   }
 }
 
-
+/*
 .vaccines #home-header.category-header,
 .vaccines #key-findings .key-findings-overlay{ 
   background-image: url("../images/vaccine-pattern.jpg");
 }
+*/
 
 .home #language-selector{
   position: fixed;
@@ -322,10 +325,13 @@ $btn-scroll-down-icon-size: 44px;
   }
 
   [class*=col-] {
-    height: 350px;
     margin-bottom: $grid-gutter-width/2;
     padding-left: $grid-gutter-width/4;
     padding-right: $grid-gutter-width/4;
+  }
+
+  .portfolio-box{
+    height: 350px;
   }
 }
 
@@ -514,12 +520,12 @@ $btn-scroll-down-icon-size: 44px;
   
     .portfolio-box-overlay,
     .portfolio-box-background{
-      background: $overlay-contraceptives;
+      background-color: $overlay-contraceptives;
     }
 
     &:hover {
       .portfolio-box-overlay{
-        background: darken($overlay-contraceptives, 10%);
+        background-color: darken($overlay-contraceptives, 10%);
       }
       .portfolio-box-caption .portfolio-box-caption-content .read-more-btn{
         color: darken($overlay-contraceptives, 10%);
@@ -551,6 +557,48 @@ $btn-scroll-down-icon-size: 44px;
   margin-top: $grid-gutter-width/2;
   padding: 10px 0;
   @include transition(.4s ease-out background-color);
+}
+
+
+// Home investigation
+
+body.home-investigation {
+  background: url("../images/medicine-pattern.jpg") repeat 0 0 $brand-primary;
+
+  &.vaccines,
+  &.vacunas {
+    background-image: url("../images/vaccine-pattern.jpg");
+  }
+
+  #home {
+    background: transparent;
+    padding: 0 0 60px;
+
+    .container{
+      padding: 0;
+    }
+
+    [class*=col-] {
+      margin-bottom: 0;
+      margin-top: -15px;
+    }
+
+    .home-video{
+      height: auto;
+
+      .video-container{
+        margin: 0 0 15px;
+      }
+    }
+  }
+  .portfolio-box {
+    border: 15px solid white;
+  }
+}
+
+body.home-investigation .portfolio-contraceptives-video,
+body.home-investigation .portfolio-anticonceptivos-video {
+  display: none;
 }
 
 
@@ -649,6 +697,10 @@ $btn-scroll-down-icon-size: 44px;
         }
       }
 
+      p {
+        font-size: 19px;
+      }
+
       a{
         color: white;
 
@@ -664,6 +716,15 @@ $btn-scroll-down-icon-size: 44px;
     }
   }
 }
+
+// Make key-findings links bold on contraceptives home
+.anticonceptivos,
+.contraceptives {
+  #key-findings ul li a{
+    font-weight: 400;
+  }
+}
+
 
 @media (max-width: $screen-sm) {
   #key-findings ul{

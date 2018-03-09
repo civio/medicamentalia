@@ -5,3 +5,4 @@ node_modules
 .publish/
 fabfile.py
 fabfile.pyc
+vendor/bundle

@@ -49,7 +49,9 @@ var js_paths = {
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+    'node_modules/intersection-observer/intersection-observer.js',
     'node_modules/scrollama/build/scrollama.js',
+    'node_modules/select2/dist/js/select2.js',
     'node_modules/topojson-client/dist/topojson-client.js',
     '_app/scripts/vendor/selection-sharer.js',
     '_app/scripts/vendor/d3-bundle.js',
@@ -90,19 +92,26 @@ var js_paths = {
   // contraceptives.js sources
   contraceptives: [
     '_app/scripts/base-graph.coffee',
-    '_app/scripts/bar-horizontal-graph.coffee',
+    '_app/scripts/scroll-graph.coffee',
     '_app/scripts/map-graph.coffee',
+    '_app/scripts/line-graph.coffee',
     '_app/scripts/contraceptives-use-map-graph.coffee',
     '_app/scripts/treemap-graph.coffee',
     '_app/scripts/contraceptives-use-treemap-graph.coffee',
     '_app/scripts/beeswarm-scatterplot-graph.coffee',
+    '_app/scripts/contraceptives-app.coffee',
     '_app/scripts/main-contraceptives.coffee'
+  ],
+  // contraceptives-static.js sources
+  contraceptivesStatic: [
+    '_app/scripts/contraceptives-app.coffee',
+    '_app/scripts/main-contraceptives-static.coffee'
   ]
 };
 
 // Uses Sass compiler to process styles, adds vendor prefixes, minifies,
 // and then outputs file to appropriate location(s)
-gulp.task('css', function() {
+gulp.task('css-main', function() {
   var s = sass();
   s.on('error',function(e){
     gutil.log(e);
@@ -119,6 +128,28 @@ gulp.task('css', function() {
     .pipe(gulp.dest('assets/styles'))
     .on('error', gutil.log);
 });
+
+gulp.task('css-main-static', function() {
+  var s = sass();
+  s.on('error',function(e){
+    gutil.log(e);
+    s.end();
+  });
+  return gulp.src('_app/styles/main-static.scss')
+    .pipe(sourcemaps.init())
+    .pipe(s)
+    .pipe(sourcemaps.write())
+    .pipe(production(autoprefixer({browsers: ['last 2 versions', 'ie >= 10']})))
+    .pipe(production(cssmin()))
+    .pipe(gulp.dest('_site/assets/styles'))
+    .pipe(reload({stream:true}))
+    .pipe(gulp.dest('assets/styles'))
+    .on('error', gutil.log);
+});
+
+// Create a css task wich call all css task dynamically defined
+gulp.task('css', ['css-main', 'css-main-static']);
+
 
 /*
 // Concatenates and uglifies JS files and outputs result to
@@ -233,8 +264,26 @@ gulp.task('js-contraceptives', function() {
     .on('error', gutil.log);
 });
 
+gulp.task('js-contraceptives-static', function() {
+  var c = coffee();
+  c.on('error',function(e){
+    gutil.log(e);
+    c.end();
+  });
+  return gulp.src(js_paths.contraceptivesStatic)
+    .pipe(sourcemaps.init())
+    .pipe(c)
+    .pipe(concat('contraceptives-static.js'))
+    .pipe(sourcemaps.write())
+    .pipe(production(uglify(uglifyOptions)))
+    .pipe(gulp.dest('_site/assets/scripts'))
+    .pipe(reload({stream:true}))
+    .pipe(gulp.dest('assets/scripts'))
+    .on('error', gutil.log);
+});
+
 // Create a js task wich call all js task dynamically defined
-gulp.task('js', ['popcorn', 'js-main', 'js-access', 'js-vaccines', 'js-superbugs', 'js-contraceptives']);
+gulp.task('js', ['popcorn', 'js-main', 'js-access', 'js-vaccines', 'js-superbugs', 'js-contraceptives', 'js-contraceptives-static']);
 
 // Jekyll build
 gulp.task('jekyll-build', function(done) {

@@ -23,7 +23,11 @@
   <div class="container-fluid">
     <div class="row">
       {% for item in site.data.home %}
-        {% assign articles=site.articles | where:"ref", item.ref %}
+        {% if item.type == "page" %}
+          {% assign articles=site.pages | where:"ref", item.ref %}
+        {% else %}
+          {% assign articles=site.articles | where:"ref", item.ref %}
+        {% endif %}
         {% for article in articles %}
           {% if article.lang == page.lang %}
             <div class="col-sm-{{ item.size }}">

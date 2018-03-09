@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+
+    <h2>{{ page.title }}</h2>
+    {% if page.subtitle %}
+    <h3>{{ page.subtitle }}</h3>
+    {% endif %}
+    <h4>{{ page.description }}</h4>
+
+    <p class="author">
+      {% if page.author %}
+      {{ site.data.locales[page.lang].by }} <span>{{ page.author }}</span>
+      {% endif %}
+    </p>
+    <p class="date">
+      {% if page.pub_date %}
+        {% assign date_format = site.data.locales[page.lang].date.format %}
+        {% assign m = page.pub_date | date: "%-m" | minus: 1 %}
+        {% if site.data.locales[page.lang].date.months[m] %}
+          {% assign date_format = date_format | replace: "%B", site.data.locales[page.lang].date.months[m] %}
+        {% endif %}
+        {{ page.pub_date | date: date_format }}
+      {% endif %}
+    </p>
+
+    {{ page.content | add_anchor_links }}
+
+  </body>
+</html>

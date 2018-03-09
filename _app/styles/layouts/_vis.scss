@@ -132,8 +132,17 @@ Common
   }
 
   .bar-horizontal-graph{
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+
+    .bar-container{
+      position: relative;
+      z-index: 90;
+    }
+
     .bar-title{
-      //font-size: .875em;
+      font-size: 1.5rem;
       margin-top: 10px;
       margin-bottom: 2px;
       text-align: left;
@@ -155,6 +164,23 @@ Common
       }
     }
 
+    .axis{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      border-right: 1px solid mix( $gray-lighter, $gray-light, 80% );
+      z-index: 60;
+
+      span{
+        position: absolute;
+        bottom: -1.5em;
+        left: -1em;
+        color: mix( $gray-lighter, $gray-light, 50% );
+        font-size: .625em;
+      }
+    }
+
     /*
     > div:last-child .bar span{
       color: #222;
@@ -163,6 +189,32 @@ Common
       font-weight: 400;
     }
     */
+  }
+
+  .bar-horizontal-stacked-graph{
+    .bar-container{
+      clear: both;
+      span{
+        float: left;
+        line-height: 28px;
+        text-indent: 6px;
+        font-size: 13px;
+      }
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .bar-title{
+        margin-top: 7px;
+      }
+    }
+    .bar{
+      float: left;
+    }
+    .axis{
+      top: 24px;
+    }
   }
 
   .scatterplot-graph{
@@ -870,20 +922,22 @@ World diseases cases
   .row{
     margin-top: $grid-gutter-width;
   }
-  .graph-container {
-    .line{
-      stroke: $color-orange;
-      stroke-width: 2px;
-    }
-    .line-label-point{
-      stroke: $color-orange;
-    }
-    .area{
-      fill: $color-orange;
-    }
-  }
 }
 
+
+#world-cases .graph-container,
+#maternal-mortality-graph{
+  .line{
+    stroke: $color-orange;
+    stroke-width: 2px;
+  }
+  .line-label-point{
+    stroke: $color-orange;
+  }
+  .area{
+    fill: $color-orange;
+  }
+}
 
 /*
 Infographic
@@ -2401,7 +2455,7 @@ body.guatemala-graph {
   text-align: center;
 }
 
-#contraceptives-use-graph{
+.graph-container .womans-graph{
   ul{
     margin: 0;
     padding: 0;
@@ -2410,45 +2464,132 @@ body.guatemala-graph {
   li{
     display: inline-block;
     list-style: none;
-    margin: 5px 5px;
+    margin: 8px 5px;
+
+    @media (max-width: 526px) {
+      margin: 7px 2px;
+    }
 
     svg{
       fill: $gray-light;
       @include transition(.3s ease-out fill);   
     }
+  } 
+}
 
-    &.fill-1 svg{
-      fill: $color-blue;
-    }
-    &.fill-2 svg{
-      fill: $color-yellow;
-    }
-    &.fill-3 svg{
-      fill: $color-orange;
-    }
+#contraceptives-use-graph li{
+  &.fill-1 svg{
+    fill: $color-blue;
+  }
+  &.fill-2 svg{
+    fill: $color-yellow;
+  }
+  &.fill-3 svg{
+    fill: $color-orange;
   }
 }
 
+#maternal-mortality-developed li{
+  margin: 1px 1px;
+}
+
+.contraceptives-app-container{
+  margin: 0 0 45px;
+  padding: 30px 0 0;
+  background: #d9ede8;
+}
+.iframe .contraceptives-app-container{
+  margin-bottom: 0;
+}
+
 #contraceptives-app{
+  opacity: 0;
+  @include transition(0.3s ease-out opacity);
+
+  .contraceptives-app-label{
+    text-transform: uppercase;
+    font-size: .875em;
+  }
+
+  .contraceptives-app-label-small{
+    font-size: .875em;
+    margin: 15px 0 0;
+  }
 
   .select-country{
-    max-width: 220px;
+    max-width: 260px;
     margin: 0 auto;
   }
 
-  .contraceptives-app-data{
-    margin: 30px 0;
+  .contraceptives-app-data-container{
+    display: table;
+    width: 100%;
+
+    > div{
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .contraceptives-app-img{
+      margin: 20px 20px 20px 0;
+    }
+
+    .contraceptives-app-data{
+      font-size: 1.125em;
+      text-align: left;
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
   }
 
-  .contraceptives-app-data,
+  .contraceptives-app-sentence{
+    padding: 15px;
+    background: white;
+    margin: 20px 10px 10px;
+    font-size: .913em;
+    line-height: 1.375em;
+  }
+
   .contraceptives-app-filters{
-    text-align: left;
+    p{
+      margin: 15px 0;
+    }
+    .btn{
+      margin-bottom: 4px; 
+    
+      &:hover{
+        color: $brand-primary;
+        border-color: $brand-primary;
+        background: white;
+      }
+      &.active{
+        color: white;
+        background: $brand-primary;
+        border-color: $brand-primary;
+        font-weight: 400;
+      }
+    }
   }
 
-  .contraceptives-app-filters p{
-    margin-bottom: 5px;
+  .select2-selection{
+    border-radius: 0;
+    height: 32px;
+    border-color: #ccc;
   }
-  
+  .select2-selection__rendered{
+    color: #333;
+    line-height: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .select2-selection__arrow{
+    height: 30px;
+  }
+  .select2-results__option{
+    padding: 5px;
+  }
+
   /*
   .scroll-text{
     max-width: 560px;
@@ -2466,19 +2607,127 @@ body.guatemala-graph {
   */
 }
 
-#contraceptives-app-img{
-  width: 150px;
-  height: auto;
-  margin: 20px auto 0;
+.contraceptives-app-data{
+  max-width: 320px;
+  margin: 20px auto 30px;
+  color: $text-color;
+  //text-align: left;
+}
+
+#contraceptives-filter-3 > .row > .col-sm-3{
+  @media (min-width: $screen-sm) {
+    width: 20%;
+  }
+}
+
+#contraceptives-filter-2-3 .contraceptives-app-img{
+  margin-top: -20px;  // fix vertical offset for superior education picture
 }
 
 #unmet-needs-gdp-graph{
   position: relative;
+
+  .dot{
+    opacity: 0.85;
+    @include transition( 0.4s ease-in-out all );
+
+    &.inactive{
+      fill: mix($gray-light, $gray-lighter, 25%);
+    }
+  }
+  .dot-label{
+    font-size: 11px;
+    fill: $gray-dark;
+    text-anchor: middle;
+    text-shadow: 0 1px 0 rgba(255,255,255,.4);
+    opacity: 0;
+
+    &.inactive{
+      visibility: hidden;
+    }
+
+    &.size-l{
+      font-size: 13px;
+    }
+    &.size-m{
+      font-size: 12px;
+    }
+  }
+
+  .y.axis .tick:nth-child(2){
+    text{
+      display: none;
+    }
+    line{
+      stroke: mix($gray-light, $gray-lighter, 50%);
+    }
+  }
+
+  .y.axis .tick text{
+    text-anchor: start;
+  }
+
+  .x.axis .tick {
+    line{
+      display: block;
+      stroke: $gray-lighter;
+      opacity: 0;
+      @include transition( 0.3s ease-in-out opacity );
+    }
+    text{
+      display: none;
+    }
+  }
+}
+
+#unmet-needs-gdp-container-graph .x-legend{
+  position: relative;
+  margin: -3px 0 0;
+  padding: 0;
+  width: 100%;
+  opacity: 0;
+  @include transition( 0.3s ease-in-out opacity );
+
+  li{
+    margin: 0;
+    list-style: none;
+    float: left;
+    width: 25%;
+    color: white;
+    font-size: .75em;
+    letter-spacing: .02em;
+    font-weight: 300;
+    height: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    outline: 1px solid white;
+    background: mix( $gray-light, $gray-lighter, 75% );
+  }
+}
+
+
+#treemap-contraceptives-use-container{
+  margin: $grid-gutter-width/2 0;
+}
+
+#treemap-contraceptives-use-container .page-content > p,
+#unmet-needs-gdp-container-graph .page-content > p,
+#contraceptives-use-container .graph-container > p{
+  margin: $grid-gutter-width auto;
 }
 
 #treemap-contraceptives-use{
   position: relative;
 
+  .node{
+    @include transition(.4s ease-in-out all);
+  }
+
+  .node-any-traditional-method{
+    background: $color-orange;
+  }
+
+  /*
   .node-female-sterilization{
     background: #d75628;
   }
@@ -2519,7 +2768,7 @@ body.guatemala-graph {
     background: #423f28;
   }
 
-  /*
+
   .node-female-sterilization{
     background: #bd0063;
   }
@@ -2560,4 +2809,183 @@ body.guatemala-graph {
     background: #c88a73;
   }
   */
+}
+
+#contraceptives-reasons-opposed{
+  .bar-respondent-opposed{
+    background: darken($color-green-dark, 2%); 
+  }
+  .bar-husband-partner-opposed{
+    background: darken($color-green, 3%);
+  }
+  .bar-religious-prohibition{
+    background: $color-blue;
+  }
+  .bar-others-opposed{
+    background: lighten($color-green-light, 3%);
+  }
+  .bar{
+    @include transition(.3s ease-out background);
+    &.disabled{
+      background: mix($gray-light, $gray-lighter, 25%);
+    }
+  }
+}
+
+#contraceptives-reasons-opposed-legend{
+  padding: 0;
+  margin: -10px 0 15px;
+  text-align: left;
+
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  li{
+    color: white;
+    list-style: none;
+    display: inline-block;
+    float: left;
+    font-size: 0.75em;
+    line-height: 30px;
+    padding: 0 8px;
+    margin: 0;
+    cursor: pointer;
+    border-right: 4px solid white;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+
+    &.respondent-opposed{
+      background: darken($color-green-dark, 2%); 
+    }
+    &.husband-partner-opposed{
+      background: darken($color-green, 3%);
+    }
+    &.religious-prohibition{
+      background: $color-blue;
+    }
+    &.others-opposed{
+      background: lighten($color-green-light, 3%);
+    }
+  }
+}
+
+.reasons-graphs .graph-container .bar-horizontal-graph .axis{
+  top: 22px;
+}
+
+/*
+.page-content .blockquote-image{
+  position: relative;
+
+  blockquote{
+    color: $brand-primary;
+    position: absolute;
+    margin: -4rem 15% 0;
+    width: auto !important;
+    top: 50%;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    z-index: 30;
+
+    > p{
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    footer{
+      font-size: 1em;
+      //font-weight: 600;
+    }
+  }
+
+  figure{
+    position: relative;
+    z-index: 20;
+
+    &:before{
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      opacity: .35;
+    }
+  }
+}
+*/
+
+.page-content .blockquote-media{
+  margin: 30px 0;
+
+  .media-left{
+    padding: 0;
+  }
+
+  img{
+    width: 160px;
+    height: auto;
+    border-radius: 80px;
+    overflow: hidden;
+  }
+
+  .media-body{
+    padding-left: 20px;
+    vertical-align: middle;
+  }
+
+  blockquote{
+    margin: 0 0 5px;
+    
+    p{
+      font-size: 21px;
+      line-height: 34px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: $screen-xs) {
+    .media-left{
+      display: block;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .media-body{
+      padding-left: 10px;
+    }
+  }
+}
+
+.page-content .panel .blockquote-media{
+  margin: 0 -5px 20px;
+}
+
+.carousel-scrollama{
+  margin-top: 15px;
+  margin-bottom: 45px;
+  .scroll-graphic{
+    overflow: hidden;
+    > div{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      webkit-background-size: cover;
+      background-size: cover;
+      opacity: 0;
+      @include transition(.6s ease-in-out opacity);
+
+      &.active{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.contraceptives-filter{
+  display: none;
 }

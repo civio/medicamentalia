@@ -50,3 +50,21 @@ vacunas:
     type: article
   - ref: vaccines-team
     type: article
+anticonceptivos:
+  - ref: contraceptives-data
+    type: article
+  - ref: contraceptives-religion
+    type: article
+  - ref: contraceptives-video
+    type: article
+  - ref: contraceptives-team
+    type: article
+contraceptives:
+  - ref: contraceptives-data
+    type: article
+  - ref: contraceptives-religion
+    type: article
+  - ref: contraceptives-video
+    type: article
+  - ref: contraceptives-team
+    type: article

@@ -9,22 +9,13 @@
 title: Medicamentalia
 email: raul@civio.es
 
-#baseurl: /medicamentalia/medicamentalia   # the subpath of your site, e.g. /blog
-#url: //resources.civio.es
-#assetsurl: //resources.civio.es/medicamentalia/medicamentalia/assets
-
 # baseurl: '' 
 # url: https://medicamentalia.org # the base hostname & protocol for your site
 # assetsurl: https://medicamentalia.org/assets
 
 baseurl: '' 
-url: https://medicamentalia.org # the base hostname & protocol for your site
-assetsurl: https://medicamentalia.org/assets
-
-#baseurl: '' 
-#url: http://localhost:4000  # the base hostname & protocol for your site
-#assetsurl: http://localhost:4000/assets
-
+url: https://pre.medicamentalia.org # the base hostname & protocol for your site
+assetsurl: https://pre.medicamentalia.org/assets
 
 index:
   en: index.html
@@ -75,3 +66,4 @@ exclude:
 - ".gitignore"
 - "fabfile.py"
 - "fabfile.pyc"
+- vendor/bundle
