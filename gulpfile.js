@@ -118,9 +118,9 @@ gulp.task('css-main', function() {
     s.end();
   });
   return gulp.src('_app/styles/main.scss')
-    .pipe(sourcemaps.init())
+    .pipe(development(sourcemaps.init()))
     .pipe(s)
-    .pipe(sourcemaps.write())
+    .pipe(development(sourcemaps.write()))
     .pipe(production(autoprefixer({browsers: ['last 2 versions', 'ie >= 10']})))
     .pipe(production(cssmin()))
     .pipe(gulp.dest('_site/assets/styles'))
@@ -136,9 +136,9 @@ gulp.task('css-main-static', function() {
     s.end();
   });
   return gulp.src('_app/styles/main-static.scss')
-    .pipe(sourcemaps.init())
+    .pipe(development(sourcemaps.init()))
     .pipe(s)
-    .pipe(sourcemaps.write())
+    .pipe(development(sourcemaps.write()))
     .pipe(production(autoprefixer({browsers: ['last 2 versions', 'ie >= 10']})))
     .pipe(production(cssmin()))
     .pipe(gulp.dest('_site/assets/styles'))
@@ -188,9 +188,9 @@ gulp.task('popcorn', function() {
 
 gulp.task('js-main', function() {
   return gulp.src(js_paths.main)
-    .pipe(sourcemaps.init())
+    .pipe(development(sourcemaps.init()))
     .pipe(concat('main.js'))
-    .pipe(sourcemaps.write())
+    .pipe(development(sourcemaps.write()))
     .pipe(production(uglify(uglifyOptions)))
     .pipe(gulp.dest('_site/assets/scripts'))
     .pipe(reload({stream:true}))
@@ -200,9 +200,9 @@ gulp.task('js-main', function() {
 
 gulp.task('js-access', function() {
   return gulp.src(js_paths.access)
-    .pipe(sourcemaps.init())
+    .pipe(development(sourcemaps.init()))
     .pipe(concat('access.js'))
-    .pipe(sourcemaps.write())
+    .pipe(development(sourcemaps.write()))
     .pipe(production(uglify(uglifyOptions)))
     .pipe(gulp.dest('_site/assets/scripts'))
     .pipe(reload({stream:true}))
@@ -217,10 +217,10 @@ gulp.task('js-vaccines', function() {
     c.end();
   });
   return gulp.src(js_paths.vaccines)
-    .pipe(sourcemaps.init())
+    .pipe(development(sourcemaps.init()))
     .pipe(c)
     .pipe(concat('vaccines.js'))
-    .pipe(sourcemaps.write())
+    .pipe(development(sourcemaps.write()))
     .pipe(production(uglify(uglifyOptions)))
     .pipe(gulp.dest('_site/assets/scripts'))
     .pipe(reload({stream:true}))
@@ -235,10 +235,10 @@ gulp.task('js-superbugs', function() {
     c.end();
   });
   return gulp.src(js_paths.superbugs)
-    .pipe(sourcemaps.init())
+    .pipe(development(sourcemaps.init()))
     .pipe(c)
     .pipe(concat('superbugs.js'))
-    .pipe(sourcemaps.write())
+    .pipe(development(sourcemaps.write()))
     .pipe(production(uglify(uglifyOptions)))
     .pipe(gulp.dest('_site/assets/scripts'))
     .pipe(reload({stream:true}))
@@ -253,10 +253,10 @@ gulp.task('js-contraceptives', function() {
     c.end();
   });
   return gulp.src(js_paths.contraceptives)
-    .pipe(sourcemaps.init())
+    .pipe(development(sourcemaps.init()))
     .pipe(c)
     .pipe(concat('contraceptives.js'))
-    .pipe(sourcemaps.write())
+    .pipe(development(sourcemaps.write()))
     .pipe(production(uglify(uglifyOptions)))
     .pipe(gulp.dest('_site/assets/scripts'))
     .pipe(reload({stream:true}))
@@ -271,10 +271,10 @@ gulp.task('js-contraceptives-static', function() {
     c.end();
   });
   return gulp.src(js_paths.contraceptivesStatic)
-    .pipe(sourcemaps.init())
+    .pipe(development(sourcemaps.init()))
     .pipe(c)
     .pipe(concat('contraceptives-static.js'))
-    .pipe(sourcemaps.write())
+    .pipe(development(sourcemaps.write()))
     .pipe(production(uglify(uglifyOptions)))
     .pipe(gulp.dest('_site/assets/scripts'))
     .pipe(reload({stream:true}))
