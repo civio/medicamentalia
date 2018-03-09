@@ -6,7 +6,6 @@ order:      4
 slug:       nosotros
 ref:        contraceptives-team
 lang:       es
-draft:      true
 ---
 
 <div class="container page-content" markdown="1">

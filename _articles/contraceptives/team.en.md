@@ -6,7 +6,6 @@ order:      4
 slug:       team
 ref:        contraceptives-team
 lang:       en
-draft:      true
 ---
 
 <div class="container page-content" markdown="1">
