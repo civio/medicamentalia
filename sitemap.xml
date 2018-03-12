@@ -9,10 +9,10 @@ layout: null
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>{% endunless %}{% endfor %}
-  {% for page in site.pages %}<url>
+  {% for page in site.pages %}{% unless page.draft %}<url>
     <loc>{{ site.url }}{{ page.permalink }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
-  </url>{% endfor %}
+  </url>{% endunless %}{% endfor %}
 </urlset>

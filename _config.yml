@@ -9,9 +9,9 @@
 title: Medicamentalia
 email: raul@civio.es
 
-# baseurl: '' 
+# baseurl: '' 
 # url: https://medicamentalia.org # the base hostname & protocol for your site
-# assetsurl: https://medicamentalia.org/assets
+# assetsurl: https://medicamentalia.org/assets
 
 baseurl: '' 
 url: https://pre.medicamentalia.org # the base hostname & protocol for your site
@@ -60,8 +60,10 @@ exclude:
 - gulpfile.js
 - node_modules
 - package.json
+- package-lock.json
 - rollup-entry.js
 - rollup.config.js
+- LICENSE*
 - README*
 - ".gitignore"
 - "fabfile.py"
