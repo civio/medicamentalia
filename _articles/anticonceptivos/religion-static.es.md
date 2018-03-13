@@ -7,7 +7,7 @@ home_description: Las tres principales religiones monoteístas -Cristianismo, Ju
 img:              articles/home-contraceptives-religion.jpg
 order:            2
 highlighted:      true
-author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo y Verónica Ramírezimán
+author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo y Verónica Ramírez
 pub_date:         2018-02-20
 slug:             religion-static
 ref:              contraceptives-religion-static
