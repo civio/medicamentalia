@@ -37,7 +37,7 @@ Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la
 <div class="scroll-graphic">
   <div class="graph-container">
     <div class="container page-content">
-      <p>Porcentaje de uso entre mujeres (de 15 a 49 años y sexualmente activas) que utilizan algún método</p>
+      <p>Porcentaje de uso entre mujeres (de 15 a 49 años y casadas o en pareja) que utilizan algún método</p>
       <div id="treemap-contraceptives-use" class="treemap-graph"></div>
     </div>
   </div>
@@ -125,7 +125,7 @@ En Gambia, muchas mujeres usan un método tradicional que recibe diferentes nomb
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="1">
-    <p>Hasta ahora hemos hablado de aquellas mujeres que usan anticonceptivos. De las mujeres casadas o sexualmente activas de 15 a 49 años, <strong> el 64% usa algún tipo de método</strong>.</p>
+    <p>Hasta ahora hemos hablado de aquellas mujeres que usan anticonceptivos. De las mujeres casadas o en pareja de 15 a 49 años, <strong> el 64% usa algún tipo de método</strong>.</p>
   </div>
   <div class="step" data-step="2">
     <p>Otro <strong>24% quería seguir teniendo niños</strong> en el momento de ser entrevistada y, por lo tanto, decide no usar ningún método.</p>
