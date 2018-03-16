@@ -8,7 +8,7 @@ img:              articles/home-contraceptives.jpg
 order:            1
 highlighted:      true
 author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo y Verónica Ramírez
-pub_date:         2018-02-20
+pub_date:         2018-03-16
 slug:             datos-uso-barreras
 ref:              contraceptives-data
 lang:             es
@@ -168,7 +168,7 @@ Puede que, simplemente, no quieran tener ningún hijo o no quieran tener más. *
 <div class="scroll-text">
   <div class="step" data-step="0">
     <p>Ese problema, las <strong>necesidades no cubiertas</strong>, es mayor en algunos países del mundo que en otros. Apenas es relevante en China, mientras en Angola supera el 36%.</p>
-  </div>imán
+  </div>
   <div class="step" data-step="1">
     <p>Pero, si distribuimos los países según su nivel de renta...</p>
   </div>
