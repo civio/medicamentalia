@@ -36,7 +36,7 @@ Fanta Jatta knows more than most about these cases. She talks about it at the he
 <div class="scroll-graphic">
   <div class="graph-container">
     <div class="container page-content">
-      <p>Percentage of sexually active women aged 15-49 years using any family planning method</p>
+      <p>Percentage of married or in-union women aged 15-49 years using any family planning method</p>
       <div id="treemap-contraceptives-use" class="treemap-graph"></div>
     </div>
   </div>
@@ -124,7 +124,7 @@ In The Gambia, many women use variations of a traditional method that goes by di
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="1">
-    <p>So far we have discussed women that use some form of birth control. Of married or sexually active women from 15 to 49 years of age, <strong>64% practise some form of birth control.</strong></p>
+    <p>So far we have discussed women that use some form of birth control. Of married or in-union women from 15 to 49 years of age, <strong>64% practise some form of birth control.</strong></p>
   </div>
   <div class="step" data-step="2">
     <p>Another <strong>24% wish to continue having children</strong> and so are not practising birth control.</p>
