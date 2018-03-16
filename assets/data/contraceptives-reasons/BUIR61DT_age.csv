@@ -1,4 +1,4 @@
-"","id","n","not_using_contraception","most_popular_method","most_popular_method_n","using_modern_method","with_unmet_needs","n_reasons","most_popular_reason","most_popular_reason_n","source"
-"1",1,4231,3921,3,145,254,363,1238,"v3a08b",516,"BUIR61DT"
-"2",2,2675,2096,3,281,490,678,1064,"v3a08f",400,"BUIR61DT"
-"3",3,2483,2057,3,173,333,643,1380,"v3a08b",322,"BUIR61DT"
+"","id","n","most_popular_reason","most_popular_reason_n","not_using_contraception","most_popular_method","most_popular_method_n","using_modern_method","with_unmet_needs","n_reasons","source"
+"1",1,1226,"v3a08f",217,969,3,135,203,333,460,"BUIR61DT"
+"2",2,2123,"v3a08f",381,1580,3,264,455,671,878,"BUIR61DT"
+"3",3,1912,"v3a08f",219,1507,3,160,312,639,968,"BUIR61DT"
