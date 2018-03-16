@@ -45,7 +45,7 @@ Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="0">
-    <p>En <strong id="treemap-contraceptives-use-country"></strong>, un <span id="treemap-contraceptives-use-any-method"></span>% de las mujeres respondieron que ellas o sus parejas usan algún <strong>método anticonceptivo moderno</strong>. El más habitual es <strong id="treemap-contraceptives-use-method"></strong>.</p>
+    <p>En <strong id="treemap-contraceptives-use-country"></strong>, el método más habitual es <strong id="treemap-contraceptives-use-method"></strong>.</p>
   </div>
   <div class="step" data-step="1">
     <p><strong>En el mundo</strong>, los métodos más habituales son la <strong>esterilización femenina</strong>, el <strong>DIU</strong> y la <strong>píldora</strong>.</p>

@@ -44,7 +44,7 @@ Fanta Jatta knows more than most about these cases. She talks about it at the he
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="0">
-    <p>In <strong id="treemap-contraceptives-use-country"></strong>, <span id="treemap-contraceptives-use-any-method"></span>% of women use a modern contraceptive method. The most common is <strong id="treemap-contraceptives-use-method"></strong>.</p>
+    <p>In <strong id="treemap-contraceptives-use-country"></strong>, the most common method is <strong id="treemap-contraceptives-use-method"></strong>.</p>
   </div>
   <div class="step" data-step="1">
     <p><strong>Worldwide</strong>, the most common methods are <strong>female sterilisation</strong>, intrauterine devices (<strong>IUD</strong>) and <strong>the pill</strong>.</p>
