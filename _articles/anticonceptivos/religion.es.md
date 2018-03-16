@@ -8,7 +8,7 @@ img:              articles/home-contraceptives-religion.jpg
 order:            2
 highlighted:      true
 author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo y Verónica Ramírez
-pub_date:         2018-02-20
+pub_date:         2018-03-16
 slug:             religion
 ref:              contraceptives-religion
 lang:             es

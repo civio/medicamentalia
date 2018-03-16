@@ -1,4 +1,4 @@
-"","id","n","not_using_contraception","most_popular_method","most_popular_method_n","using_modern_method","with_unmet_needs","n_reasons","most_popular_reason","most_popular_reason_n","source"
-"1",1,247833,224623,5,6311,18037,21675,27413,"v3a08b",5812,"IAIR71DT"
-"2",2,212124,112160,6,54242,86776,32594,47965,"v3a08b",9368,"IAIR71DT"
-"3",3,239729,101645,6,105870,125015,17262,64395,"v3a08d",15585,"IAIR71DT"
+"","id","n","most_popular_reason","most_popular_reason_n","not_using_contraception","most_popular_method","most_popular_method_n","using_modern_method","with_unmet_needs","n_reasons","source"
+"1",1,94034,"v3a08g",5591,71189,5,6084,17733,21655,25680,"IAIR71DT"
+"2",2,190136,"v3a08b",7790,91448,6,53125,85527,32582,44799,"IAIR71DT"
+"3",3,215457,"v3a08d",14157,84387,6,98998,118037,17245,54717,"IAIR71DT"

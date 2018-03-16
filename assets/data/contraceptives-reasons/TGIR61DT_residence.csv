@@ -1,3 +1,3 @@
-"","id","n","not_using_contraception","most_popular_method","most_popular_method_n","using_modern_method","with_unmet_needs","n_reasons","most_popular_reason","most_popular_reason_n","source"
-"1",1,3591,2767,5,342,701,777,1434,"v3a08b",399,"TGIR61DT"
-"2",2,5889,4886,3,355,889,1594,2675,"v3a08g",555,"TGIR61DT"
+"","id","n","most_popular_reason","most_popular_reason_n","not_using_contraception","most_popular_method","most_popular_method_n","using_modern_method","with_unmet_needs","n_reasons","source"
+"1",1,2022,"v3a08p",219,1574,3,115,378,678,789,"TGIR61DT"
+"2",2,4338,"v3a08g",523,3528,3,330,718,1469,1985,"TGIR61DT"

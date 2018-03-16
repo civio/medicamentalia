@@ -1,4 +1,4 @@
-"","id","n","not_using_contraception","most_popular_method","most_popular_method_n","using_modern_method","with_unmet_needs","n_reasons","most_popular_reason","most_popular_reason_n","source"
-"1",1,987,742,5,99,235,189,381,"v3a08b",195,"STIR50DT"
-"2",2,840,492,1,133,315,244,278,"v3a08b",57,"STIR50DT"
-"3",3,788,547,3,89,211,279,406,"v3a08b",83,"STIR50DT"
+"","id","n","most_popular_reason","most_popular_reason_n","not_using_contraception","most_popular_method","most_popular_method_n","using_modern_method","with_unmet_needs","n_reasons","source"
+"1",1,413,"v3a08x",19,259,1,78,147,159,129,"STIR50DT"
+"2",2,711,"v3a08x",41,394,1,126,286,238,221,"STIR50DT"
+"3",3,630,"v3a08o",57,411,3,79,189,268,291,"STIR50DT"

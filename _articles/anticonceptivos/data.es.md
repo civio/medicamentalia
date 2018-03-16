@@ -8,7 +8,7 @@ img:              articles/home-contraceptives.jpg
 order:            1
 highlighted:      true
 author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo y Verónica Ramírez
-pub_date:         2018-02-20
+pub_date:         2018-03-16
 slug:             datos-uso-barreras
 ref:              contraceptives-data
 lang:             es
@@ -37,7 +37,7 @@ Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la
 <div class="scroll-graphic">
   <div class="graph-container">
     <div class="container page-content">
-      <p>Porcentaje de uso entre mujeres (de 15 a 49 años y sexualmente activas) que utilizan algún método</p>
+      <p>Porcentaje de uso entre mujeres (de 15 a 49 años y casadas o en pareja) que utilizan algún método</p>
       <div id="treemap-contraceptives-use" class="treemap-graph"></div>
     </div>
   </div>
@@ -45,7 +45,7 @@ Fanta Jatta es una de las personas que mejor conoce estos casos. Los narra en la
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="0">
-    <p>En <strong id="treemap-contraceptives-use-country"></strong>, un <span id="treemap-contraceptives-use-any-method"></span>% de las mujeres respondieron que ellas o sus parejas usan algún <strong>método anticonceptivo moderno</strong>. El más habitual es <strong id="treemap-contraceptives-use-method"></strong>.</p>
+    <p>En <strong id="treemap-contraceptives-use-country"></strong>, el método más habitual es <strong id="treemap-contraceptives-use-method"></strong>.</p>
   </div>
   <div class="step" data-step="1">
     <p><strong>En el mundo</strong>, los métodos más habituales son la <strong>esterilización femenina</strong>, el <strong>DIU</strong> y la <strong>píldora</strong>.</p>
@@ -125,7 +125,7 @@ En Gambia, muchas mujeres usan un método tradicional que recibe diferentes nomb
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="1">
-    <p>Hasta ahora hemos hablado de aquellas mujeres que usan anticonceptivos. De las mujeres casadas o sexualmente activas de 15 a 49 años, <strong> el 64% usa algún tipo de método</strong>.</p>
+    <p>Hasta ahora hemos hablado de aquellas mujeres que usan anticonceptivos. De las mujeres casadas o en pareja de 15 a 49 años, <strong> el 64% usa algún tipo de método</strong>.</p>
   </div>
   <div class="step" data-step="2">
     <p>Otro <strong>24% quería seguir teniendo niños</strong> en el momento de ser entrevistada y, por lo tanto, decide no usar ningún método.</p>
@@ -168,7 +168,7 @@ Puede que, simplemente, no quieran tener ningún hijo o no quieran tener más. *
 <div class="scroll-text">
   <div class="step" data-step="0">
     <p>Ese problema, las <strong>necesidades no cubiertas</strong>, es mayor en algunos países del mundo que en otros. Apenas es relevante en China, mientras en Angola supera el 36%.</p>
-  </div>imán
+  </div>
   <div class="step" data-step="1">
     <p>Pero, si distribuimos los países según su nivel de renta...</p>
   </div>

@@ -75,7 +75,7 @@ The two main sources of data are the [World Contraceptive Use](http://www.un.org
 
 Given, for example, the UN's [method](http://www.un.org/en/development/desa/population/publications/dataset/contraception/wcu2017/UNPD_WCU2017_Methodology.pdf), it's important to note two things: 
 
-1. The population they use to calculate usage of and unmet need for birth control are **sexually active women between the ages of 15 and 49**. This is usually married or partnered women and those who have reported sexual activity in the previous months, depending on the country. The details for each country are available with the original raw data, which may also include other nuances. The 2017 data, for example, [is here](http://www.un.org/en/development/desa/population/publications/dataset/contraception/wcu2017/UNPD_WCU2017_Country_Data_Survey-Based.xlsx). 
+1. The population they use to calculate usage of and unmet need for birth control are **married or in-union women between the ages of 15 and 49**, however, some countries also include single women who are sexually active. The details for each country are available with the original raw data, which may also include other nuances. The 2017 data, for example, [is here](http://www.un.org/en/development/desa/population/publications/dataset/contraception/wcu2017/UNPD_WCU2017_Country_Data_Survey-Based.xlsx). 
 
 2. **Unmet needs** refers to the women who, although they want to limit or space their pregnancies, do not use any method of birth control, including traditional ones such as the pull-out method. As elsewhere, this is a fraction of sexually active women aged 15 to 49.
 
