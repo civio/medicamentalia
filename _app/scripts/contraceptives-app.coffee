@@ -290,7 +290,7 @@ class window.ContraceptivesApp
       d3.csv $('body').data('baseurl')+'/data/contraceptives-reasons/'+@dhs_countries[@country_code].name+'_all.csv', (error, data) =>
         d = data[0]
         # setup data
-        @setAppItemData @$app, 100*d.using_modern_method/d.n, @methodsDHSNames[d.most_popular_method], 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, @reasonsDHSNames[d.most_popular_reason], 100*d.most_popular_reason_n/d.n_reasons, @sentences[@country_code]
+        @setAppItemData @$app, 100*(d.n-d.not_using_contraception)/d.n, @methodsDHSNames[d.most_popular_method], 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, @reasonsDHSNames[d.most_popular_reason], 100*d.most_popular_reason_n/d.n_reasons, @sentences[@country_code]
         # show filters
         @$app.find('.contraceptives-app-filters').show()
         # update iframe height
@@ -301,9 +301,10 @@ class window.ContraceptivesApp
       @$app.find('#contraceptives-app-data-year').html '2015-16'
       # Use
       countryUse = @data.use.filter (d) => d.code == @country_code
+      console.log countryUse
       if countryUse and countryUse[0]
         if countryUse[0]['Any modern method'] != '0'
-          use           = countryUse[0]['Any modern method']
+          use           = parseFloat(countryUse[0]['Any modern method']) + parseFloat(countryUse[0]['Any traditional method'])
         country_methods = @methodsKeys.map (key, i) => {'name': @methodsNames[i], 'value': +countryUse[0][key]}
         country_methods = country_methods.sort (a,b) -> b.value-a.value
         method          = country_methods[0].name
@@ -340,7 +341,7 @@ class window.ContraceptivesApp
       d3.csv $('body').data('baseurl')+'/data/contraceptives-reasons/'+@dhs_countries[@country_code].name+'_'+@filter_keys[@filter]+'.csv', (error, data) =>
         if data
           data.forEach (d) =>
-            @setAppItemData @filterEl.find('#'+@filter+'-'+d.id), 100*d.using_modern_method/d.n, @methodsDHSNames[d.most_popular_method], 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, @reasonsDHSNames[d.most_popular_reason], 100*d.most_popular_reason_n/d.n_reasons
+            @setAppItemData @filterEl.find('#'+@filter+'-'+d.id), 100*(d.n-d.not_using_contraception)/d.n, @methodsDHSNames[d.most_popular_method], 100*d.most_popular_method_n/d.n, 100*d.with_unmet_needs/d.n, @reasonsDHSNames[d.most_popular_reason], 100*d.most_popular_reason_n/d.n_reasons
           # Update iframe height
           if @pym
             @pym.sendHeight()
