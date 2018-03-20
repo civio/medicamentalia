@@ -114,7 +114,7 @@ For countries not in the DHS, we use UN data, which does not allow the same anal
 {: #website}
 #### The website
 
-This website is developed with [Jekyll](https://jekyllrb.com/){:target="_blank"}nd uses Javascript and [D3.js](https://d3js.org/){:target="_blank"} for the data visualizations. You can find the code of the web in our [Github repository](https://github.com/civio/medicamentalia){:target="_blank"}.
+This website is developed with [Jekyll](https://jekyllrb.com/){:target="_blank"} and uses Javascript and [D3.js](https://d3js.org/){:target="_blank"} for the data visualisations. You can find the code of the web in our [Github repository](https://github.com/civio/medicamentalia){:target="_blank"}.
 
 
 {% include caption.html img="contraceptives/web-code.jpg" caption="" fullWidth=true %}

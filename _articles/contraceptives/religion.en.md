@@ -43,7 +43,7 @@ A few days before, neighbouring The Gambia, an overwhelmingly Muslim-majority co
 <div class="panel alignright" markdown="1">
 ##### A global gag rule
 
-In January 2017, US President Donald Trump [re-activated and expanded](https://www.whitehouse.gov/presidential-actions/presidential-memorandum-regarding-mexico-city-policy){:target="_blank"} the Mexico City policy. The policy, first enacted by former US President Ronald Reagan in 1984, requires international NGOs to certify that they do not "perform or actively promote abortion as a method of family planning," as a condition for receiving US federal funding. With Trump, this requirement was extended to new programs. The policy has generally been applied by Republican administrations and rescinded by Democratic administrations. In the case of Marie Stopes International, which distributes contraceptives free to the needy, the policy could be "problematic". "How would you help those women to get family planning methods?," Dieng says.
+In January 2017, US President Donald Trump [re-activated and expanded](https://www.whitehouse.gov/presidential-actions/presidential-memorandum-regarding-mexico-city-policy){:target="_blank"} the Mexico City policy. The policy, first enacted by former US President Ronald Reagan in 1984, requires international NGOs to certify that they do not "perform or actively promote abortion as a method of family planning," as a condition for receiving US federal funding. With Trump, this requirement was extended to new programs. The policy has generally been applied by Republican administrations and rescinded by Democratic administrations. In the case of Marie Stopes International, which distributes contraceptives free to the needy, the policy could be "problematic", Dieng says: "How would you help those women to get family planning methods?"
 </div>
 
 Religious bans on contraceptives affect more than just believers. They affect sweeping policies, such as Trump's gag rule on groups that practice or promote abortion. They also affect smaller everyday behaviours, such as the moralistic barriers people impose on one another. Not so long ago, the Guadalajara pharmacy chain in Mexico, one of the most biggest in the country, did not sell condoms, says Patricia Ortega, of The Network for Sexual and Reproductive Rights in Mexico (DDSER). Today the Catholic owners still do not sell the morning-after pill. 
@@ -76,7 +76,7 @@ Men and women's first duty in Judaism is to multiply. They should have as many c
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="0">
-    <p>"Forbidden, forbidden, forbidden. That's why we don't have the pull-out method.", rabbi Daniel Bitton.</p>
+    <p>"Forbidden, forbidden, forbidden. That's why we don't have the pull-out method." rabbi Daniel Bitton.</p>
   </div>
   <div class="step" data-step="1">
     <p>"The man's semen cannot emerge in vain." </p>
@@ -96,7 +96,7 @@ Rabbi Joseph Höffner, of the Ma'ayanei Hayeshua hospital in Bnei Brak, an ultra
 
 Yair Hass is director of [Hillel](https://www.hillel.org.il/en/about){:target="_blank"}, a Jerusalem organisation dedicated to helping adults who choose to abandon the restrictive world of ultra-Orthodox Judaism. Birth control in Israel, he says, is a "controversial" topic because some people want the population of Jews to "get back to the pre-Holocaust number." What's more, birth rates are a matter of state in Israel: Jews need to outnumber Palestinians and the people of neighbouring countries. Those ingredients mean that in 2017 Israel's population pyramid is shaped just like Spain's in the 1960s baby boom, though with different religious backgrounds. The *haredim*, or ultra-Orthodox Jews, who are also the most fertile, now make up 10% of Israel's population. By 2059 they will be 35% of the population, according to [one estimate](https://en.idi.org.il/media/4240/shnaton-e_8-9-16_web.pdf){:target="_blank"}.
 
-For Islam, it is also a question of numbers. It's a synonym for wealth: the more children, the better. Many Muslims also share the Jewish interpretation of sperm. "They argue against using condoms by saying that they trap children in this world and in the next. So when you die and go before Allah, those children you caught will push you back down. They make it very scary," says Jammeh, the UNPFA official. But in Islam the pull-out method is permitted and even appears in the Koran. "We ask them, if you use the pull-out method, where do you ejaculate? On the floor? On the bed? If you leave it in a nice place, like a condom, and gently throw it in the rubbish bin, rather than on the floor, don't you think that is better and more hygienic? They feel very confused when we say that," Jammeh says.
+For Islam, it is also a question of numbers. It's a synonym for wealth: the more children, the better. Many Muslims also share the Jewish interpretation of sperm. "They argue against using condoms by saying that they trap children in this world and in the next. So when you die and go before Allah, those children you trapped will push you back down. They make it very scary," says Jammeh, the UNPFA official. But in Islam the pull-out method is permitted and even appears in the Koran. "We ask them, if you use the pull-out method, where do you ejaculate? On the floor? On the bed? If you leave it in a nice place, like a condom, and gently throw it in the rubbish bin, rather than on the floor, don't you think that is better and more hygienic? They feel very confused when we say that," Jammeh says.
 In 1982 during a visit to Madrid, Pope John Paul II told thousands of the faithful that "each and every marriage act must remain open to the transmission of life." It's the same sense of avoiding waste as in Islam and Judaism, and the same as in Pope Francis' *Amoris*: **"Hence no genital act of husband and wife can refuse this meaning".**
 
 ### Permission granted –sometimes– for health reasons
@@ -112,9 +112,9 @@ So, no contraceptives, but using the calendar to avoid sex on fertile days is ok
 The Koran implies using breastfeeding as a form of birth control. It states that a mother should breastfeed at least two years. "Nine months of pregnancy plus another twenty-four...in Islam we think that's a reasonable time for the mother and the baby," says Ousman M. Had, president of the Hajj Commission and a member of the Supreme Islamic Council in The Gambia.
 
 <div class="panel" markdown="1">
-#### Lactancy as a contraceptive
+#### Lactation as a contraceptive
 
-Lactational amenorrhea is a contraceptive method that can be used only by women who have just given birth. It works on [three conditions](http://www.unicef.cl/lactancia/docs/mod04/Mod 4 El Uso del Metodo de la Amenorrea de la Lactancia.pdf){:target="_blank"}: the mother must breastfeed exclusively, she must not be menstruating, and it only works for the first six months after giving birth. In the Gambia, many women use this method because it is natural, but not all of them have a good experience. If they fail to meet any of those three criteria, the possibilities of pregnancy increase exponentially. Many end up breast-feeding two children, having failed to space their pregnancies.
+Lactational amenorrhea is a contraceptive method that can be used only by women who have just given birth. It works on [three conditions](http://www.unicef.cl/lactancia/docs/mod04/Mod 4 El Uso del Metodo de la Amenorrea de la Lactancia.pdf){:target="_blank"}: the mother must breastfeed exclusively, she must not be menstruating, and it only works for the first six months after giving birth. In The Gambia, many women use this method because it is natural, but not all of them have a good experience. If they fail to meet any of those three criteria, the possibilities of pregnancy increase exponentially. Many end up breast-feeding two children, having failed to space their pregnancies.
 </div>
 
 All three religions leave a loophole for cases in which the mother's health is at risk.
@@ -150,8 +150,8 @@ In 2016, malnutrition threatened the lives of nearly 52 million children under f
 
 <div class="container-right">
   <div class="graph-container">
-    <p class="graph-container-caption" style="margin-left: 20px; margin-bottom: 0">Muertes de mujeres en el parto</p>
-    <p style="text-align: left; margin-left: 20px; margin-bottom: 30px;">por cada 100.000 niños</p>
+    <p class="graph-container-caption" style="margin-left: 20px; margin-bottom: 0">Maternal mortality</p>
+    <p style="text-align: left; margin-left: 20px; margin-bottom: 30px;">per 100,000 births</p>
     <div id="maternal-mortality-graph" class="line-graph"></div>
   </div>
 </div>
@@ -180,7 +180,7 @@ Her husband soon found out that she was on birth control and took her health car
 
 ### Educating against contraceptives
 
-> "We must call encourage educators to create a favourable climate for chastity."
+> "We must encourage educators to create a favourable climate for chastity."
 > <footer>Humanae Vitae</footer>
 {: .literary}
 
@@ -199,7 +199,7 @@ In 2009 [José Ignacio Munilla](https://twitter.com/obispomunilla){:target="_bla
 <!--  step/text container  -->
 <div class="scroll-text">
   <div class="step" data-step="0">
-    <p>"The sexual urge can be directed through a process of growth in self-knowledge and selfcontrol capable of nurturing valuable capacities for joy and for loving encounter.", Amoris Laetitia, Pope Francis</p>
+    <p>"The sexual urge can be directed through a process of growth in self-knowledge and self-control capable of nurturing valuable capacities for joy and for loving encounter." Amoris Laetitia, Pope Francis</p>
   </div>
   <div class="step" data-step="1">
     <p>"It is always irresponsible to invite adolescents to toy with their bodies and their desires."</p>

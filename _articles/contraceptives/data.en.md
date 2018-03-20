@@ -26,7 +26,7 @@ Fanta Jatta knows more than most about these cases. She talks about it at the he
 {% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="We need to understand how our bodies work and make our own choices." author="Fanta Jatta" author_description="Women's Rights Specialist at Action Aid International Gambia" %}
 </div>
 
-#### Uses {#uses}
+#### Methods {#uses}
 </div>
 </div>
 
@@ -130,7 +130,7 @@ In The Gambia, many women use variations of a traditional method that goes by di
     <p>Another <strong>24% wish to continue having children</strong> and so are not practising birth control.</p>
   </div>
   <div class="step" data-step="3">
-    <p>The remaining <strong>12% are women who wish to delay or prevent maternity but are not using birth control</strong>. These are the women with unmet needs. And is is a problem.</p>
+    <p>The remaining <strong>12% are women who wish to delay or prevent maternity but are not using birth control</strong>. These are the women with unmet needs. And it is a problem.</p>
   </div>
   <div class="step" data-step="4"></div>
 </div>
@@ -198,7 +198,7 @@ Let's focus on countries with the most difficult situations. What are the barrie
 
 <div class="container-right">
   <div class="graph-container">
-    <p class="graph-container-caption">Women with unmet needs not using contraceptives for health reasons</p>
+    <p class="graph-container-caption">Main reason for not using contraceptives in cases of unmet needs</p>
     {% include contraceptives/reasons-health.en.html %}
   </div>
 </div>
@@ -266,9 +266,9 @@ Many women claim that they don't use contraceptives because they do not have sex
 
 This refers to cultural reasons, in contrast to women's health-related barriers, such as the side effects of some hormonal contraceptives. Most of the respondents who say this is their principal barrier have never used any method of birth control, according to the Guttmacher study. Somebody, whether it's the woman herself, her husband or others, is against her using birth control. But whom and why?
 
-In most such cases, the woman being interviewed says she is against birth control. Keeping in mind that we are only analysing the responses of those women whose necessities are unmet--that is, they do not want more children but are not using birth control--their response reflect outside influences, from cultural to social to religious. 
+In most such cases, the woman being interviewed says she is against birth control. Keeping in mind that we are only analysing the responses of those women whose necessities are unmet--that is, they do not want more children but are not using birth control--their responses reflect outside influences, from cultural to social to religious. 
 
-Although the percentages are lower, religion can also affect opposition in the above cases. And that goes for all the major religions. In the most orthodox cases, it's the imam, priest, or rabbi who decides who uses, or doesn't use, birth control and what type.
+Although the percentages are lower, religion can also affect opposition in the above cases. And that goes for all the major religions. In the most orthodox cases, imams, priests, or rabbis decide who uses or doesn't use birth control and what type.
 
 <div class="panel" markdown="1">
 
@@ -286,7 +286,7 @@ The key is who makes the decision. For Alieu Jammeh, of the United Nations, it's
 
 Mothers-in-law, fathers, or even medical or pharmaceutical services, among others, may intervene in a woman's birth control decisions. The Network for Sexual and Reproductive Rights in Mexico (DDESER) did a study of contraceptive distribution under two different governments. They interviewed managers, doctors, civil servants, and users. They even sent mystery shoppers posing as customers. They found health centres that refused to give condoms to youth, where the condoms piled up until they expired, or where they don't give the pill to single women, to give just two examples.
 
-It's increasingly rare for women not to know about birth control, to lack access, or not to be able to afford it. But in West and Central Africa, those reasons, were mentioned by more than ten percent of respondents in the Guttmacher study. In Mexico, Patricia Ortega of DDSER says that some university students, "don't even know how to use a condom."  When asked about how many times a condom can be used, 15.5% of respondents to the [Mexican National Health and Nutrition Survey](http://ensanut.insp.mx/informes/ENSANUT2012ResultadosNacionales.pdf){:target="_blank"} responded incorrectly.
+It's increasingly rare for women not to know about birth control, to lack access, or not to be able to afford it. But in West and Central Africa, those reasons were given by more than ten percent of respondents in the Guttmacher study. In Mexico, Patricia Ortega of DDSER says that some university students, "don't even know how to use a condom."  When asked about how many times a condom can be used, 15.5% of respondents to the [Mexican National Health and Nutrition Survey](http://ensanut.insp.mx/informes/ENSANUT2012ResultadosNacionales.pdf){:target="_blank"} responded incorrectly.
 
 <div class="panel">
 {% include blockquote-media.html img="contraceptives/fanta-jatta-thumb" quote="Poverty is not just the lack of money, or material, it's also the inability to make choices." author="Fanta Jatta" author_description="Women's Rights Specialist at Action Aid International in Banjul, The Gambia" %}
@@ -297,8 +297,8 @@ In The Gambia, television ads promoting contraceptive use were a social revoluti
 In Europe promotional campaigns for contraceptives have been rare for a while, with the exception of [those paid for by Durex](https://www.youtube.com/watch?v=KR4A-c23rsE){:target="_blank"}, and there is more and more public investment in promoting child-bearing. The Polish government ran a [campaign](https://elpais.com/internacional/2017/11/10/actualidad/1510327993_647673.html){:target="_blank"} encouraging its citizens to have sex and there is an [annual campaign in the Spanish autonomous community of Galicia](https://civio.es/el-boe-nuestro-de-cada-dia/2013/07/29/galicia-licita-por-640-000-euros-una-campana-para-animar-a-sus-ciudadanos-a-tener-hijos/){:target="_blank"} that appeals to the "necessary shared responsibility" of bringing more children into the world. 
 
 {% include caption.html img="contraceptives/fomento-natalidad.jpg" caption="“Reproduce like bunnies,” says the Polish health ministry in the lefthand advert. The Galician campaign at right." fullWidth=true %}
-
-What does it mean for there to be unmet needs? That a woman cannot exercise her right to plan her own reproduction. According to the [WHO](http://www.who.int/mediacentre/factsheets/fs351/en/){:target="_blank"}, family planning reduces abortions, especially dangerous ones, reinforces the right to determine the number and timing of children and prevents the deaths of both mothers and children.
+ 
+What do we mean when we refer to 'unmet needs'? That a woman cannot exercise her right to plan her own reproduction. According to the [WHO](http://www.who.int/mediacentre/factsheets/fs351/en/){:target="_blank"}, family planning reduces abortions, especially dangerous ones, reinforces the right to determine the number and timing of children and prevents the deaths of both mothers and children.
 
 In 2012, 85 million pregnancies worldwide [were unintended](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4727534/){:target="_blank"}. This is 40% of the total and many of them end in abortion, whether natural or voluntary. An estimated 25 million unsafe abortions are performed annually, most of them in developing countries.
 
