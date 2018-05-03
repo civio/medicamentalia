@@ -282,10 +282,13 @@ class window.ContraceptivesApp
     @$app.find('.contraceptives-app-filters').hide().find('.btn').removeClass('active')
     # hide filters results
     $('.contraceptives-filter').hide()
+    # clear data year
+    @$app.find('.contraceptives-app-label-small').hide()
 
     if @dhs_countries[@country_code]
       # set data year
       @$app.find('#contraceptives-app-data-year').html @dhs_countries[@country_code].year
+      @$app.find('.contraceptives-app-label-small').show()
       # load country dhs data
       d3.csv $('body').data('baseurl')+'/data/contraceptives-reasons/'+@dhs_countries[@country_code].name+'_all.csv', (error, data) =>
         d = data[0]
@@ -297,12 +300,13 @@ class window.ContraceptivesApp
         if @pym
           @pym.sendHeight()
     else
-      # set data year
-      @$app.find('#contraceptives-app-data-year').html '2015-16'
       # Use
       countryUse = @data.use.filter (d) => d.code == @country_code
-      console.log countryUse
+      #console.log countryUse
       if countryUse and countryUse[0]
+        # set data year
+        @$app.find('#contraceptives-app-data-year').html countryUse[0]['survey year']
+        @$app.find('.contraceptives-app-label-small').show()
         if countryUse[0]['Any modern method'] != '0'
           use           = parseFloat(countryUse[0]['Any modern method']) + parseFloat(countryUse[0]['Any traditional method'])
         country_methods = @methodsKeys.map (key, i) => {'name': @methodsNames[i], 'value': +countryUse[0][key]}
@@ -313,7 +317,12 @@ class window.ContraceptivesApp
       countryUnmetneeds = @data.unmetneeds.filter (d) => d.code == @country_code
       if countryUnmetneeds and countryUnmetneeds[0]
         # use survey data if available, use estimated if not
-        unmetneeds = if countryUnmetneeds[0]['survey'] then countryUnmetneeds[0]['survey'] else countryUnmetneeds[0]['estimated'] 
+        unmetneeds = if countryUnmetneeds[0]['survey'] then countryUnmetneeds[0]['survey'] else countryUnmetneeds[0]['estimated']
+        # set data year if no countryUse data
+        if countryUse.length == 0
+          # survey_year for survey data & 2016 in other cases
+          @$app.find('#contraceptives-app-data-year').html if countryUnmetneeds[0]['survey'] then countryUnmetneeds[0]['survey_year'] else 2016
+          @$app.find('.contraceptives-app-label-small').show()
       # Reasons
       countryReasons = @data.reasons.filter (d) => d.code == @country_code
       if countryReasons and countryReasons[0]
