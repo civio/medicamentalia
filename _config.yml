@@ -9,13 +9,13 @@
 title: Medicamentalia
 email: raul@civio.es
 
-# baseurl: '' 
-# url: https://medicamentalia.org # the base hostname & protocol for your site
-# assetsurl: https://medicamentalia.org/assets
-
 baseurl: '' 
-url: https://pre.medicamentalia.org # the base hostname & protocol for your site
-assetsurl: https://pre.medicamentalia.org/assets
+url: https://medicamentalia.org # the base hostname & protocol for your site
+assetsurl: https://medicamentalia.org/assets
+
+# baseurl: '' 
+# url: https://pre.medicamentalia.org # the base hostname & protocol for your site
+# assetsurl: https://pre.medicamentalia.org/assets
 
 index:
   en: index.html
@@ -38,8 +38,6 @@ defaults:
     type: "articles"
   values:
     layout: "article"
-
-analytics_id: UA-28946840-11
 
 fb_id: 620090684758872
 
