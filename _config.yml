@@ -41,6 +41,8 @@ defaults:
 
 fb_id: 620090684758872
 
+ga_id: GTM-PZ7F6GR
+
 # Build settings
 markdown: kramdown
 kramdown:
