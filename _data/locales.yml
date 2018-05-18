@@ -10,7 +10,7 @@ en:
   donate:
     title: Did you like this story?
     description: Help us to continue making necessary investigations like this donating to Civio
-    action: Donate
+    action: Join us
     link: https://civio.es/en/donate/
   explore_data: Explore the data
   lang: English
@@ -57,8 +57,8 @@ es:
   donate:
     title: ¿Te ha gustado esta historia?
     description: Ayúdanos a seguir haciendo investigaciones necesarias como esta donando a Civio
-    action: Dona
-    link: https://civio.es/dona/
+    action: Hazte socio
+    link: https://civio.es/socios/
   explore_data: Explora los datos
   lang: Español
   next_reading: Sigue leyendo
