@@ -7,7 +7,7 @@ home_description: One in ten women around the world doesn't use the contraceptiv
 img:              articles/home-contraceptives.jpg
 order:            1
 highlighted:      true
-author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo & Verónica Ramírez
+author:           Eva Belmonte, Raúl Díaz, Miguel Ángel Gavilanes, María Álvarez del Vayo & Verónica Ramírez
 pub_date:         2018-03-16
 slug:             data-use-barriers
 ref:              contraceptives-data

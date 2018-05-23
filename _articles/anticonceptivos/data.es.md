@@ -7,7 +7,7 @@ home_description: Una de cada diez mujeres en todo el planeta no usa los anticon
 img:              articles/home-contraceptives.jpg
 order:            1
 highlighted:      true
-author:           Eva Belmonte, Miguel Ángel Gavilanes, María Álvarez del Vayo y Verónica Ramírez
+author:           Eva Belmonte, Raúl Díaz, Miguel Ángel Gavilanes, María Álvarez del Vayo y Verónica Ramírez
 pub_date:         2018-03-16
 slug:             datos-uso-barreras
 ref:              contraceptives-data
