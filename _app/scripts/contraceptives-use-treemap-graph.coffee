@@ -30,7 +30,7 @@ class window.ContraceptivesUseTreemapGraph extends window.TreemapGraph
           name: '<strong>' + method.name.charAt(0).toUpperCase() + method.name.slice(1) + '</strong><br/>' + Math.round(method.value) + '%'
           value: method.value
           parent: 'r'
-      parsedDataSorted = parsedData.sort (a,b) -> if a.value and b.value then b.value-a.value else 1
+      parsedDataSorted = parsedData.sort (a,b) -> if a.value and b.value then b.value-a.value else -1
       # set caption country name
       $('#treemap-contraceptives-use-country').html country_name
       $('#treemap-contraceptives-use-any-method').html Math.round(data_country[0]['Any modern method'])
