@@ -8,7 +8,7 @@
   <div class="portfolio-box-caption">
     <div class="portfolio-box-caption-content">
       {% if page.layout == 'home' %}
-      {% if article.category %}
+      {% if article.category and include.type != "page" %}
       <p class="portfolio-box-category">{{ article.category }}</p>
       {% endif %}
       {% endif %}

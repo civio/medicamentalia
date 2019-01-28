@@ -31,7 +31,7 @@
         {% for article in articles %}
           {% if article.lang == page.lang %}
             <div class="col-sm-{{ item.size }}">
-              {% include home_item.html article=article %}
+              {% include home_item.html article=article type=item.type %}
             </div>
           {% endif %}
         {% endfor %}
